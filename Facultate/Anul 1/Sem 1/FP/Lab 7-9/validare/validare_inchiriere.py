@@ -1,8 +1,8 @@
 from exceptii.erori import ValidationError
-class validator_inchiriere:
+class ValidatorInchiriere:
     def valideaza_inchiriere(self, inchiriere):
         erori=""
-        if inchiriere.get_id_inchiriere()<0:
+        if inchiriere.get_id()<0:
             erori+="Id invalid"
         if len(erori)>0:
             raise ValidationError(erori)

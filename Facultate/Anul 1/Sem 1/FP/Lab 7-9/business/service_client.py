@@ -12,11 +12,11 @@ class ServiceClient:
         self._validator_client.valideaza_client(client)
         self._repo_clienti.modifica_client(client_id,client)
     def sterge_client(self,client_id):
-        client = Client(client_id,"abc","123")
+        client = self._repo_clienti.cauta_client(client_id)
         self._validator_client.valideaza_client(client)
         self._repo_clienti.sterge_client(client_id)
     def cauta_client(self,client_id):
-        client = Client(client_id,"abc","123")
+        client = self._repo_clienti.cauta_client(client_id)
         self._validator_client.valideaza_client(client)
         return self._repo_clienti.cauta_client(client_id)
     def get_all(self):

@@ -1,3 +1,4 @@
+
 from domeniu.client import Client
 from exceptii.erori import ValidationError
 from exceptii.erori import RepoError
@@ -6,8 +7,12 @@ from infrastructura.repo_film import RepoFilm
 from domeniu.film import Film
 from business.service_film import ServiceFilm
 from business.service_client import ServiceClient
+from infrastructura.repo_inchiriere import RepoInchiriere
 from validare.validare_client import ValidatorClient
 from validare.validare_filme import ValidatorFilm
+from domeniu.inchiriere import Inchiriere
+from validare.validare_inchiriere import ValidatorInchiriere
+from business.service_inchiriere import ServiceInchiriere
 
 class Teste:
     def test_repo_adauga_client(self):
@@ -200,7 +205,88 @@ class Teste:
         service_client.adauga_client(23,"Manu","505")
         client2=service_client.cauta_client(client.get_id())
         assert client==client2
-
+    def test_repo_adauga_inchiriere(self):
+        repo_inchiriere=RepoInchiriere()
+        client=Client(23,"Manu","505")
+        film=Film(23,"Manu","un baiat si o fata","romantic")
+        id_inchiriere=32
+        inchiriere=Inchiriere(id_inchiriere,film,client)
+        repo_inchiriere.adauga_inchiriere(inchiriere)
+        assert inchiriere in repo_inchiriere.get_all()
+    def test_repo_modifica_inchiriere(self):
+        repo_inchiriere = RepoInchiriere()
+        client = Client(25, "Manu", "505")
+        film = Film(23, "Manu", "un baiat si o fata", "romantic")
+        id_inchiriere = 32
+        inchiriere = Inchiriere(id_inchiriere, film, client)
+        repo_inchiriere.adauga_inchiriere(inchiriere)
+        client = Client(25, "Manu", "505")
+        inchiriere.set_client(client)
+        repo_inchiriere.modifica_inchiriere(id_inchiriere,inchiriere)
+        assert inchiriere in repo_inchiriere.get_all()
+    def test_repo_cauta_inchiriere(self):
+        repo_inchiriere = RepoInchiriere()
+        client = Client(25, "Manu", "505")
+        film = Film(23, "Manu", "un baiat si o fata", "romantic")
+        id_inchiriere = 32
+        inchiriere = Inchiriere(id_inchiriere, film, client)
+        repo_inchiriere.adauga_inchiriere(inchiriere)
+        inchiriere_cautat=repo_inchiriere.cauta_inchiriere(id_inchiriere)
+        assert inchiriere == inchiriere_cautat
+    def test_repo_sterge_inchiriere(self):
+        repo_inchiriere = RepoInchiriere()
+        client = Client(25, "Manu", "505")
+        film = Film(23, "Manu", "un baiat si o fata", "romantic")
+        id_inchiriere = 32
+        inchiriere = Inchiriere(id_inchiriere, film, client)
+        repo_inchiriere.adauga_inchiriere(inchiriere)
+        repo_inchiriere.sterge_inchiriere(id_inchiriere)
+        assert inchiriere not in repo_inchiriere.get_all()
+    def test_service_adauga_inchiriere(self):
+        repo_inchiriere = RepoInchiriere()
+        validator_inchiriere=ValidatorInchiriere()
+        service_inchiriere=ServiceInchiriere(repo_inchiriere,validator_inchiriere,None,None)
+        client=Client(25,"Manu","505")
+        film=Film(23,"Manu","un baiat si o fata","romantic")
+        id_inchiriere=32
+        inchiriere=Inchiriere(id_inchiriere,film,client)
+        service_inchiriere.adauga_inchiriere(inchiriere.get_id(),film,client)
+        assert inchiriere in service_inchiriere.get_all()
+    def test_service_cauta_inchiriere(self):
+        repo_inchiriere = RepoInchiriere()
+        validator_inchiriere = ValidatorInchiriere()
+        service_inchiriere = ServiceInchiriere(repo_inchiriere, validator_inchiriere, None, None)
+        client = Client(25, "Manu", "505")
+        film = Film(23, "Manu", "un baiat si o fata", "romantic")
+        id_inchiriere = 32
+        inchiriere = Inchiriere(id_inchiriere, film, client)
+        service_inchiriere.adauga_inchiriere(inchiriere.get_id(), film, client)
+        inchiriere_cautat = service_inchiriere.cauta_inchiriere(32)
+        assert inchiriere == inchiriere_cautat
+    def test_service_modifica_inchiriere(self):
+        repo_inchiriere = RepoInchiriere()
+        validator_inchiriere = ValidatorInchiriere()
+        service_inchiriere = ServiceInchiriere(repo_inchiriere, validator_inchiriere, None, None)
+        client = Client(25, "Manu", "505")
+        film = Film(23, "Manu", "un baiat si o fata", "romantic")
+        id_inchiriere = 32
+        inchiriere=Inchiriere(id_inchiriere,film,client)
+        service_inchiriere.adauga_inchiriere(inchiriere.get_id(),film,client)
+        client = Client(29, "Manuu", "505")
+        inchiriere.set_client(client)
+        service_inchiriere.modifica_inchiriere(inchiriere.get_id(),film,client)
+        assert inchiriere in service_inchiriere.get_all()
+    def test_service_sterge_inchiriere(self):
+        repo_inchiriere = RepoInchiriere()
+        validator_inchiriere = ValidatorInchiriere()
+        service_inchiriere = ServiceInchiriere(repo_inchiriere, validator_inchiriere, None, None)
+        client = Client(25, "Manu", "505")
+        film = Film(23, "Manu", "un baiat si o fata", "romantic")
+        id_inchiriere = 32
+        inchiriere = Inchiriere(id_inchiriere, film, client)
+        service_inchiriere.adauga_inchiriere(inchiriere.get_id(), film, client)
+        service_inchiriere.sterge_inchiriere(inchiriere.get_id())
+        assert inchiriere not in service_inchiriere.get_all()
 
 
     def ruleaza_toate_testele(self):
@@ -224,3 +310,11 @@ class Teste:
         self.test_service_modifica_client()
         self.test_service_cauta_client()
         self.test_service_sterge_client()
+        self.test_repo_adauga_inchiriere()
+        self.test_repo_modifica_inchiriere()
+        self.test_repo_cauta_inchiriere()
+        self.test_repo_sterge_inchiriere()
+        self.test_service_adauga_inchiriere()
+        self.test_service_modifica_inchiriere()
+        self.test_service_cauta_inchiriere()
+        self.test_service_sterge_inchiriere()

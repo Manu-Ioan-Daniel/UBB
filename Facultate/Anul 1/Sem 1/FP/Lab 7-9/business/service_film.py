@@ -16,8 +16,8 @@ class ServiceFilm:
         self._validator_film.valideaza_film(film)
         self._repo_film.sterge_film(film_id)
     def cauta_film(self,film_id):
-        film=Film(film_id,"abc","alex","alex")
+        film=self._repo_film.cauta_film(film_id)
         self._validator_film.valideaza_film(film)
-        return self._repo_film.cauta_film(film_id)
+        return film
     def get_all(self):
         return [x for x in self._repo_film.get_all()]

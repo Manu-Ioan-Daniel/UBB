@@ -1,6 +1,6 @@
 from exceptii.erori import RepoError
 class RepoInchiriere:
-    def __init__(self,repo_filme,repo_clienti):
+    def __init__(self):
         self.__inchirieri = {}
     def adauga_inchiriere(self, inchiriere):
         if inchiriere.get_id() in self.__inchirieri:

@@ -1,9 +1,11 @@
+from business import service_inchiriere
 from exceptii.erori import RepoError
 from exceptii.erori import ValidationError
 class Consola:
-    def __init__(self,_service_filme,_service_clienti):
+    def __init__(self,_service_filme,_service_clienti,_service_inchiriere):
         self.__service_filme = _service_filme
         self.__service_clienti = _service_clienti
+        self.__service_inchiriere = _service_inchiriere
         self.__comenzi={
             "print_filme":self.__ui_print_filme,
             "adauga_film":self.__ui_adauga_film,
@@ -13,9 +15,24 @@ class Consola:
             "adauga_client":self.__ui_adauga_clienti,
             "modifica_client":self.__ui_modifica_clienti,
             "sterge_client":self.__ui_sterge_client,
+            "cauta_film":self.__ui_cauta_film,
+            "cauta_client":self.__ui_cauta_client,
+            "adauga_inchiriere":self.__ui_adauga_inchiriere,
+            "modifica_inchiriere":self.__ui_modifica_inchiriere,
+            "sterge_inchiriere":self.__ui_sterge_inchiriere,
+            "cauta_inchiriere":self.__ui_cauta_inchiriere,
+            "print_inchiriere":self.__ui_print_inchiriere,
             "help":self.__ui_help
 
         }
+    def __ui_cauta_film(self):
+        id_film=int(input("ID film: "))
+        film=self.__service_filme.cauta_film(id_film)
+        print(film)
+    def __ui_cauta_client(self):
+        id_client=int(input("ID client: "))
+        client=self.__service_clienti.cauta_client(id_client)
+        print(client)
     def __ui_help(self):
         print("Toate comenzile:print_filme\nadauga_film\nmodifica_film\nsterge_film\nprint_clienti\nadauga_client\nmodifica_client\nsterge_client")
     def __ui_print_filme(self):
@@ -41,6 +58,9 @@ class Consola:
     def __ui_sterge_film(self):
         id_film=int(input("ID-ul filmului pe care vrei sa il stergi: "))
         self.__service_filme.sterge_film(id_film)
+        for inchiriere in self.__service_inchiriere.get_all():
+            if id_film==inchiriere.get_film().get_id():
+                self.__service_inchiriere.sterge_inchiriere(inchiriere.get_id())
     def __ui_print_clienti(self):
         clienti=self.__service_clienti.get_all()
         if len(clienti)==0:
@@ -61,6 +81,38 @@ class Consola:
     def __ui_sterge_client(self):
         id_client=int(input("ID-ul clientului pe care vrei sa il stergi: "))
         self.__service_clienti.sterge_client(id_client)
+        for inchiriere in self.__service_inchiriere.get_all():
+            if id_client==inchiriere.get_client().get_id():
+                self.__service_inchiriere.sterge_inchiriere(inchiriere.get_id())
+
+    def __ui_sterge_inchiriere(self):
+        id_inchiriere=int(input("ID-ul inchirierii pe care vrei sa o stergi: "))
+        self.__service_inchiriere.sterge_inchiriere(id_inchiriere)
+    def __ui_cauta_inchiriere(self):
+        id_inchiriere=int(input("ID-ul inchirierii pe care vrei sa o cauti: "))
+        self.__service_inchiriere.cauta_inchiriere(id_inchiriere)
+    def __ui_adauga_inchiriere(self):
+        id_inchiriere=int(input("ID-ul dorit: "))
+        film_id=int(input("ID-ul film-ului: "))
+        client_id=int(input("ID-ul client-ului: "))
+        film=self.__service_filme.cauta_film(film_id)
+        client=self.__service_clienti.cauta_client(client_id)
+        self.__service_inchiriere.adauga_inchiriere(id_inchiriere,film,client)
+    def __ui_modifica_inchiriere(self):
+        id_inchiriere=int(input("ID-ul inchirierii pe care vrei sa il modifici: "))
+        film_id=int(input("ID-ul noului film: "))
+        client_id=int(input("ID-ul noului client: "))
+        film=self.__service_filme.cauta_film(film_id)
+        client=self.__service_clienti.cauta_client(client_id)
+        self.__service_inchiriere.modifica_inchiriere(id_inchiriere,film,client)
+    def __ui_print_inchiriere(self):
+        inchirieri=self.__service_inchiriere.get_all()
+        if len(inchirieri)==0:
+            print("Nu exista inchirieri")
+            return
+        for inchiriere in inchirieri:
+            print(inchiriere)
+
     def run(self):
         while True:
             nume_comanda = input("Introdu comanda: ")
