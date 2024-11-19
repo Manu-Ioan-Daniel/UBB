@@ -12,7 +12,7 @@ class ServiceFilm:
         self._validator_film.valideaza_film(film)
         self._repo_film.modifica_film(film_id,film)
     def sterge_film(self,film_id):
-        film=Film(film_id,"abc","alex","alex")
+        film=self._repo_film.cauta_film(film_id)
         self._validator_film.valideaza_film(film)
         self._repo_film.sterge_film(film_id)
     def cauta_film(self,film_id):
