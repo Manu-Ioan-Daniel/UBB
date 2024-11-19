@@ -40,7 +40,7 @@ class Consola:
         self.__service_filme.modifica_film(id_film,titlu_film,descriptie_film,gen_film)
     def __ui_sterge_film(self):
         id_film=int(input("ID-ul filmului pe care vrei sa il stergi: "))
-        self.__service_clienti.sterge_film(id_film)
+        self.__service_filme.sterge_film(id_film)
     def __ui_print_clienti(self):
         clienti=self.__service_clienti.get_all()
         if len(clienti)==0:
