@@ -22,6 +22,7 @@ class Consola:
             "sterge_inchiriere":self.__ui_sterge_inchiriere,
             "cauta_inchiriere":self.__ui_cauta_inchiriere,
             "print_inchiriere":self.__ui_print_inchiriere,
+            "creeaza_clienti_random":self.__ui_creeaza_clienti_random,
             "help":self.__ui_help
 
         }
@@ -43,6 +44,8 @@ class Consola:
         print("Filmele sunt: ")
         for film in filme:
             print(film)
+    def __ui_creeaza_clienti_random(self):
+        self.__service_clienti.clienti_random()
     def __ui_adauga_film(self):
         id_film=int(input("ID film: "))
         titlu_film=input("Tilu film: ")

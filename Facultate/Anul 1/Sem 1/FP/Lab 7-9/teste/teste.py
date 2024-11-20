@@ -29,7 +29,7 @@ class Teste:
         repo_client=RepoClient()
         client=Client(23,"Manu","505")
         try:
-            repo_client.sterge_client(client)
+            repo_client.sterge_client(client.get_id())
             assert False
         except RepoError as re:
             assert True

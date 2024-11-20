@@ -13,6 +13,7 @@ class RepoFilm():
     def modifica_film(self,id_film,film):
         if id_film not in self.__filme:
             raise RepoError("Nu exista film cu acest id")
+
         self.__filme[id_film] = film
     def cauta_film(self,id_film):
         if id_film not in self.__filme:
