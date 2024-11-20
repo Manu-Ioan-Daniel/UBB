@@ -24,7 +24,7 @@ class Film:
         if isinstance(other,Film):
             return self.__id_film == other.get_id() and self.__gen == other.get_gen() and self.get_title() == other.get_title() and self.get_description() == other.get_description()
         return False
-    def __hash__(self):
-        return hash((self.__id_film, self.__gen,self.__titlu,self.__descriere))
+    # def __hash__(self):
+    #     return hash((self.__id_film, self.__gen,self.__titlu,self.__descriere))
     def __str__(self):
         return (f"{self.__id_film} - {self.__titlu} - {self.__descriere} - {self.__gen}\n")

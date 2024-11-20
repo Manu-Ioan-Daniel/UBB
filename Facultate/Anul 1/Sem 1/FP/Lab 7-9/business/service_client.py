@@ -1,4 +1,3 @@
-from django.template.defaultfilters import length
 
 from domeniu.client import Client
 import string
