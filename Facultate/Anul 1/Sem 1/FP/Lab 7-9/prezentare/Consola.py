@@ -59,6 +59,9 @@ class Consola:
         gen_film=input("Gen dorit: ")
         self.__service_filme.modifica_film(id_film,titlu_film,descriptie_film,gen_film)
     def __ui_sterge_film(self):
+        if(len(self.__service_filme.get_all())==0):
+            print("Nu exista filme")
+            return
         id_film=int(input("ID-ul filmului pe care vrei sa il stergi: "))
         self.__service_filme.sterge_film(id_film)
         for inchiriere in self.__service_inchiriere.get_all():
@@ -82,6 +85,9 @@ class Consola:
         cnp_client=input("CNP-ul dorit: ")
         self.__service_clienti.modifica_client(id_client,nume_client, cnp_client)
     def __ui_sterge_client(self):
+        if(len(self.__service_clienti.get_all())==0):
+            print("Nu exista clienti")
+            pass
         id_client=int(input("ID-ul clientului pe care vrei sa il stergi: "))
         self.__service_clienti.sterge_client(id_client)
         for inchiriere in self.__service_inchiriere.get_all():
@@ -89,6 +95,9 @@ class Consola:
                 self.__service_inchiriere.sterge_inchiriere(inchiriere.get_id())
 
     def __ui_sterge_inchiriere(self):
+        if(len(self.__service_inchiriere.get_all())==0):
+            print("Nu exista inchirieri")
+            pass
         id_inchiriere=int(input("ID-ul inchirierii pe care vrei sa o stergi: "))
         self.__service_inchiriere.sterge_inchiriere(id_inchiriere)
     def __ui_cauta_inchiriere(self):
