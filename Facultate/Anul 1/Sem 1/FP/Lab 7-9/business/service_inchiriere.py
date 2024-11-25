@@ -2,11 +2,11 @@ from domeniu.inchiriere import Inchiriere
 
 
 class ServiceInchiriere:
-    def __init__(self,repo_inchiriere,validator_inchiriere,service_film,service_client):
+    def __init__(self, repo_inchiriere, validator_inchiriere, repo_film, repo_client):
         self._repo_inchiriere = repo_inchiriere
         self._validator_inchiriere = validator_inchiriere
-        self._service_film = service_film
-        self._service_client = service_client
+        self._repo_film = repo_film
+        self._repo_client = repo_client
     def sterge_inchiriere(self,inchiriere_id):
         inchiriere=self._repo_inchiriere.cauta_inchiriere(inchiriere_id)
         self._validator_inchiriere.valideaza_inchiriere(inchiriere)

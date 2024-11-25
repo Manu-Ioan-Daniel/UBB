@@ -17,7 +17,7 @@ class Inchiriere:
         return f"{self.__id_inchiriere} - {self.__film.get_title()} - {self.__client.get_nume()}"
     def __eq__(self,other):
         if isinstance(other,Inchiriere):
-            return self.__id_inchiriere == other.get_id()
+            return self.__id_inchiriere == other.get_id() and self.__film == other.get_film() and self.__client == other.get_client()
         return False
     def __hash__(self):
         return hash((self.__id_inchiriere,self.__film,self.__client))

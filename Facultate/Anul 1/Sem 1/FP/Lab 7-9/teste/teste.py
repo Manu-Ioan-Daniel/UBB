@@ -15,55 +15,13 @@ from validare.validare_inchiriere import ValidatorInchiriere
 from business.service_inchiriere import ServiceInchiriere
 
 class Teste:
-    def test_repo_adauga_client(self):
-        repo_client=RepoClient()
-        client=Client(23,"Manu","505")
-        repo_client.adauga_client(client)
-        assert client  in repo_client.get_all()
-        try:
-            repo_client.adauga_client(client)
-            assert False
-        except RepoError as re:
-            assert True
-    def test_repo_sterge_client(self):
-        repo_client=RepoClient()
-        client=Client(23,"Manu","505")
-        try:
-            repo_client.sterge_client(client.get_id())
-            assert False
-        except RepoError as re:
-            assert True
-        repo_client.adauga_client(client)
-        repo_client.sterge_client(client.get_id())
-        assert client not in repo_client.get_all()
-    def test_repo_modifica_client(self):
-        repo_client=RepoClient()
-        client=Client(23,"Manu","505")
-        client2=Client(23,"Manuu","505")
-        repo_client.adauga_client(client)
-        repo_client.modifica_client(client.get_id(),client2)
-        assert client2  in repo_client.get_all()
-        assert client not in repo_client.get_all()
-        try:
-            repo_client.modifica_client(24,client2)
-            assert False
-        except RepoError as re:
-            assert True
-    def test_repo_cauta_client(self):
-        repo_client = RepoClient()
-        client = Client(23, "Manu", "505")
-        repo_client.adauga_client(client)
-        client2=repo_client.cauta_client(client.get_id())
-        assert client == client2
-        try:
-            client2=repo_client.cauta_client(29)
-            assert False
-        except RepoError as re:
-            assert True
-
-    def test_repo_adauga_film(self):
+    def test_repo_filme(self):
         repo_film=RepoFilm()
-        film = Film(23,"Manu","un baiat si o fata","romantic")
+        film=Film(23,"Manu","un baiat si o fata","romantic")
+        film2 = Film(23, "Manuu", "un baiat si o fata", "romantic")
+
+        #test adauga film
+
         repo_film.adauga_film(film)
         assert film in repo_film.get_all()
         try:
@@ -71,33 +29,30 @@ class Teste:
             assert False
         except RepoError as re:
             assert True
-    def test_repo_sterge_film(self):
-        repo_film = RepoFilm()
-        film = Film(23, "Manu", "un baiat si o fata", "romantic")
-        repo_film.adauga_film(film)
-        repo_film.sterge_film(film.get_id())
-        assert film not in repo_film.get_all()
-        try:
-            repo_film.sterge_film(film.get_id())
-            assert False
-        except RepoError as re:
-            assert True
-    def test_repo_modifica_film(self):
-        repo_film = RepoFilm()
-        film = Film(23, "Manu", "un baiat si o fata", "romantic")
-        repo_film.adauga_film(film)
-        film2=Film(23,"Manuu","un baiat si o fata","romantic")
+
+        #test modifica film
+
         repo_film.modifica_film(film.get_id(),film2)
-        assert film not in repo_film.get_all()
         assert film2 in repo_film.get_all()
+        assert film not in repo_film.get_all()
         try:
             repo_film.modifica_film(24,film2)
             assert False
         except RepoError as re:
             assert True
-    def test_repo_cauta_film(self):
-        repo_film = RepoFilm()
-        film = Film(23, "Manu", "un baiat si o fata", "romantic")
+
+        #test sterge film
+
+        repo_film.sterge_film(film2.get_id())
+        assert film2 not in repo_film.get_all()
+        try:
+            repo_film.sterge_film(film2.get_id())
+            assert False
+        except RepoError as re:
+            assert True
+
+        #test cauta film
+
         repo_film.adauga_film(film)
         film_cautat=repo_film.cauta_film(film.get_id())
         assert film == film_cautat
@@ -106,6 +61,125 @@ class Teste:
             assert False
         except RepoError as re:
             assert True
+
+        #sfarsit teste repo filme
+    def test_repo_clienti(self):
+        repo_client=RepoClient()
+        client=Client(23,"Manu","505")
+        client2 = Client(23, "Manuu", "505")
+
+        #test adauga client
+
+        repo_client.adauga_client(client)
+        assert client in repo_client.get_all()
+        try:
+            repo_client.adauga_client(client)
+            assert False
+        except RepoError as re:
+            assert True
+
+        #test modifica client
+
+        repo_client.modifica_client(client.get_id(),client2)
+        assert client2 in repo_client.get_all()
+        assert client not in repo_client.get_all()
+        try:
+            repo_client.modifica_client(24,client2)
+            assert False
+        except RepoError as re:
+            assert True
+
+        #test sterge client
+
+        repo_client.sterge_client(client2.get_id())
+        assert client2 not in repo_client.get_all()
+        try:
+            repo_client.sterge_client(client2.get_id())
+            assert False
+        except RepoError as re:
+            assert True
+
+        #test cauta client
+
+        repo_client.adauga_client(client)
+        client_cautat=repo_client.cauta_client(client.get_id())
+        assert client == client_cautat
+        try:
+            repo_client.cauta_client(100)
+            assert False
+        except RepoError as re:
+            assert True
+
+        #sfarsit test repo client
+
+    def test_repo_inchirieri(self):
+        repo_inchiriere=RepoInchiriere()
+        client = Client(23, "Manu", "505")
+        client2 = Client(23, "Manuu", "505")
+        film = Film(23, "Manu", "un baiat si o fata", "romantic")
+        film2 = Film(23, "Manuu", "un baiat si o fata", "romantic")
+        inchiriere = Inchiriere(23,film, client)
+        inchiriere2 = Inchiriere(23,film2, client2)
+
+        #test adauga inchiriere
+
+        repo_inchiriere.adauga_inchiriere(inchiriere)
+        assert inchiriere in repo_inchiriere.get_all()
+        try:
+            repo_inchiriere.adauga_inchiriere(inchiriere)
+            assert False
+        except RepoError as re:
+            assert True
+
+        #test modifica inchiriere
+
+        repo_inchiriere.modifica_inchiriere(inchiriere.get_id(),inchiriere2)
+        assert inchiriere2 in repo_inchiriere.get_all()
+        assert inchiriere not in repo_inchiriere.get_all()
+        try:
+            repo_inchiriere.modifica_inchiriere(24,inchiriere2)
+            assert False
+        except RepoError as re:
+            assert True
+
+        #test sterge inchiriere
+
+        repo_inchiriere.sterge_inchiriere(inchiriere2.get_id())
+        assert inchiriere2 not in repo_inchiriere.get_all()
+        try:
+            repo_inchiriere.sterge_inchiriere(inchiriere2.get_id())
+            assert False
+        except RepoError as re:
+            assert True
+
+        #test cauta inchiriere
+
+        repo_inchiriere.adauga_inchiriere(inchiriere)
+        inchiriere_cautat=repo_inchiriere.cauta_inchiriere(inchiriere.get_id())
+        assert inchiriere == inchiriere_cautat
+        try:
+            repo_inchiriere.cauta_inchiriere(100)
+            assert False
+        except RepoError as re:
+            assert True
+
+        #sfarsit test repo inchiriere
+
+    def test_validare_film(self):
+        validator_film=ValidatorFilm()
+        film=Film(23,"Manu","un baiat si o fata","romantic")
+        try:
+            validator_film.valideaza_film(film)
+            assert True
+        except ValidationError as ve:
+            assert False
+        film = Film(-1, "", "", "")
+        try:
+            validator_film.valideaza_film(film)
+            assert False
+        except ValidationError as ve:
+            assert str(ve)=="Id invalid\nGen invalid\nTitlu invalid\nDescriptie invalid\n"
+
     def test_validare_client(self):
         validator_client=ValidatorClient()
         client=Client(23,"Manu","505")
@@ -120,201 +194,178 @@ class Teste:
             assert False
         except ValidationError as ve:
             assert str(ve)=="Id invalid\nName invalid\nCnp invalid\n"
-    def test_validare_film(self):
-        validator_film=ValidatorFilm()
-        film=Film(23,"Manu","un baiat si o fata","romantic")
-        try:
-            validator_film.valideaza_film(film)
-            assert True
-        except ValidationError as ve:
-            assert False
-        film=Film(-1,"","","")
-        try:
-            validator_film.valideaza_film(film)
-            assert False
-        except ValidationError as ve:
-            assert str(ve)=="Id invalid\nGen invalid\nTitlu invalid\nDescriptie invalid\n"
-    def test_serivice_film_init(self):
-        validator_film=ValidatorFilm()
-        repo_film=RepoFilm()
-        service_film=ServiceFilm(validator_film,repo_film)
-        assert service_film._validator_film == validator_film
-        assert service_film._repo_film == repo_film
-    def test_service_adauga_film(self):
-        validator_film=ValidatorFilm()
-        repo_film=RepoFilm()
-        service_film=ServiceFilm(validator_film,repo_film)
-        film=Film(23,"Manu","un baiat si o fata","romantic")
-        service_film.adauga_film(film.get_id(),film.get_title(),film.get_description(),film.get_gen())
-        assert film in service_film.get_all()
-    def test_service_modifica_film(self):
-        validator_film = ValidatorFilm()
-        repo_film = RepoFilm()
-        service_film = ServiceFilm(validator_film, repo_film)
-        film = Film(23, "Manu", "un baiat si o fata", "romantic")
-        service_film.adauga_film(film.get_id(), film.get_title(), film.get_description(), film.get_gen())
-        service_film.modifica_film(film.get_id(), "Manuu","un baiat si o fata","romantic")
-        assert film not in service_film.get_all()
-        assert service_film.cauta_film(film.get_id()) in service_film.get_all()
-    def test_service_elimina_film(self):
-        validator_film = ValidatorFilm()
-        repo_film = RepoFilm()
-        service_film = ServiceFilm(validator_film, repo_film)
-        film = Film(23, "Manu", "un baiat si o fata", "romantic")
-        service_film.adauga_film(film.get_id(), film.get_title(), film.get_description(), film.get_gen())
-        service_film.sterge_film(film.get_id())
-        assert film not in service_film.get_all()
 
-    def test_service_cauta_film(self):
-        validator_film = ValidatorFilm()
-        repo_film = RepoFilm()
-        service_film = ServiceFilm(validator_film, repo_film)
-        film = Film(23, "Manu", "un baiat si o fata", "romantic")
-        service_film.adauga_film(film.get_id(), film.get_title(), film.get_description(), film.get_gen())
-        film2=service_film.cauta_film(film.get_id())
-        assert film == film2
-    def test_service_adauga_client(self):
-        validator_client=ValidatorClient()
+    def test_service_client(self):
         repo_client=RepoClient()
+        validator_client=ValidatorClient()
+        client=Client(23,"Manu","505")
+        client2=Client(23,"Manuu","505")
         service_client=ServiceClient(validator_client,repo_client)
-        client = Client(23,"Manu","505")
+
+        #test adauga client
+
         service_client.adauga_client(23,"Manu","505")
         assert client in service_client.get_all()
-    def test_service_modifica_client(self):
-        validator_client=ValidatorClient()
-        repo_client=RepoClient()
-        service_client=ServiceClient(validator_client,repo_client)
-        client = Client(23,"Manu","505")
-        service_client.adauga_client(23,"Manu","505")
+        try:
+            service_client.adauga_client(23,"Manu","505")
+            assert False
+        except RepoError as re:
+            assert True
+
+        #test modifica client
+
         service_client.modifica_client(client.get_id(),"Manuu","505")
         assert client not in service_client.get_all()
-        assert service_client.cauta_client(client.get_id()) in service_client.get_all()
-    def test_service_sterge_client(self):
-        validator_client=ValidatorClient()
-        repo_client=RepoClient()
-        service_client=ServiceClient(validator_client,repo_client)
-        client = Client(23,"Manu","505")
+        assert client2 in service_client.get_all()
+        try:
+            service_client.modifica_client(24,"Manuu","505")
+            assert False
+        except RepoError as re:
+            assert True
+
+        #test sterge client
+
+        service_client.sterge_client(client2.get_id())
+        assert client2 not in service_client.get_all()
+        try:
+            service_client.sterge_client(client2.get_id())
+            assert False
+        except RepoError as re:
+            assert True
+
+        #test cauta client
+
         service_client.adauga_client(23,"Manu","505")
-        service_client.sterge_client(client.get_id())
-        assert client not in service_client.get_all()
-    def test_service_cauta_client(self):
-        validator_client=ValidatorClient()
-        repo_client=RepoClient()
-        service_client=ServiceClient(validator_client,repo_client)
-        client = Client(23,"Manu","505")
-        service_client.adauga_client(23,"Manu","505")
-        client2=service_client.cauta_client(client.get_id())
-        assert client==client2
-    def test_repo_adauga_inchiriere(self):
-        repo_inchiriere=RepoInchiriere()
-        client=Client(23,"Manu","505")
+        client_cautat=service_client.cauta_client(client.get_id())
+        assert client == client_cautat
+        try:
+            service_client.cauta_client(100)
+            assert False
+        except RepoError as re:
+            assert True
+
+        #sfarsit teste service film
+
+    def test_service_film(self):
+        repo_film=RepoFilm()
+        validator_film=ValidatorFilm()
+        service_film=ServiceFilm(validator_film,repo_film)
         film=Film(23,"Manu","un baiat si o fata","romantic")
-        id_inchiriere=32
-        inchiriere=Inchiriere(id_inchiriere,film,client)
-        repo_inchiriere.adauga_inchiriere(inchiriere)
-        assert inchiriere in repo_inchiriere.get_all()
-    def test_repo_modifica_inchiriere(self):
-        repo_inchiriere = RepoInchiriere()
-        client = Client(25, "Manu", "505")
-        film = Film(23, "Manu", "un baiat si o fata", "romantic")
-        id_inchiriere = 32
-        inchiriere = Inchiriere(id_inchiriere, film, client)
-        repo_inchiriere.adauga_inchiriere(inchiriere)
-        client = Client(25, "Manu", "505")
-        inchiriere.set_client(client)
-        repo_inchiriere.modifica_inchiriere(id_inchiriere,inchiriere)
-        assert inchiriere in repo_inchiriere.get_all()
-    def test_repo_cauta_inchiriere(self):
-        repo_inchiriere = RepoInchiriere()
-        client = Client(25, "Manu", "505")
-        film = Film(23, "Manu", "un baiat si o fata", "romantic")
-        id_inchiriere = 32
-        inchiriere = Inchiriere(id_inchiriere, film, client)
-        repo_inchiriere.adauga_inchiriere(inchiriere)
-        inchiriere_cautat=repo_inchiriere.cauta_inchiriere(id_inchiriere)
-        assert inchiriere == inchiriere_cautat
-    def test_repo_sterge_inchiriere(self):
-        repo_inchiriere = RepoInchiriere()
-        client = Client(25, "Manu", "505")
-        film = Film(23, "Manu", "un baiat si o fata", "romantic")
-        id_inchiriere = 32
-        inchiriere = Inchiriere(id_inchiriere, film, client)
-        repo_inchiriere.adauga_inchiriere(inchiriere)
-        repo_inchiriere.sterge_inchiriere(id_inchiriere)
-        assert inchiriere not in repo_inchiriere.get_all()
-    def test_service_adauga_inchiriere(self):
-        repo_inchiriere = RepoInchiriere()
+        film2=Film(23,"Manuu","un baiat si o fata","romantic")
+
+        #test adauga film
+
+        service_film.adauga_film(23,"Manu","un baiat si o fata","romantic")
+        assert film in service_film.get_all()
+        try:
+            service_film.adauga_film(23,"Manu","un baiat si o fata","romantic")
+            assert False
+        except RepoError as re:
+            assert True
+
+        #test modifica film
+
+        service_film.modifica_film(film.get_id(),"Manuu","un baiat si o fata","romantic")
+        assert film not in service_film.get_all()
+        assert film2 in service_film.get_all()
+        try:
+            service_film.modifica_film(24,"Manuu","un baiat si o fata","romantic")
+            assert False
+        except RepoError as re:
+            assert True
+
+        #test sterge film
+
+        service_film.sterge_film(film2.get_id())
+        assert film2 not in service_film.get_all()
+        try:
+            service_film.sterge_film(film2.get_id())
+            assert False
+        except RepoError as re:
+            assert True
+        #sfarsit teste service film
+
+    def test_service_inchiriere(self):
+        repo_inchiriere=RepoInchiriere()
+        repo_film=RepoFilm()
+        repo_client=RepoClient()
         validator_inchiriere=ValidatorInchiriere()
-        service_inchiriere=ServiceInchiriere(repo_inchiriere,validator_inchiriere,None,None)
+        service_inchiriere=ServiceInchiriere(repo_inchiriere,validator_inchiriere,repo_film,repo_client)
         client=Client(25,"Manu","505")
         film=Film(23,"Manu","un baiat si o fata","romantic")
-        id_inchiriere=32
-        inchiriere=Inchiriere(id_inchiriere,film,client)
+        client2=Client(25,"Manuu","505")
+        film2=Film(23,"Manuu","un baiat si o fata","romantic")
+        inchiriere=Inchiriere(32,film,client)
+        inchiriere2=Inchiriere(32,film2,client2)
+
+        #test adauga inchiriere
+
         service_inchiriere.adauga_inchiriere(inchiriere.get_id(),film,client)
         assert inchiriere in service_inchiriere.get_all()
-    def test_service_cauta_inchiriere(self):
-        repo_inchiriere = RepoInchiriere()
-        validator_inchiriere = ValidatorInchiriere()
-        service_inchiriere = ServiceInchiriere(repo_inchiriere, validator_inchiriere, None, None)
-        client = Client(25, "Manu", "505")
-        film = Film(23, "Manu", "un baiat si o fata", "romantic")
-        id_inchiriere = 32
-        inchiriere = Inchiriere(id_inchiriere, film, client)
-        service_inchiriere.adauga_inchiriere(inchiriere.get_id(), film, client)
-        inchiriere_cautat = service_inchiriere.cauta_inchiriere(32)
-        assert inchiriere == inchiriere_cautat
-    def test_service_modifica_inchiriere(self):
-        repo_inchiriere = RepoInchiriere()
-        validator_inchiriere = ValidatorInchiriere()
-        service_inchiriere = ServiceInchiriere(repo_inchiriere, validator_inchiriere, None, None)
-        client = Client(25, "Manu", "505")
-        film = Film(23, "Manu", "un baiat si o fata", "romantic")
-        id_inchiriere = 32
-        inchiriere=Inchiriere(id_inchiriere,film,client)
-        service_inchiriere.adauga_inchiriere(inchiriere.get_id(),film,client)
-        client = Client(29, "Manuu", "505")
-        inchiriere.set_client(client)
-        service_inchiriere.modifica_inchiriere(inchiriere.get_id(),film,client)
-        assert inchiriere in service_inchiriere.get_all()
-    def test_service_sterge_inchiriere(self):
-        repo_inchiriere = RepoInchiriere()
-        validator_inchiriere = ValidatorInchiriere()
-        service_inchiriere = ServiceInchiriere(repo_inchiriere, validator_inchiriere, None, None)
-        client = Client(25, "Manu", "505")
-        film = Film(23, "Manu", "un baiat si o fata", "romantic")
-        id_inchiriere = 32
-        inchiriere = Inchiriere(id_inchiriere, film, client)
-        service_inchiriere.adauga_inchiriere(inchiriere.get_id(), film, client)
+        try:
+            service_inchiriere.adauga_inchiriere(inchiriere.get_id(),film,client)
+            assert False
+        except RepoError as re:
+            assert True
+
+        #test modifica inchiriere
+
+        service_inchiriere.modifica_inchiriere(inchiriere.get_id(),film2,client2)
+        assert inchiriere2 in service_inchiriere.get_all()
+        assert inchiriere not in service_inchiriere.get_all()
+        try:
+            service_inchiriere.modifica_inchiriere(24,film2,client2)
+            assert False
+        except RepoError as re:
+            assert True
+
+        #test sterge inchiriere
+
         service_inchiriere.sterge_inchiriere(inchiriere.get_id())
         assert inchiriere not in service_inchiriere.get_all()
+        try:
+            service_inchiriere.sterge_inchiriere(100)
+            assert False
+        except RepoError as re:
+            assert True
 
+        #test cauta client
+
+        service_inchiriere.adauga_inchiriere(inchiriere.get_id(),film,client)
+        inchiriere_cautat=service_inchiriere.cauta_inchiriere(inchiriere.get_id())
+        assert inchiriere == inchiriere_cautat
+        try:
+            service_inchiriere.cauta_inchiriere(100)
+            assert False
+        except RepoError as re:
+            assert True
+        #sfarsit teste service client
+    def test_validator_inchiriere(self):
+        validator_inchiriere=ValidatorInchiriere()
+        film=Film(23,"Manu","un baiat si o fata","romantic")
+        client=Client(25,"Manu","505")
+        inchiriere=Inchiriere(32,film,client)
+        try:
+            validator_inchiriere.valideaza_inchiriere(inchiriere)
+            assert True
+        except RepoError as re:
+            assert False
+        inchiriere=Inchiriere(-1,film,client)
+        try:
+            validator_inchiriere.valideaza_inchiriere(inchiriere)
+            assert False
+        except ValidationError as ve:
+            assert str(ve) == "Id invalid"
 
     def ruleaza_toate_testele(self):
-
-        self.test_repo_adauga_client()
-        self.test_repo_sterge_client()
-        self.test_repo_modifica_client()
-        self.test_repo_cauta_client()
-        self.test_repo_adauga_film()
-        self.test_repo_sterge_film()
-        self.test_repo_modifica_film()
-        self.test_repo_cauta_film()
-        self.test_validare_client()
+        self.test_repo_filme()
+        self.test_repo_clienti()
+        self.test_repo_inchirieri()
         self.test_validare_film()
-        self.test_serivice_film_init()
-        self.test_service_adauga_film()
-        self.test_service_modifica_film()
-        self.test_service_elimina_film()
-        self.test_service_cauta_film()
-        self.test_service_adauga_client()
-        self.test_service_modifica_client()
-        self.test_service_cauta_client()
-        self.test_service_sterge_client()
-        self.test_repo_adauga_inchiriere()
-        self.test_repo_modifica_inchiriere()
-        self.test_repo_cauta_inchiriere()
-        self.test_repo_sterge_inchiriere()
-        self.test_service_adauga_inchiriere()
-        self.test_service_modifica_inchiriere()
-        self.test_service_cauta_inchiriere()
-        self.test_service_sterge_inchiriere()
+        self.test_validare_client()
+        self.test_validator_inchiriere()
+        self.test_service_client()
+        self.test_service_film()
+        self.test_service_inchiriere()
+
+
