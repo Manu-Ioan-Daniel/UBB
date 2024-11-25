@@ -6,14 +6,15 @@ class RepoClient:
         self.__clienti = {}
 
     def adauga_client(self, client):
-        if client.get_id() in self.__clienti:
-            raise RepoError("Client cu acelasi id existent")
+        if client.get_id()  in self.__clienti:
+            raise RepoError("exista client cu acest id")
         self.__clienti[client.get_id()] = client
 
     def sterge_client(self, client_id):
-        if client_id not in self.__clienti:
+        if client_id not in self.__clienti :
             raise RepoError("Nu exista client cu acest id")
         self.__clienti.pop(client_id)
+
 
     def modifica_client(self, id_client, client):
         if id_client not in self.__clienti:
