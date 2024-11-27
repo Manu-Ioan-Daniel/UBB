@@ -22,9 +22,10 @@ class Consola:
             "sterge_inchiriere":self.__ui_sterge_inchiriere,
             "cauta_inchiriere":self.__ui_cauta_inchiriere,
             "print_inchiriere":self.__ui_print_inchiriere,
-            "creeaza_clienti_random":self.__ui_creeaza_clienti_random,
-            "creeaza_filme_random":self.__ui_creeaza_filme_random,
-            "top_20%_clienti":self.__ui_top_clienti,
+            "1":self.__ui_creeaza_clienti_random,
+            "2":self.__ui_creeaza_filme_random,
+            "3":self.__ui_creeaza_inchirieri_random,
+            "4":self.__ui_top_clienti,
             "help":self.__ui_help
 
         }
@@ -126,6 +127,8 @@ class Consola:
             return
         for inchiriere in inchirieri:
             print(inchiriere)
+    def __ui_creeaza_inchirieri_random(self):
+        self.__service_inchiriere.genereaza_inchiriere()
     def __ui_creeaza_filme_random(self):
         self.__service_filme.filme_random()
 

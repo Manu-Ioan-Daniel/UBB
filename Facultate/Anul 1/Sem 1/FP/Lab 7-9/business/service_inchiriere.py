@@ -7,10 +7,13 @@ class ServiceInchiriere:
         self._validator_inchiriere = validator_inchiriere
         self._repo_film = repo_film
         self._repo_client = repo_client
+        self._base_id=1
     def sterge_inchiriere(self,inchiriere_id):
         inchiriere=self._repo_inchiriere.cauta_inchiriere(inchiriere_id)
         self._validator_inchiriere.valideaza_inchiriere(inchiriere)
         self._repo_inchiriere.sterge_inchiriere(inchiriere_id)
+        if(inchiriere_id==self._base_id):
+            self._base_id-=1
     def modifica_inchiriere(self,inchiriere_id,film,client):
         inchiriere=Inchiriere(inchiriere_id,film,client)
         self._validator_inchiriere.valideaza_inchiriere(inchiriere)
@@ -23,14 +26,17 @@ class ServiceInchiriere:
         inchiriere=Inchiriere(inchiriere_id,film,client)
         self._validator_inchiriere.valideaza_inchiriere(inchiriere)
         self._repo_inchiriere.adauga_inchiriere(inchiriere)
+        self._base_id+=1
 
     def genereaza_inchiriere(self):
-        nr_inchiriere=random.randint(min(len(self._repo_client.get_all()),len(self._repo_film.get_all())))
-        for id in range (nr_inchiriere):
-            client=self._repo_client.cauta_client(id)
-            film=self._repo_film.cauta_film(id)
-            self._repo_inchiriere.adauga_inchiriere(id,film,client)
 
+        for i in range(1, random.randint(3,5)):
+            film_id = random.randint(1, len(self._repo_film.get_all()))
+            client_id = random.randint(1, len(self._repo_client.get_all()))
+            film = self._repo_film.cauta_film(film_id)
+            client = self._repo_client.cauta_client(client_id)
+            self.adauga_inchiriere(self._base_id, film, client)
+            self._base_id+=1
 
     def top_clienti(self):
         top={}
@@ -41,7 +47,6 @@ class ServiceInchiriere:
         for inchiriere in self._repo_inchiriere.get_all():
             top[inchiriere.get_client().get_id()]+=1
         top=sorted(top.items(),key=lambda x:x[1],reverse=True)
-        print(top)
         if(len(top)<3):
             return top
         return top
