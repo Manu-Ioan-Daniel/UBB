@@ -24,6 +24,7 @@ class Consola:
             "print_inchiriere":self.__ui_print_inchiriere,
             "creeaza_clienti_random":self.__ui_creeaza_clienti_random,
             "creeaza_filme_random":self.__ui_creeaza_filme_random,
+            "top_20%_clienti":self.__ui_top_clienti,
             "help":self.__ui_help
 
         }
@@ -92,7 +93,9 @@ class Consola:
         for inchiriere in self.__service_inchiriere.get_all():
             if id_client==inchiriere.get_client().get_id():
                 self.__service_inchiriere.sterge_inchiriere(inchiriere.get_id())
-
+    def __ui_top_clienti(self):
+        for list in self.__service_inchiriere.top_clienti():
+            print(f"Clientul {self.__service_clienti.cauta_client(list[0]).get_nume()} a inchiriat {list[1]} filme")
     def __ui_sterge_inchiriere(self):
         if(len(self.__service_inchiriere.get_all())==0):
             print("Nu exista inchirieri")
