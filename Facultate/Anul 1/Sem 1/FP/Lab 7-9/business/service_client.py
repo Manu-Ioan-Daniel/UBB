@@ -20,7 +20,8 @@ class ServiceClient:
         client = self._repo_clienti.cauta_client(client_id)
         self._validator_client.valideaza_client(client)
         self._repo_clienti.sterge_client(client_id)
-        self.__base_id-=1
+        if(client_id==self.__base_id):
+            self.__base_id-=1
     def cauta_client(self,client_id):
         client = self._repo_clienti.cauta_client(client_id)
         self._validator_client.valideaza_client(client)
