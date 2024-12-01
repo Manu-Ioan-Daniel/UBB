@@ -1,3 +1,4 @@
+from tinycss2 import serialize_identifier
 
 from teste.teste import Teste
 from validare.validare_client import ValidatorClient

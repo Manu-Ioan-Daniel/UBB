@@ -7,8 +7,8 @@ class ServiceClient:
         self._validator_client = _validator_client
         self._repo_clienti = _repo_clienti
         self.__base_id=1
-    def adauga_client(self,client_id,name,cnp):
-        client = Client(client_id,name,cnp)
+    def adauga_client(self,id_client,name,cnp):
+        client = Client(id_client,name,cnp)
         self._validator_client.valideaza_client(client)
         self._repo_clienti.adauga_client(client)
         self.__base_id+=1
@@ -27,6 +27,7 @@ class ServiceClient:
         self._validator_client.valideaza_client(client)
         return self._repo_clienti.cauta_client(client_id)
     def clienti_random(self):
+        random.seed(1)
         nr_clienti=random.randint(1,6)
         for nr_client in range(nr_clienti):
             lenght_nume_client=random.randint(5,20)

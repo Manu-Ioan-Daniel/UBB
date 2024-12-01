@@ -22,10 +22,12 @@ class Consola:
             "sterge_inchiriere":self.__ui_sterge_inchiriere,
             "cauta_inchiriere":self.__ui_cauta_inchiriere,
             "print_inchiriere":self.__ui_print_inchiriere,
-            "1":self.__ui_creeaza_clienti_random,
-            "2":self.__ui_creeaza_filme_random,
-            "3":self.__ui_creeaza_inchirieri_random,
-            "4":self.__ui_top_clienti,
+            "creeaza_clienti_random":self.__ui_creeaza_clienti_random,
+            "creeaza_filme_random":self.__ui_creeaza_filme_random,
+            "creeaza_inchirieri_random":self.__ui_creeaza_inchirieri_random,
+            "top_30_clienti":self.__ui_top_30_clienti,
+            "top_clienti":self.__ui_top_clienti,
+            "top_filme":self.__ui_top_filme,
             "help":self.__ui_help
 
         }
@@ -68,6 +70,12 @@ class Consola:
         for inchiriere in self.__service_inchiriere.get_all():
             if id_film==inchiriere.get_film().get_id():
                 self.__service_inchiriere.sterge_inchiriere(inchiriere.get_id())
+    def __ui_top_filme(self):
+        if(len(self.__service_inchiriere.get_all())==0):
+            print("Nu exista inchirieri")
+            return
+        for list in self.__service_inchiriere.top_filme():
+            print(f"Filmul {self.__service_filme.cauta_film(list[0]).get_titlu()} a fost inchiriat de {list[1]} ori")
     def __ui_print_clienti(self):
         clienti=self.__service_clienti.get_all()
         if len(clienti)==0:
@@ -76,7 +84,7 @@ class Consola:
         for client in clienti:
             print(client)
     def __ui_adauga_clienti(self):
-        id_client=int(input("ID client: "))
+        id_client=input("ID client: ")
         nume_client=input("Nume client: ")
         cnp_client=input("CNP client: ")
         self.__service_clienti.adauga_client(id_client,nume_client,cnp_client)
@@ -94,7 +102,16 @@ class Consola:
         for inchiriere in self.__service_inchiriere.get_all():
             if id_client==inchiriere.get_client().get_id():
                 self.__service_inchiriere.sterge_inchiriere(inchiriere.get_id())
+    def __ui_top_30_clienti(self):
+        if (len(self.__service_inchiriere.get_all()) == 0):
+            print("Nu exista inchirieri")
+            return
+        for list in self.__service_inchiriere.top_30_clienti():
+            print(f"Clientul {self.__service_clienti.cauta_client(list[0]).get_nume()} a inchiriat {list[1]} filme")
     def __ui_top_clienti(self):
+        if (len(self.__service_inchiriere.get_all()) == 0):
+            print("Nu exista inchirieri")
+            return
         for list in self.__service_inchiriere.top_clienti():
             print(f"Clientul {self.__service_clienti.cauta_client(list[0]).get_nume()} a inchiriat {list[1]} filme")
     def __ui_sterge_inchiriere(self):

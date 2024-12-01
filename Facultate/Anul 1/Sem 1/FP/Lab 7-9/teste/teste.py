@@ -13,8 +13,12 @@ from validare.validare_filme import ValidatorFilm
 from domeniu.inchiriere import Inchiriere
 from validare.validare_inchiriere import ValidatorInchiriere
 from business.service_inchiriere import ServiceInchiriere
+import random
+import string
 
 class Teste:
+    def __init__(self):
+        self.ruleaza_toate_testele()
     def test_repo_filme(self):
         repo_film=RepoFilm()
         film=Film(23,"Manu","un baiat si o fata","romantic")
@@ -244,7 +248,19 @@ class Teste:
         except RepoError as re:
             assert True
 
-        #sfarsit teste service film
+        #test genereaza clienti random
+
+        random.seed(1)
+        repo_client=RepoClient()
+        repo_client2=RepoClient()
+        service_client=ServiceClient(validator_client,repo_client)
+        service_client2 = ServiceClient(validator_client, repo_client2)
+        service_client.adauga_client(1,"gmlquca","8470472990059")
+        service_client.adauga_client(2,"rzsntyoirtyykxxcq", "7278959591294")
+        service_client2.clienti_random()
+        assert service_client.get_all() == service_client2.get_all()
+
+        #sfarsit teste service client
 
     def test_service_film(self):
         repo_film=RepoFilm()
@@ -356,6 +372,15 @@ class Teste:
             assert False
         except ValidationError as ve:
             assert str(ve) == "Id invalid"
+    def test_top(self):
+        repo_client = RepoClient()
+        repo_film=RepoFilm()
+        repo_inchiriere=RepoInchiriere()
+        validator_inchiriere=ValidatorInchiriere()
+        service_inchiriere=ServiceInchiriere(repo_inchiriere,validator_inchiriere,repo_film,repo_client)
+
+
+
 
     def ruleaza_toate_testele(self):
         self.test_repo_filme()
@@ -369,3 +394,5 @@ class Teste:
         self.test_service_inchiriere()
 
 
+
+teste=Teste()

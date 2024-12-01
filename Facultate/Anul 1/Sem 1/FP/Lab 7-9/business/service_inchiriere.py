@@ -38,10 +38,8 @@ class ServiceInchiriere:
             self.adauga_inchiriere(self._base_id, film, client)
             self._base_id+=1
 
-    def top_clienti(self):
+    def top_30_clienti(self):
         top={}
-        if len(self._repo_inchiriere.get_all())==0:
-            return "Nu exista inchirieri"
         for inchiriere in self._repo_inchiriere.get_all():
             top[inchiriere.get_client().get_id()]=0
         for inchiriere in self._repo_inchiriere.get_all():
@@ -49,10 +47,26 @@ class ServiceInchiriere:
         top=sorted(top.items(),key=lambda x:x[1],reverse=True)
         if(len(top)<3):
             return top
+        return top[:int(len(top)*3/10)+1]
+    def top_clienti(self):
+        top={}
+        for inchiriere in self._repo_inchiriere.get_all():
+            top[inchiriere.get_client().get_id()]=0
+        for inchiriere in self._repo_inchiriere.get_all():
+            top[inchiriere.get_client().get_id()]+=1
+        top=sorted(top.items(),key=lambda x:x[1],reverse=True)
         return top
 
-
-
+    def top_filme(self):
+        top={}
+        if len(self._repo_inchiriere.get_all())==0:
+            return "Nu exista inchirieri"
+        for inchiriere in self._repo_inchiriere.get_all():
+            top[inchiriere.get_film().get_id()]=0
+        for inchiriere in self._repo_inchiriere.get_all():
+            top[inchiriere.get_film().get_id()]+=1
+        top=sorted(top.items(),key=lambda x:x[1],reverse=True)
+        return top
 
     def get_all(self):
         return self._repo_inchiriere.get_all()
