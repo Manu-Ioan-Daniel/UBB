@@ -11,8 +11,10 @@ from business.service_client import ServiceClient
 from validare.validare_inchiriere import ValidatorInchiriere
 from business.service_inchiriere import ServiceInchiriere
 from infrastructura.repo_inchiriere import RepoInchiriere
+from infrastructura.repo_inchiriere_fisier import FileRepoInchiriere
+from infrastructura.repo_film_fisier import FileRepoFilm
+from infrastructura.repo_client_fisier import FileRepoClient
 teste=Teste()
-teste.ruleaza_toate_testele()
 validator_client=ValidatorClient()
 validator_film=ValidatorFilm()
 validator_inchiriere=ValidatorInchiriere()

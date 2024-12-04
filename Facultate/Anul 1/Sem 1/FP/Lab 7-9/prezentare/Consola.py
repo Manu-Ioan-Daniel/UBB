@@ -28,9 +28,129 @@ class Consola:
             "top_30_clienti":self.__ui_top_30_clienti,
             "top_clienti":self.__ui_top_clienti,
             "top_filme":self.__ui_top_filme,
+            "print_filme_fisier":self.__ui_print_filme_fisier(),
+            "print_clienti_fisier":self.__ui_print_clienti_fisier(),
+            "print_inchiriere_fisier":self.__ui_print_inchiriere_fisier(),
+            "cauta_film_fisier":self.__ui_cauta_film_fisier(),
+            "cauta_client_fisier":self.__ui_cauta_client_fisier(),
+            "cauta_inchiriere_fisier":self.__ui_cauta_inchiriere_fisier(),
+            "adauga_film_fisier":self.__ui_adauga_film_fisier(),
+            "adauga_client_fisier":self.__ui_adauga_clienti_fisier(),
+            "adauga_inchiriere_fisier":self.__ui_adauga_inchiriere_fisier(),
+            "modifica_film_fisier":self.__ui_modifica_film_fisier(),
+            "modifica_client_fisier":self.__ui_modifica_clienti_fisier(),
+            "modifica_inchiriere_fisier":self.__ui_modifica_inchiriere_fisier(),
+            "sterge_film_fisier":self.__ui_sterge_film_fisier(),
+            "sterge_client_fisier":self.__ui_sterge_client_fisier(),
+            "sterge_inchiriere_fisier":self.__ui_sterge_inchiriere_fisier(),
+            "creeaza_clienti_random_fisier":self.__ui_creeaza_clienti_random_fisier(),
+            "creeaza_filme_random_fisier":self.__ui_creeaza_filme_random_fisier(),
+            "creeaza_inchirieri_random_fisier":self.__ui_creeaza_inchirieri_random_fisier(),
+            "top_30_clienti_fisier":self.__ui_top_30_clienti_fisier(),
+            "top_clienti_fisier":self.__ui_top_clienti_fisier(),
+            "top_filme_fisier":self.__ui_top_filme_fisier(),
             "help":self.__ui_help
 
         }
+    def __ui_print_filme_fisier(self):
+        filme=self.__service_filme.get_all_fisier()
+        if len(filme)==0:
+            print("Nu exista filme")
+            return
+        print("Filmele sunt: ")
+        for film in filme:
+            print(film)
+    def __ui_print_clienti_fisier(self):
+        clienti=self.__service_clienti.get_all_fisier()
+        if len(clienti)==0:
+            print("Nu exista clienti")
+            return
+        for client in clienti:
+            print(client)
+    def __ui_print_inchiriere_fisier(self):
+        inchirieri=self.__service_inchiriere.get_all_fisier()
+        if len(inchirieri)==0:
+            print("Nu exista inchirieri")
+            return
+        for inchiriere in inchirieri:
+            print(inchiriere)
+    def __ui_cauta_film_fisier(self):
+        id_film=int(input("ID film: "))
+        film=self.__service_filme.cauta_film_fisier(id_film)
+        print(film)
+    def __ui_cauta_client_fisier(self):
+        id_client=int(input("ID client: "))
+        client=self.__service_clienti.cauta_client_fisier(id_client)
+        print(client)
+    def __ui_cauta_inchiriere_fisier(self):
+        id_inchiriere=int(input("ID inchiriere: "))
+        inchiriere=self.__service_inchiriere.cauta_inchiriere_fisier(id_inchiriere)
+        print(inchiriere)
+    def __ui_adauga_film_fisier(self):
+        id_film=int(input("ID film: "))
+        titlu_film=input("Titlu film: ")
+        descriere_film=input("Descriere film: ")
+        gen_film=input("Gen film: ")
+        self.__service_filme.adauga_film_fisier(id_film,titlu_film,descriere_film,gen_film)
+    def __ui_adauga_clienti_fisier(self):
+        id_client=int(input("ID client: "))
+        nume_client=input("Nume client: ")
+        cnp_client=input("CNP client: ")
+        self.__service_clienti.adauga_client_fisier(id_client,nume_client,cnp_client)
+    def __ui_adauga_inchiriere_fisier(self):
+        id_inchiriere=int(input("ID inchiriere: "))
+        film_id=int(input("ID film: "))
+        client_id=int(input("ID client: "))
+        self.__service_inchiriere.adauga_inchiriere_fisier(id_inchiriere,film_id,client_id)
+    def __ui_modifica_film_fisier(self):
+        id_film=int(input("ID film: "))
+        titlu_film=input("Titlu film: ")
+        descriere_film=input("Descriere film: ")
+        gen_film=input("Gen film: ")
+        self.__service_filme.modifica_film_fisier(id_film,titlu_film,descriere_film,gen_film)
+    def __ui_modifica_clienti_fisier(self):
+        id_client=int(input("ID client: "))
+        nume_client=input("Nume client: ")
+        cnp_client=input("CNP client: ")
+        self.__service_clienti.modifica_client_fisier(id_client,nume_client,cnp_client)
+    def __ui_modifica_inchiriere_fisier(self):
+        id_inchiriere=int(input("ID inchiriere: "))
+        film_id=int(input("ID film: "))
+        client_id=int(input("ID client: "))
+        self.__service_inchiriere.modifica_inchiriere_fisier(id_inchiriere,film_id,client_id)
+    def __ui_sterge_film_fisier(self):
+        id_film=int(input("ID film: "))
+        self.__service_filme.sterge_film_fisier(id_film)
+        for inchiriereDTO in self.__service_inchiriere.get_all_fisier():
+            if id_film==inchiriereDTO.get_film_id():
+                self.__service_inchiriere.sterge_inchiriere_fisier(inchiriereDTO.get_id())
+    def __ui_sterge_client_fisier(self):
+        id_client=int(input("ID client: "))
+        self.__service_clienti.sterge_client_fisier(id_client)
+        for inchiriereDTO in self.__service_inchiriere.get_all_fisier():
+            if id_client==inchiriereDTO.get_client_id():
+                self.__service_inchiriere.sterge_inchiriere_fisier(inchiriereDTO.get_id())
+    def __ui_sterge_inchiriere_fisier(self):
+        id_inchiriere=int(input("ID inchiriere: "))
+        self.__service_inchiriere.sterge_inchiriere_fisier(id_inchiriere)
+    def __ui_top_30_clienti_fisier(self):
+        if(len(self.__service_inchiriere.get_all_fisier())==0):
+            print("Nu exista inchirieri")
+            return
+        for list in self.__service_inchiriere.top_30_clienti_fisier():
+            print(f"Clientul {self.__service_clienti.cauta_client_fisier(list[0]).get_nume()} a inchiriat {list[1]} filme")
+    def __ui_top_clienti_fisier(self):
+        if(len(self.__service_inchiriere.get_all_fisier())==0):
+            print("Nu exista inchirieri")
+            return
+        for list in self.__service_inchiriere.top_clienti_fisier():
+            print(f"Clientul {self.__service_clienti.cauta_client_fisier(list[0]).get_nume()} a inchiriat {list[1]} filme")
+    def __ui_top_filme_fisier(self):
+        if(len(self.__service_inchiriere.get_all_fisier())==0):
+            print("Nu exista inchirieri")
+            return
+        for list in self.__service_inchiriere.top_filme_fisier():
+            print(f"Filmul {not self.__service_filme.cauta_film_fisier(list[0]).get_titlu()} a fost inchiriat de {list[1]} ori")
     def __ui_cauta_film(self):
         id_film=int(input("ID film: "))
         film=self.__service_filme.cauta_film(id_film)
