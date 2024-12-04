@@ -27,7 +27,6 @@ class FileRepoClient(Repo):
 
     def get_entitati(self):
         self.__citeste_tot_din_fisier()
-        print(self._entitati)
         return Repo.get_entitati(self)
 
     def __len__(self):

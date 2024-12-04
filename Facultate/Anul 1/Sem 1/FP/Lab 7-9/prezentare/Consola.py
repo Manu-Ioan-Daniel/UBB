@@ -43,9 +43,9 @@ class Consola:
             "sterge_film_fisier":self.__ui_sterge_film_fisier,
             "sterge_client_fisier":self.__ui_sterge_client_fisier,
             "sterge_inchiriere_fisier":self.__ui_sterge_inchiriere_fisier,
-            "creeaza_clienti_random_fisier":self.__ui_creeaza_clienti_random_fisier,
-            "creeaza_filme_random_fisier":self.__ui_creeaza_filme_random_fisier,
-            "creeaza_inchirieri_random_fisier":self.__ui_creeaza_inchirieri_random_fisier,
+            "1":self.__ui_creeaza_clienti_random_fisier,
+            "2":self.__ui_creeaza_filme_random_fisier,
+            "3":self.__ui_creeaza_inchirieri_random_fisier,
             "top_30_clienti_fisier":self.__ui_top_30_clienti_fisier,
             "top_clienti_fisier":self.__ui_top_clienti_fisier,
             "top_filme_fisier":self.__ui_top_filme_fisier,
@@ -150,7 +150,7 @@ class Consola:
             print("Nu exista inchirieri")
             return
         for list in self.__service_inchiriere.top_filme_fisier():
-            print(f"Filmul {not self.__service_filme.cauta_film_fisier(list[0]).get_titlu()} a fost inchiriat de {list[1]} ori")
+            print(f"Filmul {self.__service_filme.cauta_film_fisier(list[0]).get_title()} a fost inchiriat de {list[1]} ori")
     def __ui_cauta_film(self):
         id_film=int(input("ID film: "))
         film=self.__service_filme.cauta_film(id_film)

@@ -49,7 +49,7 @@ class ServiceClient:
         return self._repo_clienti.cauta_client(client_id)
     def clienti_random(self):
 
-        nr_clienti=random.randint(1,6)
+        nr_clienti=random.randint(2,6)
         for nr_client in range(nr_clienti):
             lenght_nume_client=random.randint(5,20)
             nume_client="".join(random.choices(string.ascii_lowercase,k=lenght_nume_client))
@@ -57,7 +57,7 @@ class ServiceClient:
             self.adauga_client(self.__base_id,nume_client,cnp_client)
     def clienti_random_fisier(self):
 
-        nr_clienti = random.randint(1, 6)
+        nr_clienti = random.randint(2, 6)
         for nr_client in range(nr_clienti):
 
             lenght_nume_client = random.randint(5, 20)

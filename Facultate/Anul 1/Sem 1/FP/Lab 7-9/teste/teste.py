@@ -415,20 +415,56 @@ class TesteUnitTest(unittest.TestCase):
     def testRepoClient(self):
         self.assertEqual(len(self.__repo_client_fisier.get_entitati()),0)
         client_test_1=Client(1,"Ion","1234567890123")
-        client_test_2 = Client(2, "Ana", "1234567890123")
-        self.__repo_client_fisier.adauga_entitate(client_test_1)
+        client_test_2 = Client(1, "Ana", "1234567890123")
+        self.__repo_client_fisier.adauga_client(client_test_1)
         self.assertEqual(len(self.__repo_client_fisier.get_entitati()),1)
-        self.assertEqual(client_test_1, self.__repo_client_fisier.cauta_entitate_dupa_id(1))
+        self.assertEqual(client_test_1, self.__repo_client_fisier.get_entitati()[0])
         try:
             self.__repo_client_fisier.adauga_entitate(client_test_1)
             assert False
         except RepoError as re:
             assert True
-        self.__repo_client_fisier.sterge_entitate(1)
+        self.__repo_client_fisier.sterge_client(1)
         self.assertNotIn(client_test_1,self.__repo_client_fisier.get_entitati())
-        self.__repo_client_fisier.adauga_entitate(client_test_1)
-        self.__repo_client_fisier.modifica_entitate(1,client_test_2)
-        self.assertEqual(self.__repo_client_fisier.cauta_entitate_dupa_id(1),client_test_2)
+        self.__repo_client_fisier.adauga_client(client_test_1)
+        self.__repo_client_fisier.modifica_client(1,client_test_2)
+        self.assertEqual(self.__repo_client_fisier.cauta_client(1),client_test_2)
+    def testRepoFilm(self):
+        self.assertEqual(len(self.__repo_film_fisier.get_entitati()),0)
+        film_test_1=Film(1,"Ion","1234567890123","1234567890123")
+        film_test_2=Film(1,"Ana","1234567890123","1234567890123")
+        self.__repo_film_fisier.adauga_entitate(film_test_1)
+        self.assertEqual(len(self.__repo_film_fisier.get_entitati()),1)
+        self.assertEqual(film_test_1,self.__repo_film_fisier.get_entitati()[0])
+        try:
+            self.__repo_film_fisier.adauga_entitate(film_test_1)
+            assert False
+        except RepoError as re:
+            assert True
+        self.__repo_film_fisier.sterge_entitate(1)
+        self.assertNotIn(film_test_1,self.__repo_film_fisier.get_entitati())
+        self.__repo_film_fisier.adauga_entitate(film_test_1)
+        self.__repo_film_fisier.modifica_entitate(1,film_test_2)
+        self.assertEqual(self.__repo_film_fisier.cauta_entitate_dupa_id(1),film_test_2)
+    def testRepoInchiriere(self):
+        self.assertEqual(len(self.__repo_inchiriere_fisier.get_entitati()),0)
+        inchiriere_test_1=InchiriereDTO(1,1,1)
+        inchiriere_test_2=InchiriereDTO(1,2,2)
+        self.__repo_inchiriere_fisier.adauga_entitate(inchiriere_test_1)
+        self.assertEqual(len(self.__repo_inchiriere_fisier.get_entitati()),1)
+        self.assertEqual(inchiriere_test_1,self.__repo_inchiriere_fisier.get_entitati()[0])
+        try:
+            self.__repo_inchiriere_fisier.adauga_entitate(inchiriere_test_1)
+            assert False
+        except RepoError as re:
+            assert True
+        self.__repo_inchiriere_fisier.sterge_entitate(1)
+        self.assertNotIn(inchiriere_test_1,self.__repo_inchiriere_fisier.get_entitati())
+        self.__repo_inchiriere_fisier.adauga_entitate(inchiriere_test_1)
+        self.__repo_inchiriere_fisier.modifica_entitate(1,inchiriere_test_2)
+        self.assertEqual(self.__repo_inchiriere_fisier.cauta_entitate_dupa_id(1),inchiriere_test_2)
+
+
 
 
 

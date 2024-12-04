@@ -33,7 +33,7 @@ class ServiceFilm:
         if(film_id==self.__base_id_fisier):
             self.__base_id_fisier-=1
     def filme_random_fisier(self):
-        nr_filme=random.randint(1,6)
+        nr_filme=random.randint(2,6)
         for nr_film in range(nr_filme):
             length_titlu_film=random.randint(5,20)
             titlu_film="".join(random.choices(string.ascii_lowercase,k=length_titlu_film))
@@ -57,7 +57,7 @@ class ServiceFilm:
         self._validator_film.valideaza_film(film)
         return film
     def filme_random(self):
-        nr_filme=random.randint(1,6)
+        nr_filme=random.randint(2,6)
         for nr_film in range(nr_filme):
             length_titlu_film=random.randint(5,20)
             titlu_film="".join(random.choices(string.ascii_lowercase,k=length_titlu_film))

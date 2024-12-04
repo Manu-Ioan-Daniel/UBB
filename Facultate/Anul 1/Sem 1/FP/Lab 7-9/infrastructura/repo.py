@@ -13,6 +13,7 @@ class Repo():
         del self._entitati[id_entitate]
     def cauta_entitate_dupa_id(self,id_entitate):
         if id_entitate not in self._entitati:
+            print(id_entitate)
             raise RepoError(f"Nu exista entitate cu id-ul {id_entitate}!")
         return self._entitati[id_entitate]
     def modifica_entitate(self,id_entitate,entitate):

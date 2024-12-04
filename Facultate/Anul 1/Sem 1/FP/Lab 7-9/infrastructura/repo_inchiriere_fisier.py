@@ -4,24 +4,25 @@ class FileRepoInchiriere(Repo):
     def __init__(self,cale_fisier):
         super().__init__()
         self.__cale_fisier=cale_fisier
+        open(self.__cale_fisier,"w").close()
     def citeste_tot_din_fisier(self):
         with open(self.__cale_fisier,"r") as f:
             self._entitati.clear()
             lines=f.readlines()
             for line in lines:
-                line.strip()
+                line=line.strip()
                 if line!="":
-                    line.split(",")
-                    id_entitate=int(line[0])
-                    id_film=line[1]
-                    id_client=line[2]
+                    parts=line.split(",")
+                    id_entitate=int(parts[0])
+                    id_film=parts[1]
+                    id_client=parts[2]
                     inchiriere_dto=InchiriereDTO(id_entitate,id_film,id_client)
                     self._entitati[id_entitate]=inchiriere_dto
     def scrie_tot_in_fisier(self):
         with open(self.__cale_fisier,"w") as f:
             for id_entitate in self._entitati:
                 inchiriere_dto=self._entitati[id_entitate]
-                f.write(f"{inchiriere_dto.get_id_entitate()},{inchiriere_dto.get_id_film()},{inchiriere_dto.get_id_client()}\n")
+                f.write(f"{inchiriere_dto.get_id()},{inchiriere_dto.get_film_id()},{inchiriere_dto.get_client_id()}\n")
     def adauga_entitate(self,entitate):
         self.citeste_tot_din_fisier()
         Repo.adauga_entitate(self,entitate)
@@ -38,4 +39,4 @@ class FileRepoInchiriere(Repo):
         self.citeste_tot_din_fisier()
         return Repo.cauta_entitate_dupa_id(self,id_entitate)
     def get_entitati(self):
-        return [x for x in self._entitati.values()]
+        return Repo.get_entitati(self)
