@@ -2,31 +2,36 @@ from domeniu.film import Film
 import random
 import string
 class ServiceFilm:
-    def __init__(self,_validator_film,_repo_film,_repo_film_fisier):
+    def __init__(self,_validator_film,_repo_film,_repo_film_fisier=None):
         self._validator_film=_validator_film
         self._repo_film=_repo_film
         self._repo_film_fisier=_repo_film_fisier
         self.__base_id=1
+        self.__base_id_fisier=1
     def adauga_film(self,film_id,titlu,descriere,gen):
         film=Film(film_id,titlu,descriere,gen)
         self._validator_film.valideaza_film(film)
         self._repo_film.adauga_film(film)
+        if(self.__base_id<film_id):
+            self.__base_id=film_id
         self.__base_id+=1
     def adauga_film_fisier(self,film_id,titlu,descriere,gen):
         film=Film(film_id,titlu,descriere,gen)
         self._validator_film.valideaza_film(film)
-        self._repo_film_fisier.adauga_film(film)
-        self.__base_id+=1
+        self._repo_film_fisier.adauga_entitate(film)
+        if(self.__base_id_fisier<film_id):
+            self.__base_id_fisier=film_id
+        self.__base_id_fisier+=1
     def modifica_film_fisier(self,film_id,titlu,descriere,gen):
         film=Film(film_id,titlu,descriere,gen)
         self._validator_film.valideaza_film(film)
         self._repo_film_fisier.modifica_film(film_id,film)
     def cauta_film_fisier(self,film_id):
-        return self._repo_film_fisier.cauta_film(film_id)
+        return self._repo_film_fisier.cauta_entitate_dupa_id(film_id)
     def sterge_film_fisier(self,film_id):
         self._repo_film_fisier.sterge_film(film_id)
-        if(film_id==self.__base_id):
-            self.__base_id-=1
+        if(film_id==self.__base_id_fisier):
+            self.__base_id_fisier-=1
     def filme_random_fisier(self):
         nr_filme=random.randint(1,6)
         for nr_film in range(nr_filme):
@@ -36,7 +41,7 @@ class ServiceFilm:
             descriere_film="".join(random.choices(string.ascii_lowercase,k=length_descriere_film))
             length_gen_film=random.randint(1,5)
             gen_film="".join(random.choices(string.ascii_lowercase,k=length_gen_film))
-            self.adauga_film_fisier(self.__base_id,titlu_film,descriere_film,gen_film)
+            self.adauga_film_fisier(self.__base_id_fisier,titlu_film,descriere_film,gen_film)
     def modifica_film(self,film_id,titlu,descriere,gen):
         film=Film(film_id,titlu,descriere,gen)
         self._validator_film.valideaza_film(film)
@@ -65,4 +70,4 @@ class ServiceFilm:
         return self._repo_film.get_all()
 
     def get_all_fisier(self):
-        return [x for x in self._repo_film_fisier.get_all()]
+        return self._repo_film_fisier.get_entitati()

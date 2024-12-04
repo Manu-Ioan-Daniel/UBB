@@ -13,6 +13,12 @@ from validare.validare_filme import ValidatorFilm
 from domeniu.inchiriere import Inchiriere
 from validare.validare_inchiriere import ValidatorInchiriere
 from business.service_inchiriere import ServiceInchiriere
+import unittest
+from domeniu.inchiriereDTO import InchiriereDTO
+from infrastructura.repo_film_fisier import FileRepoFilm
+from infrastructura.repo_client_fisier import FileRepoClient
+from infrastructura.repo_inchiriere_fisier import FileRepoInchiriere
+
 import random
 import string
 
@@ -392,7 +398,42 @@ class Teste:
         self.test_service_client()
         self.test_service_film()
         self.test_service_inchiriere()
+class TesteUnitTest(unittest.TestCase):
+    def setUp(self):
+        self.__cale_fisier_filme="filme_test.txt"
+        self.__repo_film_fisier=FileRepoFilm(self.__cale_fisier_filme)
+        with open(self.__cale_fisier_filme,"w") as f:
+            f.write("")
+        self.__cale_fisier_clienti="clienti_test.txt"
+        self.__repo_client_fisier=FileRepoClient(self.__cale_fisier_clienti)
+        with open(self.__cale_fisier_clienti,"w") as f:
+            f.write("")
+        self.__cale_fisier_inchirieri="inchirieri_test.txt"
+        self.__repo_inchiriere_fisier=FileRepoInchiriere(self.__cale_fisier_inchirieri)
+        with open(self.__cale_fisier_inchirieri,"w") as f:
+            f.write("")
+    def testRepoClient(self):
+        self.assertEqual(len(self.__repo_client_fisier.get_entitati()),0)
+        client_test_1=Client(1,"Ion","1234567890123")
+        client_test_2 = Client(2, "Ana", "1234567890123")
+        self.__repo_client_fisier.adauga_entitate(client_test_1)
+        self.assertEqual(len(self.__repo_client_fisier.get_entitati()),1)
+        self.assertEqual(client_test_1, self.__repo_client_fisier.cauta_entitate_dupa_id(1))
+        try:
+            self.__repo_client_fisier.adauga_entitate(client_test_1)
+            assert False
+        except RepoError as re:
+            assert True
+        self.__repo_client_fisier.sterge_entitate(1)
+        self.assertNotIn(client_test_1,self.__repo_client_fisier.get_entitati())
+        self.__repo_client_fisier.adauga_entitate(client_test_1)
+        self.__repo_client_fisier.modifica_entitate(1,client_test_2)
+        self.assertEqual(self.__repo_client_fisier.cauta_entitate_dupa_id(1),client_test_2)
 
 
 
-teste=Teste()
+if __name__=="__main__":
+    teste=Teste()
+    teste.ruleaza_toate_testele()
+    unittest.main()
+

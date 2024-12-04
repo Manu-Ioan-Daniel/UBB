@@ -4,6 +4,7 @@ class FileRepoClient(Repo):
     def __init__(self, cale_fisier):
         super().__init__()
         self.__cale_fisier = cale_fisier
+        open(self.__cale_fisier, 'w').close()
 
     def __citeste_tot_din_fisier(self):
         with open(self.__cale_fisier, "r") as f:
@@ -26,15 +27,16 @@ class FileRepoClient(Repo):
 
     def get_entitati(self):
         self.__citeste_tot_din_fisier()
-        return Repo.get_all(self)
+        print(self._entitati)
+        return Repo.get_entitati(self)
 
     def __len__(self):
         self.__citeste_tot_din_fisier()
         return Repo.__len__(self)
 
-    def adauga_client(self, id_client, client):
+    def adauga_client(self, client):
         self.__citeste_tot_din_fisier()
-        Repo.adauga_entitate(self, id_client, client)
+        Repo.adauga_entitate(self,client)
         self.__scrie_tot_in_fisier()
 
     def cauta_client(self, id_client):

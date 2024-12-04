@@ -2,7 +2,7 @@ from exceptii.erori import ValidationError
 class ValidatorClient:
     def valideaza_client(self,client):
         erori=""
-        if(client.get_id()<0):
+        if(int(client.get_id())<0):
             erori+="Id invalid\n"
         if(client.get_nume()==""):
             erori+="Name invalid\n"

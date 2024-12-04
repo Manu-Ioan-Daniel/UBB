@@ -28,27 +28,27 @@ class Consola:
             "top_30_clienti":self.__ui_top_30_clienti,
             "top_clienti":self.__ui_top_clienti,
             "top_filme":self.__ui_top_filme,
-            "print_filme_fisier":self.__ui_print_filme_fisier(),
-            "print_clienti_fisier":self.__ui_print_clienti_fisier(),
-            "print_inchiriere_fisier":self.__ui_print_inchiriere_fisier(),
-            "cauta_film_fisier":self.__ui_cauta_film_fisier(),
-            "cauta_client_fisier":self.__ui_cauta_client_fisier(),
-            "cauta_inchiriere_fisier":self.__ui_cauta_inchiriere_fisier(),
-            "adauga_film_fisier":self.__ui_adauga_film_fisier(),
-            "adauga_client_fisier":self.__ui_adauga_clienti_fisier(),
-            "adauga_inchiriere_fisier":self.__ui_adauga_inchiriere_fisier(),
-            "modifica_film_fisier":self.__ui_modifica_film_fisier(),
-            "modifica_client_fisier":self.__ui_modifica_clienti_fisier(),
-            "modifica_inchiriere_fisier":self.__ui_modifica_inchiriere_fisier(),
-            "sterge_film_fisier":self.__ui_sterge_film_fisier(),
-            "sterge_client_fisier":self.__ui_sterge_client_fisier(),
-            "sterge_inchiriere_fisier":self.__ui_sterge_inchiriere_fisier(),
-            "creeaza_clienti_random_fisier":self.__ui_creeaza_clienti_random_fisier(),
-            "creeaza_filme_random_fisier":self.__ui_creeaza_filme_random_fisier(),
-            "creeaza_inchirieri_random_fisier":self.__ui_creeaza_inchirieri_random_fisier(),
-            "top_30_clienti_fisier":self.__ui_top_30_clienti_fisier(),
-            "top_clienti_fisier":self.__ui_top_clienti_fisier(),
-            "top_filme_fisier":self.__ui_top_filme_fisier(),
+            "print_filme_fisier":self.__ui_print_filme_fisier,
+            "print_clienti_fisier":self.__ui_print_clienti_fisier,
+            "print_inchiriere_fisier":self.__ui_print_inchiriere_fisier,
+            "cauta_film_fisier":self.__ui_cauta_film_fisier,
+            "cauta_client_fisier":self.__ui_cauta_client_fisier,
+            "cauta_inchiriere_fisier":self.__ui_cauta_inchiriere_fisier,
+            "adauga_film_fisier":self.__ui_adauga_film_fisier,
+            "adauga_client_fisier":self.__ui_adauga_clienti_fisier,
+            "adauga_inchiriere_fisier":self.__ui_adauga_inchiriere_fisier,
+            "modifica_film_fisier":self.__ui_modifica_film_fisier,
+            "modifica_client_fisier":self.__ui_modifica_clienti_fisier,
+            "modifica_inchiriere_fisier":self.__ui_modifica_inchiriere_fisier,
+            "sterge_film_fisier":self.__ui_sterge_film_fisier,
+            "sterge_client_fisier":self.__ui_sterge_client_fisier,
+            "sterge_inchiriere_fisier":self.__ui_sterge_inchiriere_fisier,
+            "creeaza_clienti_random_fisier":self.__ui_creeaza_clienti_random_fisier,
+            "creeaza_filme_random_fisier":self.__ui_creeaza_filme_random_fisier,
+            "creeaza_inchirieri_random_fisier":self.__ui_creeaza_inchirieri_random_fisier,
+            "top_30_clienti_fisier":self.__ui_top_30_clienti_fisier,
+            "top_clienti_fisier":self.__ui_top_clienti_fisier,
+            "top_filme_fisier":self.__ui_top_filme_fisier,
             "help":self.__ui_help
 
         }
@@ -204,7 +204,7 @@ class Consola:
         for client in clienti:
             print(client)
     def __ui_adauga_clienti(self):
-        id_client=input("ID client: ")
+        id_client=int(input("ID client: "))
         nume_client=input("Nume client: ")
         cnp_client=input("CNP client: ")
         self.__service_clienti.adauga_client(id_client,nume_client,cnp_client)
@@ -265,12 +265,17 @@ class Consola:
         for inchiriere in inchirieri:
             print(inchiriere)
     def __ui_creeaza_inchirieri_random(self):
-        self.__service_inchiriere.genereaza_inchiriere()
+        self.__service_inchiriere.creeaza_inchiriere_random()
     def __ui_creeaza_filme_random(self):
         self.__service_filme.filme_random()
-
     def __ui_creeaza_clienti_random(self):
         self.__service_clienti.clienti_random()
+    def __ui_creeaza_clienti_random_fisier(self):
+        self.__service_clienti.clienti_random_fisier()
+    def __ui_creeaza_filme_random_fisier(self):
+        self.__service_filme.filme_random_fisier()
+    def __ui_creeaza_inchirieri_random_fisier(self):
+        self.__service_inchiriere.creeaza_inchiriere_random_fisier()
 
     def run(self):
         while True:

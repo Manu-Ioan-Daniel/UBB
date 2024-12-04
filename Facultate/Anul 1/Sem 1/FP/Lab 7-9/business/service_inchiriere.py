@@ -3,7 +3,7 @@ from domeniu.inchiriereDTO import InchiriereDTO
 import random
 
 class ServiceInchiriere:
-    def __init__(self, repo_inchiriere, validator_inchiriere, repo_film, repo_client,repo_film_fisier,repo_client_fisier,repo_inchiriere_fisier):
+    def __init__(self, repo_inchiriere, validator_inchiriere, repo_film, repo_client,repo_inchiriere_fisier=None,repo_film_fisier=None,repo_client_fisier=None):
         self._repo_inchiriere = repo_inchiriere
         self._validator_inchiriere = validator_inchiriere
         self._repo_film = repo_film
@@ -31,7 +31,7 @@ class ServiceInchiriere:
     def modifica_inchiriere_fisier(self,inchiriere_id,id_film,id_client):
         inchiriereDTO=InchiriereDTO(inchiriere_id,id_film,id_client)
         self._repo_inchiriere_fisier.modifica_inchiriere(inchiriere_id,inchiriereDTO)
-    def genereaza_inchiriere_fisier(self):
+    def creeaza_inchiriere_random_fisier(self):
         for i in range(1, random.randint(3,5)):
             film_id = random.randint(1, len(self._repo_film.get_all()))
             client_id = random.randint(1, len(self._repo_client.get_all()))
@@ -50,7 +50,7 @@ class ServiceInchiriere:
         self._repo_inchiriere.adauga_inchiriere(inchiriere)
         self._base_id+=1
 
-    def genereaza_inchiriere(self):
+    def creeaza_inchiriere_random(self):
 
         for i in range(1, random.randint(3,5)):
             film_id = random.randint(1, len(self._repo_film.get_all()))
