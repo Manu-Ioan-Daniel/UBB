@@ -1,5 +1,5 @@
-"""merge sort"""
-def my_sort(list,key=None,reverse=False):
+#merge sort
+def my_merge_sort(list,key=None,reverse=False):
     if key is None:
         key=lambda x:x
     if len(list)<=1:
