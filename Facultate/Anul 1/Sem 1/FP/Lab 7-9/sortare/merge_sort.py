@@ -5,8 +5,8 @@ def my_merge_sort(list,key=None,reverse=False):
     if len(list)<=1:
         return list
     mid=len(list)//2
-    left=my_sort(list[:mid],key,reverse)
-    right=my_sort(list[mid:],key,reverse)
+    left=my_merge_sort(list[:mid],key,reverse)
+    right=my_merge_sort(list[mid:],key,reverse)
     return merge(left,right,key,reverse)
 def merge(left,right,key,reverse):
     result=[]

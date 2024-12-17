@@ -18,7 +18,8 @@ from domeniu.inchiriereDTO import InchiriereDTO
 from infrastructura.repo_film_fisier import FileRepoFilm
 from infrastructura.repo_client_fisier import FileRepoClient
 from infrastructura.repo_inchiriere_fisier import FileRepoInchiriere
-
+from sortare.bingo_sort import my_bingo_sort
+from sortare.merge_sort import my_merge_sort
 import random
 import string
 
@@ -463,8 +464,31 @@ class TesteUnitTest(unittest.TestCase):
         self.__repo_inchiriere_fisier.adauga_entitate(inchiriere_test_1)
         self.__repo_inchiriere_fisier.modifica_entitate(1,inchiriere_test_2)
         self.assertEqual(self.__repo_inchiriere_fisier.cauta_entitate_dupa_id(1),inchiriere_test_2)
+    def test_bingo_sort(self):
+        lista=[5,4,3,2,1]
+        lista=my_bingo_sort(lista,key=lambda x:x)
+        self.assertEqual(lista,[1,2,3,4,5])
+        lista=[2,7,3,1,5]
+        lista=my_bingo_sort(lista,key=lambda x:x,reverse=True)
+        self.assertEqual(lista,[7,5,3,2,1])
 
-
+        lista_clienti=[Client(1,"Ionela","1234567890123"),Client(2,"Ana","1234567890123"),Client(3,"Maria","1234567890123")]
+        lista_clienti=my_bingo_sort(lista_clienti,key=lambda x:x.get_id(),reverse=True)
+        self.assertEqual(lista_clienti,[Client(3,"Maria","1234567890123"),Client(2,"Ana","1234567890123"),Client(1,"Ionela","1234567890123")])
+        lista_clienti=my_bingo_sort(lista_clienti,key=lambda x:len(x.get_nume()))
+        self.assertEqual(lista_clienti,[Client(2,"Ana","1234567890123"),Client(3,"Maria","1234567890123"),Client(1,"Ionela","1234567890123")])
+    def test_merge_sort(self):
+        lista=[5,4,3,2,1]
+        lista=my_merge_sort(lista,key=lambda x:x)
+        self.assertEqual(lista,[1,2,3,4,5])
+        lista=[2,7,3,1,5]
+        lista=my_merge_sort(lista,key=lambda x:x,reverse=True)
+        self.assertEqual(lista,[7,5,3,2,1])
+        lista_clienti=[Client(1,"Ionela","1234567890123"),Client(2,"Ana","1234567890123"),Client(3,"Maria","1234567890123")]
+        lista_clienti=my_merge_sort(lista_clienti,key=lambda x:x.get_id(),reverse=True)
+        self.assertEqual(lista_clienti,[Client(3,"Maria","1234567890123"),Client(2,"Ana","1234567890123"),Client(1,"Ionela","1234567890123")])
+        lista_clienti=my_merge_sort(lista_clienti,key=lambda x:len(x.get_nume()))
+        self.assertEqual(lista_clienti,[Client(2,"Ana","1234567890123"),Client(3,"Maria","1234567890123"),Client(1,"Ionela","1234567890123")])
 
 
 

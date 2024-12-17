@@ -1,6 +1,6 @@
 #bingo sort
 def my_bingo_sort(list,key=None,reverse=False):
-    if key is none:
+    if key is None:
          key=lambda x:x
     if len(list)<=1:
         return list
@@ -12,7 +12,7 @@ def my_bingo_sort(list,key=None,reverse=False):
             min_sau_max=min(list[index:],key=key)
 
         for i in range(index,len(list)):
-            if key(list[i])==min_sau_max:
+            if key(list[i])==key(min_sau_max):
                 list[index],list[i]=list[i],list[index]
                 index+=1
     return list
