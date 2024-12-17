@@ -20,5 +20,8 @@ class RepoFilm():
             raise RepoError("Nu exista film cu acest id")
         return self.__filme[id_film]
 
-    def get_all(self):
-        return[x for x in self.__filme.values()]
+    def get_all(self,lista=None,index=0):
+        lista=list(self.__filme.values())
+        if(index==len(lista)):
+            return []
+        return [lista[index]]+self.get_all(lista,index+1)

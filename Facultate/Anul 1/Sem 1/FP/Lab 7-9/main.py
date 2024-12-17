@@ -27,4 +27,10 @@ service_client=ServiceClient(validator_client, repo_client,repo_client_fisier)
 service_film=ServiceFilm(validator_film, repo_film,repo_film_fisier)
 service_inchiriere=ServiceInchiriere(repo_inchiriere,validator_inchiriere,service_film,service_client,repo_inchiriere_fisier,repo_film_fisier,repo_client_fisier)
 consola=Consola(service_film, service_client,service_inchiriere)
+teste=Teste()
+teste.ruleaza_toate_testele()
 consola.run()
+
+#functia get_all din repo_film are complexitatea O(n),unde n este numarul de filme
+#am creat functie recursiva get_all in repo_filme care returneaza toate filmele din repo
+#am creat functie recursiva top_clienti in consola

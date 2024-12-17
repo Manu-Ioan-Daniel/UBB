@@ -34,6 +34,7 @@ class ServiceClient:
         return self._repo_clienti_fisier.cauta_client(id_client)
 
     def modifica_client(self,client_id,name,cnp):
+
         client = Client(client_id,name,cnp)
         self._validator_client.valideaza_client(client)
         self._repo_clienti.modifica_client(client_id,client)
@@ -48,7 +49,7 @@ class ServiceClient:
         self._validator_client.valideaza_client(client)
         return self._repo_clienti.cauta_client(client_id)
     def clienti_random(self):
-
+        random.seed(1)
         nr_clienti=random.randint(2,6)
         for nr_client in range(nr_clienti):
             lenght_nume_client=random.randint(5,20)

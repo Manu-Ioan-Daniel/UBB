@@ -26,8 +26,6 @@ class Client:
         if isinstance(other,Client):
             return self.__id_client == other.get_id() and self.__nume == other.get_nume() and self.__cnp == other.get_cnp()
         return False
-    # def __hash__(self):
-    #     return hash((self.__id_client,self.__nume,self.__cnp))
     def __str__(self):
         return f"{self.__id_client} - {self.__nume} - {self.__cnp}\n"
 

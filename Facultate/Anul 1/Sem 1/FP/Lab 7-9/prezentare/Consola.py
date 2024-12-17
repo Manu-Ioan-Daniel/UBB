@@ -228,12 +228,17 @@ class Consola:
             return
         for list in self.__service_inchiriere.top_30_clienti():
             print(f"Clientul {self.__service_clienti.cauta_client(list[0]).get_nume()} a inchiriat {list[1]} filme")
-    def __ui_top_clienti(self):
+    def __ui_top_clienti(self,index=0):
         if (len(self.__service_inchiriere.get_all()) == 0):
             print("Nu exista inchirieri")
             return
-        for list in self.__service_inchiriere.top_clienti():
-            print(f"Clientul {self.__service_clienti.cauta_client(list[0]).get_nume()} a inchiriat {list[1]} filme")
+        liste=list(self.__service_inchiriere.top_clienti())
+        if(index==len(liste)):
+            return
+        print(f"Clientul {self.__service_clienti.cauta_client(liste[index][0]).get_nume()} a inchiriat {liste[index][1]} filme")
+        self.__ui_top_clienti(index+1)
+        #for list in self.__service_inchiriere.top_clienti():
+            #print(f"Clientul {self.__service_clienti.cauta_client(list[0]).get_nume()} a inchiriat {list[1]} filme")
     def __ui_sterge_inchiriere(self):
         if(len(self.__service_inchiriere.get_all())==0):
             print("Nu exista inchirieri")
