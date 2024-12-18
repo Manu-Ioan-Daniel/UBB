@@ -26,102 +26,6 @@ import string
 class Teste:
     def __init__(self):
         self.ruleaza_toate_testele()
-    def test_repo_filme(self):
-        repo_film=RepoFilm()
-        film=Film(23,"Manu","un baiat si o fata","romantic")
-        film2 = Film(23, "Manuu", "un baiat si o fata", "romantic")
-
-        #test adauga film
-
-        repo_film.adauga_film(film)
-        assert film in repo_film.get_all()
-        try:
-            repo_film.adauga_film(film)
-            assert False
-        except RepoError as re:
-            assert True
-
-        #test modifica film
-
-        repo_film.modifica_film(film.get_id(),film2)
-        assert film2 in repo_film.get_all()
-        assert film not in repo_film.get_all()
-        try:
-            repo_film.modifica_film(24,film2)
-            assert False
-        except RepoError as re:
-            assert True
-
-        #test sterge film
-
-        repo_film.sterge_film(film2.get_id())
-        assert film2 not in repo_film.get_all()
-        try:
-            repo_film.sterge_film(film2.get_id())
-            assert False
-        except RepoError as re:
-            assert True
-
-        #test cauta film
-
-        repo_film.adauga_film(film)
-        film_cautat=repo_film.cauta_film(film.get_id())
-        assert film == film_cautat
-        try:
-            repo_film.cauta_film(100)
-            assert False
-        except RepoError as re:
-            assert True
-
-        #sfarsit teste repo filme
-    def test_repo_clienti(self):
-        repo_client=RepoClient()
-        client=Client(23,"Manu","505")
-        client2 = Client(23, "Manuu", "505")
-
-        #test adauga client
-
-        repo_client.adauga_client(client)
-        assert client in repo_client.get_all()
-        try:
-            repo_client.adauga_client(client)
-            assert False
-        except RepoError as re:
-            assert True
-
-        #test modifica client
-
-        repo_client.modifica_client(client.get_id(),client2)
-        assert client2 in repo_client.get_all()
-        assert client not in repo_client.get_all()
-        try:
-            repo_client.modifica_client(24,client2)
-            assert False
-        except RepoError as re:
-            assert True
-
-        #test sterge client
-
-        repo_client.sterge_client(client2.get_id())
-        assert client2 not in repo_client.get_all()
-        try:
-            repo_client.sterge_client(client2.get_id())
-            assert False
-        except RepoError as re:
-            assert True
-
-        #test cauta client
-
-        repo_client.adauga_client(client)
-        client_cautat=repo_client.cauta_client(client.get_id())
-        assert client == client_cautat
-        try:
-            repo_client.cauta_client(100)
-            assert False
-        except RepoError as re:
-            assert True
-
-        #sfarsit test repo client
 
     def test_repo_inchirieri(self):
         repo_inchiriere=RepoInchiriere()
@@ -379,12 +283,6 @@ class Teste:
             assert False
         except ValidationError as ve:
             assert str(ve) == "Id invalid"
-    def test_top(self):
-        repo_client = RepoClient()
-        repo_film=RepoFilm()
-        repo_inchiriere=RepoInchiriere()
-        validator_inchiriere=ValidatorInchiriere()
-        service_inchiriere=ServiceInchiriere(repo_inchiriere,validator_inchiriere,repo_film,repo_client)
 
 
 
@@ -399,10 +297,21 @@ class Teste:
         self.test_service_client()
         self.test_service_film()
         self.test_service_inchiriere()
+#make the same tests in testeunittest from above
+#use the same examples
 class TesteUnitTest(unittest.TestCase):
     def setUp(self):
         self.__cale_fisier_filme="filme_test.txt"
         self.__repo_film_fisier=FileRepoFilm(self.__cale_fisier_filme)
+        self.__repo_film=RepoFilm()
+        self.__repo_client=RepoClient()
+        self.__repo_inchiriere=RepoInchiriere()
+        self.__validator_film=ValidatorFilm()
+        self.__validator_client=ValidatorClient()
+        self.__validator_inchiriere=ValidatorInchiriere()
+        self.__service_film=ServiceFilm(self.__validator_film,self.__repo_film)
+        self.__service_client=ServiceClient(self.__validator_client,self.__repo_client)
+        self.__service_inchiriere=ServiceInchiriere(self.__repo_inchiriere,self.__validator_inchiriere,self.__repo_film,self.__repo_client)
         with open(self.__cale_fisier_filme,"w") as f:
             f.write("")
         self.__cale_fisier_clienti="clienti_test.txt"
@@ -413,7 +322,97 @@ class TesteUnitTest(unittest.TestCase):
         self.__repo_inchiriere_fisier=FileRepoInchiriere(self.__cale_fisier_inchirieri)
         with open(self.__cale_fisier_inchirieri,"w") as f:
             f.write("")
+        self.client = Client(23, "Manu", "505")
+        self.client2 = Client(23, "Manuu", "505")
+        self.film = Film(23, "Manu", "un baiat si o fata", "romantic")
+        self.film2 = Film(23, "Manuu", "un baiat si o fata", "romantic")
+        self.inchiriere = Inchiriere(23, self.film, self.client)
+        self.inchiriere2 = Inchiriere(23, self.film2, self.client2)
+    def testRepoFilm(self):
+        #adauga film repo
+        film_test_1=self.film
+        film_test_2=self.film2
+        self.__repo_film.adauga_film(film_test_1)
+        self.assertEqual(len(self.__repo_film.get_all()),1)
+        self.assertEqual(film_test_1,self.__repo_film.get_all()[0])
+        try:
+            self.__repo_film.adauga_film(film_test_1)
+            assert False
+        except RepoError as re:
+            assert True
+        #modifica film repo
+        self.__repo_film.modifica_film(1,film_test_2)
+        self.assertEqual(self.__repo_film.get_all()[0],film_test_2)
+        try:
+            self.__repo_film.modifica_film(2,film_test_2)
+            assert False
+        except RepoError as re:
+            assert True
+        #sterge film repo
+        self.__repo_film.sterge_film(1)
+        self.assertNotIn(film_test_1,self.__repo_film.get_all())
+        try:
+            self.__repo_film.sterge_film(1)
+            assert False
+        except RepoError as re:
+            assert True
+        #cauta film repo
+        self.__repo_film.adauga_film(film_test_1)
+        assertEqual(self.__repo_film.cauta_film(1),film_test_1)
+        try:
+            self.__repo_film.cauta_film(2)
+            assert False
+        except RepoError as re:
+            assert True
+
     def testRepoClient(self):
+
+
+        # test adauga client
+
+        self.__repo_client.adauga_client(self.client)
+        self.assertEqual(self.__repo_client.get_all()[0], self.client)
+        try:
+            self.__repo_client.adauga_client(self.client)
+            assert False
+        except RepoError as re:
+            assert True
+
+        # test modifica client
+
+        self.__repo_client.modifica_client(self.client.get_id(), self.client2)
+        self.assertEqual(repo_client.get_all()[0], self.client2)
+        self.assertNotIn(self.client, repo_client.get_all())
+        try:
+            self.__repo_client.modifica_client(24, self.client2)
+            assert False
+        except RepoError as re:
+            assert True
+
+        # test sterge client
+
+        self.__repo_client.sterge_client(self.client2.get_id())
+        self.assertNotIn(self.client2, repo_client.get_all())
+        try:
+            repo_client.sterge_client(self.client2.get_id())
+            assert False
+        except RepoError as re:
+            assert True
+
+        # test cauta client
+
+        self.__repo_client.adauga_client(self.client)
+        client_cautat = self.__repo_client.cauta_client(self.client.get_id())
+        self.assertEqual(self.client, self.client_cautat)
+        try:
+            self.__repo_client.cauta_client(100)
+            assert False
+        except RepoError as re:
+            assert True
+
+    def testRepoInchiriere(self):
+        pass
+    def testRepoClient_fisier(self):
         self.assertEqual(len(self.__repo_client_fisier.get_entitati()),0)
         client_test_1=Client(1,"Ion","1234567890123")
         client_test_2 = Client(1, "Ana", "1234567890123")
@@ -430,7 +429,7 @@ class TesteUnitTest(unittest.TestCase):
         self.__repo_client_fisier.adauga_client(client_test_1)
         self.__repo_client_fisier.modifica_client(1,client_test_2)
         self.assertEqual(self.__repo_client_fisier.cauta_client(1),client_test_2)
-    def testRepoFilm(self):
+    def testRepoFilm_fisier(self):
         self.assertEqual(len(self.__repo_film_fisier.get_entitati()),0)
         film_test_1=Film(1,"Ion","1234567890123","1234567890123")
         film_test_2=Film(1,"Ana","1234567890123","1234567890123")
@@ -447,7 +446,7 @@ class TesteUnitTest(unittest.TestCase):
         self.__repo_film_fisier.adauga_entitate(film_test_1)
         self.__repo_film_fisier.modifica_entitate(1,film_test_2)
         self.assertEqual(self.__repo_film_fisier.cauta_entitate_dupa_id(1),film_test_2)
-    def testRepoInchiriere(self):
+    def testRepoInchiriere_fisier(self):
         self.assertEqual(len(self.__repo_inchiriere_fisier.get_entitati()),0)
         inchiriere_test_1=InchiriereDTO(1,1,1)
         inchiriere_test_2=InchiriereDTO(1,2,2)

@@ -21,6 +21,7 @@ class RepoFilm():
         return self.__filme[id_film]
 
     def get_all(self,lista=None,index=0):
+        # todo remember this is recursive
         lista=list(self.__filme.values())
         if(index==len(lista)):
             return []
