@@ -1,5 +1,6 @@
 from domeniu.inchiriere import Inchiriere
 from domeniu.inchiriereDTO import InchiriereDTO
+from sortare.merge_sort import sortare
 import random
 
 class ServiceInchiriere:
@@ -71,7 +72,7 @@ class ServiceInchiriere:
             top[inchiriere.get_client().get_id()]=0
         for inchiriere in self._repo_inchiriere.get_all():
             top[inchiriere.get_client().get_id()]+=1
-        top=sorted(top.items(),key=lambda x:x[1],reverse=True)
+        top=sortare(list(top.items()),key=lambda x:x[1],reverse=True)
         if(len(top)<3):
             return top[0]
         return top[:int(len(top)*3/10)+1]
@@ -82,7 +83,7 @@ class ServiceInchiriere:
 
         for inchiriereDTO in self._repo_inchiriere_fisier.get_entitati():
             top[inchiriereDTO.get_client_id()]+=1
-        top=sorted(top.items(),key=lambda x:x[1],reverse=True)
+        top=sortare(list(top.items()),key=lambda x:x[1],reverse=True)
         if(len(top)<3):
             return top
         return top[:int(len(top)*3/10)+1]
@@ -92,7 +93,7 @@ class ServiceInchiriere:
             top[inchiriereDTO.get_client_id()]=0
         for inchiriereDTO in self._repo_inchiriere_fisier.get_entitati():
             top[inchiriereDTO.get_client_id()]+=1
-        top=sorted(top.items(),key=lambda x:x[1],reverse=True)
+        top=sortare(list(top.items()),key=lambda x:x[1],reverse=True)
         return top
     def top_clienti(self):
         top={}
@@ -100,7 +101,7 @@ class ServiceInchiriere:
             top[inchiriere.get_client().get_id()]=0
         for inchiriere in self._repo_inchiriere.get_all():
             top[inchiriere.get_client().get_id()]+=1
-        top=sorted(top.items(),key=lambda x:x[1],reverse=True)
+        top=sortare(list(top.items()),key=lambda x:x[1],reverse=True)
         return top
     def top_filme_fisier(self):
         top={}
@@ -108,7 +109,7 @@ class ServiceInchiriere:
             top[inchiriere.get_film_id()]=0
         for inchiriere in self._repo_inchiriere_fisier.get_entitati():
             top[inchiriere.get_film_id()]+=1
-        top=sorted(top.items(),key=lambda x:x[1],reverse=True)
+        top=sortare(list(top.items()),key=lambda x:x[1],reverse=True)
         return top
 
     def top_filme(self):
@@ -119,7 +120,7 @@ class ServiceInchiriere:
             top[inchiriere.get_film().get_id()]=0
         for inchiriere in self._repo_inchiriere.get_all():
             top[inchiriere.get_film().get_id()]+=1
-        top=sorted(top.items(),key=lambda x:x[1],reverse=True)
+        top=sortare(list(top.items()),key=lambda x:x[1],reverse=True)
         return top
 
     def get_all(self):
