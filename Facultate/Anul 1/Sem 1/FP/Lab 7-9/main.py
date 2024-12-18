@@ -12,6 +12,10 @@ from infrastructura.repo_inchiriere import RepoInchiriere
 from infrastructura.repo_inchiriere_fisier import FileRepoInchiriere
 from infrastructura.repo_film_fisier import FileRepoFilm
 from infrastructura.repo_client_fisier import FileRepoClient
+import unittest
+tests = unittest.defaultTestLoader.discover('.')
+test_runner = unittest.TextTestRunner()
+test_runner.run(tests)
 validator_client=ValidatorClient()
 validator_film=ValidatorFilm()
 validator_inchiriere=ValidatorInchiriere()
@@ -26,6 +30,10 @@ service_film=ServiceFilm(validator_film, repo_film,repo_film_fisier)
 service_inchiriere=ServiceInchiriere(repo_inchiriere,validator_inchiriere,service_film,service_client,repo_inchiriere_fisier,repo_film_fisier,repo_client_fisier)
 consola=Consola(service_film, service_client,service_inchiriere)
 consola.run()
+tests = unittest.defaultTestLoader.discover('.')
+test_runner = unittest.TextTestRunner()
+test_runner.run(tests)
+
 
 #functia get_all din repo_film are complexitatea teta(n),unde n este numarul de filme
 #am creat functie recursiva get_all in repo_filme care returneaza toate filmele din repo

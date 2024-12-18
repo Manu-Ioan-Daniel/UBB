@@ -337,7 +337,7 @@ class TesteUnitTest(unittest.TestCase):
         self.assertEqual(top_filme[2],(filme[3].get_id(),2))
         self.assertEqual(top_filme[3],(filme[2].get_id(),2))
         self.assertEqual(top_filme[4],(filme[0].get_id(),2))
-        
+
 
 
 
@@ -418,6 +418,5 @@ class TesteUnitTest(unittest.TestCase):
         lista_clienti=my_merge_sort(lista_clienti,key=lambda x:len(x.get_nume()))
         self.assertEqual(lista_clienti,[Client(2,"Ana","1234567890123"),Client(3,"Maria","1234567890123"),Client(1,"Ionela","1234567890123")])
 
-if __name__=="__main__":
-    unittest.main()
+
 
