@@ -21,6 +21,7 @@ def merge(left,right,key,reverse):
     result.extend(left[i:])
     result.extend(right[j:])
     return result
-
+def sortare(list,key=None,reverse=False):
+    return my_merge_sort(list,key,reverse)
 
 
