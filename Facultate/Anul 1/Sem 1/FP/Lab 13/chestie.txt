@@ -1,0 +1,5 @@
+Daca sirul nostru este de forma a1,a2,a3,...,an, atunci spatiul de cautare este reprezentat de permutarile formate din elementele sirului nostru.
+Un canditat reprezinta vectorul x,care este o solutie partiala formata din permutarea curenta
+Consistenta - Verificam daca vectorul x respecta conditia de secventa de munte
+Solutie - Verificam daca vectorul x este o solutie completa(x are lungimea sirului citit)
+Backtracking: Trecem prin toate permutarile si le afisam doar pe cele care sunt de tip munte si complete

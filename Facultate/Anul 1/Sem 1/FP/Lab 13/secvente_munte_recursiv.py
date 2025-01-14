@@ -2,11 +2,20 @@ def backtracking(numbers,k,x):
     """Functia backtracking"""
     for i in range(0,len(numbers)):
         x[k]=numbers[i]
-        if k==len(numbers)-1:
-            if is_mountain(x):
-                print_solution(x)
-        else:
-            backtracking(numbers,k+1,x)
+        if is_consistent(x,k):
+            if k==len(numbers)-1:
+                if is_mountain(x):
+                    print_solution(x)
+            else:
+                backtracking(numbers,k+1,x)
+
+
+def is_consistent(x, k):
+    if k < 2:
+        return True
+    return is_mountain(x[:k + 1])
+
+
 def is_mountain(numbers):
     """sceventa este munte daca elementele cresc pana intr un punct si apoi scad"""
     i=0

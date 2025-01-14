@@ -6,18 +6,27 @@ def backtracking(numbers):
         if index[k]<len(numbers):
             x[k] = numbers[index[k]]
             index[k]+=1
+            if is_consistent(x,k):
+                if k == len(numbers) - 1:
+                    if is_mountain(x):
+                        print_solution(x)
+                        x[k] = -1
+                        k -= 1
+                else:
+                    k += 1
         else:
             x[k] = -1
             index[k]=0
             k -= 1
-            continue
-        if k == len(numbers) - 1:
-            if is_mountain(x):
-                print_solution(x)
-                x[k] = -1
-                k -= 1
-        else:
-            k += 1
+
+
+
+def is_consistent(x, k):
+
+    if k < 2:
+        return True
+    return is_mountain(x[:k+1])
+
 def is_mountain(numbers):
     """secventa este munte daca elementele cresc pana intr un punct si apoi scad"""
     i=0

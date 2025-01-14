@@ -38,3 +38,4 @@ test_runner.run(tests)
 #functia get_all din repo_film are complexitatea teta(n),unde n este numarul de filme
 #am creat functie recursiva get_all in repo_filme care returneaza toate filmele din repo
 #am creat functie recursiva top_clienti in consola
+
