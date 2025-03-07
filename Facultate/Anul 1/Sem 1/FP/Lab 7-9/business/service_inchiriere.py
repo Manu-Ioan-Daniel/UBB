@@ -104,6 +104,10 @@ class ServiceInchiriere:
         top=sortare(list(top.items()),key=lambda x:x[1],reverse=True)
         return top
     def top_filme_fisier(self):
+        """
+
+        :return:
+        """
         top={}
         for inchiriere in self._repo_inchiriere_fisier.get_entitati():
             top[inchiriere.get_film_id()]=0
@@ -113,6 +117,10 @@ class ServiceInchiriere:
         return top
 
     def top_filme(self):
+        """
+
+        :return:
+        """
         top={}
         if len(self._repo_inchiriere.get_all())==0:
             return "Nu exista inchirieri"
