@@ -4,8 +4,7 @@ def backtracking(numbers,k,x):
         x[k]=numbers[i]
         if is_consistent(x,k):
             if k==len(numbers)-1:
-                if is_mountain(x):
-                    print_solution(x)
+                print_solution(x)
             else:
                 backtracking(numbers,k+1,x)
 
