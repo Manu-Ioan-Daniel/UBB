@@ -175,6 +175,7 @@ void filtrareUI(Lista* l) {
         fgets(tip,12,stdin);
         tip[strlen(tip)-1]='\0';
         filtrate=filtrareDupaTip(tip,l);
+        afisareOferteUI(filtrate);
         destroyList(filtrate);
 
 

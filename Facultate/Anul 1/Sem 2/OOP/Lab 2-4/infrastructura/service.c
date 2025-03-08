@@ -105,12 +105,12 @@ Lista* filtrareDupaTip(char tip[],Lista* l) {
     for (int i = 0; i < l->len; i++) {
         if (strcmp(l->oferte[i].tip,tip)==0) {
             adaugaOferta(l->oferte[i], rez);
-            printf("Sunt aici\n");
         }
     }
     return rez;
 
 }
+
 //Teste
 
 void testeService() {
@@ -167,7 +167,65 @@ void testeService() {
     assert(l->oferte[0].pret==o1.pret);
     assert(l->oferte[0].suprafata==o1.suprafata);
 
+    //test filtrareDupaTip
 
+    destroyList(l);
+    createList(l);
+    adaugaOfertaService(o1.adresa,o1.pret,o1.tip,o1.suprafata,l);
+    assert(l->len==1);
+    assert(strcmp(l->oferte[0].adresa,o1.adresa)==0);
+    assert(strcmp(l->oferte[0].tip,o1.tip)==0);
+    assert(l->oferte[0].pret==o1.pret);
+    assert(l->oferte[0].suprafata==o1.suprafata);
+    adaugaOfertaService(o2.adresa,o2.pret,o2.tip,o2.suprafata,l);
+    assert(l->len==2);
+    assert(strcmp(l->oferte[1].adresa,o2.adresa)==0);
+    assert(strcmp(l->oferte[1].tip,o2.tip)==0);
+    assert(l->oferte[1].pret==o2.pret);
+    assert(l->oferte[1].suprafata==o2.suprafata);
+    adaugaOfertaService(o3.adresa,o3.pret,o3.tip,o3.suprafata,l);
+    assert(l->len==3);
+    assert(strcmp(l->oferte[2].adresa,o3.adresa)==0);
+    assert(strcmp(l->oferte[2].tip,o3.tip)==0);
+    assert(l->oferte[2].pret==o3.pret);
+    assert(l->oferte[2].suprafata==o3.suprafata);
+
+    Lista* filtrate=malloc(sizeof(Lista));
+    filtrate=filtrareDupaTip("casa",l);
+    assert(filtrate->len==1);
+    assert(strcmp(filtrate->oferte[0].adresa,o2.adresa)==0);
+    assert(strcmp(filtrate->oferte[0].tip,o2.tip)==0);
+    assert(filtrate->oferte[0].pret==o2.pret);
+    assert(filtrate->oferte[0].suprafata==o2.suprafata);
+    filtrate=filtrareDupaTip("apartament",l);
+    assert(filtrate->len==1);
+    assert(strcmp(filtrate->oferte[0].adresa,o1.adresa)==0);
+    assert(strcmp(filtrate->oferte[0].tip,o1.tip)==0);
+    assert(filtrate->oferte[0].pret==o1.pret);
+    assert(filtrate->oferte[0].suprafata==o1.suprafata);
+    filtrate=filtrareDupaTip("teren",l);
+    assert(filtrate->len==1);
+    assert(strcmp(filtrate->oferte[0].adresa,o3.adresa)==0);
+    assert(strcmp(filtrate->oferte[0].tip,o3.tip)==0);
+    assert(filtrate->oferte[0].pret==o3.pret);
+    assert(filtrate->oferte[0].suprafata==o3.suprafata);
+    clearValidationError();
+    filtrate=filtrareDupaTip("altceva",l);
+    assert(filtrate->len==0);
+    assert(strcmp(ValidationError,"Tip invalid\n")==0);
+
+    //test sortare
+
+    filtrate=sortare(l,0);
+    assert(filtrate->len==3);
+    assert(strcmp(filtrate->oferte[0].adresa,o3.adresa)==0);
+    assert(strcmp(filtrate->oferte[1].adresa,o1.adresa)==0);
+    assert(strcmp(filtrate->oferte[2].adresa,o2.adresa)==0);
+    filtrate=sortare(l,1);
+    assert(filtrate->len==3);
+    assert(strcmp(filtrate->oferte[0].adresa,o2.adresa)==0);
+    assert(strcmp(filtrate->oferte[1].adresa,o1.adresa)==0);
+    assert(strcmp(filtrate->oferte[2].adresa,o3.adresa)==0);
 
 
 }
