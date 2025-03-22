@@ -2,7 +2,7 @@
 void run(Lista* l){
     char optiune[100];
     while(optiune[0]!='0'){
-        printf("Introdu optiunea dorita:\n1.Adauga oferta\n2.Sterge oferta\n3.Modifica oferta\n4.Afiseaza ofertele\n5.Sortare oferte\n6.Printeaza oferte\n7.Filtrare\n0.Iesire\n");
+        printf("Introdu optiunea dorita:\n1.Adauga oferta\n2.Sterge oferta\n3.Modifica oferta\n4.Afiseaza ofertele\n5.Sortare oferte\n6.Filtrare\n0.Iesire\n");
         scanf("%s",optiune);
         getchar();
         if(strlen(optiune)>1){
@@ -27,9 +27,6 @@ void run(Lista* l){
                 sortareUI(l);
                 break;
             case '6':
-                printeazaOferte(l);
-                break;
-            case '7':
                 filtrareUI(l);
                 break;
             case '0':
@@ -40,10 +37,6 @@ void run(Lista* l){
         }
     }
     
-}
-void printeazaOferte(Lista* l){
-    for(int i=0;i<l->len;i++)
-        printf("Adresa:%s Tip:%s Suprafata:%.2f Pret:%.2f\n",l->oferte[i].adresa,l->oferte[i].tip,l->oferte[i].suprafata,l->oferte[i].pret);
 }
 void getFloat(const char* mesaj, float* f) {
     char input[100];
@@ -154,10 +147,11 @@ void sortareUI(Lista* l){
     }
     afisareOferteUI(rez);
     destroyList(rez);
+
 }
 void filtrareUI(Lista* l) {
     char filtru[50];
-    Lista* filtrate=malloc(sizeof(Lista));
+    Lista* filtrate;
     printf("Introdu un filtru:");
     fgets(filtru,50,stdin);
     filtru[strlen(filtru)-1]='\0';
@@ -179,6 +173,7 @@ void filtrareUI(Lista* l) {
         destroyList(filtrate);
 
 
+
     }
     else if (strcmp(filtru,"pret")==0) {
         float pret;
@@ -186,6 +181,7 @@ void filtrareUI(Lista* l) {
         filtrate=filtrareDupaPret(pret,l);
         afisareOferteUI(filtrate);
         destroyList(filtrate);
+
 
     }else {
         printf("Filtru invalid.Filtru poate fi doar tip,pret,suprafata\n");

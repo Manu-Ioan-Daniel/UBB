@@ -4,8 +4,8 @@
 extern char RepoError[256];
 extern char ValidationError[256];
 
-void addRepoError(char* error);
-void addValidationError(char* error);
+void addRepoError(const char* error);
+void addValidationError(const char* error);
 void clearRepoError();
 void clearValidationError();
 

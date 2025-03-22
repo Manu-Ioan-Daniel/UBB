@@ -1,5 +1,4 @@
 //lista.h
-
 #ifndef LISTA_H
 #include "oferta.h"
 #include <stdlib.h>
@@ -9,11 +8,12 @@
 typedef struct{
     int len;
     int capacitate;
-    Oferta* oferte;
+    Oferta* oferte ;
 
 }Lista;
-void resizeList(Lista*);
-void createList(Lista*);
-void destroyList(Lista*);
+
+void resizeList(Lista* l);
+Lista* createList();
+void destroyList(Lista* l);
 void testList();
 #endif //LISTA_H

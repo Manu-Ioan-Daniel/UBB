@@ -44,8 +44,7 @@ void modificaOfertaService(char adresa[],char adresaNoua[],float suprafataNoua,c
 
 Lista* sortare(Lista *l, int reverse) {
 
-    Lista* rez = malloc(sizeof(Lista));
-    createList(rez);
+    Lista* rez=createList();
     for (int i = 0; i < l->len; i++)
         adaugaOferta(l->oferte[i], rez);
 
@@ -69,8 +68,7 @@ Lista* sortare(Lista *l, int reverse) {
     return rez;
 }
 Lista* filtrareDupaPret(float pret,Lista* l) {
-    Lista* rez = malloc(sizeof(Lista));
-    createList(rez);
+    Lista* rez=createList();
     if (pret<0) {
         addValidationError("Pret invalid\n");
         return rez;
@@ -83,8 +81,7 @@ Lista* filtrareDupaPret(float pret,Lista* l) {
 
 }
 Lista* filtrareDupaSuprafata(float suprafata,Lista* l) {
-    Lista* rez = malloc(sizeof(Lista));
-    createList(rez);
+    Lista* rez=createList();
     if (suprafata<0) {
         addValidationError("Suprafata invalida\n");
         return rez;
@@ -95,8 +92,7 @@ Lista* filtrareDupaSuprafata(float suprafata,Lista* l) {
     return rez;
 }
 Lista* filtrareDupaTip(char tip[],Lista* l) {
-    Lista* rez = malloc(sizeof(Lista));
-    createList(rez);
+    Lista* rez=createList();
     if (strcmp(tip,"casa")!=0 && strcmp(tip,"apartament")!=0 && strcmp(tip,"teren")!=0) {
         addValidationError("Tip invalid\n");
         return rez;
@@ -127,8 +123,8 @@ void testeService() {
     o3.suprafata=3;
     strcpy(o3.tip,"teren");
     strcpy(o3.adresa,"adresa3");
-    Lista* l=malloc(sizeof(Lista));
-    createList(l);
+    Lista* l=createList();
+
 
     //test adaugaOfertaService
 
@@ -170,7 +166,7 @@ void testeService() {
     //test filtrareDupaTip
 
     destroyList(l);
-    createList(l);
+    l=createList();
     adaugaOfertaService(o1.adresa,o1.pret,o1.tip,o1.suprafata,l);
     assert(l->len==1);
     assert(strcmp(l->oferte[0].adresa,o1.adresa)==0);
@@ -190,19 +186,20 @@ void testeService() {
     assert(l->oferte[2].pret==o3.pret);
     assert(l->oferte[2].suprafata==o3.suprafata);
 
-    Lista* filtrate=malloc(sizeof(Lista));
-    filtrate=filtrareDupaTip("casa",l);
+    Lista *filtrate = filtrareDupaTip("casa", l);
     assert(filtrate->len==1);
     assert(strcmp(filtrate->oferte[0].adresa,o2.adresa)==0);
     assert(strcmp(filtrate->oferte[0].tip,o2.tip)==0);
     assert(filtrate->oferte[0].pret==o2.pret);
     assert(filtrate->oferte[0].suprafata==o2.suprafata);
+    destroyList(filtrate);
     filtrate=filtrareDupaTip("apartament",l);
     assert(filtrate->len==1);
     assert(strcmp(filtrate->oferte[0].adresa,o1.adresa)==0);
     assert(strcmp(filtrate->oferte[0].tip,o1.tip)==0);
     assert(filtrate->oferte[0].pret==o1.pret);
     assert(filtrate->oferte[0].suprafata==o1.suprafata);
+    destroyList(filtrate);
     filtrate=filtrareDupaTip("teren",l);
     assert(filtrate->len==1);
     assert(strcmp(filtrate->oferte[0].adresa,o3.adresa)==0);
@@ -210,10 +207,11 @@ void testeService() {
     assert(filtrate->oferte[0].pret==o3.pret);
     assert(filtrate->oferte[0].suprafata==o3.suprafata);
     clearValidationError();
+    destroyList(filtrate);
     filtrate=filtrareDupaTip("altceva",l);
     assert(filtrate->len==0);
     assert(strcmp(ValidationError,"Tip invalid\n")==0);
-
+    destroyList(filtrate);
     //test sortare
 
     filtrate=sortare(l,0);
@@ -221,11 +219,13 @@ void testeService() {
     assert(strcmp(filtrate->oferte[0].adresa,o3.adresa)==0);
     assert(strcmp(filtrate->oferte[1].adresa,o1.adresa)==0);
     assert(strcmp(filtrate->oferte[2].adresa,o2.adresa)==0);
+    destroyList(filtrate);
     filtrate=sortare(l,1);
     assert(filtrate->len==3);
     assert(strcmp(filtrate->oferte[0].adresa,o2.adresa)==0);
     assert(strcmp(filtrate->oferte[1].adresa,o1.adresa)==0);
     assert(strcmp(filtrate->oferte[2].adresa,o3.adresa)==0);
-
+    destroyList(l);
+    destroyList(filtrate);
 
 }

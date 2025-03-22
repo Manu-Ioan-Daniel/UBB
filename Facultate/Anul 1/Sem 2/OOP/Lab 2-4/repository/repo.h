@@ -7,9 +7,19 @@
 #include <stdio.h>
 #include "../errors/errors.h"
 #include "../domeniu/oferta.h"
-void adaugaOferta(Oferta,Lista*);
-void stergeOferta(char[],Lista*);
-void modificaOferta(char[],Oferta,Lista*);
-int cautaOferta(char[],Lista*);
+
+///
+/// @param o oferta pe care o adaugam in  lista
+/// @param l lista de oferte
+/// @brief functie care adauga o oferta in lista de oferte
+void adaugaOferta(Oferta o,Lista* l);
+
+///
+/// @param adresa adresa ofertei pe care o stergem,string nevid
+/// @param l o lista de oferte
+/// @brief functie care sterge o oferta din lista de oferte
+void stergeOferta(char adresa[],Lista* l);
+void modificaOferta(char adresa[],Oferta,Lista* l);
+int cautaOferta(char adresa[],Lista* l);
 void testRepo();
 #endif //REPO_H

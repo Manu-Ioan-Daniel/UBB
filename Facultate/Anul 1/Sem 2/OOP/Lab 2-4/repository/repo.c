@@ -37,61 +37,58 @@ void stergeOferta(char adresa[],Lista* l)
     l->len--;
      
 }
+
+//Teste
+
 void testRepo() {
-    Lista l;
-    createList(&l);
+    Lista* l=createList();
     Oferta o;
     strcpy(o.adresa,"adresa");
     strcpy(o.tip,"tip");
     o.pret=1;
     o.suprafata=1;
 
-    //test adauga oferta
-
-    adaugaOferta(o,&l);
-    assert(l.len==1);
-    assert(strcmp(l.oferte[0].adresa,"adresa")==0);
-    assert(strcmp(l.oferte[0].tip,"tip")==0);
-    assert(l.oferte[0].pret==1);
-    assert(l.oferte[0].suprafata==1);
-    adaugaOferta(o,&l);
-    assert(strcmp(RepoError,"Exista deja o oferta cu aceasta adresa.\n")==0);
+    // test adauga oferta
+    adaugaOferta(o, l);
+    assert(l->len == 1);
+    assert(strcmp(l->oferte[0].adresa, "adresa") == 0);
+    assert(strcmp(l->oferte[0].tip, "tip") == 0);
+    assert(l->oferte[0].pret == 1);
+    assert(l->oferte[0].suprafata == 1);
+    adaugaOferta(o, l);
+    assert(strcmp(RepoError, "Exista deja o oferta cu aceasta adresa.\n") == 0);
     clearRepoError();
-    //test modifica oferta
 
+    // test modifica oferta
     Oferta o2;
-    strcpy(o2.adresa,"adresa2");
-    strcpy(o2.tip,"tip2");
-    o2.pret=2;
-    o2.suprafata=2;
-    modificaOferta("adresa",o2,&l);
-    assert(l.len==1);
-    assert(strcmp(l.oferte[0].adresa,"adresa2")==0);
-    assert(strcmp(l.oferte[0].tip,"tip2")==0);
-    assert(l.oferte[0].pret==2);
-    assert(l.oferte[0].suprafata==2);
-    modificaOferta("adresa3",o2,&l);
-    assert(strcmp(RepoError,"Nu exista oferta cu adresa specificata.\n")==0);
+    strcpy(o2.adresa, "adresa2");
+    strcpy(o2.tip, "tip2");
+    o2.pret = 2;
+    o2.suprafata = 2;
+    modificaOferta("adresa", o2, l);
+    assert(l->len == 1);
+    assert(strcmp(l->oferte[0].adresa, "adresa2") == 0);
+    assert(strcmp(l->oferte[0].tip, "tip2") == 0);
+    assert(l->oferte[0].pret == 2);
+    assert(l->oferte[0].suprafata == 2);
+    modificaOferta("adresa3", o2, l);
+    assert(strcmp(RepoError, "Nu exista oferta cu adresa specificata.\n") == 0);
     clearRepoError();
 
-
-    //test cauta oferta
-
-    Oferta oferta = l.oferte[cautaOferta("adresa2",&l)];
-    assert(strcmp(oferta.adresa,"adresa2")==0);
-    assert(strcmp(oferta.tip,"tip2")==0);
-    assert(oferta.pret==2);
-    assert(oferta.suprafata==2);
-    cautaOferta("adresa3",&l);
-    assert(strcmp(RepoError,"Nu exista oferta cu adresa specificata.\n")==0);
+    // test cauta oferta
+    Oferta oferta = l->oferte[cautaOferta("adresa2", l)];
+    assert(strcmp(oferta.adresa, "adresa2") == 0);
+    assert(strcmp(oferta.tip, "tip2") == 0);
+    assert(oferta.pret == 2);
+    assert(oferta.suprafata == 2);
+    cautaOferta("adresa3", l);
+    assert(strcmp(RepoError, "Nu exista oferta cu adresa specificata.\n") == 0);
     clearRepoError();
 
-    //test sterge oferta
-
-    stergeOferta("adresa2",&l);
-    assert(l.len==0);
-    destroyList(&l);
-
+    // test sterge oferta
+    stergeOferta("adresa2", l);
+    assert(l->len == 0);
+    destroyList(l);
 
 
 }

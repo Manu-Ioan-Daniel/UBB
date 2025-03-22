@@ -8,31 +8,27 @@ void resizeList(Lista* l){
     free(l->oferte);
     l->oferte=aux;
 }
-void createList(Lista* l){
+Lista* createList(){
+    Lista* l=malloc(sizeof(Lista));
     l->len=0;
     l->capacitate=INIT_CAPACITY;
     l->oferte=malloc(l->capacitate*sizeof(Oferta));
+    return l;
 }
 void destroyList(Lista* l)
 {
     free(l->oferte);
-    l->oferte=NULL;
-    l->len=0;
-    l->capacitate=0;
+    free(l);
 }
 
 
 //Teste
 
 void testList() {
-    Lista l;
-    createList(&l);
-    assert(l.capacitate == INIT_CAPACITY);
-    assert(l.len==0);
-    resizeList(&l);
-    assert(l.capacitate == 2*INIT_CAPACITY);
-    destroyList(&l);
-    assert (l.capacitate==0);
-    assert(l.len==0);
-    assert(l.oferte==NULL);
+    Lista* l=createList();
+    assert(l->capacitate == INIT_CAPACITY);
+    assert(l->len==0);
+    resizeList(l);
+    assert(l->capacitate == 2*INIT_CAPACITY);
+    destroyList(l);
 }

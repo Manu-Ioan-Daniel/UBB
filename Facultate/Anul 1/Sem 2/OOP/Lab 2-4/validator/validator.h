@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <assert.h>
+#include "../errors/errors.h"
 int valideazaOferta(Oferta o);
 void strip(char* s);
 void testValidator();

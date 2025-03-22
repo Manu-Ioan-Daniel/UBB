@@ -1,7 +1,6 @@
 
 #include "validator.h"
 
-#include "../errors/errors.h"
 
 int valideazaOferta(Oferta o){
     char erori[100]="";
@@ -11,9 +10,9 @@ int valideazaOferta(Oferta o){
         strcat(erori,"Pretul nu poate fi negativ\n");
     if(o.suprafata<0)
         strcat(erori,"Suprafata nu poate fi negativa\n");
-    if(strcmp(strlwr(o.tip),"apartament")!=0 && strcmp(strlwr(o.tip),"casa")!=0 && strcmp(strlwr(o.tip),"teren")!=0)
+    if(strcmp(o.tip,"apartament")!=0 && strcmp(o.tip,"casa")!=0 && strcmp(o.tip,"teren")!=0)
         strcat(erori,"Tipul trebuie sa fie apartament, casa sau teren\n");
-    if(strcmp(strlwr(o.adresa),"")==0)
+    if(strcmp(o.adresa,"")==0)
         strcat(erori,"Adresa nu poate fi vida\n");
     if(strcmp(erori,"")!=0){
         addValidationError(erori);
@@ -24,9 +23,9 @@ int valideazaOferta(Oferta o){
 void strip(char* s) {
     char* d = s;
     do {
-        while (*d == ' ') {
+        while (*d == ' ')
             ++d;
-        }
+
     } while ((*s++ = *d++));
 }
 

@@ -3,10 +3,9 @@
 void runTests();
 int main(void){
     runTests();
-    Lista* l=malloc(sizeof(Lista));
-    createList(l);
+    Lista* l=createList();
     run(l);
-    free(l);
+    destroyList(l);
     return 0;
 }
 void runTests() {

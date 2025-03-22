@@ -4,11 +4,11 @@
 char RepoError[256] = "";
 char ValidationError[256] = "";
 
-void addRepoError(char* error) {
+void addRepoError(const char* error) {
     strcat(RepoError, error);
 }
 
-void addValidationError(char* error) {
+void addValidationError(const char* error) {
     strcat(ValidationError, error);
 }
 void clearRepoError() {
