@@ -1,0 +1,3 @@
+/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug/CMakeFiles/Lab5.dir
+/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
