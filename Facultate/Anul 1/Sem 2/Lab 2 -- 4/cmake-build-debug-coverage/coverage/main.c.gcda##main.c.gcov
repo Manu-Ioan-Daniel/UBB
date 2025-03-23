@@ -1,0 +1,32 @@
+        -:    0:Source:/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/main.c
+        -:    0:Graph:/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug-coverage/CMakeFiles/Lab_2_4.dir/main.c.gcno
+        -:    0:Data:/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug-coverage/CMakeFiles/Lab_2_4.dir/main.c.gcda
+        -:    0:Runs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include "ui/ui.h"
+function runTests called 1 returned 100% blocks executed 100%
+        1:    3:void runTests() {
+        1:    4:    testeService();
+        1:    4-block  0
+call    0 returned 1
+        1:    5:    testValidator();
+call    0 returned 1
+        1:    6:    testRepo();
+call    0 returned 1
+        1:    7:    testList();
+call    0 returned 1
+        -:    8:
+        1:    9:}
+function main called 1 returned 100% blocks executed 100%
+        1:   10:int main(void){
+        1:   11:    runTests();
+        1:   11-block  0
+call    0 returned 1
+        1:   12:    Lista* l=createList();
+call    0 returned 1
+        1:   13:    run(l);
+call    0 returned 1
+        1:   14:    destroyList(l);
+call    0 returned 1
+        1:   15:    return 0;
+        -:   16:}

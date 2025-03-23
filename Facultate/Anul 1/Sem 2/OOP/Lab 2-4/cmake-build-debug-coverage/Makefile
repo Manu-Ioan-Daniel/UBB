@@ -129,78 +129,6 @@ Lab_2_4/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/build
 .PHONY : Lab_2_4/fast
 
-domeniu/lista.o: domeniu/lista.c.o
-.PHONY : domeniu/lista.o
-
-# target to build an object file
-domeniu/lista.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/domeniu/lista.c.o
-.PHONY : domeniu/lista.c.o
-
-domeniu/lista.i: domeniu/lista.c.i
-.PHONY : domeniu/lista.i
-
-# target to preprocess a source file
-domeniu/lista.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/domeniu/lista.c.i
-.PHONY : domeniu/lista.c.i
-
-domeniu/lista.s: domeniu/lista.c.s
-.PHONY : domeniu/lista.s
-
-# target to generate assembly for a file
-domeniu/lista.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/domeniu/lista.c.s
-.PHONY : domeniu/lista.c.s
-
-errors/errors.o: errors/errors.c.o
-.PHONY : errors/errors.o
-
-# target to build an object file
-errors/errors.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/errors/errors.c.o
-.PHONY : errors/errors.c.o
-
-errors/errors.i: errors/errors.c.i
-.PHONY : errors/errors.i
-
-# target to preprocess a source file
-errors/errors.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/errors/errors.c.i
-.PHONY : errors/errors.c.i
-
-errors/errors.s: errors/errors.c.s
-.PHONY : errors/errors.s
-
-# target to generate assembly for a file
-errors/errors.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/errors/errors.c.s
-.PHONY : errors/errors.c.s
-
-infrastructura/service.o: infrastructura/service.c.o
-.PHONY : infrastructura/service.o
-
-# target to build an object file
-infrastructura/service.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/infrastructura/service.c.o
-.PHONY : infrastructura/service.c.o
-
-infrastructura/service.i: infrastructura/service.c.i
-.PHONY : infrastructura/service.i
-
-# target to preprocess a source file
-infrastructura/service.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/infrastructura/service.c.i
-.PHONY : infrastructura/service.c.i
-
-infrastructura/service.s: infrastructura/service.c.s
-.PHONY : infrastructura/service.s
-
-# target to generate assembly for a file
-infrastructura/service.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/infrastructura/service.c.s
-.PHONY : infrastructura/service.c.s
-
 main.o: main.c.o
 .PHONY : main.o
 
@@ -225,77 +153,149 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/main.c.s
 .PHONY : main.c.s
 
-repository/repo.o: repository/repo.c.o
-.PHONY : repository/repo.o
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.o: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.c.o
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.o
 
 # target to build an object file
-repository/repo.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/repository/repo.c.o
-.PHONY : repository/repo.c.o
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.c.o
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.c.o
 
-repository/repo.i: repository/repo.c.i
-.PHONY : repository/repo.i
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.i: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.c.i
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.i
 
 # target to preprocess a source file
-repository/repo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/repository/repo.c.i
-.PHONY : repository/repo.c.i
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.c.i
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.c.i
 
-repository/repo.s: repository/repo.c.s
-.PHONY : repository/repo.s
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.s: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.c.s
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.s
 
 # target to generate assembly for a file
-repository/repo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/repository/repo.c.s
-.PHONY : repository/repo.c.s
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.c.s
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.c.s
 
-ui/ui.o: ui/ui.c.o
-.PHONY : ui/ui.o
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.o: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.c.o
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.o
 
 # target to build an object file
-ui/ui.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/ui/ui.c.o
-.PHONY : ui/ui.c.o
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.c.o
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.c.o
 
-ui/ui.i: ui/ui.c.i
-.PHONY : ui/ui.i
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.i: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.c.i
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.i
 
 # target to preprocess a source file
-ui/ui.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/ui/ui.c.i
-.PHONY : ui/ui.c.i
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.c.i
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.c.i
 
-ui/ui.s: ui/ui.c.s
-.PHONY : ui/ui.s
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.s: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.c.s
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.s
 
 # target to generate assembly for a file
-ui/ui.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/ui/ui.c.s
-.PHONY : ui/ui.c.s
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.c.s
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.c.s
 
-validator/validator.o: validator/validator.c.o
-.PHONY : validator/validator.o
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.o: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.c.o
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.o
 
 # target to build an object file
-validator/validator.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/validator/validator.c.o
-.PHONY : validator/validator.c.o
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.c.o
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.c.o
 
-validator/validator.i: validator/validator.c.i
-.PHONY : validator/validator.i
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.i: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.c.i
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.i
 
 # target to preprocess a source file
-validator/validator.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/validator/validator.c.i
-.PHONY : validator/validator.c.i
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.c.i
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.c.i
 
-validator/validator.s: validator/validator.c.s
-.PHONY : validator/validator.s
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.s: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.c.s
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.s
 
 # target to generate assembly for a file
-validator/validator.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/validator/validator.c.s
-.PHONY : validator/validator.c.s
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.c.s
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.c.s
+
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.o: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.c.o
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.o
+
+# target to build an object file
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.c.o
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.c.o
+
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.i: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.c.i
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.i
+
+# target to preprocess a source file
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.c.i
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.c.i
+
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.s: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.c.s
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.s
+
+# target to generate assembly for a file
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.c.s
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.c.s
+
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.o: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.c.o
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.o
+
+# target to build an object file
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.c.o
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.c.o
+
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.i: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.c.i
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.i
+
+# target to preprocess a source file
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.c.i
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.c.i
+
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.s: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.c.s
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.s
+
+# target to generate assembly for a file
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.c.s
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.c.s
+
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.o: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.c.o
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.o
+
+# target to build an object file
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.c.o
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.c.o
+
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.i: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.c.i
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.i
+
+# target to preprocess a source file
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.c.i
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.c.i
+
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.s: mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.c.s
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.s
+
+# target to generate assembly for a file
+mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4.dir/build.make CMakeFiles/Lab_2_4.dir/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.c.s
+.PHONY : mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.c.s
 
 # Help Target
 help:
@@ -306,27 +306,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Lab_2_4"
-	@echo "... domeniu/lista.o"
-	@echo "... domeniu/lista.i"
-	@echo "... domeniu/lista.s"
-	@echo "... errors/errors.o"
-	@echo "... errors/errors.i"
-	@echo "... errors/errors.s"
-	@echo "... infrastructura/service.o"
-	@echo "... infrastructura/service.i"
-	@echo "... infrastructura/service.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... repository/repo.o"
-	@echo "... repository/repo.i"
-	@echo "... repository/repo.s"
-	@echo "... ui/ui.o"
-	@echo "... ui/ui.i"
-	@echo "... ui/ui.s"
-	@echo "... validator/validator.o"
-	@echo "... validator/validator.i"
-	@echo "... validator/validator.s"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.o"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.i"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/domeniu/lista.s"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.o"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.i"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/errors/errors.s"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.o"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.i"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/infrastructura/service.s"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.o"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.i"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/repository/repo.s"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.o"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.i"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/ui/ui.s"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.o"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.i"
+	@echo "... mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul_1/Sem_2/untitled/validator/validator.s"
 .PHONY : help
 
 

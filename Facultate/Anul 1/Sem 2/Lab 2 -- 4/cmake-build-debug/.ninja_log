@@ -1,0 +1,19 @@
+# ninja log v6
+239	506	7644200214980766	CMakeFiles/Lab_2_4.dir/repository/repo.c.obj	e9d525bbfbc78af8
+597	1252	7643796983235083	untitled.exe	72af3cc36bb7727d
+31	230	7644200212899725	CMakeFiles/Lab_2_4.dir/domeniu/lista.c.obj	3779163e8c5c286c
+232	500	7644200214909386	CMakeFiles/Lab_2_4.dir/ui/ui.c.obj	e81032c0b14cbf1e
+382	601	7644200216403332	CMakeFiles/Lab_2_4.dir/validator/validator.c.obj	31a752a47a91b5fa
+633	826	7644200218911969	Lab_2_4.exe	cac33769b0480703
+6	491	7644204253726134	build.ninja	6c5620341e4fc2b8
+27	239	7644200212850334	CMakeFiles/Lab_2_4.dir/main.c.obj	4aaf8bf3cff014d3
+37	382	7644200212959730	CMakeFiles/Lab_2_4.dir/infrastructura/service.c.obj	2407514799fd2a26
+500	632	7644200217584383	CMakeFiles/Lab_2_4.dir/errors/errors.c.obj	121a7b3715a2c87
+20	271	7644204412202423	CMakeFiles/Lab_2_4.dir/domeniu/lista.c.obj	3779163e8c5c286c
+9	314	7644204412090893	CMakeFiles/Lab_2_4.dir/main.c.obj	4aaf8bf3cff014d3
+28	434	7644204412271946	CMakeFiles/Lab_2_4.dir/infrastructura/service.c.obj	2407514799fd2a26
+272	610	7644204414709156	CMakeFiles/Lab_2_4.dir/ui/ui.c.obj	e81032c0b14cbf1e
+314	619	7644204415139167	CMakeFiles/Lab_2_4.dir/repository/repo.c.obj	e9d525bbfbc78af8
+434	652	7644204416335874	CMakeFiles/Lab_2_4.dir/validator/validator.c.obj	31a752a47a91b5fa
+610	705	7644204418095032	CMakeFiles/Lab_2_4.dir/errors/errors.c.obj	121a7b3715a2c87
+705	905	7644204419045194	Lab_2_4.exe	cac33769b0480703
