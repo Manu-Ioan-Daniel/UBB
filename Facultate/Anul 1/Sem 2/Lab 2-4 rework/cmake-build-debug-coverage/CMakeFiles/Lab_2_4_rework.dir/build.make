@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework"
+CMAKE_SOURCE_DIR = "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage"
+CMAKE_BINARY_DIR = "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Lab_2_4_rework.dir/depend.make
@@ -70,67 +70,112 @@ include CMakeFiles/Lab_2_4_rework.dir/progress.make
 include CMakeFiles/Lab_2_4_rework.dir/flags.make
 
 CMakeFiles/Lab_2_4_rework.dir/main.c.o: CMakeFiles/Lab_2_4_rework.dir/flags.make
-CMakeFiles/Lab_2_4_rework.dir/main.c.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2-4\ rework/main.c
+CMakeFiles/Lab_2_4_rework.dir/main.c.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2-4\ rework/main.c
 CMakeFiles/Lab_2_4_rework.dir/main.c.o: CMakeFiles/Lab_2_4_rework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Lab_2_4_rework.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4_rework.dir/main.c.o -MF CMakeFiles/Lab_2_4_rework.dir/main.c.o.d -o CMakeFiles/Lab_2_4_rework.dir/main.c.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Lab_2_4_rework.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4_rework.dir/main.c.o -MF CMakeFiles/Lab_2_4_rework.dir/main.c.o.d -o CMakeFiles/Lab_2_4_rework.dir/main.c.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/main.c"
 
 CMakeFiles/Lab_2_4_rework.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Lab_2_4_rework.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/main.c" > CMakeFiles/Lab_2_4_rework.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/main.c" > CMakeFiles/Lab_2_4_rework.dir/main.c.i
 
 CMakeFiles/Lab_2_4_rework.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Lab_2_4_rework.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/main.c" -o CMakeFiles/Lab_2_4_rework.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/main.c" -o CMakeFiles/Lab_2_4_rework.dir/main.c.s
 
 CMakeFiles/Lab_2_4_rework.dir/lista.c.o: CMakeFiles/Lab_2_4_rework.dir/flags.make
-CMakeFiles/Lab_2_4_rework.dir/lista.c.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2-4\ rework/lista.c
+CMakeFiles/Lab_2_4_rework.dir/lista.c.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2-4\ rework/lista.c
 CMakeFiles/Lab_2_4_rework.dir/lista.c.o: CMakeFiles/Lab_2_4_rework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Lab_2_4_rework.dir/lista.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4_rework.dir/lista.c.o -MF CMakeFiles/Lab_2_4_rework.dir/lista.c.o.d -o CMakeFiles/Lab_2_4_rework.dir/lista.c.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/lista.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Lab_2_4_rework.dir/lista.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4_rework.dir/lista.c.o -MF CMakeFiles/Lab_2_4_rework.dir/lista.c.o.d -o CMakeFiles/Lab_2_4_rework.dir/lista.c.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/lista.c"
 
 CMakeFiles/Lab_2_4_rework.dir/lista.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Lab_2_4_rework.dir/lista.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/lista.c" > CMakeFiles/Lab_2_4_rework.dir/lista.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/lista.c" > CMakeFiles/Lab_2_4_rework.dir/lista.c.i
 
 CMakeFiles/Lab_2_4_rework.dir/lista.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Lab_2_4_rework.dir/lista.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/lista.c" -o CMakeFiles/Lab_2_4_rework.dir/lista.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/lista.c" -o CMakeFiles/Lab_2_4_rework.dir/lista.c.s
 
 CMakeFiles/Lab_2_4_rework.dir/oferta.c.o: CMakeFiles/Lab_2_4_rework.dir/flags.make
-CMakeFiles/Lab_2_4_rework.dir/oferta.c.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2-4\ rework/oferta.c
+CMakeFiles/Lab_2_4_rework.dir/oferta.c.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2-4\ rework/oferta.c
 CMakeFiles/Lab_2_4_rework.dir/oferta.c.o: CMakeFiles/Lab_2_4_rework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Lab_2_4_rework.dir/oferta.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4_rework.dir/oferta.c.o -MF CMakeFiles/Lab_2_4_rework.dir/oferta.c.o.d -o CMakeFiles/Lab_2_4_rework.dir/oferta.c.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/oferta.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Lab_2_4_rework.dir/oferta.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4_rework.dir/oferta.c.o -MF CMakeFiles/Lab_2_4_rework.dir/oferta.c.o.d -o CMakeFiles/Lab_2_4_rework.dir/oferta.c.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/oferta.c"
 
 CMakeFiles/Lab_2_4_rework.dir/oferta.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Lab_2_4_rework.dir/oferta.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/oferta.c" > CMakeFiles/Lab_2_4_rework.dir/oferta.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/oferta.c" > CMakeFiles/Lab_2_4_rework.dir/oferta.c.i
 
 CMakeFiles/Lab_2_4_rework.dir/oferta.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Lab_2_4_rework.dir/oferta.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/oferta.c" -o CMakeFiles/Lab_2_4_rework.dir/oferta.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/oferta.c" -o CMakeFiles/Lab_2_4_rework.dir/oferta.c.s
 
 CMakeFiles/Lab_2_4_rework.dir/repo.c.o: CMakeFiles/Lab_2_4_rework.dir/flags.make
-CMakeFiles/Lab_2_4_rework.dir/repo.c.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2-4\ rework/repo.c
+CMakeFiles/Lab_2_4_rework.dir/repo.c.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2-4\ rework/repo.c
 CMakeFiles/Lab_2_4_rework.dir/repo.c.o: CMakeFiles/Lab_2_4_rework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Lab_2_4_rework.dir/repo.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4_rework.dir/repo.c.o -MF CMakeFiles/Lab_2_4_rework.dir/repo.c.o.d -o CMakeFiles/Lab_2_4_rework.dir/repo.c.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/repo.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Lab_2_4_rework.dir/repo.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4_rework.dir/repo.c.o -MF CMakeFiles/Lab_2_4_rework.dir/repo.c.o.d -o CMakeFiles/Lab_2_4_rework.dir/repo.c.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/repo.c"
 
 CMakeFiles/Lab_2_4_rework.dir/repo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Lab_2_4_rework.dir/repo.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/repo.c" > CMakeFiles/Lab_2_4_rework.dir/repo.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/repo.c" > CMakeFiles/Lab_2_4_rework.dir/repo.c.i
 
 CMakeFiles/Lab_2_4_rework.dir/repo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Lab_2_4_rework.dir/repo.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/repo.c" -o CMakeFiles/Lab_2_4_rework.dir/repo.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/repo.c" -o CMakeFiles/Lab_2_4_rework.dir/repo.c.s
+
+CMakeFiles/Lab_2_4_rework.dir/service.c.o: CMakeFiles/Lab_2_4_rework.dir/flags.make
+CMakeFiles/Lab_2_4_rework.dir/service.c.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2-4\ rework/service.c
+CMakeFiles/Lab_2_4_rework.dir/service.c.o: CMakeFiles/Lab_2_4_rework.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Lab_2_4_rework.dir/service.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4_rework.dir/service.c.o -MF CMakeFiles/Lab_2_4_rework.dir/service.c.o.d -o CMakeFiles/Lab_2_4_rework.dir/service.c.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/service.c"
+
+CMakeFiles/Lab_2_4_rework.dir/service.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Lab_2_4_rework.dir/service.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/service.c" > CMakeFiles/Lab_2_4_rework.dir/service.c.i
+
+CMakeFiles/Lab_2_4_rework.dir/service.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Lab_2_4_rework.dir/service.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/service.c" -o CMakeFiles/Lab_2_4_rework.dir/service.c.s
+
+CMakeFiles/Lab_2_4_rework.dir/validator.c.o: CMakeFiles/Lab_2_4_rework.dir/flags.make
+CMakeFiles/Lab_2_4_rework.dir/validator.c.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2-4\ rework/validator.c
+CMakeFiles/Lab_2_4_rework.dir/validator.c.o: CMakeFiles/Lab_2_4_rework.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Lab_2_4_rework.dir/validator.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4_rework.dir/validator.c.o -MF CMakeFiles/Lab_2_4_rework.dir/validator.c.o.d -o CMakeFiles/Lab_2_4_rework.dir/validator.c.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/validator.c"
+
+CMakeFiles/Lab_2_4_rework.dir/validator.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Lab_2_4_rework.dir/validator.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/validator.c" > CMakeFiles/Lab_2_4_rework.dir/validator.c.i
+
+CMakeFiles/Lab_2_4_rework.dir/validator.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Lab_2_4_rework.dir/validator.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/validator.c" -o CMakeFiles/Lab_2_4_rework.dir/validator.c.s
+
+CMakeFiles/Lab_2_4_rework.dir/ui.c.o: CMakeFiles/Lab_2_4_rework.dir/flags.make
+CMakeFiles/Lab_2_4_rework.dir/ui.c.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2-4\ rework/ui.c
+CMakeFiles/Lab_2_4_rework.dir/ui.c.o: CMakeFiles/Lab_2_4_rework.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Lab_2_4_rework.dir/ui.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4_rework.dir/ui.c.o -MF CMakeFiles/Lab_2_4_rework.dir/ui.c.o.d -o CMakeFiles/Lab_2_4_rework.dir/ui.c.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/ui.c"
+
+CMakeFiles/Lab_2_4_rework.dir/ui.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Lab_2_4_rework.dir/ui.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/ui.c" > CMakeFiles/Lab_2_4_rework.dir/ui.c.i
+
+CMakeFiles/Lab_2_4_rework.dir/ui.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Lab_2_4_rework.dir/ui.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/ui.c" -o CMakeFiles/Lab_2_4_rework.dir/ui.c.s
 
 # Object files for target Lab_2_4_rework
 Lab_2_4_rework_OBJECTS = \
 "CMakeFiles/Lab_2_4_rework.dir/main.c.o" \
 "CMakeFiles/Lab_2_4_rework.dir/lista.c.o" \
 "CMakeFiles/Lab_2_4_rework.dir/oferta.c.o" \
-"CMakeFiles/Lab_2_4_rework.dir/repo.c.o"
+"CMakeFiles/Lab_2_4_rework.dir/repo.c.o" \
+"CMakeFiles/Lab_2_4_rework.dir/service.c.o" \
+"CMakeFiles/Lab_2_4_rework.dir/validator.c.o" \
+"CMakeFiles/Lab_2_4_rework.dir/ui.c.o"
 
 # External object files for target Lab_2_4_rework
 Lab_2_4_rework_EXTERNAL_OBJECTS =
@@ -139,9 +184,12 @@ Lab_2_4_rework: CMakeFiles/Lab_2_4_rework.dir/main.c.o
 Lab_2_4_rework: CMakeFiles/Lab_2_4_rework.dir/lista.c.o
 Lab_2_4_rework: CMakeFiles/Lab_2_4_rework.dir/oferta.c.o
 Lab_2_4_rework: CMakeFiles/Lab_2_4_rework.dir/repo.c.o
+Lab_2_4_rework: CMakeFiles/Lab_2_4_rework.dir/service.c.o
+Lab_2_4_rework: CMakeFiles/Lab_2_4_rework.dir/validator.c.o
+Lab_2_4_rework: CMakeFiles/Lab_2_4_rework.dir/ui.c.o
 Lab_2_4_rework: CMakeFiles/Lab_2_4_rework.dir/build.make
 Lab_2_4_rework: CMakeFiles/Lab_2_4_rework.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Lab_2_4_rework"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable Lab_2_4_rework"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Lab_2_4_rework.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +201,6 @@ CMakeFiles/Lab_2_4_rework.dir/clean:
 .PHONY : CMakeFiles/Lab_2_4_rework.dir/clean
 
 CMakeFiles/Lab_2_4_rework.dir/depend:
-	cd "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/DependInfo.cmake" "--color=$(COLOR)"
+	cd "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/Lab_2_4_rework.dir/depend
 

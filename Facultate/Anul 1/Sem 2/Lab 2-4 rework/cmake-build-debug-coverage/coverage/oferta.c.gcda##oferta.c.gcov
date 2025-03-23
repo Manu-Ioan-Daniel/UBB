@@ -1,0 +1,88 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/oferta.c
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/oferta.c.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/oferta.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Lenovo on 3/23/2025.
+        -:    3://
+        -:    4:
+        -:    5:#include "oferta.h"
+        -:    6:
+        -:    7:#include <assert.h>
+        -:    8:#include <string.h>
+        -:    9:#include <stdlib.h>
+function createOferta called 44 returned 100% blocks executed 100%
+       44:   10:Oferta* createOferta(const char* adresa,float suprafata, const char* tip, const float pret) {
+       44:   11:    Oferta* o = malloc(sizeof(Oferta));
+       44:   12:    o->adresa=malloc(strlen(adresa)+1);
+       44:   13:    strcpy(o->adresa,adresa);
+       44:   14:    o->suprafata=suprafata;
+       44:   15:    o->tip=malloc(strlen(tip)+1);
+       44:   16:    strcpy(o->tip,tip);
+       44:   17:    o->pret=pret;
+       44:   18:    return o;
+       44:   18-block  0
+        -:   19:}
+function destroyOferta called 66 returned 100% blocks executed 100%
+       66:   20:void destroyOferta(Oferta* o) {
+       66:   21:    free(o->adresa);
+       66:   22:    free(o->tip);
+       66:   23:    free(o);
+       66:   24:}
+function copyOferta called 22 returned 100% blocks executed 100%
+       22:   25:Oferta* copyOferta(const Oferta* o) {
+       22:   26:    Oferta* o2 = (Oferta*)malloc(sizeof(Oferta));
+       22:   27:    o2->adresa=malloc(strlen(o->adresa)+1);
+       22:   28:    strcpy(o2->adresa,o->adresa);
+       22:   29:    o2->tip=malloc(strlen(o->tip)+1);
+       22:   30:    strcpy(o2->tip,o->tip);
+       22:   31:    o2->pret=o->pret;
+       22:   32:    o2->suprafata=o->suprafata;
+       22:   33:    return o2;
+       22:   33-block  0
+        -:   34:}
+function testOferta called 1 returned 100% blocks executed 88%
+        1:   35:void testOferta() {
+        1:   36:    Oferta* o1=createOferta("adresa1",1,"apartament",1);
+        1:   36-block  0
+call    0 returned 1
+       1*:   37:    assert(strcmp(o1->adresa,"adresa1")==0 && strcmp(o1->tip,"apartament")==0 && o1->pret==1 && o1->suprafata==1);
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   37-block  0
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:   37-block  1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   37-block  2
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0
+        1:   37-block  3
+    %%%%%:   37-block  4
+call    8 never executed
+        1:   38:    Oferta* o2=copyOferta(o1);
+        1:   38-block  0
+call    0 returned 1
+       1*:   39:    assert(strcmp(o2->adresa,"adresa1")==0 && strcmp(o2->tip,"apartament")==0 && o2->pret==1 && o2->suprafata==1);
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   39-block  0
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:   39-block  1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   39-block  2
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0
+        1:   39-block  3
+    %%%%%:   39-block  4
+call    8 never executed
+        1:   40:    destroyOferta(o1);
+        1:   40-block  0
+call    0 returned 1
+        1:   41:    destroyOferta(o2);
+call    0 returned 1
+        -:   42:
+        1:   43:}

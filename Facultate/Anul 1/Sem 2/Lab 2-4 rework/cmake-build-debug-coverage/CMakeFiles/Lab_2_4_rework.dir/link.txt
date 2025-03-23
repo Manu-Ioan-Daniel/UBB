@@ -1,1 +1,1 @@
-/usr/bin/cc --coverage -g CMakeFiles/Lab_2_4_rework.dir/main.c.o CMakeFiles/Lab_2_4_rework.dir/lista.c.o CMakeFiles/Lab_2_4_rework.dir/oferta.c.o CMakeFiles/Lab_2_4_rework.dir/repo.c.o -o Lab_2_4_rework 
+/usr/bin/cc --coverage -g CMakeFiles/Lab_2_4_rework.dir/main.c.o CMakeFiles/Lab_2_4_rework.dir/lista.c.o CMakeFiles/Lab_2_4_rework.dir/oferta.c.o CMakeFiles/Lab_2_4_rework.dir/repo.c.o CMakeFiles/Lab_2_4_rework.dir/service.c.o CMakeFiles/Lab_2_4_rework.dir/validator.c.o CMakeFiles/Lab_2_4_rework.dir/ui.c.o -o Lab_2_4_rework 

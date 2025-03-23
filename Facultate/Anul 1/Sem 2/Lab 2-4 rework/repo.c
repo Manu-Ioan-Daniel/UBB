@@ -14,14 +14,12 @@ Repo* createRepo() {
     return r;
 }
 void destroyRepo(Repo* repo) {
-    for (int i = 0;i<getLength(repo->oferte);i++)
-        destroyOferta(getElem(repo->oferte,i));
     destroyList(repo->oferte);
     free(repo);
 
 
 }
-int cautaOferta(Repo* repo,char* adresa) {
+int cautaOferta(const Repo* repo, const char* adresa) {
     for (int i = 0;i<getLength(repo->oferte);i++) {
         Oferta* o = getElem(repo->oferte,i);
         if (strcmp(o->adresa,adresa)==0) {
@@ -31,7 +29,7 @@ int cautaOferta(Repo* repo,char* adresa) {
     return -1;
 
 }
-int adaugaOferta(Repo* repo,Oferta* o) {
+int adaugaOferta(const Repo* repo,Oferta* o) {
 
     int poz =cautaOferta(repo,o->adresa);
     if (poz!=-1) {
@@ -40,7 +38,7 @@ int adaugaOferta(Repo* repo,Oferta* o) {
     addElem(repo->oferte,o);
     return SUCCES;
 }
-int stergeOferta(Repo* repo,char* adresa) {
+int stergeOferta(const Repo* repo, const char* adresa) {
     int poz = cautaOferta(repo,adresa);
     if (poz==-1) {
         return REPO_ERROR;
@@ -48,15 +46,19 @@ int stergeOferta(Repo* repo,char* adresa) {
     deleteElem(repo->oferte,poz);
     return SUCCES;
 }
-int modificaOferta(Repo* repo,char* adresa,Oferta* o) {
+int modificaOferta(const Repo* repo, const char* adresa,Oferta* o) {
     int poz = cautaOferta(repo,adresa);
     if (poz==-1) {
+        return REPO_ERROR;
+    }
+    int new_poz=cautaOferta(repo,o->adresa);
+    if (new_poz!=-1) {
         return REPO_ERROR;
     }
     setElem(repo->oferte,poz,o);
     return SUCCES;
 }
-List* getOferte(Repo* repo) {
+List* getOferte(const Repo* repo) {
     return repo->oferte;
 }
 void testRepo() {
@@ -89,6 +91,9 @@ void testRepo() {
     assert(getLength(repo->oferte)==1);
     o3=createOferta("adresa3",3,"casa",3);
     assert(cautaOferta(repo,o3->adresa)==-1);
+    List* lista = getOferte(repo);
+    assert(getLength(lista)==1);
+    assert(getElem(lista,0)==o2);
     destroyRepo(repo);
     destroyOferta(o1);
     destroyOferta(o3);

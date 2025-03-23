@@ -1,0 +1,31 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/main.c
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/main.c.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/main.c.gcda
+        -:    0:Runs:1
+        -:    1:
+        -:    2:#include "repo.h"
+        -:    3:#include "service.h"
+        -:    4:#include "validator.h"
+        -:    5:
+        -:    6:void Teste();
+function main called 1 returned 100% blocks executed 100%
+        1:    7:int main(void) {
+        1:    8:    Teste();
+        1:    8-block  0
+call    0 returned 1
+        1:    9:    return 0;
+        -:   10:}
+function Teste called 1 returned 100% blocks executed 100%
+        1:   11:void Teste() {
+        1:   12:    testList();
+        1:   12-block  0
+call    0 returned 1
+        1:   13:    testOferta();
+call    0 returned 1
+        1:   14:    testRepo();
+call    0 returned 1
+        1:   15:    testeService();
+call    0 returned 1
+        1:   16:    testValidator();
+call    0 returned 1
+        1:   17:}

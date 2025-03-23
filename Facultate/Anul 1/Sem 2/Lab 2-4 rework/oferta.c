@@ -7,7 +7,7 @@
 #include <assert.h>
 #include <string.h>
 #include <stdlib.h>
-Oferta* createOferta(char* adresa,float suprafata,char* tip,float pret) {
+Oferta* createOferta(const char* adresa,float suprafata, const char* tip, const float pret) {
     Oferta* o = malloc(sizeof(Oferta));
     o->adresa=malloc(strlen(adresa)+1);
     strcpy(o->adresa,adresa);
@@ -22,7 +22,7 @@ void destroyOferta(Oferta* o) {
     free(o->tip);
     free(o);
 }
-Oferta* copyOferta(Oferta* o) {
+Oferta* copyOferta(const Oferta* o) {
     Oferta* o2 = (Oferta*)malloc(sizeof(Oferta));
     o2->adresa=malloc(strlen(o->adresa)+1);
     strcpy(o2->adresa,o->adresa);

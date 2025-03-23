@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework
+# Install script for directory: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

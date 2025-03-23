@@ -7,6 +7,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/Lab_2_4_rework.dir/oferta.c.o.d"
   "CMakeFiles/Lab_2_4_rework.dir/repo.c.o"
   "CMakeFiles/Lab_2_4_rework.dir/repo.c.o.d"
+  "CMakeFiles/Lab_2_4_rework.dir/service.c.o"
+  "CMakeFiles/Lab_2_4_rework.dir/service.c.o.d"
+  "CMakeFiles/Lab_2_4_rework.dir/ui.c.o"
+  "CMakeFiles/Lab_2_4_rework.dir/ui.c.o.d"
+  "CMakeFiles/Lab_2_4_rework.dir/validator.c.o"
+  "CMakeFiles/Lab_2_4_rework.dir/validator.c.o.d"
   "Lab_2_4_rework"
   "Lab_2_4_rework.pdb"
 )

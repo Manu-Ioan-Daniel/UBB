@@ -1,0 +1,262 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/repo.c
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/repo.c.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/repo.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Lenovo on 3/23/2025.
+        -:    3://
+        -:    4:
+        -:    5:#include "repo.h"
+        -:    6:
+        -:    7:#include <assert.h>
+        -:    8:#include <stdlib.h>
+        -:    9:#include <string.h>
+        -:   10:
+function createRepo called 6 returned 100% blocks executed 100%
+        6:   11:Repo* createRepo() {
+        6:   12:    Repo* r = malloc(sizeof(Repo));
+        6:   13:    r->oferte=createList(destroyOferta,copyOferta);
+        6:   13-block  0
+call    0 returned 6
+        6:   14:    return r;
+        -:   15:}
+function destroyRepo called 6 returned 100% blocks executed 100%
+        6:   16:void destroyRepo(Repo* repo) {
+        6:   17:    destroyList(repo->oferte);
+        6:   17-block  0
+call    0 returned 6
+        6:   18:    free(repo);
+        -:   19:
+        -:   20:
+        6:   21:}
+function cautaOferta called 31 returned 100% blocks executed 100%
+       31:   22:int cautaOferta(const Repo* repo, const char* adresa) {
+       66:   23:    for (int i = 0;i<getLength(repo->oferte);i++) {
+       31:   23-block  0
+       35:   23-block  1
+       66:   23-block  2
+call    0 returned 66
+branch  1 taken 43
+branch  2 taken 23 (fallthrough)
+       43:   24:        Oferta* o = getElem(repo->oferte,i);
+       43:   24-block  0
+call    0 returned 43
+       43:   25:        if (strcmp(o->adresa,adresa)==0) {
+branch  0 taken 8 (fallthrough)
+branch  1 taken 35
+        8:   26:            return i;
+        8:   26-block  0
+        -:   27:        }
+        -:   28:    }
+       23:   29:    return -1;
+       23:   29-block  0
+        -:   30:
+        -:   31:}
+function adaugaOferta called 17 returned 100% blocks executed 100%
+       17:   32:int adaugaOferta(const Repo* repo,Oferta* o) {
+        -:   33:
+       17:   34:    int poz =cautaOferta(repo,o->adresa);
+       17:   34-block  0
+call    0 returned 17
+       17:   35:    if (poz!=-1) {
+branch  0 taken 2 (fallthrough)
+branch  1 taken 15
+        2:   36:        return REPO_ERROR;
+        2:   36-block  0
+        -:   37:    }
+       15:   38:    addElem(repo->oferte,o);
+       15:   38-block  0
+call    0 returned 15
+       15:   39:    return SUCCES;
+        -:   40:}
+function stergeOferta called 4 returned 100% blocks executed 100%
+        4:   41:int stergeOferta(const Repo* repo, const char* adresa) {
+        4:   42:    int poz = cautaOferta(repo,adresa);
+        4:   42-block  0
+call    0 returned 4
+        4:   43:    if (poz==-1) {
+branch  0 taken 2 (fallthrough)
+branch  1 taken 2
+        2:   44:        return REPO_ERROR;
+        2:   44-block  0
+        -:   45:    }
+        2:   46:    deleteElem(repo->oferte,poz);
+        2:   46-block  0
+call    0 returned 2
+        2:   47:    return SUCCES;
+        -:   48:}
+function modificaOferta called 5 returned 100% blocks executed 100%
+        5:   49:int modificaOferta(const Repo* repo, const char* adresa,Oferta* o) {
+        5:   50:    int poz = cautaOferta(repo,adresa);
+        5:   50-block  0
+call    0 returned 5
+        5:   51:    if (poz==-1) {
+branch  0 taken 2 (fallthrough)
+branch  1 taken 3
+        2:   52:        return REPO_ERROR;
+        2:   52-block  0
+        -:   53:    }
+        3:   54:    int new_poz=cautaOferta(repo,o->adresa);
+        3:   54-block  0
+call    0 returned 3
+        3:   55:    if (new_poz!=-1) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   56:        return REPO_ERROR;
+        1:   56-block  0
+        -:   57:    }
+        2:   58:    setElem(repo->oferte,poz,o);
+        2:   58-block  0
+call    0 returned 2
+        2:   59:    return SUCCES;
+        -:   60:}
+function getOferte called 1 returned 100% blocks executed 100%
+        1:   61:List* getOferte(const Repo* repo) {
+        1:   62:    return repo->oferte;
+        1:   62-block  0
+        -:   63:}
+function testRepo called 1 returned 100% blocks executed 73%
+        1:   64:void testRepo() {
+        1:   65:    Oferta* o1=createOferta("adresa1",1,"casa",1);
+        1:   65-block  0
+call    0 returned 1
+        1:   66:    Oferta* o2=createOferta("adresa2",2,"casa",2);
+call    0 returned 1
+        1:   67:    Oferta* o3=createOferta("adresa3",3,"casa",3);
+call    0 returned 1
+        1:   68:    Repo* repo=createRepo();
+call    0 returned 1
+        -:   69:
+        -:   70:    //test adauga oferta
+        -:   71:
+       1*:   72:    assert(adaugaOferta(repo,o1)==SUCCES);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   72-block  0
+call    3 never executed
+       1*:   73:    assert(getLength(repo->oferte)==1);
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   73-block  1
+call    3 never executed
+       1*:   74:    assert(getElem(repo->oferte,0)==o1);
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   74-block  1
+call    3 never executed
+       1*:   75:    assert(adaugaOferta(repo,o2)==SUCCES);
+        1:   75-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   75-block  1
+call    3 never executed
+       1*:   76:    assert(getLength(repo->oferte)==2);
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   76-block  1
+call    3 never executed
+       1*:   77:    assert(getElem(repo->oferte,1)==o2);
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   77-block  1
+call    3 never executed
+       1*:   78:    assert(adaugaOferta(repo,o1)==REPO_ERROR);
+        1:   78-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   78-block  1
+call    3 never executed
+        -:   79:
+        -:   80:    //test modifica oferta
+        -:   81:
+       1*:   82:    assert(modificaOferta(repo,"adresaadad",o1)==REPO_ERROR);
+        1:   82-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   82-block  1
+call    3 never executed
+       1*:   83:    assert(modificaOferta(repo,o1->adresa,o3)==SUCCES);
+        1:   83-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   83-block  1
+call    3 never executed
+        1:   84:    o1=createOferta("adresa1",1,"casa",1);
+        1:   84-block  0
+call    0 returned 1
+       1*:   85:    assert(getElem(repo->oferte,0)==o3);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   85-block  0
+call    3 never executed
+        -:   86:
+        -:   87:    //test sterge oferta
+        -:   88:
+       1*:   89:    assert(stergeOferta(repo,o1)==REPO_ERROR);
+        1:   89-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   89-block  1
+call    3 never executed
+       1*:   90:    assert(stergeOferta(repo,o3->adresa)==SUCCES);
+        1:   90-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   90-block  1
+call    3 never executed
+       1*:   91:    assert(getLength(repo->oferte)==1);
+        1:   91-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   91-block  1
+call    3 never executed
+        1:   92:    o3=createOferta("adresa3",3,"casa",3);
+        1:   92-block  0
+call    0 returned 1
+       1*:   93:    assert(cautaOferta(repo,o3->adresa)==-1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   93-block  0
+call    3 never executed
+        1:   94:    List* lista = getOferte(repo);
+        1:   94-block  0
+call    0 returned 1
+       1*:   95:    assert(getLength(lista)==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   95-block  0
+call    3 never executed
+       1*:   96:    assert(getElem(lista,0)==o2);
+        1:   96-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   96-block  1
+call    3 never executed
+        1:   97:    destroyRepo(repo);
+        1:   97-block  0
+call    0 returned 1
+        1:   98:    destroyOferta(o1);
+call    0 returned 1
+        1:   99:    destroyOferta(o3);
+call    0 returned 1
+        1:  100:}

@@ -1,0 +1,115 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/validator.c
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/validator.c.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/validator.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deny on 23-03-2025.
+        -:    3://
+        -:    4:
+        -:    5:#include "validator.h"
+        -:    6:#include <string.h>
+        -:    7:#include <assert.h>
+function valideazaOferta called 25 returned 100% blocks executed 100%
+       25:    8:Errors valideazaOferta(Oferta* o){
+       25:    9:    Errors errors=SUCCES;
+       25:   10:    if(o->pret<0)
+       25:   10-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 21
+        4:   11:        errors |= PRET_INVALID;
+        4:   11-block  0
+       25:   12:    if(o->suprafata<0)
+       25:   12-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 22
+        3:   13:        errors |= SUPRAFATA_INVALIDA;
+        3:   13-block  0
+       25:   14:    if(strcmp(o->tip,"apartament")!=0 && strcmp(o->tip,"casa")!=0 && strcmp(o->tip,"teren")!=0)
+       25:   14-block  0
+branch  0 taken 20 (fallthrough)
+branch  1 taken 5
+       20:   14-block  1
+branch  2 taken 2 (fallthrough)
+branch  3 taken 18
+        2:   14-block  2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0
+        2:   15:        errors |= TIP_INVALID;;
+        2:   15-block  0
+       25:   16:    if(strcmp(o->adresa,"")==0)
+       25:   16-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 23
+        2:   17:        errors |= ADRESA_INVALIDA;
+        2:   17-block  0
+       25:   18:    return errors;
+       25:   18-block  0
+        -:   19:}
+        -:   20:
+        -:   21://Teste
+        -:   22:
+function testValidator called 1 returned 100% blocks executed 78%
+        1:   23:void testValidator() {
+        1:   24:    Oferta* o=createOferta("adresa",1,"tip",1);
+        1:   24-block  0
+call    0 returned 1
+       1*:   25:    assert(valideazaOferta(o)==TIP_INVALID);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   25-block  0
+call    3 never executed
+        1:   26:    destroyOferta(o);
+        1:   26-block  0
+call    0 returned 1
+        1:   27:    o=createOferta("adresa",1,"",1);
+call    0 returned 1
+       1*:   28:    assert(valideazaOferta(o)==TIP_INVALID);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   28-block  0
+call    3 never executed
+        1:   29:    destroyOferta(o);
+        1:   29-block  0
+call    0 returned 1
+        1:   30:    o=createOferta("adresa",1,"casa",1);
+call    0 returned 1
+       1*:   31:    assert(valideazaOferta(o)==SUCCES);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   31-block  0
+call    3 never executed
+        1:   32:    o->pret=-1;
+       1*:   33:    assert(valideazaOferta(o) == PRET_INVALID);
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   33-block  1
+call    3 never executed
+        1:   34:    o->suprafata=-1;
+       1*:   35:    assert(valideazaOferta(o)==(SUPRAFATA_INVALIDA|PRET_INVALID));
+        1:   35-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   35-block  1
+call    3 never executed
+        1:   36:    destroyOferta(o);
+        1:   36-block  0
+call    0 returned 1
+        1:   37:    o=createOferta("",-1,"casa",-1);
+call    0 returned 1
+       1*:   38:    assert(valideazaOferta(o)==(ADRESA_INVALIDA|SUPRAFATA_INVALIDA|PRET_INVALID));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   38-block  0
+call    3 never executed
+        1:   39:    destroyOferta(o);
+        1:   39-block  0
+call    0 returned 1
+        -:   40:
+        1:   41:}

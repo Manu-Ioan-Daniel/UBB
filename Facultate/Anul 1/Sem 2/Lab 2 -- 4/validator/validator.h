@@ -2,9 +2,6 @@
 #ifndef VALIDATOR_H
 #define VALIDATOR_H
 #include "../domeniu/oferta.h"
-#include <string.h>
-#include <stdio.h>
-#include <assert.h>
 #include "../errors/errors.h"
 Errors valideazaOferta(Oferta o);
 void strip(char* s);

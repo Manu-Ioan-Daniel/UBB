@@ -1,0 +1,765 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/service.c
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/service.c.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/service.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deny on 23-03-2025.
+        -:    3://
+        -:    4:
+        -:    5:#include "service.h"
+        -:    6:
+        -:    7:#include <assert.h>
+        -:    8:#include <stdio.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <string.h>
+        -:   11:
+        -:   12:#include "validator.h"
+        -:   13:
+function createService called 5 returned 100% blocks executed 100%
+        5:   14:Service* createService() {
+        5:   15:    Service* service=malloc(sizeof(Service));
+        5:   16:    service->repo=createRepo();
+        5:   16-block  0
+call    0 returned 5
+        5:   17:    return service;
+        -:   18:}
+function destroyService called 5 returned 100% blocks executed 100%
+        5:   19:void destroyService(Service* service) {
+        5:   20:    destroyRepo(service->repo);
+        5:   20-block  0
+call    0 returned 5
+        5:   21:    free(service);
+        5:   22:}
+function adaugaOfertaService called 15 returned 100% blocks executed 100%
+       15:   23:int adaugaOfertaService(Service* s, char* adresa, float pret, char* tip, float suprafata) {
+       15:   24:    Oferta* o=createOferta(adresa,suprafata,tip,pret);
+       15:   24-block  0
+call    0 returned 15
+       15:   25:    Errors errors=valideazaOferta(o);
+call    0 returned 15
+       15:   26:    if (errors!=SUCCES) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 14
+        1:   27:        destroyOferta(o);
+        1:   27-block  0
+call    0 returned 1
+        1:   28:        return errors;
+        -:   29:    }
+       14:   30:    if (adaugaOferta(s->repo,o)!=SUCCES) {
+       14:   30-block  0
+call    0 returned 14
+branch  1 taken 1 (fallthrough)
+branch  2 taken 13
+        1:   31:        destroyOferta(o);
+        1:   31-block  0
+call    0 returned 1
+        1:   32:        return REPO_ERROR;
+        -:   33:    }
+       13:   34:    return SUCCES;
+       13:   34-block  0
+        -:   35:}
+function stergeOfertaService called 3 returned 100% blocks executed 100%
+        3:   36:int stergeOfertaService(Service* s, char* adresa) {
+        3:   37:    if (strcmp(adresa,"")==0)
+        3:   37-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   38:        return ADRESA_INVALIDA;
+        1:   38-block  0
+        2:   39:    if (stergeOferta(s->repo,adresa)!=SUCCES)
+        2:   39-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   40:        return REPO_ERROR;
+        1:   40-block  0
+        1:   41:    return SUCCES;
+        1:   41-block  0
+        -:   42:}
+function modificaOfertaService called 5 returned 100% blocks executed 100%
+        5:   43:int modificaOfertaService(Service* s, char* adresa, char* adresaNoua, float suprafataNoua, char* tipNou, float pretNou) {
+        5:   44:    Oferta* o=createOferta(adresaNoua,suprafataNoua,tipNou,pretNou);
+        5:   44-block  0
+call    0 returned 5
+        5:   45:    if (strcmp(adresa,"")==0) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 4
+        1:   46:        destroyOferta(o);
+        1:   46-block  0
+call    0 returned 1
+        1:   47:        return ADRESA_INVALIDA;
+        -:   48:    }
+        4:   49:    Errors errors=valideazaOferta(o);
+        4:   49-block  0
+call    0 returned 4
+        4:   50:    if (errors!=SUCCES) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 3
+        1:   51:        destroyOferta(o);
+        1:   51-block  0
+call    0 returned 1
+        1:   52:        return errors;
+        -:   53:    }
+        3:   54:    if (modificaOferta(s->repo,adresa,o)!=SUCCES) {
+        3:   54-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1
+        2:   55:        destroyOferta(o);
+        2:   55-block  0
+call    0 returned 2
+        2:   56:        return REPO_ERROR;
+        -:   57:    }
+        1:   58:    return SUCCES;
+        1:   58-block  0
+        -:   59:}
+function filtrareDupaSuprafata called 2 returned 100% blocks executed 100%
+        2:   60:List* filtrareDupaSuprafata(Service* s, float suprafata) {
+        2:   61:    List* rez=createList(destroyOferta,copyOferta);
+        2:   61-block  0
+call    0 returned 2
+        2:   62:    List* all = get_all(s);
+call    0 returned 2
+        2:   63:    if (getLength(all)==0) {
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   64:        destroyList(rez);
+        1:   64-block  0
+call    0 returned 1
+        1:   65:        return NULL;
+        -:   66:    }
+        4:   67:    for (int i = 0;i<getLength(all);i++) {
+        1:   67-block  0
+        3:   67-block  1
+        4:   67-block  2
+call    0 returned 4
+branch  1 taken 3
+branch  2 taken 1 (fallthrough)
+        3:   68:        Oferta* o = copyOferta(getElem(all,i));
+        3:   68-block  0
+call    0 returned 3
+call    1 returned 3
+        3:   69:        if (o->suprafata<=suprafata) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   70:            addElem(rez,o);
+        1:   70-block  0
+call    0 returned 1
+        -:   71:        }else {
+        2:   72:            destroyOferta(o);
+        2:   72-block  0
+call    0 returned 2
+        -:   73:        }
+        -:   74:    }
+        1:   75:    return rez;
+        1:   75-block  0
+        -:   76:}
+function filtrareDupaTip called 2 returned 100% blocks executed 100%
+        2:   77:List* filtrareDupaTip(Service* s, char* tip) {
+        2:   78:    List* rez=createList(destroyOferta,copyOferta);
+        2:   78-block  0
+call    0 returned 2
+        2:   79:    List* all = get_all(s);
+call    0 returned 2
+        2:   80:    if (getLength(all)==0) {
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   81:        destroyList(rez);
+        1:   81-block  0
+call    0 returned 1
+        1:   82:        return NULL;
+        -:   83:    }
+        4:   84:    for (int i = 0;i<getLength(all);i++) {
+        1:   84-block  0
+        3:   84-block  1
+        4:   84-block  2
+call    0 returned 4
+branch  1 taken 3
+branch  2 taken 1 (fallthrough)
+        3:   85:        Oferta* o = copyOferta(getElem(all,i));
+        3:   85-block  0
+call    0 returned 3
+call    1 returned 3
+        3:   86:        if (strcmp(o->tip,tip)==0) {
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:   87:            addElem(rez,o);
+        2:   87-block  0
+call    0 returned 2
+        -:   88:        }else {
+        1:   89:            destroyOferta(o);
+        1:   89-block  0
+call    0 returned 1
+        -:   90:        }
+        -:   91:    }
+        1:   92:    return rez;
+        1:   92-block  0
+        -:   93:}
+function filtrareDupaPret called 2 returned 100% blocks executed 100%
+        2:   94:List* filtrareDupaPret(Service* s,float pret) {
+        2:   95:    List* rez=createList(destroyOferta,copyOferta);\
+        2:   95-block  0
+call    0 returned 2
+        2:   96:    List* all=get_all(s);
+call    0 returned 2
+        2:   97:    if (getLength(all)==0) {
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   98:        destroyList(rez);
+        1:   98-block  0
+call    0 returned 1
+        1:   99:        return NULL;
+        -:  100:    }
+        4:  101:    for (int i = 0;i<getLength(all);i++) {
+        1:  101-block  0
+        3:  101-block  1
+        4:  101-block  2
+call    0 returned 4
+branch  1 taken 3
+branch  2 taken 1 (fallthrough)
+        3:  102:        Oferta* o = copyOferta(getElem(all,i));
+        3:  102-block  0
+call    0 returned 3
+call    1 returned 3
+        3:  103:        if (o->pret>=pret) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:  104:            addElem(rez,o);
+        1:  104-block  0
+call    0 returned 1
+        -:  105:        }else {
+        2:  106:            destroyOferta(o);
+        2:  106-block  0
+call    0 returned 2
+        -:  107:        }
+        -:  108:    }
+        1:  109:    return rez;
+        1:  109-block  0
+        -:  110:}
+function compareOffers called 5 returned 100% blocks executed 100%
+        5:  111:int compareOffers(const void* o1, const void* o2) {
+        5:  112:    Oferta* of1 = *(Oferta**)o1;
+        5:  113:    Oferta* of2 = *(Oferta**)o2;
+        -:  114:
+        5:  115:    if (of1->pret < of2->pret)
+        5:  115-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 3
+        2:  116:        return -1;
+        2:  116-block  0
+        3:  117:    if (of1->pret > of2->pret)
+        3:  117-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:  118:        return 1;
+        1:  118-block  0
+        2:  119:    int tipCmp = strcmp(of1->tip, of2->tip);
+        2:  120:    if (tipCmp != 0)
+        2:  120-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  121:        return tipCmp;
+        1:  121-block  0
+        1:  122:    return 0;
+        1:  122-block  0
+        -:  123:}
+function compareOffersReverse called 6 returned 100% blocks executed 100%
+        6:  124:int compareOffersReverse(const void* o1,const void* o2) {
+        6:  125:    Oferta* of1 = *(Oferta**)o1;
+        6:  126:    Oferta* of2 = *(Oferta**)o2;
+        -:  127:
+        6:  128:    if (of1->pret<of2->pret)
+        6:  128-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 4
+        2:  129:        return 1;
+        2:  129-block  0
+        4:  130:    if (of1->pret>of2->pret)
+        4:  130-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 3
+        1:  131:        return -1;
+        1:  131-block  0
+        3:  132:    if (strcmp(of1->tip,of2->tip)<0)
+        3:  132-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:  133:        return 1;
+        2:  133-block  0
+        1:  134:    return -1;
+        1:  134-block  0
+        -:  135:}
+function sortare called 5 returned 100% blocks executed 100%
+        5:  136:List* sortare(Service* s, int reverse) {
+        5:  137:    if (getLength(get_all(s))==0)
+        5:  137-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 1 (fallthrough)
+branch  3 taken 4
+        1:  138:        return NULL;
+        1:  138-block  0
+        4:  139:    List* rez=createList(destroyOferta,copyOferta);
+        4:  139-block  0
+call    0 returned 4
+       16:  140:    for (int i = 0;i<getLength(get_all(s));i++) {
+       16:  140-block  0
+call    0 returned 16
+call    1 returned 16
+branch  2 taken 12
+branch  3 taken 4 (fallthrough)
+       12:  141:        Oferta* o = copyOferta(getElem(get_all(s),i));
+       12:  141-block  0
+call    0 returned 12
+call    1 returned 12
+call    2 returned 12
+       12:  142:        addElem(rez,o);
+call    0 returned 12
+       12:  143:        Oferta* aux = getElem(rez,i);
+call    0 returned 12
+        -:  144:    }
+        4:  145:    if (reverse) {
+        4:  145-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 2
+        2:  146:        qsort(rez->elems,rez->length,sizeof(Oferta*),compareOffersReverse);
+        2:  146-block  0
+call    0 returned 2
+        -:  147:
+        -:  148:    }else
+        2:  149:        qsort(rez->elems,rez->length,sizeof(Oferta*),compareOffers);
+        2:  149-block  0
+call    0 returned 2
+        4:  150:    return rez;
+        4:  150-block  0
+        -:  151:}
+        -:  152:
+function get_all called 41 returned 100% blocks executed 100%
+       41:  153:List* get_all(Service* service){
+       41:  154:    return service->repo->oferte;
+       41:  154-block  0
+        -:  155:}
+        -:  156:
+        -:  157:
+function testeService called 1 returned 100% blocks executed 74%
+        1:  158:void testeService() {
+        -:  159:
+        1:  160:    Service* s=createService();
+        1:  160-block  0
+call    0 returned 1
+        -:  161:    Oferta* aux;
+        -:  162:
+        -:  163:    //test adaugaOfertaService
+        -:  164:
+       1*:  165:    assert(adaugaOfertaService(s,"adresa1",1,"casa",1)==SUCCES);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  165-block  0
+call    3 never executed
+       1*:  166:    assert(adaugaOfertaService(s,"adresa2",2,"casa",2)==SUCCES);
+        1:  166-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  166-block  1
+call    3 never executed
+       1*:  167:    assert(adaugaOfertaService(s,"adresa3",3,"casa",3)==SUCCES);
+        1:  167-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  167-block  1
+call    3 never executed
+       1*:  168:    assert(adaugaOfertaService(s,"adresa1",1,"casa",1)==REPO_ERROR);
+        1:  168-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  168-block  1
+call    3 never executed
+       1*:  169:    assert(adaugaOfertaService(s,"adresa1",-1,"casa",1)==PRET_INVALID);
+        1:  169-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  169-block  1
+call    3 never executed
+        -:  170:
+        -:  171:    //test modificaOfertaService
+        -:  172:
+       1*:  173:    assert(modificaOfertaService(s,"adresa7","adresa1",1,"casa",1)==REPO_ERROR);
+        1:  173-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  173-block  1
+call    3 never executed
+       1*:  174:    assert(modificaOfertaService(s,"adresa2","adresa1",1,"casa",1)==REPO_ERROR);
+        1:  174-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  174-block  1
+call    3 never executed
+       1*:  175:    assert(modificaOfertaService(s,"","adresa1",1,"casa",1)==ADRESA_INVALIDA);
+        1:  175-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  175-block  1
+call    3 never executed
+       1*:  176:    assert(modificaOfertaService(s,"adresa1","",-1,"casa",1)==ADRESA_INVALIDA+SUPRAFATA_INVALIDA);
+        1:  176-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  176-block  1
+call    3 never executed
+       1*:  177:    assert(modificaOfertaService(s,"adresa2","adresa5",1,"casa",1)==SUCCES);
+        1:  177-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  177-block  1
+call    3 never executed
+        1:  178:    List* all = get_all(s);
+        1:  178-block  0
+call    0 returned 1
+       1*:  179:    assert(getLength(all)==3);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  179-block  0
+call    3 never executed
+        1:  180:    aux=getElem(all,1);
+        1:  180-block  0
+call    0 returned 1
+       1*:  181:    assert(strcmp(aux->adresa,"adresa5")==0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  181-block  0
+call    2 never executed
+        1:  182:    destroyService(s);
+        1:  182-block  0
+call    0 returned 1
+        1:  183:    s=createService();
+call    0 returned 1
+        1:  184:    adaugaOfertaService(s,"adresa1",1,"casa",1);
+call    0 returned 1
+        1:  185:    adaugaOfertaService(s,"adresa2",2,"casa",2);
+call    0 returned 1
+        1:  186:    adaugaOfertaService(s,"adresa3",3,"casa",3);
+call    0 returned 1
+        -:  187:
+        -:  188:    //test stergeOfertaService
+        -:  189:
+       1*:  190:    assert(stergeOfertaService(s,"adresa7")==REPO_ERROR);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  190-block  0
+call    3 never executed
+       1*:  191:    assert(stergeOfertaService(s,"")==ADRESA_INVALIDA);
+        1:  191-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  191-block  1
+call    3 never executed
+       1*:  192:    assert(stergeOfertaService(s,"adresa1")==SUCCES);
+        1:  192-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  192-block  1
+call    3 never executed
+       1*:  193:    assert(cautaOferta(s->repo,"adresa1")==-1);
+        1:  193-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  193-block  1
+call    3 never executed
+       1*:  194:    assert(getLength(get_all(s))==2);
+        1:  194-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  194-block  1
+call    4 never executed
+        -:  195:
+        -:  196:    //test filtre
+        -:  197:
+        1:  198:    adaugaOfertaService(s,"adresa1",1,"apartament",1);
+        1:  198-block  0
+call    0 returned 1
+        1:  199:    List* filtrate=filtrareDupaSuprafata(s,1);
+call    0 returned 1
+       1*:  200:    assert(getLength(filtrate)==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  200-block  0
+call    3 never executed
+        1:  201:    Oferta* o1=getElem(filtrate,0);
+        1:  201-block  0
+call    0 returned 1
+       1*:  202:    assert(strcmp(o1->adresa,"adresa1")==0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  202-block  0
+call    2 never executed
+        1:  203:    destroyList(filtrate);
+        1:  203-block  0
+call    0 returned 1
+        1:  204:    filtrate=filtrareDupaTip(s,"casa");
+call    0 returned 1
+       1*:  205:    assert(getLength(filtrate)==2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  205-block  0
+call    3 never executed
+        1:  206:    o1=getElem(filtrate,0);
+        1:  206-block  0
+call    0 returned 1
+        1:  207:    Oferta* o2=getElem(filtrate,1);
+call    0 returned 1
+       1*:  208:    assert(strcmp(o1->adresa,"adresa2")==0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  208-block  0
+call    2 never executed
+       1*:  209:    assert(strcmp(o2->adresa,"adresa3")==0);
+        1:  209-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  209-block  1
+call    2 never executed
+        1:  210:    destroyList(filtrate);
+        1:  210-block  0
+call    0 returned 1
+        1:  211:    filtrate=filtrareDupaPret(s,3);
+call    0 returned 1
+       1*:  212:    assert(getLength(filtrate)==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  212-block  0
+call    3 never executed
+        1:  213:    o1=getElem(filtrate,0);
+        1:  213-block  0
+call    0 returned 1
+       1*:  214:    assert(strcmp(o1->adresa,"adresa3")==0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  214-block  0
+call    2 never executed
+        1:  215:    destroyList(filtrate);
+        1:  215-block  0
+call    0 returned 1
+        1:  216:    destroyService(s);
+call    0 returned 1
+        1:  217:    s=createService();
+call    0 returned 1
+       1*:  218:    assert(filtrareDupaSuprafata(s,1)==NULL);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  218-block  0
+call    3 never executed
+       1*:  219:    assert(filtrareDupaTip(s,"casa")==NULL);
+        1:  219-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  219-block  1
+call    3 never executed
+       1*:  220:    assert(filtrareDupaPret(s,1)==NULL);
+        1:  220-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  220-block  1
+call    3 never executed
+        1:  221:    destroyService(s);
+        1:  221-block  0
+call    0 returned 1
+        -:  222:
+        -:  223:    //test sortare
+        -:  224:
+        1:  225:    s=createService();
+call    0 returned 1
+        1:  226:    adaugaOfertaService(s,"adresa2",2,"apartament",2);
+call    0 returned 1
+        1:  227:    adaugaOfertaService(s,"adresa1",1,"apartament",1);
+call    0 returned 1
+        1:  228:    adaugaOfertaService(s,"adresa3",3,"apartament",3);
+call    0 returned 1
+        -:  229:
+        1:  230:    List* sortate=sortare(s,0);
+call    0 returned 1
+       1*:  231:    assert(getLength(sortate)==3);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  231-block  0
+call    3 never executed
+        1:  232:    o1=getElem(sortate,0);
+        1:  232-block  0
+call    0 returned 1
+        1:  233:    o2=getElem(sortate,1);
+call    0 returned 1
+        1:  234:    Oferta* o3=getElem(sortate,2);
+call    0 returned 1
+       1*:  235:    assert(strcmp(o1->adresa,"adresa1")==0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  235-block  0
+call    2 never executed
+       1*:  236:    assert(strcmp(o2->adresa,"adresa2")==0);
+        1:  236-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  236-block  1
+call    2 never executed
+       1*:  237:    assert(strcmp(o3->adresa,"adresa3")==0);
+        1:  237-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  237-block  1
+call    2 never executed
+        1:  238:    destroyList(sortate);
+        1:  238-block  0
+call    0 returned 1
+        1:  239:    sortate=sortare(s,1);
+call    0 returned 1
+       1*:  240:     assert(getLength(sortate)==3);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  240-block  0
+call    3 never executed
+        1:  241:     o1=getElem(sortate,0);
+        1:  241-block  0
+call    0 returned 1
+        1:  242:     o2=getElem(sortate,1);
+call    0 returned 1
+        1:  243:     o3=getElem(sortate,2);
+call    0 returned 1
+       1*:  244:     assert(strcmp(o1->adresa,"adresa3")==0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  244-block  0
+call    2 never executed
+       1*:  245:     assert(strcmp(o2->adresa,"adresa2")==0);
+        1:  245-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  245-block  1
+call    2 never executed
+       1*:  246:     assert(strcmp(o3->adresa,"adresa1")==0);
+        1:  246-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  246-block  1
+call    2 never executed
+        1:  247:     destroyList(sortate);
+        1:  247-block  0
+call    0 returned 1
+        1:  248:     destroyService(s);
+call    0 returned 1
+        1:  249:     s=createService();
+call    0 returned 1
+       1*:  250:     assert(sortare(s,0)==NULL);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  250-block  0
+call    3 never executed
+        1:  251:     adaugaOfertaService(s,"adresa1",1,"apartament",1);
+        1:  251-block  0
+call    0 returned 1
+        1:  252:     adaugaOfertaService(s,"adresa2",1,"casa",1);
+call    0 returned 1
+        1:  253:     adaugaOfertaService(s,"adresa3",1,"casa",1);
+call    0 returned 1
+        1:  254:     sortate=sortare(s,0);
+call    0 returned 1
+       1*:  255:     assert(getLength(sortate)==3);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  255-block  0
+call    3 never executed
+        1:  256:     o1=getElem(sortate,0);
+        1:  256-block  0
+call    0 returned 1
+        1:  257:     o2=getElem(sortate,1);
+call    0 returned 1
+        1:  258:     o3=getElem(sortate,2);
+call    0 returned 1
+       1*:  259:     assert(strcmp(o1->adresa,"adresa1")==0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  259-block  0
+call    2 never executed
+       1*:  260:     assert(strcmp(o2->adresa,"adresa2")==0);
+        1:  260-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  260-block  1
+call    2 never executed
+       1*:  261:     assert(strcmp(o3->adresa,"adresa3")==0);
+        1:  261-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  261-block  1
+call    2 never executed
+        1:  262:     destroyList(sortate);
+        1:  262-block  0
+call    0 returned 1
+        1:  263:     sortate=sortare(s,1);
+call    0 returned 1
+       1*:  264:     assert(getLength(sortate)==3);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  264-block  0
+call    3 never executed
+        1:  265:     o1=getElem(sortate,0);
+        1:  265-block  0
+call    0 returned 1
+        1:  266:     o2=getElem(sortate,1);
+call    0 returned 1
+        1:  267:     o3=getElem(sortate,2);
+call    0 returned 1
+       1*:  268:     assert(strcmp(o1->adresa,"adresa2")==0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  268-block  0
+call    2 never executed
+       1*:  269:     assert(strcmp(o2->adresa,"adresa3")==0);
+        1:  269-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  269-block  1
+call    2 never executed
+       1*:  270:     assert(strcmp(o3->adresa,"adresa1")==0);
+        1:  270-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  270-block  1
+call    2 never executed
+        1:  271:     destroyList(sortate);
+        1:  271-block  0
+call    0 returned 1
+        1:  272:    destroyService(s);
+call    0 returned 1
+        -:  273:
+        1:  274:}

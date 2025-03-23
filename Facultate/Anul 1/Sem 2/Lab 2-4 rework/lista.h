@@ -17,8 +17,8 @@ void destroyList(List* l);
 void resizeList(List* l);
 void addElem(List* l, TElem elem);
 void deleteElem(List* l, int poz);
-void setElem(List* l, int poz, TElem elem);
-TElem getElem(List* l, int poz);
-int getLength(List* l);
+void setElem(const List* l, int poz, TElem elem);
+TElem getElem(const List* l, int poz);
+int getLength(const List* l);
 void testList();
 

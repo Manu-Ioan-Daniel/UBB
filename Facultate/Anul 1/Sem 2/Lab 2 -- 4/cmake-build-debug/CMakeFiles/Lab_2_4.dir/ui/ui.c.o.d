@@ -1,11 +1,11 @@
 CMakeFiles/Lab_2_4.dir/ui/ui.c.o: \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/ui.c \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/ui.c \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/ui.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/service.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../repository/repo.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../repository/../domeniu/lista.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../repository/../domeniu/oferta.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/ui.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/service.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../repository/repo.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../repository/../domeniu/lista.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../repository/../domeniu/oferta.h \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -59,8 +59,8 @@ CMakeFiles/Lab_2_4.dir/ui/ui.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../repository/../errors/errors.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../repository/../domeniu/oferta.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../validator/validator.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../validator/../domeniu/oferta.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../validator/../errors/errors.h
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../repository/../errors/errors.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../repository/../domeniu/oferta.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../validator/validator.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../validator/../domeniu/oferta.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/../infrastructura/../validator/../errors/errors.h

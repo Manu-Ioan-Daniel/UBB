@@ -6,7 +6,7 @@
 #include "oferta.h"
 #include <assert.h>
 #include <stdlib.h>
-#include <string.h>
+
 
 
 List* createList(const DestroyFn destroyFn , const CopyFn copyFn) {
@@ -46,14 +46,14 @@ void deleteElem(List *l,int poz) {
     }
     l->length-=1;
 }
-void setElem(List *l,int poz,TElem elem) {
+void setElem(const List *l,int poz,TElem elem) {
     l->destroyFn(l->elems[poz]);
     l->elems[poz]=elem;
 }
-TElem getElem(List* l,int poz) {
+TElem getElem(const List* l,int poz) {
     return l->elems[poz];
 }
-int getLength(List* l) {
+int getLength(const List* l) {
     return l->length;
 
 }
@@ -76,7 +76,7 @@ void testList() {
     deleteElem(l,0);
     assert(getLength(l)==1);
     for (int i = 0;i<11;i++) {
-        Oferta* o = createOferta("adresa1",i,"apartament",1);
+        Oferta* o = createOferta("adresa1",(float)i,"apartament",1);
         addElem(l,o);
     }
     assert(l->capacity==20);

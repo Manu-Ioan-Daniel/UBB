@@ -7,7 +7,7 @@ typedef struct {
     float pret;
 }Oferta;
 
-Oferta* createOferta(char* adresa,float suprafata, char* tip,float pret);
+Oferta* createOferta(const char* adresa,float suprafata, const char* tip,float pret);
 void destroyOferta(Oferta* o);
-Oferta* copyOferta(Oferta* o);
+Oferta* copyOferta(const Oferta* o);
 void testOferta();

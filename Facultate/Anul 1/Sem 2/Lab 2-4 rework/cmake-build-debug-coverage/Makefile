@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework"
+CMAKE_SOURCE_DIR = "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage"
+CMAKE_BINARY_DIR = "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -225,6 +225,78 @@ repo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4_rework.dir/build.make CMakeFiles/Lab_2_4_rework.dir/repo.c.s
 .PHONY : repo.c.s
 
+service.o: service.c.o
+.PHONY : service.o
+
+# target to build an object file
+service.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4_rework.dir/build.make CMakeFiles/Lab_2_4_rework.dir/service.c.o
+.PHONY : service.c.o
+
+service.i: service.c.i
+.PHONY : service.i
+
+# target to preprocess a source file
+service.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4_rework.dir/build.make CMakeFiles/Lab_2_4_rework.dir/service.c.i
+.PHONY : service.c.i
+
+service.s: service.c.s
+.PHONY : service.s
+
+# target to generate assembly for a file
+service.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4_rework.dir/build.make CMakeFiles/Lab_2_4_rework.dir/service.c.s
+.PHONY : service.c.s
+
+ui.o: ui.c.o
+.PHONY : ui.o
+
+# target to build an object file
+ui.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4_rework.dir/build.make CMakeFiles/Lab_2_4_rework.dir/ui.c.o
+.PHONY : ui.c.o
+
+ui.i: ui.c.i
+.PHONY : ui.i
+
+# target to preprocess a source file
+ui.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4_rework.dir/build.make CMakeFiles/Lab_2_4_rework.dir/ui.c.i
+.PHONY : ui.c.i
+
+ui.s: ui.c.s
+.PHONY : ui.s
+
+# target to generate assembly for a file
+ui.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4_rework.dir/build.make CMakeFiles/Lab_2_4_rework.dir/ui.c.s
+.PHONY : ui.c.s
+
+validator.o: validator.c.o
+.PHONY : validator.o
+
+# target to build an object file
+validator.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4_rework.dir/build.make CMakeFiles/Lab_2_4_rework.dir/validator.c.o
+.PHONY : validator.c.o
+
+validator.i: validator.c.i
+.PHONY : validator.i
+
+# target to preprocess a source file
+validator.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4_rework.dir/build.make CMakeFiles/Lab_2_4_rework.dir/validator.c.i
+.PHONY : validator.c.i
+
+validator.s: validator.c.s
+.PHONY : validator.s
+
+# target to generate assembly for a file
+validator.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2_4_rework.dir/build.make CMakeFiles/Lab_2_4_rework.dir/validator.c.s
+.PHONY : validator.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,6 +318,15 @@ help:
 	@echo "... repo.o"
 	@echo "... repo.i"
 	@echo "... repo.s"
+	@echo "... service.o"
+	@echo "... service.i"
+	@echo "... service.s"
+	@echo "... ui.o"
+	@echo "... ui.i"
+	@echo "... ui.s"
+	@echo "... validator.o"
+	@echo "... validator.i"
+	@echo "... validator.s"
 .PHONY : help
 
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4"
+CMAKE_SOURCE_DIR = "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug"
+CMAKE_BINARY_DIR = "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Lab_2_4.dir/depend.make
@@ -70,102 +70,102 @@ include CMakeFiles/Lab_2_4.dir/progress.make
 include CMakeFiles/Lab_2_4.dir/flags.make
 
 CMakeFiles/Lab_2_4.dir/main.c.o: CMakeFiles/Lab_2_4.dir/flags.make
-CMakeFiles/Lab_2_4.dir/main.c.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/main.c
+CMakeFiles/Lab_2_4.dir/main.c.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/main.c
 CMakeFiles/Lab_2_4.dir/main.c.o: CMakeFiles/Lab_2_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Lab_2_4.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4.dir/main.c.o -MF CMakeFiles/Lab_2_4.dir/main.c.o.d -o CMakeFiles/Lab_2_4.dir/main.c.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Lab_2_4.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4.dir/main.c.o -MF CMakeFiles/Lab_2_4.dir/main.c.o.d -o CMakeFiles/Lab_2_4.dir/main.c.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/main.c"
 
 CMakeFiles/Lab_2_4.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Lab_2_4.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/main.c" > CMakeFiles/Lab_2_4.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/main.c" > CMakeFiles/Lab_2_4.dir/main.c.i
 
 CMakeFiles/Lab_2_4.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Lab_2_4.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/main.c" -o CMakeFiles/Lab_2_4.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/main.c" -o CMakeFiles/Lab_2_4.dir/main.c.s
 
 CMakeFiles/Lab_2_4.dir/domeniu/lista.c.o: CMakeFiles/Lab_2_4.dir/flags.make
-CMakeFiles/Lab_2_4.dir/domeniu/lista.c.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/domeniu/lista.c
+CMakeFiles/Lab_2_4.dir/domeniu/lista.c.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/domeniu/lista.c
 CMakeFiles/Lab_2_4.dir/domeniu/lista.c.o: CMakeFiles/Lab_2_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Lab_2_4.dir/domeniu/lista.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4.dir/domeniu/lista.c.o -MF CMakeFiles/Lab_2_4.dir/domeniu/lista.c.o.d -o CMakeFiles/Lab_2_4.dir/domeniu/lista.c.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/domeniu/lista.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Lab_2_4.dir/domeniu/lista.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4.dir/domeniu/lista.c.o -MF CMakeFiles/Lab_2_4.dir/domeniu/lista.c.o.d -o CMakeFiles/Lab_2_4.dir/domeniu/lista.c.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/domeniu/lista.c"
 
 CMakeFiles/Lab_2_4.dir/domeniu/lista.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Lab_2_4.dir/domeniu/lista.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/domeniu/lista.c" > CMakeFiles/Lab_2_4.dir/domeniu/lista.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/domeniu/lista.c" > CMakeFiles/Lab_2_4.dir/domeniu/lista.c.i
 
 CMakeFiles/Lab_2_4.dir/domeniu/lista.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Lab_2_4.dir/domeniu/lista.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/domeniu/lista.c" -o CMakeFiles/Lab_2_4.dir/domeniu/lista.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/domeniu/lista.c" -o CMakeFiles/Lab_2_4.dir/domeniu/lista.c.s
 
 CMakeFiles/Lab_2_4.dir/infrastructura/service.c.o: CMakeFiles/Lab_2_4.dir/flags.make
-CMakeFiles/Lab_2_4.dir/infrastructura/service.c.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/infrastructura/service.c
+CMakeFiles/Lab_2_4.dir/infrastructura/service.c.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/infrastructura/service.c
 CMakeFiles/Lab_2_4.dir/infrastructura/service.c.o: CMakeFiles/Lab_2_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Lab_2_4.dir/infrastructura/service.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4.dir/infrastructura/service.c.o -MF CMakeFiles/Lab_2_4.dir/infrastructura/service.c.o.d -o CMakeFiles/Lab_2_4.dir/infrastructura/service.c.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/infrastructura/service.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Lab_2_4.dir/infrastructura/service.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4.dir/infrastructura/service.c.o -MF CMakeFiles/Lab_2_4.dir/infrastructura/service.c.o.d -o CMakeFiles/Lab_2_4.dir/infrastructura/service.c.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/infrastructura/service.c"
 
 CMakeFiles/Lab_2_4.dir/infrastructura/service.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Lab_2_4.dir/infrastructura/service.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/infrastructura/service.c" > CMakeFiles/Lab_2_4.dir/infrastructura/service.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/infrastructura/service.c" > CMakeFiles/Lab_2_4.dir/infrastructura/service.c.i
 
 CMakeFiles/Lab_2_4.dir/infrastructura/service.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Lab_2_4.dir/infrastructura/service.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/infrastructura/service.c" -o CMakeFiles/Lab_2_4.dir/infrastructura/service.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/infrastructura/service.c" -o CMakeFiles/Lab_2_4.dir/infrastructura/service.c.s
 
 CMakeFiles/Lab_2_4.dir/ui/ui.c.o: CMakeFiles/Lab_2_4.dir/flags.make
-CMakeFiles/Lab_2_4.dir/ui/ui.c.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/ui.c
+CMakeFiles/Lab_2_4.dir/ui/ui.c.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/ui/ui.c
 CMakeFiles/Lab_2_4.dir/ui/ui.c.o: CMakeFiles/Lab_2_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Lab_2_4.dir/ui/ui.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4.dir/ui/ui.c.o -MF CMakeFiles/Lab_2_4.dir/ui/ui.c.o.d -o CMakeFiles/Lab_2_4.dir/ui/ui.c.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/ui/ui.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Lab_2_4.dir/ui/ui.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4.dir/ui/ui.c.o -MF CMakeFiles/Lab_2_4.dir/ui/ui.c.o.d -o CMakeFiles/Lab_2_4.dir/ui/ui.c.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/ui/ui.c"
 
 CMakeFiles/Lab_2_4.dir/ui/ui.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Lab_2_4.dir/ui/ui.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/ui/ui.c" > CMakeFiles/Lab_2_4.dir/ui/ui.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/ui/ui.c" > CMakeFiles/Lab_2_4.dir/ui/ui.c.i
 
 CMakeFiles/Lab_2_4.dir/ui/ui.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Lab_2_4.dir/ui/ui.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/ui/ui.c" -o CMakeFiles/Lab_2_4.dir/ui/ui.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/ui/ui.c" -o CMakeFiles/Lab_2_4.dir/ui/ui.c.s
 
 CMakeFiles/Lab_2_4.dir/repository/repo.c.o: CMakeFiles/Lab_2_4.dir/flags.make
-CMakeFiles/Lab_2_4.dir/repository/repo.c.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/repository/repo.c
+CMakeFiles/Lab_2_4.dir/repository/repo.c.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/repository/repo.c
 CMakeFiles/Lab_2_4.dir/repository/repo.c.o: CMakeFiles/Lab_2_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Lab_2_4.dir/repository/repo.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4.dir/repository/repo.c.o -MF CMakeFiles/Lab_2_4.dir/repository/repo.c.o.d -o CMakeFiles/Lab_2_4.dir/repository/repo.c.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/repository/repo.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Lab_2_4.dir/repository/repo.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4.dir/repository/repo.c.o -MF CMakeFiles/Lab_2_4.dir/repository/repo.c.o.d -o CMakeFiles/Lab_2_4.dir/repository/repo.c.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/repository/repo.c"
 
 CMakeFiles/Lab_2_4.dir/repository/repo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Lab_2_4.dir/repository/repo.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/repository/repo.c" > CMakeFiles/Lab_2_4.dir/repository/repo.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/repository/repo.c" > CMakeFiles/Lab_2_4.dir/repository/repo.c.i
 
 CMakeFiles/Lab_2_4.dir/repository/repo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Lab_2_4.dir/repository/repo.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/repository/repo.c" -o CMakeFiles/Lab_2_4.dir/repository/repo.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/repository/repo.c" -o CMakeFiles/Lab_2_4.dir/repository/repo.c.s
 
 CMakeFiles/Lab_2_4.dir/validator/validator.c.o: CMakeFiles/Lab_2_4.dir/flags.make
-CMakeFiles/Lab_2_4.dir/validator/validator.c.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/validator/validator.c
+CMakeFiles/Lab_2_4.dir/validator/validator.c.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/validator/validator.c
 CMakeFiles/Lab_2_4.dir/validator/validator.c.o: CMakeFiles/Lab_2_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Lab_2_4.dir/validator/validator.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4.dir/validator/validator.c.o -MF CMakeFiles/Lab_2_4.dir/validator/validator.c.o.d -o CMakeFiles/Lab_2_4.dir/validator/validator.c.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/validator/validator.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Lab_2_4.dir/validator/validator.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4.dir/validator/validator.c.o -MF CMakeFiles/Lab_2_4.dir/validator/validator.c.o.d -o CMakeFiles/Lab_2_4.dir/validator/validator.c.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/validator/validator.c"
 
 CMakeFiles/Lab_2_4.dir/validator/validator.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Lab_2_4.dir/validator/validator.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/validator/validator.c" > CMakeFiles/Lab_2_4.dir/validator/validator.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/validator/validator.c" > CMakeFiles/Lab_2_4.dir/validator/validator.c.i
 
 CMakeFiles/Lab_2_4.dir/validator/validator.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Lab_2_4.dir/validator/validator.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/validator/validator.c" -o CMakeFiles/Lab_2_4.dir/validator/validator.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/validator/validator.c" -o CMakeFiles/Lab_2_4.dir/validator/validator.c.s
 
 CMakeFiles/Lab_2_4.dir/errors/errors.c.o: CMakeFiles/Lab_2_4.dir/flags.make
-CMakeFiles/Lab_2_4.dir/errors/errors.c.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/errors/errors.c
+CMakeFiles/Lab_2_4.dir/errors/errors.c.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/errors/errors.c
 CMakeFiles/Lab_2_4.dir/errors/errors.c.o: CMakeFiles/Lab_2_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Lab_2_4.dir/errors/errors.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4.dir/errors/errors.c.o -MF CMakeFiles/Lab_2_4.dir/errors/errors.c.o.d -o CMakeFiles/Lab_2_4.dir/errors/errors.c.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/errors/errors.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Lab_2_4.dir/errors/errors.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Lab_2_4.dir/errors/errors.c.o -MF CMakeFiles/Lab_2_4.dir/errors/errors.c.o.d -o CMakeFiles/Lab_2_4.dir/errors/errors.c.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/errors/errors.c"
 
 CMakeFiles/Lab_2_4.dir/errors/errors.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Lab_2_4.dir/errors/errors.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/errors/errors.c" > CMakeFiles/Lab_2_4.dir/errors/errors.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/errors/errors.c" > CMakeFiles/Lab_2_4.dir/errors/errors.c.i
 
 CMakeFiles/Lab_2_4.dir/errors/errors.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Lab_2_4.dir/errors/errors.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/errors/errors.c" -o CMakeFiles/Lab_2_4.dir/errors/errors.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/errors/errors.c" -o CMakeFiles/Lab_2_4.dir/errors/errors.c.s
 
 # Object files for target Lab_2_4
 Lab_2_4_OBJECTS = \
@@ -189,7 +189,7 @@ Lab_2_4: CMakeFiles/Lab_2_4.dir/validator/validator.c.o
 Lab_2_4: CMakeFiles/Lab_2_4.dir/errors/errors.c.o
 Lab_2_4: CMakeFiles/Lab_2_4.dir/build.make
 Lab_2_4: CMakeFiles/Lab_2_4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable Lab_2_4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable Lab_2_4"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Lab_2_4.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -201,6 +201,6 @@ CMakeFiles/Lab_2_4.dir/clean:
 .PHONY : CMakeFiles/Lab_2_4.dir/clean
 
 CMakeFiles/Lab_2_4.dir/depend:
-	cd "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles/Lab_2_4.dir/DependInfo.cmake" "--color=$(COLOR)"
+	cd "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug/CMakeFiles/Lab_2_4.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/Lab_2_4.dir/depend
 

@@ -7,10 +7,10 @@ typedef struct {
 }Repo;
 Repo* createRepo();
 void destroyRepo();
-int adaugaOferta(Repo*,Oferta* o);
-int  stergeOferta(Repo*,char* adresa);
-int  modificaOferta(Repo*,char* adresa,Oferta* o);
-int cautaOferta(Repo*,char* adresa);
-List* getOferte(Repo*);
+int adaugaOferta(const Repo*,Oferta* o);
+int  stergeOferta(const Repo*, const char* adresa);
+int  modificaOferta(const Repo*, const char* adresa,Oferta* o);
+int cautaOferta(const Repo*, const char* adresa);
+List* getOferte(const Repo*);
 void testRepo();
 

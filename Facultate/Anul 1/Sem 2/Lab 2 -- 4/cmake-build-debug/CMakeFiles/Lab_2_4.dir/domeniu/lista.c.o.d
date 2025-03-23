@@ -1,8 +1,8 @@
 CMakeFiles/Lab_2_4.dir/domeniu/lista.c.o: \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/domeniu/lista.c \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/domeniu/lista.c \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/domeniu/lista.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/domeniu/oferta.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/domeniu/lista.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/domeniu/oferta.h \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

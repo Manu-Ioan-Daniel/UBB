@@ -1,9 +1,9 @@
 CMakeFiles/Lab_2_4.dir/repository/repo.c.o: \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/repository/repo.c \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/repository/repo.c \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/repository/repo.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/repository/../domeniu/lista.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/repository/../domeniu/oferta.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/repository/repo.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/repository/../domeniu/lista.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/repository/../domeniu/oferta.h \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -57,5 +57,5 @@ CMakeFiles/Lab_2_4.dir/repository/repo.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/repository/../errors/errors.h \
- /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/repository/../domeniu/oferta.h
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/repository/../errors/errors.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/Lab\ 2\ --\ 4/repository/../domeniu/oferta.h
