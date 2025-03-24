@@ -1,6 +1,8 @@
-#include <stdio.h>
+#include "presentation/ui.h"
+#include "testing/tests.h"
 
 int main(void) {
-    printf("Hello, World!\n");
+    runTests();
+    runApp();
     return 0;
 }

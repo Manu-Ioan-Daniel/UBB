@@ -1,0 +1,230 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/infrastructure/repo.c
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/infrastructure/repo.c.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/infrastructure/repo.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Andra Mateș on 15.03.2025.
+        -:    3://
+        -:    4:#include "repo.h"
+        -:    5:#include "../domain/expense.h"
+        -:    6:#include <stdbool.h>
+        -:    7:#include <stdlib.h>
+        -:    8:#include <string.h>
+        -:    9:#define CAPACITY 10
+        -:   10:
+function createRepo called 11 returned 100% blocks executed 71%
+       11:   11:Repo* createRepo() {
+       11:   12:    Repo* repo = (Repo*) malloc(sizeof(Repo));
+      11*:   13:    if (repo == NULL) return NULL;
+       11:   13-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 11
+    %%%%%:   13-block  1
+        -:   14:
+       11:   15:    repo->expenses = createList(CAPACITY, (DestroyFunc) destroyExpense, (CopyFunc) copyExpense);
+       11:   15-block  0
+call    0 returned 11
+       11:   16:    if (repo->expenses == NULL) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 11
+    #####:   17:        free(repo);
+    #####:   18:        return NULL;
+    %%%%%:   18-block  0
+        -:   19:    }
+        -:   20:
+       11:   21:    return repo;
+       11:   21-block  0
+        -:   22:}
+        -:   23:
+function destroyRepo called 11 returned 100% blocks executed 86%
+       11:   24:void destroyRepo(Repo* repo) {
+      11*:   25:    if (repo == NULL) return;
+       11:   25-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 11
+    %%%%%:   25-block  1
+       11:   26:    if (repo->expenses != NULL) {
+       11:   26-block  0
+branch  0 taken 11 (fallthrough)
+branch  1 taken 0
+       11:   27:        destroyList(repo->expenses);
+       11:   27-block  0
+call    0 returned 11
+       11:   28:        repo->expenses = NULL;
+        -:   29:    }
+       11:   30:    free(repo);
+       11:   30-block  0
+        -:   31:}
+        -:   32:
+function searchPos called 57 returned 100% blocks executed 92%
+       57:   33:int searchPos(Repo* repo, int apNumber, char* type) {
+      57*:   34:    if (repo == NULL) return -1;
+       57:   34-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 57
+    %%%%%:   34-block  1
+      126:   35:    for (int i = 0; i < getLength(repo->expenses); i++) {
+       57:   35-block  0
+       69:   35-block  1
+      126:   35-block  2
+call    0 returned 126
+branch  1 taken 84
+branch  2 taken 42 (fallthrough)
+       84:   36:        Expense* expense = get(repo->expenses, i);
+       84:   36-block  0
+call    0 returned 84
+       84:   37:        if (strcmp(expense->type, type) == 0 && expense->apNumber == apNumber) {
+branch  0 taken 19 (fallthrough)
+branch  1 taken 65
+       19:   37-block  0
+branch  2 taken 15 (fallthrough)
+branch  3 taken 4
+       15:   38:            return i;
+       15:   38-block  0
+        -:   39:        }
+        -:   40:    }
+       42:   41:    return -1;
+       42:   41-block  0
+        -:   42:}
+        -:   43:
+function addExpense called 40 returned 100% blocks executed 91%
+       40:   44:bool addExpense(Repo* repo, Expense* expense, Error* error) {
+      40*:   45:    if (repo == NULL || expense == NULL) return false;
+       40:   45-block  0
+branch  0 taken 40 (fallthrough)
+branch  1 taken 0
+       40:   45-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 40
+    %%%%%:   45-block  2
+        -:   46:
+       40:   47:    int foundPos = searchPos(repo, expense->apNumber, expense->type);
+       40:   47-block  0
+call    0 returned 40
+       40:   48:    if (foundPos != -1) {
+branch  0 taken 2 (fallthrough)
+branch  1 taken 38
+        2:   49:        error->errorMessage[0] = '\0';
+        2:   50:        setError(error, "eroare de repo: exista deja o cheltuiala de acest tip a acestui apartament!\n");
+        2:   50-block  0
+call    0 returned 2
+        2:   51:        return false;
+        -:   52:    }
+        -:   53:
+       38:   54:    Expense* copy = copyExpense(expense);
+       38:   54-block  0
+call    0 returned 38
+       38:   55:    add(repo->expenses, copy);
+call    0 returned 38
+       38:   56:    return true;
+        -:   57:}
+        -:   58:
+function modifyExpense called 5 returned 100% blocks executed 95%
+        5:   59:bool modifyExpense(Repo* repo, Expense* expense, int oldApNumber, char* oldType, Error* error) {
+       5*:   60:    if (repo == NULL || expense == NULL) return false;
+        5:   60-block  0
+branch  0 taken 5 (fallthrough)
+branch  1 taken 0
+        5:   60-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5
+    %%%%%:   60-block  2
+        -:   61:    //verific daca exista cheltuiala
+        5:   62:    int foundPos = searchPos(repo, oldApNumber, oldType);
+        5:   62-block  0
+call    0 returned 5
+        5:   63:    if (foundPos == -1) { // daca nu o gaseste
+branch  0 taken 1 (fallthrough)
+branch  1 taken 4
+        1:   64:        error->errorMessage[0] = '\0';
+        1:   65:        setError(error, "eroare de repo: nu exista aceasta cheltuiala!\n");
+        1:   65-block  0
+call    0 returned 1
+        1:   66:        return false;
+        -:   67:    }
+        -:   68:    //verific daca cheltuiala noua exista deja
+        4:   69:    int duplicatePos = searchPos(repo, getApNumber(expense), getType(expense));
+        4:   69-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+        4:   70:    if (duplicatePos != -1 && duplicatePos != foundPos) { // daca exista deja
+branch  0 taken 4 (fallthrough)
+branch  1 taken 0
+        4:   70-block  0
+branch  2 taken 1 (fallthrough)
+branch  3 taken 3
+        1:   71:        error->errorMessage[0] = '\0';
+        1:   72:        setError(error, "eroare de repo: exista deja o cheltuiala de acest tip a acestui apartament!\n");
+        1:   72-block  0
+call    0 returned 1
+        1:   73:        return false;
+        -:   74:    }
+        3:   75:    Expense* oldExpense = get(repo->expenses, foundPos);
+        3:   75-block  0
+call    0 returned 3
+        3:   76:    destroyExpense(oldExpense);
+call    0 returned 3
+        -:   77:
+        3:   78:    Expense* copy = copyExpense(expense);
+call    0 returned 3
+        3:   79:    repo->expenses->elems[foundPos] = copy;
+        3:   80:    return true;
+        -:   81:}
+        -:   82:
+function deleteExpense called 3 returned 100% blocks executed 92%
+        3:   83:bool deleteExpense(Repo* repo, Expense* expense, Error* error) {
+       3*:   84:    if (repo == NULL || expense == NULL) return false;
+        3:   84-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
+        3:   84-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 3
+    %%%%%:   84-block  2
+        -:   85:
+        3:   86:    int foundPos = searchPos(repo, getApNumber(expense), getType(expense));
+        3:   86-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+        3:   87:    if (foundPos == -1) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   88:        error->errorMessage[0] = '\0';
+        1:   89:        setError(error, "eroare de repo: nu exista aceasta cheltuiala!\n");
+        1:   89-block  0
+call    0 returned 1
+        1:   90:        return false;
+        -:   91:    }
+        -:   92:
+        2:   93:    delete(repo->expenses, foundPos);
+        2:   93-block  0
+call    0 returned 2
+        2:   94:    return true;
+        -:   95:}
+        -:   96:
+function getRepoLength called 7 returned 100% blocks executed 75%
+        7:   97:int getRepoLength(Repo* repo) {
+       7*:   98:    if (repo == NULL) return -1;
+        7:   98-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 7
+    %%%%%:   98-block  1
+        7:   99:    return getLength(repo->expenses);
+        7:   99-block  0
+call    0 returned 7
+        -:  100:}
+        -:  101:
+function getExpenses called 1 returned 100% blocks executed 75%
+        1:  102:List* getExpenses(Repo* repo) {
+       1*:  103:    if (repo == NULL) return NULL;
+        1:  103-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  103-block  1
+        1:  104:    return copyList(repo->expenses);
+        1:  104-block  0
+call    0 returned 1
+        -:  105:}
+        -:  106:

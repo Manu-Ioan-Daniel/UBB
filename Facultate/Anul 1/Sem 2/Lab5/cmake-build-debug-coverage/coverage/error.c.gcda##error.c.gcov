@@ -1,0 +1,14 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/errors/error.c
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/errors/error.c.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/errors/error.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Andra Mateș on 15.03.2025.
+        -:    3://
+        -:    4:#include "error.h"
+        -:    5:#include <string.h>
+        -:    6:
+function setError called 13 returned 100% blocks executed 100%
+       13:    7:void setError(Error *error, char* errorMessage) {
+       13:    8:    strcat(error->errorMessage, errorMessage);
+       13:    9:}

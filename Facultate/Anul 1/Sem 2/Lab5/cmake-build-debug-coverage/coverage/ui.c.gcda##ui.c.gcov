@@ -1,0 +1,590 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/presentation/ui.c
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/presentation/ui.c.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/presentation/ui.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Andra Mateș on 15.03.2025.
+        -:    3://
+        -:    4:#include "ui.h"
+        -:    5:#include <stdio.h>
+        -:    6:#include <stdlib.h>
+        -:    7:#include <string.h>
+        -:    8:
+function uiPrintMenu called 1 returned 100% blocks executed 100%
+        1:    9:void uiPrintMenu() {
+        1:   10:    printf("Meniu Administrator imobil\n");
+        1:   10-block  0
+call    0 returned 1
+        1:   11:    printf("1. Adauga cheltuiala\n");
+call    0 returned 1
+        1:   12:    printf("2. Modifica cheltuiala\n");
+call    0 returned 1
+        1:   13:    printf("3. Sterge cheltuiala\n");
+call    0 returned 1
+        1:   14:    printf("4. Filtrare cheltuieli\n");
+call    0 returned 1
+        1:   15:    printf("5. Sorteaza cheltuieli\n");
+call    0 returned 1
+        1:   16:    printf("6. Afiseaza toate cheltuielile\n");
+call    0 returned 1
+        1:   17:    printf("7.Undo\n");
+call    0 returned 1
+        1:   18:    printf("0. Iesire\n");
+call    0 returned 1
+        1:   19:}
+function uiUndo called 0 returned 0% blocks executed 0%
+    #####:   20:void uiUndo(Service* service) {
+    #####:   21:    undo(service);
+    %%%%%:   21-block  0
+call    0 never executed
+    #####:   22:}
+        -:   23:
+function uiValidateInputTypeInt called 0 returned 0% blocks executed 0%
+    #####:   24:bool uiValidateInputTypeInt(char input[], Error* error) {
+    #####:   25:    int number = atoi(input);
+    #####:   26:    if (number == 0) {
+    %%%%%:   26-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   27:        setError(error, "value error: input invalid!\n");
+    %%%%%:   27-block  0
+call    0 never executed
+    #####:   28:        return false;
+        -:   29:    }
+    #####:   30:    return true;
+    %%%%%:   30-block  0
+        -:   31:}
+        -:   32:
+function uiValidateInputTypeDouble called 0 returned 0% blocks executed 0%
+    #####:   33:bool uiValidateInputTypeDouble(char input[], Error* error) {
+    #####:   34:    double number = atof(input);
+    #####:   35:    if (number == 0) {
+    %%%%%:   35-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   36:        setError(error, "value error: input invalid!\n");
+    %%%%%:   36-block  0
+call    0 never executed
+    #####:   37:        return false;
+        -:   38:    }
+    #####:   39:    return true;
+    %%%%%:   39-block  0
+        -:   40:}
+        -:   41:
+function uiAddExpense called 0 returned 0% blocks executed 0%
+    #####:   42:void uiAddExpense(Service* service) {
+        -:   43:    int apNumber;
+        -:   44:    double sum;
+        -:   45:    char type[20];
+        -:   46:    char input[20];
+        -:   47:    Error error;
+        -:   48:
+        -:   49:    // printf("Introduceti numarul apartamentului: ");
+        -:   50:    // scanf("%d", &apNumber);
+        -:   51:    // printf("Introduceti suma: ");
+        -:   52:    // scanf("%lf", &sum);
+        -:   53:    // printf("Introduceti tipul (apa, canal, incalzire, gaz): ");
+        -:   54:    // scanf("%s", type);
+        -:   55:
+    #####:   56:    printf("Introduceti numarul apartamentului: ");
+    %%%%%:   56-block  0
+call    0 never executed
+    #####:   57:    scanf("%s", input);
+call    0 never executed
+    #####:   58:    if (uiValidateInputTypeInt(input, &error)) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   59:        apNumber = atoi(input);
+    %%%%%:   59-block  0
+        -:   60:    }
+        -:   61:    else {
+    #####:   62:        printf("%s\n", error.errorMessage);
+    %%%%%:   62-block  0
+call    0 never executed
+    #####:   63:        return;
+    %%%%%:   63-block  0
+        -:   64:    }
+    #####:   65:    printf("Introduceti suma: ");
+    %%%%%:   65-block  0
+call    0 never executed
+    #####:   66:    scanf("%s", input);
+call    0 never executed
+    #####:   67:    if (uiValidateInputTypeDouble(input, &error)) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   68:        sum = atof(input);
+    %%%%%:   68-block  0
+        -:   69:    }
+        -:   70:    else {
+    #####:   71:        printf("%s\n", error.errorMessage);
+    %%%%%:   71-block  0
+call    0 never executed
+    #####:   72:        return;
+        -:   73:    }
+    #####:   74:    printf("Introduceti tipul (apa, canal, incalzire, gaz): ");
+    %%%%%:   74-block  0
+call    0 never executed
+    #####:   75:    scanf("%s", type);
+call    0 never executed
+        -:   76:
+    #####:   77:    if (addExpenseService(service, apNumber, sum, type, &error)) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   78:        printf("Cheltuiala a fost adaugata cu succes!\n");
+    %%%%%:   78-block  0
+call    0 never executed
+        -:   79:    }
+        -:   80:    else {
+    #####:   81:        printf("%s\n", error.errorMessage);
+    %%%%%:   81-block  0
+call    0 never executed
+        -:   82:    }
+        -:   83:}
+        -:   84:
+function uiModifyExpense called 0 returned 0% blocks executed 0%
+    #####:   85:void uiModifyExpense(Service* service) {
+        -:   86:    int apNumber;
+        -:   87:    double newSum;
+        -:   88:    char oldType[20], newType[20];
+        -:   89:    char input[20];
+        -:   90:    Error error;
+    #####:   91:    printf("Introduceti datele pentru cheltuiala de modificat:\n");
+    %%%%%:   91-block  0
+call    0 never executed
+    #####:   92:    printf("Introduceti numarul apartamentului: ");
+call    0 never executed
+    #####:   93:    scanf("%s", input);
+call    0 never executed
+    #####:   94:    if (uiValidateInputTypeInt(input, &error)) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   95:        apNumber = atoi(input);
+    %%%%%:   95-block  0
+        -:   96:    }
+        -:   97:    else {
+    #####:   98:        printf("%s\n", error.errorMessage);
+    %%%%%:   98-block  0
+call    0 never executed
+    #####:   99:        return;
+    %%%%%:   99-block  0
+        -:  100:    }
+        -:  101:
+    #####:  102:    printf("Introduceti tipul cheltuielii: ");
+    %%%%%:  102-block  0
+call    0 never executed
+    #####:  103:    scanf("%s", oldType);
+call    0 never executed
+        -:  104:
+    #####:  105:    printf("Introduceti noile date:\n");
+call    0 never executed
+        -:  106:
+    #####:  107:    printf("Introduceti suma: ");
+call    0 never executed
+    #####:  108:    scanf("%s", input);
+call    0 never executed
+    #####:  109:    if (uiValidateInputTypeDouble(input, &error)) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  110:        newSum = atof(input);
+    %%%%%:  110-block  0
+        -:  111:    }
+        -:  112:    else {
+    #####:  113:        printf("%s\n", error.errorMessage);
+    %%%%%:  113-block  0
+call    0 never executed
+    #####:  114:        return;
+        -:  115:    }
+    #####:  116:    printf("Introduceti tipul cheltuielii: ");
+    %%%%%:  116-block  0
+call    0 never executed
+    #####:  117:    scanf("%s", newType);
+call    0 never executed
+        -:  118:
+    #####:  119:    if (modifyExpenseService(service, apNumber, oldType, newSum, newType, &error)) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  120:        printf("Cheltuiala a fost modificata cu succes!\n");
+    %%%%%:  120-block  0
+call    0 never executed
+        -:  121:    }
+        -:  122:    else {
+    #####:  123:        printf("%s\n", error.errorMessage);
+    %%%%%:  123-block  0
+call    0 never executed
+        -:  124:    }
+        -:  125:
+        -:  126:}
+        -:  127:
+function uiDeleteExpense called 0 returned 0% blocks executed 0%
+    #####:  128:void uiDeleteExpense(Service* service) {
+        -:  129:    int apNumber;
+        -:  130:    char type[20];
+        -:  131:    char input[20];
+        -:  132:    Error error;
+    #####:  133:    printf("Introduceti numarul apartamentului: ");
+    %%%%%:  133-block  0
+call    0 never executed
+    #####:  134:    scanf("%s", input);
+call    0 never executed
+    #####:  135:    if (uiValidateInputTypeInt(input, &error)) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  136:        apNumber = atoi(input);
+    %%%%%:  136-block  0
+        -:  137:    }
+        -:  138:    else {
+    #####:  139:        printf("%s\n", error.errorMessage);
+    %%%%%:  139-block  0
+call    0 never executed
+    #####:  140:        return;
+        -:  141:    }
+    #####:  142:    printf("Introduceti tipul cheltuielii: ");
+    %%%%%:  142-block  0
+call    0 never executed
+    #####:  143:    scanf("%s", type);
+call    0 never executed
+    #####:  144:    if (deleteExpenseService(service, apNumber, type, &error)) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  145:        printf("Cheltuiala a fost stearsa cu succes!\n");
+    %%%%%:  145-block  0
+call    0 never executed
+        -:  146:    }
+        -:  147:    else {
+    #####:  148:        printf("%s\n", error.errorMessage);
+    %%%%%:  148-block  0
+call    0 never executed
+        -:  149:    }
+        -:  150:}
+        -:  151:
+function uiPrintList called 0 returned 0% blocks executed 0%
+    #####:  152:void uiPrintList(Service* service, List* expenses) {
+    #####:  153:    if (getLength(expenses) == 0) {
+    %%%%%:  153-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  154:        printf("Nu exista nicio cheltuiala!\n");
+    %%%%%:  154-block  0
+call    0 never executed
+        -:  155:    }
+        -:  156:    else {
+    #####:  157:        printf("Lista de cheltuieli este:\n");
+    %%%%%:  157-block  0
+call    0 never executed
+    #####:  158:        for (int i = 0; i < getLength(expenses); i++) {
+    %%%%%:  158-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed (fallthrough)
+    #####:  159:            printf("nr. ap.: %d, suma: %.2f, tip: %s\n", getApNumber(get(expenses, i)), getSum(get(expenses, i)), getType(get(expenses, i)));
+    %%%%%:  159-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+        -:  160:        }
+        -:  161:    }
+    #####:  162:}
+        -:  163:
+function uiFilterByApartment called 0 returned 0% blocks executed 0%
+    #####:  164:void uiFilterByApartment(Service* service) {
+        -:  165:    int apNumber;
+        -:  166:    char input[20];
+        -:  167:    Error error;
+    #####:  168:    printf("Introduceti numarul apartamentului: ");
+    %%%%%:  168-block  0
+call    0 never executed
+    #####:  169:    scanf("%s", input);
+call    0 never executed
+    #####:  170:    if (uiValidateInputTypeInt(input, &error)) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  171:        apNumber = atoi(input);
+    %%%%%:  171-block  0
+        -:  172:    }
+        -:  173:    else {
+    #####:  174:        printf("%s\n", error.errorMessage);
+    %%%%%:  174-block  0
+call    0 never executed
+    #####:  175:        return;
+        -:  176:    }
+    #####:  177:    List* filteredExpenses = filterExpensesByAp(service, apNumber);
+    %%%%%:  177-block  0
+call    0 never executed
+    #####:  178:    uiPrintList(service, filteredExpenses);
+call    0 never executed
+    #####:  179:    destroyList(filteredExpenses);
+call    0 never executed
+        -:  180:}
+        -:  181:
+function uiFilterBySum called 0 returned 0% blocks executed 0%
+    #####:  182:void uiFilterBySum(Service* service) {
+        -:  183:    double sum;
+        -:  184:    char input[20];
+        -:  185:    Error error;
+    #####:  186:    printf("Introduceti suma: ");
+    %%%%%:  186-block  0
+call    0 never executed
+    #####:  187:    scanf("%s", input);
+call    0 never executed
+    #####:  188:    if (uiValidateInputTypeDouble(input, &error)) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  189:        sum = atof(input);
+    %%%%%:  189-block  0
+        -:  190:    }
+        -:  191:    else {
+    #####:  192:        printf("%s\n", error.errorMessage);
+    %%%%%:  192-block  0
+call    0 never executed
+    #####:  193:        return;
+        -:  194:    }
+        -:  195:
+    #####:  196:    List* filteredExpenses = filterExpensesBySum(service, sum);
+    %%%%%:  196-block  0
+call    0 never executed
+    #####:  197:    uiPrintList(service, filteredExpenses);
+call    0 never executed
+    #####:  198:    destroyList(filteredExpenses);
+call    0 never executed
+        -:  199:}
+        -:  200:
+function uiFilterByType called 0 returned 0% blocks executed 0%
+    #####:  201:void uiFilterByType(Service* service) {
+        -:  202:    char type[20];
+    #####:  203:    printf("Introduceti tipul cheltuielii: ");
+    %%%%%:  203-block  0
+call    0 never executed
+    #####:  204:    scanf("%s", type);
+call    0 never executed
+        -:  205:
+    #####:  206:    List* filteredExpenses = filterExpensesByType(service, type);
+call    0 never executed
+    #####:  207:    uiPrintList(service, filteredExpenses);
+call    0 never executed
+    #####:  208:    destroyList(filteredExpenses);
+call    0 never executed
+    #####:  209:}
+        -:  210:
+function uiFilter called 0 returned 0% blocks executed 0%
+    #####:  211:void uiFilter(Service* service) {
+        -:  212:    int choice;
+    #####:  213:    printf("Alegeti criteriul de filtrare:\n");
+    %%%%%:  213-block  0
+call    0 never executed
+    #####:  214:    printf("1. Filtrare dupa apartament\n");
+call    0 never executed
+    #####:  215:    printf("2. Filtrare dupa suma\n");
+call    0 never executed
+    #####:  216:    printf("3. Filtrare dupa tip\n");
+call    0 never executed
+    #####:  217:    printf("Optiune: ");
+call    0 never executed
+    #####:  218:    scanf("%d", &choice);
+call    0 never executed
+        -:  219:
+    #####:  220:    switch (choice) {
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  221:        case 1:
+    #####:  222:            uiFilterByApartment(service);
+    %%%%%:  222-block  0
+call    0 never executed
+    #####:  223:        break;
+    #####:  224:        case 2:
+    #####:  225:            uiFilterBySum(service);
+    %%%%%:  225-block  0
+call    0 never executed
+    #####:  226:            break;
+    #####:  227:        case 3:
+    #####:  228:            uiFilterByType(service);
+    %%%%%:  228-block  0
+call    0 never executed
+    #####:  229:            break;
+    #####:  230:        default:
+    #####:  231:            printf("Optiune invalida!\n");
+    %%%%%:  231-block  0
+call    0 never executed
+    #####:  232:            break;
+        -:  233:    }
+    #####:  234:}
+        -:  235:
+function uiSort called 0 returned 0% blocks executed 0%
+    #####:  236:void uiSort(Service* service) {
+        -:  237:    int choice, criteria;
+        -:  238:    bool ascending;
+        -:  239:
+    #####:  240:    printf("Cum vrei sa sortezi cheltuielile?\n");
+    %%%%%:  240-block  0
+call    0 never executed
+    #####:  241:    printf("1. Dupa suma\n");
+call    0 never executed
+    #####:  242:    printf("2. Dupa tip\n");
+call    0 never executed
+    #####:  243:    printf("Alege o optiune: ");
+call    0 never executed
+    #####:  244:    scanf("%d", &criteria);
+call    0 never executed
+        -:  245:
+    #####:  246:    printf("Cum vrei sa fie ordonat?\n");
+call    0 never executed
+    #####:  247:    printf("1. Crescator\n");
+call    0 never executed
+    #####:  248:    printf("2. Descrescator\n");
+call    0 never executed
+    #####:  249:    printf("Alege o optiune: ");
+call    0 never executed
+    #####:  250:    scanf("%d", &choice);
+call    0 never executed
+    #####:  251:    ascending = (choice == 1);
+        -:  252:
+    #####:  253:    List* sortedExpenses = sortExpenses(service, criteria, ascending);
+call    0 never executed
+    #####:  254:    uiPrintList(service, sortedExpenses);
+call    0 never executed
+    #####:  255:    destroyList(sortedExpenses);
+call    0 never executed
+    #####:  256:}
+        -:  257:
+function uiPrintExpenses called 0 returned 0% blocks executed 0%
+    #####:  258:void uiPrintExpenses(Service* service) {
+    #####:  259:    List* expenses = getExpensesService(service);
+    %%%%%:  259-block  0
+call    0 never executed
+        -:  260:
+    #####:  261:    if (getLength(expenses) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  262:        printf("Nu exista nicio cheltuiala!\n");
+    %%%%%:  262-block  0
+call    0 never executed
+        -:  263:    }
+        -:  264:    else {
+    #####:  265:        printf("Lista de cheltuieli este:\n");
+    %%%%%:  265-block  0
+call    0 never executed
+    #####:  266:        for (int i = 0; i < getLength(expenses); i++) {
+    %%%%%:  266-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed (fallthrough)
+    #####:  267:            printf("nr. ap.: %d, suma: %.2f, tip: %s\n", getApNumber(get(expenses, i)), getSum(get(expenses, i)), getType(get(expenses, i)));
+    %%%%%:  267-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+        -:  268:        }
+        -:  269:    }
+    #####:  270:    destroyList(expenses);
+    %%%%%:  270-block  0
+call    0 never executed
+    #####:  271:}
+        -:  272:
+function runApp called 1 returned 100% blocks executed 39%
+        1:  273:void runApp() {
+        1:  274:    Service* service = createService();
+        1:  274-block  0
+call    0 returned 1
+        -:  275:    char input[20];
+        -:  276:    int cmd;
+        -:  277:    do {
+        1:  278:        uiPrintMenu();
+        1:  278-block  0
+call    0 returned 1
+        1:  279:        printf("Introduceti comanda: ");
+call    0 returned 1
+        1:  280:        scanf("%s", &input);
+call    0 returned 1
+        1:  281:        cmd = atoi(input);
+       1*:  282:        if (input[0] != '0' && cmd == 0) cmd = -1;
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  282-block  0
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    %%%%%:  282-block  1
+        1:  283:        switch (cmd) {
+        1:  283-block  0
+branch  0 taken 0
+branch  1 taken 0
+branch  2 taken 0
+branch  3 taken 0
+branch  4 taken 0
+branch  5 taken 0
+branch  6 taken 0
+branch  7 taken 1
+branch  8 taken 0
+    #####:  284:            case 1:
+    #####:  285:                uiAddExpense(service);
+    %%%%%:  285-block  0
+call    0 never executed
+    #####:  286:                break;
+    #####:  287:            case 2:
+    #####:  288:                uiModifyExpense(service);
+    %%%%%:  288-block  0
+call    0 never executed
+    #####:  289:                break;
+    #####:  290:            case 3:
+    #####:  291:                uiDeleteExpense(service);
+    %%%%%:  291-block  0
+call    0 never executed
+    #####:  292:                break;
+    #####:  293:            case 4:
+    #####:  294:                uiFilter(service);
+    %%%%%:  294-block  0
+call    0 never executed
+    #####:  295:                break;
+    #####:  296:            case 5:
+    #####:  297:                uiSort(service);
+    %%%%%:  297-block  0
+call    0 never executed
+    #####:  298:                break;
+    #####:  299:            case 6:
+    #####:  300:                uiPrintExpenses(service);
+    %%%%%:  300-block  0
+call    0 never executed
+    #####:  301:                break;
+    #####:  302:            case 7:
+    #####:  303:                uiUndo(service);
+    %%%%%:  303-block  0
+call    0 never executed
+    #####:  304:                break;
+        1:  305:            case 0:
+        1:  306:                break;
+        1:  306-block  0
+    #####:  307:            default:
+    #####:  308:                printf("Comanda invalida!\n");
+    %%%%%:  308-block  0
+call    0 never executed
+        -:  309:        }
+        1:  310:    } while (cmd != 0);
+        1:  310-block  0
+branch  0 taken 0
+branch  1 taken 1 (fallthrough)
+        1:  311:    destroyService(service);
+        1:  311-block  0
+call    0 returned 1
+        1:  312:    printf("Gata!!!!!!!!\n");
+call    0 returned 1
+        1:  313:}

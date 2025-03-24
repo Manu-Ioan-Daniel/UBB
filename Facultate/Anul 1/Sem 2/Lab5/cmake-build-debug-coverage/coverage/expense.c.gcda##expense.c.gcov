@@ -1,0 +1,92 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/domain/expense.c
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/domain/expense.c.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/domain/expense.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Andra Mateș on 15.03.2025.
+        -:    3://
+        -:    4:#include "expense.h"
+        -:    5:#include <stdlib.h>
+        -:    6:#include <stdio.h>
+        -:    7:#include <string.h>
+        -:    8:
+function createExpense called 57 returned 100% blocks executed 75%
+       57:    9:Expense* createExpense(int apNumber, double sum, char* type) {
+       57:   10:    Expense* expense = (Expense*)malloc(sizeof(Expense));
+      57*:   11:    if (expense == NULL) return NULL;
+       57:   11-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 57
+    %%%%%:   11-block  1
+        -:   12:
+       57:   13:    expense->apNumber = apNumber;
+       57:   14:    expense->sum = sum;
+        -:   15:
+       57:   16:    expense->type = (char*)malloc(sizeof(char)*strlen(type) + 1);
+       57:   17:    strcpy(expense->type, type);
+        -:   18:
+       57:   19:    return expense;
+       57:   19-block  0
+        -:   20:}
+        -:   21:
+function destroyExpense called 230 returned 100% blocks executed 75%
+      230:   22:void destroyExpense(Expense* expense) {
+     230*:   23:    if (expense == NULL) return;
+      230:   23-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 230
+    %%%%%:   23-block  1
+      230:   24:    free(expense->type);
+      230:   25:    expense->type = NULL;
+      230:   26:    free(expense);
+      230:   27:    expense = NULL;
+      230:   27-block  0
+        -:   28:}
+        -:   29:
+function copyExpense called 173 returned 100% blocks executed 62%
+      173:   30:Expense* copyExpense(Expense* expense) {
+     173*:   31:    if (expense == NULL) return NULL;
+      173:   31-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 173
+    %%%%%:   31-block  1
+      173:   32:    Expense* newExpense = (Expense*)malloc(sizeof(Expense));
+     173*:   33:    if (newExpense == NULL) return NULL;
+      173:   33-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 173
+    %%%%%:   33-block  1
+        -:   34:
+      173:   35:    newExpense->type = (char*)malloc(sizeof(char)*strlen(expense->type) + 1);
+      173:   36:    if (newExpense->type == NULL) {
+      173:   36-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 173
+    #####:   37:        free(newExpense);
+    #####:   38:        return NULL;
+    %%%%%:   38-block  0
+        -:   39:    }
+      173:   40:    strcpy(newExpense->type, expense->type);
+        -:   41:
+      173:   42:    newExpense->apNumber = expense->apNumber;
+      173:   43:    newExpense->sum = expense->sum;
+        -:   44:
+      173:   45:    return newExpense;
+      173:   45-block  0
+        -:   46:}
+        -:   47:
+function getApNumber called 70 returned 100% blocks executed 100%
+       70:   48:int getApNumber(Expense* expense) {
+       70:   49:    return expense->apNumber;
+       70:   49-block  0
+        -:   50:}
+function getSum called 112 returned 100% blocks executed 100%
+      112:   51:double getSum(Expense* expense) {
+      112:   52:    return expense->sum;
+      112:   52-block  0
+        -:   53:}
+function getType called 98 returned 100% blocks executed 100%
+       98:   54:char* getType(Expense* expense) {
+       98:   55:    return expense->type;
+       98:   55-block  0
+        -:   56:}

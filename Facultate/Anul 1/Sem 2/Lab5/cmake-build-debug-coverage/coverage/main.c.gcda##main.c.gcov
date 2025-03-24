@@ -1,0 +1,16 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/main.c
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/main.c.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/main.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "presentation/ui.h"
+        -:    2:#include "testing/tests.h"
+        -:    3:
+function main called 1 returned 100% blocks executed 100%
+        1:    4:int main(void) {
+        1:    5:    runTests();
+        1:    5-block  0
+call    0 returned 1
+        1:    6:    runApp();
+call    0 returned 1
+        1:    7:    return 0;
+        -:    8:}

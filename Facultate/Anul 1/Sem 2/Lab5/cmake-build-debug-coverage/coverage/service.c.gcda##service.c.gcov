@@ -1,0 +1,389 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/business/service.c
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/business/service.c.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/business/service.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Andra Mateș on 15.03.2025.
+        -:    3://
+        -:    4:#define CAPACITY 10
+        -:    5:#include "service.h"
+        -:    6:
+        -:    7:#include <stdio.h>
+        -:    8:
+        -:    9:#include "../validation/validator.h"
+        -:   10:
+        -:   11:#include <stdlib.h>
+        -:   12:#include <string.h>
+        -:   13:
+function createService called 10 returned 100% blocks executed 100%
+       10:   14:Service* createService() {
+       10:   15:    Service* service = (Service*)malloc(sizeof(Service));
+       10:   16:    service->repo = createRepo();
+       10:   16-block  0
+call    0 returned 10
+       10:   17:    service->undo_list=createList(CAPACITY,destroyList,copyList);
+call    0 returned 10
+       10:   18:    return service;
+        -:   19:}
+        -:   20:
+function destroyService called 10 returned 100% blocks executed 89%
+       10:   21:void destroyService(Service* service) {
+      10*:   22:    if (service == NULL) return;
+       10:   22-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 10
+    %%%%%:   22-block  1
+       10:   23:    if (service->repo != NULL) {
+       10:   23-block  0
+branch  0 taken 10 (fallthrough)
+branch  1 taken 0
+       10:   24:        destroyRepo(service->repo);
+       10:   24-block  0
+call    0 returned 10
+       10:   25:        service->repo = NULL;
+        -:   26:    }
+       10:   27:    if (service->undo_list != NULL) {
+       10:   27-block  0
+branch  0 taken 10 (fallthrough)
+branch  1 taken 0
+       10:   28:        destroyList(service->undo_list);
+       10:   28-block  0
+call    0 returned 10
+        -:   29:    }
+       10:   30:    free(service);
+       10:   30-block  0
+        -:   31:}
+        -:   32:
+function addExpenseService called 37 returned 100% blocks executed 100%
+       37:   33:bool addExpenseService(Service* service, int apNumber, double sum, char* type, Error* error) {
+       37:   34:    Expense* expense = createExpense(apNumber, sum, type);
+       37:   34-block  0
+call    0 returned 37
+        -:   35:
+       37:   36:    if (!validateExpense(expense, error)) {
+call    0 returned 37
+branch  1 taken 1 (fallthrough)
+branch  2 taken 36
+        1:   37:        destroyExpense(expense);
+        1:   37-block  0
+call    0 returned 1
+        1:   38:        return false;
+        -:   39:    }
+       36:   40:    List* list = copyList(service->repo->expenses);
+       36:   40-block  0
+call    0 returned 36
+       36:   41:    add(service->undo_list, list);
+call    0 returned 36
+       36:   42:    bool response = addExpense(service->repo, expense, error);
+call    0 returned 36
+       36:   43:    if (!response) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 35
+        1:   44:        delete(service->undo_list,service->undo_list->length-1);
+        1:   44-block  0
+call    0 returned 1
+        -:   45:    }
+       36:   46:    destroyExpense(expense);
+       36:   46-block  0
+call    0 returned 36
+       36:   47:    return response;
+        -:   48:}
+        -:   49:
+function modifyExpenseService called 4 returned 100% blocks executed 100%
+        4:   50:bool modifyExpenseService(Service* service, int oldApNumber, char* oldType, double newSum, char* newType, Error* error) {
+        4:   51:    Expense* newExpense = createExpense(oldApNumber, newSum, newType);
+        4:   51-block  0
+call    0 returned 4
+        -:   52:
+        4:   53:    if (!validateExpense(newExpense, error)) {
+call    0 returned 4
+branch  1 taken 1 (fallthrough)
+branch  2 taken 3
+        1:   54:        destroyExpense(newExpense);
+        1:   54-block  0
+call    0 returned 1
+        1:   55:        return false;
+        -:   56:    }
+        3:   57:    List* list = copyList(service->repo->expenses);
+        3:   57-block  0
+call    0 returned 3
+        3:   58:    add(service->undo_list, list);
+call    0 returned 3
+        3:   59:    bool response = modifyExpense(service->repo, newExpense, oldApNumber, oldType, error);
+call    0 returned 3
+        3:   60:    if (!response) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   61:        delete(service->undo_list,service->undo_list->length-1);
+        1:   61-block  0
+call    0 returned 1
+        -:   62:    }
+        3:   63:    destroyExpense(newExpense);
+        3:   63-block  0
+call    0 returned 3
+        3:   64:    return response;
+        -:   65:}
+        -:   66:
+function deleteExpenseService called 3 returned 100% blocks executed 100%
+        3:   67:bool deleteExpenseService(Service* service, int apNumber, char* type, Error* error) {
+        3:   68:    Expense* expense = createExpense(apNumber, 1, type);
+        3:   68-block  0
+call    0 returned 3
+        -:   69:
+        3:   70:    if (!validateExpense(expense, error)) {
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+        1:   71:        destroyExpense(expense);
+        1:   71-block  0
+call    0 returned 1
+        1:   72:        return false;
+        -:   73:    }
+        2:   74:    List* list = copyList(service->repo->expenses);
+        2:   74-block  0
+call    0 returned 2
+        2:   75:    add(service->undo_list, list);
+call    0 returned 2
+        2:   76:    bool response = deleteExpense(service->repo, expense, error);
+call    0 returned 2
+        2:   77:    if (!response) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   78:        delete(service->undo_list,service->undo_list->length-1);
+        1:   78-block  0
+call    0 returned 1
+        -:   79:    }
+        2:   80:    destroyExpense(expense);
+        2:   80-block  0
+call    0 returned 2
+        -:   81:
+        2:   82:    return response;
+        -:   83:}
+        -:   84:
+function filterExpensesByAp called 3 returned 100% blocks executed 100%
+        3:   85:List* filterExpensesByAp(Service* service, int apNumber) {
+        3:   86:    List* filteredExpenses = createList(CAPACITY, (DestroyFunc) destroyExpense, (CopyFunc) copyExpense);
+        3:   86-block  0
+call    0 returned 3
+       15:   87:    for (int i = 0; i < getLength(service->repo->expenses); i++) {
+       12:   87-block  0
+       15:   87-block  1
+call    0 returned 15
+branch  1 taken 12
+branch  2 taken 3 (fallthrough)
+        -:   88:        // Expense* expense = get(service->repo->expenses, i);
+       12:   89:        Expense* expense = service->repo->expenses->elems[i];
+       12:   90:        Expense* copy = copyExpense(expense);
+       12:   90-block  0
+call    0 returned 12
+       12:   91:        if (getApNumber(copy) == apNumber) {
+call    0 returned 12
+branch  1 taken 4 (fallthrough)
+branch  2 taken 8
+        4:   92:            add(filteredExpenses, copy);
+        4:   92-block  0
+call    0 returned 4
+        -:   93:        }
+        -:   94:        else {
+        8:   95:            destroyExpense(copy);
+        8:   95-block  0
+call    0 returned 8
+        -:   96:        }
+        -:   97:    }
+        3:   98:    return filteredExpenses;
+        3:   98-block  0
+        -:   99:}
+        -:  100:
+function filterExpensesBySum called 3 returned 100% blocks executed 100%
+        3:  101:List* filterExpensesBySum(Service* service, double sum) {
+        3:  102:    List* filteredExpenses = createList(CAPACITY, (DestroyFunc) destroyExpense, (CopyFunc) copyExpense);
+        3:  102-block  0
+call    0 returned 3
+       15:  103:    for (int i = 0; i < getLength(service->repo->expenses); i++) {
+       12:  103-block  0
+       15:  103-block  1
+call    0 returned 15
+branch  1 taken 12
+branch  2 taken 3 (fallthrough)
+        -:  104:        // Expense* expense = get(service->repo->expenses, i);
+       12:  105:        Expense* expense = service->repo->expenses->elems[i];
+       12:  106:        Expense* copy = copyExpense(expense);
+       12:  106-block  0
+call    0 returned 12
+       12:  107:        if (getSum(copy) == sum) {
+call    0 returned 12
+branch  1 taken 3 (fallthrough)
+branch  2 taken 9
+        3:  108:            add(filteredExpenses, copy);
+        3:  108-block  0
+call    0 returned 3
+        -:  109:        }
+        -:  110:        else {
+        9:  111:            destroyExpense(copy);
+        9:  111-block  0
+call    0 returned 9
+        -:  112:        }
+        -:  113:    }
+        3:  114:    return filteredExpenses;
+        3:  114-block  0
+        -:  115:}
+        -:  116:
+function filterExpensesByType called 3 returned 100% blocks executed 100%
+        3:  117:List* filterExpensesByType(Service* service, char* type) {
+        3:  118:    List* filteredExpenses = createList(CAPACITY, (DestroyFunc) destroyExpense, (CopyFunc) copyExpense);
+        3:  118-block  0
+call    0 returned 3
+       15:  119:    for (int i = 0; i < getLength(service->repo->expenses); i++) {
+       12:  119-block  0
+       15:  119-block  1
+call    0 returned 15
+branch  1 taken 12
+branch  2 taken 3 (fallthrough)
+        -:  120:        // Expense* expense = get(service->repo->expenses, i);
+       12:  121:        Expense* expense = service->repo->expenses->elems[i];
+       12:  122:        Expense* copy = copyExpense(expense);
+       12:  122-block  0
+call    0 returned 12
+       12:  123:        if (strcmp(getType(copy), type) == 0) {
+call    0 returned 12
+branch  1 taken 2 (fallthrough)
+branch  2 taken 10
+        2:  124:            add(filteredExpenses, copy);
+        2:  124-block  0
+call    0 returned 2
+        -:  125:        }
+        -:  126:        else {
+       10:  127:            destroyExpense(copy);
+       10:  127-block  0
+call    0 returned 10
+        -:  128:        }
+        -:  129:    }
+        3:  130:    return filteredExpenses;
+        3:  130-block  0
+        -:  131:}
+        -:  132:
+function compareBySumAsc called 5 returned 100% blocks executed 100%
+        5:  133:int compareBySumAsc(const void* a, const void* b) {
+        5:  134:    Expense* expenseA = *(Expense**)a;
+        5:  135:    Expense* expenseB = *(Expense**)b;
+        5:  136:    return (getSum(expenseA) > getSum(expenseB)) - (getSum(expenseA) < getSum(expenseB));
+        5:  136-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+        -:  137:}
+        -:  138:
+function compareBySumDesc called 5 returned 100% blocks executed 100%
+        5:  139:int compareBySumDesc(const void* a, const void* b) {
+        5:  140:    Expense* expenseA = *(Expense**)a;
+        5:  141:    Expense* expenseB = *(Expense**)b;
+        5:  142:    return (getSum(expenseB) > getSum(expenseA)) - (getSum(expenseB) < getSum(expenseA));
+        5:  142-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+        -:  143:}
+        -:  144:
+function compareByTypeAsc called 5 returned 100% blocks executed 100%
+        5:  145:int compareByTypeAsc(const void* a, const void* b) {
+        5:  146:    Expense* expenseA = *(Expense**)a;
+        5:  147:    Expense* expenseB = *(Expense**)b;
+        5:  148:    return strcmp(getType(expenseA), getType(expenseB));
+        5:  148-block  0
+call    0 returned 5
+call    1 returned 5
+        -:  149:}
+        -:  150:
+function compareByTypeDesc called 5 returned 100% blocks executed 100%
+        5:  151:int compareByTypeDesc(const void* a, const void* b) {
+        5:  152:    Expense* expenseA = *(Expense**)a;
+        5:  153:    Expense* expenseB = *(Expense**)b;
+        5:  154:    return strcmp(getType(expenseB), getType(expenseA));
+        5:  154-block  0
+call    0 returned 5
+call    1 returned 5
+        -:  155:}
+        -:  156:
+function sortExpenses called 4 returned 100% blocks executed 100%
+        4:  157:List* sortExpenses(Service* service, int criteria, bool ascending) {
+        4:  158:    List* expenses = copyList(service->repo->expenses);
+        4:  158-block  0
+call    0 returned 4
+        4:  159:    if (criteria == 1) { //pt suma
+branch  0 taken 2 (fallthrough)
+branch  1 taken 2
+        2:  160:        if (ascending) {
+        2:  160-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  161:            qsort(expenses->elems, getLength(expenses), sizeof(Expense*), compareBySumAsc);
+        1:  161-block  0
+call    0 returned 1
+call    1 returned 1
+        -:  162:        }
+        -:  163:        else {
+        1:  164:            qsort(expenses->elems, getLength(expenses), sizeof(Expense*), compareBySumDesc);
+        1:  164-block  0
+call    0 returned 1
+call    1 returned 1
+        -:  165:        }
+        -:  166:    }
+        2:  167:    else if (criteria == 2) {
+        2:  167-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  168:        if (ascending) {
+        2:  168-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  169:            qsort(expenses->elems, getLength(expenses), sizeof(Expense*), compareByTypeAsc);
+        1:  169-block  0
+call    0 returned 1
+call    1 returned 1
+        -:  170:        }
+        -:  171:        else {
+        1:  172:            qsort(expenses->elems, getLength(expenses), sizeof(Expense*), compareByTypeDesc);
+        1:  172-block  0
+call    0 returned 1
+call    1 returned 1
+        -:  173:        }
+        -:  174:    }
+        4:  175:    return expenses;
+        4:  175-block  0
+        -:  176:}
+function undo called 5 returned 100% blocks executed 100%
+        5:  177:bool undo(Service* service) {
+        5:  178:    if (service->undo_list->length==0) {
+        5:  178-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 4
+        1:  179:        return false;
+        1:  179-block  0
+        -:  180:    }
+        4:  181:    destroyList(service->repo->expenses);
+        4:  181-block  0
+call    0 returned 4
+        4:  182:    List* previousState=service->undo_list->elems[getLength(service->undo_list)-1];
+call    0 returned 4
+        4:  183:    service->repo->expenses=copyList(previousState);
+call    0 returned 4
+        4:  184:    delete(service->undo_list,getLength(service->undo_list)-1);
+call    0 returned 4
+call    1 returned 4
+        4:  185:    return true;
+        -:  186:}
+        -:  187:
+function getRepo called 3 returned 100% blocks executed 100%
+        3:  188:Repo* getRepo(Service* service) {
+        3:  189:    return service->repo;
+        3:  189-block  0
+        -:  190:}
+        -:  191:
+function getExpensesService called 1 returned 100% blocks executed 100%
+        1:  192:List* getExpensesService(Service* service) {
+        1:  193:    return getExpenses(service->repo);
+        1:  193-block  0
+call    0 returned 1
+        -:  194:}

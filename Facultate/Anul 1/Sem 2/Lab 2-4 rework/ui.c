@@ -4,7 +4,7 @@
 
 
 void run() {
-    char optiune[100];
+    char optiune[100]="";
     Service* service=createService();
     while (optiune[0]!='0' || strlen(optiune)>2) {
         printMenu();
@@ -40,6 +40,7 @@ void run() {
                 break;
         }
     }
+    destroyService(service);
 }
 void printMenu() {
     printf("Meniu:\n");

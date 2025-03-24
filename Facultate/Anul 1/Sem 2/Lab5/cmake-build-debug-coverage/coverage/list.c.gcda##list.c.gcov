@@ -1,0 +1,210 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/utils/list.c
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/utils/list.c.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/utils/list.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Andra Mateș on 15.03.2025.
+        -:    3://
+        -:    4:#include "list.h"
+        -:    5:#include <stdlib.h>
+        -:    6:#include <stdio.h>
+        -:    7:#include <stdbool.h>
+        -:    8:
+        -:    9:
+function createList called 82 returned 100% blocks executed 67%
+       82:   10:List* createList(int capacity, DestroyFunc destroyFunc, CopyFunc copyFunc) {
+       82:   11:    List* list = (List*)malloc(sizeof(List));
+      82*:   12:    if (list == NULL) return NULL;
+       82:   12-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 82
+    %%%%%:   12-block  1
+        -:   13:
+       82:   14:    list->length = 0;
+       82:   15:    list->capacity = capacity;
+       82:   16:    list->destroyFunc = destroyFunc;
+       82:   17:    list->copyFunc = copyFunc;
+        -:   18:
+       82:   19:    list->elems = (TElem*)malloc(sizeof(TElem) * capacity);
+       82:   20:    if (list->elems == NULL) {
+       82:   20-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 82
+    #####:   21:        free(list);
+    #####:   22:        return NULL;
+    %%%%%:   22-block  0
+        -:   23:    }
+       82:   24:    return list;
+       82:   24-block  0
+        -:   25:}
+        -:   26:
+function destroyList called 82 returned 100% blocks executed 92%
+       82:   27:void destroyList(List* list) {
+      82*:   28:    if (list == NULL) return;
+       82:   28-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 82
+    %%%%%:   28-block  1
+       82:   29:    if (list->elems != NULL) {
+       82:   29-block  0
+branch  0 taken 82 (fallthrough)
+branch  1 taken 0
+      258:   30:        for (int i = 0; i < list->length; i++) {
+       82:   30-block  0
+      176:   30-block  1
+      258:   30-block  2
+branch  0 taken 176
+branch  1 taken 82 (fallthrough)
+      176:   31:            if (list->elems[i] != NULL) {
+      176:   31-block  0
+branch  0 taken 176 (fallthrough)
+branch  1 taken 0
+      176:   32:                list->destroyFunc(list->elems[i]);
+      176:   32-block  0
+call    0 returned 176
+      176:   33:                list->elems[i] = NULL;
+        -:   34:            }
+        -:   35:        }
+       82:   36:        free(list->elems);
+       82:   37:        list->elems = NULL;
+       82:   37-block  0
+        -:   38:    }
+       82:   39:    free(list);
+       82:   39-block  0
+        -:   40:}
+        -:   41:
+function resize called 1 returned 100% blocks executed 78%
+        1:   42:bool resize(List* list) {
+       1*:   43:    if (list == NULL) return false;
+        1:   43-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   43-block  1
+        1:   44:    list->capacity *= 2;
+        -:   45:
+        1:   46:    TElem* aux = (TElem*)malloc(sizeof(TElem) * list->capacity);
+       1*:   47:    if (aux == NULL) return false;
+        1:   47-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   47-block  1
+        -:   48:
+        3:   49:    for (int i = 0; i < list->length; i++) aux[i] = list->elems[i];
+        1:   49-block  0
+        2:   49-block  1
+        3:   49-block  2
+branch  0 taken 2
+branch  1 taken 1 (fallthrough)
+        1:   50:    free(list->elems);
+        1:   51:    list->elems = aux;
+        1:   52:    return true;
+        1:   52-block  0
+        -:   53:}
+        -:   54:
+function add called 91 returned 100% blocks executed 75%
+       91:   55:void add(List* list, TElem elem) {
+      91*:   56:    if (list == NULL) return;
+       91:   56-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 91
+    %%%%%:   56-block  1
+      91*:   57:    if (list->elems == NULL) return;
+       91:   57-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 91
+    %%%%%:   57-block  1
+       91:   58:    if (list->length >= list->capacity) resize(list);
+       91:   58-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 90
+        1:   58-block  1
+call    2 returned 1
+       91:   59:    list->elems[list->length++] = elem;
+       91:   59-block  0
+        -:   60:}
+        -:   61:
+function delete called 10 returned 100% blocks executed 79%
+       10:   62:void delete(List* list, int pos) {
+      10*:   63:    if (list == NULL) return;
+       10:   63-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 10
+    %%%%%:   63-block  1
+      10*:   64:    if (list->elems == NULL) return;
+       10:   64-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 10
+    %%%%%:   64-block  1
+      10*:   65:    if (pos < 0 || pos >= list->length) return;
+       10:   65-block  0
+branch  0 taken 10 (fallthrough)
+branch  1 taken 0
+       10:   65-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 10
+    %%%%%:   65-block  2
+       10:   66:    list->destroyFunc(get(list, pos));
+       10:   66-block  0
+call    0 returned 10
+call    1 returned 10
+       14:   67:    for (int i = pos; i <list->length - 1; i++) list->elems[i] = list->elems[i + 1];
+        4:   67-block  0
+       14:   67-block  1
+branch  0 taken 4
+branch  1 taken 10 (fallthrough)
+       10:   68:    list->length--;
+       10:   68-block  0
+        -:   69:}
+        -:   70:
+function getLength called 261 returned 100% blocks executed 75%
+      261:   71:int getLength(List* list) {
+     261*:   72:    if (list == NULL) return -1;
+      261:   72-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 261
+    %%%%%:   72-block  1
+      261:   73:    return list->length;
+      261:   73-block  0
+        -:   74:}
+        -:   75:
+function getCapacity called 106 returned 100% blocks executed 75%
+      106:   76:int getCapacity(List* list) {
+     106*:   77:    if (list == NULL) return -1;
+      106:   77-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 106
+    %%%%%:   77-block  1
+      106:   78:    return list->capacity;
+      106:   78-block  0
+        -:   79:}
+        -:   80:
+function get called 118 returned 100% blocks executed 100%
+      118:   81:TElem get(List* list, int pos) {
+      118:   82:    return list->elems[pos];
+      118:   82-block  0
+        -:   83:}
+        -:   84:
+function copyList called 51 returned 100% blocks executed 92%
+       51:   85:List* copyList(List* list) {
+      51*:   86:    if (list == NULL) return NULL;
+       51:   86-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 51
+    %%%%%:   86-block  1
+       51:   87:    List* copy = createList(getCapacity(list), list->destroyFunc, list->copyFunc);
+       51:   87-block  0
+call    0 returned 51
+call    1 returned 51
+       51:   88:    copy->length = getLength(list);
+call    0 returned 51
+       51:   89:    copy->capacity = getCapacity(list);
+call    0 returned 51
+      146:   90:    for (int i = 0; i < copy->length; i++) copy->elems[i] = list->copyFunc(list->elems[i]);
+       95:   90-block  0
+call    0 returned 95
+      146:   90-block  1
+branch  1 taken 95
+branch  2 taken 51 (fallthrough)
+       51:   91:    return copy;
+       51:   91-block  0
+        -:   92:}

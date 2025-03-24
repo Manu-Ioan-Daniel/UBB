@@ -1,0 +1,65 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/validation/validator.c
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/validation/validator.c.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/validation/validator.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Andra Mateș on 09.03.2025.
+        -:    3://
+        -:    4:#include "validator.h"
+        -:    5:#include <string.h>
+        -:    6:#include <stdbool.h>
+        -:    7:#include "../domain/expense.h"
+        -:    8:#include "../errors/error.h"
+        -:    9:
+function validateExpense called 48 returned 100% blocks executed 100%
+       48:   10:bool validateExpense(Expense* expense, Error *error) {
+       48:   11:    error->errorMessage[0] = '\0';
+       48:   12:    if (getApNumber(expense) < 0) {
+       48:   12-block  0
+call    0 returned 48
+branch  1 taken 3 (fallthrough)
+branch  2 taken 45
+        3:   13:        setError(error, "eroare de validare: nr apartament invalid!\n");
+        3:   13-block  0
+call    0 returned 3
+        -:   14:    }
+       48:   15:    if (getSum(expense)< 0) {
+       48:   15-block  0
+call    0 returned 48
+branch  1 taken 1 (fallthrough)
+branch  2 taken 47
+        1:   16:        setError(error, "eroare de validare: suma invalida!\n");
+        1:   16-block  0
+call    0 returned 1
+        -:   17:    }
+       48:   18:    char *type = getType(expense);
+       48:   18-block  0
+call    0 returned 48
+       48:   19:    if (strcmp(type, "apa") != 0 && strcmp(type, "canal") != 0
+branch  0 taken 34 (fallthrough)
+branch  1 taken 14
+       34:   19-block  0
+branch  2 taken 24 (fallthrough)
+branch  3 taken 10
+       24:   20:        && strcmp(type, "incalzire") != 0
+       24:   20-block  0
+branch  0 taken 16 (fallthrough)
+branch  1 taken 8
+       16:   21:        && strcmp(type, "gaz") != 0) {
+       16:   21-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 12
+        4:   22:        setError(error, "eroare de validare: tip invalid!\n");
+        4:   22-block  0
+call    0 returned 4
+        -:   23:        }
+       48:   24:    if (error->errorMessage[0] != '\0') {
+       48:   24-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 42
+        6:   25:        return false;
+        6:   25-block  0
+        -:   26:    }
+       42:   27:    return true;
+       42:   27-block  0
+        -:   28:}
