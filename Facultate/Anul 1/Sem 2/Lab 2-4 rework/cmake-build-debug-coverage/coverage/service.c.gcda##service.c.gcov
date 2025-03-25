@@ -1,6 +1,6 @@
-        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/service.c
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/service.c.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/service.c.gcda
+        -:    0:Source:/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/service.c
+        -:    0:Graph:/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/service.c.gcno
+        -:    0:Data:/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/service.c.gcda
         -:    0:Runs:1
         -:    1://
         -:    2:// Created by Deny on 23-03-2025.
@@ -15,21 +15,21 @@
         -:   11:
         -:   12:#include "validator.h"
         -:   13:
-function createService called 5 returned 100% blocks executed 100%
-        5:   14:Service* createService() {
-        5:   15:    Service* service=malloc(sizeof(Service));
-        5:   16:    service->repo=createRepo();
-        5:   16-block  0
-call    0 returned 5
-        5:   17:    return service;
+function createService called 6 returned 100% blocks executed 100%
+        6:   14:Service* createService() {
+        6:   15:    Service* service=malloc(sizeof(Service));
+        6:   16:    service->repo=createRepo();
+        6:   16-block  0
+call    0 returned 6
+        6:   17:    return service;
         -:   18:}
-function destroyService called 5 returned 100% blocks executed 100%
-        5:   19:void destroyService(Service* service) {
-        5:   20:    destroyRepo(service->repo);
-        5:   20-block  0
-call    0 returned 5
-        5:   21:    free(service);
-        5:   22:}
+function destroyService called 6 returned 100% blocks executed 100%
+        6:   19:void destroyService(Service* service) {
+        6:   20:    destroyRepo(service->repo);
+        6:   20-block  0
+call    0 returned 6
+        6:   21:    free(service);
+        6:   22:}
 function adaugaOfertaService called 15 returned 100% blocks executed 100%
        15:   23:int adaugaOfertaService(Service* s, char* adresa, float pret, char* tip, float suprafata) {
        15:   24:    Oferta* o=createOferta(adresa,suprafata,tip,pret);

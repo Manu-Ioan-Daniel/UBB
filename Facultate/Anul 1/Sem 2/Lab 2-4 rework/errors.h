@@ -1,5 +1,7 @@
 #pragma once
-
+/**
+ * struct Errors - enum pentru errori
+ */
 typedef enum {
     SUCCES = 0,
     TIP_INVALID = 1<<0,

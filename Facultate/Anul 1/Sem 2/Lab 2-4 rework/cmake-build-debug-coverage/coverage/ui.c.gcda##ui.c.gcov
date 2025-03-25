@@ -1,0 +1,422 @@
+        -:    0:Source:/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/ui.c
+        -:    0:Graph:/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/ui.c.gcno
+        -:    0:Data:/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/ui.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "ui.h"
+        -:    2:#include <stdio.h>
+        -:    3:#include <string.h>
+        -:    4:
+        -:    5:
+function run called 1 returned 100% blocks executed 45%
+        1:    6:void run() {
+        1:    7:    char optiune[100]="";
+        1:    8:    Service* service=createService();
+        1:    8-block  0
+call    0 returned 1
+        2:    9:    while (optiune[0]!='0' || strlen(optiune)>2) {
+        2:    9-block  0
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+        1:    9-block  1
+branch  2 taken 0
+branch  3 taken 1 (fallthrough)
+        1:   10:        printMenu();
+        1:   10-block  0
+call    0 returned 1
+        1:   11:        printf("Introdu optiunea dorita: ");
+call    0 returned 1
+        1:   12:        fgets(optiune, 100, stdin);
+call    0 returned 1
+       1*:   13:        if (strlen(optiune)>2) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:   14:            printf("Optiune invalida\n");
+    %%%%%:   14-block  0
+call    0 never executed
+    #####:   15:            continue;
+        -:   16:        }
+        1:   17:        switch (optiune[0]) {
+        1:   17-block  0
+branch  0 taken 0
+branch  1 taken 0
+branch  2 taken 0
+branch  3 taken 0
+branch  4 taken 0
+branch  5 taken 0
+branch  6 taken 1
+branch  7 taken 0
+    #####:   18:            case '1':
+    #####:   19:                adaugaOfertaUI(service);
+    %%%%%:   19-block  0
+call    0 never executed
+    #####:   20:                break;
+    #####:   21:            case '2':
+    #####:   22:                stergeOfertaUI(service);
+    %%%%%:   22-block  0
+call    0 never executed
+    #####:   23:                break;
+    #####:   24:            case '3':
+    #####:   25:                modificaOfertaUI(service);
+    %%%%%:   25-block  0
+call    0 never executed
+    #####:   26:                break;
+    #####:   27:            case '4':
+    #####:   28:                afisareOferteUI(service->repo->oferte);
+    %%%%%:   28-block  0
+call    0 never executed
+    #####:   29:                break;
+    #####:   30:            case '5':
+    #####:   31:                sortareUI(service);
+    %%%%%:   31-block  0
+call    0 never executed
+    #####:   32:                break;
+    #####:   33:            case '6':
+    #####:   34:                filtrareUI(service);
+    %%%%%:   34-block  0
+call    0 never executed
+    #####:   35:                break;
+        1:   36:            case '0':
+        1:   37:                break;
+        1:   37-block  0
+    #####:   38:            default:
+    #####:   39:                printf("Optiune invalida\n");
+    %%%%%:   39-block  0
+call    0 never executed
+    #####:   40:                break;
+        -:   41:        }
+        -:   42:    }
+        1:   43:    destroyService(service);
+        1:   43-block  0
+call    0 returned 1
+        1:   44:}
+function printMenu called 1 returned 100% blocks executed 100%
+        1:   45:void printMenu() {
+        1:   46:    printf("Meniu:\n");
+        1:   46-block  0
+call    0 returned 1
+        1:   47:    printf("1. Adauga oferta\n");
+call    0 returned 1
+        1:   48:    printf("2. Sterge oferta\n");
+call    0 returned 1
+        1:   49:    printf("3. Modifica oferta\n");
+call    0 returned 1
+        1:   50:    printf("4. Afiseaza ofertele\n");
+call    0 returned 1
+        1:   51:    printf("5. Sortare oferte\n");
+call    0 returned 1
+        1:   52:    printf("6. Filtrare\n");
+call    0 returned 1
+        1:   53:    printf("0. Iesire\n");
+call    0 returned 1
+        1:   54:}
+function adaugaOfertaUI called 0 returned 0% blocks executed 0%
+    #####:   55:void adaugaOfertaUI(Service* service) {
+        -:   56:    char adresa[100], tip[100];
+        -:   57:    float suprafata, pret;
+    #####:   58:    printf("Introdu adresa: ");
+    %%%%%:   58-block  0
+call    0 never executed
+    #####:   59:    fgets(adresa, 100, stdin);
+call    0 never executed
+    #####:   60:    adresa[strlen(adresa)-1] = '\0';
+    #####:   61:    printf("Introdu tipul: ");
+call    0 never executed
+    #####:   62:    fgets(tip, 100, stdin);
+call    0 never executed
+    #####:   63:    tip[strlen(tip)-1] = '\0';
+    #####:   64:    getFloat("Introdu suprafata: ", &suprafata);
+call    0 never executed
+    #####:   65:    getFloat("Introdu pret: ", &pret);
+call    0 never executed
+    #####:   66:    Errors errors = adaugaOfertaService(service, adresa, pret, tip, suprafata);
+call    0 never executed
+    #####:   67:    if (errors != SUCCES) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   68:        handleErrors(errors);
+    %%%%%:   68-block  0
+call    0 never executed
+        -:   69:    }
+    #####:   70:}
+function handleErrors called 0 returned 0% blocks executed 0%
+    #####:   71:void handleErrors(Errors errors) {
+    #####:   72:    if (errors & REPO_ERROR)
+    %%%%%:   72-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   73:        printf("Eroare de repo\n");
+    %%%%%:   73-block  0
+call    0 never executed
+    #####:   74:    if (errors & TIP_INVALID)
+    %%%%%:   74-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   75:        printf("Tip invalid\n");
+    %%%%%:   75-block  0
+call    0 never executed
+    #####:   76:    if (errors & ADRESA_INVALIDA)
+    %%%%%:   76-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   77:        printf("Adresa invalida\n");
+    %%%%%:   77-block  0
+call    0 never executed
+    #####:   78:    if (errors & PRET_INVALID)
+    %%%%%:   78-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   79:        printf("Pret invalid\n");
+    %%%%%:   79-block  0
+call    0 never executed
+    #####:   80:    if (errors & SUPRAFATA_INVALIDA) {
+    %%%%%:   80-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   81:        printf("Suprafata invalida\n");
+    %%%%%:   81-block  0
+call    0 never executed
+        -:   82:    }
+    #####:   83:}
+        -:   84:
+function getFloat called 0 returned 0% blocks executed 0%
+    #####:   85:void getFloat(const char* mesaj, float* f) {
+    %%%%%:   85-block  0
+        -:   86:        char input[100];
+        -:   87:        while (1) {
+    #####:   88:            printf("%s", mesaj);
+    %%%%%:   88-block  0
+call    0 never executed
+    #####:   89:            fgets(input, 100, stdin);
+call    0 never executed
+    #####:   90:            if (sscanf(input, "%f", f) == 1) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   91:                break;
+    %%%%%:   91-block  0
+        -:   92:            }
+    #####:   93:            printf("Introdu un numar valid\n");
+    %%%%%:   93-block  0
+call    0 never executed
+        -:   94:
+        -:   95:        }
+    #####:   96:}
+function stergeOfertaUI called 0 returned 0% blocks executed 0%
+    #####:   97:void stergeOfertaUI(Service* service) {
+        -:   98:    char adresa[100];
+    #####:   99:    printf("Introdu adresa ofertei pe care vrei:");
+    %%%%%:   99-block  0
+call    0 never executed
+    #####:  100:    fgets(adresa, 100, stdin);
+call    0 never executed
+    #####:  101:    adresa[strlen(adresa)-1] = '\0';
+    #####:  102:    Errors errors = stergeOfertaService(service, adresa);
+call    0 never executed
+    #####:  103:    if (errors != SUCCES) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  104:        handleErrors(errors);
+    %%%%%:  104-block  0
+call    0 never executed
+        -:  105:    }
+        -:  106:
+    #####:  107:}
+function modificaOfertaUI called 0 returned 0% blocks executed 0%
+    #####:  108:void modificaOfertaUI(Service* service) {
+        -:  109:    char adresa[100],adresaNoua[100],tipNou[100];
+        -:  110:    float suprafataNoua,pretNou;
+    #####:  111:    printf("Introdu adresa ofertei pe care vrei sa o modifici:");
+    %%%%%:  111-block  0
+call    0 never executed
+    #####:  112:    fgets(adresa, 100, stdin);
+call    0 never executed
+    #####:  113:    adresa[strlen(adresa)-1] = '\0';
+        -:  114:
+    #####:  115:    printf("Introdu noua adresa: ");
+call    0 never executed
+    #####:  116:    fgets(adresaNoua, 100, stdin);
+call    0 never executed
+    #####:  117:    adresaNoua[strlen(adresaNoua)-1] = '\0';
+        -:  118:
+    #####:  119:    printf("Introdu tipul: ");
+call    0 never executed
+    #####:  120:    fgets(tipNou, 100, stdin);
+call    0 never executed
+    #####:  121:    tipNou[strlen(tipNou)-1] = '\0';
+        -:  122:
+    #####:  123:    getFloat("Introdu suprafata noua: ", &suprafataNoua);
+call    0 never executed
+    #####:  124:    getFloat("Introdu pretul nou: ", &pretNou);
+call    0 never executed
+        -:  125:
+    #####:  126:    Errors errors=modificaOfertaService(service,adresa,adresaNoua,suprafataNoua,tipNou,pretNou);
+call    0 never executed
+    #####:  127:    if (errors!=SUCCES)
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  128:        handleErrors(errors);
+    %%%%%:  128-block  0
+call    0 never executed
+        -:  129:
+    #####:  130:}
+function afisareOferteUI called 0 returned 0% blocks executed 0%
+    #####:  131:void afisareOferteUI(List* l) {
+    #####:  132:    if (getLength(l)==0) {
+    %%%%%:  132-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  133:        printf("Nu exista oferte\n");
+    %%%%%:  133-block  0
+call    0 never executed
+    #####:  134:        return;
+        -:  135:    }
+    #####:  136:    for (int i = 0; i < getLength(l); i++) {
+    %%%%%:  136-block  0
+    %%%%%:  136-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed (fallthrough)
+    #####:  137:        Oferta* o = getElem(l, i);
+    %%%%%:  137-block  0
+call    0 never executed
+    #####:  138:        printf("Adresa: %s, Tip: %s, Suprafata: %.2f, Pret: %.2f\n", o->adresa, o->tip, o->suprafata, o->pret);
+call    0 never executed
+        -:  139:    }
+        -:  140:}
+function sortareUI called 0 returned 0% blocks executed 0%
+    #####:  141:void sortareUI(Service* service) {
+        -:  142:    char reverse[50];
+        -:  143:    List* rez;
+    #####:  144:    printf("Cum vrei sortarea?(crescatoare/descrescatoare):");
+    %%%%%:  144-block  0
+call    0 never executed
+    #####:  145:    fgets(reverse,50,stdin);
+call    0 never executed
+    #####:  146:    reverse[strlen(reverse)-1]='\0';
+        -:  147:
+    #####:  148:    if(strcmp(reverse,"descrescatoare")==0)
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  149:        rez=sortare(service,1);
+    %%%%%:  149-block  0
+call    0 never executed
+    #####:  150:    else if (strcmp(reverse,"crescatoare")==0)
+    %%%%%:  150-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  151:        rez=sortare(service,0);
+    %%%%%:  151-block  0
+call    0 never executed
+        -:  152:    else {
+    #####:  153:        printf("%s","Criteriu invalid\n");
+    %%%%%:  153-block  0
+call    0 never executed
+    #####:  154:        return;
+    %%%%%:  154-block  0
+        -:  155:    }
+    #####:  156:    if (rez==NULL) {
+    %%%%%:  156-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  157:        printf("Nu exista oferte!\n");
+    %%%%%:  157-block  0
+call    0 never executed
+    #####:  158:        return;
+        -:  159:    }
+    #####:  160:    afisareOferteUI(rez);
+    %%%%%:  160-block  0
+call    0 never executed
+    #####:  161:    destroyList(rez);
+call    0 never executed
+        -:  162:}
+function filtrareUI called 0 returned 0% blocks executed 0%
+    #####:  163:void filtrareUI(Service* service) {
+        -:  164:    char filtru[50];
+        -:  165:    List* filtrate;
+    #####:  166:    printf("Introdu un filtru:");
+    %%%%%:  166-block  0
+call    0 never executed
+    #####:  167:    fgets(filtru,50,stdin);
+call    0 never executed
+    #####:  168:    filtru[strlen(filtru)-1]='\0';
+    #####:  169:    if (strcmp(filtru,"suprafata")==0) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  170:        float suprafata;
+    #####:  171:        getFloat("Introdu o suprafata:",&suprafata);
+    %%%%%:  171-block  0
+call    0 never executed
+    #####:  172:        filtrate=filtrareDupaSuprafata(service,suprafata);
+call    0 never executed
+    #####:  173:        if (filtrate==NULL) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  174:            printf("Eroare la filtrare.\n");
+    %%%%%:  174-block  0
+call    0 never executed
+    #####:  175:            return;
+        -:  176:        }
+    #####:  177:        afisareOferteUI(filtrate);
+    %%%%%:  177-block  0
+call    0 never executed
+    #####:  178:        destroyList(filtrate);
+call    0 never executed
+        -:  179:
+        -:  180:    }
+    #####:  181:    else if (strcmp(filtru,"tip")==0) {
+    %%%%%:  181-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  182:        char tip[12];
+    #####:  183:        printf("Introdu un tip:");
+    %%%%%:  183-block  0
+call    0 never executed
+    #####:  184:        fgets(tip,12,stdin);
+call    0 never executed
+    #####:  185:        tip[strlen(tip)-1]='\0';
+    #####:  186:        filtrate=filtrareDupaTip(service,tip);
+call    0 never executed
+    #####:  187:        if (filtrate==NULL) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  188:            printf("Eroare la filtrare.\n");
+    %%%%%:  188-block  0
+call    0 never executed
+    #####:  189:            return;
+        -:  190:        }
+    #####:  191:        afisareOferteUI(filtrate);
+    %%%%%:  191-block  0
+call    0 never executed
+    #####:  192:        destroyList(filtrate);
+call    0 never executed
+        -:  193:
+        -:  194:    }
+    #####:  195:    else if (strcmp(filtru,"pret")==0) {
+    %%%%%:  195-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:  196:        float pret;
+    #####:  197:        getFloat("Introdu un pret:",&pret);
+    %%%%%:  197-block  0
+call    0 never executed
+    #####:  198:        filtrate=filtrareDupaPret(service,pret);
+call    0 never executed
+    #####:  199:        if (filtrate==NULL) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  200:            printf("Eroare la filtrare.\n");
+    %%%%%:  200-block  0
+call    0 never executed
+    #####:  201:            return;
+        -:  202:        }
+    #####:  203:        afisareOferteUI(filtrate);
+    %%%%%:  203-block  0
+call    0 never executed
+    #####:  204:        destroyList(filtrate);
+call    0 never executed
+        -:  205:
+        -:  206:    }else
+    #####:  207:        printf("Filtru invalid.Filtru poate fi doar tip,pret,suprafata\n");
+    %%%%%:  207-block  0
+call    0 never executed
+        -:  208:}

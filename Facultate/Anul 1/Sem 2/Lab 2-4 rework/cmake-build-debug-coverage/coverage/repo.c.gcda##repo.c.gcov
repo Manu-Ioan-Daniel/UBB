@@ -1,6 +1,6 @@
-        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/repo.c
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/repo.c.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/repo.c.gcda
+        -:    0:Source:/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/repo.c
+        -:    0:Graph:/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/repo.c.gcno
+        -:    0:Data:/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2-4 rework/cmake-build-debug-coverage/CMakeFiles/Lab_2_4_rework.dir/repo.c.gcda
         -:    0:Runs:1
         -:    1://
         -:    2:// Created by Lenovo on 3/23/2025.
@@ -12,23 +12,23 @@
         -:    8:#include <stdlib.h>
         -:    9:#include <string.h>
         -:   10:
-function createRepo called 6 returned 100% blocks executed 100%
-        6:   11:Repo* createRepo() {
-        6:   12:    Repo* r = malloc(sizeof(Repo));
-        6:   13:    r->oferte=createList(destroyOferta,copyOferta);
-        6:   13-block  0
-call    0 returned 6
-        6:   14:    return r;
+function createRepo called 7 returned 100% blocks executed 100%
+        7:   11:Repo* createRepo() {
+        7:   12:    Repo* r = malloc(sizeof(Repo));
+        7:   13:    r->oferte=createList(destroyOferta,copyOferta);
+        7:   13-block  0
+call    0 returned 7
+        7:   14:    return r;
         -:   15:}
-function destroyRepo called 6 returned 100% blocks executed 100%
-        6:   16:void destroyRepo(Repo* repo) {
-        6:   17:    destroyList(repo->oferte);
-        6:   17-block  0
-call    0 returned 6
-        6:   18:    free(repo);
+function destroyRepo called 7 returned 100% blocks executed 100%
+        7:   16:void destroyRepo(Repo* repo) {
+        7:   17:    destroyList(repo->oferte);
+        7:   17-block  0
+call    0 returned 7
+        7:   18:    free(repo);
         -:   19:
         -:   20:
-        6:   21:}
+        7:   21:}
 function cautaOferta called 31 returned 100% blocks executed 100%
        31:   22:int cautaOferta(const Repo* repo, const char* adresa) {
        66:   23:    for (int i = 0;i<getLength(repo->oferte);i++) {

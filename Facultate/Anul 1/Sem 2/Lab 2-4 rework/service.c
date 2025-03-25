@@ -140,7 +140,7 @@ List* sortare(Service* s, int reverse) {
     for (int i = 0;i<getLength(get_all(s));i++) {
         Oferta* o = copyOferta(getElem(get_all(s),i));
         addElem(rez,o);
-        Oferta* aux = getElem(rez,i);
+
     }
     if (reverse) {
         qsort(rez->elems,rez->length,sizeof(Oferta*),compareOffersReverse);
