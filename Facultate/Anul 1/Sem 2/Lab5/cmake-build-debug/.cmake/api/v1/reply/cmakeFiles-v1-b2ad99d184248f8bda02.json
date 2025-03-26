@@ -16,7 +16,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug-coverage/CMakeFiles/3.28.3/CMakeSystem.cmake"
+			"path" : "cmake-build-debug/CMakeFiles/3.28.3/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -290,7 +290,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug-coverage/CMakeFiles/3.28.3/CMakeCCompiler.cmake"
+			"path" : "cmake-build-debug/CMakeFiles/3.28.3/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -414,14 +414,14 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug-coverage/CMakeFiles/3.28.3/CMakeCCompiler.cmake"
+			"path" : "cmake-build-debug/CMakeFiles/3.28.3/CMakeCCompiler.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug-coverage",
-		"source" : "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5"
+		"build" : "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5/cmake-build-debug",
+		"source" : "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab5"
 	},
 	"version" : 
 	{
