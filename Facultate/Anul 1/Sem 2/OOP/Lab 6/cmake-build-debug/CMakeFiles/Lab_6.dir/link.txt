@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Lab_6.dir/main.cpp.o CMakeFiles/Lab_6.dir/disciplina.cpp.o CMakeFiles/Lab_6.dir/Repo.cpp.o -o Lab_6 
