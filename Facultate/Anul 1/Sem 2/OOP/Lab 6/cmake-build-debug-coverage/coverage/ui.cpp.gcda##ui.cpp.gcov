@@ -1,0 +1,730 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/ui.cpp
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/ui.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1:
+        -:    2:#include "ui.h"
+        -:    3:#include <iostream>
+        -:    4:using std::cout;
+        -:    5:using std::cin;
+        -:    6:
+function _ZN2Ui7startUiEv called 1 returned 100% blocks executed 10%
+        1:    7:void Ui::startUi() {
+        1:    8:    int cmd=0;
+        1:    8-block  0
+        -:    9:    while (true) {
+        1:   10:        cout<<"0.Exit\n1.Adauga disciplina\n2.Modifica disciplina\n3.Sterge disciplina\n4.Cauta disciplina\n5.Afiseaza discipline\n";
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11:        readInteger(cmd,"Introdu optiunea dorita: ");
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   11-block  2
+call    6 returned 1
+    $$$$$:   11-block  3
+call    7 never executed
+    $$$$$:   11-block  4
+    $$$$$:   11-block  5
+        1:   12:        if (cmd==0) {
+        1:   12-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   13:            break;
+        1:   13-block  0
+        -:   14:        }
+    #####:   15:        if (cmd==1) {
+    %%%%%:   15-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   16:            try {
+    #####:   17:                adaugaDisciplina();
+    %%%%%:   17-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    =====:   18:            } catch (ValidationError& e) {
+    $$$$$:   18-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   18-block  1
+call    3 never executed
+    =====:   19:                cout<<e.getError();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   19-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   19-block  1
+call    6 never executed
+    $$$$$:   19-block  2
+call    7 never executed
+    $$$$$:   19-block  3
+    =====:   20:            }catch (RepoException& e) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   20-block  0
+call    3 never executed
+    $$$$$:   20-block  1
+call    4 never executed
+    =====:   21:                cout<<e.getMsg();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   21-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   21-block  1
+call    6 never executed
+    $$$$$:   21-block  2
+call    7 never executed
+    $$$$$:   21-block  3
+    =====:   22:            }
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   22-block  0
+call    3 never executed
+        -:   23:
+        -:   24:        }
+    #####:   25:        if (cmd==2) {
+    %%%%%:   25-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   26:            try {
+    #####:   27:                modificaDisciplina();
+    %%%%%:   27-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    =====:   28:            } catch (ValidationError& e) {
+    $$$$$:   28-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   28-block  1
+call    3 never executed
+    =====:   29:                cout<<e.getError();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   29-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   29-block  1
+call    6 never executed
+    $$$$$:   29-block  2
+call    7 never executed
+    $$$$$:   29-block  3
+    =====:   30:            }catch (RepoException& e) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   30-block  0
+call    3 never executed
+    $$$$$:   30-block  1
+call    4 never executed
+    =====:   31:                cout<<e.getMsg();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   31-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   31-block  1
+call    6 never executed
+    $$$$$:   31-block  2
+call    7 never executed
+    $$$$$:   31-block  3
+    =====:   32:            }
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   32-block  0
+call    3 never executed
+        -:   33:
+        -:   34:        }
+    #####:   35:        if (cmd==3) {
+    %%%%%:   35-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   36:            try {
+    #####:   37:                stergeDisciplina();
+    %%%%%:   37-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    =====:   38:            } catch (ValidationError& e) {
+    $$$$$:   38-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   38-block  1
+call    3 never executed
+    =====:   39:                cout<<e.getError();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   39-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   39-block  1
+call    6 never executed
+    $$$$$:   39-block  2
+call    7 never executed
+    $$$$$:   39-block  3
+    =====:   40:            }catch (RepoException& e) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   40-block  0
+call    3 never executed
+    $$$$$:   40-block  1
+call    4 never executed
+    =====:   41:                cout<<e.getMsg();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   41-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   41-block  1
+call    6 never executed
+    $$$$$:   41-block  2
+call    7 never executed
+    $$$$$:   41-block  3
+    =====:   42:            }
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   42-block  0
+call    3 never executed
+        -:   43:
+        -:   44:        }
+    #####:   45:        if (cmd==4) {
+    %%%%%:   45-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+        -:   46:            try{
+    #####:   47:                cautaDisciplina();
+    %%%%%:   47-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    =====:   48:            } catch (ValidationError& e) {
+    $$$$$:   48-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   48-block  1
+call    3 never executed
+    =====:   49:                cout<<e.getError();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   49-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   49-block  1
+call    6 never executed
+    $$$$$:   49-block  2
+call    7 never executed
+    $$$$$:   49-block  3
+    =====:   50:            }catch (RepoException& e) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   50-block  0
+call    3 never executed
+    $$$$$:   50-block  1
+call    4 never executed
+    =====:   51:                cout<<e.getMsg();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   51-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   51-block  1
+call    6 never executed
+    $$$$$:   51-block  2
+call    7 never executed
+    $$$$$:   51-block  3
+    =====:   52:            }
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   52-block  0
+call    3 never executed
+        -:   53:        }
+    #####:   54:        if (cmd==5) {
+    %%%%%:   54-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   55:            afiseazaDiscipline();
+    %%%%%:   55-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   56:        }
+    #####:   57:    }
+    %%%%%:   57-block  0
+        -:   58:
+        -:   59:
+        1:   60:}
+        1:   60-block  0
+        -:   61:
+function _ZN2Ui11readIntegerERiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 43%
+        1:   62:void Ui::readInteger(int &x,const string& msg) {
+        1:   62-block  0
+        -:   63:    while (true) {
+        1:   64:        cout<<msg;
+        1:   64-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   65:        std::string input;
+        1:   65-block  0
+call    0 returned 1
+        1:   66:        getline(cin,input);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   67:        try {
+        1:   68:            x = std::stoi(input);
+        1:   68-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   69:            break;
+        1:   69-block  0
+    =====:   70:        } catch (const std::invalid_argument& e) {
+    $$$$$:   70-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   70-block  1
+call    2 never executed
+    =====:   71:            std::cerr << "Invalid input! Please enter a valid number." << std::endl;
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   71-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    =====:   72:        }
+    $$$$$:   72-block  0
+call    0 never executed
+    $$$$$:   72-block  1
+call    1 never executed
+       1*:   73:    }
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   73-block  1
+    %%%%%:   73-block  2
+    $$$$$:   73-block  3
+call    3 never executed
+        1:   74:}
+        1:   74-block  0
+function _ZNK2Ui16adaugaDisciplinaEv called 0 returned 0% blocks executed 0%
+    #####:   75:void Ui::adaugaDisciplina() const {
+    #####:   76:    string denumire,tip,cadruDidactic;
+    %%%%%:   76-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   77:    int nrOre;
+    #####:   78:    cout<<"Denumire: ";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   79:    getline(cin,denumire);
+    %%%%%:   79-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   80:    readInteger(nrOre,"Numar ore:");
+    %%%%%:   80-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   80-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   80-block  2
+call    6 never executed
+    $$$$$:   80-block  3
+call    7 never executed
+    $$$$$:   80-block  4
+    $$$$$:   80-block  5
+    #####:   81:    cout<<"Tip: ";
+    %%%%%:   81-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   82:    getline(cin,tip);
+    %%%%%:   82-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   83:    cout<<"Cadru didactic: ";
+    %%%%%:   83-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   84:    getline(cin,cadruDidactic);
+    %%%%%:   84-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   85:    service.addDisciplinaService(denumire,nrOre,tip,cadruDidactic);
+    %%%%%:   85-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   86:}
+    %%%%%:   86-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:   86-block  1
+call    3 never executed
+    $$$$$:   86-block  2
+call    4 never executed
+    $$$$$:   86-block  3
+call    5 never executed
+function _ZNK2Ui18modificaDisciplinaEv called 0 returned 0% blocks executed 0%
+    #####:   87:void Ui::modificaDisciplina() const {
+    #####:   88:    string denumire,tip,cadruDidactic,denumireNoua,tipNou;
+    %%%%%:   88-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+        -:   89:    int nrOreNou;
+    #####:   90:    cout<<"Denumirea disciplinei pe care vrei sa o modifici: ";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   91:    getline(cin,denumire);
+    %%%%%:   91-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   92:    cout<<"Tipul disciplinei pe care vrei sa o modifici: ";
+    %%%%%:   92-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   93:    getline(cin,tip);
+    %%%%%:   93-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   94:    cout<<"Denumire noua: ";
+    %%%%%:   94-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   95:    getline(cin,denumireNoua);
+    %%%%%:   95-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   96:    cout<<"Tip nou: ";
+    %%%%%:   96-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   97:    getline(cin,tipNou);
+    %%%%%:   97-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   98:    readInteger(nrOreNou,"Numar ore nou: ");
+    %%%%%:   98-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   98-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   98-block  2
+call    6 never executed
+    $$$$$:   98-block  3
+call    7 never executed
+    $$$$$:   98-block  4
+    $$$$$:   98-block  5
+    #####:   99:    cout<<"Cadru didactic nou: ";
+    %%%%%:   99-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  100:    getline(cin,cadruDidactic);
+    %%%%%:  100-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  101:    service.modificaDisciplinaService(denumire,tip,denumireNoua,tipNou,nrOreNou,cadruDidactic);
+    %%%%%:  101-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  102:}
+    %%%%%:  102-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    $$$$$:  102-block  1
+call    5 never executed
+    $$$$$:  102-block  2
+call    6 never executed
+    $$$$$:  102-block  3
+call    7 never executed
+    $$$$$:  102-block  4
+call    8 never executed
+    $$$$$:  102-block  5
+call    9 never executed
+        -:  103:
+function _ZNK2Ui16stergeDisciplinaEv called 0 returned 0% blocks executed 0%
+    #####:  104:void Ui::stergeDisciplina() const {
+    #####:  105:    string denumire,tip;
+    %%%%%:  105-block  0
+call    0 never executed
+call    1 never executed
+    #####:  106:    cout<<"Denumirea disciplinei pe care vreo sa o stergi: ";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  107:    getline(cin,denumire);
+    %%%%%:  107-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  108:    cout<<"Tipul disciplinei pe care vrei sa o stergi: ";
+    %%%%%:  108-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  109:    getline(cin,tip);
+    %%%%%:  109-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  110:    service.stergeDisciplinaService(denumire,tip);
+    %%%%%:  110-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  111:}
+    %%%%%:  111-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  111-block  1
+call    2 never executed
+    $$$$$:  111-block  2
+call    3 never executed
+function _ZNK2Ui15cautaDisciplinaEv called 0 returned 0% blocks executed 0%
+    #####:  112:void Ui::cautaDisciplina() const {
+    #####:  113:    string denumire,tip;
+    %%%%%:  113-block  0
+call    0 never executed
+call    1 never executed
+    #####:  114:    cout<<"Denumirea disciplinei pe care vrei sa o cauti: ";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  115:    getline(cin,denumire);
+    %%%%%:  115-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  116:    cout<<"Tipul disciplinei pe care vrei sa o cauti: ";
+    %%%%%:  116-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  117:    getline(cin,tip);
+    %%%%%:  117-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  118:    const Disciplina& d=service.cautaDisciplinaService(denumire,tip);
+    %%%%%:  118-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  119:    cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+    %%%%%:  119-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  119-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  119-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  119-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  119-block  4
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  119-block  5
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:  119-block  6
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:  119-block  7
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:  119-block  8
+call   24 never executed
+branch 25 never executed (fallthrough)
+branch 26 never executed (throw)
+    %%%%%:  119-block  9
+call   27 never executed
+branch 28 never executed (fallthrough)
+branch 29 never executed (throw)
+    %%%%%:  119-block 10
+call   30 never executed
+branch 31 never executed (fallthrough)
+branch 32 never executed (throw)
+    %%%%%:  119-block 11
+call   33 never executed
+branch 34 never executed (fallthrough)
+branch 35 never executed (throw)
+    %%%%%:  119-block 12
+call   36 never executed
+call   37 never executed
+call   38 never executed
+    $$$$$:  119-block 13
+call   39 never executed
+    $$$$$:  119-block 14
+    $$$$$:  119-block 15
+call   40 never executed
+    $$$$$:  119-block 16
+    $$$$$:  119-block 17
+call   41 never executed
+    $$$$$:  119-block 18
+    #####:  120:}
+call    0 never executed
+call    1 never executed
+    $$$$$:  120-block  0
+call    2 never executed
+    $$$$$:  120-block  1
+call    3 never executed
+function _ZNK2Ui18afiseazaDisciplineEv called 0 returned 0% blocks executed 0%
+    #####:  121:void Ui::afiseazaDiscipline() const {
+    #####:  122:    const auto& discipline=service.getAll();
+    %%%%%:  122-block  0
+call    0 never executed
+    #####:  123:    for (const auto& d:discipline) {
+call    0 never executed
+call    1 never executed
+    %%%%%:  123-block  0
+call    2 never executed
+    %%%%%:  123-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed (fallthrough)
+    #####:  124:        cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  124-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  124-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  124-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  124-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  124-block  4
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:  124-block  5
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:  124-block  6
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:  124-block  7
+call   24 never executed
+branch 25 never executed (fallthrough)
+branch 26 never executed (throw)
+    %%%%%:  124-block  8
+call   27 never executed
+branch 28 never executed (fallthrough)
+branch 29 never executed (throw)
+    %%%%%:  124-block  9
+call   30 never executed
+branch 31 never executed (fallthrough)
+branch 32 never executed (throw)
+    %%%%%:  124-block 10
+call   33 never executed
+branch 34 never executed (fallthrough)
+branch 35 never executed (throw)
+    %%%%%:  124-block 11
+call   36 never executed
+call   37 never executed
+call   38 never executed
+call   39 never executed
+    $$$$$:  124-block 12
+call   40 never executed
+    $$$$$:  124-block 13
+    $$$$$:  124-block 14
+call   41 never executed
+    $$$$$:  124-block 15
+    $$$$$:  124-block 16
+call   42 never executed
+    $$$$$:  124-block 17
+        -:  125:    }
+    #####:  126:}
+    %%%%%:  126-block  0
+        -:  127:

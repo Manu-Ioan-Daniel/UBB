@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Lab_6::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Lab_6-Debug-5027a5ac51f7210b0aed.json",
+					"jsonFile" : "target-Lab_6-Debug-1804f1f6a6b44b989bd0.json",
 					"name" : "Lab_6",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug",
+		"build" : "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage",
 		"source" : "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6"
 	},
 	"version" : 

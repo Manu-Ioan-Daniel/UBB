@@ -1,0 +1,33 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/disciplina.cpp
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/disciplina.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/disciplina.cpp.gcda
+        -:    0:Runs:1
+        -:    1:
+        -:    2:#include "disciplina.h"
+        -:    3:
+        -:    4:#include <utility>
+function _ZNK10Disciplina8getNrOreEv called 0 returned 0% blocks executed 0%
+    #####:    5:int Disciplina::getNrOre() const {
+    #####:    6:    return nrOre;
+    %%%%%:    6-block  0
+        -:    7:}
+function _ZNK10Disciplina11getDenumireB5cxx11Ev called 14 returned 100% blocks executed 100%
+       14:    8:string Disciplina::getDenumire() const {
+       14:    9:    return denumire;
+       14:    9-block  0
+call    0 returned 14
+        -:   10:}
+function _ZNK10Disciplina6getTipB5cxx11Ev called 12 returned 100% blocks executed 100%
+       12:   11:string Disciplina::getTip() const {
+       12:   12:    return tip;
+       12:   12-block  0
+call    0 returned 12
+        -:   13:}
+function _ZNK10Disciplina16getCadruDidacticB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   14:string Disciplina::getCadruDidactic() const {
+    #####:   15:    return cadruDidactic;
+    %%%%%:   15-block  0
+call    0 never executed
+        -:   16:}
+        -:   17:
+        -:   18:

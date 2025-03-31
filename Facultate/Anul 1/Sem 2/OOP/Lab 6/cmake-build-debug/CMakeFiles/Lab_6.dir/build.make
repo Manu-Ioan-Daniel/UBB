@@ -111,11 +111,56 @@ CMakeFiles/Lab_6.dir/Repo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab_6.dir/Repo.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/Repo.cpp" -o CMakeFiles/Lab_6.dir/Repo.cpp.s
 
+CMakeFiles/Lab_6.dir/service.cpp.o: CMakeFiles/Lab_6.dir/flags.make
+CMakeFiles/Lab_6.dir/service.cpp.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/OOP/Lab\ 6/service.cpp
+CMakeFiles/Lab_6.dir/service.cpp.o: CMakeFiles/Lab_6.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Lab_6.dir/service.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_6.dir/service.cpp.o -MF CMakeFiles/Lab_6.dir/service.cpp.o.d -o CMakeFiles/Lab_6.dir/service.cpp.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/service.cpp"
+
+CMakeFiles/Lab_6.dir/service.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab_6.dir/service.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/service.cpp" > CMakeFiles/Lab_6.dir/service.cpp.i
+
+CMakeFiles/Lab_6.dir/service.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab_6.dir/service.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/service.cpp" -o CMakeFiles/Lab_6.dir/service.cpp.s
+
+CMakeFiles/Lab_6.dir/validator.cpp.o: CMakeFiles/Lab_6.dir/flags.make
+CMakeFiles/Lab_6.dir/validator.cpp.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/OOP/Lab\ 6/validator.cpp
+CMakeFiles/Lab_6.dir/validator.cpp.o: CMakeFiles/Lab_6.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Lab_6.dir/validator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_6.dir/validator.cpp.o -MF CMakeFiles/Lab_6.dir/validator.cpp.o.d -o CMakeFiles/Lab_6.dir/validator.cpp.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/validator.cpp"
+
+CMakeFiles/Lab_6.dir/validator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab_6.dir/validator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/validator.cpp" > CMakeFiles/Lab_6.dir/validator.cpp.i
+
+CMakeFiles/Lab_6.dir/validator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab_6.dir/validator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/validator.cpp" -o CMakeFiles/Lab_6.dir/validator.cpp.s
+
+CMakeFiles/Lab_6.dir/ui.cpp.o: CMakeFiles/Lab_6.dir/flags.make
+CMakeFiles/Lab_6.dir/ui.cpp.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/OOP/Lab\ 6/ui.cpp
+CMakeFiles/Lab_6.dir/ui.cpp.o: CMakeFiles/Lab_6.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Lab_6.dir/ui.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_6.dir/ui.cpp.o -MF CMakeFiles/Lab_6.dir/ui.cpp.o.d -o CMakeFiles/Lab_6.dir/ui.cpp.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/ui.cpp"
+
+CMakeFiles/Lab_6.dir/ui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab_6.dir/ui.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/ui.cpp" > CMakeFiles/Lab_6.dir/ui.cpp.i
+
+CMakeFiles/Lab_6.dir/ui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab_6.dir/ui.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/ui.cpp" -o CMakeFiles/Lab_6.dir/ui.cpp.s
+
 # Object files for target Lab_6
 Lab_6_OBJECTS = \
 "CMakeFiles/Lab_6.dir/main.cpp.o" \
 "CMakeFiles/Lab_6.dir/disciplina.cpp.o" \
-"CMakeFiles/Lab_6.dir/Repo.cpp.o"
+"CMakeFiles/Lab_6.dir/Repo.cpp.o" \
+"CMakeFiles/Lab_6.dir/service.cpp.o" \
+"CMakeFiles/Lab_6.dir/validator.cpp.o" \
+"CMakeFiles/Lab_6.dir/ui.cpp.o"
 
 # External object files for target Lab_6
 Lab_6_EXTERNAL_OBJECTS =
@@ -123,9 +168,12 @@ Lab_6_EXTERNAL_OBJECTS =
 Lab_6: CMakeFiles/Lab_6.dir/main.cpp.o
 Lab_6: CMakeFiles/Lab_6.dir/disciplina.cpp.o
 Lab_6: CMakeFiles/Lab_6.dir/Repo.cpp.o
+Lab_6: CMakeFiles/Lab_6.dir/service.cpp.o
+Lab_6: CMakeFiles/Lab_6.dir/validator.cpp.o
+Lab_6: CMakeFiles/Lab_6.dir/ui.cpp.o
 Lab_6: CMakeFiles/Lab_6.dir/build.make
 Lab_6: CMakeFiles/Lab_6.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Lab_6"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Lab_6"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Lab_6.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

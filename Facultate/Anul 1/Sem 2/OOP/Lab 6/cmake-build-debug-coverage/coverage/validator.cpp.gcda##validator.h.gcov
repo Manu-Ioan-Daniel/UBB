@@ -1,0 +1,26 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/validator.h
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/validator.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/validator.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <string>
+        -:    3:using std::string;
+        -:    4:class Validator {
+        -:    5:public:
+        -:    6:    static void validateDisciplina(const string& denumire, int nrOre, const string& tip, const string& cadruDidactic);
+        -:    7:};
+        -:    8:class ValidationError {
+        -:    9:private:
+        -:   10:    string msg;
+        -:   11:public:
+        -:   12:    [[nodiscard]] string getError() const {
+        -:   13:        return msg;
+        -:   14:    }
+function _ZN15ValidationErrorC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 4 returned 100% blocks executed 100%
+        4:   15:    explicit ValidationError(string m):msg{std::move(m)}{
+        4:   15-block  0
+call    0 returned 4
+call    1 returned 4
+        4:   16:    }
+        -:   17:};
+        -:   18:

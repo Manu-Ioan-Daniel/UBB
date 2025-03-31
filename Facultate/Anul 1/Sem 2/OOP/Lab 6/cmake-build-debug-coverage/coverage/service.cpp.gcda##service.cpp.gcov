@@ -1,0 +1,662 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/service.cpp
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:
+        -:    2:#include "service.h"
+        -:    3:
+        -:    4:#include <cassert>
+        -:    5:#include <iostream>
+        -:    6:
+function _ZNK7Service20addDisciplinaServiceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS7_S7_ called 2 returned 50% blocks executed 57%
+        2:    7:void Service::addDisciplinaService(const string& denumire,int nrOre,const string& tip,const string& cadruDidactic) const {
+        -:    8:
+        2:    9:    Validator::validateDisciplina(denumire,nrOre,tip,cadruDidactic);
+        2:    9-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1 (throw)
+        1:   10:    const Disciplina d{denumire,nrOre,tip,cadruDidactic};
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   10-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   10-block  3
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+    $$$$$:   10-block  4
+    $$$$$:   10-block  5
+call   13 never executed
+    $$$$$:   10-block  6
+    $$$$$:   10-block  7
+call   14 never executed
+    $$$$$:   10-block  8
+        1:   11:    repo.addDisciplina(d);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   12:
+        1:   13:}
+        1:   13-block  0
+call    0 returned 1
+    $$$$$:   13-block  1
+call    1 never executed
+function _ZNK7Service22cautaDisciplinaServiceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 3 returned 67% blocks executed 100%
+        3:   14:Disciplina& Service::cautaDisciplinaService(const string &denumire, const string &tip) const {
+        3:   14-block  0
+        4:   15:    Validator::validateDisciplina(denumire,20,tip,"salut");
+        3:   15-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   15-block  1
+call    3 returned 3
+branch  4 taken 2 (fallthrough)
+branch  5 taken 1 (throw)
+        2:   15-block  2
+call    6 returned 2
+        1:   15-block  3
+call    7 returned 1
+        1:   15-block  4
+        2:   16:    const int poz = repo.cautaDisciplina(denumire,tip);
+        2:   16-block  0
+call    0 returned 2
+        2:   17:    return repo.getAll()[poz];
+call    0 returned 2
+call    1 returned 2
+        -:   18:}
+function _ZNK7Service25modificaDisciplinaServiceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_iS7_ called 2 returned 50% blocks executed 56%
+        2:   19:void Service::modificaDisciplinaService(const string &denumire, const string &tip,const string& denumireNoua,const string& tipNou,int nrOreNou,const string& cadruDidacticNou) const {
+        2:   19-block  0
+        2:   20:    Validator::validateDisciplina(denumire,20,tip,"salut");
+        2:   20-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   20-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   20-block  2
+call    6 returned 2
+    $$$$$:   20-block  3
+call    7 never executed
+    $$$$$:   20-block  4
+    $$$$$:   20-block  5
+        2:   21:    Validator::validateDisciplina(denumireNoua,nrOreNou,tipNou,cadruDidacticNou);
+        2:   21-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1 (throw)
+        1:   22:    const Disciplina& d = cautaDisciplinaService(denumire,tip);
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23:    Disciplina disciplinaNoua{denumireNoua,nrOreNou,tipNou,cadruDidacticNou};
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   23-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   23-block  3
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+    $$$$$:   23-block  4
+    $$$$$:   23-block  5
+call   13 never executed
+    $$$$$:   23-block  6
+    $$$$$:   23-block  7
+call   14 never executed
+    $$$$$:   23-block  8
+        1:   24:    repo.modificaDisciplina(disciplinaNoua,d);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25:}
+        1:   25-block  0
+call    0 returned 1
+    $$$$$:   25-block  1
+call    1 never executed
+function _ZNK7Service23stergeDisciplinaServiceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 2 returned 50% blocks executed 100%
+        2:   26:void Service::stergeDisciplinaService(const string &denumire, const string &tip) const {
+        2:   26-block  0
+        3:   27:    Validator::validateDisciplina(denumire,20,tip,"salut");
+        2:   27-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   27-block  1
+call    3 returned 2
+branch  4 taken 1 (fallthrough)
+branch  5 taken 1 (throw)
+        1:   27-block  2
+call    6 returned 1
+        1:   27-block  3
+call    7 returned 1
+        1:   27-block  4
+        1:   28:    repo.stergeDisciplina(denumire,tip);
+        1:   28-block  0
+call    0 returned 1
+        1:   29:}
+        -:   30:
+        -:   31:
+function _Z11testServicev called 1 returned 100% blocks executed 61%
+        1:   32:void testService() {
+        -:   33:    //test adaugare
+        -:   34:
+        1:   35:    Repo r;
+        -:   36:    Validator v;
+        1:   37:    const Service s{r,v};
+        1:   37-block  0
+call    0 returned 1
+        5:   38:    s.addDisciplinaService("mate",5,"laborator","popescu");
+        1:   38-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   38-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   38-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   38-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   38-block  4
+call   12 returned 1
+        1:   38-block  5
+call   13 returned 1
+        1:   38-block  6
+call   14 returned 1
+    $$$$$:   38-block  7
+call   15 never executed
+    $$$$$:   38-block  8
+    $$$$$:   38-block  9
+    $$$$$:   38-block 10
+call   16 never executed
+    $$$$$:   38-block 11
+    $$$$$:   38-block 12
+    $$$$$:   38-block 13
+call   17 never executed
+    $$$$$:   38-block 14
+    $$$$$:   38-block 15
+        1:   39:    const auto& all=s.getAll();
+        1:   39-block  0
+call    0 returned 1
+       1*:   40:    assert(all.size()==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   40-block  0
+call    3 never executed
+       6*:   41:    assert(all[0]==Disciplina("mate",5,"laborator","popescu"));
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   41-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   41-block  3
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:   41-block  4
+call   14 never executed
+        1:   41-block  5
+call   15 returned 1
+call   16 returned 1
+        1:   41-block  6
+call   17 returned 1
+        1:   41-block  7
+call   18 returned 1
+        1:   41-block  8
+    $$$$$:   41-block  9
+    $$$$$:   41-block 10
+    $$$$$:   41-block 11
+call   19 never executed
+    $$$$$:   41-block 12
+    $$$$$:   41-block 13
+    $$$$$:   41-block 14
+call   20 never executed
+    $$$$$:   41-block 15
+    $$$$$:   41-block 16
+    $$$$$:   41-block 17
+        -:   42:    try {
+       6*:   43:        s.addDisciplinaService("",-1,"","");
+        1:   43-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   43-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   43-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   43-block  3
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+    %%%%%:   43-block  4
+call   12 never executed
+    %%%%%:   43-block  5
+call   13 never executed
+    %%%%%:   43-block  6
+call   14 never executed
+    %%%%%:   43-block  7
+        1:   43-block  8
+call   15 returned 1
+        1:   43-block  9
+        1:   43-block 10
+        1:   43-block 11
+call   16 returned 1
+        1:   43-block 12
+        1:   43-block 13
+        1:   43-block 14
+call   17 returned 1
+        1:   43-block 15
+        1:   43-block 16
+        -:   44:        //assert(false);
+        1:   45:    }catch (ValidationError&) {
+        1:   45-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   45-block  1
+call    2 returned 1
+        -:   46:        assert(true);
+        1:   47:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   48:
+        -:   49:    //test cauta disciplina
+        -:   50:
+        4:   51:     const Disciplina& d=s.cautaDisciplinaService("mate","laborator");
+        1:   51-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   51-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   51-block  3
+call    9 returned 1
+        1:   51-block  4
+call   10 returned 1
+        1:   51-block  5
+    $$$$$:   51-block  6
+call   11 never executed
+    $$$$$:   51-block  7
+    $$$$$:   51-block  8
+    $$$$$:   51-block  9
+call   12 never executed
+    $$$$$:   51-block 10
+    $$$$$:   51-block 11
+        5:   52:     const auto &d2 = Disciplina("mate",5,"laborator","popescu");
+        1:   52-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   52-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   52-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   52-block  3
+call    9 returned 1
+call   10 returned 1
+        1:   52-block  4
+call   11 returned 1
+        1:   52-block  5
+call   12 returned 1
+    $$$$$:   52-block  6
+    $$$$$:   52-block  7
+    $$$$$:   52-block  8
+call   13 never executed
+    $$$$$:   52-block  9
+    $$$$$:   52-block 10
+    $$$$$:   52-block 11
+call   14 never executed
+    $$$$$:   52-block 12
+    $$$$$:   52-block 13
+       1*:   53:     assert(d==d2);
+        1:   53-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   53-block  1
+call    3 never executed
+        -:   54:     try {
+       4*:   55:         s.cautaDisciplinaService("","");
+        1:   55-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   55-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1 (throw)
+    %%%%%:   55-block  3
+call    9 never executed
+    %%%%%:   55-block  4
+call   10 never executed
+    %%%%%:   55-block  5
+        1:   55-block  6
+call   11 returned 1
+        1:   55-block  7
+        1:   55-block  8
+        1:   55-block  9
+call   12 returned 1
+        1:   55-block 10
+        1:   55-block 11
+        -:   56:         //assert(false);
+        1:   57:     }catch (ValidationError&) {
+        1:   57-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   57-block  1
+call    2 returned 1
+        -:   58:         assert(true);
+        1:   59:     }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   60:
+        -:   61:    //test modifica disciplina
+        -:   62:
+       10:   63:    s.modificaDisciplinaService("mate","laborator","info","seminar",6,"ionescu");
+        1:   63-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   63-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   63-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   63-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   63-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   63-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   63-block  6
+call   18 returned 1
+        1:   63-block  7
+call   19 returned 1
+        1:   63-block  8
+call   20 returned 1
+        1:   63-block  9
+call   21 returned 1
+        1:   63-block 10
+call   22 returned 1
+        1:   63-block 11
+    $$$$$:   63-block 12
+call   23 never executed
+    $$$$$:   63-block 13
+    $$$$$:   63-block 14
+    $$$$$:   63-block 15
+call   24 never executed
+    $$$$$:   63-block 16
+    $$$$$:   63-block 17
+    $$$$$:   63-block 18
+call   25 never executed
+    $$$$$:   63-block 19
+    $$$$$:   63-block 20
+    $$$$$:   63-block 21
+call   26 never executed
+    $$$$$:   63-block 22
+    $$$$$:   63-block 23
+    $$$$$:   63-block 24
+call   27 never executed
+    $$$$$:   63-block 25
+    $$$$$:   63-block 26
+       6*:   64:    assert(s.getAll()[0]==Disciplina("info",6,"seminar","ionescu"));
+        1:   64-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   64-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   64-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   64-block  3
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+branch 13 taken 0 (fallthrough)
+branch 14 taken 1
+    %%%%%:   64-block  4
+call   15 never executed
+        1:   64-block  5
+call   16 returned 1
+call   17 returned 1
+        1:   64-block  6
+call   18 returned 1
+        1:   64-block  7
+call   19 returned 1
+        1:   64-block  8
+    $$$$$:   64-block  9
+    $$$$$:   64-block 10
+    $$$$$:   64-block 11
+call   20 never executed
+    $$$$$:   64-block 12
+    $$$$$:   64-block 13
+    $$$$$:   64-block 14
+call   21 never executed
+    $$$$$:   64-block 15
+    $$$$$:   64-block 16
+    $$$$$:   64-block 17
+        -:   65:    try {
+      10*:   66:        s.modificaDisciplinaService("mate","laborator","","",0,"");
+        1:   66-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   66-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   66-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   66-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   66-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   66-block  5
+call   15 returned 1
+branch 16 taken 0 (fallthrough)
+branch 17 taken 1 (throw)
+    %%%%%:   66-block  6
+call   18 never executed
+    %%%%%:   66-block  7
+call   19 never executed
+    %%%%%:   66-block  8
+call   20 never executed
+    %%%%%:   66-block  9
+call   21 never executed
+    %%%%%:   66-block 10
+call   22 never executed
+    %%%%%:   66-block 11
+        1:   66-block 12
+call   23 returned 1
+        1:   66-block 13
+        1:   66-block 14
+        1:   66-block 15
+call   24 returned 1
+        1:   66-block 16
+        1:   66-block 17
+        1:   66-block 18
+call   25 returned 1
+        1:   66-block 19
+        1:   66-block 20
+        1:   66-block 21
+call   26 returned 1
+        1:   66-block 22
+        1:   66-block 23
+        1:   66-block 24
+call   27 returned 1
+        1:   66-block 25
+        1:   66-block 26
+        -:   67:        //assert(false);
+        1:   68:    }catch (ValidationError&) {
+        1:   68-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   68-block  1
+call    2 returned 1
+        -:   69:        assert(true);
+        1:   70:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   71:
+        -:   72:    //test sterge disciplina
+        -:   73:
+        3:   74:    s.stergeDisciplinaService("info","seminar");
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   74-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   74-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   74-block  3
+call    9 returned 1
+        1:   74-block  4
+call   10 returned 1
+    $$$$$:   74-block  5
+call   11 never executed
+    $$$$$:   74-block  6
+    $$$$$:   74-block  7
+    $$$$$:   74-block  8
+call   12 never executed
+    $$$$$:   74-block  9
+    $$$$$:   74-block 10
+       1*:   75:    assert(s.getAll().empty());
+        1:   75-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:   75-block  1
+call    4 never executed
+        -:   76:    try {
+       4*:   77:        s.stergeDisciplinaService("","");
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   77-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   77-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1 (throw)
+    %%%%%:   77-block  3
+call    9 never executed
+    %%%%%:   77-block  4
+call   10 never executed
+    %%%%%:   77-block  5
+        1:   77-block  6
+call   11 returned 1
+        1:   77-block  7
+        1:   77-block  8
+        1:   77-block  9
+call   12 returned 1
+        1:   77-block 10
+        1:   77-block 11
+        -:   78:        //assert(false);
+        1:   79:    }catch (ValidationError&) {
+        1:   79-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   79-block  1
+call    2 returned 1
+        -:   80:        assert(true);
+        1:   81:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   82:
+        1:   83:}
+        1:   83-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   83-block  1
+call    2 never executed
+    $$$$$:   83-block  2
+call    3 never executed

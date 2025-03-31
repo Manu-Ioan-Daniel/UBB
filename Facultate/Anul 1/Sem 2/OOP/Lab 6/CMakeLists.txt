@@ -7,4 +7,10 @@ add_executable(Lab_6 main.cpp
         disciplina.cpp
         disciplina.h
         Repo.cpp
-        Repo.h)
+        Repo.h
+        service.cpp
+        service.h
+        validator.cpp
+        validator.h
+        ui.cpp
+        ui.h)

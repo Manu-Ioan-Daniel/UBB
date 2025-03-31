@@ -1,0 +1,28 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/service.h
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/main.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "Repo.h"
+        -:    3:#include "validator.h"
+        -:    4:
+        -:    5:class Service {
+        -:    6:    Repo& repo;
+        -:    7:    Validator& validator;
+        -:    8:public:
+function _ZN7ServiceC2ER4RepoR9Validator called 2 returned 100% blocks executed 100%
+        2:    9:    explicit Service(Repo& repo,Validator& validator): repo(repo), validator(validator) {
+        2:   10:    }
+        -:   11:
+        -:   12:    void addDisciplinaService(const string& denumire, int nrOre, const string& tip, const string& cadruDidactic) const;
+        -:   13:    [[nodiscard]] std::vector<Disciplina>& getAll() const {
+        -:   14:        return repo.getAll();
+        -:   15:    }
+        -:   16:    void modificaDisciplinaService(const string& denumire,const string& tip,const string& denumireNoua,const string& tipNou,int nrOreNou,const string& cadruDidacticNou) const;
+        -:   17:    void stergeDisciplinaService(const string& denumire,const string& tip) const;
+        -:   18:    [[nodiscard]] Disciplina& cautaDisciplinaService(const string& denumire,const string& tip) const;
+        -:   19:
+        -:   20:
+        -:   21:
+        -:   22:};
+        -:   23:void testService();

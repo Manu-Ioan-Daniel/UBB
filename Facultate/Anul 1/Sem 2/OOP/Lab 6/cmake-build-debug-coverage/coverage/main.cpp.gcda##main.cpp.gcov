@@ -1,0 +1,39 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/main.cpp
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/main.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:
+        -:    2:#include "ui.h"
+        -:    3:
+function main called 1 returned 100% blocks executed 82%
+        1:    4:int main() {
+        -:    5:
+        1:    6:    testRepo();
+        1:    6-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    7:    testService();
+        1:    7-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    8:    Repo r;
+        -:    9:    Validator v;
+        1:   10:    Service s{r,v};
+        1:   10-block  0
+call    0 returned 1
+        1:   11:    Ui ui{s};
+call    0 returned 1
+        1:   12:    ui.startUi();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   13:
+        1:   14:    return 0;
+        1:   15:}
+        1:   15-block  0
+call    0 returned 1
+    $$$$$:   15-block  1
+call    1 never executed
+        -:   16:

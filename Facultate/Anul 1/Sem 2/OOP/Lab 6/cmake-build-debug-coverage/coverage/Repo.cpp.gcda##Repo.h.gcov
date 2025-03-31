@@ -1,0 +1,40 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/Repo.h
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <vector>
+        -:    3:#include "disciplina.h"
+        -:    4:using std::vector;
+        -:    5:class RepoException {
+        -:    6:    string msg;
+        -:    7:public:
+function _ZN13RepoExceptionC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 4 returned 100% blocks executed 100%
+        4:    8:    explicit RepoException(string m):msg{std::move(m)}{
+        4:    8-block  0
+call    0 returned 4
+call    1 returned 4
+        4:    9:    }
+        -:   10:    [[nodiscard]] string getMsg() const {
+        -:   11:        return msg;
+        -:   12:    }
+        -:   13:
+        -:   14:};
+        -:   15:class Repo {
+        -:   16:    vector<Disciplina> discipline;
+        -:   17:public:
+        -:   18:    void addDisciplina(const Disciplina& disciplina);
+        -:   19:    void stergeDisciplina(const string& denumire,const string& tip);
+        -:   20:    int cautaDisciplina(const string& denumire,const string& tip) const;
+        -:   21:    void modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina);
+        -:   22:    [[nodiscard]] vector <Disciplina> getAll() const{
+        -:   23:        return discipline;
+        -:   24:    }
+function _ZN4Repo6getAllEv called 8 returned 100% blocks executed 100%
+        8:   25:    vector<Disciplina>& getAll(){
+        8:   26:        return discipline;
+        8:   26-block  0
+        -:   27:    }
+        -:   28:
+        -:   29:};
+        -:   30:void testRepo();

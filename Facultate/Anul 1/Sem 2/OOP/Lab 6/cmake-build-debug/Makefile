@@ -201,6 +201,78 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_6.dir/build.make CMakeFiles/Lab_6.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+service.o: service.cpp.o
+.PHONY : service.o
+
+# target to build an object file
+service.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_6.dir/build.make CMakeFiles/Lab_6.dir/service.cpp.o
+.PHONY : service.cpp.o
+
+service.i: service.cpp.i
+.PHONY : service.i
+
+# target to preprocess a source file
+service.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_6.dir/build.make CMakeFiles/Lab_6.dir/service.cpp.i
+.PHONY : service.cpp.i
+
+service.s: service.cpp.s
+.PHONY : service.s
+
+# target to generate assembly for a file
+service.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_6.dir/build.make CMakeFiles/Lab_6.dir/service.cpp.s
+.PHONY : service.cpp.s
+
+ui.o: ui.cpp.o
+.PHONY : ui.o
+
+# target to build an object file
+ui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_6.dir/build.make CMakeFiles/Lab_6.dir/ui.cpp.o
+.PHONY : ui.cpp.o
+
+ui.i: ui.cpp.i
+.PHONY : ui.i
+
+# target to preprocess a source file
+ui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_6.dir/build.make CMakeFiles/Lab_6.dir/ui.cpp.i
+.PHONY : ui.cpp.i
+
+ui.s: ui.cpp.s
+.PHONY : ui.s
+
+# target to generate assembly for a file
+ui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_6.dir/build.make CMakeFiles/Lab_6.dir/ui.cpp.s
+.PHONY : ui.cpp.s
+
+validator.o: validator.cpp.o
+.PHONY : validator.o
+
+# target to build an object file
+validator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_6.dir/build.make CMakeFiles/Lab_6.dir/validator.cpp.o
+.PHONY : validator.cpp.o
+
+validator.i: validator.cpp.i
+.PHONY : validator.i
+
+# target to preprocess a source file
+validator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_6.dir/build.make CMakeFiles/Lab_6.dir/validator.cpp.i
+.PHONY : validator.cpp.i
+
+validator.s: validator.cpp.s
+.PHONY : validator.s
+
+# target to generate assembly for a file
+validator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_6.dir/build.make CMakeFiles/Lab_6.dir/validator.cpp.s
+.PHONY : validator.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,6 +291,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... service.o"
+	@echo "... service.i"
+	@echo "... service.s"
+	@echo "... ui.o"
+	@echo "... ui.i"
+	@echo "... ui.s"
+	@echo "... validator.o"
+	@echo "... validator.i"
+	@echo "... validator.s"
 .PHONY : help
 
 
