@@ -1,3 +1,0 @@
-/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug-coverage/CMakeFiles/Lab_2_4.dir
-/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
-/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/Lab 2 -- 4/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir
