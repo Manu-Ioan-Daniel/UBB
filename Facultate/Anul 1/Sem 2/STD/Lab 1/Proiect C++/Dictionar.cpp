@@ -8,11 +8,15 @@ Dictionar::Dictionar() {
 	e=new TElem[capacity];
 
 }
-
+//Toate 3:Theta(n)
 Dictionar::~Dictionar() {
 	delete[] e;
 }
-
+/*
+ *Caz fav:Theta(1)
+ *Caz defav:Theta(n)
+ *Caz mediu:Theta(n)
+ */
 TValoare Dictionar::adauga(TCheie c, TValoare v){
 	for (int i = 0;i<size;i++) {
 		if (e[i].first==c) {
@@ -34,6 +38,12 @@ TValoare Dictionar::adauga(TCheie c, TValoare v){
 
 
 //cauta o cheie si returneaza valoarea asociata (daca dictionarul contine cheia) sau null
+/*
+ *Caz fav:Theta(1)
+ *Caz defav:Theta(n)
+ *Caz mediu:Theta(n)
+ *Caz general:O(n)
+ */
 TValoare Dictionar::cauta(TCheie c) const{
 	for (int i = 0; i < size; i++) {
 		if (e[i].first == c) {
@@ -43,7 +53,11 @@ TValoare Dictionar::cauta(TCheie c) const{
 	return NULL_TVALOARE;
 }
 
-
+/*
+ *Caz fav:Theta(n)
+ *Caz defav:Theta(n)
+ *Caz mediu:Theta(n)
+ */
 TValoare Dictionar::sterge(TCheie c){
 	for (int i = 0;i<size;i++) {
 		if (e[i].first==c) {
@@ -59,11 +73,19 @@ TValoare Dictionar::sterge(TCheie c){
 	return NULL_TVALOARE;
 }
 
-
+/*
+ *Caz fav:Theta(1)
+ *Caz defav:Theta(1)
+ *Caz mediu:Theta(1)
+ */
 int Dictionar::dim() const {
 	return size;
 }
-
+/*
+ *Caz fav:Theta(1)
+ *Caz defav:Theta(1)
+ *Caz mediu:Theta(1)
+ */
 bool Dictionar::vid() const{
 	return size==0;
 }
