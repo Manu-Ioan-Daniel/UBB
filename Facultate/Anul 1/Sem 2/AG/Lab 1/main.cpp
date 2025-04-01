@@ -185,8 +185,11 @@ void afisareNoduriIzolate(int mAdiacenta[][101],int n) {
         }
         if (izolat) {
             cout << "Nodul " << i << " este izolat\n";
+        }else {
+            cout<<"Nodul "<<i<<" nu este izolat\n";
         }
     }
+
 
 }
 bool grafRegulat(int mAdiacenta[][101],int n){

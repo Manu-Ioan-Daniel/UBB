@@ -10,7 +10,7 @@ add_executable(Lab_2 main.cpp
         problema2.h
         problema3.cpp
         problema3.h
-        "problema 4.cpp"
-        "problema 4.h"
         problema5.cpp
-        problema5.h)
+        problema5.h
+        problema1.cpp
+        main.cpp)

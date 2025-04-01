@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2"
+CMAKE_SOURCE_DIR = "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug"
+CMAKE_BINARY_DIR = "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Lab_2.dir/depend.make
@@ -70,88 +70,88 @@ include CMakeFiles/Lab_2.dir/progress.make
 include CMakeFiles/Lab_2.dir/flags.make
 
 CMakeFiles/Lab_2.dir/main.cpp.o: CMakeFiles/Lab_2.dir/flags.make
-CMakeFiles/Lab_2.dir/main.cpp.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/main.cpp
+CMakeFiles/Lab_2.dir/main.cpp.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/main.cpp
 CMakeFiles/Lab_2.dir/main.cpp.o: CMakeFiles/Lab_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab_2.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_2.dir/main.cpp.o -MF CMakeFiles/Lab_2.dir/main.cpp.o.d -o CMakeFiles/Lab_2.dir/main.cpp.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab_2.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_2.dir/main.cpp.o -MF CMakeFiles/Lab_2.dir/main.cpp.o.d -o CMakeFiles/Lab_2.dir/main.cpp.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/main.cpp"
 
 CMakeFiles/Lab_2.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab_2.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/main.cpp" > CMakeFiles/Lab_2.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/main.cpp" > CMakeFiles/Lab_2.dir/main.cpp.i
 
 CMakeFiles/Lab_2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab_2.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/main.cpp" -o CMakeFiles/Lab_2.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/main.cpp" -o CMakeFiles/Lab_2.dir/main.cpp.s
 
 CMakeFiles/Lab_2.dir/problema1.cpp.o: CMakeFiles/Lab_2.dir/flags.make
-CMakeFiles/Lab_2.dir/problema1.cpp.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema1.cpp
+CMakeFiles/Lab_2.dir/problema1.cpp.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema1.cpp
 CMakeFiles/Lab_2.dir/problema1.cpp.o: CMakeFiles/Lab_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Lab_2.dir/problema1.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_2.dir/problema1.cpp.o -MF CMakeFiles/Lab_2.dir/problema1.cpp.o.d -o CMakeFiles/Lab_2.dir/problema1.cpp.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema1.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Lab_2.dir/problema1.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_2.dir/problema1.cpp.o -MF CMakeFiles/Lab_2.dir/problema1.cpp.o.d -o CMakeFiles/Lab_2.dir/problema1.cpp.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema1.cpp"
 
 CMakeFiles/Lab_2.dir/problema1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab_2.dir/problema1.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema1.cpp" > CMakeFiles/Lab_2.dir/problema1.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema1.cpp" > CMakeFiles/Lab_2.dir/problema1.cpp.i
 
 CMakeFiles/Lab_2.dir/problema1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab_2.dir/problema1.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema1.cpp" -o CMakeFiles/Lab_2.dir/problema1.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema1.cpp" -o CMakeFiles/Lab_2.dir/problema1.cpp.s
 
 CMakeFiles/Lab_2.dir/problema2.cpp.o: CMakeFiles/Lab_2.dir/flags.make
-CMakeFiles/Lab_2.dir/problema2.cpp.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema2.cpp
+CMakeFiles/Lab_2.dir/problema2.cpp.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema2.cpp
 CMakeFiles/Lab_2.dir/problema2.cpp.o: CMakeFiles/Lab_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Lab_2.dir/problema2.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_2.dir/problema2.cpp.o -MF CMakeFiles/Lab_2.dir/problema2.cpp.o.d -o CMakeFiles/Lab_2.dir/problema2.cpp.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema2.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Lab_2.dir/problema2.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_2.dir/problema2.cpp.o -MF CMakeFiles/Lab_2.dir/problema2.cpp.o.d -o CMakeFiles/Lab_2.dir/problema2.cpp.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema2.cpp"
 
 CMakeFiles/Lab_2.dir/problema2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab_2.dir/problema2.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema2.cpp" > CMakeFiles/Lab_2.dir/problema2.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema2.cpp" > CMakeFiles/Lab_2.dir/problema2.cpp.i
 
 CMakeFiles/Lab_2.dir/problema2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab_2.dir/problema2.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema2.cpp" -o CMakeFiles/Lab_2.dir/problema2.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema2.cpp" -o CMakeFiles/Lab_2.dir/problema2.cpp.s
 
 CMakeFiles/Lab_2.dir/problema3.cpp.o: CMakeFiles/Lab_2.dir/flags.make
-CMakeFiles/Lab_2.dir/problema3.cpp.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema3.cpp
+CMakeFiles/Lab_2.dir/problema3.cpp.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema3.cpp
 CMakeFiles/Lab_2.dir/problema3.cpp.o: CMakeFiles/Lab_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Lab_2.dir/problema3.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_2.dir/problema3.cpp.o -MF CMakeFiles/Lab_2.dir/problema3.cpp.o.d -o CMakeFiles/Lab_2.dir/problema3.cpp.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema3.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Lab_2.dir/problema3.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_2.dir/problema3.cpp.o -MF CMakeFiles/Lab_2.dir/problema3.cpp.o.d -o CMakeFiles/Lab_2.dir/problema3.cpp.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema3.cpp"
 
 CMakeFiles/Lab_2.dir/problema3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab_2.dir/problema3.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema3.cpp" > CMakeFiles/Lab_2.dir/problema3.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema3.cpp" > CMakeFiles/Lab_2.dir/problema3.cpp.i
 
 CMakeFiles/Lab_2.dir/problema3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab_2.dir/problema3.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema3.cpp" -o CMakeFiles/Lab_2.dir/problema3.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema3.cpp" -o CMakeFiles/Lab_2.dir/problema3.cpp.s
 
 CMakeFiles/Lab_2.dir/problema_4.cpp.o: CMakeFiles/Lab_2.dir/flags.make
-CMakeFiles/Lab_2.dir/problema_4.cpp.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema\ 4.cpp
+CMakeFiles/Lab_2.dir/problema_4.cpp.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema\ 4.cpp
 CMakeFiles/Lab_2.dir/problema_4.cpp.o: CMakeFiles/Lab_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Lab_2.dir/problema_4.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_2.dir/problema_4.cpp.o -MF CMakeFiles/Lab_2.dir/problema_4.cpp.o.d -o CMakeFiles/Lab_2.dir/problema_4.cpp.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema 4.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Lab_2.dir/problema_4.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_2.dir/problema_4.cpp.o -MF CMakeFiles/Lab_2.dir/problema_4.cpp.o.d -o CMakeFiles/Lab_2.dir/problema_4.cpp.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema 4.cpp"
 
 CMakeFiles/Lab_2.dir/problema_4.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab_2.dir/problema_4.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema 4.cpp" > CMakeFiles/Lab_2.dir/problema_4.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema 4.cpp" > CMakeFiles/Lab_2.dir/problema_4.cpp.i
 
 CMakeFiles/Lab_2.dir/problema_4.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab_2.dir/problema_4.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema 4.cpp" -o CMakeFiles/Lab_2.dir/problema_4.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema 4.cpp" -o CMakeFiles/Lab_2.dir/problema_4.cpp.s
 
 CMakeFiles/Lab_2.dir/problema5.cpp.o: CMakeFiles/Lab_2.dir/flags.make
-CMakeFiles/Lab_2.dir/problema5.cpp.o: /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema5.cpp
+CMakeFiles/Lab_2.dir/problema5.cpp.o: /mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema5.cpp
 CMakeFiles/Lab_2.dir/problema5.cpp.o: CMakeFiles/Lab_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Lab_2.dir/problema5.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_2.dir/problema5.cpp.o -MF CMakeFiles/Lab_2.dir/problema5.cpp.o.d -o CMakeFiles/Lab_2.dir/problema5.cpp.o -c "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema5.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Lab_2.dir/problema5.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_2.dir/problema5.cpp.o -MF CMakeFiles/Lab_2.dir/problema5.cpp.o.d -o CMakeFiles/Lab_2.dir/problema5.cpp.o -c "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema5.cpp"
 
 CMakeFiles/Lab_2.dir/problema5.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab_2.dir/problema5.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema5.cpp" > CMakeFiles/Lab_2.dir/problema5.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema5.cpp" > CMakeFiles/Lab_2.dir/problema5.cpp.i
 
 CMakeFiles/Lab_2.dir/problema5.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab_2.dir/problema5.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema5.cpp" -o CMakeFiles/Lab_2.dir/problema5.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema5.cpp" -o CMakeFiles/Lab_2.dir/problema5.cpp.s
 
 # Object files for target Lab_2
 Lab_2_OBJECTS = \
@@ -173,7 +173,7 @@ Lab_2: CMakeFiles/Lab_2.dir/problema_4.cpp.o
 Lab_2: CMakeFiles/Lab_2.dir/problema5.cpp.o
 Lab_2: CMakeFiles/Lab_2.dir/build.make
 Lab_2: CMakeFiles/Lab_2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Lab_2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Lab_2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Lab_2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -185,6 +185,6 @@ CMakeFiles/Lab_2.dir/clean:
 .PHONY : CMakeFiles/Lab_2.dir/clean
 
 CMakeFiles/Lab_2.dir/depend:
-	cd "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug" "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles/Lab_2.dir/DependInfo.cmake" "--color=$(COLOR)"
+	cd "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug" "/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/cmake-build-debug/CMakeFiles/Lab_2.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/Lab_2.dir/depend
 
