@@ -7,6 +7,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/Lab_2.dir/problema2.cpp.o.d"
   "CMakeFiles/Lab_2.dir/problema3.cpp.o"
   "CMakeFiles/Lab_2.dir/problema3.cpp.o.d"
+  "CMakeFiles/Lab_2.dir/problema5.cpp.o"
+  "CMakeFiles/Lab_2.dir/problema5.cpp.o.d"
+  "CMakeFiles/Lab_2.dir/problema_4.cpp.o"
+  "CMakeFiles/Lab_2.dir/problema_4.cpp.o.d"
   "Lab_2"
   "Lab_2.pdb"
 )

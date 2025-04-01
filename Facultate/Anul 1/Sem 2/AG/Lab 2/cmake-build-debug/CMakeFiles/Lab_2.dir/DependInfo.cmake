@@ -12,6 +12,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema1.cpp" "CMakeFiles/Lab_2.dir/problema1.cpp.o" "gcc" "CMakeFiles/Lab_2.dir/problema1.cpp.o.d"
   "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema2.cpp" "CMakeFiles/Lab_2.dir/problema2.cpp.o" "gcc" "CMakeFiles/Lab_2.dir/problema2.cpp.o.d"
   "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema3.cpp" "CMakeFiles/Lab_2.dir/problema3.cpp.o" "gcc" "CMakeFiles/Lab_2.dir/problema3.cpp.o.d"
+  "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema5.cpp" "CMakeFiles/Lab_2.dir/problema5.cpp.o" "gcc" "CMakeFiles/Lab_2.dir/problema5.cpp.o.d"
+  "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/Lab 2/problema 4.cpp" "CMakeFiles/Lab_2.dir/problema_4.cpp.o" "gcc" "CMakeFiles/Lab_2.dir/problema_4.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

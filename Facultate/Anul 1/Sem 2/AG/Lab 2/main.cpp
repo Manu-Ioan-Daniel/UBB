@@ -1,8 +1,10 @@
 #include <iostream>
 
+#include "problema 4.h"
 #include "problema1.h"
 #include "problema2.h"
 #include "problema3.h"
+#include "problema5.h"
 
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -22,10 +24,10 @@ int main() {
                 problema3();
                 break;
             case 4:
-                //problema4();
+                problema4();
                 break;
             case 5:
-                //problema5();
+                problema5();
                 break;
             case 0:
                 return 0;

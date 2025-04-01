@@ -1,7 +1,8 @@
-CMakeFiles/Lab_2.dir/main.cpp.o: \
- /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
- /usr/include/c++/13/bits/requires_hosted.h \
+CMakeFiles/Lab_2.dir/problema_4.cpp.o: \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema\ 4.cpp \
+ /usr/include/stdc-predef.h \
+ /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema\ 4.h \
+ /usr/include/c++/13/fstream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -12,7 +13,7 @@ CMakeFiles/Lab_2.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
- /usr/include/c++/13/pstl/pstl_config.h /usr/include/c++/13/ostream \
+ /usr/include/c++/13/pstl/pstl_config.h /usr/include/c++/13/istream \
  /usr/include/c++/13/ios /usr/include/c++/13/iosfwd \
  /usr/include/c++/13/bits/stringfwd.h \
  /usr/include/c++/13/bits/memoryfwd.h /usr/include/c++/13/bits/postypes.h \
@@ -152,11 +153,16 @@ CMakeFiles/Lab_2.dir/main.cpp.o: \
  /usr/include/c++/13/bits/streambuf_iterator.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
  /usr/include/c++/13/bits/locale_facets.tcc \
- /usr/include/c++/13/bits/basic_ios.tcc \
- /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc \
- /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema\ 4.h \
- /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema1.h \
- /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema2.h \
- /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema3.h \
- /mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/AG/Lab\ 2/problema5.h
+ /usr/include/c++/13/bits/basic_ios.tcc /usr/include/c++/13/ostream \
+ /usr/include/c++/13/bits/ostream.tcc \
+ /usr/include/c++/13/bits/istream.tcc /usr/include/c++/13/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
+ /usr/include/c++/13/bits/fstream.tcc /usr/include/c++/13/iostream \
+ /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
+ /usr/include/c++/13/bits/stl_vector.h \
+ /usr/include/c++/13/bits/stl_bvector.h \
+ /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/queue \
+ /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
+ /usr/include/c++/13/bits/deque.tcc /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/stl_queue.h

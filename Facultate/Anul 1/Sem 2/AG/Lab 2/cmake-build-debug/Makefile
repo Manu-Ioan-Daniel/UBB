@@ -225,6 +225,54 @@ problema3.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2.dir/build.make CMakeFiles/Lab_2.dir/problema3.cpp.s
 .PHONY : problema3.cpp.s
 
+problema5.o: problema5.cpp.o
+.PHONY : problema5.o
+
+# target to build an object file
+problema5.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2.dir/build.make CMakeFiles/Lab_2.dir/problema5.cpp.o
+.PHONY : problema5.cpp.o
+
+problema5.i: problema5.cpp.i
+.PHONY : problema5.i
+
+# target to preprocess a source file
+problema5.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2.dir/build.make CMakeFiles/Lab_2.dir/problema5.cpp.i
+.PHONY : problema5.cpp.i
+
+problema5.s: problema5.cpp.s
+.PHONY : problema5.s
+
+# target to generate assembly for a file
+problema5.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2.dir/build.make CMakeFiles/Lab_2.dir/problema5.cpp.s
+.PHONY : problema5.cpp.s
+
+problema_4.o: problema_4.cpp.o
+.PHONY : problema_4.o
+
+# target to build an object file
+problema_4.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2.dir/build.make CMakeFiles/Lab_2.dir/problema_4.cpp.o
+.PHONY : problema_4.cpp.o
+
+problema_4.i: problema_4.cpp.i
+.PHONY : problema_4.i
+
+# target to preprocess a source file
+problema_4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2.dir/build.make CMakeFiles/Lab_2.dir/problema_4.cpp.i
+.PHONY : problema_4.cpp.i
+
+problema_4.s: problema_4.cpp.s
+.PHONY : problema_4.s
+
+# target to generate assembly for a file
+problema_4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab_2.dir/build.make CMakeFiles/Lab_2.dir/problema_4.cpp.s
+.PHONY : problema_4.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,6 +294,12 @@ help:
 	@echo "... problema3.o"
 	@echo "... problema3.i"
 	@echo "... problema3.s"
+	@echo "... problema5.o"
+	@echo "... problema5.i"
+	@echo "... problema5.s"
+	@echo "... problema_4.o"
+	@echo "... problema_4.i"
+	@echo "... problema_4.s"
 .PHONY : help
 
 
