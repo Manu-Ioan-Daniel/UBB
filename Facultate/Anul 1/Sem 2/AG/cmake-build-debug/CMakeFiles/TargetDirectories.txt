@@ -1,3 +1,0 @@
-C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/cmake-build-debug/CMakeFiles/AG.dir
-C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/AG/cmake-build-debug/CMakeFiles/rebuild_cache.dir
