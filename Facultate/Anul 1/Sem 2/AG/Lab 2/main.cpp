@@ -2,6 +2,7 @@
 
 #include "problema1.h"
 #include "problema2.h"
+#include "problema3.h"
 
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -18,7 +19,7 @@ int main() {
                 problema2();
                 break;
             case 3:
-                //problema3();
+                problema3();
                 break;
             case 4:
                 //problema4();
