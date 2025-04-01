@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Lab_1.dir/Proiect_C++/App.cpp.o CMakeFiles/Lab_1.dir/Proiect_C++/Dictionar.cpp.o CMakeFiles/Lab_1.dir/Proiect_C++/IteratorDictionar.cpp.o CMakeFiles/Lab_1.dir/Teste/TestExtins.cpp.o CMakeFiles/Lab_1.dir/Teste/TestScurt.cpp.o -o Lab_1 
