@@ -1,0 +1,1109 @@
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 1/Teste/TestExtins.cpp
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\STD\Lab 1\cmake-build-debug-coverage\CMakeFiles\Lab_1.dir\Teste\TestExtins.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\STD\Lab 1\cmake-build-debug-coverage\CMakeFiles\Lab_1.dir\Teste\TestExtins.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "TestExtins.h"
+        -:    2:#include "Dictionar.h"
+        -:    3:#include "IteratorDictionar.h"
+        -:    4:#include <assert.h>
+        -:    5:#include <iostream>
+        -:    6:
+        -:    7:using namespace std;
+        -:    8:
+        -:    9:
+function _Z6printDR9Dictionar called 0 returned 0% blocks executed 0%
+    #####:   10:void printD(Dictionar& d){
+    #####:   11:	TElem e;
+    #####:   12:	IteratorDictionar id = d.iterator();
+    %%%%%:   12-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   13:	while (id.valid()){
+    %%%%%:   13-block  0
+    %%%%%:   13-block  1
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   13-block  2
+branch  3 never executed
+branch  4 never executed (fallthrough)
+    #####:   14:		e = id.element();
+    %%%%%:   14-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   14-block  1
+call    3 never executed
+    $$$$$:   14-block  2
+    #####:   15:		cout << " ( " << e.first << " , " << e.second << " ) ";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   15-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   15-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   15-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   15-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    #####:   16:		id.urmator();
+    %%%%%:   16-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   17:	}
+    #####:   18:	cout << std::endl;
+    %%%%%:   18-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   19:	cout << std::endl;
+    %%%%%:   19-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   20:}
+    %%%%%:   20-block  0
+        -:   21:
+        -:   22:
+function _Z11testCreeazav called 1 returned 100% blocks executed 79%
+        1:   23:void testCreeaza() {
+        1:   24:	Dictionar d;
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   25:	assert(d.dim() == 0);
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   25-block  2
+call    5 never executed
+        1:   25-block  3
+       1*:   26:	assert(d.vid() == true);
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   26-block  2
+call    5 never executed
+        1:   26-block  3
+        -:   27:
+       21:   28:	for (int i = -10; i < 10; i++) { //cautam in container vid
+        1:   28-block  0
+       20:   28-block  1
+       21:   28-block  2
+branch  0 taken 20
+branch  1 taken 1 (fallthrough)
+      20*:   29:		assert(d.cauta(i) == NULL_TVALOARE);
+       20:   29-block  0
+call    0 returned 20
+branch  1 taken 20 (fallthrough)
+branch  2 taken 0 (throw)
+       20:   29-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 20
+    %%%%%:   29-block  2
+call    5 never executed
+       20:   29-block  3
+        -:   30:	}
+       21:   31:	for (int i = -10; i < 10; i++) { //stergem din container vid
+        1:   31-block  0
+       20:   31-block  1
+       21:   31-block  2
+branch  0 taken 20
+branch  1 taken 1 (fallthrough)
+      20*:   32:		assert(d.sterge(i) == NULL_TVALOARE);
+       20:   32-block  0
+call    0 returned 20
+branch  1 taken 20 (fallthrough)
+branch  2 taken 0 (throw)
+       20:   32-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 20
+    %%%%%:   32-block  2
+call    5 never executed
+       20:   32-block  3
+        -:   33:	}
+        -:   34:
+        1:   35:	IteratorDictionar id = d.iterator(); //iterator pe multimea vida ar trebui sa fie invalid din start
+        1:   35-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   36:	assert(id.valid() == false);
+        1:   36-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   36-block  2
+call    5 never executed
+        1:   36-block  3
+        -:   37:	//printD(d);
+        1:   38:}
+        1:   38-block  0
+call    0 returned 1
+    $$$$$:   38-block  1
+call    1 never executed
+        -:   39:
+        -:   40:
+function _Z10testAdaugav called 1 returned 100% blocks executed 83%
+        1:   41:void testAdauga() {
+        1:   42:	Dictionar d; //adaugam elemente [0, 10)
+        1:   42-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   43:	for (int i = 0; i < 10; i++) {
+        1:   43-block  0
+       10:   43-block  1
+       11:   43-block  2
+branch  0 taken 10
+branch  1 taken 1 (fallthrough)
+       10:   44:		d.adauga(i,i);
+       10:   44-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   45:	}
+        -:   46:	//printD(d);
+       1*:   47:	assert(d.vid() == false);
+        1:   47-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   47-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   47-block  2
+call    5 never executed
+        1:   47-block  3
+       1*:   48:	assert(d.dim() == 10);
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   48-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   48-block  2
+call    5 never executed
+        1:   48-block  3
+       31:   49:	for (int i = -10; i < 20; i++) { //mai adaugam elemente [-10, 20)
+        1:   49-block  0
+       30:   49-block  1
+       31:   49-block  2
+branch  0 taken 30
+branch  1 taken 1 (fallthrough)
+       30:   50:		d.adauga(i,i);
+       30:   50-block  0
+call    0 returned 30
+branch  1 taken 30 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   51:	}
+        -:   52:	//printD(d);
+       1*:   53:	assert(d.vid() == false);
+        1:   53-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   53-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   53-block  2
+call    5 never executed
+        1:   53-block  3
+       1*:   54:	assert(d.dim() == 30);
+        1:   54-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   54-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   54-block  2
+call    5 never executed
+        1:   54-block  3
+      201:   55:	for (int i = -100; i < 100; i++) { //mai adaugam elemente [-100, 100)
+        1:   55-block  0
+      200:   55-block  1
+      201:   55-block  2
+branch  0 taken 200
+branch  1 taken 1 (fallthrough)
+      200:   56:		d.adauga(i,i);
+      200:   56-block  0
+call    0 returned 200
+branch  1 taken 200 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   57:	}
+        -:   58:	//printD(d);
+       1*:   59:	assert(d.vid() == false);
+        1:   59-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   59-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   59-block  2
+call    5 never executed
+        1:   59-block  3
+       1*:   60:	assert(d.dim() == 200);
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   60-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   60-block  2
+call    5 never executed
+        1:   60-block  3
+      401:   61:	for (int i = -200; i < 200; i++) {
+        1:   61-block  0
+      400:   61-block  1
+      401:   61-block  2
+branch  0 taken 400
+branch  1 taken 1 (fallthrough)
+      400:   62:		if (i < -100) {
+      400:   62-block  0
+branch  0 taken 100 (fallthrough)
+branch  1 taken 300
+     100*:   63:			assert(d.cauta(i) == NULL_TVALOARE	);
+      100:   63-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+      100:   63-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 100
+    %%%%%:   63-block  2
+call    5 never executed
+      100:   63-block  3
+        -:   64:		}
+      300:   65:		else if (i < 0) {
+      300:   65-block  0
+branch  0 taken 100 (fallthrough)
+branch  1 taken 200
+     100*:   66:			assert(d.cauta(i) == i);
+      100:   66-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+      100:   66-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 100
+    %%%%%:   66-block  2
+call    5 never executed
+      100:   66-block  3
+        -:   67:		}
+      200:   68:		else if (i < 100) {
+      200:   68-block  0
+branch  0 taken 100 (fallthrough)
+branch  1 taken 100
+     100*:   69:			assert(d.cauta(i) == i);
+      100:   69-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+      100:   69-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 100
+    %%%%%:   69-block  2
+call    5 never executed
+      100:   69-block  3
+        -:   70:		}
+        -:   71:		else {
+     100*:   72:			assert(d.cauta(i) == NULL_TVALOARE);
+      100:   72-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+      100:   72-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 100
+    %%%%%:   72-block  2
+call    5 never executed
+      100:   72-block  3
+        -:   73:		}
+        -:   74:	}
+    20001:   75:	for (int i = 10000; i > -10000; i--) { //adaugam mult, si acum prima data adaugam valori mari, dupa aceea mici
+        1:   75-block  0
+    20000:   75-block  1
+    20001:   75-block  2
+branch  0 taken 20000
+branch  1 taken 1 (fallthrough)
+    20000:   76:		d.adauga(i,i);
+    20000:   76-block  0
+call    0 returned 20000
+branch  1 taken 20000 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   77:	}
+       1*:   78:	assert(d.dim()==20000);
+        1:   78-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   78-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   78-block  2
+call    5 never executed
+        1:   78-block  3
+        1:   79:}
+        1:   79-block  0
+call    0 returned 1
+    $$$$$:   79-block  1
+call    1 never executed
+        -:   80:
+        -:   81:
+function _Z10testStergev called 1 returned 100% blocks executed 84%
+        1:   82:void testSterge() {
+        1:   83:	Dictionar d;
+        1:   83-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   84:
+      201:   85:	for (int i = -100; i < 100; i++) { //stergem din containerul vid
+        1:   85-block  0
+      200:   85-block  1
+      201:   85-block  2
+branch  0 taken 200
+branch  1 taken 1 (fallthrough)
+     200*:   86:		assert(d.sterge(i) == NULL_TVALOARE);
+      200:   86-block  0
+call    0 returned 200
+branch  1 taken 200 (fallthrough)
+branch  2 taken 0 (throw)
+      200:   86-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 200
+    %%%%%:   86-block  2
+call    5 never executed
+      200:   86-block  3
+        -:   87:	}
+       1*:   88:	assert(d.dim() == 0);
+        1:   88-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   88-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   88-block  2
+call    5 never executed
+        1:   88-block  3
+        -:   89:	//printD(d);
+      101:   90:	for (int i = -100; i < 100; i = i + 2) { //adaugam elemente din 2 in 2 (numere pare)
+        1:   90-block  0
+      100:   90-block  1
+      101:   90-block  2
+branch  0 taken 100
+branch  1 taken 1 (fallthrough)
+      100:   91:		d.adauga(i,i);
+      100:   91-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   92:	}
+      201:   93:	for (int i = -100; i < 100; i++) { //stergem tot (inclusiv elemente inexistente)
+        1:   93-block  0
+      200:   93-block  1
+      201:   93-block  2
+branch  0 taken 200
+branch  1 taken 1 (fallthrough)
+      200:   94:		if (i % 2 == 0) {
+      200:   94-block  0
+branch  0 taken 100 (fallthrough)
+branch  1 taken 100
+     100*:   95:			assert(d.sterge(i) == i);
+      100:   95-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+      100:   95-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 100
+    %%%%%:   95-block  2
+call    5 never executed
+      100:   95-block  3
+        -:   96:		}
+        -:   97:		else {
+     100*:   98:			assert(d.sterge(i) == NULL_TVALOARE);
+      100:   98-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+      100:   98-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 100
+    %%%%%:   98-block  2
+call    5 never executed
+      100:   98-block  3
+        -:   99:		}
+        -:  100:	}
+       1*:  101:	assert(d.dim() == 0);
+        1:  101-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  101-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  101-block  2
+call    5 never executed
+        1:  101-block  3
+        -:  102:	//printD(d);
+        -:  103:
+      102:  104:	for (int i = -100; i <= 100; i = i + 2) { //adaugam elemente din 2 in 2
+        1:  104-block  0
+      101:  104-block  1
+      102:  104-block  2
+branch  0 taken 101
+branch  1 taken 1 (fallthrough)
+      101:  105:		d.adauga(i,i);
+      101:  105-block  0
+call    0 returned 101
+branch  1 taken 101 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  106:	}
+        -:  107:	//printD(d);
+      201:  108:	for (int i = 100; i > -100; i--) { //stergem descrescator (in ordine inversa fata de ordinea adaugarii)
+        1:  108-block  0
+      200:  108-block  1
+      201:  108-block  2
+branch  0 taken 200
+branch  1 taken 1 (fallthrough)
+      200:  109:		if (i % 2 == 0) {
+      200:  109-block  0
+branch  0 taken 100 (fallthrough)
+branch  1 taken 100
+     100*:  110:			assert(d.sterge(i) == i);
+      100:  110-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+      100:  110-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 100
+    %%%%%:  110-block  2
+call    5 never executed
+      100:  110-block  3
+        -:  111:		}
+        -:  112:		else {
+     100*:  113:			assert(d.sterge(i) == NULL_TVALOARE);
+      100:  113-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+      100:  113-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 100
+    %%%%%:  113-block  2
+call    5 never executed
+      100:  113-block  3
+        -:  114:		}
+        -:  115:	}
+        -:  116:
+       1*:  117:	assert(d.dim() == 1);
+        1:  117-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  117-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  117-block  2
+call    5 never executed
+        1:  117-block  3
+        -:  118:	//printD(d);
+        -:  119:
+        1:  120:	d.sterge(-100);
+        1:  120-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  121:	assert(d.dim() == 0);
+        1:  121-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  121-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  121-block  2
+call    5 never executed
+        1:  121-block  3
+        -:  122:
+      201:  123:	for (int i = -100; i < 100; i++) { //adaugam de 5 ori pe fiecare element
+        1:  123-block  0
+      200:  123-block  1
+      201:  123-block  2
+branch  0 taken 200
+branch  1 taken 1 (fallthrough)
+      200:  124:		d.adauga(i,0);
+      200:  124-block  0
+call    0 returned 200
+branch  1 taken 200 (fallthrough)
+branch  2 taken 0 (throw)
+      200:  125:		d.adauga(i,1);
+      200:  125-block  0
+call    0 returned 200
+branch  1 taken 200 (fallthrough)
+branch  2 taken 0 (throw)
+      200:  126:		d.adauga(i,2);
+      200:  126-block  0
+call    0 returned 200
+branch  1 taken 200 (fallthrough)
+branch  2 taken 0 (throw)
+      200:  127:		d.adauga(i,3);
+      200:  127-block  0
+call    0 returned 200
+branch  1 taken 200 (fallthrough)
+branch  2 taken 0 (throw)
+      200:  128:		d.adauga(i,4);
+      200:  128-block  0
+call    0 returned 200
+branch  1 taken 200 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  129:	}
+        -:  130:	//printD(d);
+       1*:  131:	assert(d.dim() == 200);
+        1:  131-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  131-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  131-block  2
+call    5 never executed
+        1:  131-block  3
+      401:  132:	for (int i = -200; i < 200; i++) { //stergem elemente inexistente si existente
+        1:  132-block  0
+      400:  132-block  1
+      401:  132-block  2
+branch  0 taken 400
+branch  1 taken 1 (fallthrough)
+      400:  133:		if (i < -100 || i >= 100) {
+      400:  133-block  0
+branch  0 taken 300 (fallthrough)
+branch  1 taken 100
+      300:  133-block  1
+branch  2 taken 100 (fallthrough)
+branch  3 taken 200
+     200*:  134:			assert(d.sterge(i) == NULL_TVALOARE);
+      200:  134-block  0
+call    0 returned 200
+branch  1 taken 200 (fallthrough)
+branch  2 taken 0 (throw)
+      200:  134-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 200
+    %%%%%:  134-block  2
+call    5 never executed
+      200:  134-block  3
+        -:  135:		}
+        -:  136:		else {
+     200*:  137:			assert(d.sterge(i) == 4);
+      200:  137-block  0
+call    0 returned 200
+branch  1 taken 200 (fallthrough)
+branch  2 taken 0 (throw)
+      200:  137-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 200
+    %%%%%:  137-block  2
+call    5 never executed
+      200:  137-block  3
+     200*:  138:			assert(d.sterge(i) == NULL_TVALOARE);
+      200:  138-block  0
+call    0 returned 200
+branch  1 taken 200 (fallthrough)
+branch  2 taken 0 (throw)
+      200:  138-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 200
+    %%%%%:  138-block  2
+call    5 never executed
+      200:  138-block  3
+        -:  139:		}
+        -:  140:	}
+       1*:  141:	assert(d.dim() == 0);
+        1:  141-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  141-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  141-block  2
+call    5 never executed
+        1:  141-block  3
+        -:  142:
+        1:  143: }
+        1:  143-block  0
+call    0 returned 1
+    $$$$$:  143-block  1
+call    1 never executed
+        -:  144:
+        -:  145:
+        -:  146:
+function _Z12testIteratorv called 1 returned 100% blocks executed 80%
+        1:  147:void testIterator() {
+        1:  148:	Dictionar d;
+        1:  148-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  149:	IteratorDictionar id = d.iterator(); //iterator pe container vid
+        1:  149-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  150:	assert(id.valid() == false);
+        1:  150-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  150-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  150-block  2
+call    5 never executed
+        1:  150-block  3
+        -:  151:
+      101:  152:	for (int i = 0; i < 100; i++) {  //adaug de 100 de ori valoarea 33
+        1:  152-block  0
+      100:  152-block  1
+      101:  152-block  2
+branch  0 taken 100
+branch  1 taken 1 (fallthrough)
+      100:  153:		d.adauga(33,33);
+      100:  153-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  154:	}
+        1:  155:	IteratorDictionar id2 = d.iterator(); //daca iterez doar 33 poate sa-mi dea iteratorul
+        1:  155-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  156:	assert(id2.valid() == true);
+        1:  156-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  156-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  156-block  2
+call    5 never executed
+        1:  156-block  3
+        1:  157:	TElem el = id2.element();
+        1:  157-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  158:	assert(el.first == 33);
+        1:  158-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  158-block  1
+call    2 never executed
+        1:  158-block  2
+        1:  159:	id2.urmator();
+        1:  159-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  160:	assert(id2.valid() == false);
+        1:  160-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  160-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  160-block  2
+call    5 never executed
+        1:  160-block  3
+        -:  161:
+        1:  162:	id2.prim(); //resetam pe primul elemente
+        1:  162-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  163:	assert(id2.valid() == true);
+        1:  163-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  163-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  163-block  2
+call    5 never executed
+        1:  163-block  3
+        -:  164:
+        1:  165:	Dictionar d2;
+        1:  165-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+      201:  166:	for (int i = -100; i < 100; i++) { //adaug 200 de elemente, fiecare de 3 ori
+        1:  166-block  0
+      200:  166-block  1
+      201:  166-block  2
+branch  0 taken 200
+branch  1 taken 1 (fallthrough)
+      200:  167:		d2.adauga(i,i);
+      200:  167-block  0
+call    0 returned 200
+branch  1 taken 200 (fallthrough)
+branch  2 taken 0 (throw)
+      200:  168:		d2.adauga(i,i);
+      200:  168-block  0
+call    0 returned 200
+branch  1 taken 200 (fallthrough)
+branch  2 taken 0 (throw)
+      200:  169:		d2.adauga(i,i);
+      200:  169-block  0
+call    0 returned 200
+branch  1 taken 200 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  170:	}
+        1:  171:	IteratorDictionar id3 = d2.iterator();
+        1:  171-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  172:	assert(id3.valid() == true);
+        1:  172-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  172-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  172-block  2
+call    5 never executed
+        1:  172-block  3
+      201:  173:	for (int i = 0; i < 200; i++) {
+        1:  173-block  0
+      200:  173-block  1
+      201:  173-block  2
+branch  0 taken 200
+branch  1 taken 1 (fallthrough)
+      200:  174:		id3.urmator();
+      200:  174-block  0
+call    0 returned 200
+branch  1 taken 200 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  175:	}
+       1*:  176:	assert(id3.valid() == false);
+        1:  176-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  176-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  176-block  2
+call    5 never executed
+        1:  176-block  3
+        1:  177:	id3.prim();
+        1:  177-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  178:	assert(id3.valid() == true);
+        1:  178-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  178-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  178-block  2
+call    5 never executed
+        1:  178-block  3
+        -:  179:
+        1:  180:	Dictionar d3;
+        1:  180-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       51:  181:	for (int i = 0; i < 200; i= i + 4) { //adaugam doar multipli de 4
+        1:  181-block  0
+       50:  181-block  1
+       51:  181-block  2
+branch  0 taken 50
+branch  1 taken 1 (fallthrough)
+       50:  182:		d3.adauga(i,i);
+       50:  182-block  0
+call    0 returned 50
+branch  1 taken 50 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  183:	}
+        -:  184:
+        1:  185:	IteratorDictionar id4 = d3.iterator();
+        1:  185-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  186:	assert(id4.valid() == true);
+        1:  186-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  186-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  186-block  2
+call    5 never executed
+        1:  186-block  3
+        1:  187:	int count = 0;
+       51:  188:	while (id4.valid()) { //fiecare element e multiplu de 4 si sunt in total 50 de elemente
+        1:  188-block  0
+       51:  188-block  1
+call    0 returned 51
+branch  1 taken 51 (fallthrough)
+branch  2 taken 0 (throw)
+       51:  188-block  2
+branch  3 taken 50
+branch  4 taken 1 (fallthrough)
+       50:  189:		TElem e = id4.element();
+       50:  189-block  0
+call    0 returned 50
+branch  1 taken 50 (fallthrough)
+branch  2 taken 0 (throw)
+      50*:  190:		assert(e.first % 4 == 0);
+       50:  190-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 50
+    %%%%%:  190-block  1
+call    2 never executed
+       50:  190-block  2
+       50:  191:		id4.urmator();
+       50:  191-block  0
+call    0 returned 50
+branch  1 taken 50 (fallthrough)
+branch  2 taken 0 (throw)
+       50:  192:		count++;
+       50:  192-block  0
+        -:  193:	}
+       1*:  194:	assert(count == 50);
+        1:  194-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  194-block  1
+call    2 never executed
+        1:  194-block  2
+        -:  195:
+        1:  196:}
+        1:  196-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  196-block  1
+call    3 never executed
+    $$$$$:  196-block  2
+call    4 never executed
+    $$$$$:  196-block  3
+call    5 never executed
+        -:  197:
+        -:  198:
+        -:  199:
+function _Z12testQuantityv called 1 returned 100% blocks executed 85%
+        1:  200:void testQuantity() {//scopul e sa adaugam multe date
+        1:  201:	Dictionar d;
+        1:  201-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  202:
+       11:  203:	for (int i = 10; i >= 1; i--) {
+        1:  203-block  0
+       10:  203-block  1
+       11:  203-block  2
+branch  0 taken 10
+branch  1 taken 1 (fallthrough)
+   175749:  204:		for (int j = -30000; j < 30000; j = j + i) {
+       10:  204-block  0
+   175739:  204-block  1
+   175749:  204-block  2
+branch  0 taken 175739
+branch  1 taken 10 (fallthrough)
+   175739:  205:			d.adauga(j,j);
+   175739:  205-block  0
+call    0 returned 175739
+branch  1 taken 175739 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  206:		}
+        -:  207:	}
+       1*:  208:	assert(d.dim() == 60000);
+        1:  208-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  208-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  208-block  2
+call    5 never executed
+        1:  208-block  3
+        1:  209:	IteratorDictionar id = d.iterator();
+        1:  209-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  210:	assert(id.valid() == true);
+        1:  210-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  210-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  210-block  2
+call    5 never executed
+        1:  210-block  3
+    60001:  211:	for (int i = 0; i < d.dim(); i++) {
+        1:  211-block  0
+    60000:  211-block  1
+    60001:  211-block  2
+call    0 returned 60001
+branch  1 taken 60001 (fallthrough)
+branch  2 taken 0 (throw)
+    60001:  211-block  3
+branch  3 taken 60000
+branch  4 taken 1 (fallthrough)
+    60000:  212:		id.urmator();
+    60000:  212-block  0
+call    0 returned 60000
+branch  1 taken 60000 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  213:	}
+        1:  214:	id.prim();
+        1:  214-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    60001:  215:	while (id.valid()) { //fiecare element returnat de iterator trebuie sa fie in container
+        1:  215-block  0
+    60001:  215-block  1
+call    0 returned 60001
+branch  1 taken 60001 (fallthrough)
+branch  2 taken 0 (throw)
+    60001:  215-block  2
+branch  3 taken 60000
+branch  4 taken 1 (fallthrough)
+    60000:  216:		TElem e = id.element();
+    60000:  216-block  0
+call    0 returned 60000
+branch  1 taken 60000 (fallthrough)
+branch  2 taken 0 (throw)
+   60000*:  217:		assert(d.cauta(e.first) == e.first);
+    60000:  217-block  0
+call    0 returned 60000
+branch  1 taken 60000 (fallthrough)
+branch  2 taken 0 (throw)
+    60000:  217-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 60000
+    %%%%%:  217-block  2
+call    5 never executed
+    60000:  217-block  3
+    60000:  218:		id.urmator();
+    60000:  218-block  0
+call    0 returned 60000
+branch  1 taken 60000 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  219:	}
+       1*:  220:	assert(id.valid() == false);
+        1:  220-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  220-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  220-block  2
+call    5 never executed
+        1:  220-block  3
+       11:  221:	for (int i = 0; i < 10; i++) { //stergem multe elemente existente si inexistente
+        1:  221-block  0
+       10:  221-block  1
+       11:  221-block  2
+branch  0 taken 10
+branch  1 taken 1 (fallthrough)
+   800020:  222:		for (int j = 40000; j >= -40000; j--) {
+       10:  222-block  0
+   800010:  222-block  1
+   800020:  222-block  2
+branch  0 taken 800010
+branch  1 taken 10 (fallthrough)
+   800010:  223:			d.sterge(j);
+   800010:  223-block  0
+call    0 returned 800010
+branch  1 taken 800010 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  224:		}
+        -:  225:	}
+       1*:  226:	assert(d.dim() == 0);
+        1:  226-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  226-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  226-block  2
+call    5 never executed
+        1:  226-block  3
+        1:  227:}
+        1:  227-block  0
+call    0 returned 1
+    $$$$$:  227-block  1
+call    1 never executed
+        -:  228:
+        -:  229:
+        -:  230:
+        -:  231:// nu stim reprezentarea, putem testa doar anumite lucruri generale, nu stim in ce ordine vor fi afisate elementele
+function _Z13testAllExtinsv called 1 returned 100% blocks executed 100%
+        1:  232:void testAllExtins() {
+        1:  233:	testCreeaza();
+        1:  233-block  0
+call    0 returned 1
+        1:  234:	testAdauga();
+call    0 returned 1
+        1:  235:	testSterge();
+call    0 returned 1
+        1:  236:	testIterator();
+call    0 returned 1
+        1:  237:	testQuantity();
+call    0 returned 1
+        1:  238:}

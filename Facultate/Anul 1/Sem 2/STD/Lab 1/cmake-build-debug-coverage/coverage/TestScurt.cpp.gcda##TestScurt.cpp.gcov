@@ -1,0 +1,241 @@
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 1/Teste/TestScurt.cpp
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\STD\Lab 1\cmake-build-debug-coverage\CMakeFiles\Lab_1.dir\Teste\TestScurt.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\STD\Lab 1\cmake-build-debug-coverage\CMakeFiles\Lab_1.dir\Teste\TestScurt.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "TestScurt.h"
+        -:    2:#include <assert.h>
+        -:    3:#include "Dictionar.h"
+        -:    4:#include "IteratorDictionar.h"
+        -:    5:
+        -:    6:
+function _Z7testAllv called 1 returned 100% blocks executed 75%
+        1:    7:void testAll() { //apelam fiecare functie sa vedem daca exista
+        1:    8:	Dictionar d;
+        1:    8-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:    9:	assert(d.vid() == true);
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    9-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:    9-block  2
+call    5 never executed
+        1:    9-block  3
+       1*:   10:	assert(d.dim() == 0); //adaug niste elemente
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   10-block  2
+call    5 never executed
+        1:   10-block  3
+       1*:   11:	assert(d.adauga(5,5)==NULL_TVALOARE);
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   11-block  2
+call    5 never executed
+        1:   11-block  3
+       1*:   12:	assert(d.adauga(1,111)==NULL_TVALOARE);
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   12-block  2
+call    5 never executed
+        1:   12-block  3
+       1*:   13:	assert(d.adauga(10,110)==NULL_TVALOARE);
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   13-block  2
+call    5 never executed
+        1:   13-block  3
+       1*:   14:	assert(d.adauga(7,7)==NULL_TVALOARE);
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   14-block  2
+call    5 never executed
+        1:   14-block  3
+       1*:   15:	assert(d.adauga(1,1)==111);
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   15-block  2
+call    5 never executed
+        1:   15-block  3
+       1*:   16:	assert(d.adauga(10,10)==110);
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   16-block  2
+call    5 never executed
+        1:   16-block  3
+       1*:   17:	assert(d.adauga(-3,-3)==NULL_TVALOARE);
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   17-block  2
+call    5 never executed
+        1:   17-block  3
+       1*:   18:	assert(d.dim() == 5);
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   18-block  2
+call    5 never executed
+        1:   18-block  3
+       1*:   19:	assert(d.cauta(10) == 10);
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   19-block  2
+call    5 never executed
+        1:   19-block  3
+       1*:   20:	assert(d.cauta(16) == -1);
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   20-block  2
+call    5 never executed
+        1:   20-block  3
+       1*:   21:	assert(d.sterge(1) == 1);
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   21-block  2
+call    5 never executed
+        1:   21-block  3
+       1*:   22:	assert(d.sterge(6) == -1);
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   22-block  2
+call    5 never executed
+        1:   22-block  3
+       1*:   23:	assert(d.dim() == 4);
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   23-block  2
+call    5 never executed
+        1:   23-block  3
+        -:   24:
+        -:   25:
+        1:   26:	TElem e;
+        1:   27:	IteratorDictionar id = d.iterator();
+        1:   27-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   28:	id.prim();
+        1:   28-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   29:	int s1 = 0, s2 = 0;
+        5:   30:	while (id.valid()) {
+        1:   30-block  0
+        5:   30-block  1
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   30-block  2
+branch  3 taken 4
+branch  4 taken 1 (fallthrough)
+        4:   31:		e = id.element();
+        4:   31-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   31-block  1
+call    3 returned 4
+    $$$$$:   31-block  2
+        4:   32:		s1 += e.first;
+        4:   33:		s2 += e.second;
+        4:   34:		id.urmator();
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   35:	}
+       1*:   36:	assert(s1 == 19);
+        1:   36-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   36-block  1
+call    2 never executed
+        1:   36-block  2
+       1*:   37:	assert(s2 == 19);
+        1:   37-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   37-block  1
+call    2 never executed
+        1:   37-block  2
+        -:   38:
+        1:   39:}
+        1:   39-block  0
+call    0 returned 1
+    $$$$$:   39-block  1
+call    1 never executed
+        -:   40:

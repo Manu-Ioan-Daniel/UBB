@@ -35,6 +35,8 @@ void testAll() { //apelam fiecare functie sa vedem daca exista
 	}
 	assert(s1 == 19);
 	assert(s2 == 19);
-
+	IteratorDictionar id2 = d.iterator();
+	id2.avanseazaKPasi(2);
+	assert(id2.element().first == 7);
 }
 

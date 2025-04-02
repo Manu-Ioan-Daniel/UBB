@@ -1,0 +1,91 @@
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 1/Proiect C++/Dictionar.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\STD\Lab 1\cmake-build-debug-coverage\CMakeFiles\Lab_1.dir\Proiect_C++\Dictionar.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\STD\Lab 1\cmake-build-debug-coverage\CMakeFiles\Lab_1.dir\Proiect_C++\Dictionar.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:
+        -:    3:
+        -:    4:#define NULL_TVALOARE -1
+        -:    5:typedef int TCheie;
+        -:    6:typedef int TValoare;
+        -:    7:
+        -:    8:class IteratorDictionar;
+        -:    9:
+        -:   10:#include <utility>
+        -:   11:typedef std::pair<TCheie,TValoare> TElem;
+        -:   12:
+        -:   13:class Dictionar {
+        -:   14:	friend class IteratorDictionar;
+        -:   15:
+        -:   16:	private:
+        -:   17:	/* aici e reprezentarea */
+        -:   18:	TElem* e;
+        -:   19:	int size;
+        -:   20:	int capacity;
+function _ZN9Dictionar7reallocEi called 37 returned 100% blocks executed 93%
+       37:   21:	void realloc(int capacity) {
+       37:   22:		capacity*=2;
+  412317*:   23:		TElem* elements = new TElem[capacity];
+       37:   23-block  0
+branch  0 taken 37 (fallthrough)
+branch  1 taken 0
+       37:   23-block  1
+    %%%%%:   23-block  2
+call    2 never executed
+       37:   23-block  3
+call    3 returned 37
+   412280:   23-block  4
+call    4 returned 412280
+   412317:   23-block  5
+branch  5 taken 412280
+branch  6 taken 37 (fallthrough)
+   103107:   24:		for (int i = 0;i<size;i++) {
+       37:   24-block  0
+   103107:   24-block  1
+branch  0 taken 103070
+branch  1 taken 37 (fallthrough)
+   103070:   25:			elements[i]=e[i];
+   103070:   25-block  0
+call    0 returned 103070
+        -:   26:		}
+       37:   27:		delete[] e;
+       37:   27-block  0
+branch  0 taken 37 (fallthrough)
+branch  1 taken 0
+       37:   27-block  1
+call    2 returned 37
+       37:   28:		e=elements;
+       37:   29:	}
+        -:   30:
+        -:   31:	public:
+        -:   32:
+        -:   33:	// constructorul implicit al dictionarului
+        -:   34:	Dictionar();
+        -:   35:
+        -:   36:	// adauga o pereche (cheie, valoare) in dictionar	
+        -:   37:	//daca exista deja cheia in dictionar, inlocuieste valoarea asociata cheii si returneaza vechea valoare
+        -:   38:	// daca nu exista cheia, adauga perechea si returneaza null: NULL_TVALOARE
+        -:   39:	TValoare adauga(TCheie c, TValoare v);
+        -:   40:
+        -:   41:	//cauta o cheie si returneaza valoarea asociata (daca dictionarul contine cheia) sau null: NULL_TVALOARE
+        -:   42:	TValoare cauta(TCheie c) const;
+        -:   43:
+        -:   44:	//sterge o cheie si returneaza valoarea asociata (daca exista) sau null: NULL_TVALOARE
+        -:   45:	TValoare sterge(TCheie c);
+        -:   46:
+        -:   47:	//returneaza numarul de perechi (cheie, valoare) din dictionar 
+        -:   48:	int dim() const;
+        -:   49:
+        -:   50:	//verifica daca dictionarul e vid 
+        -:   51:	bool vid() const;
+        -:   52:
+        -:   53:	// se returneaza iterator pe dictionar
+        -:   54:	IteratorDictionar iterator() const;
+        -:   55:
+        -:   56:
+        -:   57:	// destructorul dictionarului	
+        -:   58:	~Dictionar();
+        -:   59:
+        -:   60:};
+        -:   61:
+        -:   62:

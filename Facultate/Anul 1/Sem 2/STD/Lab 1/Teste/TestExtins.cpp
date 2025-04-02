@@ -192,6 +192,21 @@ void testIterator() {
 		count++;
 	}
 	assert(count == 50);
+	Dictionar d4;
+	for (int i = 0;i<100;i++) {
+		d4.adauga(i,i);
+	}
+	assert(d4.dim()==100);
+	IteratorDictionar id5 = d4.iterator();
+	assert(id5.valid() == true);
+	int sum=0;
+	for (int i = 1;i<5;i++) {
+		sum+=i;
+		id5.avanseazaKPasi(i);
+		assert(id5.valid());
+		assert(id5.element().first==sum);
+
+	}
 
 }
 

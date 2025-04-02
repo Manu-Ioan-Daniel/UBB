@@ -1,0 +1,61 @@
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 1/Proiect C++/IteratorDictionar.cpp
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\STD\Lab 1\cmake-build-debug-coverage\CMakeFiles\Lab_1.dir\Proiect_C++\IteratorDictionar.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\STD\Lab 1\cmake-build-debug-coverage\CMakeFiles\Lab_1.dir\Proiect_C++\IteratorDictionar.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "IteratorDictionar.h"
+        -:    2:#include "Dictionar.h"
+        -:    3:
+        -:    4:using namespace std;
+        -:    5:/*
+        -:    6: * Caz favorabil: Theta(1)
+        -:    7: * Caz defavorabil: Theta(1)
+        -:    8: * Caz mediu: Theta(1)
+        -:    9: */
+function _ZN17IteratorDictionarC2ERK9Dictionar called 7 returned 100% blocks executed 100%
+        7:   10:IteratorDictionar::IteratorDictionar(const Dictionar& d) : dict(d){
+        7:   11:	current=0;
+        7:   12:}
+        -:   13:
+        -:   14:/*
+        -:   15: * Caz favorabil: Theta(1)
+        -:   16: * Caz defavorabil: Theta(1)
+        -:   17: * Caz mediu: Theta(1)
+        -:   18: */
+function _ZN17IteratorDictionar4primEv called 4 returned 100% blocks executed 100%
+        4:   19:void IteratorDictionar::prim() {
+        4:   20:	current=0;
+        4:   21:}
+        -:   22:
+        -:   23:/*
+        -:   24: * Caz favorabil: Theta(1)
+        -:   25: * Caz defavorabil: Theta(1)
+        -:   26: * Caz mediu: Theta(1)
+        -:   27: */
+function _ZN17IteratorDictionar7urmatorEv called 120255 returned 100% blocks executed 100%
+   120255:   28:void IteratorDictionar::urmator() {
+   120255:   29:	current+=1;
+   120255:   30:}
+        -:   31:
+        -:   32:/*
+        -:   33: * Caz favorabil: Theta(1)
+        -:   34: * Caz defavorabil: Theta(1)
+        -:   35: * Caz mediu: Theta(1)
+        -:   36: */
+function _ZNK17IteratorDictionar7elementEv called 60055 returned 100% blocks executed 100%
+    60055:   37:TElem IteratorDictionar::element() const{
+    60055:   38:	return dict.e[current];
+    60055:   38-block  0
+        -:   39:}
+        -:   40:
+        -:   41:/*
+        -:   42: * Caz favorabil: Theta(1)
+        -:   43: * Caz defavorabil: Theta(1)
+        -:   44: * Caz mediu: Theta(1)
+        -:   45: */
+function _ZNK17IteratorDictionar5validEv called 60068 returned 100% blocks executed 100%
+    60068:   46:bool IteratorDictionar::valid() const {
+    60068:   47:	return current<dict.size;
+    60068:   47-block  0
+        -:   48:
+        -:   49:}
+        -:   50:

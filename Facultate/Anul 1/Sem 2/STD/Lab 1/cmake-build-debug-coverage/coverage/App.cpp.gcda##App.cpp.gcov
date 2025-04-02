@@ -1,0 +1,25 @@
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 1/Proiect C++/App.cpp
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\STD\Lab 1\cmake-build-debug-coverage\CMakeFiles\Lab_1.dir\Proiect_C++\App.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\STD\Lab 1\cmake-build-debug-coverage\CMakeFiles\Lab_1.dir\Proiect_C++\App.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "TestExtins.h"
+        -:    2:#include "TestScurt.h"
+        -:    3:
+        -:    4:
+        -:    5:#include <iostream>
+        -:    6:using namespace std;
+        -:    7:
+        -:    8:
+function main called 1 returned 100% blocks executed 100%
+        1:    9:int main() {
+        1:   10:	testAll();
+        1:   10-block  0
+call    0 returned 1
+        1:   11:	testAllExtins();
+call    0 returned 1
+        1:   12:	cout << "That's all!" << endl;
+call    0 returned 1
+call    1 returned 1
+        1:   13:	return 0;
+        -:   14:}
+        -:   15:

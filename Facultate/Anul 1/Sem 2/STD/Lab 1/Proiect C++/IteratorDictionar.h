@@ -28,4 +28,9 @@ public:
 		//returneaza valoarea elementului din container referit de iterator
 		//arunca exceptie daca iteratorul nu e valid
 		TElem element() const;
+
+		// mută cursorul iteratorului a.î. să refere al k-lea element începând de la cel curent. Iteratorul devine nevalid
+		//în cazul în care există mai puțin de k elemente rămase în dicționar.
+		// aruncă excepție în cazul în care iteratorul este nevalid sau k este zero ori negativ.
+		void avanseazaKPasi(int k);
 };

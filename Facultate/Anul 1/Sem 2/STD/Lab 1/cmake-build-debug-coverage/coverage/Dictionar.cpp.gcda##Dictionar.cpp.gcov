@@ -1,0 +1,173 @@
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 1/Proiect C++/Dictionar.cpp
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\STD\Lab 1\cmake-build-debug-coverage\CMakeFiles\Lab_1.dir\Proiect_C++\Dictionar.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\STD\Lab 1\cmake-build-debug-coverage\CMakeFiles\Lab_1.dir\Proiect_C++\Dictionar.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Dictionar.h"
+        -:    2:#include <iostream>
+        -:    3:#include "IteratorDictionar.h"
+        -:    4:
+function _ZN9DictionarC2Ev called 8 returned 100% blocks executed 89%
+        8:    5:Dictionar::Dictionar() {
+        8:    6:	capacity=10;
+        8:    7:	size=0;
+      88*:    8:	e=new TElem[capacity];
+        8:    8-block  0
+branch  0 taken 8 (fallthrough)
+branch  1 taken 0
+        8:    8-block  1
+    %%%%%:    8-block  2
+call    2 never executed
+        8:    8-block  3
+call    3 returned 8
+       80:    8-block  4
+call    4 returned 80
+       88:    8-block  5
+branch  5 taken 80
+branch  6 taken 8 (fallthrough)
+        -:    9:
+        8:   10:}
+        -:   11://Toate 3:Theta(n)
+function _ZN9DictionarD2Ev called 8 returned 100% blocks executed 100%
+        8:   12:Dictionar::~Dictionar() {
+        8:   13:	delete[] e;
+        8:   13-block  0
+branch  0 taken 8 (fallthrough)
+branch  1 taken 0
+        8:   13-block  1
+call    2 returned 8
+        8:   14:}
+        -:   15:/*
+        -:   16: *Caz fav:Theta(1)
+        -:   17: *Caz defav:Theta(n)
+        -:   18: *Caz mediu:Theta(n)
+        -:   19: */
+function _ZN9Dictionar6adaugaEii called 197937 returned 100% blocks executed 100%
+   197937:   20:TValoare Dictionar::adauga(TCheie c, TValoare v){
+3946408537:   21:	for (int i = 0;i<size;i++) {
+   197937:   21-block  0
+3946210600:   21-block  1
+3946408537:   21-block  2
+branch  0 taken 3946327880
+branch  1 taken 80657 (fallthrough)
+3946327880:   22:		if (e[i].first==c) {
+3946327880:   22-block  0
+branch  0 taken 117280 (fallthrough)
+branch  1 taken 3946210600
+   117280:   23:			const int val = e[i].second;
+   117280:   24:			e[i].second=v;
+   117280:   25:			return val;
+   117280:   25-block  0
+        -:   26:		}
+        -:   27:	}
+    80657:   28:	if (size == capacity) {
+    80657:   28-block  0
+branch  0 taken 37 (fallthrough)
+branch  1 taken 80620
+       37:   29:		capacity *= 2;
+       37:   30:		realloc(capacity);
+       37:   30-block  0
+call    0 returned 37
+        -:   31:	}
+    80657:   32:	e[size].first=c;
+    80657:   33:	e[size].second=v;
+    80657:   34:	size++;
+    80657:   35:	return NULL_TVALOARE;
+    80657:   35-block  0
+        -:   36:}
+        -:   37:
+        -:   38:
+        -:   39:
+        -:   40://cauta o cheie si returneaza valoarea asociata (daca dictionarul contine cheia) sau null
+        -:   41:/*
+        -:   42: *Caz fav:Theta(1)
+        -:   43: *Caz defav:Theta(n)
+        -:   44: *Caz mediu:Theta(n)
+        -:   45: *Caz general:O(n)
+        -:   46: */
+function _ZNK9Dictionar5cautaEi called 60422 returned 100% blocks executed 100%
+    60422:   47:TValoare Dictionar::cauta(TCheie c) const{
+1800090329:   48:	for (int i = 0; i < size; i++) {
+    60422:   48-block  0
+1800029907:   48-block  1
+1800090329:   48-block  2
+branch  0 taken 1800090108
+branch  1 taken 221 (fallthrough)
+1800090108:   49:		if (e[i].first == c) {
+1800090108:   49-block  0
+branch  0 taken 60201 (fallthrough)
+branch  1 taken 1800029907
+    60201:   50:			return e[i].second;
+    60201:   50-block  0
+        -:   51:		}
+        -:   52:	}
+      221:   53:	return NULL_TVALOARE;
+      221:   53-block  0
+        -:   54:}
+        -:   55:
+        -:   56:/*
+        -:   57: *Caz fav:Theta(n)
+        -:   58: *Caz defav:Theta(n)
+        -:   59: *Caz mediu:Theta(n)
+        -:   60: */
+function _ZN9Dictionar6stergeEi called 801233 returned 100% blocks executed 100%
+   801233:   61:TValoare Dictionar::sterge(TCheie c){
+1610411249:   62:	for (int i = 0;i<size;i++) {
+   801233:   62-block  0
+1609610016:   62-block  1
+1610411249:   62-block  2
+branch  0 taken 1609670418
+branch  1 taken 740831 (fallthrough)
+1609670418:   63:		if (e[i].first==c) {
+1609670418:   63-block  0
+branch  0 taken 60402 (fallthrough)
+branch  1 taken 1609610016
+    60402:   64:			const int val = e[i].second;
+790560194:   65:			for (int j = i;j<size-1;j++) {
+    60402:   65-block  0
+790560194:   65-block  1
+branch  0 taken 790499792
+branch  1 taken 60402 (fallthrough)
+790499792:   66:				e[j]=e[j+1];
+790499792:   66-block  0
+call    0 returned 790499792
+        -:   67:				
+        -:   68:			}
+    60402:   69:			size--;
+    60402:   70:			return val;
+    60402:   70-block  0
+        -:   71:		}
+        -:   72:	}
+   740831:   73:	return NULL_TVALOARE;
+   740831:   73-block  0
+        -:   74:}
+        -:   75:
+        -:   76:/*
+        -:   77: *Caz fav:Theta(1)
+        -:   78: *Caz defav:Theta(1)
+        -:   79: *Caz mediu:Theta(1)
+        -:   80: */
+function _ZNK9Dictionar3dimEv called 60017 returned 100% blocks executed 100%
+    60017:   81:int Dictionar::dim() const {
+    60017:   82:	return size;
+    60017:   82-block  0
+        -:   83:}
+        -:   84:/*
+        -:   85: *Caz fav:Theta(1)
+        -:   86: *Caz defav:Theta(1)
+        -:   87: *Caz mediu:Theta(1)
+        -:   88: */
+function _ZNK9Dictionar3vidEv called 5 returned 100% blocks executed 100%
+        5:   89:bool Dictionar::vid() const{
+        5:   90:	return size==0;
+        5:   90-block  0
+        -:   91:}
+        -:   92:
+        -:   93:
+function _ZNK9Dictionar8iteratorEv called 7 returned 100% blocks executed 100%
+        7:   94:IteratorDictionar Dictionar::iterator() const {
+        7:   95:	return  IteratorDictionar(*this);
+        7:   95-block  0
+call    0 returned 7
+        -:   96:}
+        -:   97:
+        -:   98:
