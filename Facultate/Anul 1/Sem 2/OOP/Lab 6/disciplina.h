@@ -4,7 +4,7 @@ using std::string;
 class Disciplina {
     private:
         string denumire;
-        int nrOre;
+        int nrOre{};
         string tip;
         string cadruDidactic;
     public:

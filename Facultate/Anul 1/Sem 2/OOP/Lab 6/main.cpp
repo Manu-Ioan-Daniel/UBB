@@ -8,7 +8,7 @@ int main() {
     Repo r;
     Validator v;
     Service s{r,v};
-    Ui ui{s};
+    const Ui ui{s};
     ui.startUi();
 
     return 0;

@@ -2,7 +2,7 @@
 #include <vector>
 #include "disciplina.h"
 using std::vector;
-class RepoException {
+class RepoException :public std::exception{
     string msg;
 public:
     explicit RepoException(string m):msg{std::move(m)}{
@@ -17,7 +17,7 @@ class Repo {
 public:
     void addDisciplina(const Disciplina& disciplina);
     void stergeDisciplina(const string& denumire,const string& tip);
-    int cautaDisciplina(const string& denumire,const string& tip) const;
+    [[nodiscard]]int cautaDisciplina(const string& denumire,const string& tip) const;
     void modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina);
     [[nodiscard]] vector <Disciplina> getAll() const{
         return discipline;

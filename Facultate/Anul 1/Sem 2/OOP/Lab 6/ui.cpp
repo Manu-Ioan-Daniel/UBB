@@ -4,7 +4,7 @@
 using std::cout;
 using std::cin;
 
-void Ui::startUi() {
+void Ui::startUi() const {
     int cmd=0;
     while (true) {
         cout<<"0.Exit\n1.Adauga disciplina\n2.Modifica disciplina\n3.Sterge disciplina\n4.Cauta disciplina\n5.Afiseaza discipline\n";
@@ -67,7 +67,7 @@ void Ui::readInteger(int &x,const string& msg) {
         try {
             x = std::stoi(input);
             break;
-        } catch (const std::invalid_argument& e) {
+        } catch (const std::invalid_argument&) {
             std::cerr << "Invalid input! Please enter a valid number." << std::endl;
         }
     }

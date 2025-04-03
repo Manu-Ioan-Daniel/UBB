@@ -15,7 +15,7 @@ class Ui {
 public:
 
     explicit Ui(Service& service):service{service}{}
-    void startUi();
+    void startUi() const;
 
 
 };

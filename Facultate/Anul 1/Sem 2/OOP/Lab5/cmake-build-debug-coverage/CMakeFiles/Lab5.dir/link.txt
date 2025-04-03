@@ -1,1 +1,0 @@
-/usr/bin/cc --coverage -g CMakeFiles/Lab5.dir/main.c.o CMakeFiles/Lab5.dir/domain/expense.c.o CMakeFiles/Lab5.dir/errors/error.c.o CMakeFiles/Lab5.dir/infrastructure/repo.c.o CMakeFiles/Lab5.dir/presentation/ui.c.o CMakeFiles/Lab5.dir/testing/tests.c.o CMakeFiles/Lab5.dir/utils/list.c.o CMakeFiles/Lab5.dir/validation/validator.c.o CMakeFiles/Lab5.dir/business/service.c.o -o Lab5 

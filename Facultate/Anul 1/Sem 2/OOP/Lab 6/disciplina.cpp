@@ -1,7 +1,5 @@
 
 #include "disciplina.h"
-
-#include <utility>
 int Disciplina::getNrOre() const {
     return nrOre;
 }

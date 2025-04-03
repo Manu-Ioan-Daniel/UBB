@@ -5,7 +5,7 @@ class Validator {
 public:
     static void validateDisciplina(const string& denumire, int nrOre, const string& tip, const string& cadruDidactic);
 };
-class ValidationError {
+class ValidationError:public std::exception {
 private:
     string msg;
 public:

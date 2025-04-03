@@ -51,6 +51,7 @@ void testRepo() {
     assert(r.cautaDisciplina("mate","laborator")==0);
     try{
         r.cautaDisciplina("","");
+
         //assert(false);
     }catch (RepoException&) {
         assert(true);
