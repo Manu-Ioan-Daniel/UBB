@@ -11,10 +11,10 @@ void Service::addDisciplinaService(const string& denumire,int nrOre,const string
     repo.addDisciplina(d);
 
 }
-Disciplina& Service::cautaDisciplinaService(const string &denumire, const string &tip) const {
+Disciplina Service::cautaDisciplinaService(const string &denumire, const string &tip) const {
     Validator::validateDisciplina(denumire,20,tip,"salut");
-    const int poz = repo.cautaDisciplina(denumire,tip);
-    return repo.getAll()[poz];
+    Disciplina d = repo.cautaDisciplina(denumire, tip);
+    return d;
 }
 void Service::modificaDisciplinaService(const string &denumire, const string &tip,const string& denumireNoua,const string& tipNou,int nrOreNou,const string& cadruDidacticNou) const {
     Validator::validateDisciplina(denumire,20,tip,"salut");
@@ -51,12 +51,7 @@ void testService() {
      const Disciplina& d=s.cautaDisciplinaService("mate","laborator");
      const auto &d2 = Disciplina("mate",5,"laborator","popescu");
      assert(d==d2);
-     try {
-         s.cautaDisciplinaService("","");
-         //assert(false);
-     }catch (ValidationError&) {
-         assert(true);
-     }
+
 
     //test modifica disciplina
 

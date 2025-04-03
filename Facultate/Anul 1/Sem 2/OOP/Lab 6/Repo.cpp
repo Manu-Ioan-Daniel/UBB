@@ -12,21 +12,40 @@ void Repo::addDisciplina(const Disciplina& disciplina) {
     }
     discipline.push_back(disciplina);
 }
-int Repo::cautaDisciplina(const string& denumire,const string& tip) const {
-    for (int i=0;i<discipline.size();i++) {
-        if (discipline[i].getDenumire()==denumire && discipline[i].getTip()==tip) {
+
+Disciplina Repo::cautaDisciplina(const string &denumire, const string &tip) {
+    for (auto & i : discipline) {
+        if (i.getDenumire()==denumire && i.getTip()==tip) {
             return i;
         }
     }
-    throw RepoException("Disciplina nu exista!\n");
+    return {};
 }
 void Repo::stergeDisciplina(const string& denumire,const string& tip) {
-    const int poz=cautaDisciplina(denumire,tip);
-    discipline.erase(discipline.begin()+poz);
+    const Disciplina d= cautaDisciplina(denumire,tip);
+    if (d==Disciplina{}) {
+        throw RepoException("Disciplina nu exista!\n");
+    }
+    for (int i = 0;i<discipline.size();i++) {
+        if (discipline[i]==d) {
+            discipline.erase(discipline.begin()+i);
+            return;
+        }
+    }
+
 }
 void Repo::modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina) {
-    const int poz=cautaDisciplina(disciplina.getDenumire(),disciplina.getTip());
-    discipline[poz]=disciplinaNoua;
+    const Disciplina d =cautaDisciplina(disciplina.getDenumire(),disciplina.getTip());
+    if (d==Disciplina{}) {
+        throw RepoException("Disciplina nu exista!\n");
+    }
+    for (auto & i : discipline) {
+        if (i==d) {
+            i=disciplinaNoua;
+            return;
+        }
+    }
+
 }
 void testRepo() {
 
@@ -48,14 +67,7 @@ void testRepo() {
 
     //test cauta disciplina repo
 
-    assert(r.cautaDisciplina("mate","laborator")==0);
-    try{
-        r.cautaDisciplina("","");
-
-        //assert(false);
-    }catch (RepoException&) {
-        assert(true);
-    }
+    assert(r.cautaDisciplina("mate","laborator")==d1);
 
     //test modifica disciplina repo
     r.modificaDisciplina(d2,d1);

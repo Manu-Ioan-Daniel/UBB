@@ -17,7 +17,7 @@ class Repo {
 public:
     void addDisciplina(const Disciplina& disciplina);
     void stergeDisciplina(const string& denumire,const string& tip);
-    [[nodiscard]]int cautaDisciplina(const string& denumire,const string& tip) const;
+    [[nodiscard]] Disciplina cautaDisciplina(const string &denumire, const string &tip);
     void modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina);
     [[nodiscard]] vector <Disciplina> getAll() const{
         return discipline;

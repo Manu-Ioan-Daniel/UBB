@@ -15,7 +15,7 @@ public:
     }
     void modificaDisciplinaService(const string& denumire,const string& tip,const string& denumireNoua,const string& tipNou,int nrOreNou,const string& cadruDidacticNou) const;
     void stergeDisciplinaService(const string& denumire,const string& tip) const;
-    [[nodiscard]] Disciplina& cautaDisciplinaService(const string& denumire,const string& tip) const;
+    [[nodiscard]] Disciplina cautaDisciplinaService(const string& denumire,const string& tip) const;
 
 
 
