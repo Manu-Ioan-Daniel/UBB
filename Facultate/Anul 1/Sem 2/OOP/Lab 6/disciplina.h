@@ -26,3 +26,4 @@ class Disciplina {
 
 
 };
+void testDisciplina();

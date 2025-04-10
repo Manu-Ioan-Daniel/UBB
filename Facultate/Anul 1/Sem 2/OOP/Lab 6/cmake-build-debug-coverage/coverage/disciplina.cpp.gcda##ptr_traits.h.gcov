@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/bits/ptr_traits.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/disciplina.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/disciplina.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\disciplina.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\disciplina.cpp.gcda
         -:    0:Runs:1
         -:    1:// Pointer Traits -*- C++ -*-
         -:    2:
@@ -142,8 +142,8 @@
         -:  138:       *  @return `addressof(__r)`
         -:  139:      */
         -:  140:      static _GLIBCXX20_CONSTEXPR pointer
-     170*:  141:      pointer_to(element_type& __r) noexcept
-     170*:  142:      { return std::addressof(__r); }
+    #####:  141:      pointer_to(element_type& __r) noexcept
+    #####:  142:      { return std::addressof(__r); }
 ------------------
 _ZNSt19__ptr_traits_ptr_toIPKcS0_Lb0EE10pointer_toERS0_:
 function _ZNSt19__ptr_traits_ptr_toIPKcS0_Lb0EE10pointer_toERS0_ called 0 returned 0% blocks executed 0%
@@ -153,11 +153,11 @@ function _ZNSt19__ptr_traits_ptr_toIPKcS0_Lb0EE10pointer_toERS0_ called 0 return
 call    0 never executed
 ------------------
 _ZNSt19__ptr_traits_ptr_toIPccLb0EE10pointer_toERc:
-function _ZNSt19__ptr_traits_ptr_toIPccLb0EE10pointer_toERc called 170 returned 100% blocks executed 100%
-      170:  141:      pointer_to(element_type& __r) noexcept
-      170:  142:      { return std::addressof(__r); }
-      170:  142-block  0
-call    0 returned 170
+function _ZNSt19__ptr_traits_ptr_toIPccLb0EE10pointer_toERc called 0 returned 0% blocks executed 0%
+    #####:  141:      pointer_to(element_type& __r) noexcept
+    #####:  142:      { return std::addressof(__r); }
+    %%%%%:  142-block  0
+call    0 never executed
 ------------------
         -:  143:    };
         -:  144:

@@ -1,0 +1,387 @@
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/LinkedList.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#pragma once
+        -:    3:#include <functional>
+        -:    4:template<typename T> class Iterator;
+        -:    5:
+        -:    6:template <typename T>
+        -:    7:class LinkedList {
+        -:    8:    friend class Iterator<T>;
+        -:    9:private:
+        -:   10:    struct Node {
+        -:   11:        T data;
+        -:   12:        Node* next;
+function _ZN10LinkedListI10DisciplinaE4NodeC1ERKS0_ called 1325 returned 100% blocks executed 100%
+     1325:   13:        explicit Node(const T& val): data(val), next(nullptr) {}
+     1325:   13-block  0
+call    0 returned 1325
+        -:   14:    };
+        -:   15:    Node *head;
+        -:   16:    Node *tail;
+        -:   17:    int size;
+        -:   18:public:
+        -:   19:    using iterator = Iterator<T>;
+function _ZN10LinkedListI10DisciplinaEC1Ev called 10 returned 100% blocks executed 100%
+       10:   20:    LinkedList():head(nullptr),tail(nullptr), size(0) {}
+function _ZN10LinkedListI10DisciplinaED1Ev called 22 returned 100% blocks executed 100%
+       22:   21:    ~LinkedList() {
+     1295:   22:        while (head) {
+       22:   22-block  0
+     1295:   22-block  1
+branch  0 taken 1273
+branch  1 taken 22 (fallthrough)
+     1273:   23:            pop_front();
+     1273:   23-block  0
+call    0 returned 1273
+        -:   24:        }
+       22:   25:    }
+function _ZN10LinkedListI10DisciplinaEC1ERKS1_ called 12 returned 100% blocks executed 100%
+       12:   26:    LinkedList(const LinkedList & other) : head(nullptr), tail(nullptr), size(0) {
+       12:   27:        Node* current = other.head;
+      824:   28:        while (current) {
+       12:   28-block  0
+      824:   28-block  1
+branch  0 taken 812
+branch  1 taken 12 (fallthrough)
+      812:   29:            this->push_back(current->data);
+      812:   29-block  0
+call    0 returned 812
+      812:   30:            current = current->next;
+        -:   31:        }
+       12:   32:    }
+function _ZN10LinkedListI10DisciplinaEaSERKS1_ called 2 returned 100% blocks executed 100%
+        2:   33:    LinkedList& operator=(const LinkedList & other) {
+        2:   34:        if (this != &other) {
+        2:   34-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+       52:   35:            while (head) {
+        2:   35-block  0
+       52:   35-block  1
+branch  0 taken 50
+branch  1 taken 2 (fallthrough)
+       50:   36:                pop_front();
+       50:   36-block  0
+call    0 returned 50
+        -:   37:            }
+        2:   38:            Node* current = other.head;
+      102:   39:            while (current) {
+        2:   39-block  0
+      102:   39-block  1
+branch  0 taken 100
+branch  1 taken 2 (fallthrough)
+      100:   40:                this->push_back(current->data);
+      100:   40-block  0
+call    0 returned 100
+      100:   41:                current = current->next;
+        -:   42:            }
+        -:   43:        }
+        2:   44:        return *this;
+        2:   44-block  0
+        -:   45:    }
+        -:   46:    void push_back(const T&);
+        -:   47:    void push_front(const T&);
+        -:   48:    void pop_back();
+        -:   49:    void pop_front();
+        -:   50:    void erase(iterator pos);
+        -:   51:    void insert(const int pos, const T& val) {
+        -:   52:        if (pos == 0) {
+        -:   53:            push_front(val);
+        -:   54:        } else if (pos == size) {
+        -:   55:            push_back(val);
+        -:   56:        } else {
+        -:   57:            Node* newNode = new Node(val);
+        -:   58:            Node* current = head;
+        -:   59:            for (int i = 0; i < pos - 1; ++i) {
+        -:   60:                current = current->next;
+        -:   61:            }
+        -:   62:            newNode->next = current->next;
+        -:   63:            current->next = newNode;
+        -:   64:            ++size;
+        -:   65:        }
+        -:   66:    }
+function _ZNK10LinkedListI10DisciplinaE7getSizeEv called 14 returned 100% blocks executed 100%
+       14:   67:    [[nodiscard]] int getSize() const {
+       14:   68:        return size;
+       14:   68-block  0
+        -:   69:    }
+        -:   70:    [[nodiscard]] bool isEmpty() const{
+        -:   71:        return size == 0;
+        -:   72:    }
+function _ZNK10LinkedListI10DisciplinaE5beginEv called 142 returned 100% blocks executed 100%
+      142:   73:    iterator begin() const {
+      142:   74:        return iterator(head);
+      142:   74-block  0
+call    0 returned 142
+      142:   74-block  1
+        -:   75:    }
+function _ZN10LinkedListI10DisciplinaE3endEv called 1108 returned 100% blocks executed 100%
+     1108:   76:    static iterator end() {
+     1108:   77:        return iterator(nullptr);
+     1108:   77-block  0
+call    0 returned 1108
+     1108:   77-block  1
+        -:   78:    }
+function _ZNK10LinkedListI10DisciplinaE3getEi called 4 returned 100% blocks executed 86%
+        4:   79:    [[nodiscard]] T get(const int pos)const {
+        4:   80:        int i = 0;
+      204:   81:        for (iterator it = begin(); it != end(); ++it) {
+        4:   81-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   81-block  1
+      204:   81-block  2
+call    3 returned 204
+branch  4 taken 204 (fallthrough)
+branch  5 taken 0 (throw)
+      204:   81-block  3
+call    6 returned 204
+branch  7 taken 204
+branch  8 taken 0 (fallthrough)
+    $$$$$:   81-block  4
+      204:   82:            if (i == pos) {
+      204:   82-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 200
+        4:   83:                return *it;
+        4:   83-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   83-block  1
+        -:   84:            }
+      200:   85:            ++i;
+      200:   85-block  0
+call    0 returned 200
+        -:   86:        }
+    #####:   87:        return T{};
+    %%%%%:   87-block  0
+call    0 never executed
+        -:   88:    }
+        -:   89:    Node* mergeSort(Node* head, const std::function<bool(const T&, const T&)>& comparator);
+        -:   90:    Node* merge(Node*,Node*,const std::function<bool(const T&, const T&)>& comparator);
+        -:   91:    Node* getMiddle(Node*);
+        -:   92:    void sort(const std::function<bool(const T&, const T&)>& comparator);
+        -:   93:};
+        -:   94:
+        -:   95:template <typename T> class Iterator {
+        -:   96:    friend class LinkedList<T>;
+        -:   97:private:
+        -:   98:    typename LinkedList<T>::Node* current;
+        -:   99:public:
+function _ZN8IteratorI10DisciplinaEC1EPN10LinkedListIS0_E4NodeE called 1250 returned 100% blocks executed 100%
+     1250:  100:    explicit Iterator(typename LinkedList<T>::Node* node): current(node) {}
+function _ZNK8IteratorI10DisciplinaEdeEv called 6316 returned 100% blocks executed 100%
+     6316:  101:    T& operator*()const {
+     6316:  102:        return current->data;
+     6316:  102-block  0
+        -:  103:    }
+        -:  104:    T* operator->()const {
+        -:  105:        return &current->data;
+        -:  106:    }
+function _ZN8IteratorI10DisciplinaEppEv called 7266 returned 100% blocks executed 100%
+     7266:  107:    Iterator operator++() {
+     7266:  108:        if (current) {
+     7266:  108-block  0
+branch  0 taken 7266 (fallthrough)
+branch  1 taken 0
+     7266:  109:            current = current->next;
+     7266:  109-block  0
+        -:  110:        }
+     7266:  111:        return *this;
+     7266:  111-block  0
+        -:  112:    }
+        -:  113:    Iterator operator++(int) {
+        -:  114:        Iterator temp = *this;
+        -:  115:        ++(*this);
+        -:  116:        return temp;
+        -:  117:    }
+        -:  118:    bool operator==(const Iterator& other) const {
+        -:  119:        return current == other.current;
+        -:  120:    }
+function _ZNK8IteratorI10DisciplinaEneERKS1_ called 7404 returned 100% blocks executed 100%
+     7404:  121:    bool operator!=(const Iterator& other) const {
+     7404:  122:        return current != other.current;
+     7404:  122-block  0
+        -:  123:    }
+        -:  124:};
+        -:  125:
+        -:  126:template<typename T>
+function _ZN10LinkedListI10DisciplinaE9push_backERKS0_ called 1325 returned 100% blocks executed 78%
+     1325:  127:void LinkedList<T>::push_back(const T& val) {
+     1325:  128:    Node* newNode= new Node(val);
+     1325:  128-block  0
+call    0 returned 1325
+call    1 returned 1325
+branch  2 taken 1325 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  128-block  1
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:  128-block  2
+call    6 never executed
+     1325:  129:    if (!head) {
+     1325:  129-block  0
+branch  0 taken 17 (fallthrough)
+branch  1 taken 1308
+       17:  130:        head=tail=newNode;
+       17:  130-block  0
+        -:  131:    }
+        -:  132:    else {
+     1308:  133:        tail->next=newNode;
+     1308:  134:        tail=newNode;
+     1308:  134-block  0
+        -:  135:    }
+     1325:  136:    ++size;
+     1325:  137:}
+     1325:  137-block  0
+        -:  138:
+        -:  139:template<typename T>
+        -:  140:void LinkedList<T>::push_front(const T& val) {
+        -:  141:    Node* newNode= new Node(val);
+        -:  142:    if (!head) {
+        -:  143:        head=tail=newNode;
+        -:  144:    }
+        -:  145:    else {
+        -:  146:        newNode->next=head;
+        -:  147:        head=newNode;
+        -:  148:    }
+        -:  149:    ++size;
+        -:  150:}
+        -:  151:
+        -:  152:template<typename T>
+        -:  153:void LinkedList<T>::pop_back() {
+        -:  154:    if (!head) {
+        -:  155:        return;
+        -:  156:    }
+        -:  157:    if (head == tail) {
+        -:  158:        delete head;
+        -:  159:        head = tail = nullptr;
+        -:  160:    } else {
+        -:  161:        Node* current = head;
+        -:  162:        while (current->next != tail) {
+        -:  163:            current = current->next;
+        -:  164:        }
+        -:  165:        delete tail;
+        -:  166:        tail = current;
+        -:  167:        tail->next = nullptr;
+        -:  168:    }
+        -:  169:    --size;
+        -:  170:}
+        -:  171:
+        -:  172:template<typename T>
+function _ZN10LinkedListI10DisciplinaE9pop_frontEv called 1325 returned 100% blocks executed 100%
+     1325:  173:void LinkedList<T>::pop_front() {
+     1325:  174:    if (head) {
+     1325:  174-block  0
+branch  0 taken 1325 (fallthrough)
+branch  1 taken 0
+     1325:  175:        Node* temp = head;
+     1325:  176:        head = head->next;
+     1325:  177:        delete temp;
+     1325:  177-block  0
+branch  0 taken 1325 (fallthrough)
+branch  1 taken 0
+     1325:  177-block  1
+call    2 returned 1325
+call    3 returned 1325
+     1325:  178:        --size;
+     1325:  178-block  0
+        -:  179:    }
+     1325:  180:    if (!head) {
+     1325:  180-block  0
+branch  0 taken 17 (fallthrough)
+branch  1 taken 1308
+       17:  181:        tail = nullptr;
+       17:  181-block  0
+        -:  182:    }
+     1325:  183:}
+        -:  184:
+        -:  185:template<typename T>
+        -:  186:void LinkedList<T>::erase(iterator pos) {
+        -:  187:    if (!head || !pos.current) {
+        -:  188:        return;
+        -:  189:    }
+        -:  190:    if (pos.current==head) {
+        -:  191:        pop_front();
+        -:  192:        return;
+        -:  193:    }
+        -:  194:    Node* prev=head;
+        -:  195:    while (prev && prev->next!=pos.current) {
+        -:  196:        prev=prev->next;
+        -:  197:    }
+        -:  198:    if (prev && prev->next==pos.current) {
+        -:  199:        Node* todel=pos.current;
+        -:  200:        prev->next=todel->next;
+        -:  201:        if (todel==tail) {
+        -:  202:            tail=prev;
+        -:  203:        }
+        -:  204:        delete todel;
+        -:  205:        --size;
+        -:  206:    }
+        -:  207:}
+        -:  208:
+        -:  209:template <typename T>
+        -:  210:typename LinkedList<T>::Node* LinkedList<T>::mergeSort(Node* head, const std::function<bool(const T&, const T&)>& comparator) {
+        -:  211:    if (!head || !head->next) {
+        -:  212:        return head; // Base case: 0 or 1 element
+        -:  213:    }
+        -:  214:
+        -:  215:    // Split the list into two halves
+        -:  216:    Node* middle = getMiddle(head);
+        -:  217:    Node* nextToMiddle = middle->next;
+        -:  218:    middle->next = nullptr;
+        -:  219:
+        -:  220:    // Recursively sort both halves
+        -:  221:    Node* left = mergeSort(head, comparator);
+        -:  222:    Node* right = mergeSort(nextToMiddle, comparator);
+        -:  223:
+        -:  224:    // Merge the sorted halves
+        -:  225:    return merge(left, right, comparator);
+        -:  226:}
+        -:  227:
+        -:  228:template <typename T>
+        -:  229:typename LinkedList<T>::Node* LinkedList<T>::merge(Node* left, Node* right, const std::function<bool(const T&, const T&)>& comparator) {
+        -:  230:    if (!left) return right;
+        -:  231:    if (!right) return left;
+        -:  232:
+        -:  233:    Node* result = nullptr;
+        -:  234:
+        -:  235:    // Compare and merge
+        -:  236:    if (comparator(left->data, right->data)) {
+        -:  237:        result = left;
+        -:  238:        result->next = merge(left->next, right, comparator);
+        -:  239:    } else {
+        -:  240:        result = right;
+        -:  241:        result->next = merge(left, right->next, comparator);
+        -:  242:    }
+        -:  243:    return result;
+        -:  244:}
+        -:  245:
+        -:  246:template <typename T>
+        -:  247:typename LinkedList<T>::Node* LinkedList<T>::getMiddle(Node* head) {
+        -:  248:    if (!head) return head;
+        -:  249:
+        -:  250:    Node* slow = head;
+        -:  251:    Node* fast = head->next;
+        -:  252:    while (fast && fast->next) {
+        -:  253:        slow = slow->next;
+        -:  254:        fast = fast->next->next;
+        -:  255:    }
+        -:  256:    return slow;
+        -:  257:}
+        -:  258:
+        -:  259:template <typename T>
+        -:  260:void LinkedList<T>::sort(const std::function<bool(const T&, const T&)>& comparator) {
+        -:  261:    head = mergeSort(head, comparator);
+        -:  262:    tail = head;
+        -:  263:    while (tail && tail->next) {
+        -:  264:        tail = tail->next;
+        -:  265:    }
+        -:  266:}
+        -:  267:

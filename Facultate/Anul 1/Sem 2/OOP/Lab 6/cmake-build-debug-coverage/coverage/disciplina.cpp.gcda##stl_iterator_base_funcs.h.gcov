@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/bits/stl_iterator_base_funcs.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/disciplina.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/disciplina.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_funcs.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\disciplina.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\disciplina.cpp.gcda
         -:    0:Runs:1
         -:    1:// Functions used by iterators -*- C++ -*-
         -:    2:
@@ -107,7 +107,7 @@
         -:  103:      // concept requirements
         -:  104:      __glibcxx_function_requires(_RandomAccessIteratorConcept<
         -:  105:				  _RandomAccessIterator>)
-       45:  106:      return __last - __first;
+    #####:  106:      return __last - __first;
         -:  107:    }
         -:  108:
         -:  109:#if _GLIBCXX_USE_CXX11_ABI
@@ -152,11 +152,14 @@
         -:  148:    distance(_InputIterator __first, _InputIterator __last)
         -:  149:    {
         -:  150:      // concept requirements -- taken care of in __distance
-       90:  151:      return std::__distance(__first, __last,
-       90:  152:			     std::__iterator_category(__first));
-       45:  152-block  0
-       45:  152-block  1
-       45:  152-block  2
+    #####:  151:      return std::__distance(__first, __last,
+    #####:  152:			     std::__iterator_category(__first));
+    %%%%%:  152-block  0
+    %%%%%:  152-block  1
+    %%%%%:  152-block  2
+    %%%%%:  152-block  3
+    %%%%%:  152-block  4
+    %%%%%:  152-block  5
         -:  153:    }
         -:  154:
         -:  155:  template<typename _InputIterator, typename _Distance>

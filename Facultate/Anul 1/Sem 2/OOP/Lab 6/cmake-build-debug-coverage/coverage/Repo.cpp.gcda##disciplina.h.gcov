@@ -1,6 +1,6 @@
-        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/disciplina.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcda
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/disciplina.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\Repo.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\Repo.cpp.gcda
         -:    0:Runs:1
         -:    1:#pragma once
         -:    2:#include <string>
@@ -8,7 +8,7 @@
         -:    4:class Disciplina {
         -:    5:    private:
         -:    6:        string denumire;
-        -:    7:        int nrOre;
+        -:    7:        int nrOre{};
         -:    8:        string tip;
         -:    9:        string cadruDidactic;
         -:   10:    public:
@@ -16,62 +16,68 @@
         -:   12:        [[nodiscard]]string getDenumire() const;
         -:   13:        [[nodiscard]]string getTip() const;
         -:   14:        [[nodiscard]]string getCadruDidactic() const;
-function _ZN10DisciplinaC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS5_S5_ called 7 returned 100% blocks executed 100%
-        7:   15:        Disciplina(string denumire, const int nrOre, string tip, string cadruDidactic):denumire{std::move(denumire)},nrOre{nrOre},tip{std::move(tip)},cadruDidactic{std::move(cadruDidactic)} {
-        7:   15-block  0
-call    0 returned 7
-call    1 returned 7
-call    2 returned 7
-call    3 returned 7
-call    4 returned 7
-call    5 returned 7
-        7:   16:        }
-function _ZN10DisciplinaD2Ev called 0 returned 0% blocks executed 0%
+function _ZN10DisciplinaC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS5_S5_ called 0 returned 0% blocks executed 0%
+    #####:   15:        Disciplina(string denumire, const int nrOre, string tip, string cadruDidactic):denumire{std::move(denumire)},nrOre{nrOre},tip{std::move(tip)},cadruDidactic{std::move(cadruDidactic)} {
+    %%%%%:   15-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+    #####:   16:        }
+function _ZN10DisciplinaD1Ev called 0 returned 0% blocks executed 0%
     #####:   17:        ~Disciplina()=default;
     %%%%%:   17-block  0
 call    0 never executed
 call    1 never executed
 call    2 never executed
-function _ZN10DisciplinaC2ERKS_ called 3 returned 100% blocks executed 62%
-        3:   18:        Disciplina(const Disciplina& d)= default;
-        3:   18-block  0
-call    0 returned 3
-call    1 returned 3
-branch  2 taken 3 (fallthrough)
-branch  3 taken 0 (throw)
-        3:   18-block  1
-call    4 returned 3
-branch  5 taken 3 (fallthrough)
-branch  6 taken 0 (throw)
-        3:   18-block  2
+function _ZN10DisciplinaC1ERKS_ called 0 returned 0% blocks executed 0%
+    #####:   18:        Disciplina(const Disciplina& d)= default;
+    %%%%%:   18-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:   18-block  1
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:   18-block  2
     $$$$$:   18-block  3
 call    7 never executed
     $$$$$:   18-block  4
 call    8 never executed
-        -:   19:        Disciplina()=default;
+function _ZN10DisciplinaC1Ev called 0 returned 0% blocks executed 0%
+    #####:   19:        Disciplina()=default;
+    %%%%%:   19-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
 function _ZN10DisciplinaaSERKS_ called 2 returned 100% blocks executed 100%
         2:   20:        Disciplina& operator=(const Disciplina& d) = default;
         2:   20-block  0
 call    0 returned 2
 call    1 returned 2
 call    2 returned 2
-function _ZNK10DisciplinaeqERKS_ called 6 returned 100% blocks executed 88%
-        6:   21:        bool operator==(const Disciplina& d) const {
-       6*:   22:            return denumire==d.denumire && tip==d.tip;
-        6:   22-block  0
-call    0 returned 6
-branch  1 taken 6 (fallthrough)
-branch  2 taken 0
-        6:   22-block  1
-call    3 returned 6
-branch  4 taken 6 (fallthrough)
-branch  5 taken 0
-        6:   22-block  2
-    %%%%%:   22-block  3
-        6:   22-block  4
+function _ZNK10DisciplinaeqERKS_ called 6012 returned 100% blocks executed 100%
+     6012:   21:        bool operator==(const Disciplina& d) const {
+     6012:   22:            return denumire==d.denumire && tip==d.tip;
+     6012:   22-block  0
+call    0 returned 6012
+branch  1 taken 23 (fallthrough)
+branch  2 taken 5989
+       23:   22-block  1
+call    3 returned 23
+branch  4 taken 13 (fallthrough)
+branch  5 taken 10
+       13:   22-block  2
+     5999:   22-block  3
+     6012:   22-block  4
         -:   23:        }
         -:   24:
         -:   25:
         -:   26:
         -:   27:
         -:   28:};
+        -:   29:void testDisciplina();

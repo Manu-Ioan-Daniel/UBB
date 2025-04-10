@@ -1,8 +1,9 @@
 #pragma once
 #include <vector>
 #include "disciplina.h"
+#include "LinkedList.h"
 using std::vector;
-class RepoException :public std::exception{
+class RepoException final :public std::exception{
     string msg;
 public:
     explicit RepoException(string m):msg{std::move(m)}{
@@ -13,16 +14,13 @@ public:
 
 };
 class Repo {
-    vector<Disciplina> discipline;
+    LinkedList<Disciplina> discipline;
 public:
     void addDisciplina(const Disciplina& disciplina);
     void stergeDisciplina(const string& denumire,const string& tip);
-    [[nodiscard]] Disciplina cautaDisciplina(const string &denumire, const string &tip);
-    void modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina);
-    [[nodiscard]] vector <Disciplina> getAll() const{
-        return discipline;
-    }
-    vector<Disciplina>& getAll(){
+    [[nodiscard]] Disciplina cautaDisciplina(const string &denumire, const string &tip) const;
+    void modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina) const;
+    [[nodiscard]] LinkedList<Disciplina>& getAll(){
         return discipline;
     }
 

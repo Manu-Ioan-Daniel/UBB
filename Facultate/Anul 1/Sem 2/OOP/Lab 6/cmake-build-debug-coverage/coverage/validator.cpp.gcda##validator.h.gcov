@@ -1,6 +1,6 @@
-        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/validator.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/validator.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/validator.cpp.gcda
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/validator.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\validator.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\validator.cpp.gcda
         -:    0:Runs:1
         -:    1:#pragma once
         -:    2:#include <string>
@@ -9,18 +9,19 @@
         -:    5:public:
         -:    6:    static void validateDisciplina(const string& denumire, int nrOre, const string& tip, const string& cadruDidactic);
         -:    7:};
-        -:    8:class ValidationError {
+        -:    8:class ValidationError:public std::exception {
         -:    9:private:
         -:   10:    string msg;
         -:   11:public:
         -:   12:    [[nodiscard]] string getError() const {
         -:   13:        return msg;
         -:   14:    }
-function _ZN15ValidationErrorC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 4 returned 100% blocks executed 100%
-        4:   15:    explicit ValidationError(string m):msg{std::move(m)}{
-        4:   15-block  0
-call    0 returned 4
-call    1 returned 4
-        4:   16:    }
+function _ZN15ValidationErrorC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 100%
+        3:   15:    explicit ValidationError(string m):msg{std::move(m)}{
+        3:   15-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+        3:   16:    }
         -:   17:};
         -:   18:

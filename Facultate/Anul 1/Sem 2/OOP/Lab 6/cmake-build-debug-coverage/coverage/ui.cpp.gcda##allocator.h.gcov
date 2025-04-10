@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/bits/allocator.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/ui.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/ui.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocator.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\ui.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\ui.cpp.gcda
         -:    0:Runs:1
         -:    1:// Allocators -*- C++ -*-
         -:    2:
@@ -164,11 +164,12 @@
         -:  160:      // 3035. std::allocator's constructors should be constexpr
         -:  161:      __attribute__((__always_inline__))
         -:  162:      _GLIBCXX20_CONSTEXPR
-       1*:  163:      allocator() _GLIBCXX_NOTHROW { }
+    #####:  163:      allocator() _GLIBCXX_NOTHROW { }
     %%%%%:  163-block  0
     %%%%%:  163-block  1
     %%%%%:  163-block  2
-        1:  163-block  3
+    %%%%%:  163-block  3
+    %%%%%:  163-block  4
         -:  164:
         -:  165:      __attribute__((__always_inline__))
         -:  166:      _GLIBCXX20_CONSTEXPR
@@ -192,10 +193,11 @@
         -:  181:#if __cpp_constexpr_dynamic_alloc
         -:  182:      constexpr
         -:  183:#endif
-       1*:  184:      ~allocator() _GLIBCXX_NOTHROW { }
+    #####:  184:      ~allocator() _GLIBCXX_NOTHROW { }
     $$$$$:  184-block  0
     $$$$$:  184-block  1
     $$$$$:  184-block  2
+    $$$$$:  184-block  3
         -:  185:
         -:  186:#if __cplusplus > 201703L
         -:  187:      [[nodiscard,__gnu__::__always_inline__]]
@@ -203,7 +205,6 @@
         -:  189:      allocate(size_t __n)
         -:  190:      {
     #####:  191:	if (std::__is_constant_evaluated())
-    %%%%%:  191-block  0
 call    0 never executed
 branch  1 never executed (fallthrough)
 branch  2 never executed
@@ -290,42 +291,39 @@ call    0 never executed
         -:  256:    {
         -:  257:    public:
         -:  258:      typedef _Tp value_type;
-        -:  259:      allocator() { }
-        -:  260:      template<typename _Up> allocator(const allocator<_Up>&) { }
-        -:  261:    };
-        -:  262:
-        -:  263:  template<typename _Tp>
-        -:  264:    class allocator<volatile _Tp>
-        -:  265:    {
-        -:  266:    public:
-        -:  267:      typedef _Tp value_type;
-        -:  268:      allocator() { }
-        -:  269:      template<typename _Up> allocator(const allocator<_Up>&) { }
-        -:  270:    };
-        -:  271:
-        -:  272:  template<typename _Tp>
-        -:  273:    class allocator<const volatile _Tp>
-        -:  274:    {
-        -:  275:    public:
-        -:  276:      typedef _Tp value_type;
-        -:  277:      allocator() { }
-        -:  278:      template<typename _Up> allocator(const allocator<_Up>&) { }
-        -:  279:    };
-        -:  280:  /// @endcond
-        -:  281:
-        -:  282:  /// @} group allocator
-        -:  283:
-        -:  284:  // Inhibit implicit instantiations for required instantiations,
-        -:  285:  // which are defined via explicit instantiations elsewhere.
-        -:  286:#if _GLIBCXX_EXTERN_TEMPLATE
-        -:  287:  extern template class allocator<char>;
-        -:  288:  extern template class allocator<wchar_t>;
-        -:  289:#endif
+        -:  259:      template<typename _Up> allocator(const allocator<_Up>&) { }
+        -:  260:    };
+        -:  261:
+        -:  262:  template<typename _Tp>
+        -:  263:    class allocator<volatile _Tp>
+        -:  264:    {
+        -:  265:    public:
+        -:  266:      typedef _Tp value_type;
+        -:  267:      template<typename _Up> allocator(const allocator<_Up>&) { }
+        -:  268:    };
+        -:  269:
+        -:  270:  template<typename _Tp>
+        -:  271:    class allocator<const volatile _Tp>
+        -:  272:    {
+        -:  273:    public:
+        -:  274:      typedef _Tp value_type;
+        -:  275:      template<typename _Up> allocator(const allocator<_Up>&) { }
+        -:  276:    };
+        -:  277:  /// @endcond
+        -:  278:
+        -:  279:  /// @} group allocator
+        -:  280:
+        -:  281:  // Inhibit implicit instantiations for required instantiations,
+        -:  282:  // which are defined via explicit instantiations elsewhere.
+        -:  283:#if _GLIBCXX_EXTERN_TEMPLATE
+        -:  284:  extern template class allocator<char>;
+        -:  285:  extern template class allocator<wchar_t>;
+        -:  286:#endif
+        -:  287:
+        -:  288:  // Undefine.
+        -:  289:#undef __allocator_base
         -:  290:
-        -:  291:  // Undefine.
-        -:  292:#undef __allocator_base
+        -:  291:_GLIBCXX_END_NAMESPACE_VERSION
+        -:  292:} // namespace std
         -:  293:
-        -:  294:_GLIBCXX_END_NAMESPACE_VERSION
-        -:  295:} // namespace std
-        -:  296:
-        -:  297:#endif
+        -:  294:#endif

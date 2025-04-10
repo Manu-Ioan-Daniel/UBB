@@ -7,7 +7,7 @@ using std::cin;
 void Ui::startUi() const {
     int cmd=0;
     while (true) {
-        cout<<"0.Exit\n1.Adauga disciplina\n2.Modifica disciplina\n3.Sterge disciplina\n4.Cauta disciplina\n5.Afiseaza discipline\n";
+        cout<<"0.Exit\n1.Adauga disciplina\n2.Modifica disciplina\n3.Sterge disciplina\n4.Cauta disciplina\n5.Afiseaza discipline\n6.Filtrare discipline dupa ore\n7.Filtrare discipline dupa cadru didactic\n8.Sortare discipline dupa ore\n9.Sortare discipline dupa denumire\n10.Sortare discipline dupa tip si cadru didactic\n";
         readInteger(cmd,"Introdu optiunea dorita: ");
         if (cmd==0) {
             break;
@@ -54,6 +54,41 @@ void Ui::startUi() const {
         if (cmd==5) {
             afiseazaDiscipline();
         }
+        if (cmd==6) {
+            int nrOre;
+            readInteger(nrOre,"Numar ore: ");
+            const auto& discipline=service.filtrareDisciplineDupaOre(nrOre);
+            for (const auto& d:discipline) {
+                cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+            }
+        }
+        if (cmd==7) {
+            string cadruDidactic;
+            cout<<"Cadru didactic: ";
+            getline(cin,cadruDidactic);
+            for (const auto& discipline=service.filtrareDisciplineDupaCadruDidactic(cadruDidactic); const auto& d:discipline) {
+                cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+            }
+        }
+        if (cmd==8) {
+            for (const auto& discipline=service.sortareDisciplineDupaOre(); const auto& d:discipline) {
+                cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+            }
+        }
+        if (cmd==9) {
+            for (const auto& discipline=service.sortareDisciplineDupaDenumire(); const auto& d:discipline) {
+                cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+            }
+        }
+        if (cmd==10) {
+            for (const auto& discipline=service.sortareDisciplineDupaTipSiCadruDidactic(); const auto& d:discipline) {
+                cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+            }
+        }
+        if (cmd<0 || cmd>10) {
+            cout<<"Optiune invalida!\n";
+        }
+
     }
 
 
@@ -119,8 +154,7 @@ void Ui::cautaDisciplina() const {
     cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
 }
 void Ui::afiseazaDiscipline() const {
-    const auto& discipline=service.getAll();
-    for (const auto& d:discipline) {
+    for (const auto& discipline=service.getAll(); const auto& d:discipline) {
         cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
     }
 }

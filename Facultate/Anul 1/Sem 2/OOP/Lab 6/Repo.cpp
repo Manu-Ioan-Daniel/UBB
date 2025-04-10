@@ -1,7 +1,7 @@
 
 #include "Repo.h"
 #include <cassert>
-
+#include "LinkedList.h"
 
 void Repo::addDisciplina(const Disciplina& disciplina) {
     for (const Disciplina& d : discipline) {
@@ -13,7 +13,7 @@ void Repo::addDisciplina(const Disciplina& disciplina) {
     discipline.push_back(disciplina);
 }
 
-Disciplina Repo::cautaDisciplina(const string &denumire, const string &tip) {
+Disciplina Repo::cautaDisciplina(const string &denumire, const string &tip) const {
     for (auto & i : discipline) {
         if (i.getDenumire()==denumire && i.getTip()==tip) {
             return i;
@@ -26,20 +26,20 @@ void Repo::stergeDisciplina(const string& denumire,const string& tip) {
     if (d==Disciplina{}) {
         throw RepoException("Disciplina nu exista!\n");
     }
-    for (int i = 0;i<discipline.size();i++) {
-        if (discipline[i]==d) {
-            discipline.erase(discipline.begin()+i);
+    for (auto it=discipline.begin(); it!=discipline.end(); ++it) {
+        if (*it==d) {
+            discipline.erase(it);
             return;
         }
     }
 
 }
-void Repo::modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina) {
+void Repo::modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina) const {
     const Disciplina d =cautaDisciplina(disciplina.getDenumire(),disciplina.getTip());
     if (d==Disciplina{}) {
         throw RepoException("Disciplina nu exista!\n");
     }
-    for (auto & i : discipline) {
+    for (auto& i : discipline) {
         if (i==d) {
             i=disciplinaNoua;
             return;
@@ -56,8 +56,8 @@ void testRepo() {
     Repo r;
     r.addDisciplina(d1);
     const auto all=r.getAll();
-    assert(all.size()==1);
-    assert(all[0]==d1);
+    assert(all.getSize()==1);
+    assert(*all.begin()==d1);
     try {
         r.addDisciplina(d1);
         //assert(false);
@@ -71,7 +71,7 @@ void testRepo() {
 
     //test modifica disciplina repo
     r.modificaDisciplina(d2,d1);
-    assert(r.getAll()[0]==d2);
+    assert(*r.getAll().begin()==d2);
     try {
         r.modificaDisciplina(d2,d1);
        // assert(false);
@@ -82,7 +82,7 @@ void testRepo() {
     //test sterge disciplina repo
 
     r.stergeDisciplina(d2.getDenumire(),d2.getTip());
-    assert(r.getAll().empty());
+    assert(r.getAll().getSize()==0);
     try {
         r.stergeDisciplina(d1.getDenumire(),d1.getTip());
         //assert(false);

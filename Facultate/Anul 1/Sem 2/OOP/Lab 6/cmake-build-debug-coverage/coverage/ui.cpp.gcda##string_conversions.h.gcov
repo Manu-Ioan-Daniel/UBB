@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/ext/string_conversions.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/ui.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/ui.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\ui.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\ui.cpp.gcda
         -:    0:Runs:1
         -:    1:// String Conversions -*- C++ -*-
         -:    2:
@@ -57,8 +57,8 @@
         -:   53:  template<typename _TRet, typename _Ret = _TRet, typename _CharT,
         -:   54:	   typename... _Base>
         -:   55:    _Ret
-function _ZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_ called 1 returned 100% blocks executed 68%
-        1:   56:    __stoa(_TRet (*__convf) (const _CharT*, _CharT**, _Base...),
+function _ZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_ called 0 returned 0% blocks executed 0%
+    #####:   56:    __stoa(_TRet (*__convf) (const _CharT*, _CharT**, _Base...),
         -:   57:	   const char* __name, const _CharT* __str, std::size_t* __idx,
         -:   58:	   _Base... __base)
         -:   59:    {
@@ -67,85 +67,90 @@ function _ZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_ called 
         -:   62:      _CharT* __endptr;
         -:   63:
         -:   64:      struct _Save_errno {
-function _ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_EN11_Save_errnoC2Ev called 1 returned 100% blocks executed 100%
-        1:   65:	_Save_errno() : _M_errno(errno) { errno = 0; }
-function _ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_EN11_Save_errnoD2Ev called 1 returned 100% blocks executed 100%
-        1:   66:	~_Save_errno() { if (errno == 0) errno = _M_errno; }
-        1:   66-block  0
-branch  0 taken 1 (fallthrough)
-branch  1 taken 0
-        1:   66-block  1
+function _ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_EN11_Save_errnoC1Ev called 0 returned 0% blocks executed 0%
+    #####:   65:	_Save_errno() : _M_errno(errno) { errno = 0; }
+    %%%%%:   65-block  0
+call    0 never executed
+call    1 never executed
+function _ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_EN11_Save_errnoD1Ev called 0 returned 0% blocks executed 0%
+    #####:   66:	~_Save_errno() { if (errno == 0) errno = _M_errno; }
+    %%%%%:   66-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    %%%%%:   66-block  1
+call    3 never executed
         -:   67:	int _M_errno;
-        1:   68:      } const __save_errno;
-        1:   68-block  0
-call    0 returned 1
+    #####:   68:      } const __save_errno;
+    %%%%%:   68-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
         -:   69:
         -:   70:      struct _Range_chk {
         -:   71:	  static bool
         -:   72:	  _S_chk(_TRet, std::false_type) { return false; }
         -:   73:
         -:   74:	  static bool
-function _ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_EN10_Range_chk6_S_chkElSt17integral_constantIbLb1EE called 1 returned 100% blocks executed 83%
-        1:   75:	  _S_chk(_TRet __val, std::true_type) // only called when _Ret is int
+function _ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_EN10_Range_chk6_S_chkElSt17integral_constantIbLb1EE called 0 returned 0% blocks executed 0%
+    #####:   75:	  _S_chk(_TRet __val, std::true_type) // only called when _Ret is int
         -:   76:	  {
         -:   77:	    return __val < _TRet(__numeric_traits<int>::__min)
-       1*:   78:	      || __val > _TRet(__numeric_traits<int>::__max);
-        1:   78-block  0
-branch  0 taken 1 (fallthrough)
-branch  1 taken 0
-        1:   78-block  1
-branch  2 taken 0 (fallthrough)
-branch  3 taken 1
-    %%%%%:   78-block  2
-        1:   78-block  3
-        1:   78-block  4
+    #####:   78:	      || __val > _TRet(__numeric_traits<int>::__max);
+    %%%%%:   78-block  0
         -:   79:	  }
         -:   80:      };
         -:   81:
-        1:   82:      const _TRet __tmp = __convf(__str, &__endptr, __base...);
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
+    #####:   82:      const _TRet __tmp = __convf(__str, &__endptr, __base...);
+    %%%%%:   82-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
         -:   83:
-        1:   84:      if (__endptr == __str)
-        1:   84-block  0
-branch  0 taken 0 (fallthrough)
-branch  1 taken 1
+    #####:   84:      if (__endptr == __str)
+    %%%%%:   84-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
     #####:   85:	std::__throw_invalid_argument(__name);
     %%%%%:   85-block  0
 call    0 never executed
-        2:   86:      else if (errno == ERANGE
-       1*:   87:	  || _Range_chk::_S_chk(__tmp, std::is_same<_Ret, int>{}))
-        1:   87-block  0
-branch  0 taken 1 (fallthrough)
-branch  1 taken 0
-        1:   87-block  1
-call    2 returned 1
-branch  3 taken 0 (fallthrough)
-branch  4 taken 1
+    #####:   86:      else if (errno == ERANGE
+    %%%%%:   86-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   87:	  || _Range_chk::_S_chk(__tmp, std::is_same<_Ret, int>{}))
+    %%%%%:   87-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:   87-block  1
+call    2 never executed
+branch  3 never executed (fallthrough)
+branch  4 never executed
     %%%%%:   87-block  2
-        1:   87-block  3
-        1:   87-block  4
-branch  5 taken 0 (fallthrough)
-branch  6 taken 1
+    %%%%%:   87-block  3
+    %%%%%:   87-block  4
+branch  5 never executed (fallthrough)
+branch  6 never executed
+    $$$$$:   87-block  5
     #####:   88:	std::__throw_out_of_range(__name);
     %%%%%:   88-block  0
 call    0 never executed
         -:   89:      else
-        1:   90:	__ret = __tmp;
+    #####:   90:	__ret = __tmp;
         -:   91:
-        1:   92:      if (__idx)
-        1:   92-block  0
-branch  0 taken 0 (fallthrough)
-branch  1 taken 1
+    #####:   92:      if (__idx)
+    %%%%%:   92-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
     #####:   93:	*__idx = __endptr - __str;
     %%%%%:   93-block  0
         -:   94:
-        1:   95:      return __ret;
-        1:   95-block  0
-        1:   96:    }
-        1:   96-block  0
-call    0 returned 1
+    #####:   95:      return __ret;
+    %%%%%:   95-block  0
+    #####:   96:    }
+    %%%%%:   96-block  0
+call    0 never executed
     $$$$$:   96-block  1
 call    1 never executed
         -:   97:

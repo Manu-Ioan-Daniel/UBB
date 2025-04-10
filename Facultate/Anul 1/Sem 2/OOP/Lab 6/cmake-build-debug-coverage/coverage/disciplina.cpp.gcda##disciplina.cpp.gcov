@@ -1,33 +1,157 @@
-        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/disciplina.cpp
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/disciplina.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/disciplina.cpp.gcda
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/disciplina.cpp
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\disciplina.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\disciplina.cpp.gcda
         -:    0:Runs:1
         -:    1:
         -:    2:#include "disciplina.h"
         -:    3:
-        -:    4:#include <utility>
-function _ZNK10Disciplina8getNrOreEv called 0 returned 0% blocks executed 0%
-    #####:    5:int Disciplina::getNrOre() const {
-    #####:    6:    return nrOre;
-    %%%%%:    6-block  0
-        -:    7:}
-function _ZNK10Disciplina11getDenumireB5cxx11Ev called 14 returned 100% blocks executed 100%
-       14:    8:string Disciplina::getDenumire() const {
-       14:    9:    return denumire;
-       14:    9-block  0
-call    0 returned 14
-        -:   10:}
-function _ZNK10Disciplina6getTipB5cxx11Ev called 12 returned 100% blocks executed 100%
-       12:   11:string Disciplina::getTip() const {
-       12:   12:    return tip;
-       12:   12-block  0
-call    0 returned 12
-        -:   13:}
-function _ZNK10Disciplina16getCadruDidacticB5cxx11Ev called 0 returned 0% blocks executed 0%
-    #####:   14:string Disciplina::getCadruDidactic() const {
-    #####:   15:    return cadruDidactic;
-    %%%%%:   15-block  0
-call    0 never executed
-        -:   16:}
-        -:   17:
-        -:   18:
+        -:    4:#include <cassert>
+        -:    5:
+function _ZNK10Disciplina8getNrOreEv called 1161 returned 100% blocks executed 100%
+     1161:    6:int Disciplina::getNrOre() const {
+     1161:    7:    return nrOre;
+     1161:    7-block  0
+        -:    8:}
+function _ZNK10Disciplina11getDenumireB5cxx11Ev called 1060 returned 100% blocks executed 100%
+     1060:    9:string Disciplina::getDenumire() const {
+     1060:   10:    return denumire;
+     1060:   10-block  0
+call    0 returned 1060
+        -:   11:}
+function _ZNK10Disciplina6getTipB5cxx11Ev called 1341 returned 100% blocks executed 100%
+     1341:   12:string Disciplina::getTip() const {
+     1341:   13:    return tip;
+     1341:   13-block  0
+call    0 returned 1341
+        -:   14:}
+function _ZNK10Disciplina16getCadruDidacticB5cxx11Ev called 1013 returned 100% blocks executed 100%
+     1013:   15:string Disciplina::getCadruDidactic() const {
+     1013:   16:    return cadruDidactic;
+     1013:   16-block  0
+call    0 returned 1013
+        -:   17:}
+function _Z14testDisciplinav called 1 returned 100% blocks executed 54%
+        1:   18:void testDisciplina(){
+        1:   18-block  0
+        5:   19:    Disciplina d1={"mate",5,"laborator","popescu"};
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   19-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   19-block  3
+call    9 returned 1
+call   10 returned 1
+        1:   19-block  4
+call   11 returned 1
+        1:   19-block  5
+call   12 returned 1
+    $$$$$:   19-block  6
+    $$$$$:   19-block  7
+    $$$$$:   19-block  8
+call   13 never executed
+    $$$$$:   19-block  9
+    $$$$$:   19-block 10
+    $$$$$:   19-block 11
+call   14 never executed
+    $$$$$:   19-block 12
+    $$$$$:   19-block 13
+       1*:   20:    assert(d1.getDenumire()=="mate");
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   20-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   20-block  3
+call    8 never executed
+        1:   20-block  4
+        1:   20-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   20-block  6
+call   11 returned 1
+    $$$$$:   20-block  7
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:   20-block  8
+call   14 never executed
+    $$$$$:   20-block  9
+       1*:   21:    assert(d1.getNrOre()==5);
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   21-block  1
+call    3 never executed
+        1:   21-block  2
+       1*:   22:    assert(d1.getTip()=="laborator");
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   22-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   22-block  3
+call    8 never executed
+        1:   22-block  4
+        1:   22-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   22-block  6
+call   11 returned 1
+    $$$$$:   22-block  7
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:   22-block  8
+call   14 never executed
+    $$$$$:   22-block  9
+       1*:   23:    assert(d1.getCadruDidactic()=="popescu");
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   23-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   23-block  3
+call    8 never executed
+        1:   23-block  4
+        1:   23-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   23-block  6
+call   11 returned 1
+    $$$$$:   23-block  7
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:   23-block  8
+call   14 never executed
+    $$$$$:   23-block  9
+        1:   24:}
+        1:   24-block  0
+call    0 returned 1
+    $$$$$:   24-block  1
+call    1 never executed
+        -:   25:
