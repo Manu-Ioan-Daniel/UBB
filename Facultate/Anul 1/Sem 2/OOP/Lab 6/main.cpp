@@ -2,7 +2,7 @@
 #include "ui.h"
 #define CRTDBG_MAP_ALLOC
 #include <cstdlib>
-#include <crtdbg.h>
+//#include <crtdbg.h>
 #include "LinkedList.h"
 #include <cassert>
 #include <vector>
@@ -96,7 +96,7 @@ int main() {
     // Service s{r,v};
     // const Ui ui{s};
     // ui.startUi();
-	_CrtDumpMemoryLeaks();
+	//_CrtDumpMemoryLeaks();
     return 0;
 }
 

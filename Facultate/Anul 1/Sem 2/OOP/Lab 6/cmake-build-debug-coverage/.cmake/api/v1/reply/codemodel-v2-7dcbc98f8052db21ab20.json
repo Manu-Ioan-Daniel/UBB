@@ -1,0 +1,64 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Lab_6",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Lab_6::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/.cmake/api/v1/reply/codemodel-v2-7dcbc98f8052db21ab20.json
+					"jsonFile" : "target-Lab_6-Debug-0a83f78dfa7cd34c4380.json",
+========
+					"jsonFile" : "target-Lab_6-Debug-76027b5b47c791a6d62f.json",
+>>>>>>>> f8a2f03abe2601334a4b2e837afee8c55c83aa43:Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/.cmake/api/v1/reply/codemodel-v2-58ccfc43cad441667d8c.json
+					"name" : "Lab_6",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage",
+		"source" : "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
