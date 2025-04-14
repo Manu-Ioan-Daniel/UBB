@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <list>
-#include <climits>
+
 //aplicam dfs pe fiecare nod,la final adaugam nodul in vectorul de rezultate.
 void DFS(const std::vector<std::vector<int>>& graph, const int vertex, std::vector<bool>& visited, std::vector<int>& result) {
     visited[vertex] = true;

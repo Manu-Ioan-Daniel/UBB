@@ -3,7 +3,6 @@
 #include <iostream>
 #include <algorithm>
 #define INF INT_MAX
-
 using std::vector;
 using std::pair;
 using std::cout;
@@ -13,7 +12,6 @@ using std::min;
 bool Bellman_Ford(const vector<vector<pair<int,int>>>& graph, const int sursa, vector<int>& parents, vector<int>& distante) {
     const int V = graph.size();
     distante[sursa] = 0;
-    
     for (int i = 0; i < V - 1; i++) {
         for (int u = 0; u < V; u++) {
             for (auto const& [v, cost] : graph[u]) {
@@ -102,7 +100,7 @@ vector<vector<int>> Johnson(const vector<vector<pair<int, int>>>& original_graph
     }
 
     // Step 4: Run Dijkstra for each vertex
-    vector<vector<int>> all_pairs_distances(V, vector<int>(V, INF));
+    vector all_pairs_distances(V, vector<int>(V, INF));
     
     for (int u = 0; u < V; u++) {
         vector<int> distances1;

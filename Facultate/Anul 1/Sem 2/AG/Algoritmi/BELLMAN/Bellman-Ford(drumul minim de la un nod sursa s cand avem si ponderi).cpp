@@ -13,21 +13,21 @@ using std::pair;
 bool Bellman_Ford(const vector<vector<pair<int,int>>>& graph,const int sursa,vector<int>& parents,vector<int>& distante) {
     const int V=graph.size();
     distante[sursa]=0;
-    // for (int i = 0;i<graph.size()-1;i++) {
-    //     for (int j=0;j<graph.size();j++)
-    //         for (int k = 0;k<graph.size();k++) {
-    //             if (graph[j][k]!=INF) {
-    //                 if (distante[k]>distante[j]+graph[j][k]) {
-    //                     distante[k]=distante[j]+graph[j][k];
-    //                     parents[k]=j;
+    // for (int k = 0;k<graph.size()-1;k++) {
+    //     for (int i=0;i<graph.size();i++)
+    //         for (int j= 0;j<graph.size();j++) {
+    //             if (graph[i][j]!=INF) {
+    //                 if (distante[j]>distante[i]+graph[i][j]) {
+    //                     distante[j]=distante[i]+graph[i][j];
+    //                     parents[j]=i;
     //                 }
     //             }
     //         }
     // }
-    // for (int j=0;j<graph.size();j++)
-    //     for (int k = 0;k<graph.size();k++) {
-    //         if (graph[j][k]!=INF) {
-    //             if (distante[k]>distante[j]+graph[j][k]) {
+    // for (int i=0;i<graph.size();i++)
+    //     for (int j = 0;j<graph.size();j++) {
+    //         if (graph[i][j]!=INF) {
+    //             if (distante[j]>distante[i]+graph[i][j]) {
     //                 return false;
     //             }
     //         }
