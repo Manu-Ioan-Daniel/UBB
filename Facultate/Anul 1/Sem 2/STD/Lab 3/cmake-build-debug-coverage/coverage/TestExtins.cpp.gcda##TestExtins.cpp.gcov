@@ -1,0 +1,455 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Teste/TestExtins.cpp
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/cmake-build-debug-coverage/CMakeFiles/Lab_3.dir/TAD_Matrice/Teste/TestExtins.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/cmake-build-debug-coverage/CMakeFiles/Lab_3.dir/TAD_Matrice/Teste/TestExtins.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <assert.h>
+        -:    2:#include "Matrice.h"
+        -:    3:#include "TestExtins.h"
+        -:    4:#include <iostream>
+        -:    5:#include <exception>
+        -:    6:
+        -:    7:using namespace std;
+        -:    8:
+        -:    9:
+function _Z11testCreeazav called 1 returned 100% blocks executed 78%
+        1:   10:void testCreeaza() {
+        1:   11:	Matrice m(10,10);
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   12:	assert(m.nrLinii() == 10);
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   12-block  2
+call    5 never executed
+       1*:   13:	assert(m.nrColoane() == 10);
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   13-block  2
+call    5 never executed
+       11:   14:	for(int i=0; i<m.nrLinii(); i++)
+        1:   14-block  0
+       10:   14-block  1
+       11:   14-block  2
+call    0 returned 11
+branch  1 taken 11 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   14-block  3
+branch  3 taken 10
+branch  4 taken 1 (fallthrough)
+      110:   15:	  for(int j=0; j<m.nrColoane(); j++)
+       10:   15-block  0
+      100:   15-block  1
+      110:   15-block  2
+call    0 returned 110
+branch  1 taken 110 (fallthrough)
+branch  2 taken 0 (throw)
+      110:   15-block  3
+branch  3 taken 100
+branch  4 taken 10 (fallthrough)
+     100*:   16:		assert(m.element(i,j) == NULL_TELEMENT);
+      100:   16-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+      100:   16-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 100
+    %%%%%:   16-block  2
+call    5 never executed
+        1:   17:}
+        1:   17-block  0
+call    0 returned 1
+    $$$$$:   17-block  1
+call    1 never executed
+        -:   18:
+function _Z10testAdaugav called 1 returned 100% blocks executed 85%
+        1:   19:void testAdauga() {
+        1:   20:	Matrice m(10,10);
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   21:	for(int j=0; j<m.nrColoane(); j++)
+        1:   21-block  0
+       10:   21-block  1
+       11:   21-block  2
+call    0 returned 11
+branch  1 taken 11 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   21-block  3
+branch  3 taken 10
+branch  4 taken 1 (fallthrough)
+       10:   22:		m.modifica(4,j,3);
+       10:   22-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   23:	for(int i=0; i<m.nrLinii(); i++)
+        1:   23-block  0
+       10:   23-block  1
+       11:   23-block  2
+call    0 returned 11
+branch  1 taken 11 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   23-block  3
+branch  3 taken 10
+branch  4 taken 1 (fallthrough)
+      110:   24:           for(int j=0; j<m.nrColoane(); j++)
+       10:   24-block  0
+      100:   24-block  1
+      110:   24-block  2
+call    0 returned 110
+branch  1 taken 110 (fallthrough)
+branch  2 taken 0 (throw)
+      110:   24-block  3
+branch  3 taken 100
+branch  4 taken 10 (fallthrough)
+      100:   25:		if (i==4)
+      100:   25-block  0
+branch  0 taken 10 (fallthrough)
+branch  1 taken 90
+      10*:   26:		  assert(m.element(i,j) == 3);
+       10:   26-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   26-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 10
+    %%%%%:   26-block  2
+call    5 never executed
+        -:   27:		else
+      90*:   28:		  assert(m.element(i,j) == NULL_TELEMENT);
+       90:   28-block  0
+call    0 returned 90
+branch  1 taken 90 (fallthrough)
+branch  2 taken 0 (throw)
+       90:   28-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 90
+    %%%%%:   28-block  2
+call    5 never executed
+        1:   29:}
+        1:   29-block  0
+call    0 returned 1
+    $$$$$:   29-block  1
+call    1 never executed
+        -:   30:
+function _Z12testQuantityv called 1 returned 100% blocks executed 93%
+        1:   31:void testQuantity() {//scopul e sa adaugam multe date
+        1:   32:	Matrice m(300,300);
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+      151:   33:	for(int i=m.nrLinii()/2; i<m.nrLinii(); i++){
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33-block  1
+      150:   33-block  2
+      151:   33-block  3
+call    3 returned 151
+branch  4 taken 151 (fallthrough)
+branch  5 taken 0 (throw)
+      151:   33-block  4
+branch  6 taken 150
+branch  7 taken 1 (fallthrough)
+    22650:   34:           for(int j=0; j<m.nrColoane()/2; j++)
+      150:   34-block  0
+    22500:   34-block  1
+    22650:   34-block  2
+call    0 returned 22650
+branch  1 taken 22650 (fallthrough)
+branch  2 taken 0 (throw)
+    22650:   34-block  3
+branch  3 taken 22500
+branch  4 taken 150 (fallthrough)
+        -:   35:	   {	
+    22500:   36:		int v1=j;
+    22500:   37:		int v2=m.nrColoane()-v1-1;
+    22500:   37-block  0
+call    0 returned 22500
+branch  1 taken 22500 (fallthrough)
+branch  2 taken 0 (throw)
+    22500:   38:		if (i%2==0 && v1%2==0)
+    22500:   38-block  0
+branch  0 taken 11250 (fallthrough)
+branch  1 taken 11250
+    11250:   38-block  1
+branch  2 taken 5625 (fallthrough)
+branch  3 taken 5625
+     5625:   39:		     m.modifica(i, v1, i*v1);
+     5625:   39-block  0
+call    0 returned 5625
+branch  1 taken 5625 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   40:		else
+    16875:   41:	            if (v1%3==0)
+    16875:   41-block  0
+branch  0 taken 5625 (fallthrough)
+branch  1 taken 11250
+     5625:   42:			m.modifica(i, v1, i+v1);
+     5625:   42-block  0
+call    0 returned 5625
+branch  1 taken 5625 (fallthrough)
+branch  2 taken 0 (throw)
+    22500:   43:		if (i%2==0 && v2%2==0)
+    22500:   43-block  0
+branch  0 taken 11250 (fallthrough)
+branch  1 taken 11250
+    11250:   43-block  1
+branch  2 taken 5625 (fallthrough)
+branch  3 taken 5625
+     5625:   44:		     m.modifica(i, v2, i*v2);
+     5625:   44-block  0
+call    0 returned 5625
+branch  1 taken 5625 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   45:		else
+    16875:   46:	            if (v2%3==0)
+    16875:   46-block  0
+branch  0 taken 5625 (fallthrough)
+branch  1 taken 11250
+     5625:   47:			m.modifica(i, v2, i+v2);
+     5625:   47-block  0
+call    0 returned 5625
+branch  1 taken 5625 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   48:	   }
+        -:   49:	}
+      152:   50:	for(int i=0; i<=m.nrLinii()/2; i++){
+        1:   50-block  0
+      151:   50-block  1
+      152:   50-block  2
+call    0 returned 152
+branch  1 taken 152 (fallthrough)
+branch  2 taken 0 (throw)
+      152:   50-block  3
+branch  3 taken 151
+branch  4 taken 1 (fallthrough)
+    22801:   51:           for(int j=0; j<m.nrColoane()/2; j++)
+      151:   51-block  0
+    22650:   51-block  1
+    22801:   51-block  2
+call    0 returned 22801
+branch  1 taken 22801 (fallthrough)
+branch  2 taken 0 (throw)
+    22801:   51-block  3
+branch  3 taken 22650
+branch  4 taken 151 (fallthrough)
+        -:   52:	   {	
+    22650:   53:		int v1=j;
+    22650:   54:		int v2=m.nrColoane()-v1-1;
+    22650:   54-block  0
+call    0 returned 22650
+branch  1 taken 22650 (fallthrough)
+branch  2 taken 0 (throw)
+    22650:   55:		if (i%2==0 && v1%2==0)
+    22650:   55-block  0
+branch  0 taken 11400 (fallthrough)
+branch  1 taken 11250
+    11400:   55-block  1
+branch  2 taken 5700 (fallthrough)
+branch  3 taken 5700
+     5700:   56:		     m.modifica(i, v1, i*v1);
+     5700:   56-block  0
+call    0 returned 5700
+branch  1 taken 5700 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   57:		else
+    16950:   58:	            if (v1%3==0)
+    16950:   58-block  0
+branch  0 taken 5650 (fallthrough)
+branch  1 taken 11300
+     5650:   59:			m.modifica(i, v1, i+v1);
+     5650:   59-block  0
+call    0 returned 5650
+branch  1 taken 5650 (fallthrough)
+branch  2 taken 0 (throw)
+    22650:   60:		if (i%2==0 && v2%2==0)
+    22650:   60-block  0
+branch  0 taken 11400 (fallthrough)
+branch  1 taken 11250
+    11400:   60-block  1
+branch  2 taken 5700 (fallthrough)
+branch  3 taken 5700
+     5700:   61:		     m.modifica(i, v2, i*v2);
+     5700:   61-block  0
+call    0 returned 5700
+branch  1 taken 5700 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   62:		else
+    16950:   63:	            if (v2%3==0)
+    16950:   63-block  0
+branch  0 taken 5650 (fallthrough)
+branch  1 taken 11300
+     5650:   64:			m.modifica(i, v2, i+v2);
+     5650:   64-block  0
+call    0 returned 5650
+branch  1 taken 5650 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   65:	   }
+        -:   66:	}		
+      301:   67:	for(int i=0; i<m.nrLinii(); i++)
+        1:   67-block  0
+      300:   67-block  1
+      301:   67-block  2
+call    0 returned 301
+branch  1 taken 301 (fallthrough)
+branch  2 taken 0 (throw)
+      301:   67-block  3
+branch  3 taken 300
+branch  4 taken 1 (fallthrough)
+    90300:   68:           for(int j=0; j<m.nrColoane(); j++)
+      300:   68-block  0
+    90000:   68-block  1
+    90300:   68-block  2
+call    0 returned 90300
+branch  1 taken 90300 (fallthrough)
+branch  2 taken 0 (throw)
+    90300:   68-block  3
+branch  3 taken 90000
+branch  4 taken 300 (fallthrough)
+    90000:   69:		if (i%2==0 && j%2==0)
+    90000:   69-block  0
+branch  0 taken 45000 (fallthrough)
+branch  1 taken 45000
+    45000:   69-block  1
+branch  2 taken 22500 (fallthrough)
+branch  3 taken 22500
+   22500*:   70:		     assert(m.element(i,j) == i*j);
+    22500:   70-block  0
+call    0 returned 22500
+branch  1 taken 22500 (fallthrough)
+branch  2 taken 0 (throw)
+    22500:   70-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 22500
+    %%%%%:   70-block  2
+call    5 never executed
+    22500:   70-block  3
+        -:   71:		else
+    67500:   72:	            if (j%3==0)
+    67500:   72-block  0
+branch  0 taken 22500 (fallthrough)
+branch  1 taken 45000
+   22500*:   73:			 assert(m.element(i,j) == i+j);
+    22500:   73-block  0
+call    0 returned 22500
+branch  1 taken 22500 (fallthrough)
+branch  2 taken 0 (throw)
+    22500:   73-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 22500
+    %%%%%:   73-block  2
+call    5 never executed
+   45000*:   74:				else assert(m.element(i,j) == 0);
+    45000:   74-block  0
+call    0 returned 45000
+branch  1 taken 45000 (fallthrough)
+branch  2 taken 0 (throw)
+    45000:   74-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 45000
+    %%%%%:   74-block  2
+call    5 never executed
+        1:   75:}
+        1:   75-block  0
+call    0 returned 1
+    $$$$$:   75-block  1
+call    1 never executed
+        -:   76:
+function _Z12testExceptiiv called 1 returned 100% blocks executed 61%
+        1:   77:void testExceptii() {
+        1:   78:	Matrice m(10,10);
+        1:   78-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   79:	try {
+        1:   80:		m.element(-1,-1);
+        1:   80-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        -:   81:	}
+        1:   82:	catch (exception&) {
+        1:   82-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   82-block  1
+call    2 returned 1
+        -:   83:		assert(true); //ar trebui sa arunce exceptie
+        1:   84:	}
+call    0 returned 1
+        -:   85:    try {
+        1:   86:		m.modifica(12,0,1);
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        -:   87:	}
+        1:   88:	catch (exception&) {
+        1:   88-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   88-block  1
+call    2 returned 1
+        -:   89:		assert(true); //ar trebui sa arunce exceptie
+        1:   90:	}
+call    0 returned 1
+        -:   91:	try {
+       1*:   92:		assert(m.nrLinii());
+        1:   92-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   92-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   92-block  2
+call    5 never executed
+        -:   93:	}
+    =====:   94:	catch (exception&) {
+    $$$$$:   94-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   94-block  1
+call    2 never executed
+    =====:   95:		assert(false); //nu ar trebui sa arunce exceptie
+call    0 never executed
+        -:   96:	}
+        1:   97:}
+        1:   97-block  0
+call    0 returned 1
+    $$$$$:   97-block  1
+call    1 never executed
+        -:   98:
+        -:   99:
+        -:  100:
+function _Z13testAllExtinsv called 1 returned 100% blocks executed 100%
+        1:  101:void testAllExtins() {
+        1:  102:	testCreeaza();
+        1:  102-block  0
+call    0 returned 1
+        1:  103:	testAdauga();
+call    0 returned 1
+        1:  104:	testQuantity();
+call    0 returned 1
+        1:  105:	testExceptii();
+call    0 returned 1
+        1:  106:}

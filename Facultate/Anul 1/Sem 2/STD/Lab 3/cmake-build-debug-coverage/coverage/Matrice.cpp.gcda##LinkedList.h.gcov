@@ -1,0 +1,370 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Proiect C++/LinkedList.h
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/cmake-build-debug-coverage/CMakeFiles/Lab_3.dir/TAD_Matrice/Proiect_C++/Matrice.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/cmake-build-debug-coverage/CMakeFiles/Lab_3.dir/TAD_Matrice/Proiect_C++/Matrice.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <functional>
+        -:    3:
+        -:    4:
+        -:    5:template<typename T> class Iterator;
+        -:    6:
+        -:    7:template <typename T>
+        -:    8:class LinkedList {
+        -:    9:    friend class Iterator<T>;
+        -:   10:    struct Node {
+        -:   11:        T data;
+        -:   12:        Node* next;
+        -:   13:        Node* prev;
+function _ZN10LinkedListI7tripletE4NodeC2ERKS0_ called 44712 returned 100% blocks executed 100%
+    44712:   14:        explicit Node(const T& val): data(val), next(nullptr), prev(nullptr) {}
+        -:   15:    };
+        -:   16:    Node* head;
+        -:   17:    Node* tail;
+        -:   18:    int size;
+        -:   19:public:
+        -:   20:    using iterator = Iterator<T>;
+        -:   21:
+function _ZN10LinkedListI7tripletEC2Ev called 5 returned 100% blocks executed 100%
+        5:   22:    LinkedList(): head(nullptr), tail(nullptr), size(0) {}
+function _ZN10LinkedListI7tripletED2Ev called 5 returned 100% blocks executed 100%
+        5:   23:    ~LinkedList() {
+    44717:   24:        while (head)
+        5:   24-block  0
+    44717:   24-block  1
+branch  0 taken 44712
+branch  1 taken 5 (fallthrough)
+    44712:   25:            pop_front();
+    44712:   25-block  0
+call    0 returned 44712
+        5:   26:    }
+        -:   27:
+        -:   28:    LinkedList(const LinkedList& other): head(nullptr), tail(nullptr), size(0) {
+        -:   29:        Node* current = other.head;
+        -:   30:        while (current) {
+        -:   31:            push_back(current->data);
+        -:   32:            current = current->next;
+        -:   33:        }
+        -:   34:    }
+        -:   35:
+        -:   36:    LinkedList& operator=(const LinkedList& other) {
+        -:   37:        if (this != &other) {
+        -:   38:            while (head)
+        -:   39:                pop_front();
+        -:   40:            Node* current = other.head;
+        -:   41:            while (current) {
+        -:   42:                push_back(current->data);
+        -:   43:                current = current->next;
+        -:   44:            }
+        -:   45:        }
+        -:   46:        return *this;
+        -:   47:    }
+        -:   48:
+        -:   49:    void push_back(const T&);
+        -:   50:    void push_front(const T&);
+        -:   51:    void pop_back();
+        -:   52:    void pop_front();
+        -:   53:    void erase(iterator pos);
+        -:   54:    void insert(const T& val, iterator pos);
+        -:   55:
+        -:   56:    [[nodiscard]] int getSize() const { return size; }
+        -:   57:    [[nodiscard]] bool isEmpty() const { return size == 0; }
+        -:   58:
+function _ZNK10LinkedListI7tripletE5beginEv called 135414 returned 100% blocks executed 100%
+   135414:   59:    iterator begin() const { return iterator(head); }
+   135414:   59-block  0
+call    0 returned 135414
+   135414:   59-block  1
+function _ZN10LinkedListI7tripletE3endEv called 503945484 returned 100% blocks executed 100%
+503945484:   60:    static iterator end() { return iterator(nullptr); }
+503945484:   60-block  0
+call    0 returned 503945484
+503945484:   60-block  1
+        -:   61:
+        -:   62:    Node* mergeSort(Node* head, const std::function<bool(const T&, const T&)>& comparator);
+        -:   63:    Node* merge(Node*, Node*, const std::function<bool(const T&, const T&)>& comparator);
+        -:   64:    Node* getMiddle(Node*);
+        -:   65:    void sort(const std::function<bool(const T&, const T&)>& comparator);
+        -:   66:};
+        -:   67:
+        -:   68:template <typename T>
+        -:   69:class Iterator {
+        -:   70:    friend class LinkedList<T>;
+        -:   71:public:
+        -:   72:    typename LinkedList<T>::Node* current;
+function _ZN8IteratorI7tripletEC2EPN10LinkedListIS0_E4NodeE called 504080898 returned 100% blocks executed 100%
+504080898:   73:    explicit Iterator(typename LinkedList<T>::Node* node): current(node) {}
+        -:   74:
+function _ZNK8IteratorI7tripletEdeEv called 3024023607 returned 100% blocks executed 100%
+3024023607:   75:    T& operator*() const { return current->data; }
+3024023607:   75-block  0
+function _ZNK8IteratorI7tripletEptEv called 1515368749 returned 100% blocks executed 100%
+1515368749:   76:    T* operator->() const { return &current->data; }
+1515368749:   76-block  0
+        -:   77:
+function _ZN8IteratorI7tripletEppEv called 3527788965 returned 100% blocks executed 100%
+3527788965:   78:    Iterator operator++() {
+3527788965:   79:        if (current) current = current->next;
+3527788965:   79-block  0
+branch  0 taken 3527788965 (fallthrough)
+branch  1 taken 0
+3527788965:   79-block  1
+3527788965:   80:        return *this;
+3527788965:   80-block  0
+        -:   81:    }
+        -:   82:
+        -:   83:    Iterator operator++(int) {
+        -:   84:        Iterator temp = *this;
+        -:   85:        ++(*this);
+        -:   86:        return temp;
+        -:   87:    }
+        -:   88:
+        -:   89:    Iterator operator--() {
+        -:   90:        if (current) current = current->prev;
+        -:   91:        return *this;
+        -:   92:    }
+        -:   93:
+        -:   94:    Iterator operator--(int) {
+        -:   95:        Iterator temp = *this;
+        -:   96:        --(*this);
+        -:   97:        return temp;
+        -:   98:    }
+        -:   99:
+        -:  100:    bool operator==(const Iterator& other) const { return current == other.current; }
+function _ZNK8IteratorI7tripletEneERKS1_ called 3527924379 returned 100% blocks executed 100%
+3527924379:  101:    bool operator!=(const Iterator& other) const { return current != other.current; }
+3527924379:  101-block  0
+        -:  102:};
+        -:  103:
+        -:  104:template<typename T>
+function _ZN10LinkedListI7tripletE9push_backERKS0_ called 236 returned 100% blocks executed 100%
+      236:  105:void LinkedList<T>::push_back(const T& val) {
+      236:  106:    Node* newNode = new Node(val);
+      236:  106-block  0
+call    0 returned 236
+call    1 returned 236
+      236:  107:    if (!tail) {
+branch  0 taken 3 (fallthrough)
+branch  1 taken 233
+        3:  108:        head = tail = newNode;
+        3:  108-block  0
+        -:  109:    } else {
+      233:  110:        newNode->prev = tail;
+      233:  111:        tail->next = newNode;
+      233:  112:        tail = newNode;
+      233:  112-block  0
+        -:  113:    }
+      236:  114:    ++size;
+      236:  115:}
+        -:  116:
+        -:  117:template<typename T>
+function _ZN10LinkedListI7tripletE10push_frontERKS0_ called 3 returned 100% blocks executed 83%
+        3:  118:void LinkedList<T>::push_front(const T& val) {
+        3:  119:    Node* newNode = new Node(val);
+        3:  119-block  0
+call    0 returned 3
+call    1 returned 3
+        3:  120:    if (!head) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 3
+    #####:  121:        head = tail = newNode;
+    %%%%%:  121-block  0
+        -:  122:    } else {
+        3:  123:        newNode->next = head;
+        3:  124:        head->prev = newNode;
+        3:  125:        head = newNode;
+        3:  125-block  0
+        -:  126:    }
+        3:  127:    ++size;
+        3:  128:}
+        -:  129:
+        -:  130:template<typename T>
+function _ZN10LinkedListI7tripletE8pop_backEv called 0 returned 0% blocks executed 0%
+    #####:  131:void LinkedList<T>::pop_back() {
+    #####:  132:    if (!tail) return;
+    %%%%%:  132-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:  132-block  1
+    #####:  133:    const Node* temp = tail;
+    #####:  134:    tail = tail->prev;
+    #####:  135:    if (tail) tail->next = nullptr;
+    %%%%%:  135-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:  135-block  1
+    #####:  136:    else head = nullptr;
+    %%%%%:  136-block  0
+    #####:  137:    delete temp;
+    %%%%%:  137-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:  137-block  1
+call    2 never executed
+    #####:  138:    --size;
+    %%%%%:  138-block  0
+        -:  139:}
+        -:  140:
+        -:  141:template<typename T>
+function _ZN10LinkedListI7tripletE9pop_frontEv called 44712 returned 100% blocks executed 89%
+    44712:  142:void LinkedList<T>::pop_front() {
+   44712*:  143:    if (!head) return;
+    44712:  143-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 44712
+    %%%%%:  143-block  1
+    44712:  144:    const Node* temp = head;
+    44712:  145:    head = head->next;
+    44712:  146:    if (head) head->prev = nullptr;
+    44712:  146-block  0
+branch  0 taken 44709 (fallthrough)
+branch  1 taken 3
+    44709:  146-block  1
+        3:  147:    else tail = nullptr;
+        3:  147-block  0
+    44712:  148:    delete temp;
+    44712:  148-block  0
+branch  0 taken 44712 (fallthrough)
+branch  1 taken 0
+    44712:  148-block  1
+call    2 returned 44712
+    44712:  149:    --size;
+    44712:  149-block  0
+        -:  150:}
+        -:  151:
+        -:  152:template<typename T>
+function _ZN10LinkedListI7tripletE5eraseE8IteratorIS0_E called 0 returned 0% blocks executed 0%
+    #####:  153:void LinkedList<T>::erase(iterator pos) {
+    #####:  154:    if (!pos.current) return;
+    %%%%%:  154-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:  154-block  1
+    #####:  155:    Node* node = pos.current;
+        -:  156:
+    #####:  157:    if (node == head) {
+    %%%%%:  157-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  158:        pop_front();
+    %%%%%:  158-block  0
+call    0 never executed
+    #####:  159:    } else if (node == tail) {
+    %%%%%:  159-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  160:        pop_back();
+    %%%%%:  160-block  0
+call    0 never executed
+        -:  161:    } else {
+    #####:  162:        Node* prevNode = node->prev;
+    #####:  163:        Node* nextNode = node->next;
+    #####:  164:        if (prevNode) prevNode->next = nextNode;
+    %%%%%:  164-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:  164-block  1
+    #####:  165:        if (nextNode) nextNode->prev = prevNode;
+    %%%%%:  165-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:  165-block  1
+    #####:  166:        delete node;
+    %%%%%:  166-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:  166-block  1
+call    2 never executed
+    #####:  167:        --size;
+    %%%%%:  167-block  0
+        -:  168:    }
+        -:  169:}
+        -:  170:
+        -:  171:template<typename T>
+function _ZN10LinkedListI7tripletE6insertERKS0_8IteratorIS0_E called 44476 returned 100% blocks executed 100%
+    44476:  172:void LinkedList<T>::insert(const T& val, iterator pos) {
+    44476:  173:    if (!pos.current || pos.current == head) {
+    44476:  173-block  0
+branch  0 taken 44476 (fallthrough)
+branch  1 taken 0
+    44476:  173-block  1
+branch  2 taken 3 (fallthrough)
+branch  3 taken 44473
+        3:  174:        push_front(val);
+        3:  174-block  0
+call    0 returned 3
+        3:  175:        return;
+        -:  176:    }
+        -:  177:
+    44473:  178:    Node* newNode = new Node(val);
+    44473:  178-block  0
+call    0 returned 44473
+call    1 returned 44473
+    44473:  179:    Node* prevNode = pos.current->prev;
+        -:  180:
+    44473:  181:    newNode->next = pos.current;
+    44473:  182:    newNode->prev = prevNode;
+    44473:  183:    if (prevNode) prevNode->next = newNode;
+branch  0 taken 44473 (fallthrough)
+branch  1 taken 0
+    44473:  183-block  0
+    44473:  184:    pos.current->prev = newNode;
+        -:  185:
+    44473:  186:    ++size;
+    44473:  186-block  0
+        -:  187:}
+        -:  188:
+        -:  189:template <typename T>
+        -:  190:typename LinkedList<T>::Node* LinkedList<T>::mergeSort(Node* head, const std::function<bool(const T&, const T&)>& comparator) {
+        -:  191:    if (!head || !head->next) return head;
+        -:  192:
+        -:  193:    Node* middle = getMiddle(head);
+        -:  194:    Node* nextToMiddle = middle->next;
+        -:  195:    middle->next = nullptr;
+        -:  196:    if (nextToMiddle) nextToMiddle->prev = nullptr;
+        -:  197:
+        -:  198:    Node* left = mergeSort(head, comparator);
+        -:  199:    Node* right = mergeSort(nextToMiddle, comparator);
+        -:  200:
+        -:  201:    return merge(left, right, comparator);
+        -:  202:}
+        -:  203:
+        -:  204:template <typename T>
+        -:  205:typename LinkedList<T>::Node* LinkedList<T>::merge(Node* left, Node* right, const std::function<bool(const T&, const T&)>& comparator) {
+        -:  206:    if (!left) return right;
+        -:  207:    if (!right) return left;
+        -:  208:
+        -:  209:    if (comparator(left->data, right->data)) {
+        -:  210:        left->next = merge(left->next, right, comparator);
+        -:  211:        if (left->next) left->next->prev = left;
+        -:  212:        left->prev = nullptr;
+        -:  213:        return left;
+        -:  214:    }
+        -:  215:    right->next = merge(left, right->next, comparator);
+        -:  216:    if (right->next) right->next->prev = right;
+        -:  217:    right->prev = nullptr;
+        -:  218:    return right;
+        -:  219:}
+        -:  220:
+        -:  221:template <typename T>
+        -:  222:typename LinkedList<T>::Node* LinkedList<T>::getMiddle(Node* head) {
+        -:  223:    if (!head) return head;
+        -:  224:    Node* slow = head;
+        -:  225:    Node* fast = head->next;
+        -:  226:
+        -:  227:    while (fast && fast->next) {
+        -:  228:        slow = slow->next;
+        -:  229:        fast = fast->next->next;
+        -:  230:    }
+        -:  231:    return slow;
+        -:  232:}
+        -:  233:
+        -:  234:template <typename T>
+        -:  235:void LinkedList<T>::sort(const std::function<bool(const T&, const T&)>& comparator) {
+        -:  236:    head = mergeSort(head, comparator);
+        -:  237:
+        -:  238:
+        -:  239:    tail = head;
+        -:  240:    while (tail && tail->next) {
+        -:  241:        tail = tail->next;
+        -:  242:    }
+        -:  243:}

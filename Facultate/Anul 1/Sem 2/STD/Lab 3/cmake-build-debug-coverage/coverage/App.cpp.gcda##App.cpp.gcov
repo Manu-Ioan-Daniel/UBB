@@ -1,0 +1,23 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Proiect C++/App.cpp
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/cmake-build-debug-coverage/CMakeFiles/Lab_3.dir/TAD_Matrice/Proiect_C++/App.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/cmake-build-debug-coverage/CMakeFiles/Lab_3.dir/TAD_Matrice/Proiect_C++/App.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include "TestExtins.h"
+        -:    3:#include "TestScurt.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        -:    7:
+function main called 1 returned 100% blocks executed 100%
+        1:    8:int main() {
+        -:    9:
+        1:   10:	testAll();
+        1:   10-block  0
+call    0 returned 1
+        1:   11:	testAllExtins();
+call    0 returned 1
+        -:   12:
+        1:   13:	cout<<"End";
+call    0 returned 1
+        1:   14:}

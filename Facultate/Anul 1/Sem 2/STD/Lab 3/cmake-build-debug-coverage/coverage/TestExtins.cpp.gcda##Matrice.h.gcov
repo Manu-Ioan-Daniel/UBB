@@ -1,0 +1,58 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Proiect C++/Matrice.h
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/cmake-build-debug-coverage/CMakeFiles/Lab_3.dir/TAD_Matrice/Teste/TestExtins.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/cmake-build-debug-coverage/CMakeFiles/Lab_3.dir/TAD_Matrice/Teste/TestExtins.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "LinkedList.h"
+        -:    3:typedef int TElem;
+        -:    4:
+        -:    5:
+        -:    6:#define NULL_TELEMENT 0
+        -:    7:
+        -:    8:typedef struct {
+        -:    9:	int linie,coloana;
+        -:   10:	TElem value;
+        -:   11:}triplet;
+        -:   12:class Matrice {
+        -:   13:	int rows;
+        -:   14:	int columns;
+        -:   15:	LinkedList<triplet> elems;
+        -:   16:
+        -:   17:public:
+        -:   18:
+        -:   19:	//constructor
+        -:   20:	//se arunca exceptie daca nrLinii<=0 sau nrColoane<=0
+        -:   21:	Matrice(int nrLinii, int nrColoane);
+        -:   22:
+        -:   23:
+        -:   24:	//destructor
+function _ZN7MatriceD2Ev called 5 returned 100% blocks executed 100%
+        5:   25:	~Matrice(){};
+        5:   25-block  0
+call    0 returned 5
+        -:   26:
+        -:   27:	//returnare element de pe o linie si o coloana
+        -:   28:	//se arunca exceptie daca (i,j) nu e pozitie valida in Matrice
+        -:   29:	//indicii se considera incepand de la 0
+        -:   30:	TElem element(int i, int j) const;
+        -:   31:
+        -:   32:
+        -:   33:	// returnare numar linii
+        -:   34:	int nrLinii() const;
+        -:   35:
+        -:   36:	// returnare numar coloane
+        -:   37:	int nrColoane() const;
+        -:   38:
+        -:   39:
+        -:   40:	// modificare element de pe o linie si o coloana si returnarea vechii valori
+        -:   41:	// se arunca exceptie daca (i,j) nu e o pozitie valida in Matrice
+        -:   42:	TElem modifica(int i, int j, TElem);
+        -:   43:
+        -:   44:};
+        -:   45:
+        -:   46:
+        -:   47:
+        -:   48:
+        -:   49:
+        -:   50:
+        -:   51:

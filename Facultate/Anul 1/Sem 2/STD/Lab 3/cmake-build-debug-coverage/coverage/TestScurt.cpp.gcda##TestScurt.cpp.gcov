@@ -1,0 +1,74 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Teste/TestScurt.cpp
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/cmake-build-debug-coverage/CMakeFiles/Lab_3.dir/TAD_Matrice/Teste/TestScurt.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/cmake-build-debug-coverage/CMakeFiles/Lab_3.dir/TAD_Matrice/Teste/TestScurt.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "TestScurt.h"
+        -:    2:#include <assert.h>
+        -:    3:#include "Matrice.h"
+        -:    4:#include <iostream>
+        -:    5:
+        -:    6:using namespace std;
+        -:    7:
+function _Z7testAllv called 1 returned 100% blocks executed 70%
+        1:    8:void testAll() { //apelam fiecare functie sa vedem daca exista
+        1:    9:	Matrice m(4,4);
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   10:	assert(m.nrLinii() == 4);
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   10-block  2
+call    5 never executed
+       1*:   11:	assert(m.nrColoane() == 4);
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   11-block  2
+call    5 never executed
+        -:   12:	//adaug niste elemente
+        1:   13:	m.modifica(1,1,5);
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   14:	assert(m.element(1,1) == 5);
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   14-block  2
+call    5 never executed
+        1:   15:	m.modifica(1,1,6);
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   16:	assert(m.element(1,2) == NULL_TELEMENT);
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   16-block  2
+call    5 never executed
+        1:   17:}
+        1:   17-block  0
+call    0 returned 1
+    $$$$$:   17-block  1
+call    1 never executed

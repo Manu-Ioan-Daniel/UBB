@@ -1,0 +1,228 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Proiect C++/Matrice.cpp
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/cmake-build-debug-coverage/CMakeFiles/Lab_3.dir/TAD_Matrice/Proiect_C++/Matrice.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/cmake-build-debug-coverage/CMakeFiles/Lab_3.dir/TAD_Matrice/Proiect_C++/Matrice.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Matrice.h"
+        -:    2:
+        -:    3:#include <exception>
+        -:    4:
+        -:    5:
+        -:    6:
+        -:    7:using namespace std;
+        -:    8:
+        -:    9:
+function _ZN7MatriceC2Eii called 5 returned 100% blocks executed 56%
+        5:   10:Matrice::Matrice(const int nrLinii, const int nrColoane) {
+        5:   10-block  0
+call    0 returned 5
+        5:   11:	if (nrLinii<=0 || nrColoane<=0) {
+branch  0 taken 5 (fallthrough)
+branch  1 taken 0
+        5:   11-block  0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 5
+    #####:   12:		throw exception();
+    %%%%%:   12-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   13:	}
+        5:   14:	rows=nrLinii;
+        5:   15:	columns=nrColoane;
+        5:   16:}
+        5:   16-block  0
+    $$$$$:   16-block  1
+call    0 never executed
+        -:   17:
+        -:   18:
+        -:   19:
+function _ZNK7Matrice7nrLiniiEv called 630 returned 100% blocks executed 100%
+      630:   20:int Matrice::nrLinii() const{
+      630:   21:	return rows;
+      630:   21-block  0
+        -:   22:}
+        -:   23:
+        -:   24:
+function _ZNK7Matrice9nrColoaneEv called 181134 returned 100% blocks executed 100%
+   181134:   25:int Matrice::nrColoane() const{
+   181134:   26:	return columns;
+   181134:   26-block  0
+        -:   27:}
+        -:   28:
+        -:   29:
+function _ZNK7Matrice7elementEii called 90203 returned 100% blocks executed 100%
+    90203:   30:TElem Matrice::element(const int i,const int j) const{
+    90203:   31:	if (i<0 || i>=rows || j<0 || j>=columns) {
+    90203:   31-block  0
+branch  0 taken 90202 (fallthrough)
+branch  1 taken 1
+    90202:   31-block  1
+branch  2 taken 90202 (fallthrough)
+branch  3 taken 0
+    90202:   31-block  2
+branch  4 taken 90202 (fallthrough)
+branch  5 taken 0
+    90202:   31-block  3
+branch  6 taken 0 (fallthrough)
+branch  7 taken 90202
+        1:   32:        throw exception();
+        1:   32-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 0
+        -:   33:    }
+3024069097:   34:	for (const auto& triplet:elems) {
+    90202:   34-block  0
+call    0 returned 90202
+branch  1 taken 90202 (fallthrough)
+branch  2 taken 0 (throw)
+    90202:   34-block  1
+call    3 returned 90202
+branch  4 taken 90202 (fallthrough)
+branch  5 taken 0 (throw)
+    90202:   34-block  2
+3024023607:   34-block  3
+call    6 returned 3024023607
+3023978895:   34-block  4
+call    7 returned 3023978895
+3024069097:   34-block  5
+call    8 returned 3024069097
+branch  9 taken 3024023607
+branch 10 taken 45490 (fallthrough)
+3024023607:   35:		if (triplet.linie==i && triplet.coloana==j) {
+branch  0 taken 9731183 (fallthrough)
+branch  1 taken 3014292424
+  9731183:   35-block  0
+branch  2 taken 44712 (fallthrough)
+branch  3 taken 9686471
+    44712:   36:			return triplet.value;
+    44712:   36-block  0
+        -:   37:		}
+        -:   38:	}
+    45490:   39:	return NULL_TELEMENT;
+    45490:   39-block  0
+        -:   40:}
+        -:   41:
+        -:   42:
+        -:   43:
+function _ZN7Matrice8modificaEiii called 45213 returned 100% blocks executed 92%
+    45213:   44:TElem Matrice::modifica(const int i, const int j, const TElem e) {
+    45213:   45:	if (i < 0 || i >= rows || j < 0 || j >= columns)
+    45213:   45-block  0
+branch  0 taken 45213 (fallthrough)
+branch  1 taken 0
+    45213:   45-block  1
+branch  2 taken 45212 (fallthrough)
+branch  3 taken 1
+    45212:   45-block  2
+branch  4 taken 45212 (fallthrough)
+branch  5 taken 0
+    45212:   45-block  3
+branch  6 taken 0 (fallthrough)
+branch  7 taken 45212
+        1:   46:		throw exception();
+        1:   46-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 0
+        -:   47:
+503855282:   48:	for (auto it = elems.begin(); it != LinkedList<triplet>::end(); ++it) {
+    45212:   48-block  0
+call    0 returned 45212
+branch  1 taken 45212 (fallthrough)
+branch  2 taken 0 (throw)
+    45212:   48-block  1
+503810070:   48-block  2
+call    3 returned 503810070
+503855282:   48-block  3
+call    4 returned 503855282
+branch  5 taken 503855282 (fallthrough)
+branch  6 taken 0 (throw)
+503855282:   48-block  4
+call    7 returned 503855282
+branch  8 taken 503854971
+branch  9 taken 311 (fallthrough)
+    $$$$$:   48-block  5
+503854971:   49:		if (it->linie == i && it->coloana == j) {
+503854971:   49-block  0
+call    0 returned 503854971
+branch  1 taken 1902169 (fallthrough)
+branch  2 taken 501952802
+  1902169:   49-block  1
+call    3 returned 1902169
+branch  4 taken 200 (fallthrough)
+branch  5 taken 1901969
+      200:   49-block  2
+503854771:   49-block  3
+503854971:   49-block  4
+branch  6 taken 200 (fallthrough)
+branch  7 taken 503854771
+      200:   50:			const TElem oldValue = it->value;
+      200:   50-block  0
+call    0 returned 200
+      200:   51:			if (e == NULL_TELEMENT) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 200
+    #####:   52:				elems.erase(it);
+    %%%%%:   52-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   53:			} else {
+      200:   54:				it->value = e;
+      200:   54-block  0
+call    0 returned 200
+        -:   55:			}
+    44901:   56:			return oldValue;
+      200:   56-block  0
+    44901:   56-block  1
+        -:   57:		}
+503854771:   58:		if (it->linie > i || (it->linie == i && it->coloana > j)) {
+503854771:   58-block  0
+call    0 returned 503854771
+branch  1 taken 503854469 (fallthrough)
+branch  2 taken 302
+503854469:   58-block  1
+call    3 returned 503854469
+branch  4 taken 1901969 (fallthrough)
+branch  5 taken 501952500
+  1901969:   58-block  2
+call    6 returned 1901969
+branch  7 taken 44399 (fallthrough)
+branch  8 taken 1857570
+    44701:   58-block  3
+503810070:   58-block  4
+503854771:   58-block  5
+branch  9 taken 44701 (fallthrough)
+branch 10 taken 503810070
+    44701:   59:			if (e != NULL_TELEMENT) {
+    44701:   59-block  0
+branch  0 taken 44476 (fallthrough)
+branch  1 taken 225
+    44476:   60:				const triplet nou{ i, j, e };
+    44476:   61:				elems.insert(nou, it);
+    44476:   61-block  0
+call    0 returned 44476
+branch  1 taken 44476 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   62:			}
+    44701:   63:			return NULL_TELEMENT;
+    44701:   63-block  0
+        -:   64:		}
+        -:   65:	}
+      311:   66:	if (e!=NULL_TELEMENT) {
+      311:   66-block  0
+branch  0 taken 236
+branch  1 taken 75
+      236:   67:        const triplet nou{ i, j, e };
+      236:   68:        elems.push_back(nou);
+      236:   68-block  0
+call    0 returned 236
+branch  1 taken 236 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   69:    }
+      311:   70:	return NULL_TELEMENT;
+      311:   70-block  0
+        -:   71:}
+        -:   72:
+        -:   73:
