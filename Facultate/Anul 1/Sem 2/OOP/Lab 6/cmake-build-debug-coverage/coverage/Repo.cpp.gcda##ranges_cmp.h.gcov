@@ -1,0 +1,193 @@
+        -:    0:Source:/usr/include/c++/13/bits/ranges_cmp.h
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcda
+        -:    0:Runs:1
+        -:    1:// Concept-constrained comparison implementations -*- C++ -*-
+        -:    2:
+        -:    3:// Copyright (C) 2019-2023 Free Software Foundation, Inc.
+        -:    4://
+        -:    5:// This file is part of the GNU ISO C++ Library.  This library is free
+        -:    6:// software; you can redistribute it and/or modify it under the
+        -:    7:// terms of the GNU General Public License as published by the
+        -:    8:// Free Software Foundation; either version 3, or (at your option)
+        -:    9:// any later version.
+        -:   10:
+        -:   11:// This library is distributed in the hope that it will be useful,
+        -:   12:// but WITHOUT ANY WARRANTY; without even the implied warranty of
+        -:   13:// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        -:   14:// GNU General Public License for more details.
+        -:   15:
+        -:   16:// Under Section 7 of GPL version 3, you are granted additional
+        -:   17:// permissions described in the GCC Runtime Library Exception, version
+        -:   18:// 3.1, as published by the Free Software Foundation.
+        -:   19:
+        -:   20:// You should have received a copy of the GNU General Public License and
+        -:   21:// a copy of the GCC Runtime Library Exception along with this program;
+        -:   22:// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+        -:   23:// <http://www.gnu.org/licenses/>.
+        -:   24:
+        -:   25:/** @file bits/ranges_cmp.h
+        -:   26: *  This is an internal header file, included by other library headers.
+        -:   27: *  Do not attempt to use it directly. @headername{functional}
+        -:   28: */
+        -:   29:
+        -:   30:#ifndef _RANGES_CMP_H
+        -:   31:#define _RANGES_CMP_H 1
+        -:   32:
+        -:   33:#if __cplusplus > 201703L
+        -:   34:# include <bits/move.h>
+        -:   35:# include <concepts>
+        -:   36:
+        -:   37:namespace std _GLIBCXX_VISIBILITY(default)
+        -:   38:{
+        -:   39:_GLIBCXX_BEGIN_NAMESPACE_VERSION
+        -:   40:
+        -:   41:  struct __is_transparent; // not defined
+        -:   42:
+        -:   43:  // Define std::identity here so that <iterator> and <ranges>
+        -:   44:  // don't need to include <bits/stl_function.h> to get it.
+        -:   45:
+        -:   46:  /// [func.identity] The identity function.
+        -:   47:  struct identity
+        -:   48:  {
+        -:   49:    template<typename _Tp>
+        -:   50:      [[nodiscard]]
+        -:   51:      constexpr _Tp&&
+function _ZNKSt8identityclIRK10DisciplinaEEOT_S5_ called 8 returned 100% blocks executed 100%
+        8:   52:      operator()(_Tp&& __t) const noexcept
+        8:   53:      { return std::forward<_Tp>(__t); }
+        8:   53-block  0
+call    0 returned 8
+        -:   54:
+        -:   55:    using is_transparent = __is_transparent;
+        -:   56:  };
+        -:   57:
+        -:   58:#ifdef __cpp_lib_concepts
+        -:   59:// Define this here, included by all the headers that need to define it.
+        -:   60:#if __cplusplus > 202002L
+        -:   61:#define __cpp_lib_ranges 202202L
+        -:   62:#else
+        -:   63:#define __cpp_lib_ranges 202110L
+        -:   64:#endif
+        -:   65:
+        -:   66:namespace ranges
+        -:   67:{
+        -:   68:  namespace __detail
+        -:   69:  {
+        -:   70:    // BUILTIN-PTR-CMP(T, <, U)
+        -:   71:    // This determines whether t < u results in a call to a built-in operator<
+        -:   72:    // comparing pointers. It doesn't work for function pointers (PR 93628).
+        -:   73:    template<typename _Tp, typename _Up>
+        -:   74:      concept __less_builtin_ptr_cmp
+        -:   75:	= requires (_Tp&& __t, _Up&& __u) { { __t < __u } -> same_as<bool>; }
+        -:   76:	  && convertible_to<_Tp, const volatile void*>
+        -:   77:	  && convertible_to<_Up, const volatile void*>
+        -:   78:	  && (! requires(_Tp&& __t, _Up&& __u)
+        -:   79:	      { operator<(std::forward<_Tp>(__t), std::forward<_Up>(__u)); }
+        -:   80:	      && ! requires(_Tp&& __t, _Up&& __u)
+        -:   81:	      { std::forward<_Tp>(__t).operator<(std::forward<_Up>(__u)); });
+        -:   82:  } // namespace __detail
+        -:   83:
+        -:   84:  // [range.cmp] Concept-constrained comparisons
+        -:   85:
+        -:   86:  // _GLIBCXX_RESOLVE_LIB_DEFECTS
+        -:   87:  // 3530 BUILTIN-PTR-MEOW should not opt the type out of syntactic checks
+        -:   88:
+        -:   89:  /// ranges::equal_to function object type.
+        -:   90:  struct equal_to
+        -:   91:  {
+        -:   92:    template<typename _Tp, typename _Up>
+        -:   93:      requires equality_comparable_with<_Tp, _Up>
+        -:   94:      constexpr bool
+        -:   95:      operator()(_Tp&& __t, _Up&& __u) const
+        -:   96:      noexcept(noexcept(std::declval<_Tp>() == std::declval<_Up>()))
+        -:   97:      { return std::forward<_Tp>(__t) == std::forward<_Up>(__u); }
+        -:   98:
+        -:   99:    using is_transparent = __is_transparent;
+        -:  100:  };
+        -:  101:
+        -:  102:  /// ranges::not_equal_to function object type.
+        -:  103:  struct not_equal_to
+        -:  104:  {
+        -:  105:    template<typename _Tp, typename _Up>
+        -:  106:      requires equality_comparable_with<_Tp, _Up>
+        -:  107:      constexpr bool
+        -:  108:      operator()(_Tp&& __t, _Up&& __u) const
+        -:  109:      noexcept(noexcept(std::declval<_Up>() == std::declval<_Tp>()))
+        -:  110:      { return !equal_to{}(std::forward<_Tp>(__t), std::forward<_Up>(__u)); }
+        -:  111:
+        -:  112:    using is_transparent = __is_transparent;
+        -:  113:  };
+        -:  114:
+        -:  115:  /// ranges::less function object type.
+        -:  116:  struct less
+        -:  117:  {
+        -:  118:    template<typename _Tp, typename _Up>
+        -:  119:      requires totally_ordered_with<_Tp, _Up>
+        -:  120:      constexpr bool
+        -:  121:      operator()(_Tp&& __t, _Up&& __u) const
+        -:  122:      noexcept(noexcept(std::declval<_Tp>() < std::declval<_Up>()))
+        -:  123:      {
+        -:  124:	if constexpr (__detail::__less_builtin_ptr_cmp<_Tp, _Up>)
+        -:  125:	  {
+        -:  126:	    if (std::__is_constant_evaluated())
+        -:  127:	      return __t < __u;
+        -:  128:
+        -:  129:	    auto __x = reinterpret_cast<__UINTPTR_TYPE__>(
+        -:  130:	      static_cast<const volatile void*>(std::forward<_Tp>(__t)));
+        -:  131:	    auto __y = reinterpret_cast<__UINTPTR_TYPE__>(
+        -:  132:	      static_cast<const volatile void*>(std::forward<_Up>(__u)));
+        -:  133:	    return __x < __y;
+        -:  134:	  }
+        -:  135:	else
+        -:  136:	  return std::forward<_Tp>(__t) < std::forward<_Up>(__u);
+        -:  137:      }
+        -:  138:
+        -:  139:    using is_transparent = __is_transparent;
+        -:  140:  };
+        -:  141:
+        -:  142:  /// ranges::greater function object type.
+        -:  143:  struct greater
+        -:  144:  {
+        -:  145:    template<typename _Tp, typename _Up>
+        -:  146:      requires totally_ordered_with<_Tp, _Up>
+        -:  147:      constexpr bool
+        -:  148:      operator()(_Tp&& __t, _Up&& __u) const
+        -:  149:      noexcept(noexcept(std::declval<_Up>() < std::declval<_Tp>()))
+        -:  150:      { return less{}(std::forward<_Up>(__u), std::forward<_Tp>(__t)); }
+        -:  151:
+        -:  152:    using is_transparent = __is_transparent;
+        -:  153:  };
+        -:  154:
+        -:  155:  /// ranges::greater_equal function object type.
+        -:  156:  struct greater_equal
+        -:  157:  {
+        -:  158:    template<typename _Tp, typename _Up>
+        -:  159:      requires totally_ordered_with<_Tp, _Up>
+        -:  160:      constexpr bool
+        -:  161:      operator()(_Tp&& __t, _Up&& __u) const
+        -:  162:      noexcept(noexcept(std::declval<_Tp>() < std::declval<_Up>()))
+        -:  163:      { return !less{}(std::forward<_Tp>(__t), std::forward<_Up>(__u)); }
+        -:  164:
+        -:  165:    using is_transparent = __is_transparent;
+        -:  166:  };
+        -:  167:
+        -:  168:  /// ranges::less_equal function object type.
+        -:  169:  struct less_equal
+        -:  170:  {
+        -:  171:    template<typename _Tp, typename _Up>
+        -:  172:      requires totally_ordered_with<_Tp, _Up>
+        -:  173:      constexpr bool
+        -:  174:      operator()(_Tp&& __t, _Up&& __u) const
+        -:  175:      noexcept(noexcept(std::declval<_Up>() < std::declval<_Tp>()))
+        -:  176:      { return !less{}(std::forward<_Up>(__u), std::forward<_Tp>(__t)); }
+        -:  177:
+        -:  178:    using is_transparent = __is_transparent;
+        -:  179:  };
+        -:  180:
+        -:  181:} // namespace ranges
+        -:  182:#endif // library concepts
+        -:  183:_GLIBCXX_END_NAMESPACE_VERSION
+        -:  184:} // namespace std
+        -:  185:#endif // C++20
+        -:  186:#endif // _RANGES_CMP_H

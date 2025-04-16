@@ -1,0 +1,108 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/main.cpp
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/main.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:
+        -:    2:#include "ui.h"
+        -:    3:
+        -:    4:
+        -:    5:
+        -:    6:
+        -:    7:/*
+        -:    8:  Functie folosita in teste
+        -:    9:  primeste vector prin valoare -> copy constructor
+        -:   10:  returneaza prin valoare -> copy constructor sau move constructor
+        -:   11:*/
+        -:   12:// template <typename MyVector>
+        -:   13:// MyVector testCopyIterate(MyVector v) {
+        -:   14:// 	int totalPrice = 0;
+        -:   15:// 	for (const auto& el : v) {
+        -:   16:// 		totalPrice += el.getNrOre();
+        -:   17:// 	}
+        -:   18:// 	Disciplina d{ "total",totalPrice,"tt","tt" };
+        -:   19:// 	v.push_back(d);
+        -:   20:// 	return v;
+        -:   21:// }
+        -:   22://
+        -:   23:// template <typename MyVector>
+        -:   24://
+        -:   25:// void addDisciplina(MyVector& v, const int cate) {
+        -:   26:// 	for (int i = 0; i<cate; i++) {
+        -:   27:// 		Disciplina d{ std::to_string(i) + "_denumire",i + 10,std::to_string(i)+"_type",std::to_string(i) + "_cadru" };
+        -:   28:// 		v.push_back(d);
+        -:   29:// 	}
+        -:   30:// }
+        -:   31://
+        -:   32:// /*
+        -:   33:// Testare constructori / assignment
+        -:   34:// E template pentru a refolosi la diferite variante de VectorDinamic din proiect
+        -:   35:// */
+        -:   36:// template <typename MyVector>
+        -:   37:// void testCreateCopyAssign() {
+        -:   38:// 	MyVector v;//default constructor
+        -:   39:// 	addDisciplina(v, 100);
+        -:   40:// 	assert(v.getSize() == 100);
+        -:   41:// 	assert(v.get(50).getTip() == "50_type");
+        -:   42://
+        -:   43:// 	MyVector v2{ v };//constructor de copiere
+        -:   44:// 	assert(v2.getSize() == 100);
+        -:   45:// 	assert(v2.get(50).getTip() == "50_type");
+        -:   46://
+        -:   47:// 	MyVector v3;//default constructor
+        -:   48:// 	v3 = v;//operator=   assignment
+        -:   49:// 	assert(v3.getSize() == 100);
+        -:   50:// 	assert(v3.get(50).getTip() == "50_type");
+        -:   51://
+        -:   52:// 	auto v4 = testCopyIterate(v3);
+        -:   53:// 	assert(v4.getSize() == 101);
+        -:   54:// 	assert(v4.get(50).getTip() == "50_type");
+        -:   55:// }
+        -:   56://
+        -:   57:// /*
+        -:   58://   Test pentru move constructor si move assgnment
+        -:   59:// */
+        -:   60:// template <typename MyVector>
+        -:   61:// void testMoveConstrAssgnment() {
+        -:   62:// 	std::vector<MyVector> v;
+        -:   63:// 	//adaugam un vector care este o variabila temporara
+        -:   64:// 	//se v-a apela move constructor
+        -:   65:// 	v.push_back(MyVector{});
+        -:   66:// 	//inseram, la fel se apeleaza move costructor de la vectorul nostru
+        -:   67:// 	v.insert(v.begin(),MyVector{});
+        -:   68:// 	assert(v.size() == 2);
+        -:   69://
+        -:   70:// 	MyVector v2;
+        -:   71:// 	addDisciplina(v2, 50);
+        -:   72://
+        -:   73:// 	v2 = MyVector{};//move assignment
+        -:   74://
+        -:   75:// 	assert(v2.getSize() == 0);
+        -:   76://
+        -:   77:// }
+        -:   78:// template <typename MyVector>
+        -:   79:// void testAll() {
+        -:   80:// 	testCreateCopyAssign<MyVector>();
+        -:   81:// 	testMoveConstrAssgnment<MyVector>();
+        -:   82:// }
+        -:   83:
+        -:   84:
+function main called 1 returned 100% blocks executed 100%
+        1:   85:int main() {
+        1:   86:    testRepo();
+        1:   86-block  0
+call    0 returned 1
+        1:   87:    testService();
+call    0 returned 1
+        1:   88:    testDisciplina();
+call    0 returned 1
+        -:   89:    //testAll<LinkedList<Disciplina>>();
+        -:   90:
+        -:   91:    // Repo r;
+        -:   92:    // Validator v;
+        -:   93:    // Service s{r,v};
+        -:   94:    // const Ui ui{s};
+        -:   95:    // ui.startUi();
+        -:   96:	//_CrtDumpMemoryLeaks();
+        1:   97:    return 0;
+        -:   98:}
+        -:   99:

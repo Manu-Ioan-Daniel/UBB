@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include "disciplina.h"
-#include "LinkedList.h"
+
 using std::vector;
 class RepoException final :public std::exception{
     string msg;
@@ -14,22 +14,15 @@ public:
 
 };
 class Repo {
-    LinkedList<Disciplina> discipline;
-    LinkedList<Disciplina> contract;
+    vector<Disciplina> discipline;
+    vector<Disciplina> contract;
 public:
     void addDisciplina(const Disciplina& disciplina);
     void stergeDisciplina(const string& denumire,const string& tip);
     [[nodiscard]] Disciplina cautaDisciplina(const string &denumire, const string &tip) const;
-    void modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina) const;
-    [[nodiscard]] LinkedList<Disciplina>& getAll(){
+    void modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina);
+    [[nodiscard]] vector<Disciplina>& getAll(){
         return discipline;
-    }
-    void golesteContract();
-    void adaugaDisciplinaContract(const Disciplina& disciplina);
-    void genereazaContract(int nrDiscipline);
-    int getContractSize() const {return contract.getSize();};
-    [[nodiscard]] LinkedList<Disciplina>& getContract(){
-        return contract;
     }
 
 

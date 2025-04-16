@@ -14,4 +14,6 @@ add_executable(Lab_6 main.cpp
         validator.h
         ui.cpp
         ui.h
-        LinkedList.h)
+        LinkedList.h
+        Contract.cpp
+        Contract.h)

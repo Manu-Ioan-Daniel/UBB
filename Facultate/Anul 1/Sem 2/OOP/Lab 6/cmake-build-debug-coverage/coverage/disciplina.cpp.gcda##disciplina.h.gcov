@@ -1,0 +1,46 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/disciplina.h
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/disciplina.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/disciplina.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <string>
+        -:    3:using std::string;
+        -:    4:class Disciplina {
+        -:    5:    private:
+        -:    6:        string denumire;
+        -:    7:        int nrOre{};
+        -:    8:        string tip;
+        -:    9:        string cadruDidactic;
+        -:   10:    public:
+        -:   11:        [[nodiscard]]int getNrOre() const;
+        -:   12:        [[nodiscard]]string getDenumire() const;
+        -:   13:        [[nodiscard]]string getTip() const;
+        -:   14:        [[nodiscard]]string getCadruDidactic() const;
+function _ZN10DisciplinaC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS5_S5_ called 118 returned 100% blocks executed 100%
+      118:   15:        Disciplina(string denumire, const int nrOre, string tip, string cadruDidactic):denumire{std::move(denumire)},nrOre{nrOre},tip{std::move(tip)},cadruDidactic{std::move(cadruDidactic)} {
+      118:   15-block  0
+call    0 returned 118
+call    1 returned 118
+call    2 returned 118
+call    3 returned 118
+call    4 returned 118
+call    5 returned 118
+      118:   16:        }
+function _ZN10DisciplinaD2Ev called 1755 returned 100% blocks executed 100%
+     1755:   17:        ~Disciplina()=default;
+     1755:   17-block  0
+call    0 returned 1755
+call    1 returned 1755
+call    2 returned 1755
+        -:   18:        Disciplina(const Disciplina& d)= default;
+        -:   19:        Disciplina()=default;
+        -:   20:        Disciplina& operator=(const Disciplina& d) = default;
+        -:   21:        bool operator==(const Disciplina& d) const {
+        -:   22:            return denumire==d.denumire && tip==d.tip;
+        -:   23:        }
+        -:   24:
+        -:   25:
+        -:   26:
+        -:   27:
+        -:   28:};
+        -:   29:void testDisciplina();

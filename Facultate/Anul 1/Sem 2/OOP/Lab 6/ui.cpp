@@ -7,7 +7,7 @@ using std::cin;
 void Ui::startUi() const {
     int cmd=0;
     while (true) {
-        cout<<"0.Exit\n1.Adauga disciplina\n2.Modifica disciplina\n3.Sterge disciplina\n4.Cauta disciplina\n5.Afiseaza discipline\n6.Filtrare discipline dupa ore\n7.Filtrare discipline dupa cadru didactic\n8.Sortare discipline dupa ore\n9.Sortare discipline dupa denumire\n10.Sortare discipline dupa tip si cadru didactic\n";
+        cout<<"0.Exit\n1.Adauga disciplina\n2.Modifica disciplina\n3.Sterge disciplina\n4.Cauta disciplina\n5.Afiseaza discipline\n6.Filtrare discipline dupa ore\n7.Filtrare discipline dupa cadru didactic\n8.Sortare discipline dupa ore\n9.Sortare discipline dupa denumire\n10.Sortare discipline dupa tip si cadru didactic\n11.Adauga disciplina in contract\n12.Goleste contract\n13.Genereaza contract\n";
         readInteger(cmd,"Introdu optiunea dorita: ");
         if (cmd==0) {
             break;
@@ -19,7 +19,10 @@ void Ui::startUi() const {
                 cout<<e.getError();
             }catch (RepoException& e) {
                 cout<<e.getMsg();
+            }catch (ServiceException& e) {
+                cout<<e.getMsg();
             }
+
 
         }
         if (cmd==2) {
@@ -28,6 +31,8 @@ void Ui::startUi() const {
             } catch (ValidationError& e) {
                 cout<<e.getError();
             }catch (RepoException& e) {
+                cout<<e.getMsg();
+            }catch (ServiceException& e) {
                 cout<<e.getMsg();
             }
 
@@ -39,6 +44,8 @@ void Ui::startUi() const {
                 cout<<e.getError();
             }catch (RepoException& e) {
                 cout<<e.getMsg();
+            }catch (ServiceException& e) {
+                cout<<e.getMsg();
             }
 
         }
@@ -49,43 +56,127 @@ void Ui::startUi() const {
                 cout<<e.getError();
             }catch (RepoException& e) {
                 cout<<e.getMsg();
+            }catch (ServiceException& e) {
+                cout<<e.getMsg();
             }
         }
         if (cmd==5) {
             afiseazaDiscipline();
         }
         if (cmd==6) {
-            int nrOre;
-            readInteger(nrOre,"Numar ore: ");
-            const auto& discipline=service.filtrareDisciplineDupaOre(nrOre);
-            for (const auto& d:discipline) {
-                cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+            try {
+                int nrOre;
+                readInteger(nrOre,"Numar ore: ");
+                const auto& discipline=service.filtrareDisciplineDupaOre(nrOre);
+                for (const auto& d:discipline) {
+                    cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+                }
+            }catch (ValidationError& e) {
+                cout<<e.getError();
+            }catch (RepoException& e) {
+                cout<<e.getMsg();
+            }catch (ServiceException& e) {
+                cout<<e.getMsg();
             }
         }
         if (cmd==7) {
-            string cadruDidactic;
-            cout<<"Cadru didactic: ";
-            getline(cin,cadruDidactic);
-            for (const auto& discipline=service.filtrareDisciplineDupaCadruDidactic(cadruDidactic); const auto& d:discipline) {
-                cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+            try {
+                string cadruDidactic;
+                cout<<"Cadru didactic: ";
+                getline(cin,cadruDidactic);
+                for (const auto& discipline=service.filtrareDisciplineDupaCadruDidactic(cadruDidactic); const auto& d:discipline) {
+                    cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+                }
+            }catch (ValidationError& e) {
+                cout<<e.getError();
+            }catch (RepoException& e) {
+                cout<<e.getMsg();
+            }catch (ServiceException& e) {
+                cout<<e.getMsg();
             }
         }
         if (cmd==8) {
-            for (const auto& discipline=service.sortareDisciplineDupaOre(); const auto& d:discipline) {
-                cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+            try {
+                for (const auto& discipline=service.sortareDisciplineDupaOre(); const auto& d:discipline) {
+                    cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+                }
+            }catch (ValidationError& e) {
+                cout<<e.getError();
+            }catch (RepoException& e) {
+                cout<<e.getMsg();
+            }catch (ServiceException& e) {
+                cout<<e.getMsg();
             }
         }
         if (cmd==9) {
-            for (const auto& discipline=service.sortareDisciplineDupaDenumire(); const auto& d:discipline) {
-                cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+            try {
+                for (const auto& discipline=service.sortareDisciplineDupaDenumire(); const auto& d:discipline) {
+                    cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+                }
+            }catch (ValidationError& e) {
+                cout<<e.getError();
+            }catch (RepoException& e) {
+                cout<<e.getMsg();
+            }catch (ServiceException& e) {
+                cout<<e.getMsg();
             }
         }
         if (cmd==10) {
-            for (const auto& discipline=service.sortareDisciplineDupaTipSiCadruDidactic(); const auto& d:discipline) {
-                cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+            try {
+                for (const auto& discipline=service.sortareDisciplineDupaTipSiCadruDidactic(); const auto& d:discipline) {
+                    cout<<d.getDenumire()<<" "<<d.getNrOre()<<" "<<d.getTip()<<" "<<d.getCadruDidactic()<<"\n";
+                }
+            }catch (ValidationError& e) {
+                cout<<e.getError();
+            }catch (RepoException& e) {
+                cout<<e.getMsg();
+            }catch (ServiceException& e) {
+                cout<<e.getMsg();
             }
         }
-        if (cmd<0 || cmd>10) {
+        if (cmd==11) {
+            try {
+                string denumire;
+                cout<<"Denumire: ";
+                getline(cin,denumire);
+                service.adaugaDisciplinaContractService(denumire);
+                cout<<"Avem "<<service.getContract().getSize()<<" discipline in contract\n";
+            }catch (ValidationError& e) {
+                cout<<e.getError();
+            }catch (RepoException& e) {
+                cout<<e.getMsg();
+            }catch (ServiceException& e) {
+                cout<<e.getMsg();
+            }
+        }
+        if (cmd==12) {
+            try {
+                service.golesteContractService();
+                cout<<"Avem "<<service.getContract().getSize()<<" discipline in contract\n";
+            }catch (ValidationError& e) {
+                cout<<e.getError();
+            }catch (RepoException& e) {
+                cout<<e.getMsg();
+            }catch (ServiceException& e) {
+                cout<<e.getMsg();
+            }
+        }
+        if (cmd==13) {
+            try {
+                int nrDiscipline;
+                readInteger(nrDiscipline,"Numar discipline: ");
+                service.genereazaContractService(nrDiscipline);
+                cout<<"Avem "<<service.getContract().getSize()<<" discipline in contract\n";
+            }
+            catch (ValidationError& e) {
+                cout<<e.getError();
+            }catch (RepoException& e) {
+                cout<<e.getMsg();
+            }catch (ServiceException& e) {
+                cout<<e.getMsg();
+            }
+        }
+        if (cmd<0 || cmd>13) {
             cout<<"Optiune invalida!\n";
         }
 

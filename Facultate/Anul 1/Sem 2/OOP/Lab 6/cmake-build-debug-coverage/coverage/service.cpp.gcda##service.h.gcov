@@ -1,0 +1,53 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/service.h
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "Repo.h"
+        -:    3:#include "validator.h"
+        -:    4:class ServiceException final: public std::exception {
+        -:    5:    string msg;
+        -:    6:public:
+        -:    7:    explicit ServiceException(string m):msg{std::move(m)}{
+        -:    8:    }
+        -:    9:    [[nodiscard]] string getMsg() const {
+        -:   10:        return msg;
+        -:   11:    }
+        -:   12:};
+        -:   13:class Service {
+        -:   14:    Repo& repo;
+        -:   15:    Validator& validator;
+        -:   16:public:
+function _ZN7ServiceC2ER4RepoR9Validator called 1 returned 100% blocks executed 100%
+        1:   17:    explicit Service(Repo& repo,Validator& validator): repo(repo), validator(validator) {
+        1:   18:    }
+        -:   19:
+        -:   20:    void addDisciplinaService(const string& denumire, int nrOre, const string& tip, const string& cadruDidactic) const;
+function _ZNK7Service6getAllEv called 8 returned 100% blocks executed 100%
+        8:   21:    [[nodiscard]] vector<Disciplina>& getAll() const {
+        8:   22:        return repo.getAll();
+        8:   22-block  0
+call    0 returned 8
+        -:   23:    }
+        -:   24:    void modificaDisciplinaService(const string& denumire,const string& tip,const string& denumireNoua,const string& tipNou,int nrOreNou,const string& cadruDidacticNou) const;
+        -:   25:    void stergeDisciplinaService(const string& denumire,const string& tip) const;
+        -:   26:
+        -:   27:    [[nodiscard]]vector<Disciplina> filtrareDisciplineDupaOre(int nrOre) const;
+        -:   28:
+        -:   29:    [[nodiscard]]vector<Disciplina> filtrareDisciplineDupaCadruDidactic(const string &cadruDidactic) const;
+        -:   30:
+        -:   31:    [[nodiscard]]vector<Disciplina> sortareDisciplineDupaOre() const;
+        -:   32:
+        -:   33:    [[nodiscard]]vector<Disciplina> sortareDisciplineDupaDenumire() const;
+        -:   34:
+        -:   35:    [[nodiscard]]vector<Disciplina> sortareDisciplineDupaTipSiCadruDidactic() const;
+        -:   36:
+        -:   37:    [[nodiscard]] Disciplina cautaDisciplinaService(const string& denumire,const string& tip) const;
+        -:   38:    void adaugaDisciplinaContractService(const string& denumire) const;
+        -:   39:    void golesteContractService() const;
+        -:   40:    void genereazaContractService(int nrDiscipline) const;
+        -:   41:
+        -:   42:
+        -:   43:
+        -:   44:};
+        -:   45:void testService();

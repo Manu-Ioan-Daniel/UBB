@@ -16,7 +16,7 @@ string Disciplina::getCadruDidactic() const {
     return cadruDidactic;
 }
 void testDisciplina(){
-    Disciplina d1={"mate",5,"laborator","popescu"};
+    const Disciplina d1={"mate",5,"laborator","popescu"};
     assert(d1.getDenumire()=="mate");
     assert(d1.getNrOre()==5);
     assert(d1.getTip()=="laborator");

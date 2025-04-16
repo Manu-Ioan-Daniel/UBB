@@ -1,0 +1,38 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/disciplina.h
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/ui.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <string>
+        -:    3:using std::string;
+        -:    4:class Disciplina {
+        -:    5:    private:
+        -:    6:        string denumire;
+        -:    7:        int nrOre{};
+        -:    8:        string tip;
+        -:    9:        string cadruDidactic;
+        -:   10:    public:
+        -:   11:        [[nodiscard]]int getNrOre() const;
+        -:   12:        [[nodiscard]]string getDenumire() const;
+        -:   13:        [[nodiscard]]string getTip() const;
+        -:   14:        [[nodiscard]]string getCadruDidactic() const;
+        -:   15:        Disciplina(string denumire, const int nrOre, string tip, string cadruDidactic):denumire{std::move(denumire)},nrOre{nrOre},tip{std::move(tip)},cadruDidactic{std::move(cadruDidactic)} {
+        -:   16:        }
+function _ZN10DisciplinaD2Ev called 0 returned 0% blocks executed 0%
+    #####:   17:        ~Disciplina()=default;
+    %%%%%:   17-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   18:        Disciplina(const Disciplina& d)= default;
+        -:   19:        Disciplina()=default;
+        -:   20:        Disciplina& operator=(const Disciplina& d) = default;
+        -:   21:        bool operator==(const Disciplina& d) const {
+        -:   22:            return denumire==d.denumire && tip==d.tip;
+        -:   23:        }
+        -:   24:
+        -:   25:
+        -:   26:
+        -:   27:
+        -:   28:};
+        -:   29:void testDisciplina();

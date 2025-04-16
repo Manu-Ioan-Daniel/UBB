@@ -1,0 +1,1277 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/service.cpp
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:
+        -:    2:#include "service.h"
+        -:    3:#include <algorithm>
+        -:    4:#include <cassert>
+        -:    5:#include <iostream>
+        -:    6:
+function _ZNK7Service20addDisciplinaServiceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS7_S7_ called 112 returned 99% blocks executed 57%
+      112:    7:void Service::addDisciplinaService(const string& denumire,int nrOre,const string& tip,const string& cadruDidactic) const {
+        -:    8:
+      112:    9:    Validator::validateDisciplina(denumire,nrOre,tip,cadruDidactic);
+      112:    9-block  0
+call    0 returned 112
+branch  1 taken 111 (fallthrough)
+branch  2 taken 1 (throw)
+      111:   10:    const Disciplina d{denumire,nrOre,tip,cadruDidactic};
+      111:   10-block  0
+call    0 returned 111
+branch  1 taken 111 (fallthrough)
+branch  2 taken 0 (throw)
+      111:   10-block  1
+call    3 returned 111
+branch  4 taken 111 (fallthrough)
+branch  5 taken 0 (throw)
+      111:   10-block  2
+call    6 returned 111
+branch  7 taken 111 (fallthrough)
+branch  8 taken 0 (throw)
+      111:   10-block  3
+call    9 returned 111
+call   10 returned 111
+call   11 returned 111
+call   12 returned 111
+    $$$$$:   10-block  4
+    $$$$$:   10-block  5
+call   13 never executed
+    $$$$$:   10-block  6
+    $$$$$:   10-block  7
+call   14 never executed
+    $$$$$:   10-block  8
+      111:   11:    repo.addDisciplina(d);
+call    0 returned 111
+branch  1 taken 111 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   12:
+      111:   13:}
+      111:   13-block  0
+call    0 returned 111
+    $$$$$:   13-block  1
+call    1 never executed
+function _ZNK7Service22cautaDisciplinaServiceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 2 returned 100% blocks executed 67%
+        2:   14:Disciplina Service::cautaDisciplinaService(const string &denumire, const string &tip) const {
+        2:   14-block  0
+        2:   15:    Validator::validateDisciplina(denumire,20,tip,"salut");
+        2:   15-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   15-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   15-block  2
+call    6 returned 2
+    $$$$$:   15-block  3
+call    7 never executed
+    $$$$$:   15-block  4
+        2:   16:    Disciplina d = repo.cautaDisciplina(denumire, tip);
+        2:   16-block  0
+call    0 returned 2
+        2:   17:    return d;
+        2:   17-block  0
+        -:   18:}
+function _ZNK7Service25modificaDisciplinaServiceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_iS7_ called 2 returned 50% blocks executed 54%
+        2:   19:void Service::modificaDisciplinaService(const string &denumire, const string &tip,const string& denumireNoua,const string& tipNou,int nrOreNou,const string& cadruDidacticNou) const {
+        2:   19-block  0
+        2:   20:    Validator::validateDisciplina(denumire,20,tip,"salut");
+        2:   20-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   20-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   20-block  2
+call    6 returned 2
+    $$$$$:   20-block  3
+call    7 never executed
+    $$$$$:   20-block  4
+    $$$$$:   20-block  5
+        2:   21:    Validator::validateDisciplina(denumireNoua,nrOreNou,tipNou,cadruDidacticNou);
+        2:   21-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1 (throw)
+        1:   22:    const Disciplina& d = cautaDisciplinaService(denumire,tip);
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23:    Disciplina disciplinaNoua{denumireNoua,nrOreNou,tipNou,cadruDidacticNou};
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   23-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   23-block  3
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+    $$$$$:   23-block  4
+    $$$$$:   23-block  5
+call   13 never executed
+    $$$$$:   23-block  6
+    $$$$$:   23-block  7
+call   14 never executed
+    $$$$$:   23-block  8
+        1:   24:    repo.modificaDisciplina(disciplinaNoua,d);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25:}
+        1:   25-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   25-block  1
+call    2 never executed
+    $$$$$:   25-block  2
+call    3 never executed
+function _ZNK7Service23stergeDisciplinaServiceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 2 returned 50% blocks executed 100%
+        2:   26:void Service::stergeDisciplinaService(const string &denumire, const string &tip) const {
+        2:   26-block  0
+        3:   27:    Validator::validateDisciplina(denumire,20,tip,"salut");
+        2:   27-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   27-block  1
+call    3 returned 2
+branch  4 taken 1 (fallthrough)
+branch  5 taken 1 (throw)
+        1:   27-block  2
+call    6 returned 1
+        1:   27-block  3
+call    7 returned 1
+        1:   27-block  4
+        1:   28:    repo.stergeDisciplina(denumire,tip);
+        1:   28-block  0
+call    0 returned 1
+        1:   29:}
+function _ZNK7Service25filtrareDisciplineDupaOreEi called 1 returned 100% blocks executed 76%
+        1:   30:vector<Disciplina>Service::filtrareDisciplineDupaOre(const int nrOre) const {
+        1:   31:    vector<Disciplina> discipline=getAll();
+        1:   31-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   32:    vector<Disciplina> disciplineFiltrate;
+      101:   33:    for (const auto& d:discipline) {
+        1:   33-block  0
+call    0 returned 1
+call    1 returned 1
+      100:   33-block  1
+call    2 returned 100
+      100:   33-block  2
+call    3 returned 100
+      101:   33-block  3
+call    4 returned 101
+branch  5 taken 100
+branch  6 taken 1 (fallthrough)
+      100:   34:        if (d.getNrOre()>=nrOre) {
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+      100:   34-block  0
+branch  3 taken 50 (fallthrough)
+branch  4 taken 50
+       50:   35:            disciplineFiltrate.push_back(d);
+       50:   35-block  0
+call    0 returned 50
+branch  1 taken 50 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   36:        }
+        -:   37:    }
+        -:   38:
+        2:   39:    return disciplineFiltrate;
+        1:   39-block  0
+        1:   39-block  1
+        1:   40:}
+        1:   40-block  0
+call    0 returned 1
+    $$$$$:   40-block  1
+call    1 never executed
+    $$$$$:   40-block  2
+call    2 never executed
+function _ZNK7Service35filtrareDisciplineDupaCadruDidacticERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 75%
+        1:   41:vector<Disciplina> Service::filtrareDisciplineDupaCadruDidactic(const string& cadruDidactic) const {
+        1:   42:    const vector<Disciplina> discipline=getAll();
+        1:   42-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   43:    vector<Disciplina> disciplineFiltrate;
+      101:   44:    for (const auto& d:discipline) {
+        1:   44-block  0
+call    0 returned 1
+call    1 returned 1
+      100:   44-block  1
+call    2 returned 100
+      100:   44-block  2
+call    3 returned 100
+      101:   44-block  3
+call    4 returned 101
+branch  5 taken 100
+branch  6 taken 1 (fallthrough)
+      100:   45:        if (d.getCadruDidactic()==cadruDidactic) {
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+      100:   45-block  0
+call    3 returned 100
+call    4 returned 100
+branch  5 taken 100 (fallthrough)
+branch  6 taken 0
+    $$$$$:   45-block  1
+      100:   46:            disciplineFiltrate.push_back(d);
+      100:   46-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   47:        }
+        -:   48:    }
+        -:   49:
+        2:   50:    return disciplineFiltrate;
+        1:   50-block  0
+        1:   50-block  1
+        1:   51:}
+        1:   51-block  0
+call    0 returned 1
+    $$$$$:   51-block  1
+call    1 never executed
+    $$$$$:   51-block  2
+call    2 never executed
+function _ZNK7Service24sortareDisciplineDupaOreEv called 1 returned 100% blocks executed 86%
+        1:   52:vector<Disciplina> Service::sortareDisciplineDupaOre() const {
+        1:   53:    vector<Disciplina> discipline=getAll();
+        1:   53-block  0
+call    0 returned 1
+call    1 returned 1
+function _ZZNK7Service24sortareDisciplineDupaOreEvENKUlRK10DisciplinaS2_E_clES2_S2_ called 629 returned 100% blocks executed 100%
+      630:   54:    std::ranges::sort(discipline,[](const Disciplina& d1, const Disciplina& d2) {return d1.getNrOre() < d2.getNrOre();});
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+      629:   54-block  0
+call    3 returned 629
+call    4 returned 629
+        1:   55:    return discipline;
+        1:   55-block  0
+        1:   55-block  1
+    =====:   56:}
+    $$$$$:   56-block  0
+call    0 never executed
+function _ZNK7Service29sortareDisciplineDupaDenumireEv called 1 returned 100% blocks executed 86%
+        1:   57:vector<Disciplina> Service::sortareDisciplineDupaDenumire() const {
+        1:   58:    vector<Disciplina> discipline=getAll();
+        1:   58-block  0
+call    0 returned 1
+call    1 returned 1
+function _ZZNK7Service29sortareDisciplineDupaDenumireEvENKUlRK10DisciplinaS2_E_clES2_S2_ called 827 returned 100% blocks executed 75%
+      828:   59:    std::ranges::sort(discipline,[](const Disciplina& d1, const Disciplina& d2) {return d1.getDenumire() < d2.getDenumire();});
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+      827:   59-block  0
+call    3 returned 827
+branch  4 taken 827 (fallthrough)
+branch  5 taken 0 (throw)
+      827:   59-block  1
+call    6 returned 827
+branch  7 taken 827 (fallthrough)
+branch  8 taken 0 (throw)
+      827:   59-block  2
+call    9 returned 827
+call   10 returned 827
+call   11 returned 827
+call   12 returned 827
+      827:   59-block  3
+    $$$$$:   59-block  4
+    $$$$$:   59-block  5
+call   13 never executed
+        1:   60:    return discipline;
+        1:   60-block  0
+        1:   60-block  1
+    =====:   61:}
+    $$$$$:   61-block  0
+call    0 never executed
+function _ZNK7Service39sortareDisciplineDupaTipSiCadruDidacticEv called 1 returned 100% blocks executed 86%
+        1:   62:vector <Disciplina> Service::sortareDisciplineDupaTipSiCadruDidactic() const {
+        1:   63:    vector<Disciplina> discipline=getAll();
+        1:   63-block  0
+call    0 returned 1
+call    1 returned 1
+function _ZZNK7Service39sortareDisciplineDupaTipSiCadruDidacticEvENKUlRK10DisciplinaS2_E_clES2_S2_ called 500 returned 100% blocks executed 67%
+        1:   64:    std::ranges::sort(discipline,[](const Disciplina& d1, const Disciplina& d2)
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+      500:   65:        {if (d1.getTip() == d2.getTip()) {
+      500:   65-block  0
+call    0 returned 500
+branch  1 taken 500 (fallthrough)
+branch  2 taken 0 (throw)
+      500:   65-block  1
+call    3 returned 500
+branch  4 taken 500 (fallthrough)
+branch  5 taken 0 (throw)
+      500:   65-block  2
+call    6 returned 500
+call    7 returned 500
+call    8 returned 500
+branch  9 taken 446 (fallthrough)
+branch 10 taken 54
+    $$$$$:   65-block  3
+    $$$$$:   65-block  4
+call   11 never executed
+    $$$$$:   65-block  5
+call   12 never executed
+      446:   66:            return d1.getCadruDidactic() < d2.getCadruDidactic();
+      446:   66-block  0
+call    0 returned 446
+branch  1 taken 446 (fallthrough)
+branch  2 taken 0 (throw)
+      446:   66-block  1
+call    3 returned 446
+branch  4 taken 446 (fallthrough)
+branch  5 taken 0 (throw)
+      446:   66-block  2
+call    6 returned 446
+call    7 returned 446
+call    8 returned 446
+call    9 returned 446
+    $$$$$:   66-block  3
+    $$$$$:   66-block  4
+call   10 never executed
+    $$$$$:   66-block  5
+call   11 never executed
+        -:   67:        }
+       54:   68:        return d1.getTip() < d2.getTip();});
+       54:   68-block  0
+call    0 returned 54
+branch  1 taken 54 (fallthrough)
+branch  2 taken 0 (throw)
+       54:   68-block  1
+call    3 returned 54
+branch  4 taken 54 (fallthrough)
+branch  5 taken 0 (throw)
+       54:   68-block  2
+call    6 returned 54
+call    7 returned 54
+call    8 returned 54
+call    9 returned 54
+    $$$$$:   68-block  3
+    $$$$$:   68-block  4
+call   10 never executed
+        -:   69:
+        1:   70:    return discipline;
+        1:   70-block  0
+        1:   70-block  1
+    =====:   71:}
+    $$$$$:   71-block  0
+call    0 never executed
+        -:   72:// void Service::adaugaDisciplinaContractService(const string &denumire) const {
+        -:   73://     if (denumire.empty()) {
+        -:   74://         throw ValidationError("Denumire Invalida!");
+        -:   75://     }
+        -:   76://     for (auto& d:getAll()) {
+        -:   77://         if (d.getDenumire()==denumire) {
+        -:   78://             repo.adaugaDisciplinaContract(d);
+        -:   79://             return;
+        -:   80://         }
+        -:   81://     }
+        -:   82://     throw ServiceException("Nu exista disciplina cu denumirea: "+denumire);
+        -:   83:// }
+        -:   84:// void Service::golesteContractService()const {
+        -:   85://     repo.golesteContract();
+        -:   86:// }
+        -:   87:// void Service::genereazaContractService(const int nrDiscipline)const {
+        -:   88://     if (nrDiscipline<=0) {
+        -:   89://         throw ValidationError("Numar de discipline invalid!");
+        -:   90://     }
+        -:   91://     repo.genereazaContract(nrDiscipline);
+        -:   92:// }
+function _Z11testServicev called 1 returned 100% blocks executed 61%
+        1:   93:void testService() {
+        -:   94:    //test adaugare
+        -:   95:
+        1:   96:    Repo r;
+        -:   97:    Validator v;
+        1:   98:    const Service s{r,v};
+        1:   98-block  0
+call    0 returned 1
+        5:   99:    s.addDisciplinaService("mate",5,"laborator","popescu");
+        1:   99-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   99-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   99-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   99-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   99-block  4
+call   12 returned 1
+        1:   99-block  5
+call   13 returned 1
+        1:   99-block  6
+call   14 returned 1
+    $$$$$:   99-block  7
+call   15 never executed
+    $$$$$:   99-block  8
+    $$$$$:   99-block  9
+    $$$$$:   99-block 10
+call   16 never executed
+    $$$$$:   99-block 11
+    $$$$$:   99-block 12
+    $$$$$:   99-block 13
+call   17 never executed
+    $$$$$:   99-block 14
+    $$$$$:   99-block 15
+        1:  100:    const auto& all=s.getAll();
+        1:  100-block  0
+call    0 returned 1
+       1*:  101:    assert(all.size()==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  101-block  0
+call    3 never executed
+       6*:  102:    assert(*all.begin()==Disciplina("mate",5,"laborator","popescu"));
+        1:  102-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  102-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  102-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  102-block  3
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+branch 13 taken 0 (fallthrough)
+branch 14 taken 1
+    %%%%%:  102-block  4
+call   15 never executed
+        1:  102-block  5
+call   16 returned 1
+call   17 returned 1
+        1:  102-block  6
+call   18 returned 1
+        1:  102-block  7
+call   19 returned 1
+        1:  102-block  8
+    $$$$$:  102-block  9
+    $$$$$:  102-block 10
+    $$$$$:  102-block 11
+call   20 never executed
+    $$$$$:  102-block 12
+    $$$$$:  102-block 13
+    $$$$$:  102-block 14
+call   21 never executed
+    $$$$$:  102-block 15
+    $$$$$:  102-block 16
+    $$$$$:  102-block 17
+        -:  103:    try {
+       6*:  104:        s.addDisciplinaService("",-1,"","");
+        1:  104-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  104-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  104-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  104-block  3
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+    %%%%%:  104-block  4
+call   12 never executed
+    %%%%%:  104-block  5
+call   13 never executed
+    %%%%%:  104-block  6
+call   14 never executed
+    %%%%%:  104-block  7
+        1:  104-block  8
+call   15 returned 1
+        1:  104-block  9
+        1:  104-block 10
+        1:  104-block 11
+call   16 returned 1
+        1:  104-block 12
+        1:  104-block 13
+        1:  104-block 14
+call   17 returned 1
+        1:  104-block 15
+        1:  104-block 16
+        -:  105:        //assert(false);
+        1:  106:    }catch (ValidationError&) {
+        1:  106-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  106-block  1
+call    2 returned 1
+        -:  107:        assert(true);
+        1:  108:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  109:
+        -:  110:    //test cauta disciplina
+        -:  111:
+        4:  112:     const Disciplina& d=s.cautaDisciplinaService("mate","laborator");
+        1:  112-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  112-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  112-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  112-block  3
+call    9 returned 1
+        1:  112-block  4
+call   10 returned 1
+        1:  112-block  5
+    $$$$$:  112-block  6
+call   11 never executed
+    $$$$$:  112-block  7
+    $$$$$:  112-block  8
+    $$$$$:  112-block  9
+call   12 never executed
+    $$$$$:  112-block 10
+    $$$$$:  112-block 11
+        5:  113:     const auto &d2 = Disciplina("mate",5,"laborator","popescu");
+        1:  113-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  113-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  113-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  113-block  3
+call    9 returned 1
+call   10 returned 1
+        1:  113-block  4
+call   11 returned 1
+        1:  113-block  5
+call   12 returned 1
+    $$$$$:  113-block  6
+    $$$$$:  113-block  7
+    $$$$$:  113-block  8
+call   13 never executed
+    $$$$$:  113-block  9
+    $$$$$:  113-block 10
+    $$$$$:  113-block 11
+call   14 never executed
+    $$$$$:  113-block 12
+    $$$$$:  113-block 13
+       1*:  114:     assert(d==d2);
+        1:  114-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  114-block  1
+call    3 never executed
+        -:  115:
+        -:  116:
+        -:  117:    //test modifica disciplina
+        -:  118:
+       10:  119:    s.modificaDisciplinaService("mate","laborator","info","seminar",6,"ionescu");
+        1:  119-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  119-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  119-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  119-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  119-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  119-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:  119-block  6
+call   18 returned 1
+        1:  119-block  7
+call   19 returned 1
+        1:  119-block  8
+call   20 returned 1
+        1:  119-block  9
+call   21 returned 1
+        1:  119-block 10
+call   22 returned 1
+        1:  119-block 11
+    $$$$$:  119-block 12
+call   23 never executed
+    $$$$$:  119-block 13
+    $$$$$:  119-block 14
+    $$$$$:  119-block 15
+call   24 never executed
+    $$$$$:  119-block 16
+    $$$$$:  119-block 17
+    $$$$$:  119-block 18
+call   25 never executed
+    $$$$$:  119-block 19
+    $$$$$:  119-block 20
+    $$$$$:  119-block 21
+call   26 never executed
+    $$$$$:  119-block 22
+    $$$$$:  119-block 23
+    $$$$$:  119-block 24
+call   27 never executed
+    $$$$$:  119-block 25
+    $$$$$:  119-block 26
+       6*:  120:    assert(*s.getAll().begin()==Disciplina("info",6,"seminar","ionescu"));
+        1:  120-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  120-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  120-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  120-block  3
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 0 (fallthrough)
+branch 15 taken 1
+    %%%%%:  120-block  4
+call   16 never executed
+        1:  120-block  5
+call   17 returned 1
+call   18 returned 1
+        1:  120-block  6
+call   19 returned 1
+        1:  120-block  7
+call   20 returned 1
+        1:  120-block  8
+    $$$$$:  120-block  9
+    $$$$$:  120-block 10
+    $$$$$:  120-block 11
+call   21 never executed
+    $$$$$:  120-block 12
+    $$$$$:  120-block 13
+    $$$$$:  120-block 14
+call   22 never executed
+    $$$$$:  120-block 15
+    $$$$$:  120-block 16
+    $$$$$:  120-block 17
+        -:  121:    try {
+      10*:  122:        s.modificaDisciplinaService("mate","laborator","","",0,"");
+        1:  122-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  122-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  122-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  122-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  122-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  122-block  5
+call   15 returned 1
+branch 16 taken 0 (fallthrough)
+branch 17 taken 1 (throw)
+    %%%%%:  122-block  6
+call   18 never executed
+    %%%%%:  122-block  7
+call   19 never executed
+    %%%%%:  122-block  8
+call   20 never executed
+    %%%%%:  122-block  9
+call   21 never executed
+    %%%%%:  122-block 10
+call   22 never executed
+    %%%%%:  122-block 11
+        1:  122-block 12
+call   23 returned 1
+        1:  122-block 13
+        1:  122-block 14
+        1:  122-block 15
+call   24 returned 1
+        1:  122-block 16
+        1:  122-block 17
+        1:  122-block 18
+call   25 returned 1
+        1:  122-block 19
+        1:  122-block 20
+        1:  122-block 21
+call   26 returned 1
+        1:  122-block 22
+        1:  122-block 23
+        1:  122-block 24
+call   27 returned 1
+        1:  122-block 25
+        1:  122-block 26
+        -:  123:        //assert(false);
+        1:  124:    }catch (ValidationError&) {
+        1:  124-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  124-block  1
+call    2 returned 1
+        -:  125:        assert(true);
+        1:  126:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  127:
+        -:  128:    //test sterge disciplina
+        -:  129:
+        3:  130:    s.stergeDisciplinaService("info","seminar");
+        1:  130-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  130-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  130-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  130-block  3
+call    9 returned 1
+        1:  130-block  4
+call   10 returned 1
+    $$$$$:  130-block  5
+call   11 never executed
+    $$$$$:  130-block  6
+    $$$$$:  130-block  7
+    $$$$$:  130-block  8
+call   12 never executed
+    $$$$$:  130-block  9
+    $$$$$:  130-block 10
+       1*:  131:    assert(s.getAll().empty());
+        1:  131-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  131-block  1
+call    4 never executed
+        -:  132:    try {
+       4*:  133:        s.stergeDisciplinaService("","");
+        1:  133-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  133-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  133-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1 (throw)
+    %%%%%:  133-block  3
+call    9 never executed
+    %%%%%:  133-block  4
+call   10 never executed
+    %%%%%:  133-block  5
+        1:  133-block  6
+call   11 returned 1
+        1:  133-block  7
+        1:  133-block  8
+        1:  133-block  9
+call   12 returned 1
+        1:  133-block 10
+        1:  133-block 11
+        -:  134:        //assert(false);
+        1:  135:    }catch (ValidationError&) {
+        1:  135-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  135-block  1
+call    2 returned 1
+        -:  136:        assert(true);
+        1:  137:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  138:
+        -:  139:    //test filtrareDupaOre
+        -:  140:
+      101:  141:    for (int i = 0;i<100;i++) {
+        1:  141-block  0
+      101:  141-block  1
+branch  0 taken 100
+branch  1 taken 1 (fallthrough)
+      400:  142:        s.addDisciplinaService("mate"+std::to_string(i),i,"laborator","popescu");
+      100:  142-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+      100:  142-block  1
+call    3 returned 100
+branch  4 taken 100 (fallthrough)
+branch  5 taken 0 (throw)
+      100:  142-block  2
+call    6 returned 100
+call    7 returned 100
+branch  8 taken 100 (fallthrough)
+branch  9 taken 0 (throw)
+      100:  142-block  3
+call   10 returned 100
+branch 11 taken 100 (fallthrough)
+branch 12 taken 0 (throw)
+      100:  142-block  4
+call   13 returned 100
+call   14 returned 100
+call   15 returned 100
+      100:  142-block  5
+call   16 returned 100
+      100:  142-block  6
+    $$$$$:  142-block  7
+call   17 never executed
+    $$$$$:  142-block  8
+call   18 never executed
+    $$$$$:  142-block  9
+    $$$$$:  142-block 10
+    $$$$$:  142-block 11
+call   19 never executed
+    $$$$$:  142-block 12
+    $$$$$:  142-block 13
+    $$$$$:  142-block 14
+call   20 never executed
+    $$$$$:  142-block 15
+    $$$$$:  142-block 16
+        -:  143:    }
+        1:  144:    const vector<Disciplina> disciplineFiltrate=s.filtrareDisciplineDupaOre(50);
+        1:  144-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  145:    assert(disciplineFiltrate.size()==50);
+        1:  145-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  145-block  1
+call    3 never executed
+       51:  146:    for (auto it=disciplineFiltrate.begin();it!=disciplineFiltrate.end();++it) {
+        1:  146-block  0
+call    0 returned 1
+       50:  146-block  1
+call    1 returned 50
+       51:  146-block  2
+call    2 returned 51
+call    3 returned 51
+branch  4 taken 50
+branch  5 taken 1 (fallthrough)
+      50*:  147:        assert(it->getNrOre()>=50);
+       50:  147-block  0
+call    0 returned 50
+call    1 returned 50
+branch  2 taken 50 (fallthrough)
+branch  3 taken 0 (throw)
+       50:  147-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 50
+    %%%%%:  147-block  2
+call    6 never executed
+        -:  148:    }
+        -:  149:    //test filtrareDupaCadruDidactic
+        1:  150:    const vector<Disciplina> disciplineFiltrateCadruDidactic=s.filtrareDisciplineDupaCadruDidactic("popescu");
+        1:  150-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  150-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  150-block  2
+call    6 returned 1
+    $$$$$:  150-block  3
+call    7 never executed
+    $$$$$:  150-block  4
+    $$$$$:  150-block  5
+       1*:  151:    assert(disciplineFiltrateCadruDidactic.size()==100);
+        1:  151-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  151-block  1
+call    3 never executed
+      101:  152:    for (auto it=disciplineFiltrateCadruDidactic.begin();it!=disciplineFiltrateCadruDidactic.end();++it) {
+        1:  152-block  0
+call    0 returned 1
+      101:  152-block  1
+call    1 returned 101
+call    2 returned 101
+branch  3 taken 100
+branch  4 taken 1 (fallthrough)
+     100*:  153:        assert(it->getCadruDidactic()=="popescu");
+      100:  153-block  0
+call    0 returned 100
+call    1 returned 100
+branch  2 taken 100 (fallthrough)
+branch  3 taken 0 (throw)
+      100:  153-block  1
+call    4 returned 100
+branch  5 taken 100 (fallthrough)
+branch  6 taken 0 (throw)
+      100:  153-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 100
+    %%%%%:  153-block  3
+call    9 never executed
+      100:  153-block  4
+call   10 returned 100
+call   11 returned 100
+    $$$$$:  153-block  5
+call   12 never executed
+    $$$$$:  153-block  6
+        -:  154:    }
+        -:  155:    //test sortareDisciplineDupaOre
+        1:  156:    const vector<Disciplina> disciplineSortateDupaOre=s.sortareDisciplineDupaOre();
+        1:  156-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  157:    assert(disciplineSortateDupaOre.size()==100);
+        1:  157-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  157-block  1
+call    3 never executed
+      101:  158:    for (auto it=disciplineSortateDupaOre.begin();it!=disciplineSortateDupaOre.end();++it) {
+        1:  158-block  0
+call    0 returned 1
+      100:  158-block  1
+call    1 returned 100
+      101:  158-block  2
+call    2 returned 101
+call    3 returned 101
+branch  4 taken 100
+branch  5 taken 1 (fallthrough)
+      100:  159:        auto it2=it;
+      100:  160:        ++it2;
+      100:  160-block  0
+call    0 returned 100
+      100:  161:        if (it2!=disciplineSortateDupaOre.end()) {
+call    0 returned 100
+call    1 returned 100
+branch  2 taken 99 (fallthrough)
+branch  3 taken 1
+      99*:  162:            assert(it->getNrOre()<=it2->getNrOre());
+       99:  162-block  0
+call    0 returned 99
+call    1 returned 99
+branch  2 taken 99 (fallthrough)
+branch  3 taken 0 (throw)
+       99:  162-block  1
+call    4 returned 99
+call    5 returned 99
+branch  6 taken 99 (fallthrough)
+branch  7 taken 0 (throw)
+       99:  162-block  2
+branch  8 taken 0 (fallthrough)
+branch  9 taken 99
+    %%%%%:  162-block  3
+call   10 never executed
+        -:  163:        }
+        -:  164:    }
+        -:  165:    //test sortareDisciplineDupaDenumire
+        1:  166:    const vector<Disciplina> disciplineSortateDupaDenumire=s.sortareDisciplineDupaDenumire();
+        1:  166-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  167:    assert(disciplineSortateDupaDenumire.size()==100);
+        1:  167-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  167-block  1
+call    3 never executed
+      101:  168:    for (auto it=disciplineSortateDupaDenumire.begin();it!=disciplineSortateDupaDenumire.end();++it) {
+        1:  168-block  0
+call    0 returned 1
+      100:  168-block  1
+call    1 returned 100
+      101:  168-block  2
+call    2 returned 101
+call    3 returned 101
+branch  4 taken 100
+branch  5 taken 1 (fallthrough)
+      100:  169:        auto it2=it;
+      100:  170:        ++it2;
+      100:  170-block  0
+call    0 returned 100
+      100:  171:        if (it2!=disciplineSortateDupaDenumire.end()) {
+call    0 returned 100
+call    1 returned 100
+branch  2 taken 99 (fallthrough)
+branch  3 taken 1
+      99*:  172:            assert(it->getDenumire()<=it2->getDenumire());
+       99:  172-block  0
+call    0 returned 99
+call    1 returned 99
+branch  2 taken 99 (fallthrough)
+branch  3 taken 0 (throw)
+       99:  172-block  1
+call    4 returned 99
+call    5 returned 99
+branch  6 taken 99 (fallthrough)
+branch  7 taken 0 (throw)
+       99:  172-block  2
+call    8 returned 99
+call    9 returned 99
+branch 10 taken 0 (fallthrough)
+branch 11 taken 99
+    %%%%%:  172-block  3
+call   12 never executed
+       99:  172-block  4
+call   13 returned 99
+call   14 returned 99
+    $$$$$:  172-block  5
+    $$$$$:  172-block  6
+call   15 never executed
+    $$$$$:  172-block  7
+        -:  173:        }
+        -:  174:    }
+        -:  175:    //test sortareDisciplineDupaTipSiCadruDidactic
+       11:  176:    for (int i = 0;i<10;i++) {
+        1:  176-block  0
+       11:  176-block  1
+branch  0 taken 10
+branch  1 taken 1 (fallthrough)
+       20:  177:        s.addDisciplinaService("mate"+std::to_string(i),i,"laborator"+std::to_string(i),"popescu");
+       10:  177-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:  177-block  1
+call    3 returned 10
+call    4 returned 10
+branch  5 taken 10 (fallthrough)
+branch  6 taken 0 (throw)
+       10:  177-block  2
+call    7 returned 10
+call    8 returned 10
+branch  9 taken 10 (fallthrough)
+branch 10 taken 0 (throw)
+       10:  177-block  3
+call   11 returned 10
+branch 12 taken 10 (fallthrough)
+branch 13 taken 0 (throw)
+       10:  177-block  4
+call   14 returned 10
+call   15 returned 10
+call   16 returned 10
+call   17 returned 10
+call   18 returned 10
+       10:  177-block  5
+    $$$$$:  177-block  6
+call   19 never executed
+    $$$$$:  177-block  7
+call   20 never executed
+    $$$$$:  177-block  8
+    $$$$$:  177-block  9
+    $$$$$:  177-block 10
+call   21 never executed
+    $$$$$:  177-block 11
+call   22 never executed
+    $$$$$:  177-block 12
+    $$$$$:  177-block 13
+    $$$$$:  177-block 14
+call   23 never executed
+    $$$$$:  177-block 15
+    $$$$$:  177-block 16
+        -:  178:    }
+        1:  179:    const vector<Disciplina> disciplineSortateDupaTipSiCadruDidactic=s.sortareDisciplineDupaTipSiCadruDidactic();
+        1:  179-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  180:    assert(disciplineSortateDupaTipSiCadruDidactic.size()==110);
+        1:  180-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  180-block  1
+call    3 never executed
+      111:  181:    for (auto it=disciplineSortateDupaTipSiCadruDidactic.begin();it!=disciplineSortateDupaTipSiCadruDidactic.end();++it) {
+        1:  181-block  0
+call    0 returned 1
+      110:  181-block  1
+call    1 returned 110
+      111:  181-block  2
+call    2 returned 111
+call    3 returned 111
+branch  4 taken 110
+branch  5 taken 1 (fallthrough)
+      110:  182:        auto it2=it;
+      110:  183:        ++it2;
+      110:  183-block  0
+call    0 returned 110
+      110:  184:        if (it2!=disciplineSortateDupaTipSiCadruDidactic.end()) {
+call    0 returned 110
+call    1 returned 110
+branch  2 taken 109 (fallthrough)
+branch  3 taken 1
+      109:  185:            if (it->getTip()==it2->getTip()) {
+      109:  185-block  0
+call    0 returned 109
+call    1 returned 109
+branch  2 taken 109 (fallthrough)
+branch  3 taken 0 (throw)
+      109:  185-block  1
+call    4 returned 109
+call    5 returned 109
+branch  6 taken 109 (fallthrough)
+branch  7 taken 0 (throw)
+      109:  185-block  2
+call    8 returned 109
+call    9 returned 109
+call   10 returned 109
+branch 11 taken 99 (fallthrough)
+branch 12 taken 10
+    $$$$$:  185-block  3
+    $$$$$:  185-block  4
+call   13 never executed
+    $$$$$:  185-block  5
+      99*:  186:                assert(it->getCadruDidactic()<=it2->getCadruDidactic());
+       99:  186-block  0
+call    0 returned 99
+call    1 returned 99
+branch  2 taken 99 (fallthrough)
+branch  3 taken 0 (throw)
+       99:  186-block  1
+call    4 returned 99
+call    5 returned 99
+branch  6 taken 99 (fallthrough)
+branch  7 taken 0 (throw)
+       99:  186-block  2
+call    8 returned 99
+call    9 returned 99
+branch 10 taken 0 (fallthrough)
+branch 11 taken 99
+    %%%%%:  186-block  3
+call   12 never executed
+       99:  186-block  4
+call   13 returned 99
+call   14 returned 99
+    $$$$$:  186-block  5
+    $$$$$:  186-block  6
+call   15 never executed
+    $$$$$:  186-block  7
+        -:  187:            }
+        -:  188:        }
+        -:  189:    }
+        -:  190:    // //test adauga disciplina in contract
+        -:  191:    // s.addDisciplinaService("matematica",5,"tip","cadru");
+        -:  192:    // s.adaugaDisciplinaContractService("matematica");
+        -:  193:    // assert(s.getContractSize()==1);
+        -:  194:    // assert(s.getContract().begin()->getDenumire()=="matematica");
+        -:  195:    // try {
+        -:  196:    //     s.adaugaDisciplinaContractService("");
+        -:  197:    //     assert(false);
+        -:  198:    // }catch (ValidationError&) {
+        -:  199:    //     assert(true);
+        -:  200:    // }
+        -:  201:    //
+        -:  202:    // //test goleste contract
+        -:  203:    //
+        -:  204:    // s.golesteContractService();
+        -:  205:    // assert(s.getContractSize()==0);
+        1:  206:}
+        1:  206-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+    $$$$$:  206-block  1
+call    8 never executed
+    $$$$$:  206-block  2
+call    9 never executed
+    $$$$$:  206-block  3
+call   10 never executed
+    $$$$$:  206-block  4
+call   11 never executed
+    $$$$$:  206-block  5
+call   12 never executed
+    $$$$$:  206-block  6
+call   13 never executed
+    $$$$$:  206-block  7
+call   14 never executed
+    $$$$$:  206-block  8
+call   15 never executed

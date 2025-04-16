@@ -1,0 +1,189 @@
+        -:    0:Source:/usr/include/c++/13/vector
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcda
+        -:    0:Runs:1
+        -:    1:// <vector> -*- C++ -*-
+        -:    2:
+        -:    3:// Copyright (C) 2001-2023 Free Software Foundation, Inc.
+        -:    4://
+        -:    5:// This file is part of the GNU ISO C++ Library.  This library is free
+        -:    6:// software; you can redistribute it and/or modify it under the
+        -:    7:// terms of the GNU General Public License as published by the
+        -:    8:// Free Software Foundation; either version 3, or (at your option)
+        -:    9:// any later version.
+        -:   10:
+        -:   11:// This library is distributed in the hope that it will be useful,
+        -:   12:// but WITHOUT ANY WARRANTY; without even the implied warranty of
+        -:   13:// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        -:   14:// GNU General Public License for more details.
+        -:   15:
+        -:   16:// Under Section 7 of GPL version 3, you are granted additional
+        -:   17:// permissions described in the GCC Runtime Library Exception, version
+        -:   18:// 3.1, as published by the Free Software Foundation.
+        -:   19:
+        -:   20:// You should have received a copy of the GNU General Public License and
+        -:   21:// a copy of the GCC Runtime Library Exception along with this program;
+        -:   22:// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+        -:   23:// <http://www.gnu.org/licenses/>.
+        -:   24:
+        -:   25:/*
+        -:   26: *
+        -:   27: * Copyright (c) 1994
+        -:   28: * Hewlett-Packard Company
+        -:   29: *
+        -:   30: * Permission to use, copy, modify, distribute and sell this software
+        -:   31: * and its documentation for any purpose is hereby granted without fee,
+        -:   32: * provided that the above copyright notice appear in all copies and
+        -:   33: * that both that copyright notice and this permission notice appear
+        -:   34: * in supporting documentation.  Hewlett-Packard Company makes no
+        -:   35: * representations about the suitability of this software for any
+        -:   36: * purpose.  It is provided "as is" without express or implied warranty.
+        -:   37: *
+        -:   38: *
+        -:   39: * Copyright (c) 1996
+        -:   40: * Silicon Graphics Computer Systems, Inc.
+        -:   41: *
+        -:   42: * Permission to use, copy, modify, distribute and sell this software
+        -:   43: * and its documentation for any purpose is hereby granted without fee,
+        -:   44: * provided that the above copyright notice appear in all copies and
+        -:   45: * that both that copyright notice and this permission notice appear
+        -:   46: * in supporting documentation.  Silicon Graphics makes no
+        -:   47: * representations about the suitability of this software for any
+        -:   48: * purpose.  It is provided "as is" without express or implied warranty.
+        -:   49: */
+        -:   50:
+        -:   51:/** @file include/vector
+        -:   52: *  This is a Standard C++ Library header.
+        -:   53: */
+        -:   54:
+        -:   55:#ifndef _GLIBCXX_VECTOR
+        -:   56:#define _GLIBCXX_VECTOR 1
+        -:   57:
+        -:   58:#pragma GCC system_header
+        -:   59:
+        -:   60:#include <bits/requires_hosted.h> // container
+        -:   61:
+        -:   62:#include <bits/stl_algobase.h>
+        -:   63:#include <bits/allocator.h>
+        -:   64:#include <bits/stl_construct.h>
+        -:   65:#include <bits/stl_uninitialized.h>
+        -:   66:#include <bits/stl_vector.h>
+        -:   67:#include <bits/stl_bvector.h>
+        -:   68:#include <bits/refwrap.h>
+        -:   69:#include <bits/range_access.h>
+        -:   70:
+        -:   71:#ifndef _GLIBCXX_EXPORT_TEMPLATE
+        -:   72:# include <bits/vector.tcc>
+        -:   73:#endif
+        -:   74:
+        -:   75:#ifdef _GLIBCXX_DEBUG
+        -:   76:# include <debug/vector>
+        -:   77:#endif
+        -:   78:
+        -:   79:#if __cplusplus >= 201703L
+        -:   80:#include <bits/memory_resource.h>
+        -:   81:namespace std _GLIBCXX_VISIBILITY(default)
+        -:   82:{
+        -:   83:_GLIBCXX_BEGIN_NAMESPACE_VERSION
+        -:   84:  namespace pmr {
+        -:   85:    template<typename _Tp>
+        -:   86:      using vector = std::vector<_Tp, polymorphic_allocator<_Tp>>;
+        -:   87:  } // namespace pmr
+        -:   88:# ifdef _GLIBCXX_DEBUG
+        -:   89:  namespace _GLIBCXX_STD_C::pmr {
+        -:   90:    template<typename _Tp>
+        -:   91:      using vector
+        -:   92:	= _GLIBCXX_STD_C::vector<_Tp, std::pmr::polymorphic_allocator<_Tp>>;
+        -:   93:  } // namespace _GLIBCXX_STD_C::pmr
+        -:   94:# endif
+        -:   95:_GLIBCXX_END_NAMESPACE_VERSION
+        -:   96:} // namespace std
+        -:   97:#endif // C++17
+        -:   98:
+        -:   99:#if __cplusplus > 201703L
+        -:  100:namespace std _GLIBCXX_VISIBILITY(default)
+        -:  101:{
+        -:  102:_GLIBCXX_BEGIN_NAMESPACE_VERSION
+        -:  103:
+        -:  104:#define __cpp_lib_erase_if 202002L
+        -:  105:
+        -:  106:  template<typename _Tp, typename _Alloc, typename _Predicate>
+        -:  107:    _GLIBCXX20_CONSTEXPR
+        -:  108:    inline typename vector<_Tp, _Alloc>::size_type
+function _ZSt8erase_ifI10DisciplinaSaIS0_EZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_EUlRKS0_E_ENSt6vectorIT_T0_E9size_typeERSH_T1_ called 2 returned 100% blocks executed 76%
+        2:  109:    erase_if(vector<_Tp, _Alloc>& __cont, _Predicate __pred)
+        -:  110:    {
+        -:  111:      using namespace __gnu_cxx;
+        2:  112:      _GLIBCXX_STD_C::vector<_Tp, _Alloc>& __ucont = __cont;
+        2:  113:      const auto __osz = __cont.size();
+        2:  113-block  0
+call    0 returned 2
+        2:  114:      const auto __end = __ucont.end();
+call    0 returned 2
+        2:  115:      auto __removed = std::__remove_if(__ucont.begin(), __end,
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:  115-block  0
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+        -:  116:					__ops::__pred_iter(std::ref(__pred)));
+        2:  117:      if (__removed != __end)
+        2:  117-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0
+        -:  118:	{
+        2:  119:	  __cont.erase(__niter_wrap(__cont.begin(), __removed),
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+    $$$$$:  119-block  0
+    $$$$$:  119-block  1
+    $$$$$:  119-block  2
+    $$$$$:  119-block  3
+        2:  120:		       __cont.end());
+        2:  120-block  0
+call    0 returned 2
+    $$$$$:  120-block  1
+        2:  121:	  return __osz - __cont.size();
+        2:  121-block  0
+call    0 returned 2
+        -:  122:	}
+        -:  123:
+    #####:  124:      return 0;
+    %%%%%:  124-block  0
+        -:  125:    }
+        -:  126:
+        -:  127:  template<typename _Tp, typename _Alloc, typename _Up>
+        -:  128:    _GLIBCXX20_CONSTEXPR
+        -:  129:    inline typename vector<_Tp, _Alloc>::size_type
+        -:  130:    erase(vector<_Tp, _Alloc>& __cont, const _Up& __value)
+        -:  131:    {
+        -:  132:      using namespace __gnu_cxx;
+        -:  133:      _GLIBCXX_STD_C::vector<_Tp, _Alloc>& __ucont = __cont;
+        -:  134:      const auto __osz = __cont.size();
+        -:  135:      const auto __end = __ucont.end();
+        -:  136:      auto __removed = std::__remove_if(__ucont.begin(), __end,
+        -:  137:					__ops::__iter_equals_val(__value));
+        -:  138:      if (__removed != __end)
+        -:  139:	{
+        -:  140:	  __cont.erase(__niter_wrap(__cont.begin(), __removed),
+        -:  141:		       __cont.end());
+        -:  142:	  return __osz - __cont.size();
+        -:  143:	}
+        -:  144:
+        -:  145:      return 0;
+        -:  146:    }
+        -:  147:_GLIBCXX_END_NAMESPACE_VERSION
+        -:  148:} // namespace std
+        -:  149:#endif // C++20
+        -:  150:
+        -:  151:#endif /* _GLIBCXX_VECTOR */

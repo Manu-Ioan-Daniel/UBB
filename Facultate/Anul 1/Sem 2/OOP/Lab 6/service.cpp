@@ -1,6 +1,6 @@
 
 #include "service.h"
-
+#include <algorithm>
 #include <cassert>
 #include <iostream>
 
@@ -20,16 +20,16 @@ void Service::modificaDisciplinaService(const string &denumire, const string &ti
     Validator::validateDisciplina(denumire,20,tip,"salut");
     Validator::validateDisciplina(denumireNoua,nrOreNou,tipNou,cadruDidacticNou);
     const Disciplina& d = cautaDisciplinaService(denumire,tip);
-    Disciplina disciplinaNoua{denumireNoua,nrOreNou,tipNou,cadruDidacticNou};
+    const Disciplina disciplinaNoua{denumireNoua,nrOreNou,tipNou,cadruDidacticNou};
     repo.modificaDisciplina(disciplinaNoua,d);
 }
 void Service::stergeDisciplinaService(const string &denumire, const string &tip) const {
     Validator::validateDisciplina(denumire,20,tip,"salut");
     repo.stergeDisciplina(denumire,tip);
 }
-LinkedList<Disciplina>Service::filtrareDisciplineDupaOre(const int nrOre) const {
-    LinkedList<Disciplina> discipline=getAll();
-    LinkedList<Disciplina> disciplineFiltrate;
+vector<Disciplina>Service::filtrareDisciplineDupaOre(const int nrOre) const {
+    vector<Disciplina> discipline=getAll();
+    vector<Disciplina> disciplineFiltrate;
     for (const auto& d:discipline) {
         if (d.getNrOre()>=nrOre) {
             disciplineFiltrate.push_back(d);
@@ -38,9 +38,9 @@ LinkedList<Disciplina>Service::filtrareDisciplineDupaOre(const int nrOre) const 
 
     return disciplineFiltrate;
 }
-LinkedList<Disciplina> Service::filtrareDisciplineDupaCadruDidactic(const string& cadruDidactic) const {
-    const LinkedList<Disciplina> discipline=getAll();
-    LinkedList<Disciplina> disciplineFiltrate;
+vector<Disciplina> Service::filtrareDisciplineDupaCadruDidactic(const string& cadruDidactic) const {
+    const vector<Disciplina> discipline=getAll();
+    vector<Disciplina> disciplineFiltrate;
     for (const auto& d:discipline) {
         if (d.getCadruDidactic()==cadruDidactic) {
             disciplineFiltrate.push_back(d);
@@ -49,60 +49,59 @@ LinkedList<Disciplina> Service::filtrareDisciplineDupaCadruDidactic(const string
 
     return disciplineFiltrate;
 }
-LinkedList<Disciplina> Service::sortareDisciplineDupaOre() const {
-    LinkedList<Disciplina> discipline=getAll();
-    discipline.sort([](const Disciplina& d1, const Disciplina& d2) {
-        return d1.getNrOre() < d2.getNrOre();
-    });
+vector<Disciplina> Service::sortareDisciplineDupaOre() const {
+    vector<Disciplina> discipline=getAll();
+    std::ranges::sort(discipline,[](const Disciplina& d1, const Disciplina& d2) {return d1.getNrOre() < d2.getNrOre();});
     return discipline;
 }
-LinkedList<Disciplina> Service::sortareDisciplineDupaDenumire() const {
-    LinkedList<Disciplina> discipline=getAll();
-    discipline.sort([](const Disciplina& d1, const Disciplina& d2) {
-        return d1.getDenumire() < d2.getDenumire();
-    });
+vector<Disciplina> Service::sortareDisciplineDupaDenumire() const {
+    vector<Disciplina> discipline=getAll();
+    std::ranges::sort(discipline,[](const Disciplina& d1, const Disciplina& d2) {return d1.getDenumire() < d2.getDenumire();});
     return discipline;
 }
-LinkedList <Disciplina> Service::sortareDisciplineDupaTipSiCadruDidactic() const {
-    LinkedList<Disciplina> discipline=getAll();
-    discipline.sort([](const Disciplina& d1, const Disciplina& d2) {
-        if (d1.getTip() == d2.getTip()) {
+vector <Disciplina> Service::sortareDisciplineDupaTipSiCadruDidactic() const {
+    vector<Disciplina> discipline=getAll();
+    std::ranges::sort(discipline,[](const Disciplina& d1, const Disciplina& d2)
+        {if (d1.getTip() == d2.getTip()) {
             return d1.getCadruDidactic() < d2.getCadruDidactic();
         }
-        return d1.getTip() < d2.getTip();
-    });
+        return d1.getTip() < d2.getTip();});
+
     return discipline;
 }
-void Service::adaugaDisciplinaContractService(const string &denumire) const {
+void Service::adaugaDisciplinaContractService(const string &denumire){
     if (denumire.empty()) {
         throw ValidationError("Denumire Invalida!");
     }
     for (auto& d:getAll()) {
         if (d.getDenumire()==denumire) {
-            repo.adaugaDisciplinaContract(d);
+            contract.adaugaDisciplinaContract(d);
             return;
         }
     }
     throw ServiceException("Nu exista disciplina cu denumirea: "+denumire);
 }
-void Service::golesteContractService()const {
-    repo.golesteContract();
+void Service::golesteContractService() {
+    contract.golesteContract();
 }
-void Service::genereazaContractService(const int nrDiscipline)const {
+void Service::genereazaContractService(const int nrDiscipline) {
     if (nrDiscipline<=0) {
         throw ValidationError("Numar de discipline invalid!");
     }
-    repo.genereazaContract(nrDiscipline);
+    if (nrDiscipline>=getAll().size()) {
+        throw ServiceException("Numar de discipline prea mare!");
+    }
+    contract.genereazaContract(nrDiscipline,getAll());
 }
 void testService() {
     //test adaugare
 
     Repo r;
     Validator v;
-    const Service s{r,v};
+    Service s{r,v};
     s.addDisciplinaService("mate",5,"laborator","popescu");
     const auto& all=s.getAll();
-    assert(all.getSize()==1);
+    assert(all.size()==1);
     assert(*all.begin()==Disciplina("mate",5,"laborator","popescu"));
     try {
         s.addDisciplinaService("",-1,"","");
@@ -132,7 +131,7 @@ void testService() {
     //test sterge disciplina
 
     s.stergeDisciplinaService("info","seminar");
-    assert(s.getAll().getSize()==0);
+    assert(s.getAll().empty());
     try {
         s.stergeDisciplinaService("","");
         //assert(false);
@@ -145,34 +144,34 @@ void testService() {
     for (int i = 0;i<100;i++) {
         s.addDisciplinaService("mate"+std::to_string(i),i,"laborator","popescu");
     }
-    const LinkedList<Disciplina> disciplineFiltrate=s.filtrareDisciplineDupaOre(50);
-    assert(disciplineFiltrate.getSize()==50);
-    for (auto it=disciplineFiltrate.begin();it!=LinkedList<Disciplina>::end();++it) {
+    const vector<Disciplina> disciplineFiltrate=s.filtrareDisciplineDupaOre(50);
+    assert(disciplineFiltrate.size()==50);
+    for (auto it=disciplineFiltrate.begin();it!=disciplineFiltrate.end();++it) {
         assert(it->getNrOre()>=50);
     }
     //test filtrareDupaCadruDidactic
-    const LinkedList<Disciplina> disciplineFiltrateCadruDidactic=s.filtrareDisciplineDupaCadruDidactic("popescu");
-    assert(disciplineFiltrateCadruDidactic.getSize()==100);
-    for (auto it=disciplineFiltrateCadruDidactic.begin();it!=LinkedList<Disciplina>::end();++it) {
+    const vector<Disciplina> disciplineFiltrateCadruDidactic=s.filtrareDisciplineDupaCadruDidactic("popescu");
+    assert(disciplineFiltrateCadruDidactic.size()==100);
+    for (auto it=disciplineFiltrateCadruDidactic.begin();it!=disciplineFiltrateCadruDidactic.end();++it) {
         assert(it->getCadruDidactic()=="popescu");
     }
     //test sortareDisciplineDupaOre
-    const LinkedList<Disciplina> disciplineSortateDupaOre=s.sortareDisciplineDupaOre();
-    assert(disciplineSortateDupaOre.getSize()==100);
-    for (auto it=disciplineSortateDupaOre.begin();it!=LinkedList<Disciplina>::end();++it) {
+    const vector<Disciplina> disciplineSortateDupaOre=s.sortareDisciplineDupaOre();
+    assert(disciplineSortateDupaOre.size()==100);
+    for (auto it=disciplineSortateDupaOre.begin();it!=disciplineSortateDupaOre.end();++it) {
         auto it2=it;
         ++it2;
-        if (it2!=LinkedList<Disciplina>::end()) {
+        if (it2!=disciplineSortateDupaOre.end()) {
             assert(it->getNrOre()<=it2->getNrOre());
         }
     }
     //test sortareDisciplineDupaDenumire
-    const LinkedList<Disciplina> disciplineSortateDupaDenumire=s.sortareDisciplineDupaDenumire();
-    assert(disciplineSortateDupaDenumire.getSize()==100);
-    for (auto it=disciplineSortateDupaDenumire.begin();it!=LinkedList<Disciplina>::end();++it) {
+    const vector<Disciplina> disciplineSortateDupaDenumire=s.sortareDisciplineDupaDenumire();
+    assert(disciplineSortateDupaDenumire.size()==100);
+    for (auto it=disciplineSortateDupaDenumire.begin();it!=disciplineSortateDupaDenumire.end();++it) {
         auto it2=it;
         ++it2;
-        if (it2!=LinkedList<Disciplina>::end()) {
+        if (it2!=disciplineSortateDupaDenumire.end()) {
             assert(it->getDenumire()<=it2->getDenumire());
         }
     }
@@ -180,12 +179,12 @@ void testService() {
     for (int i = 0;i<10;i++) {
         s.addDisciplinaService("mate"+std::to_string(i),i,"laborator"+std::to_string(i),"popescu");
     }
-    const LinkedList<Disciplina> disciplineSortateDupaTipSiCadruDidactic=s.sortareDisciplineDupaTipSiCadruDidactic();
-    assert(disciplineSortateDupaTipSiCadruDidactic.getSize()==110);
-    for (auto it=disciplineSortateDupaTipSiCadruDidactic.begin();it!=LinkedList<Disciplina>::end();++it) {
+    const vector<Disciplina> disciplineSortateDupaTipSiCadruDidactic=s.sortareDisciplineDupaTipSiCadruDidactic();
+    assert(disciplineSortateDupaTipSiCadruDidactic.size()==110);
+    for (auto it=disciplineSortateDupaTipSiCadruDidactic.begin();it!=disciplineSortateDupaTipSiCadruDidactic.end();++it) {
         auto it2=it;
         ++it2;
-        if (it2!=LinkedList<Disciplina>::end()) {
+        if (it2!=disciplineSortateDupaTipSiCadruDidactic.end()) {
             if (it->getTip()==it2->getTip()) {
                 assert(it->getCadruDidactic()<=it2->getCadruDidactic());
             }
@@ -195,7 +194,7 @@ void testService() {
     s.addDisciplinaService("matematica",5,"tip","cadru");
     s.adaugaDisciplinaContractService("matematica");
     assert(s.getContractSize()==1);
-    assert(s.getContract().begin()->getDenumire()=="matematica");
+    assert(s.getContract().getAll()[0].getDenumire()=="matematica");
     try {
         s.adaugaDisciplinaContractService("");
         assert(false);
@@ -207,4 +206,12 @@ void testService() {
 
     s.golesteContractService();
     assert(s.getContractSize()==0);
+
+    //test genereaza contract
+
+    for (int i = 0;i<100;i++) {
+        s.addDisciplinaService("mat"+std::to_string(i),i,"laborator","popescu");
+    }
+    s.genereazaContractService(50);
+    assert(s.getContractSize()==50);
 }

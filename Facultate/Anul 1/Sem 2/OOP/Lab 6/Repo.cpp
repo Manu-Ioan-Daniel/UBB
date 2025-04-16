@@ -15,10 +15,8 @@ void Repo::addDisciplina(const Disciplina& disciplina) {
 }
 
 Disciplina Repo::cautaDisciplina(const string &denumire, const string &tip) const {
-    for (auto & i : discipline) {
-        if (i.getDenumire()==denumire && i.getTip()==tip) {
-            return i;
-        }
+    if (const auto it=std::ranges::find_if(discipline,[&denumire,&tip](const Disciplina& d) {return d.getDenumire()==denumire && d.getTip()==tip;}); it!=discipline.end()) {
+        return *it;
     }
     return {};
 }
@@ -27,54 +25,16 @@ void Repo::stergeDisciplina(const string& denumire,const string& tip) {
     if (d==Disciplina{}) {
         throw RepoException("Disciplina nu exista!\n");
     }
-    for (auto it=discipline.begin(); it!=LinkedList<Disciplina>::end(); ++it) {
-        if (*it==d) {
-            discipline.erase(it);
-            return;
-        }
-    }
+    std::erase_if(discipline, [&d](const Disciplina& disc){return disc == d;});
 
 }
-void Repo::modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina) const {
+void Repo::modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina) {
     const Disciplina d =cautaDisciplina(disciplina.getDenumire(),disciplina.getTip());
     if (d==Disciplina{}) {
         throw RepoException("Disciplina nu exista!\n");
     }
-    for (auto& i : discipline) {
-        if (i==d) {
-            i=disciplinaNoua;
-            return;
-        }
-    }
+    std::replace_if(discipline.begin(), discipline.end(), [&d](const Disciplina& disc) {return disc == d;}, disciplinaNoua);
 
-}
-void Repo::golesteContract() {
-    for (auto it=contract.begin(); it!=LinkedList<Disciplina>::end(); ++it) {
-        contract.erase(it);
-    }
-}
-void Repo::adaugaDisciplinaContract(const Disciplina &disciplina) {
-    for (auto it=contract.begin(); it!=LinkedList<Disciplina>::end(); ++it) {
-        if (disciplina.getDenumire()==it->getDenumire()) {
-            throw RepoException("Disciplina cu denumirea "+disciplina.getDenumire()+ " exista deja in contract!\n");
-        }
-    }
-    contract.push_back(disciplina);
-}
-void Repo::genereazaContract(const int nrDiscipline) {
-    //generam un contract cu nume de discpline ales aleatoriu
-    const std::vector<string> Discipline={
-            "mate","info","fizica","chimie","biologie","istorie","geografie","educatie fizica",
-            "muzica","arta","religie","psihologie","sociologie","filozofie","limba romana",
-            "limba engleza","limba franceza","limba germana","limba spaniola"
-    };
-    std::mt19937 mt{std::random_device{}()};
-    std::uniform_int_distribution<int> dist(0, Discipline.size() - 1);
-    for (int i = 0;i<nrDiscipline;i++) {
-        const int randomIndex=dist(mt);
-        const Disciplina d{Discipline[randomIndex],randomIndex%10+1,"laborator","popescu"};
-        adaugaDisciplinaContract(d);
-    }
 }
 
 void testRepo() {
@@ -86,7 +46,7 @@ void testRepo() {
     Repo r;
     r.addDisciplina(d1);
     const auto all=r.getAll();
-    assert(all.getSize()==1);
+    assert(all.size()==1);
     assert(*all.begin()==d1);
     try {
         r.addDisciplina(d1);
@@ -112,7 +72,7 @@ void testRepo() {
     //test sterge disciplina repo
 
     r.stergeDisciplina(d2.getDenumire(),d2.getTip());
-    assert(r.getAll().getSize()==0);
+    assert(r.getAll().empty());
     try {
         r.stergeDisciplina(d1.getDenumire(),d1.getTip());
         //assert(false);
@@ -120,24 +80,7 @@ void testRepo() {
         assert(true);
     }
 
-    //test adauga contract
-    r.adaugaDisciplinaContract(d1);
-    assert(r.getContractSize()==1);
-    try {
-        r.adaugaDisciplinaContract(d1);
-        //assert(false);
-    } catch (RepoException&) {
-        assert(true);
-    }
 
-    //test goleste contract
-
-    r.golesteContract();
-    assert(r.getContractSize()==0);
-
-    //test genereaza aleatoriu
-
-    //nu stiu inca
 
 
 

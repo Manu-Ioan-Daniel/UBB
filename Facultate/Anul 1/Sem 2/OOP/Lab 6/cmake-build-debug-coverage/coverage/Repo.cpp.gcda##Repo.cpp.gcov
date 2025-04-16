@@ -1,0 +1,492 @@
+        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/Repo.cpp
+        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcno
+        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcda
+        -:    0:Runs:1
+        -:    1:
+        -:    2:#include "Repo.h"
+        -:    3:#include <cassert>
+        -:    4:#include <random>
+        -:    5:#include "LinkedList.h"
+        -:    6:
+function _ZN4Repo13addDisciplinaERK10Disciplina called 113 returned 99% blocks executed 76%
+      113:    7:void Repo::addDisciplina(const Disciplina& disciplina) {
+     6108:    8:    for (const Disciplina& d : discipline) {
+      113:    8-block  0
+call    0 returned 113
+call    1 returned 113
+     5996:    8-block  1
+call    2 returned 5996
+     5995:    8-block  2
+call    3 returned 5995
+     6108:    8-block  3
+call    4 returned 6108
+branch  5 taken 5996
+branch  6 taken 112 (fallthrough)
+     5996:    9:        if (d==disciplina) {
+call    0 returned 5996
+branch  1 taken 1 (fallthrough)
+branch  2 taken 5995
+        3:   10:            throw RepoException("Disciplina exista deja!\n");
+        1:   10-block  0
+call    0 returned 1
+        1:   10-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   10-block  2
+call    4 returned 1
+call    5 returned 1
+        1:   10-block  3
+call    6 returned 1
+    $$$$$:   10-block  4
+    $$$$$:   10-block  5
+    $$$$$:   10-block  6
+call    7 never executed
+        -:   11:        }
+        -:   12:
+        -:   13:    }
+      112:   14:    discipline.push_back(disciplina);
+      112:   14-block  0
+call    0 returned 112
+      112:   15:}
+        -:   16:
+function _ZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 9 returned 100% blocks executed 100%
+        9:   17:Disciplina Repo::cautaDisciplina(const string &denumire, const string &tip) const {
+function _ZZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ENKUlRK10DisciplinaE_clESA_ called 8 returned 100% blocks executed 70%
+       17:   18:    if (const auto it=std::ranges::find_if(discipline,[&denumire,&tip](const Disciplina& d) {return d.getDenumire()==denumire && d.getTip()==tip;}); it!=discipline.end()) {
+        9:   18-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   18-block  1
+call    3 returned 9
+call    4 returned 9
+branch  5 taken 7 (fallthrough)
+branch  6 taken 2
+        8:   18-block  2
+call    7 returned 8
+branch  8 taken 8 (fallthrough)
+branch  9 taken 0 (throw)
+        8:   18-block  3
+call   10 returned 8
+branch 11 taken 7 (fallthrough)
+branch 12 taken 1
+        7:   18-block  4
+call   13 returned 7
+branch 14 taken 7 (fallthrough)
+branch 15 taken 0 (throw)
+        7:   18-block  5
+call   16 returned 7
+branch 17 taken 7 (fallthrough)
+branch 18 taken 0
+        7:   18-block  6
+        1:   18-block  7
+        8:   18-block  8
+        8:   18-block  9
+branch 19 taken 7 (fallthrough)
+branch 20 taken 1
+        7:   18-block 10
+call   21 returned 7
+        8:   18-block 11
+branch 22 taken 8 (fallthrough)
+branch 23 taken 0
+        8:   18-block 12
+call   24 returned 8
+        8:   18-block 13
+        8:   18-block 14
+    $$$$$:   18-block 15
+branch 25 never executed (fallthrough)
+branch 26 never executed
+    $$$$$:   18-block 16
+call   27 never executed
+    $$$$$:   18-block 17
+    $$$$$:   18-block 18
+branch 28 never executed (fallthrough)
+branch 29 never executed
+    $$$$$:   18-block 19
+call   30 never executed
+        7:   19:        return *it;
+        7:   19-block  0
+call    0 returned 7
+call    1 returned 7
+branch  2 taken 7 (fallthrough)
+branch  3 taken 0 (throw)
+        7:   19-block  1
+        -:   20:    }
+        2:   21:    return {};
+        2:   21-block  0
+call    0 returned 2
+        -:   22:}
+function _ZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 3 returned 67% blocks executed 76%
+        3:   23:void Repo::stergeDisciplina(const string& denumire,const string& tip) {
+        3:   24:    const Disciplina d= cautaDisciplina(denumire,tip);
+        3:   24-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   25:    if (d==Disciplina{}) {
+        3:   25-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+branch  3 taken 1 (fallthrough)
+branch  4 taken 2
+        3:   26:        throw RepoException("Disciplina nu exista!\n");
+        1:   26-block  0
+call    0 returned 1
+        1:   26-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   26-block  2
+call    4 returned 1
+call    5 returned 1
+        1:   26-block  3
+call    6 returned 1
+    $$$$$:   26-block  4
+    $$$$$:   26-block  5
+    $$$$$:   26-block  6
+call    7 never executed
+        -:   27:    }
+function _ZZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ENKUlRK10DisciplinaE_clESA_ called 2 returned 100% blocks executed 100%
+        4:   28:    std::erase_if(discipline, [&d](const Disciplina& disc){return disc == d;});
+        2:   28-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   28-block  1
+call    3 returned 2
+        -:   29:
+        3:   30:}
+        2:   30-block  0
+call    0 returned 2
+        1:   30-block  1
+call    1 returned 1
+function _ZN4Repo18modificaDisciplinaERK10DisciplinaS2_ called 3 returned 67% blocks executed 68%
+        3:   31:void Repo::modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina) {
+        3:   32:    const Disciplina d =cautaDisciplina(disciplina.getDenumire(),disciplina.getTip());
+        3:   32-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   32-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   32-block  2
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:   32-block  3
+call    9 returned 3
+call   10 returned 3
+    $$$$$:   32-block  4
+call   11 never executed
+    $$$$$:   32-block  5
+    $$$$$:   32-block  6
+call   12 never executed
+    $$$$$:   32-block  7
+        3:   33:    if (d==Disciplina{}) {
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+branch  3 taken 1 (fallthrough)
+branch  4 taken 2
+        3:   34:        throw RepoException("Disciplina nu exista!\n");
+        1:   34-block  0
+call    0 returned 1
+        1:   34-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   34-block  2
+call    4 returned 1
+call    5 returned 1
+        1:   34-block  3
+call    6 returned 1
+    $$$$$:   34-block  4
+    $$$$$:   34-block  5
+    $$$$$:   34-block  6
+call    7 never executed
+        -:   35:    }
+function _ZZN4Repo18modificaDisciplinaERK10DisciplinaS2_ENKUlS2_E_clES2_ called 2 returned 100% blocks executed 100%
+        4:   36:    std::replace_if(discipline.begin(), discipline.end(), [&d](const Disciplina& disc) {return disc == d;}, disciplinaNoua);
+        2:   36-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:   36-block  1
+call    5 returned 2
+        -:   37:
+        3:   38:}
+        2:   38-block  0
+call    0 returned 2
+        1:   38-block  1
+call    1 returned 1
+        -:   39:
+function _Z8testRepov called 1 returned 100% blocks executed 58%
+        1:   40:void testRepo() {
+        1:   40-block  0
+        -:   41:
+        -:   42:    //test adaugare repo
+        -:   43:
+        6:   44:    const Disciplina d1{"mate", 5, "laborator", "popescu"};
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   44-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   44-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   44-block  3
+call    9 returned 1
+call   10 returned 1
+        1:   44-block  4
+call   11 returned 1
+        1:   44-block  5
+call   12 returned 1
+        1:   44-block  6
+    $$$$$:   44-block  7
+    $$$$$:   44-block  8
+    $$$$$:   44-block  9
+call   13 never executed
+    $$$$$:   44-block 10
+    $$$$$:   44-block 11
+    $$$$$:   44-block 12
+call   14 never executed
+    $$$$$:   44-block 13
+    $$$$$:   44-block 14
+        5:   45:    const Disciplina d2{"info", 6, "seminar", "ionescu"};
+        1:   45-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   45-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   45-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   45-block  3
+call    9 returned 1
+call   10 returned 1
+        1:   45-block  4
+call   11 returned 1
+        1:   45-block  5
+call   12 returned 1
+    $$$$$:   45-block  6
+    $$$$$:   45-block  7
+    $$$$$:   45-block  8
+call   13 never executed
+    $$$$$:   45-block  9
+    $$$$$:   45-block 10
+    $$$$$:   45-block 11
+call   14 never executed
+    $$$$$:   45-block 12
+    $$$$$:   45-block 13
+        1:   46:    Repo r;
+        1:   47:    r.addDisciplina(d1);
+        1:   47-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   48:    const auto all=r.getAll();
+        1:   48-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+       1*:   49:    assert(all.size()==1);
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   49-block  1
+call    3 never executed
+       1*:   50:    assert(*all.begin()==d1);
+        1:   50-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   50-block  1
+call    5 never executed
+        -:   51:    try {
+        1:   52:        r.addDisciplina(d1);
+        1:   52-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        -:   53:        //assert(false);
+        1:   54:    } catch (RepoException&) {
+        1:   54-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   54-block  1
+call    2 returned 1
+        -:   55:        assert(true);
+        1:   56:    }
+call    0 returned 1
+        -:   57:
+        -:   58:    //test cauta disciplina repo
+        -:   59:
+       3*:   60:    assert(r.cautaDisciplina("mate","laborator")==d1);
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   60-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   60-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   60-block  3
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:   60-block  4
+call   12 never executed
+        1:   60-block  5
+call   13 returned 1
+call   14 returned 1
+        1:   60-block  6
+call   15 returned 1
+    $$$$$:   60-block  7
+call   16 never executed
+    $$$$$:   60-block  8
+    $$$$$:   60-block  9
+    $$$$$:   60-block 10
+call   17 never executed
+    $$$$$:   60-block 11
+    $$$$$:   60-block 12
+    $$$$$:   60-block 13
+        -:   61:
+        -:   62:    //test modifica disciplina repo
+        1:   63:    r.modificaDisciplina(d2,d1);
+        1:   63-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   64:    assert(*r.getAll().begin()==d2);
+        1:   64-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   64-block  1
+call    6 never executed
+        -:   65:    try {
+        1:   66:        r.modificaDisciplina(d2,d1);
+        1:   66-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        -:   67:       // assert(false);
+        1:   68:    } catch (RepoException&) {
+        1:   68-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   68-block  1
+call    2 returned 1
+        -:   69:        assert(true);
+        1:   70:    }
+call    0 returned 1
+        -:   71:
+        -:   72:    //test sterge disciplina repo
+        -:   73:
+        1:   74:    r.stergeDisciplina(d2.getDenumire(),d2.getTip());
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   74-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   74-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   74-block  3
+call    9 returned 1
+call   10 returned 1
+    $$$$$:   74-block  4
+call   11 never executed
+    $$$$$:   74-block  5
+    $$$$$:   74-block  6
+call   12 never executed
+    $$$$$:   74-block  7
+       1*:   75:    assert(r.getAll().empty());
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:   75-block  0
+call    4 never executed
+        -:   76:    try {
+       3*:   77:        r.stergeDisciplina(d1.getDenumire(),d1.getTip());
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   77-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   77-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1 (throw)
+    %%%%%:   77-block  3
+call    9 never executed
+call   10 never executed
+        1:   77-block  4
+call   11 returned 1
+        1:   77-block  5
+        1:   77-block  6
+call   12 returned 1
+        1:   77-block  7
+        -:   78:        //assert(false);
+        1:   79:    } catch (RepoException&) {
+        1:   79-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   79-block  1
+call    2 returned 1
+        -:   80:        assert(true);
+        1:   81:    }
+call    0 returned 1
+        -:   82:
+        -:   83:
+        -:   84:
+        -:   85:
+        -:   86:
+        1:   87:}
+        1:   87-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:   87-block  1
+call    4 never executed
+    $$$$$:   87-block  2
+call    5 never executed
+    $$$$$:   87-block  3
+call    6 never executed
+    $$$$$:   87-block  4
+call    7 never executed
