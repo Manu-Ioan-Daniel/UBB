@@ -35,6 +35,11 @@ public:
     [[nodiscard]]LinkedList<Disciplina> sortareDisciplineDupaTipSiCadruDidactic() const;
 
     [[nodiscard]] Disciplina cautaDisciplinaService(const string& denumire,const string& tip) const;
+    void adaugaDisciplinaContractService(const string& denumire) const;
+    void golesteContractService() const;
+    void genereazaContractService(int nrDiscipline) const;
+    [[nodiscard]] LinkedList<Disciplina>& getContract() const{return repo.getContract();};
+    [[nodiscard]] int getContractSize() const{return repo.getContractSize();};
 
 
 

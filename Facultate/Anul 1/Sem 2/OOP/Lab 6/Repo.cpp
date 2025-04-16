@@ -27,7 +27,7 @@ void Repo::stergeDisciplina(const string& denumire,const string& tip) {
     if (d==Disciplina{}) {
         throw RepoException("Disciplina nu exista!\n");
     }
-    for (auto it=discipline.begin(); it!=discipline.end(); ++it) {
+    for (auto it=discipline.begin(); it!=LinkedList<Disciplina>::end(); ++it) {
         if (*it==d) {
             discipline.erase(it);
             return;
@@ -54,7 +54,7 @@ void Repo::golesteContract() {
     }
 }
 void Repo::adaugaDisciplinaContract(const Disciplina &disciplina) {
-    for (auto it=contract.begin(); it!=contract.end(); ++it) {
+    for (auto it=contract.begin(); it!=LinkedList<Disciplina>::end(); ++it) {
         if (disciplina.getDenumire()==it->getDenumire()) {
             throw RepoException("Disciplina cu denumirea "+disciplina.getDenumire()+ " exista deja in contract!\n");
         }

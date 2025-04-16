@@ -73,12 +73,33 @@ LinkedList <Disciplina> Service::sortareDisciplineDupaTipSiCadruDidactic() const
     });
     return discipline;
 }
+void Service::adaugaDisciplinaContractService(const string &denumire) const {
+    if (denumire.empty()) {
+        throw ValidationError("Denumire Invalida!");
+    }
+    for (auto& d:getAll()) {
+        if (d.getDenumire()==denumire) {
+            repo.adaugaDisciplinaContract(d);
+            return;
+        }
+    }
+    throw ServiceException("Nu exista disciplina cu denumirea: "+denumire);
+}
+void Service::golesteContractService()const {
+    repo.golesteContract();
+}
+void Service::genereazaContractService(const int nrDiscipline)const {
+    if (nrDiscipline<=0) {
+        throw ValidationError("Numar de discipline invalid!");
+    }
+    repo.genereazaContract(nrDiscipline);
+}
 void testService() {
     //test adaugare
 
     Repo r;
     Validator v;
-    Service s{r,v};
+    const Service s{r,v};
     s.addDisciplinaService("mate",5,"laborator","popescu");
     const auto& all=s.getAll();
     assert(all.getSize()==1);
@@ -126,32 +147,32 @@ void testService() {
     }
     const LinkedList<Disciplina> disciplineFiltrate=s.filtrareDisciplineDupaOre(50);
     assert(disciplineFiltrate.getSize()==50);
-    for (auto it=disciplineFiltrate.begin();it!=disciplineFiltrate.end();++it) {
+    for (auto it=disciplineFiltrate.begin();it!=LinkedList<Disciplina>::end();++it) {
         assert(it->getNrOre()>=50);
     }
     //test filtrareDupaCadruDidactic
     const LinkedList<Disciplina> disciplineFiltrateCadruDidactic=s.filtrareDisciplineDupaCadruDidactic("popescu");
     assert(disciplineFiltrateCadruDidactic.getSize()==100);
-    for (auto it=disciplineFiltrateCadruDidactic.begin();it!=disciplineFiltrateCadruDidactic.end();++it) {
+    for (auto it=disciplineFiltrateCadruDidactic.begin();it!=LinkedList<Disciplina>::end();++it) {
         assert(it->getCadruDidactic()=="popescu");
     }
     //test sortareDisciplineDupaOre
     const LinkedList<Disciplina> disciplineSortateDupaOre=s.sortareDisciplineDupaOre();
     assert(disciplineSortateDupaOre.getSize()==100);
-    for (auto it=disciplineSortateDupaOre.begin();it!=disciplineSortateDupaOre.end();++it) {
+    for (auto it=disciplineSortateDupaOre.begin();it!=LinkedList<Disciplina>::end();++it) {
         auto it2=it;
         ++it2;
-        if (it2!=disciplineSortateDupaOre.end()) {
+        if (it2!=LinkedList<Disciplina>::end()) {
             assert(it->getNrOre()<=it2->getNrOre());
         }
     }
     //test sortareDisciplineDupaDenumire
     const LinkedList<Disciplina> disciplineSortateDupaDenumire=s.sortareDisciplineDupaDenumire();
     assert(disciplineSortateDupaDenumire.getSize()==100);
-    for (auto it=disciplineSortateDupaDenumire.begin();it!=disciplineSortateDupaDenumire.end();++it) {
+    for (auto it=disciplineSortateDupaDenumire.begin();it!=LinkedList<Disciplina>::end();++it) {
         auto it2=it;
         ++it2;
-        if (it2!=disciplineSortateDupaDenumire.end()) {
+        if (it2!=LinkedList<Disciplina>::end()) {
             assert(it->getDenumire()<=it2->getDenumire());
         }
     }
@@ -161,15 +182,29 @@ void testService() {
     }
     const LinkedList<Disciplina> disciplineSortateDupaTipSiCadruDidactic=s.sortareDisciplineDupaTipSiCadruDidactic();
     assert(disciplineSortateDupaTipSiCadruDidactic.getSize()==110);
-    for (auto it=disciplineSortateDupaTipSiCadruDidactic.begin();it!=disciplineSortateDupaTipSiCadruDidactic.end();++it) {
+    for (auto it=disciplineSortateDupaTipSiCadruDidactic.begin();it!=LinkedList<Disciplina>::end();++it) {
         auto it2=it;
         ++it2;
-        if (it2!=disciplineSortateDupaTipSiCadruDidactic.end()) {
+        if (it2!=LinkedList<Disciplina>::end()) {
             if (it->getTip()==it2->getTip()) {
                 assert(it->getCadruDidactic()<=it2->getCadruDidactic());
             }
         }
     }
+    //test adauga disciplina in contract
+    s.addDisciplinaService("matematica",5,"tip","cadru");
+    s.adaugaDisciplinaContractService("matematica");
+    assert(s.getContractSize()==1);
+    assert(s.getContract().begin()->getDenumire()=="matematica");
+    try {
+        s.adaugaDisciplinaContractService("");
+        assert(false);
+    }catch (ValidationError&) {
+        assert(true);
+    }
 
+    //test goleste contract
 
+    s.golesteContractService();
+    assert(s.getContractSize()==0);
 }
