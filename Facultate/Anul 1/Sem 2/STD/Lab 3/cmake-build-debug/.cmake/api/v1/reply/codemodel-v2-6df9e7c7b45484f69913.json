@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.28"
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Lab_3::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Lab_3-Debug-b53c4816cc2915455305.json",
+					"jsonFile" : "target-Lab_3-Debug-58ba554098d6ea118d68.json",
 					"name" : "Lab_3",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/cmake-build-debug",
-		"source" : "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3"
+		"build" : "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/cmake-build-debug",
+		"source" : "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 7
 	}
 }

@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Proiect C++/App.cpp" "CMakeFiles/Lab_3.dir/TAD_Matrice/Proiect_C++/App.cpp.o" "gcc" "CMakeFiles/Lab_3.dir/TAD_Matrice/Proiect_C++/App.cpp.o.d"
-  "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Proiect C++/Matrice.cpp" "CMakeFiles/Lab_3.dir/TAD_Matrice/Proiect_C++/Matrice.cpp.o" "gcc" "CMakeFiles/Lab_3.dir/TAD_Matrice/Proiect_C++/Matrice.cpp.o.d"
-  "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Teste/TestExtins.cpp" "CMakeFiles/Lab_3.dir/TAD_Matrice/Teste/TestExtins.cpp.o" "gcc" "CMakeFiles/Lab_3.dir/TAD_Matrice/Teste/TestExtins.cpp.o.d"
-  "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Teste/TestScurt.cpp" "CMakeFiles/Lab_3.dir/TAD_Matrice/Teste/TestScurt.cpp.o" "gcc" "CMakeFiles/Lab_3.dir/TAD_Matrice/Teste/TestScurt.cpp.o.d"
+  "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Proiect C++/App.cpp" "CMakeFiles/Lab_3.dir/TAD_Matrice/Proiect_C++/App.cpp.obj" "gcc" "CMakeFiles/Lab_3.dir/TAD_Matrice/Proiect_C++/App.cpp.obj.d"
+  "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Proiect C++/Matrice.cpp" "CMakeFiles/Lab_3.dir/TAD_Matrice/Proiect_C++/Matrice.cpp.obj" "gcc" "CMakeFiles/Lab_3.dir/TAD_Matrice/Proiect_C++/Matrice.cpp.obj.d"
+  "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Teste/TestExtins.cpp" "CMakeFiles/Lab_3.dir/TAD_Matrice/Teste/TestExtins.cpp.obj" "gcc" "CMakeFiles/Lab_3.dir/TAD_Matrice/Teste/TestExtins.cpp.obj.d"
+  "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Teste/TestScurt.cpp" "CMakeFiles/Lab_3.dir/TAD_Matrice/Teste/TestScurt.cpp.obj" "gcc" "CMakeFiles/Lab_3.dir/TAD_Matrice/Teste/TestScurt.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

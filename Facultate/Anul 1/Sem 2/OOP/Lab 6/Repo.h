@@ -15,6 +15,7 @@ public:
 };
 class Repo {
     LinkedList<Disciplina> discipline;
+    LinkedList<Disciplina> contract;
 public:
     void addDisciplina(const Disciplina& disciplina);
     void stergeDisciplina(const string& denumire,const string& tip);
@@ -23,6 +24,14 @@ public:
     [[nodiscard]] LinkedList<Disciplina>& getAll(){
         return discipline;
     }
+    void golesteContract();
+    void adaugaDisciplinaContract(const Disciplina& disciplina);
+    void genereazaContract(int nrDiscipline);
+    int getContractSize() const {return contract.getSize();};
+    [[nodiscard]] LinkedList<Disciplina>& getContract(){
+        return contract;
+    }
+
 
 };
 void testRepo();

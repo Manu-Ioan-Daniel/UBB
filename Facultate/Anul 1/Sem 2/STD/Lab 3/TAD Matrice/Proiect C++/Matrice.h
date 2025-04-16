@@ -40,6 +40,12 @@ public:
 	// modificare element de pe o linie si o coloana si returnarea vechii valori
 	// se arunca exceptie daca (i,j) nu e o pozitie valida in Matrice
 	TElem modifica(int i, int j, TElem);
+	// redimensionează o matrice la o anumită dimensiune. În cazul în care dimensiunile sunt mai mici decât
+	// dimensiunile actuale, elemente de pe pozițiile care nu mai sunt existente vor dispărea. În cazul în care
+	// dimensiunile sunt mai mari decât dimensiunile actuale, toate elementele noi (de pe poziții anterior
+	// inexistente) vor fi NULL_TELEM.
+	// aruncă excepție în cazul în care noile dimensiuni sunt negative
+	void redimensioneaza(int numarNouLinii,int numarNouColoane);
 
 };
 

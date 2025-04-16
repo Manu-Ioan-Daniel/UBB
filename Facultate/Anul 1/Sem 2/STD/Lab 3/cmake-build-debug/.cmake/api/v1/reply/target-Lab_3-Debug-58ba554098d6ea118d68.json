@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Lab_3"
+			"path" : "Lab_3.exe"
+		},
+		{
+			"path" : "Lab_3.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -55,11 +58,11 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Proiect C++"
+					"path" : "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Proiect C++"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Teste"
+					"path" : "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 3/TAD Matrice/Teste"
 				}
 			],
 			"language" : "CXX",
@@ -92,12 +95,16 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "Lab_3",
-	"nameOnDisk" : "Lab_3",
+	"nameOnDisk" : "Lab_3.exe",
 	"paths" : 
 	{
 		"build" : ".",

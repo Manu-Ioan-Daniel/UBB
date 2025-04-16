@@ -1,6 +1,7 @@
 
 #include "Repo.h"
 #include <cassert>
+#include <random>
 #include "LinkedList.h"
 
 void Repo::addDisciplina(const Disciplina& disciplina) {
@@ -47,6 +48,35 @@ void Repo::modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina&
     }
 
 }
+void Repo::golesteContract() {
+    for (auto it=contract.begin(); it!=LinkedList<Disciplina>::end(); ++it) {
+        contract.erase(it);
+    }
+}
+void Repo::adaugaDisciplinaContract(const Disciplina &disciplina) {
+    for (auto it=contract.begin(); it!=contract.end(); ++it) {
+        if (disciplina.getDenumire()==it->getDenumire()) {
+            throw RepoException("Disciplina cu denumirea "+disciplina.getDenumire()+ " exista deja in contract!\n");
+        }
+    }
+    contract.push_back(disciplina);
+}
+void Repo::genereazaContract(const int nrDiscipline) {
+    //generam un contract cu nume de discpline ales aleatoriu
+    const std::vector<string> Discipline={
+            "mate","info","fizica","chimie","biologie","istorie","geografie","educatie fizica",
+            "muzica","arta","religie","psihologie","sociologie","filozofie","limba romana",
+            "limba engleza","limba franceza","limba germana","limba spaniola"
+    };
+    std::mt19937 mt{std::random_device{}()};
+    std::uniform_int_distribution<int> dist(0, Discipline.size() - 1);
+    for (int i = 0;i<nrDiscipline;i++) {
+        const int randomIndex=dist(mt);
+        const Disciplina d{Discipline[randomIndex],randomIndex%10+1,"laborator","popescu"};
+        adaugaDisciplinaContract(d);
+    }
+}
+
 void testRepo() {
 
     //test adaugare repo
@@ -89,5 +119,26 @@ void testRepo() {
     } catch (RepoException&) {
         assert(true);
     }
+
+    //test adauga contract
+    r.adaugaDisciplinaContract(d1);
+    assert(r.getContractSize()==1);
+    try {
+        r.adaugaDisciplinaContract(d1);
+        //assert(false);
+    } catch (RepoException&) {
+        assert(true);
+    }
+
+    //test goleste contract
+
+    r.golesteContract();
+    assert(r.getContractSize()==0);
+
+    //test genereaza aleatoriu
+
+    //nu stiu inca
+
+
 
 }
