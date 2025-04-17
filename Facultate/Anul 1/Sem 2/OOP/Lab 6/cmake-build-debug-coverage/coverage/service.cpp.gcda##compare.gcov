@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/compare
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/compare
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcda
         -:    0:Runs:1
         -:    1:// -*- C++ -*- operator<=> three-way comparison support.
         -:    2:
@@ -58,7 +58,8 @@
         -:   54:
         -:   55:    struct __unspec
         -:   56:    {
-        -:   57:      consteval __unspec(__unspec*) noexcept { }
+function _ZNSt9__cmp_cat8__unspecC1EPS0_ called 2840 returned 100% blocks executed 100%
+     2840:   57:      constexpr __unspec(__unspec*) noexcept { }
         -:   58:    };
         -:   59:  }
         -:   60:
@@ -293,10 +294,10 @@
         -:  289:
         -:  290:    [[nodiscard]]
         -:  291:    friend constexpr bool
-function _ZStltSt15strong_orderingNSt9__cmp_cat8__unspecE called 1552 returned 100% blocks executed 100%
-     1552:  292:    operator< (strong_ordering __v, __cmp_cat::__unspec) noexcept
-     1552:  293:    { return __v._M_value < 0; }
-     1552:  293-block  0
+function _ZStltSt15strong_orderingNSt9__cmp_cat8__unspecE called 2642 returned 100% blocks executed 100%
+     2642:  292:    operator< (strong_ordering __v, __cmp_cat::__unspec) noexcept
+     2642:  293:    { return __v._M_value < 0; }
+     2642:  293-block  0
         -:  294:
         -:  295:    [[nodiscard]]
         -:  296:    friend constexpr bool

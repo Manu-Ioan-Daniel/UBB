@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/bits/stl_function.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_function.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcda
         -:    0:Runs:1
         -:    1:// Functor implementations -*- C++ -*-
         -:    2:
@@ -408,8 +408,13 @@
         -:  404:    {
         -:  405:      _GLIBCXX14_CONSTEXPR
         -:  406:      bool
-        -:  407:      operator()(const _Tp& __x, const _Tp& __y) const
-        -:  408:      { return __x < __y; }
+function _ZNKSt4lessINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEclERKS5_S8_ called 1090 returned 100% blocks executed 100%
+     1090:  407:      operator()(const _Tp& __x, const _Tp& __y) const
+     1090:  408:      { return __x < __y; }
+     1090:  408-block  0
+call    0 returned 1090
+call    1 returned 1090
+call    2 returned 1090
         -:  409:    };
         -:  410:
         -:  411:  /// One of the @link comparison_functors comparison functors@endlink.
@@ -452,20 +457,20 @@
         -:  448:    struct less<_Tp*> : public binary_function<_Tp*, _Tp*, bool>
         -:  449:    {
         -:  450:      _GLIBCXX14_CONSTEXPR bool
-function _ZNKSt4lessIPKcEclES1_S1_ called 120 returned 100% blocks executed 80%
-      120:  451:      operator()(_Tp* __x, _Tp* __y) const _GLIBCXX_NOTHROW
+function _ZNKSt4lessIPKcEclES1_S1_ called 640 returned 100% blocks executed 80%
+      640:  451:      operator()(_Tp* __x, _Tp* __y) const _GLIBCXX_NOTHROW
         -:  452:      {
         -:  453:#if __cplusplus >= 201402L
-      120:  454:	if (std::__is_constant_evaluated())
-      120:  454-block  0
-call    0 returned 120
+      640:  454:	if (std::__is_constant_evaluated())
+      640:  454-block  0
+call    0 returned 640
 branch  1 taken 0 (fallthrough)
-branch  2 taken 120
+branch  2 taken 640
     #####:  455:	  return __x < __y;
     %%%%%:  455-block  0
         -:  456:#endif
-      120:  457:	return (__UINTPTR_TYPE__)__x < (__UINTPTR_TYPE__)__y;
-      120:  457-block  0
+      640:  457:	return (__UINTPTR_TYPE__)__x < (__UINTPTR_TYPE__)__y;
+      640:  457-block  0
         -:  458:      }
         -:  459:    };
         -:  460:
@@ -1190,8 +1195,10 @@ branch  2 taken 120
         -: 1179:      { return __x.first; }
         -: 1180:
         -: 1181:      const typename _Pair::first_type&
-        -: 1182:      operator()(const _Pair& __x) const
-        -: 1183:      { return __x.first; }
+function _ZNKSt10_Select1stISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEEclERKS8_ called 1188 returned 100% blocks executed 100%
+     1188: 1182:      operator()(const _Pair& __x) const
+     1188: 1183:      { return __x.first; }
+     1188: 1183-block  0
         -: 1184:
         -: 1185:#if __cplusplus >= 201103L
         -: 1186:      template<typename _Pair2>

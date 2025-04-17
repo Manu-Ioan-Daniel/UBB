@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/bits/stl_construct.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_construct.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcda
         -:    0:Runs:1
         -:    1:// nonstandard construct and destroy functions -*- C++ -*-
         -:    2:
@@ -81,6 +81,33 @@
         -:   77:#if __cplusplus >= 201703L
         -:   78:  template <typename _Tp>
         -:   79:    _GLIBCXX20_CONSTEXPR inline void
+     100*:   80:    destroy_at(_Tp* __location)
+        -:   81:    {
+        -:   82:      if constexpr (__cplusplus > 201703L && is_array_v<_Tp>)
+        -:   83:	{
+        -:   84:	  for (auto& __x : *__location)
+        -:   85:	    std::destroy_at(std::__addressof(__x));
+        -:   86:	}
+        -:   87:      else
+     100*:   88:	__location->~_Tp();
+     100*:   89:    }
+------------------
+_ZSt10destroy_atISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEEvPT_:
+function _ZSt10destroy_atISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEEvPT_ called 100 returned 100% blocks executed 100%
+      100:   80:    destroy_at(_Tp* __location)
+        -:   81:    {
+        -:   82:      if constexpr (__cplusplus > 201703L && is_array_v<_Tp>)
+        -:   83:	{
+        -:   84:	  for (auto& __x : *__location)
+        -:   85:	    std::destroy_at(std::__addressof(__x));
+        -:   86:	}
+        -:   87:      else
+      100:   88:	__location->~_Tp();
+      100:   88-block  0
+call    0 returned 100
+      100:   89:    }
+------------------
+_ZSt10destroy_atI10DisciplinaEvPT_:
 function _ZSt10destroy_atI10DisciplinaEvPT_ called 0 returned 0% blocks executed 0%
     #####:   80:    destroy_at(_Tp* __location)
         -:   81:    {
@@ -94,14 +121,40 @@ function _ZSt10destroy_atI10DisciplinaEvPT_ called 0 returned 0% blocks executed
     %%%%%:   88-block  0
 call    0 never executed
     #####:   89:    }
+------------------
         -:   90:
         -:   91:#if __cplusplus >= 202002L
         -:   92:  template<typename _Tp, typename... _Args>
         -:   93:    constexpr auto
-    #####:   94:    construct_at(_Tp* __location, _Args&&... __args)
+     100*:   94:    construct_at(_Tp* __location, _Args&&... __args)
         -:   95:    noexcept(noexcept(::new((void*)0) _Tp(std::declval<_Args>()...)))
         -:   96:    -> decltype(::new((void*)0) _Tp(std::declval<_Args>()...))
-    #####:   97:    { return ::new((void*)__location) _Tp(std::forward<_Args>(__args)...); }
+     100*:   97:    { return ::new((void*)__location) _Tp(std::forward<_Args>(__args)...); }
+------------------
+_ZSt12construct_atISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEJRKSt21piecewise_construct_tSt5tupleIJOS6_EESC_IJEEEEDTgsnwcvPvLi0E_T_pispcl7declvalIT0_EEEEPSH_DpOSI_:
+function _ZSt12construct_atISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEJRKSt21piecewise_construct_tSt5tupleIJOS6_EESC_IJEEEEDTgsnwcvPvLi0E_T_pispcl7declvalIT0_EEEEPSH_DpOSI_ called 100 returned 100% blocks executed 77%
+      100:   94:    construct_at(_Tp* __location, _Args&&... __args)
+        -:   95:    noexcept(noexcept(::new((void*)0) _Tp(std::declval<_Args>()...)))
+        -:   96:    -> decltype(::new((void*)0) _Tp(std::declval<_Args>()...))
+      100:   97:    { return ::new((void*)__location) _Tp(std::forward<_Args>(__args)...); }
+      100:   97-block  0
+call    0 returned 100
+call    1 returned 100
+call    2 returned 100
+call    3 returned 100
+call    4 returned 100
+call    5 returned 100
+branch  6 taken 100 (fallthrough)
+branch  7 taken 0 (throw)
+      100:   97-block  1
+      100:   97-block  2
+      100:   97-block  3
+    $$$$$:   97-block  4
+    $$$$$:   97-block  5
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    $$$$$:   97-block  6
+call   10 never executed
 ------------------
 _ZSt12construct_atI10DisciplinaJRKS0_EEDTgsnwcvPvLi0E_T_pispcl7declvalIT0_EEEEPS4_DpOS5_:
 function _ZSt12construct_atI10DisciplinaJRKS0_EEDTgsnwcvPvLi0E_T_pispcl7declvalIT0_EEEEPS4_DpOS5_ called 0 returned 0% blocks executed 0%
@@ -274,7 +327,7 @@ function _ZSt8_DestroyIP10DisciplinaEvT_S2_ called 0 returned 0% blocks executed
 call    0 never executed
 branch  1 never executed (fallthrough)
 branch  2 never executed
-    #####:  193:	return std::_Destroy_aux<false>::__destroy(__first, __last);
+    #####:  193:	return _Destroy_aux<false>::__destroy(__first, __last);
     %%%%%:  193-block  0
 call    0 never executed
         -:  194:#endif
@@ -327,7 +380,7 @@ call    0 never executed
         -:  239:#endif
         -:  240:#if __cplusplus >= 202002L
         -:  241:      if (std::__is_constant_evaluated())
-        -:  242:	return std::_Destroy_n_aux<false>::__destroy_n(__first, __count);
+        -:  242:	return _Destroy_n_aux<false>::__destroy_n(__first, __count);
         -:  243:#endif
         -:  244:      return std::_Destroy_n_aux<__has_trivial_destructor(_Value_type)>::
         -:  245:	__destroy_n(__first, __count);

@@ -1,0 +1,26 @@
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/Contract.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\ui.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <vector>
+        -:    3:
+        -:    4:#include "disciplina.h"
+        -:    5:using std::vector;
+        -:    6:class Contract {
+        -:    7:private:
+        -:    8:    vector<Disciplina>listaDiscipline;
+        -:    9:public:
+        -:   10:    void golesteContract();
+        -:   11:    void adaugaDisciplinaContract(const Disciplina& disciplina);
+        -:   12:    [[nodiscard]] vector<Disciplina>& getAll() {
+        -:   13:        return listaDiscipline;
+        -:   14:    }
+function _ZNK8Contract7getSizeEv called 0 returned 0% blocks executed 0%
+    #####:   15:    [[nodiscard]] int getSize() const {
+    #####:   16:        return listaDiscipline.size();
+    %%%%%:   16-block  0
+call    0 never executed
+        -:   17:    }
+        -:   18:    void genereazaContract(int nrDiscipline,vector<Disciplina> discipline);
+        -:   19:};

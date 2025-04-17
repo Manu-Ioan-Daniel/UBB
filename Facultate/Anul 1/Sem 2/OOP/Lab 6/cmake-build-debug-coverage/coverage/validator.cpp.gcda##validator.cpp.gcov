@@ -1,62 +1,62 @@
-        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/validator.cpp
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/validator.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/validator.cpp.gcda
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/validator.cpp
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\validator.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\validator.cpp.gcda
         -:    0:Runs:1
         -:    1:
         -:    2:#include "validator.h"
         -:    3:
-function _ZN9Validator18validateDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS7_S7_ called 120 returned 98% blocks executed 89%
-      120:    4:void Validator::validateDisciplina(const string &denumire, const int nrOre, const string &tip, const string &cadruDidactic) {
-      120:    5:    std::string errors;
-      120:    5-block  0
-call    0 returned 120
-      120:    6:    if (denumire.empty()){
-call    0 returned 120
+function _ZN9Validator18validateDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS7_S7_ called 321 returned 99% blocks executed 89%
+      321:    4:void Validator::validateDisciplina(const string &denumire, const int nrOre, const string &tip, const string &cadruDidactic) {
+      321:    5:    std::string errors;
+      321:    5-block  0
+call    0 returned 321
+      321:    6:    if (denumire.empty()){
+call    0 returned 321
 branch  1 taken 3 (fallthrough)
-branch  2 taken 117
+branch  2 taken 318
         3:    7:        errors+="Denumirea invalida\n";
         3:    7-block  0
 call    0 returned 3
 branch  1 taken 3 (fallthrough)
 branch  2 taken 0 (throw)
         -:    8:    }
-      120:    9:    if (nrOre<0){
-      120:    9-block  0
+      321:    9:    if (nrOre<0){
+      321:    9-block  0
 branch  0 taken 1 (fallthrough)
-branch  1 taken 119
+branch  1 taken 320
         1:   10:        errors+="Numarul de ore invalid\n";
         1:   10-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
         -:   11:    }
-      120:   12:    if (tip.empty()) {
-      120:   12-block  0
-call    0 returned 120
+      321:   12:    if (tip.empty()) {
+      321:   12-block  0
+call    0 returned 321
 branch  1 taken 3 (fallthrough)
-branch  2 taken 117
+branch  2 taken 318
         3:   13:        errors+="Tip invalid\n";
         3:   13-block  0
 call    0 returned 3
 branch  1 taken 3 (fallthrough)
 branch  2 taken 0 (throw)
         -:   14:    }
-      120:   15:    if (cadruDidactic.empty()) {
-      120:   15-block  0
-call    0 returned 120
+      321:   15:    if (cadruDidactic.empty()) {
+      321:   15-block  0
+call    0 returned 321
 branch  1 taken 2 (fallthrough)
-branch  2 taken 118
+branch  2 taken 319
         2:   16:        errors+="Cadru didactic invalid\n";
         2:   16-block  0
 call    0 returned 2
 branch  1 taken 2 (fallthrough)
 branch  2 taken 0 (throw)
         -:   17:    }
-      120:   18:    if (!errors.empty()) {
-      120:   18-block  0
-call    0 returned 120
+      321:   18:    if (!errors.empty()) {
+      321:   18-block  0
+call    0 returned 321
 branch  1 taken 3 (fallthrough)
-branch  2 taken 117
+branch  2 taken 318
         3:   19:        throw ValidationError(errors);
         3:   19-block  0
 call    0 returned 3
@@ -72,8 +72,8 @@ call    6 returned 3
 call    7 never executed
         -:   20:    }
         -:   21:
-      120:   22:}
-      117:   22-block  0
-call    0 returned 117
+      321:   22:}
+      318:   22-block  0
+call    0 returned 318
         3:   22-block  1
 call    1 returned 3

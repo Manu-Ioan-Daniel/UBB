@@ -1,0 +1,65 @@
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/Contract.cpp
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\Contract.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\Contract.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deny on 16-04-2025.
+        -:    3://
+        -:    4:
+        -:    5:#include "Contract.h"
+        -:    6:#include <algorithm>
+        -:    7:#include <random>
+        -:    8:#include <chrono>
+function _ZN8Contract15golesteContractEv called 2 returned 100% blocks executed 70%
+        2:    9:void Contract::golesteContract() {
+        2:   10:    listaDiscipline.erase(listaDiscipline.begin(),listaDiscipline.end());
+        2:   10-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+    $$$$$:   10-block  1
+    $$$$$:   10-block  2
+    $$$$$:   10-block  3
+        2:   11:}
+        2:   11-block  0
+function _ZN8Contract17genereazaContractEiSt6vectorI10DisciplinaSaIS1_EE called 1 returned 100% blocks executed 92%
+        1:   12:void Contract::genereazaContract(const int nrDiscipline,vector<Disciplina> discipline) {
+        1:   13:    golesteContract();
+        1:   13-block  0
+call    0 returned 1
+        1:   14:    const auto seed= std::chrono::system_clock::now().time_since_epoch().count();
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+        1:   15:    std::ranges::shuffle(discipline, std::default_random_engine(seed));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   15-block  1
+call    6 never executed
+        1:   16:    std::ranges::copy_n(discipline.begin(), nrDiscipline, std::back_inserter(listaDiscipline));
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   17:}
+        1:   17-block  0
+function _ZN8Contract24adaugaDisciplinaContractERK10Disciplina called 1 returned 100% blocks executed 100%
+        1:   18:void Contract::adaugaDisciplinaContract(const Disciplina &disciplina) {
+        1:   19:    listaDiscipline.push_back(disciplina);
+        1:   19-block  0
+call    0 returned 1
+        1:   20:}

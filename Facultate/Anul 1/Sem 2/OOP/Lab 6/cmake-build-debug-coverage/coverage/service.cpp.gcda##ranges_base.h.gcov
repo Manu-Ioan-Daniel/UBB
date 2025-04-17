@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/bits/ranges_base.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_base.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcda
         -:    0:Runs:1
         -:    1:// Core concepts and definitions for <ranges> -*- C++ -*-
         -:    2:
@@ -116,8 +116,8 @@
         -:  112:	requires is_array_v<remove_reference_t<_Tp>> || __member_begin<_Tp>
         -:  113:	  || __adl_begin<_Tp>
         -:  114:	constexpr auto
-function _ZNKSt6ranges13__cust_access6_BeginclIRSt6vectorI10DisciplinaSaIS4_EEEEDaOT_ called 3 returned 100% blocks executed 100%
-        3:  115:	operator()[[nodiscard]](_Tp&& __t) const noexcept(_S_noexcept<_Tp&>())
+function _ZNKSt6ranges13__cust_access6_BeginclIRSt6vectorI10DisciplinaSaIS4_EEEEDaOT_ called 4 returned 100% blocks executed 100%
+        4:  115:	operator()[[nodiscard]](_Tp&& __t) const noexcept(_S_noexcept<_Tp&>())
         -:  116:	{
         -:  117:	  if constexpr (is_array_v<remove_reference_t<_Tp>>)
         -:  118:	    {
@@ -125,9 +125,9 @@ function _ZNKSt6ranges13__cust_access6_BeginclIRSt6vectorI10DisciplinaSaIS4_EEEE
         -:  120:	      return __t + 0;
         -:  121:	    }
         -:  122:	  else if constexpr (__member_begin<_Tp>)
-        3:  123:	    return __t.begin();
-        3:  123-block  0
-call    0 returned 3
+        4:  123:	    return __t.begin();
+        4:  123-block  0
+call    0 returned 4
         -:  124:	  else
         -:  125:	    return begin(__t);
         -:  126:	}
@@ -170,8 +170,8 @@ call    0 returned 3
         -:  163:	requires is_bounded_array_v<remove_reference_t<_Tp>>
         -:  164:	  || __member_end<_Tp> || __adl_end<_Tp>
         -:  165:	constexpr auto
-function _ZNKSt6ranges13__cust_access4_EndclIRSt6vectorI10DisciplinaSaIS4_EEEEDaOT_ called 3 returned 100% blocks executed 100%
-        3:  166:	operator()[[nodiscard]](_Tp&& __t) const noexcept(_S_noexcept<_Tp&>())
+function _ZNKSt6ranges13__cust_access4_EndclIRSt6vectorI10DisciplinaSaIS4_EEEEDaOT_ called 4 returned 100% blocks executed 100%
+        4:  166:	operator()[[nodiscard]](_Tp&& __t) const noexcept(_S_noexcept<_Tp&>())
         -:  167:	{
         -:  168:	  if constexpr (is_bounded_array_v<remove_reference_t<_Tp>>)
         -:  169:	    {
@@ -179,9 +179,9 @@ function _ZNKSt6ranges13__cust_access4_EndclIRSt6vectorI10DisciplinaSaIS4_EEEEDa
         -:  171:	      return __t + extent_v<remove_reference_t<_Tp>>;
         -:  172:	    }
         -:  173:	  else if constexpr (__member_end<_Tp>)
-        3:  174:	    return __t.end();
-        3:  174-block  0
-call    0 returned 3
+        4:  174:	    return __t.end();
+        4:  174-block  0
+call    0 returned 4
         -:  175:	  else
         -:  176:	    return end(__t);
         -:  177:	}
@@ -865,13 +865,13 @@ call    0 returned 3
         -:  855:
         -:  856:    template<input_or_output_iterator _It, sentinel_for<_It> _Sent>
         -:  857:      constexpr void
-function _ZNKSt6ranges12__advance_fnclIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS4_SaIS4_EEEES9_EEvRT_T0_ called 3 returned 100% blocks executed 100%
-        3:  858:      operator()(_It& __it, _Sent __bound) const
+function _ZNKSt6ranges12__advance_fnclIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS4_SaIS4_EEEES9_EEvRT_T0_ called 4 returned 100% blocks executed 100%
+        4:  858:      operator()(_It& __it, _Sent __bound) const
         -:  859:      {
         -:  860:	if constexpr (assignable_from<_It&, _Sent>)
-        3:  861:	  __it = std::move(__bound);
-        3:  861-block  0
-call    0 returned 3
+        4:  861:	  __it = std::move(__bound);
+        4:  861-block  0
+call    0 returned 4
         -:  862:	else if constexpr (sized_sentinel_for<_Sent, _It>)
         -:  863:	  (*this)(__it, __bound - __it);
         -:  864:	else
@@ -879,7 +879,7 @@ call    0 returned 3
         -:  866:	    while (__it != __bound)
         -:  867:	      ++__it;
         -:  868:	  }
-        3:  869:      }
+        4:  869:      }
         -:  870:
         -:  871:    template<input_or_output_iterator _It, sentinel_for<_It> _Sent>
         -:  872:      constexpr iter_difference_t<_It>
@@ -1007,13 +1007,13 @@ call    0 returned 3
         -:  994:    template<input_or_output_iterator _It, sentinel_for<_It> _Sent>
         -:  995:      [[nodiscard]]
         -:  996:      constexpr _It
-function _ZNKSt6ranges9__next_fnclIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS4_SaIS4_EEEES9_EET_SA_T0_ called 3 returned 100% blocks executed 100%
-        3:  997:      operator()(_It __x, _Sent __bound) const
+function _ZNKSt6ranges9__next_fnclIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS4_SaIS4_EEEES9_EET_SA_T0_ called 4 returned 100% blocks executed 100%
+        4:  997:      operator()(_It __x, _Sent __bound) const
         -:  998:      {
-        3:  999:	ranges::advance(__x, __bound);
-        3:  999-block  0
-call    0 returned 3
-        3: 1000:	return __x;
+        4:  999:	ranges::advance(__x, __bound);
+        4:  999-block  0
+call    0 returned 4
+        4: 1000:	return __x;
         -: 1001:      }
         -: 1002:
         -: 1003:    template<input_or_output_iterator _It, sentinel_for<_It> _Sent>

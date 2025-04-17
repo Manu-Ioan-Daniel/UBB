@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/bits/vector.tcc
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcda
         -:    0:Runs:1
         -:    1:// Vector implementation (out of line) -*- C++ -*-
         -:    2:
@@ -955,145 +955,144 @@ call    0 never executed
         -:  910:	      {
         -:  911:		const size_type __len =
         -:  912:		  _M_check_len(__n, "vector<bool>::_M_insert_range");
-        -:  913:		const iterator __begin = begin(), __end = end();
-        -:  914:		_Bit_pointer __q = this->_M_allocate(__len);
-        -:  915:		iterator __start(std::__addressof(*__q), 0);
-        -:  916:		iterator __i = _M_copy_aligned(__begin, __position, __start);
-        -:  917:		__i = std::copy(__first, __last, __i);
-        -:  918:		iterator __finish = std::copy(__position, __end, __i);
-        -:  919:		this->_M_deallocate();
-        -:  920:		this->_M_impl._M_end_of_storage = __q + _S_nword(__len);
-        -:  921:		this->_M_impl._M_start = __start;
-        -:  922:		this->_M_impl._M_finish = __finish;
-        -:  923:	      }
-        -:  924:	  }
-        -:  925:      }
-        -:  926:
-        -:  927:  template<typename _Alloc>
-        -:  928:    _GLIBCXX20_CONSTEXPR
-        -:  929:    void
-        -:  930:    vector<bool, _Alloc>::
-        -:  931:    _M_insert_aux(iterator __position, bool __x)
-        -:  932:    {
-        -:  933:      if (this->_M_impl._M_finish._M_p != this->_M_impl._M_end_addr())
-        -:  934:	{
-        -:  935:	  std::copy_backward(__position, this->_M_impl._M_finish, 
-        -:  936:			     this->_M_impl._M_finish + 1);
-        -:  937:	  *__position = __x;
-        -:  938:	  ++this->_M_impl._M_finish;
-        -:  939:	}
-        -:  940:      else
-        -:  941:	{
-        -:  942:	  const size_type __len =
-        -:  943:	    _M_check_len(size_type(1), "vector<bool>::_M_insert_aux");
-        -:  944:	  _Bit_pointer __q = this->_M_allocate(__len);
-        -:  945:	  iterator __start(std::__addressof(*__q), 0);
-        -:  946:	  iterator __i = _M_copy_aligned(begin(), __position, __start);
-        -:  947:	  *__i++ = __x;
-        -:  948:	  iterator __finish = std::copy(__position, end(), __i);
-        -:  949:	  this->_M_deallocate();
-        -:  950:	  this->_M_impl._M_end_of_storage = __q + _S_nword(__len);
-        -:  951:	  this->_M_impl._M_start = __start;
-        -:  952:	  this->_M_impl._M_finish = __finish;
-        -:  953:	}
-        -:  954:    }
-        -:  955:
-        -:  956:  template<typename _Alloc>
-        -:  957:    _GLIBCXX20_CONSTEXPR
-        -:  958:    typename vector<bool, _Alloc>::iterator
-        -:  959:    vector<bool, _Alloc>::
-        -:  960:    _M_erase(iterator __position)
-        -:  961:    {
-        -:  962:      if (__position + 1 != end())
-        -:  963:        std::copy(__position + 1, end(), __position);
-        -:  964:      --this->_M_impl._M_finish;
-        -:  965:      return __position;
-        -:  966:    }
-        -:  967:
-        -:  968:  template<typename _Alloc>
-        -:  969:    _GLIBCXX20_CONSTEXPR
-        -:  970:    typename vector<bool, _Alloc>::iterator
-        -:  971:    vector<bool, _Alloc>::
-        -:  972:    _M_erase(iterator __first, iterator __last)
-        -:  973:    {
-        -:  974:      if (__first != __last)
-        -:  975:	_M_erase_at_end(std::copy(__last, end(), __first));
-        -:  976:      return __first;
-        -:  977:    }
-        -:  978:
-        -:  979:#if __cplusplus >= 201103L
-        -:  980:  template<typename _Alloc>
-        -:  981:    _GLIBCXX20_CONSTEXPR
-        -:  982:    bool
-        -:  983:    vector<bool, _Alloc>::
-        -:  984:    _M_shrink_to_fit()
-        -:  985:    {
-        -:  986:      if (capacity() - size() < int(_S_word_bit))
-        -:  987:	return false;
-        -:  988:      __try
-        -:  989:	{
-        -:  990:	  if (size_type __n = size())
-        -:  991:	    _M_reallocate(__n);
-        -:  992:	  else
-        -:  993:	    {
-        -:  994:	      this->_M_deallocate();
-        -:  995:	      this->_M_impl._M_reset();
-        -:  996:	    }
-        -:  997:	  return true;
-        -:  998:	}
-        -:  999:      __catch(...)
-        -: 1000:	{ return false; }
-        -: 1001:    }
-        -: 1002:#endif
-        -: 1003:
-        -: 1004:_GLIBCXX_END_NAMESPACE_CONTAINER
-        -: 1005:_GLIBCXX_END_NAMESPACE_VERSION
-        -: 1006:} // namespace std
-        -: 1007:
-        -: 1008:#if __cplusplus >= 201103L
-        -: 1009:
-        -: 1010:namespace std _GLIBCXX_VISIBILITY(default)
-        -: 1011:{
-        -: 1012:_GLIBCXX_BEGIN_NAMESPACE_VERSION
-        -: 1013:
-        -: 1014:  template<typename _Alloc>
-        -: 1015:    size_t
-        -: 1016:    hash<_GLIBCXX_STD_C::vector<bool, _Alloc>>::
-        -: 1017:    operator()(const _GLIBCXX_STD_C::vector<bool, _Alloc>& __b) const noexcept
-        -: 1018:    {
-        -: 1019:      size_t __hash = 0;
-        -: 1020:      const size_t __words = __b.size() / _S_word_bit;
-        -: 1021:      if (__words)
-        -: 1022:	{
-        -: 1023:	  const size_t __clength = __words * sizeof(_Bit_type);
-        -: 1024:	  __hash = std::_Hash_impl::hash(__b._M_impl._M_start._M_p, __clength);
-        -: 1025:	}
-        -: 1026:
-        -: 1027:      const size_t __extrabits = __b.size() % _S_word_bit;
-        -: 1028:      if (__extrabits)
-        -: 1029:	{
-        -: 1030:	  _Bit_type __hiword = *__b._M_impl._M_finish._M_p;
-        -: 1031:	  __hiword &= ~((~static_cast<_Bit_type>(0)) << __extrabits);
-        -: 1032:
-        -: 1033:	  const size_t __clength
-        -: 1034:	    = (__extrabits + __CHAR_BIT__ - 1) / __CHAR_BIT__;
-        -: 1035:	  if (__words)
-        -: 1036:	    __hash = std::_Hash_impl::hash(&__hiword, __clength, __hash);
-        -: 1037:	  else
-        -: 1038:	    __hash = std::_Hash_impl::hash(&__hiword, __clength);
-        -: 1039:	}
-        -: 1040:
-        -: 1041:      return __hash;
-        -: 1042:    }
-        -: 1043:
-        -: 1044:_GLIBCXX_END_NAMESPACE_VERSION
-        -: 1045:} // namespace std
-        -: 1046:
-        -: 1047:#endif // C++11
-        -: 1048:
-        -: 1049:#undef _GLIBCXX_ASAN_ANNOTATE_REINIT
-        -: 1050:#undef _GLIBCXX_ASAN_ANNOTATE_GROW
-        -: 1051:#undef _GLIBCXX_ASAN_ANNOTATE_GREW
-        -: 1052:#undef _GLIBCXX_ASAN_ANNOTATE_SHRINK
-        -: 1053:
-        -: 1054:#endif /* _VECTOR_TCC */
+        -:  913:		_Bit_pointer __q = this->_M_allocate(__len);
+        -:  914:		iterator __start(std::__addressof(*__q), 0);
+        -:  915:		iterator __i = _M_copy_aligned(begin(), __position, __start);
+        -:  916:		__i = std::copy(__first, __last, __i);
+        -:  917:		iterator __finish = std::copy(__position, end(), __i);
+        -:  918:		this->_M_deallocate();
+        -:  919:		this->_M_impl._M_end_of_storage = __q + _S_nword(__len);
+        -:  920:		this->_M_impl._M_start = __start;
+        -:  921:		this->_M_impl._M_finish = __finish;
+        -:  922:	      }
+        -:  923:	  }
+        -:  924:      }
+        -:  925:
+        -:  926:  template<typename _Alloc>
+        -:  927:    _GLIBCXX20_CONSTEXPR
+        -:  928:    void
+        -:  929:    vector<bool, _Alloc>::
+        -:  930:    _M_insert_aux(iterator __position, bool __x)
+        -:  931:    {
+        -:  932:      if (this->_M_impl._M_finish._M_p != this->_M_impl._M_end_addr())
+        -:  933:	{
+        -:  934:	  std::copy_backward(__position, this->_M_impl._M_finish, 
+        -:  935:			     this->_M_impl._M_finish + 1);
+        -:  936:	  *__position = __x;
+        -:  937:	  ++this->_M_impl._M_finish;
+        -:  938:	}
+        -:  939:      else
+        -:  940:	{
+        -:  941:	  const size_type __len =
+        -:  942:	    _M_check_len(size_type(1), "vector<bool>::_M_insert_aux");
+        -:  943:	  _Bit_pointer __q = this->_M_allocate(__len);
+        -:  944:	  iterator __start(std::__addressof(*__q), 0);
+        -:  945:	  iterator __i = _M_copy_aligned(begin(), __position, __start);
+        -:  946:	  *__i++ = __x;
+        -:  947:	  iterator __finish = std::copy(__position, end(), __i);
+        -:  948:	  this->_M_deallocate();
+        -:  949:	  this->_M_impl._M_end_of_storage = __q + _S_nword(__len);
+        -:  950:	  this->_M_impl._M_start = __start;
+        -:  951:	  this->_M_impl._M_finish = __finish;
+        -:  952:	}
+        -:  953:    }
+        -:  954:
+        -:  955:  template<typename _Alloc>
+        -:  956:    _GLIBCXX20_CONSTEXPR
+        -:  957:    typename vector<bool, _Alloc>::iterator
+        -:  958:    vector<bool, _Alloc>::
+        -:  959:    _M_erase(iterator __position)
+        -:  960:    {
+        -:  961:      if (__position + 1 != end())
+        -:  962:        std::copy(__position + 1, end(), __position);
+        -:  963:      --this->_M_impl._M_finish;
+        -:  964:      return __position;
+        -:  965:    }
+        -:  966:
+        -:  967:  template<typename _Alloc>
+        -:  968:    _GLIBCXX20_CONSTEXPR
+        -:  969:    typename vector<bool, _Alloc>::iterator
+        -:  970:    vector<bool, _Alloc>::
+        -:  971:    _M_erase(iterator __first, iterator __last)
+        -:  972:    {
+        -:  973:      if (__first != __last)
+        -:  974:	_M_erase_at_end(std::copy(__last, end(), __first));
+        -:  975:      return __first;
+        -:  976:    }
+        -:  977:
+        -:  978:#if __cplusplus >= 201103L
+        -:  979:  template<typename _Alloc>
+        -:  980:    _GLIBCXX20_CONSTEXPR
+        -:  981:    bool
+        -:  982:    vector<bool, _Alloc>::
+        -:  983:    _M_shrink_to_fit()
+        -:  984:    {
+        -:  985:      if (capacity() - size() < int(_S_word_bit))
+        -:  986:	return false;
+        -:  987:      __try
+        -:  988:	{
+        -:  989:	  if (size_type __n = size())
+        -:  990:	    _M_reallocate(__n);
+        -:  991:	  else
+        -:  992:	    {
+        -:  993:	      this->_M_deallocate();
+        -:  994:	      this->_M_impl._M_reset();
+        -:  995:	    }
+        -:  996:	  return true;
+        -:  997:	}
+        -:  998:      __catch(...)
+        -:  999:	{ return false; }
+        -: 1000:    }
+        -: 1001:#endif
+        -: 1002:
+        -: 1003:_GLIBCXX_END_NAMESPACE_CONTAINER
+        -: 1004:_GLIBCXX_END_NAMESPACE_VERSION
+        -: 1005:} // namespace std
+        -: 1006:
+        -: 1007:#if __cplusplus >= 201103L
+        -: 1008:
+        -: 1009:namespace std _GLIBCXX_VISIBILITY(default)
+        -: 1010:{
+        -: 1011:_GLIBCXX_BEGIN_NAMESPACE_VERSION
+        -: 1012:
+        -: 1013:  template<typename _Alloc>
+        -: 1014:    size_t
+        -: 1015:    hash<_GLIBCXX_STD_C::vector<bool, _Alloc>>::
+        -: 1016:    operator()(const _GLIBCXX_STD_C::vector<bool, _Alloc>& __b) const noexcept
+        -: 1017:    {
+        -: 1018:      size_t __hash = 0;
+        -: 1019:      const size_t __words = __b.size() / _S_word_bit;
+        -: 1020:      if (__words)
+        -: 1021:	{
+        -: 1022:	  const size_t __clength = __words * sizeof(_Bit_type);
+        -: 1023:	  __hash = std::_Hash_impl::hash(__b._M_impl._M_start._M_p, __clength);
+        -: 1024:	}
+        -: 1025:
+        -: 1026:      const size_t __extrabits = __b.size() % _S_word_bit;
+        -: 1027:      if (__extrabits)
+        -: 1028:	{
+        -: 1029:	  _Bit_type __hiword = *__b._M_impl._M_finish._M_p;
+        -: 1030:	  __hiword &= ~((~static_cast<_Bit_type>(0)) << __extrabits);
+        -: 1031:
+        -: 1032:	  const size_t __clength
+        -: 1033:	    = (__extrabits + __CHAR_BIT__ - 1) / __CHAR_BIT__;
+        -: 1034:	  if (__words)
+        -: 1035:	    __hash = std::_Hash_impl::hash(&__hiword, __clength, __hash);
+        -: 1036:	  else
+        -: 1037:	    __hash = std::_Hash_impl::hash(&__hiword, __clength);
+        -: 1038:	}
+        -: 1039:
+        -: 1040:      return __hash;
+        -: 1041:    }
+        -: 1042:
+        -: 1043:_GLIBCXX_END_NAMESPACE_VERSION
+        -: 1044:} // namespace std
+        -: 1045:
+        -: 1046:#endif // C++11
+        -: 1047:
+        -: 1048:#undef _GLIBCXX_ASAN_ANNOTATE_REINIT
+        -: 1049:#undef _GLIBCXX_ASAN_ANNOTATE_GROW
+        -: 1050:#undef _GLIBCXX_ASAN_ANNOTATE_GREW
+        -: 1051:#undef _GLIBCXX_ASAN_ANNOTATE_SHRINK
+        -: 1052:
+        -: 1053:#endif /* _VECTOR_TCC */

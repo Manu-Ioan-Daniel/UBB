@@ -8,13 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/Contract.cpp" "CMakeFiles/Lab_6.dir/Contract.cpp.o" "gcc" "CMakeFiles/Lab_6.dir/Contract.cpp.o.d"
-  "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/Repo.cpp" "CMakeFiles/Lab_6.dir/Repo.cpp.o" "gcc" "CMakeFiles/Lab_6.dir/Repo.cpp.o.d"
-  "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/disciplina.cpp" "CMakeFiles/Lab_6.dir/disciplina.cpp.o" "gcc" "CMakeFiles/Lab_6.dir/disciplina.cpp.o.d"
-  "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/main.cpp" "CMakeFiles/Lab_6.dir/main.cpp.o" "gcc" "CMakeFiles/Lab_6.dir/main.cpp.o.d"
-  "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/service.cpp" "CMakeFiles/Lab_6.dir/service.cpp.o" "gcc" "CMakeFiles/Lab_6.dir/service.cpp.o.d"
-  "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/ui.cpp" "CMakeFiles/Lab_6.dir/ui.cpp.o" "gcc" "CMakeFiles/Lab_6.dir/ui.cpp.o.d"
-  "/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/validator.cpp" "CMakeFiles/Lab_6.dir/validator.cpp.o" "gcc" "CMakeFiles/Lab_6.dir/validator.cpp.o.d"
+  "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/Contract.cpp" "CMakeFiles/Lab_6.dir/Contract.cpp.obj" "gcc" "CMakeFiles/Lab_6.dir/Contract.cpp.obj.d"
+  "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/Repo.cpp" "CMakeFiles/Lab_6.dir/Repo.cpp.obj" "gcc" "CMakeFiles/Lab_6.dir/Repo.cpp.obj.d"
+  "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/disciplina.cpp" "CMakeFiles/Lab_6.dir/disciplina.cpp.obj" "gcc" "CMakeFiles/Lab_6.dir/disciplina.cpp.obj.d"
+  "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/main.cpp" "CMakeFiles/Lab_6.dir/main.cpp.obj" "gcc" "CMakeFiles/Lab_6.dir/main.cpp.obj.d"
+  "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/service.cpp" "CMakeFiles/Lab_6.dir/service.cpp.obj" "gcc" "CMakeFiles/Lab_6.dir/service.cpp.obj.d"
+  "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/ui.cpp" "CMakeFiles/Lab_6.dir/ui.cpp.obj" "gcc" "CMakeFiles/Lab_6.dir/ui.cpp.obj.d"
+  "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/validator.cpp" "CMakeFiles/Lab_6.dir/validator.cpp.obj" "gcc" "CMakeFiles/Lab_6.dir/validator.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -7,7 +7,7 @@ using std::cin;
 void Ui::startUi() const {
     int cmd=0;
     while (true) {
-        cout<<"0.Exit\n1.Adauga disciplina\n2.Modifica disciplina\n3.Sterge disciplina\n4.Cauta disciplina\n5.Afiseaza discipline\n6.Filtrare discipline dupa ore\n7.Filtrare discipline dupa cadru didactic\n8.Sortare discipline dupa ore\n9.Sortare discipline dupa denumire\n10.Sortare discipline dupa tip si cadru didactic\n11.Adauga disciplina in contract\n12.Goleste contract\n13.Genereaza contract\n";
+        cout<<"0.Exit\n1.Adauga disciplina\n2.Modifica disciplina\n3.Sterge disciplina\n4.Cauta disciplina\n5.Afiseaza discipline\n6.Filtrare discipline dupa ore\n7.Filtrare discipline dupa cadru didactic\n8.Sortare discipline dupa ore\n9.Sortare discipline dupa denumire\n10.Sortare discipline dupa tip si cadru didactic\n11.Adauga disciplina in contract\n12.Goleste contract\n13.Genereaza contract\n14.Statistici\n";
         readInteger(cmd,"Introdu optiunea dorita: ");
         if (cmd==0) {
             break;
@@ -169,6 +169,19 @@ void Ui::startUi() const {
                 cout<<"Avem "<<service.getContract().getSize()<<" discipline in contract\n";
             }
             catch (ValidationError& e) {
+                cout<<e.getError();
+            }catch (RepoException& e) {
+                cout<<e.getMsg();
+            }catch (ServiceException& e) {
+                cout<<e.getMsg();
+            }
+        }
+        if (cmd==14) {
+            try {
+                for (const auto& discipline=service.statistici(); const auto&[fst, snd]:discipline) {
+                    cout<<fst<<" "<<snd<<"\n";
+                }
+            }catch (ValidationError& e) {
                 cout<<e.getError();
             }catch (RepoException& e) {
                 cout<<e.getMsg();

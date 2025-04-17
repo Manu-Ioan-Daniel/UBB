@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/bits/stl_algobase.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_algobase.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\Repo.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\Repo.cpp.gcda
         -:    0:Runs:1
         -:    1:// Core algorithmic facilities -*- C++ -*-
         -:    2:
@@ -234,20 +234,20 @@
         -:  230:  template<typename _Tp>
         -:  231:    _GLIBCXX14_CONSTEXPR
         -:  232:    inline const _Tp&
-function _ZSt3minImERKT_S2_S2_ called 1573 returned 100% blocks executed 100%
-     1573:  233:    min(const _Tp& __a, const _Tp& __b)
+function _ZSt3minIyERKT_S2_S2_ called 2695 returned 100% blocks executed 100%
+     2695:  233:    min(const _Tp& __a, const _Tp& __b)
         -:  234:    {
         -:  235:      // concept requirements
         -:  236:      __glibcxx_function_requires(_LessThanComparableConcept<_Tp>)
         -:  237:      //return __b < __a ? __b : __a;
-     1573:  238:      if (__b < __a)
-     1573:  238-block  0
-branch  0 taken 87 (fallthrough)
-branch  1 taken 1486
-       87:  239:	return __b;
-       87:  239-block  0
-     1486:  240:      return __a;
-     1486:  240-block  0
+     2695:  238:      if (__b < __a)
+     2695:  238-block  0
+branch  0 taken 251 (fallthrough)
+branch  1 taken 2444
+      251:  239:	return __b;
+      251:  239-block  0
+     2444:  240:      return __a;
+     2444:  240-block  0
         -:  241:    }
         -:  242:
         -:  243:  /**
@@ -264,20 +264,20 @@ branch  1 taken 1486
         -:  254:  template<typename _Tp>
         -:  255:    _GLIBCXX14_CONSTEXPR
         -:  256:    inline const _Tp&
-function _ZSt3maxImERKT_S2_S2_ called 24 returned 100% blocks executed 100%
-       24:  257:    max(const _Tp& __a, const _Tp& __b)
+function _ZSt3maxIyERKT_S2_S2_ called 40 returned 100% blocks executed 100%
+       40:  257:    max(const _Tp& __a, const _Tp& __b)
         -:  258:    {
         -:  259:      // concept requirements
         -:  260:      __glibcxx_function_requires(_LessThanComparableConcept<_Tp>)
         -:  261:      //return  __a < __b ? __b : __a;
-       24:  262:      if (__a < __b)
-       24:  262-block  0
-branch  0 taken 4 (fallthrough)
-branch  1 taken 20
-        4:  263:	return __b;
-        4:  263-block  0
-       20:  264:      return __a;
-       20:  264-block  0
+       40:  262:      if (__a < __b)
+       40:  262-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 34
+        6:  263:	return __b;
+        6:  263-block  0
+       34:  264:      return __a;
+       34:  264-block  0
         -:  265:    }
         -:  266:
         -:  267:  /**
@@ -1107,7 +1107,7 @@ call    2 never executed
         -: 1052:  __size_to_integer(double __n) { return (long long)__n; }
         -: 1053:  inline _GLIBCXX_CONSTEXPR long long
         -: 1054:  __size_to_integer(long double __n) { return (long long)__n; }
-        -: 1055:#if !defined(__STRICT_ANSI__) && defined(_GLIBCXX_USE_FLOAT128) && !defined(__CUDACC__)
+        -: 1055:#if !defined(__STRICT_ANSI__) && defined(_GLIBCXX_USE_FLOAT128)
         -: 1056:  __extension__ inline _GLIBCXX_CONSTEXPR long long
         -: 1057:  __size_to_integer(__float128 __n) { return (long long)__n; }
         -: 1058:#endif
@@ -1573,276 +1573,276 @@ call    2 never executed
         -: 1518:      return std::__bit_width(make_unsigned_t<_Tp>(__n)) - 1;
         -: 1519:#else
         -: 1520:      // Use +__n so it promotes to at least int.
-        -: 1521:      return (sizeof(+__n) * __CHAR_BIT__ - 1)
-        -: 1522:	       - (sizeof(+__n) == sizeof(long long)
-        -: 1523:		    ? __builtin_clzll(+__n)
-        -: 1524:		    : (sizeof(+__n) == sizeof(long)
-        -: 1525:			 ? __builtin_clzl(+__n)
-        -: 1526:			 : __builtin_clz(+__n)));
-        -: 1527:#endif
-        -: 1528:    }
-        -: 1529:
-        -: 1530:_GLIBCXX_BEGIN_NAMESPACE_ALGO
-        -: 1531:
-        -: 1532:  /**
-        -: 1533:   *  @brief Tests a range for element-wise equality.
-        -: 1534:   *  @ingroup non_mutating_algorithms
-        -: 1535:   *  @param  __first1  An input iterator.
-        -: 1536:   *  @param  __last1   An input iterator.
-        -: 1537:   *  @param  __first2  An input iterator.
-        -: 1538:   *  @return   A boolean true or false.
-        -: 1539:   *
-        -: 1540:   *  This compares the elements of two ranges using @c == and returns true or
-        -: 1541:   *  false depending on whether all of the corresponding elements of the
-        -: 1542:   *  ranges are equal.
-        -: 1543:  */
-        -: 1544:  template<typename _II1, typename _II2>
-        -: 1545:    _GLIBCXX20_CONSTEXPR
-        -: 1546:    inline bool
-        -: 1547:    equal(_II1 __first1, _II1 __last1, _II2 __first2)
-        -: 1548:    {
-        -: 1549:      // concept requirements
-        -: 1550:      __glibcxx_function_requires(_InputIteratorConcept<_II1>)
-        -: 1551:      __glibcxx_function_requires(_InputIteratorConcept<_II2>)
-        -: 1552:      __glibcxx_function_requires(_EqualOpConcept<
-        -: 1553:	    typename iterator_traits<_II1>::value_type,
-        -: 1554:	    typename iterator_traits<_II2>::value_type>)
-        -: 1555:      __glibcxx_requires_can_increment_range(__first1, __last1, __first2);
-        -: 1556:
-        -: 1557:      return std::__equal_aux(__first1, __last1, __first2);
-        -: 1558:    }
+        -: 1521:      const int __sz = sizeof(+__n);
+        -: 1522:      int __w = __sz * __CHAR_BIT__ - 1;
+        -: 1523:      if (__sz == sizeof(long long))
+        -: 1524:	__w -= __builtin_clzll(+__n);
+        -: 1525:      else if (__sz == sizeof(long))
+        -: 1526:	__w -= __builtin_clzl(+__n);
+        -: 1527:      else if (__sz == sizeof(int))
+        -: 1528:	__w -= __builtin_clz(+__n);
+        -: 1529:      return __w;
+        -: 1530:#endif
+        -: 1531:    }
+        -: 1532:
+        -: 1533:_GLIBCXX_BEGIN_NAMESPACE_ALGO
+        -: 1534:
+        -: 1535:  /**
+        -: 1536:   *  @brief Tests a range for element-wise equality.
+        -: 1537:   *  @ingroup non_mutating_algorithms
+        -: 1538:   *  @param  __first1  An input iterator.
+        -: 1539:   *  @param  __last1   An input iterator.
+        -: 1540:   *  @param  __first2  An input iterator.
+        -: 1541:   *  @return   A boolean true or false.
+        -: 1542:   *
+        -: 1543:   *  This compares the elements of two ranges using @c == and returns true or
+        -: 1544:   *  false depending on whether all of the corresponding elements of the
+        -: 1545:   *  ranges are equal.
+        -: 1546:  */
+        -: 1547:  template<typename _II1, typename _II2>
+        -: 1548:    _GLIBCXX20_CONSTEXPR
+        -: 1549:    inline bool
+        -: 1550:    equal(_II1 __first1, _II1 __last1, _II2 __first2)
+        -: 1551:    {
+        -: 1552:      // concept requirements
+        -: 1553:      __glibcxx_function_requires(_InputIteratorConcept<_II1>)
+        -: 1554:      __glibcxx_function_requires(_InputIteratorConcept<_II2>)
+        -: 1555:      __glibcxx_function_requires(_EqualOpConcept<
+        -: 1556:	    typename iterator_traits<_II1>::value_type,
+        -: 1557:	    typename iterator_traits<_II2>::value_type>)
+        -: 1558:      __glibcxx_requires_can_increment_range(__first1, __last1, __first2);
         -: 1559:
-        -: 1560:  /**
-        -: 1561:   *  @brief Tests a range for element-wise equality.
-        -: 1562:   *  @ingroup non_mutating_algorithms
-        -: 1563:   *  @param  __first1  An input iterator.
-        -: 1564:   *  @param  __last1   An input iterator.
-        -: 1565:   *  @param  __first2  An input iterator.
-        -: 1566:   *  @param __binary_pred A binary predicate @link functors
-        -: 1567:   *                  functor@endlink.
-        -: 1568:   *  @return         A boolean true or false.
-        -: 1569:   *
-        -: 1570:   *  This compares the elements of two ranges using the binary_pred
-        -: 1571:   *  parameter, and returns true or
-        -: 1572:   *  false depending on whether all of the corresponding elements of the
-        -: 1573:   *  ranges are equal.
-        -: 1574:  */
-        -: 1575:  template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
-        -: 1576:    _GLIBCXX20_CONSTEXPR
-        -: 1577:    inline bool
-        -: 1578:    equal(_IIter1 __first1, _IIter1 __last1,
-        -: 1579:	  _IIter2 __first2, _BinaryPredicate __binary_pred)
-        -: 1580:    {
-        -: 1581:      // concept requirements
-        -: 1582:      __glibcxx_function_requires(_InputIteratorConcept<_IIter1>)
-        -: 1583:      __glibcxx_function_requires(_InputIteratorConcept<_IIter2>)
-        -: 1584:      __glibcxx_requires_valid_range(__first1, __last1);
-        -: 1585:
-        -: 1586:      for (; __first1 != __last1; ++__first1, (void)++__first2)
-        -: 1587:	if (!bool(__binary_pred(*__first1, *__first2)))
-        -: 1588:	  return false;
-        -: 1589:      return true;
-        -: 1590:    }
-        -: 1591:
-        -: 1592:#if __cplusplus >= 201103L
-        -: 1593:  // 4-iterator version of std::equal<It1, It2> for use in C++11.
-        -: 1594:  template<typename _II1, typename _II2>
-        -: 1595:    _GLIBCXX20_CONSTEXPR
-        -: 1596:    inline bool
-        -: 1597:    __equal4(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2)
-        -: 1598:    {
-        -: 1599:      using _RATag = random_access_iterator_tag;
-        -: 1600:      using _Cat1 = typename iterator_traits<_II1>::iterator_category;
-        -: 1601:      using _Cat2 = typename iterator_traits<_II2>::iterator_category;
-        -: 1602:      using _RAIters = __and_<is_same<_Cat1, _RATag>, is_same<_Cat2, _RATag>>;
-        -: 1603:      if (_RAIters())
-        -: 1604:	{
-        -: 1605:	  auto __d1 = std::distance(__first1, __last1);
-        -: 1606:	  auto __d2 = std::distance(__first2, __last2);
-        -: 1607:	  if (__d1 != __d2)
-        -: 1608:	    return false;
-        -: 1609:	  return _GLIBCXX_STD_A::equal(__first1, __last1, __first2);
-        -: 1610:	}
-        -: 1611:
-        -: 1612:      for (; __first1 != __last1 && __first2 != __last2;
-        -: 1613:	  ++__first1, (void)++__first2)
-        -: 1614:	if (!(*__first1 == *__first2))
-        -: 1615:	  return false;
-        -: 1616:      return __first1 == __last1 && __first2 == __last2;
-        -: 1617:    }
-        -: 1618:
-        -: 1619:  // 4-iterator version of std::equal<It1, It2, BinaryPred> for use in C++11.
-        -: 1620:  template<typename _II1, typename _II2, typename _BinaryPredicate>
-        -: 1621:    _GLIBCXX20_CONSTEXPR
-        -: 1622:    inline bool
-        -: 1623:    __equal4(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2,
-        -: 1624:	     _BinaryPredicate __binary_pred)
-        -: 1625:    {
-        -: 1626:      using _RATag = random_access_iterator_tag;
-        -: 1627:      using _Cat1 = typename iterator_traits<_II1>::iterator_category;
-        -: 1628:      using _Cat2 = typename iterator_traits<_II2>::iterator_category;
-        -: 1629:      using _RAIters = __and_<is_same<_Cat1, _RATag>, is_same<_Cat2, _RATag>>;
-        -: 1630:      if (_RAIters())
-        -: 1631:	{
-        -: 1632:	  auto __d1 = std::distance(__first1, __last1);
-        -: 1633:	  auto __d2 = std::distance(__first2, __last2);
-        -: 1634:	  if (__d1 != __d2)
-        -: 1635:	    return false;
-        -: 1636:	  return _GLIBCXX_STD_A::equal(__first1, __last1, __first2,
-        -: 1637:				       __binary_pred);
-        -: 1638:	}
-        -: 1639:
-        -: 1640:      for (; __first1 != __last1 && __first2 != __last2;
-        -: 1641:	  ++__first1, (void)++__first2)
-        -: 1642:	if (!bool(__binary_pred(*__first1, *__first2)))
-        -: 1643:	  return false;
-        -: 1644:      return __first1 == __last1 && __first2 == __last2;
-        -: 1645:    }
-        -: 1646:#endif // C++11
-        -: 1647:
-        -: 1648:#if __cplusplus > 201103L
-        -: 1649:
-        -: 1650:#define __cpp_lib_robust_nonmodifying_seq_ops 201304L
-        -: 1651:
-        -: 1652:  /**
-        -: 1653:   *  @brief Tests a range for element-wise equality.
-        -: 1654:   *  @ingroup non_mutating_algorithms
-        -: 1655:   *  @param  __first1  An input iterator.
-        -: 1656:   *  @param  __last1   An input iterator.
-        -: 1657:   *  @param  __first2  An input iterator.
-        -: 1658:   *  @param  __last2   An input iterator.
-        -: 1659:   *  @return   A boolean true or false.
-        -: 1660:   *
-        -: 1661:   *  This compares the elements of two ranges using @c == and returns true or
-        -: 1662:   *  false depending on whether all of the corresponding elements of the
-        -: 1663:   *  ranges are equal.
-        -: 1664:  */
-        -: 1665:  template<typename _II1, typename _II2>
-        -: 1666:    _GLIBCXX20_CONSTEXPR
-        -: 1667:    inline bool
-        -: 1668:    equal(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2)
-        -: 1669:    {
-        -: 1670:      // concept requirements
-        -: 1671:      __glibcxx_function_requires(_InputIteratorConcept<_II1>)
-        -: 1672:      __glibcxx_function_requires(_InputIteratorConcept<_II2>)
-        -: 1673:      __glibcxx_function_requires(_EqualOpConcept<
-        -: 1674:	    typename iterator_traits<_II1>::value_type,
-        -: 1675:	    typename iterator_traits<_II2>::value_type>)
-        -: 1676:      __glibcxx_requires_valid_range(__first1, __last1);
-        -: 1677:      __glibcxx_requires_valid_range(__first2, __last2);
-        -: 1678:
-        -: 1679:      return _GLIBCXX_STD_A::__equal4(__first1, __last1, __first2, __last2);
-        -: 1680:    }
+        -: 1560:      return std::__equal_aux(__first1, __last1, __first2);
+        -: 1561:    }
+        -: 1562:
+        -: 1563:  /**
+        -: 1564:   *  @brief Tests a range for element-wise equality.
+        -: 1565:   *  @ingroup non_mutating_algorithms
+        -: 1566:   *  @param  __first1  An input iterator.
+        -: 1567:   *  @param  __last1   An input iterator.
+        -: 1568:   *  @param  __first2  An input iterator.
+        -: 1569:   *  @param __binary_pred A binary predicate @link functors
+        -: 1570:   *                  functor@endlink.
+        -: 1571:   *  @return         A boolean true or false.
+        -: 1572:   *
+        -: 1573:   *  This compares the elements of two ranges using the binary_pred
+        -: 1574:   *  parameter, and returns true or
+        -: 1575:   *  false depending on whether all of the corresponding elements of the
+        -: 1576:   *  ranges are equal.
+        -: 1577:  */
+        -: 1578:  template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
+        -: 1579:    _GLIBCXX20_CONSTEXPR
+        -: 1580:    inline bool
+        -: 1581:    equal(_IIter1 __first1, _IIter1 __last1,
+        -: 1582:	  _IIter2 __first2, _BinaryPredicate __binary_pred)
+        -: 1583:    {
+        -: 1584:      // concept requirements
+        -: 1585:      __glibcxx_function_requires(_InputIteratorConcept<_IIter1>)
+        -: 1586:      __glibcxx_function_requires(_InputIteratorConcept<_IIter2>)
+        -: 1587:      __glibcxx_requires_valid_range(__first1, __last1);
+        -: 1588:
+        -: 1589:      for (; __first1 != __last1; ++__first1, (void)++__first2)
+        -: 1590:	if (!bool(__binary_pred(*__first1, *__first2)))
+        -: 1591:	  return false;
+        -: 1592:      return true;
+        -: 1593:    }
+        -: 1594:
+        -: 1595:#if __cplusplus >= 201103L
+        -: 1596:  // 4-iterator version of std::equal<It1, It2> for use in C++11.
+        -: 1597:  template<typename _II1, typename _II2>
+        -: 1598:    _GLIBCXX20_CONSTEXPR
+        -: 1599:    inline bool
+        -: 1600:    __equal4(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2)
+        -: 1601:    {
+        -: 1602:      using _RATag = random_access_iterator_tag;
+        -: 1603:      using _Cat1 = typename iterator_traits<_II1>::iterator_category;
+        -: 1604:      using _Cat2 = typename iterator_traits<_II2>::iterator_category;
+        -: 1605:      using _RAIters = __and_<is_same<_Cat1, _RATag>, is_same<_Cat2, _RATag>>;
+        -: 1606:      if (_RAIters())
+        -: 1607:	{
+        -: 1608:	  auto __d1 = std::distance(__first1, __last1);
+        -: 1609:	  auto __d2 = std::distance(__first2, __last2);
+        -: 1610:	  if (__d1 != __d2)
+        -: 1611:	    return false;
+        -: 1612:	  return _GLIBCXX_STD_A::equal(__first1, __last1, __first2);
+        -: 1613:	}
+        -: 1614:
+        -: 1615:      for (; __first1 != __last1 && __first2 != __last2;
+        -: 1616:	  ++__first1, (void)++__first2)
+        -: 1617:	if (!(*__first1 == *__first2))
+        -: 1618:	  return false;
+        -: 1619:      return __first1 == __last1 && __first2 == __last2;
+        -: 1620:    }
+        -: 1621:
+        -: 1622:  // 4-iterator version of std::equal<It1, It2, BinaryPred> for use in C++11.
+        -: 1623:  template<typename _II1, typename _II2, typename _BinaryPredicate>
+        -: 1624:    _GLIBCXX20_CONSTEXPR
+        -: 1625:    inline bool
+        -: 1626:    __equal4(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2,
+        -: 1627:	     _BinaryPredicate __binary_pred)
+        -: 1628:    {
+        -: 1629:      using _RATag = random_access_iterator_tag;
+        -: 1630:      using _Cat1 = typename iterator_traits<_II1>::iterator_category;
+        -: 1631:      using _Cat2 = typename iterator_traits<_II2>::iterator_category;
+        -: 1632:      using _RAIters = __and_<is_same<_Cat1, _RATag>, is_same<_Cat2, _RATag>>;
+        -: 1633:      if (_RAIters())
+        -: 1634:	{
+        -: 1635:	  auto __d1 = std::distance(__first1, __last1);
+        -: 1636:	  auto __d2 = std::distance(__first2, __last2);
+        -: 1637:	  if (__d1 != __d2)
+        -: 1638:	    return false;
+        -: 1639:	  return _GLIBCXX_STD_A::equal(__first1, __last1, __first2,
+        -: 1640:				       __binary_pred);
+        -: 1641:	}
+        -: 1642:
+        -: 1643:      for (; __first1 != __last1 && __first2 != __last2;
+        -: 1644:	  ++__first1, (void)++__first2)
+        -: 1645:	if (!bool(__binary_pred(*__first1, *__first2)))
+        -: 1646:	  return false;
+        -: 1647:      return __first1 == __last1 && __first2 == __last2;
+        -: 1648:    }
+        -: 1649:#endif // C++11
+        -: 1650:
+        -: 1651:#if __cplusplus > 201103L
+        -: 1652:
+        -: 1653:#define __cpp_lib_robust_nonmodifying_seq_ops 201304L
+        -: 1654:
+        -: 1655:  /**
+        -: 1656:   *  @brief Tests a range for element-wise equality.
+        -: 1657:   *  @ingroup non_mutating_algorithms
+        -: 1658:   *  @param  __first1  An input iterator.
+        -: 1659:   *  @param  __last1   An input iterator.
+        -: 1660:   *  @param  __first2  An input iterator.
+        -: 1661:   *  @param  __last2   An input iterator.
+        -: 1662:   *  @return   A boolean true or false.
+        -: 1663:   *
+        -: 1664:   *  This compares the elements of two ranges using @c == and returns true or
+        -: 1665:   *  false depending on whether all of the corresponding elements of the
+        -: 1666:   *  ranges are equal.
+        -: 1667:  */
+        -: 1668:  template<typename _II1, typename _II2>
+        -: 1669:    _GLIBCXX20_CONSTEXPR
+        -: 1670:    inline bool
+        -: 1671:    equal(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2)
+        -: 1672:    {
+        -: 1673:      // concept requirements
+        -: 1674:      __glibcxx_function_requires(_InputIteratorConcept<_II1>)
+        -: 1675:      __glibcxx_function_requires(_InputIteratorConcept<_II2>)
+        -: 1676:      __glibcxx_function_requires(_EqualOpConcept<
+        -: 1677:	    typename iterator_traits<_II1>::value_type,
+        -: 1678:	    typename iterator_traits<_II2>::value_type>)
+        -: 1679:      __glibcxx_requires_valid_range(__first1, __last1);
+        -: 1680:      __glibcxx_requires_valid_range(__first2, __last2);
         -: 1681:
-        -: 1682:  /**
-        -: 1683:   *  @brief Tests a range for element-wise equality.
-        -: 1684:   *  @ingroup non_mutating_algorithms
-        -: 1685:   *  @param  __first1  An input iterator.
-        -: 1686:   *  @param  __last1   An input iterator.
-        -: 1687:   *  @param  __first2  An input iterator.
-        -: 1688:   *  @param  __last2   An input iterator.
-        -: 1689:   *  @param __binary_pred A binary predicate @link functors
-        -: 1690:   *                  functor@endlink.
-        -: 1691:   *  @return         A boolean true or false.
-        -: 1692:   *
-        -: 1693:   *  This compares the elements of two ranges using the binary_pred
-        -: 1694:   *  parameter, and returns true or
-        -: 1695:   *  false depending on whether all of the corresponding elements of the
-        -: 1696:   *  ranges are equal.
-        -: 1697:  */
-        -: 1698:  template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
-        -: 1699:    _GLIBCXX20_CONSTEXPR
-        -: 1700:    inline bool
-        -: 1701:    equal(_IIter1 __first1, _IIter1 __last1,
-        -: 1702:	  _IIter2 __first2, _IIter2 __last2, _BinaryPredicate __binary_pred)
-        -: 1703:    {
-        -: 1704:      // concept requirements
-        -: 1705:      __glibcxx_function_requires(_InputIteratorConcept<_IIter1>)
-        -: 1706:      __glibcxx_function_requires(_InputIteratorConcept<_IIter2>)
-        -: 1707:      __glibcxx_requires_valid_range(__first1, __last1);
-        -: 1708:      __glibcxx_requires_valid_range(__first2, __last2);
-        -: 1709:
-        -: 1710:      return _GLIBCXX_STD_A::__equal4(__first1, __last1, __first2, __last2,
-        -: 1711:				      __binary_pred);
-        -: 1712:    }
-        -: 1713:#endif // C++14
-        -: 1714:
-        -: 1715:  /**
-        -: 1716:   *  @brief Performs @b dictionary comparison on ranges.
-        -: 1717:   *  @ingroup sorting_algorithms
-        -: 1718:   *  @param  __first1  An input iterator.
-        -: 1719:   *  @param  __last1   An input iterator.
-        -: 1720:   *  @param  __first2  An input iterator.
-        -: 1721:   *  @param  __last2   An input iterator.
-        -: 1722:   *  @return   A boolean true or false.
-        -: 1723:   *
-        -: 1724:   *  <em>Returns true if the sequence of elements defined by the range
-        -: 1725:   *  [first1,last1) is lexicographically less than the sequence of elements
-        -: 1726:   *  defined by the range [first2,last2).  Returns false otherwise.</em>
-        -: 1727:   *  (Quoted from [25.3.8]/1.)  If the iterators are all character pointers,
-        -: 1728:   *  then this is an inline call to @c memcmp.
-        -: 1729:  */
-        -: 1730:  template<typename _II1, typename _II2>
-        -: 1731:    _GLIBCXX20_CONSTEXPR
-        -: 1732:    inline bool
-        -: 1733:    lexicographical_compare(_II1 __first1, _II1 __last1,
-        -: 1734:			    _II2 __first2, _II2 __last2)
-        -: 1735:    {
-        -: 1736:#ifdef _GLIBCXX_CONCEPT_CHECKS
-        -: 1737:      // concept requirements
-        -: 1738:      typedef typename iterator_traits<_II1>::value_type _ValueType1;
-        -: 1739:      typedef typename iterator_traits<_II2>::value_type _ValueType2;
-        -: 1740:#endif
-        -: 1741:      __glibcxx_function_requires(_InputIteratorConcept<_II1>)
-        -: 1742:      __glibcxx_function_requires(_InputIteratorConcept<_II2>)
-        -: 1743:      __glibcxx_function_requires(_LessThanOpConcept<_ValueType1, _ValueType2>)
-        -: 1744:      __glibcxx_function_requires(_LessThanOpConcept<_ValueType2, _ValueType1>)
-        -: 1745:      __glibcxx_requires_valid_range(__first1, __last1);
-        -: 1746:      __glibcxx_requires_valid_range(__first2, __last2);
-        -: 1747:
-        -: 1748:      return std::__lexicographical_compare_aux(__first1, __last1,
-        -: 1749:						__first2, __last2);
-        -: 1750:    }
-        -: 1751:
-        -: 1752:  /**
-        -: 1753:   *  @brief Performs @b dictionary comparison on ranges.
-        -: 1754:   *  @ingroup sorting_algorithms
-        -: 1755:   *  @param  __first1  An input iterator.
-        -: 1756:   *  @param  __last1   An input iterator.
-        -: 1757:   *  @param  __first2  An input iterator.
-        -: 1758:   *  @param  __last2   An input iterator.
-        -: 1759:   *  @param  __comp  A @link comparison_functors comparison functor@endlink.
-        -: 1760:   *  @return   A boolean true or false.
-        -: 1761:   *
-        -: 1762:   *  The same as the four-parameter @c lexicographical_compare, but uses the
-        -: 1763:   *  comp parameter instead of @c <.
-        -: 1764:  */
-        -: 1765:  template<typename _II1, typename _II2, typename _Compare>
-        -: 1766:    _GLIBCXX20_CONSTEXPR
-        -: 1767:    inline bool
-        -: 1768:    lexicographical_compare(_II1 __first1, _II1 __last1,
-        -: 1769:			    _II2 __first2, _II2 __last2, _Compare __comp)
-        -: 1770:    {
-        -: 1771:      // concept requirements
-        -: 1772:      __glibcxx_function_requires(_InputIteratorConcept<_II1>)
-        -: 1773:      __glibcxx_function_requires(_InputIteratorConcept<_II2>)
-        -: 1774:      __glibcxx_requires_valid_range(__first1, __last1);
-        -: 1775:      __glibcxx_requires_valid_range(__first2, __last2);
-        -: 1776:
-        -: 1777:      return std::__lexicographical_compare_impl
-        -: 1778:	(__first1, __last1, __first2, __last2,
-        -: 1779:	 __gnu_cxx::__ops::__iter_comp_iter(__comp));
-        -: 1780:    }
-        -: 1781:
-        -: 1782:#if __cpp_lib_three_way_comparison
-        -: 1783:  // Both iterators refer to contiguous ranges of unsigned narrow characters,
-        -: 1784:  // or std::byte, or big-endian unsigned integers, suitable for comparison
-        -: 1785:  // using memcmp.
-        -: 1786:  template<typename _Iter1, typename _Iter2>
-        -: 1787:    concept __memcmp_ordered_with
-        -: 1788:      = (__is_memcmp_ordered_with<iter_value_t<_Iter1>,
-        -: 1789:				  iter_value_t<_Iter2>>::__value)
-        -: 1790:	  && contiguous_iterator<_Iter1> && contiguous_iterator<_Iter2>;
+        -: 1682:      return _GLIBCXX_STD_A::__equal4(__first1, __last1, __first2, __last2);
+        -: 1683:    }
+        -: 1684:
+        -: 1685:  /**
+        -: 1686:   *  @brief Tests a range for element-wise equality.
+        -: 1687:   *  @ingroup non_mutating_algorithms
+        -: 1688:   *  @param  __first1  An input iterator.
+        -: 1689:   *  @param  __last1   An input iterator.
+        -: 1690:   *  @param  __first2  An input iterator.
+        -: 1691:   *  @param  __last2   An input iterator.
+        -: 1692:   *  @param __binary_pred A binary predicate @link functors
+        -: 1693:   *                  functor@endlink.
+        -: 1694:   *  @return         A boolean true or false.
+        -: 1695:   *
+        -: 1696:   *  This compares the elements of two ranges using the binary_pred
+        -: 1697:   *  parameter, and returns true or
+        -: 1698:   *  false depending on whether all of the corresponding elements of the
+        -: 1699:   *  ranges are equal.
+        -: 1700:  */
+        -: 1701:  template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
+        -: 1702:    _GLIBCXX20_CONSTEXPR
+        -: 1703:    inline bool
+        -: 1704:    equal(_IIter1 __first1, _IIter1 __last1,
+        -: 1705:	  _IIter2 __first2, _IIter2 __last2, _BinaryPredicate __binary_pred)
+        -: 1706:    {
+        -: 1707:      // concept requirements
+        -: 1708:      __glibcxx_function_requires(_InputIteratorConcept<_IIter1>)
+        -: 1709:      __glibcxx_function_requires(_InputIteratorConcept<_IIter2>)
+        -: 1710:      __glibcxx_requires_valid_range(__first1, __last1);
+        -: 1711:      __glibcxx_requires_valid_range(__first2, __last2);
+        -: 1712:
+        -: 1713:      return _GLIBCXX_STD_A::__equal4(__first1, __last1, __first2, __last2,
+        -: 1714:				      __binary_pred);
+        -: 1715:    }
+        -: 1716:#endif // C++14
+        -: 1717:
+        -: 1718:  /**
+        -: 1719:   *  @brief Performs @b dictionary comparison on ranges.
+        -: 1720:   *  @ingroup sorting_algorithms
+        -: 1721:   *  @param  __first1  An input iterator.
+        -: 1722:   *  @param  __last1   An input iterator.
+        -: 1723:   *  @param  __first2  An input iterator.
+        -: 1724:   *  @param  __last2   An input iterator.
+        -: 1725:   *  @return   A boolean true or false.
+        -: 1726:   *
+        -: 1727:   *  <em>Returns true if the sequence of elements defined by the range
+        -: 1728:   *  [first1,last1) is lexicographically less than the sequence of elements
+        -: 1729:   *  defined by the range [first2,last2).  Returns false otherwise.</em>
+        -: 1730:   *  (Quoted from [25.3.8]/1.)  If the iterators are all character pointers,
+        -: 1731:   *  then this is an inline call to @c memcmp.
+        -: 1732:  */
+        -: 1733:  template<typename _II1, typename _II2>
+        -: 1734:    _GLIBCXX20_CONSTEXPR
+        -: 1735:    inline bool
+        -: 1736:    lexicographical_compare(_II1 __first1, _II1 __last1,
+        -: 1737:			    _II2 __first2, _II2 __last2)
+        -: 1738:    {
+        -: 1739:#ifdef _GLIBCXX_CONCEPT_CHECKS
+        -: 1740:      // concept requirements
+        -: 1741:      typedef typename iterator_traits<_II1>::value_type _ValueType1;
+        -: 1742:      typedef typename iterator_traits<_II2>::value_type _ValueType2;
+        -: 1743:#endif
+        -: 1744:      __glibcxx_function_requires(_InputIteratorConcept<_II1>)
+        -: 1745:      __glibcxx_function_requires(_InputIteratorConcept<_II2>)
+        -: 1746:      __glibcxx_function_requires(_LessThanOpConcept<_ValueType1, _ValueType2>)
+        -: 1747:      __glibcxx_function_requires(_LessThanOpConcept<_ValueType2, _ValueType1>)
+        -: 1748:      __glibcxx_requires_valid_range(__first1, __last1);
+        -: 1749:      __glibcxx_requires_valid_range(__first2, __last2);
+        -: 1750:
+        -: 1751:      return std::__lexicographical_compare_aux(__first1, __last1,
+        -: 1752:						__first2, __last2);
+        -: 1753:    }
+        -: 1754:
+        -: 1755:  /**
+        -: 1756:   *  @brief Performs @b dictionary comparison on ranges.
+        -: 1757:   *  @ingroup sorting_algorithms
+        -: 1758:   *  @param  __first1  An input iterator.
+        -: 1759:   *  @param  __last1   An input iterator.
+        -: 1760:   *  @param  __first2  An input iterator.
+        -: 1761:   *  @param  __last2   An input iterator.
+        -: 1762:   *  @param  __comp  A @link comparison_functors comparison functor@endlink.
+        -: 1763:   *  @return   A boolean true or false.
+        -: 1764:   *
+        -: 1765:   *  The same as the four-parameter @c lexicographical_compare, but uses the
+        -: 1766:   *  comp parameter instead of @c <.
+        -: 1767:  */
+        -: 1768:  template<typename _II1, typename _II2, typename _Compare>
+        -: 1769:    _GLIBCXX20_CONSTEXPR
+        -: 1770:    inline bool
+        -: 1771:    lexicographical_compare(_II1 __first1, _II1 __last1,
+        -: 1772:			    _II2 __first2, _II2 __last2, _Compare __comp)
+        -: 1773:    {
+        -: 1774:      // concept requirements
+        -: 1775:      __glibcxx_function_requires(_InputIteratorConcept<_II1>)
+        -: 1776:      __glibcxx_function_requires(_InputIteratorConcept<_II2>)
+        -: 1777:      __glibcxx_requires_valid_range(__first1, __last1);
+        -: 1778:      __glibcxx_requires_valid_range(__first2, __last2);
+        -: 1779:
+        -: 1780:      return std::__lexicographical_compare_impl
+        -: 1781:	(__first1, __last1, __first2, __last2,
+        -: 1782:	 __gnu_cxx::__ops::__iter_comp_iter(__comp));
+        -: 1783:    }
+        -: 1784:
+        -: 1785:#if __cpp_lib_three_way_comparison
+        -: 1786:  // Iter points to a contiguous range of unsigned narrow character type
+        -: 1787:  // or std::byte, suitable for comparison by memcmp.
+        -: 1788:  template<typename _Iter>
+        -: 1789:    concept __is_byte_iter = contiguous_iterator<_Iter>
+        -: 1790:      && __is_memcmp_ordered<iter_value_t<_Iter>>::__value;
         -: 1791:
         -: 1792:  // Return a struct with two members, initialized to the smaller of x and y
         -: 1793:  // (or x if they compare equal) and the result of the comparison x <=> y.
@@ -1892,20 +1892,20 @@ call    2 never executed
         -: 1837:      if (!std::__is_constant_evaluated())
         -: 1838:	if constexpr (same_as<_Comp, __detail::_Synth3way>
         -: 1839:		      || same_as<_Comp, compare_three_way>)
-        -: 1840:	  if constexpr (__memcmp_ordered_with<_InputIter1, _InputIter2>)
-        -: 1841:	    {
-        -: 1842:	      const auto [__len, __lencmp] = _GLIBCXX_STD_A::
-        -: 1843:		__min_cmp(__last1 - __first1, __last2 - __first2);
-        -: 1844:	      if (__len)
-        -: 1845:		{
-        -: 1846:		  const auto __blen = __len * sizeof(*__first1);
-        -: 1847:		  const auto __c
-        -: 1848:		    = __builtin_memcmp(&*__first1, &*__first2, __blen) <=> 0;
-        -: 1849:		  if (__c != 0)
-        -: 1850:		    return __c;
-        -: 1851:		}
-        -: 1852:	      return __lencmp;
-        -: 1853:	    }
+        -: 1840:	  if constexpr (__is_byte_iter<_InputIter1>)
+        -: 1841:	    if constexpr (__is_byte_iter<_InputIter2>)
+        -: 1842:	      {
+        -: 1843:		const auto [__len, __lencmp] = _GLIBCXX_STD_A::
+        -: 1844:		  __min_cmp(__last1 - __first1, __last2 - __first2);
+        -: 1845:		if (__len)
+        -: 1846:		  {
+        -: 1847:		    const auto __c
+        -: 1848:		      = __builtin_memcmp(&*__first1, &*__first2, __len) <=> 0;
+        -: 1849:		    if (__c != 0)
+        -: 1850:		      return __c;
+        -: 1851:		  }
+        -: 1852:		return __lencmp;
+        -: 1853:	      }
         -: 1854:
         -: 1855:      while (__first1 != __last1)
         -: 1856:	{

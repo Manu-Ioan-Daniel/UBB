@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/bits/predefined_ops.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcda
         -:    0:Runs:1
         -:    1:// Default predicates for internal use -*- C++ -*-
         -:    2:
@@ -228,7 +228,6 @@ function _ZN9__gnu_cxx5__ops16__iter_comp_iterIZNSt6ranges8__detail16__make_comp
         1:  165-block  0
 call    0 returned 1
 call    1 returned 1
-        1:  165-block  1
 ------------------
 _ZN9__gnu_cxx5__ops16__iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service29sortareDisciplineDupaDenumireEvEUlRK10DisciplinaS8_E_St8identityEEDaRT_RT0_EUlOSB_OSD_E_EENS0_15_Iter_comp_iterISB_EESB_:
 function _ZN9__gnu_cxx5__ops16__iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service29sortareDisciplineDupaDenumireEvEUlRK10DisciplinaS8_E_St8identityEEDaRT_RT0_EUlOSB_OSD_E_EENS0_15_Iter_comp_iterISB_EESB_ called 1 returned 100% blocks executed 100%
@@ -237,7 +236,6 @@ function _ZN9__gnu_cxx5__ops16__iter_comp_iterIZNSt6ranges8__detail16__make_comp
         1:  165-block  0
 call    0 returned 1
 call    1 returned 1
-        1:  165-block  1
 ------------------
 _ZN9__gnu_cxx5__ops16__iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineDupaOreEvEUlRK10DisciplinaS8_E_St8identityEEDaRT_RT0_EUlOSB_OSD_E_EENS0_15_Iter_comp_iterISB_EESB_:
 function _ZN9__gnu_cxx5__ops16__iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineDupaOreEvEUlRK10DisciplinaS8_E_St8identityEEDaRT_RT0_EUlOSB_OSD_E_EENS0_15_Iter_comp_iterISB_EESB_ called 1 returned 100% blocks executed 100%
@@ -246,7 +244,6 @@ function _ZN9__gnu_cxx5__ops16__iter_comp_iterIZNSt6ranges8__detail16__make_comp
         1:  165-block  0
 call    0 returned 1
 call    1 returned 1
-        1:  165-block  1
 ------------------
         -:  166:
         -:  167:  template<typename _Compare>
@@ -444,7 +441,6 @@ function _ZN9__gnu_cxx5__ops15__val_comp_iterIZNSt6ranges8__detail16__make_comp_
       109:  253-block  0
 call    0 returned 109
 call    1 returned 109
-      109:  253-block  1
 ------------------
 _ZN9__gnu_cxx5__ops15__val_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service29sortareDisciplineDupaDenumireEvEUlRK10DisciplinaS8_E_St8identityEEDaRT_RT0_EUlOSB_OSD_E_EENS0_14_Val_comp_iterISB_EENS0_15_Iter_comp_iterISB_EE:
 function _ZN9__gnu_cxx5__ops15__val_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service29sortareDisciplineDupaDenumireEvEUlRK10DisciplinaS8_E_St8identityEEDaRT_RT0_EUlOSB_OSD_E_EENS0_14_Val_comp_iterISB_EENS0_15_Iter_comp_iterISB_EE called 97 returned 100% blocks executed 100%
@@ -453,7 +449,6 @@ function _ZN9__gnu_cxx5__ops15__val_comp_iterIZNSt6ranges8__detail16__make_comp_
        97:  253-block  0
 call    0 returned 97
 call    1 returned 97
-       97:  253-block  1
 ------------------
 _ZN9__gnu_cxx5__ops15__val_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineDupaOreEvEUlRK10DisciplinaS8_E_St8identityEEDaRT_RT0_EUlOSB_OSD_E_EENS0_14_Val_comp_iterISB_EENS0_15_Iter_comp_iterISB_EE:
 function _ZN9__gnu_cxx5__ops15__val_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineDupaOreEvEUlRK10DisciplinaS8_E_St8identityEEDaRT_RT0_EUlOSB_OSD_E_EENS0_14_Val_comp_iterISB_EENS0_15_Iter_comp_iterISB_EE called 98 returned 100% blocks executed 100%
@@ -462,7 +457,6 @@ function _ZN9__gnu_cxx5__ops15__val_comp_iterIZNSt6ranges8__detail16__make_comp_
        98:  253-block  0
 call    0 returned 98
 call    1 returned 98
-       98:  253-block  1
 ------------------
         -:  254:
         -:  255:  template<typename _Value>

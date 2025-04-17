@@ -1,53 +1,75 @@
-        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/service.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcda
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/service.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcda
         -:    0:Runs:1
         -:    1:#pragma once
-        -:    2:#include "Repo.h"
-        -:    3:#include "validator.h"
-        -:    4:class ServiceException final: public std::exception {
-        -:    5:    string msg;
-        -:    6:public:
-        -:    7:    explicit ServiceException(string m):msg{std::move(m)}{
-        -:    8:    }
-        -:    9:    [[nodiscard]] string getMsg() const {
-        -:   10:        return msg;
-        -:   11:    }
-        -:   12:};
-        -:   13:class Service {
-        -:   14:    Repo& repo;
-        -:   15:    Validator& validator;
-        -:   16:public:
-function _ZN7ServiceC2ER4RepoR9Validator called 1 returned 100% blocks executed 100%
-        1:   17:    explicit Service(Repo& repo,Validator& validator): repo(repo), validator(validator) {
-        1:   18:    }
-        -:   19:
-        -:   20:    void addDisciplinaService(const string& denumire, int nrOre, const string& tip, const string& cadruDidactic) const;
-function _ZNK7Service6getAllEv called 8 returned 100% blocks executed 100%
-        8:   21:    [[nodiscard]] vector<Disciplina>& getAll() const {
-        8:   22:        return repo.getAll();
-        8:   22-block  0
-call    0 returned 8
-        -:   23:    }
-        -:   24:    void modificaDisciplinaService(const string& denumire,const string& tip,const string& denumireNoua,const string& tipNou,int nrOreNou,const string& cadruDidacticNou) const;
-        -:   25:    void stergeDisciplinaService(const string& denumire,const string& tip) const;
-        -:   26:
-        -:   27:    [[nodiscard]]vector<Disciplina> filtrareDisciplineDupaOre(int nrOre) const;
-        -:   28:
-        -:   29:    [[nodiscard]]vector<Disciplina> filtrareDisciplineDupaCadruDidactic(const string &cadruDidactic) const;
+        -:    2:#include <map>
+        -:    3:
+        -:    4:#include "Contract.h"
+        -:    5:#include "Repo.h"
+        -:    6:#include "validator.h"
+        -:    7:class ServiceException final: public std::exception {
+        -:    8:    string msg;
+        -:    9:public:
+function _ZN16ServiceExceptionC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 100%
+        2:   10:    explicit ServiceException(string m):msg{std::move(m)}{
+        2:   10-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+        2:   11:    }
+        -:   12:    [[nodiscard]] string getMsg() const {
+        -:   13:        return msg;
+        -:   14:    }
+        -:   15:};
+        -:   16:class Service {
+        -:   17:    Repo& repo;
+        -:   18:    Validator& validator;
+        -:   19:    Contract contract;
+        -:   20:public:
+function _ZN7ServiceC1ER4RepoR9Validator called 0 returned 0% blocks executed 0%
+    #####:   21:    explicit Service(Repo& repo,Validator& validator): repo(repo), validator(validator) {
+    %%%%%:   21-block  0
+call    0 never executed
+    #####:   22:    }
+        -:   23:
+        -:   24:    void addDisciplinaService(const string& denumire, int nrOre, const string& tip, const string& cadruDidactic) const;
+function _ZNK7Service6getAllEv called 14 returned 100% blocks executed 100%
+       14:   25:    [[nodiscard]] vector<Disciplina>& getAll() const {
+       14:   26:        return repo.getAll();
+       14:   26-block  0
+call    0 returned 14
+        -:   27:    }
+        -:   28:    void modificaDisciplinaService(const string& denumire,const string& tip,const string& denumireNoua,const string& tipNou,int nrOreNou,const string& cadruDidacticNou) const;
+        -:   29:    void stergeDisciplinaService(const string& denumire,const string& tip) const;
         -:   30:
-        -:   31:    [[nodiscard]]vector<Disciplina> sortareDisciplineDupaOre() const;
+        -:   31:    [[nodiscard]]vector<Disciplina> filtrareDisciplineDupaOre(int nrOre) const;
         -:   32:
-        -:   33:    [[nodiscard]]vector<Disciplina> sortareDisciplineDupaDenumire() const;
+        -:   33:    [[nodiscard]]vector<Disciplina> filtrareDisciplineDupaCadruDidactic(const string &cadruDidactic) const;
         -:   34:
-        -:   35:    [[nodiscard]]vector<Disciplina> sortareDisciplineDupaTipSiCadruDidactic() const;
+        -:   35:    [[nodiscard]]vector<Disciplina> sortareDisciplineDupaOre() const;
         -:   36:
-        -:   37:    [[nodiscard]] Disciplina cautaDisciplinaService(const string& denumire,const string& tip) const;
-        -:   38:    void adaugaDisciplinaContractService(const string& denumire) const;
-        -:   39:    void golesteContractService() const;
-        -:   40:    void genereazaContractService(int nrDiscipline) const;
-        -:   41:
-        -:   42:
-        -:   43:
-        -:   44:};
-        -:   45:void testService();
+        -:   37:    [[nodiscard]]vector<Disciplina> sortareDisciplineDupaDenumire() const;
+        -:   38:
+        -:   39:    [[nodiscard]]vector<Disciplina> sortareDisciplineDupaTipSiCadruDidactic() const;
+        -:   40:
+        -:   41:    [[nodiscard]] Disciplina cautaDisciplinaService(const string& denumire,const string& tip) const;
+        -:   42:    void adaugaDisciplinaContractService(const string& denumire);
+        -:   43:    void golesteContractService();
+        -:   44:    void genereazaContractService(int nrDiscipline);
+function _ZN7Service11getContractEv called 1 returned 100% blocks executed 100%
+        1:   45:    [[nodiscard]] Contract& getContract() {
+        1:   46:        return contract;
+        1:   46-block  0
+        -:   47:    }
+        -:   48:
+        -:   49:    [[nodiscard]] std::map<string,int> statistici() const;
+function _ZNK7Service15getContractSizeEv called 3 returned 100% blocks executed 100%
+        3:   50:    [[nodiscard]] int getContractSize() const {
+        3:   51:        return contract.getSize();
+        3:   51-block  0
+call    0 returned 3
+        -:   52:    }
+        -:   53:
+        -:   54:};
+        -:   55:void testService();

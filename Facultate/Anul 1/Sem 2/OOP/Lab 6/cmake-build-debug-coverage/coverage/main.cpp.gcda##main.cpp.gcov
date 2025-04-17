@@ -1,6 +1,6 @@
-        -:    0:Source:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/main.cpp
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/main.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/main.cpp.gcda
+        -:    0:Source:C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/main.cpp
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\main.cpp.gcda
         -:    0:Runs:1
         -:    1:
         -:    2:#include "ui.h"
@@ -86,23 +86,44 @@
         -:   82:// }
         -:   83:
         -:   84:
-function main called 1 returned 100% blocks executed 100%
+function main called 1 returned 100% blocks executed 73%
         1:   85:int main() {
         1:   86:    testRepo();
         1:   86-block  0
 call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
         1:   87:    testService();
+        1:   87-block  0
 call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
         1:   88:    testDisciplina();
+        1:   88-block  0
 call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
         -:   89:    //testAll<LinkedList<Disciplina>>();
         -:   90:
-        -:   91:    // Repo r;
-        -:   92:    // Validator v;
-        -:   93:    // Service s{r,v};
-        -:   94:    // const Ui ui{s};
-        -:   95:    // ui.startUi();
+        1:   91:    Repo r;
+        -:   92:    Validator v;
+        1:   93:    Service s{r,v};
+        1:   93-block  0
+call    0 returned 1
+        1:   94:    const Ui ui{s};
+call    0 returned 1
+        1:   95:    ui.startUi();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
         -:   96:	//_CrtDumpMemoryLeaks();
         1:   97:    return 0;
-        -:   98:}
+        1:   98:}
+        1:   98-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   98-block  1
+call    2 never executed
+    $$$$$:   98-block  2
+call    3 never executed
         -:   99:

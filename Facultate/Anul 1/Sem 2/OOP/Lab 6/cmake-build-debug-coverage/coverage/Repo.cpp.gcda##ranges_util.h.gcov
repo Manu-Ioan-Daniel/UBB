@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/bits/ranges_util.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_util.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\Repo.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\Repo.cpp.gcda
         -:    0:Runs:1
         -:    1:// Utilities for representing and manipulating ranges -*- C++ -*-
         -:    2:
@@ -271,568 +271,563 @@
         -:  267:      using __size_type
         -:  268:	= __detail::__make_unsigned_like_t<iter_difference_t<_It>>;
         -:  269:
-        -:  270:      template<typename _Tp, bool = _S_store_size>
+        -:  270:      template<typename, bool = _S_store_size>
         -:  271:	struct _Size
-        -:  272:	{
-        -:  273:	  [[__gnu__::__always_inline__]]
-        -:  274:	  constexpr _Size(_Tp = {}) { }
-        -:  275:	};
-        -:  276:
-        -:  277:      template<typename _Tp>
-        -:  278:	struct _Size<_Tp, true>
-        -:  279:	{
-        -:  280:	  [[__gnu__::__always_inline__]]
-        -:  281:	  constexpr _Size(_Tp __s = {}) : _M_size(__s) { }
+        -:  272:	{ };
+        -:  273:
+        -:  274:      template<typename _Tp>
+        -:  275:	struct _Size<_Tp, true>
+        -:  276:	{ _Tp _M_size; };
+        -:  277:
+        -:  278:      [[no_unique_address]] _Size<__size_type> _M_size = {};
+        -:  279:
+        -:  280:    public:
+        -:  281:      subrange() requires default_initializable<_It> = default;
         -:  282:
-        -:  283:	  _Tp _M_size;
-        -:  284:	};
-        -:  285:
-        -:  286:      [[no_unique_address]] _Size<__size_type> _M_size = {};
-        -:  287:
-        -:  288:    public:
-        -:  289:      subrange() requires default_initializable<_It> = default;
+        -:  283:      constexpr
+        -:  284:      subrange(__detail::__convertible_to_non_slicing<_It> auto __i, _Sent __s)
+        -:  285:      noexcept(is_nothrow_constructible_v<_It, decltype(__i)>
+        -:  286:	       && is_nothrow_constructible_v<_Sent, _Sent&>)
+        -:  287:	requires (!_S_store_size)
+        -:  288:      : _M_begin(std::move(__i)), _M_end(__s)
+        -:  289:      { }
         -:  290:
         -:  291:      constexpr
-        -:  292:      subrange(__detail::__convertible_to_non_slicing<_It> auto __i, _Sent __s)
-        -:  293:      noexcept(is_nothrow_constructible_v<_It, decltype(__i)>
-        -:  294:	       && is_nothrow_constructible_v<_Sent, _Sent&>)
-        -:  295:	requires (!_S_store_size)
-        -:  296:      : _M_begin(std::move(__i)), _M_end(__s)
-        -:  297:      { }
-        -:  298:
-        -:  299:      constexpr
-        -:  300:      subrange(__detail::__convertible_to_non_slicing<_It> auto __i, _Sent __s,
-        -:  301:	       __size_type __n)
-        -:  302:      noexcept(is_nothrow_constructible_v<_It, decltype(__i)>
-        -:  303:	       && is_nothrow_constructible_v<_Sent, _Sent&>)
-        -:  304:	requires (_Kind == subrange_kind::sized)
-        -:  305:      : _M_begin(std::move(__i)), _M_end(__s), _M_size(__n)
-        -:  306:      { }
-        -:  307:
-        -:  308:      template<__detail::__different_from<subrange> _Rng>
-        -:  309:	requires borrowed_range<_Rng>
-        -:  310:	  && __detail::__convertible_to_non_slicing<iterator_t<_Rng>, _It>
-        -:  311:	  && convertible_to<sentinel_t<_Rng>, _Sent>
-        -:  312:	constexpr
-        -:  313:	subrange(_Rng&& __r)
-        -:  314:	noexcept(noexcept(subrange(__r, ranges::size(__r))))
-        -:  315:	requires _S_store_size && sized_range<_Rng>
-        -:  316:	: subrange(__r, ranges::size(__r))
-        -:  317:	{ }
-        -:  318:
-        -:  319:      template<__detail::__different_from<subrange> _Rng>
-        -:  320:	requires borrowed_range<_Rng>
-        -:  321:	  && __detail::__convertible_to_non_slicing<iterator_t<_Rng>, _It>
-        -:  322:	  && convertible_to<sentinel_t<_Rng>, _Sent>
-        -:  323:	constexpr
-        -:  324:	subrange(_Rng&& __r)
-        -:  325:	noexcept(noexcept(subrange(ranges::begin(__r), ranges::end(__r))))
-        -:  326:	requires (!_S_store_size)
-        -:  327:	: subrange(ranges::begin(__r), ranges::end(__r))
-        -:  328:	{ }
-        -:  329:
-        -:  330:      template<borrowed_range _Rng>
-        -:  331:	requires __detail::__convertible_to_non_slicing<iterator_t<_Rng>, _It>
-        -:  332:	  && convertible_to<sentinel_t<_Rng>, _Sent>
-        -:  333:	constexpr
-        -:  334:	subrange(_Rng&& __r, __size_type __n)
-        -:  335:	noexcept(noexcept(subrange(ranges::begin(__r), ranges::end(__r), __n)))
-        -:  336:	requires (_Kind == subrange_kind::sized)
-        -:  337:	: subrange{ranges::begin(__r), ranges::end(__r), __n}
-        -:  338:	{ }
-        -:  339:
-        -:  340:      template<__detail::__different_from<subrange> _PairLike>
-        -:  341:	requires __detail::__pair_like_convertible_from<_PairLike, const _It&,
-        -:  342:							const _Sent&>
-        -:  343:	constexpr
-        -:  344:	operator _PairLike() const
-        -:  345:	{ return _PairLike(_M_begin, _M_end); }
-        -:  346:
-        -:  347:      constexpr _It
-        -:  348:      begin() const requires copyable<_It>
-        -:  349:      { return _M_begin; }
-        -:  350:
-        -:  351:      [[nodiscard]] constexpr _It
-        -:  352:      begin() requires (!copyable<_It>)
-        -:  353:      { return std::move(_M_begin); }
-        -:  354:
-        -:  355:      constexpr _Sent end() const { return _M_end; }
-        -:  356:
-        -:  357:      constexpr bool empty() const { return _M_begin == _M_end; }
-        -:  358:
-        -:  359:      constexpr __size_type
-        -:  360:      size() const requires (_Kind == subrange_kind::sized)
-        -:  361:      {
-        -:  362:	if constexpr (_S_store_size)
-        -:  363:	  return _M_size._M_size;
-        -:  364:	else
-        -:  365:	  return __detail::__to_unsigned_like(_M_end - _M_begin);
-        -:  366:      }
-        -:  367:
-        -:  368:      [[nodiscard]] constexpr subrange
-        -:  369:      next(iter_difference_t<_It> __n = 1) const &
-        -:  370:	requires forward_iterator<_It>
-        -:  371:      {
-        -:  372:	auto __tmp = *this;
-        -:  373:	__tmp.advance(__n);
-        -:  374:	return __tmp;
-        -:  375:      }
-        -:  376:
-        -:  377:      [[nodiscard]] constexpr subrange
-        -:  378:      next(iter_difference_t<_It> __n = 1) &&
-        -:  379:      {
-        -:  380:	advance(__n);
-        -:  381:	return std::move(*this);
-        -:  382:      }
-        -:  383:
-        -:  384:      [[nodiscard]] constexpr subrange
-        -:  385:      prev(iter_difference_t<_It> __n = 1) const
-        -:  386:	requires bidirectional_iterator<_It>
-        -:  387:      {
-        -:  388:	auto __tmp = *this;
-        -:  389:	__tmp.advance(-__n);
-        -:  390:	return __tmp;
-        -:  391:      }
-        -:  392:
-        -:  393:      constexpr subrange&
-        -:  394:      advance(iter_difference_t<_It> __n)
-        -:  395:      {
-        -:  396:	// _GLIBCXX_RESOLVE_LIB_DEFECTS
-        -:  397:	// 3433. subrange::advance(n) has UB when n < 0
-        -:  398:	if constexpr (bidirectional_iterator<_It>)
-        -:  399:	  if (__n < 0)
-        -:  400:	    {
-        -:  401:	      ranges::advance(_M_begin, __n);
-        -:  402:	      if constexpr (_S_store_size)
-        -:  403:		_M_size._M_size += __detail::__to_unsigned_like(-__n);
-        -:  404:	      return *this;
-        -:  405:	    }
-        -:  406:
-        -:  407:	__glibcxx_assert(__n >= 0);
-        -:  408:	auto __d = __n - ranges::advance(_M_begin, __n, _M_end);
-        -:  409:	if constexpr (_S_store_size)
-        -:  410:	  _M_size._M_size -= __detail::__to_unsigned_like(__d);
-        -:  411:	return *this;
-        -:  412:      }
-        -:  413:    };
-        -:  414:
-        -:  415:  template<input_or_output_iterator _It, sentinel_for<_It> _Sent>
-        -:  416:    subrange(_It, _Sent) -> subrange<_It, _Sent>;
+        -:  292:      subrange(__detail::__convertible_to_non_slicing<_It> auto __i, _Sent __s,
+        -:  293:	       __size_type __n)
+        -:  294:      noexcept(is_nothrow_constructible_v<_It, decltype(__i)>
+        -:  295:	       && is_nothrow_constructible_v<_Sent, _Sent&>)
+        -:  296:	requires (_Kind == subrange_kind::sized)
+        -:  297:      : _M_begin(std::move(__i)), _M_end(__s)
+        -:  298:      {
+        -:  299:	if constexpr (_S_store_size)
+        -:  300:	  _M_size._M_size = __n;
+        -:  301:      }
+        -:  302:
+        -:  303:      template<__detail::__different_from<subrange> _Rng>
+        -:  304:	requires borrowed_range<_Rng>
+        -:  305:	  && __detail::__convertible_to_non_slicing<iterator_t<_Rng>, _It>
+        -:  306:	  && convertible_to<sentinel_t<_Rng>, _Sent>
+        -:  307:	constexpr
+        -:  308:	subrange(_Rng&& __r)
+        -:  309:	noexcept(noexcept(subrange(__r, ranges::size(__r))))
+        -:  310:	requires _S_store_size && sized_range<_Rng>
+        -:  311:	: subrange(__r, ranges::size(__r))
+        -:  312:	{ }
+        -:  313:
+        -:  314:      template<__detail::__different_from<subrange> _Rng>
+        -:  315:	requires borrowed_range<_Rng>
+        -:  316:	  && __detail::__convertible_to_non_slicing<iterator_t<_Rng>, _It>
+        -:  317:	  && convertible_to<sentinel_t<_Rng>, _Sent>
+        -:  318:	constexpr
+        -:  319:	subrange(_Rng&& __r)
+        -:  320:	noexcept(noexcept(subrange(ranges::begin(__r), ranges::end(__r))))
+        -:  321:	requires (!_S_store_size)
+        -:  322:	: subrange(ranges::begin(__r), ranges::end(__r))
+        -:  323:	{ }
+        -:  324:
+        -:  325:      template<borrowed_range _Rng>
+        -:  326:	requires __detail::__convertible_to_non_slicing<iterator_t<_Rng>, _It>
+        -:  327:	  && convertible_to<sentinel_t<_Rng>, _Sent>
+        -:  328:	constexpr
+        -:  329:	subrange(_Rng&& __r, __size_type __n)
+        -:  330:	noexcept(noexcept(subrange(ranges::begin(__r), ranges::end(__r), __n)))
+        -:  331:	requires (_Kind == subrange_kind::sized)
+        -:  332:	: subrange{ranges::begin(__r), ranges::end(__r), __n}
+        -:  333:	{ }
+        -:  334:
+        -:  335:      template<__detail::__different_from<subrange> _PairLike>
+        -:  336:	requires __detail::__pair_like_convertible_from<_PairLike, const _It&,
+        -:  337:							const _Sent&>
+        -:  338:	constexpr
+        -:  339:	operator _PairLike() const
+        -:  340:	{ return _PairLike(_M_begin, _M_end); }
+        -:  341:
+        -:  342:      constexpr _It
+        -:  343:      begin() const requires copyable<_It>
+        -:  344:      { return _M_begin; }
+        -:  345:
+        -:  346:      [[nodiscard]] constexpr _It
+        -:  347:      begin() requires (!copyable<_It>)
+        -:  348:      { return std::move(_M_begin); }
+        -:  349:
+        -:  350:      constexpr _Sent end() const { return _M_end; }
+        -:  351:
+        -:  352:      constexpr bool empty() const { return _M_begin == _M_end; }
+        -:  353:
+        -:  354:      constexpr __size_type
+        -:  355:      size() const requires (_Kind == subrange_kind::sized)
+        -:  356:      {
+        -:  357:	if constexpr (_S_store_size)
+        -:  358:	  return _M_size._M_size;
+        -:  359:	else
+        -:  360:	  return __detail::__to_unsigned_like(_M_end - _M_begin);
+        -:  361:      }
+        -:  362:
+        -:  363:      [[nodiscard]] constexpr subrange
+        -:  364:      next(iter_difference_t<_It> __n = 1) const &
+        -:  365:	requires forward_iterator<_It>
+        -:  366:      {
+        -:  367:	auto __tmp = *this;
+        -:  368:	__tmp.advance(__n);
+        -:  369:	return __tmp;
+        -:  370:      }
+        -:  371:
+        -:  372:      [[nodiscard]] constexpr subrange
+        -:  373:      next(iter_difference_t<_It> __n = 1) &&
+        -:  374:      {
+        -:  375:	advance(__n);
+        -:  376:	return std::move(*this);
+        -:  377:      }
+        -:  378:
+        -:  379:      [[nodiscard]] constexpr subrange
+        -:  380:      prev(iter_difference_t<_It> __n = 1) const
+        -:  381:	requires bidirectional_iterator<_It>
+        -:  382:      {
+        -:  383:	auto __tmp = *this;
+        -:  384:	__tmp.advance(-__n);
+        -:  385:	return __tmp;
+        -:  386:      }
+        -:  387:
+        -:  388:      constexpr subrange&
+        -:  389:      advance(iter_difference_t<_It> __n)
+        -:  390:      {
+        -:  391:	// _GLIBCXX_RESOLVE_LIB_DEFECTS
+        -:  392:	// 3433. subrange::advance(n) has UB when n < 0
+        -:  393:	if constexpr (bidirectional_iterator<_It>)
+        -:  394:	  if (__n < 0)
+        -:  395:	    {
+        -:  396:	      ranges::advance(_M_begin, __n);
+        -:  397:	      if constexpr (_S_store_size)
+        -:  398:		_M_size._M_size += __detail::__to_unsigned_like(-__n);
+        -:  399:	      return *this;
+        -:  400:	    }
+        -:  401:
+        -:  402:	__glibcxx_assert(__n >= 0);
+        -:  403:	auto __d = __n - ranges::advance(_M_begin, __n, _M_end);
+        -:  404:	if constexpr (_S_store_size)
+        -:  405:	  _M_size._M_size -= __detail::__to_unsigned_like(__d);
+        -:  406:	return *this;
+        -:  407:      }
+        -:  408:    };
+        -:  409:
+        -:  410:  template<input_or_output_iterator _It, sentinel_for<_It> _Sent>
+        -:  411:    subrange(_It, _Sent) -> subrange<_It, _Sent>;
+        -:  412:
+        -:  413:  template<input_or_output_iterator _It, sentinel_for<_It> _Sent>
+        -:  414:    subrange(_It, _Sent,
+        -:  415:	     __detail::__make_unsigned_like_t<iter_difference_t<_It>>)
+        -:  416:      -> subrange<_It, _Sent, subrange_kind::sized>;
         -:  417:
-        -:  418:  template<input_or_output_iterator _It, sentinel_for<_It> _Sent>
-        -:  419:    subrange(_It, _Sent,
-        -:  420:	     __detail::__make_unsigned_like_t<iter_difference_t<_It>>)
-        -:  421:      -> subrange<_It, _Sent, subrange_kind::sized>;
-        -:  422:
-        -:  423:  template<borrowed_range _Rng>
-        -:  424:    subrange(_Rng&&)
-        -:  425:      -> subrange<iterator_t<_Rng>, sentinel_t<_Rng>,
-        -:  426:		 (sized_range<_Rng>
-        -:  427:		  || sized_sentinel_for<sentinel_t<_Rng>, iterator_t<_Rng>>)
-        -:  428:		 ? subrange_kind::sized : subrange_kind::unsized>;
+        -:  418:  template<borrowed_range _Rng>
+        -:  419:    subrange(_Rng&&)
+        -:  420:      -> subrange<iterator_t<_Rng>, sentinel_t<_Rng>,
+        -:  421:		 (sized_range<_Rng>
+        -:  422:		  || sized_sentinel_for<sentinel_t<_Rng>, iterator_t<_Rng>>)
+        -:  423:		 ? subrange_kind::sized : subrange_kind::unsized>;
+        -:  424:
+        -:  425:  template<borrowed_range _Rng>
+        -:  426:    subrange(_Rng&&,
+        -:  427:	     __detail::__make_unsigned_like_t<range_difference_t<_Rng>>)
+        -:  428:      -> subrange<iterator_t<_Rng>, sentinel_t<_Rng>, subrange_kind::sized>;
         -:  429:
-        -:  430:  template<borrowed_range _Rng>
-        -:  431:    subrange(_Rng&&,
-        -:  432:	     __detail::__make_unsigned_like_t<range_difference_t<_Rng>>)
-        -:  433:      -> subrange<iterator_t<_Rng>, sentinel_t<_Rng>, subrange_kind::sized>;
-        -:  434:
-        -:  435:  template<size_t _Num, class _It, class _Sent, subrange_kind _Kind>
-        -:  436:    requires (_Num < 2)
-        -:  437:    constexpr auto
-        -:  438:    get(const subrange<_It, _Sent, _Kind>& __r)
-        -:  439:    {
-        -:  440:      if constexpr (_Num == 0)
-        -:  441:	return __r.begin();
-        -:  442:      else
-        -:  443:	return __r.end();
-        -:  444:    }
-        -:  445:
-        -:  446:  template<size_t _Num, class _It, class _Sent, subrange_kind _Kind>
-        -:  447:    requires (_Num < 2)
-        -:  448:    constexpr auto
-        -:  449:    get(subrange<_It, _Sent, _Kind>&& __r)
-        -:  450:    {
-        -:  451:      if constexpr (_Num == 0)
-        -:  452:	return __r.begin();
-        -:  453:      else
-        -:  454:	return __r.end();
-        -:  455:    }
-        -:  456:
-        -:  457:  template<typename _It, typename _Sent, subrange_kind _Kind>
-        -:  458:    inline constexpr bool
-        -:  459:      enable_borrowed_range<subrange<_It, _Sent, _Kind>> = true;
-        -:  460:
-        -:  461:  template<range _Range>
-        -:  462:    using borrowed_subrange_t = __conditional_t<borrowed_range<_Range>,
-        -:  463:						subrange<iterator_t<_Range>>,
-        -:  464:						dangling>;
-        -:  465:} // namespace ranges
-        -:  466:
-        -:  467:// The following ranges algorithms are used by <ranges>, and are defined here
-        -:  468:// so that <ranges> can avoid including all of <bits/ranges_algo.h>.
-        -:  469:namespace ranges
-        -:  470:{
-        -:  471:  struct __find_fn
-        -:  472:  {
-        -:  473:    template<input_iterator _Iter, sentinel_for<_Iter> _Sent, typename _Tp,
-        -:  474:	     typename _Proj = identity>
-        -:  475:      requires indirect_binary_predicate<ranges::equal_to,
-        -:  476:					 projected<_Iter, _Proj>, const _Tp*>
-        -:  477:      constexpr _Iter
-        -:  478:      operator()(_Iter __first, _Sent __last,
-        -:  479:		 const _Tp& __value, _Proj __proj = {}) const
-        -:  480:      {
-        -:  481:	while (__first != __last
-        -:  482:	    && !(std::__invoke(__proj, *__first) == __value))
-        -:  483:	  ++__first;
-        -:  484:	return __first;
-        -:  485:      }
-        -:  486:
-        -:  487:    template<input_range _Range, typename _Tp, typename _Proj = identity>
-        -:  488:      requires indirect_binary_predicate<ranges::equal_to,
-        -:  489:					 projected<iterator_t<_Range>, _Proj>,
-        -:  490:					 const _Tp*>
-        -:  491:      constexpr borrowed_iterator_t<_Range>
-        -:  492:      operator()(_Range&& __r, const _Tp& __value, _Proj __proj = {}) const
-        -:  493:      {
-        -:  494:	return (*this)(ranges::begin(__r), ranges::end(__r),
-        -:  495:		       __value, std::move(__proj));
-        -:  496:      }
-        -:  497:  };
-        -:  498:
-        -:  499:  inline constexpr __find_fn find{};
-        -:  500:
-        -:  501:  struct __find_if_fn
-        -:  502:  {
-        -:  503:    template<input_iterator _Iter, sentinel_for<_Iter> _Sent,
-        -:  504:	     typename _Proj = identity,
-        -:  505:	     indirect_unary_predicate<projected<_Iter, _Proj>> _Pred>
-        -:  506:      constexpr _Iter
+        -:  430:  template<size_t _Num, class _It, class _Sent, subrange_kind _Kind>
+        -:  431:    requires (_Num < 2)
+        -:  432:    constexpr auto
+        -:  433:    get(const subrange<_It, _Sent, _Kind>& __r)
+        -:  434:    {
+        -:  435:      if constexpr (_Num == 0)
+        -:  436:	return __r.begin();
+        -:  437:      else
+        -:  438:	return __r.end();
+        -:  439:    }
+        -:  440:
+        -:  441:  template<size_t _Num, class _It, class _Sent, subrange_kind _Kind>
+        -:  442:    requires (_Num < 2)
+        -:  443:    constexpr auto
+        -:  444:    get(subrange<_It, _Sent, _Kind>&& __r)
+        -:  445:    {
+        -:  446:      if constexpr (_Num == 0)
+        -:  447:	return __r.begin();
+        -:  448:      else
+        -:  449:	return __r.end();
+        -:  450:    }
+        -:  451:
+        -:  452:  template<typename _It, typename _Sent, subrange_kind _Kind>
+        -:  453:    inline constexpr bool
+        -:  454:      enable_borrowed_range<subrange<_It, _Sent, _Kind>> = true;
+        -:  455:
+        -:  456:  template<range _Range>
+        -:  457:    using borrowed_subrange_t = __conditional_t<borrowed_range<_Range>,
+        -:  458:						subrange<iterator_t<_Range>>,
+        -:  459:						dangling>;
+        -:  460:} // namespace ranges
+        -:  461:
+        -:  462:// The following ranges algorithms are used by <ranges>, and are defined here
+        -:  463:// so that <ranges> can avoid including all of <bits/ranges_algo.h>.
+        -:  464:namespace ranges
+        -:  465:{
+        -:  466:  struct __find_fn
+        -:  467:  {
+        -:  468:    template<input_iterator _Iter, sentinel_for<_Iter> _Sent, typename _Tp,
+        -:  469:	     typename _Proj = identity>
+        -:  470:      requires indirect_binary_predicate<ranges::equal_to,
+        -:  471:					 projected<_Iter, _Proj>, const _Tp*>
+        -:  472:      constexpr _Iter
+        -:  473:      operator()(_Iter __first, _Sent __last,
+        -:  474:		 const _Tp& __value, _Proj __proj = {}) const
+        -:  475:      {
+        -:  476:	while (__first != __last
+        -:  477:	    && !(std::__invoke(__proj, *__first) == __value))
+        -:  478:	  ++__first;
+        -:  479:	return __first;
+        -:  480:      }
+        -:  481:
+        -:  482:    template<input_range _Range, typename _Tp, typename _Proj = identity>
+        -:  483:      requires indirect_binary_predicate<ranges::equal_to,
+        -:  484:					 projected<iterator_t<_Range>, _Proj>,
+        -:  485:					 const _Tp*>
+        -:  486:      constexpr borrowed_iterator_t<_Range>
+        -:  487:      operator()(_Range&& __r, const _Tp& __value, _Proj __proj = {}) const
+        -:  488:      {
+        -:  489:	return (*this)(ranges::begin(__r), ranges::end(__r),
+        -:  490:		       __value, std::move(__proj));
+        -:  491:      }
+        -:  492:  };
+        -:  493:
+        -:  494:  inline constexpr __find_fn find{};
+        -:  495:
+        -:  496:  struct __find_if_fn
+        -:  497:  {
+        -:  498:    template<input_iterator _Iter, sentinel_for<_Iter> _Sent,
+        -:  499:	     typename _Proj = identity,
+        -:  500:	     indirect_unary_predicate<projected<_Iter, _Proj>> _Pred>
+        -:  501:      constexpr _Iter
 function _ZNKSt6ranges12__find_if_fnclIN9__gnu_cxx17__normal_iteratorIPK10DisciplinaSt6vectorIS4_SaIS4_EEEESA_St8identityZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESK_EUlRS5_E_EET_SN_T0_T2_T1_ called 9 returned 100% blocks executed 100%
-        9:  507:      operator()(_Iter __first, _Sent __last,
-        -:  508:		 _Pred __pred, _Proj __proj = {}) const
-        -:  509:      {
-       10:  510:	while (__first != __last
-        9:  510-block  0
-       10:  510-block  1
+        9:  502:      operator()(_Iter __first, _Sent __last,
+        -:  503:		 _Pred __pred, _Proj __proj = {}) const
+        -:  504:      {
+       10:  505:	while (__first != __last
+        9:  505-block  0
+       10:  505-block  1
 call    0 returned 10
-       10:  511:	    && !(bool)std::__invoke(__pred, std::__invoke(__proj, *__first)))
+       10:  506:	    && !(bool)std::__invoke(__pred, std::__invoke(__proj, *__first)))
 branch  0 taken 8 (fallthrough)
 branch  1 taken 2
-        8:  511-block  0
+        8:  506-block  0
 call    2 returned 8
 call    3 returned 8
 call    4 returned 8
 branch  5 taken 1 (fallthrough)
 branch  6 taken 7
-        1:  511-block  1
-        9:  511-block  2
-       10:  511-block  3
+        1:  506-block  1
+        9:  506-block  2
+       10:  506-block  3
 branch  7 taken 1
 branch  8 taken 9 (fallthrough)
-        1:  512:	  ++__first;
-        1:  512-block  0
+        1:  507:	  ++__first;
+        1:  507-block  0
 call    0 returned 1
-        9:  513:	return __first;
-        9:  513-block  0
-        -:  514:      }
-        -:  515:
-        -:  516:    template<input_range _Range, typename _Proj = identity,
-        -:  517:	     indirect_unary_predicate<projected<iterator_t<_Range>, _Proj>>
-        -:  518:	       _Pred>
-        -:  519:      constexpr borrowed_iterator_t<_Range>
+        9:  508:	return __first;
+        9:  508-block  0
+        -:  509:      }
+        -:  510:
+        -:  511:    template<input_range _Range, typename _Proj = identity,
+        -:  512:	     indirect_unary_predicate<projected<iterator_t<_Range>, _Proj>>
+        -:  513:	       _Pred>
+        -:  514:      constexpr borrowed_iterator_t<_Range>
 function _ZNKSt6ranges12__find_if_fnclIRKSt6vectorI10DisciplinaSaIS3_EESt8identityZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESH_EUlRKS3_E_EENSt13__conditionalIX14borrowed_rangeIT_EEE4typeIDTcl7__begincl7declvalIRSM_EEEENS_8danglingEEEOSM_T1_T0_ called 9 returned 100% blocks executed 100%
-        9:  520:      operator()(_Range&& __r, _Pred __pred, _Proj __proj = {}) const
-        -:  521:      {
-        9:  522:	return (*this)(ranges::begin(__r), ranges::end(__r),
+        9:  515:      operator()(_Range&& __r, _Pred __pred, _Proj __proj = {}) const
+        -:  516:      {
+        9:  517:	return (*this)(ranges::begin(__r), ranges::end(__r),
 call    0 returned 9
 call    1 returned 9
 call    2 returned 9
-       18:  523:		       std::move(__pred), std::move(__proj));
-        9:  523-block  0
+       18:  518:		       std::move(__pred), std::move(__proj));
+        9:  518-block  0
 call    0 returned 9
 call    1 returned 9
-        -:  524:      }
-        -:  525:  };
-        -:  526:
-        -:  527:  inline constexpr __find_if_fn find_if{};
-        -:  528:
-        -:  529:  struct __find_if_not_fn
-        -:  530:  {
-        -:  531:    template<input_iterator _Iter, sentinel_for<_Iter> _Sent,
-        -:  532:	     typename _Proj = identity,
-        -:  533:	     indirect_unary_predicate<projected<_Iter, _Proj>> _Pred>
-        -:  534:      constexpr _Iter
-        -:  535:      operator()(_Iter __first, _Sent __last,
-        -:  536:		 _Pred __pred, _Proj __proj = {}) const
-        -:  537:      {
-        -:  538:	while (__first != __last
-        -:  539:	    && (bool)std::__invoke(__pred, std::__invoke(__proj, *__first)))
-        -:  540:	  ++__first;
-        -:  541:	return __first;
-        -:  542:      }
-        -:  543:
-        -:  544:    template<input_range _Range, typename _Proj = identity,
-        -:  545:	     indirect_unary_predicate<projected<iterator_t<_Range>, _Proj>>
-        -:  546:	       _Pred>
-        -:  547:      constexpr borrowed_iterator_t<_Range>
-        -:  548:      operator()(_Range&& __r, _Pred __pred, _Proj __proj = {}) const
-        -:  549:      {
-        -:  550:	return (*this)(ranges::begin(__r), ranges::end(__r),
-        -:  551:		       std::move(__pred), std::move(__proj));
-        -:  552:      }
-        -:  553:  };
-        -:  554:
-        -:  555:  inline constexpr __find_if_not_fn find_if_not{};
-        -:  556:
-        -:  557:  template<typename _Iter1, typename _Iter2>
-        -:  558:    struct in_in_result
-        -:  559:    {
-        -:  560:      [[no_unique_address]] _Iter1 in1;
-        -:  561:      [[no_unique_address]] _Iter2 in2;
-        -:  562:
-        -:  563:      template<typename _IIter1, typename _IIter2>
-        -:  564:	requires convertible_to<const _Iter1&, _IIter1>
-        -:  565:	  && convertible_to<const _Iter2&, _IIter2>
-        -:  566:	constexpr
-        -:  567:	operator in_in_result<_IIter1, _IIter2>() const &
-        -:  568:	{ return {in1, in2}; }
-        -:  569:
-        -:  570:      template<typename _IIter1, typename _IIter2>
-        -:  571:	requires convertible_to<_Iter1, _IIter1>
-        -:  572:	  && convertible_to<_Iter2, _IIter2>
-        -:  573:	constexpr
-        -:  574:	operator in_in_result<_IIter1, _IIter2>() &&
-        -:  575:	{ return {std::move(in1), std::move(in2)}; }
-        -:  576:    };
-        -:  577:
-        -:  578:  template<typename _Iter1, typename _Iter2>
-        -:  579:    using mismatch_result = in_in_result<_Iter1, _Iter2>;
-        -:  580:
-        -:  581:  struct __mismatch_fn
-        -:  582:  {
-        -:  583:    template<input_iterator _Iter1, sentinel_for<_Iter1> _Sent1,
-        -:  584:	     input_iterator _Iter2, sentinel_for<_Iter2> _Sent2,
-        -:  585:	     typename _Pred = ranges::equal_to,
-        -:  586:	     typename _Proj1 = identity, typename _Proj2 = identity>
-        -:  587:      requires indirectly_comparable<_Iter1, _Iter2, _Pred, _Proj1, _Proj2>
-        -:  588:      constexpr mismatch_result<_Iter1, _Iter2>
-        -:  589:      operator()(_Iter1 __first1, _Sent1 __last1,
-        -:  590:		 _Iter2 __first2, _Sent2 __last2, _Pred __pred = {},
-        -:  591:		 _Proj1 __proj1 = {}, _Proj2 __proj2 = {}) const
-        -:  592:      {
-        -:  593:	while (__first1 != __last1 && __first2 != __last2
-        -:  594:	       && (bool)std::__invoke(__pred,
-        -:  595:				      std::__invoke(__proj1, *__first1),
-        -:  596:				      std::__invoke(__proj2, *__first2)))
-        -:  597:	{
-        -:  598:	  ++__first1;
-        -:  599:	  ++__first2;
-        -:  600:	}
-        -:  601:	return { std::move(__first1), std::move(__first2) };
-        -:  602:      }
-        -:  603:
-        -:  604:    template<input_range _Range1, input_range _Range2,
-        -:  605:	     typename _Pred = ranges::equal_to,
-        -:  606:	     typename _Proj1 = identity, typename _Proj2 = identity>
-        -:  607:      requires indirectly_comparable<iterator_t<_Range1>, iterator_t<_Range2>,
-        -:  608:				     _Pred, _Proj1, _Proj2>
-        -:  609:      constexpr mismatch_result<iterator_t<_Range1>, iterator_t<_Range2>>
-        -:  610:      operator()(_Range1&& __r1, _Range2&& __r2, _Pred __pred = {},
-        -:  611:		 _Proj1 __proj1 = {}, _Proj2 __proj2 = {}) const
-        -:  612:      {
-        -:  613:	return (*this)(ranges::begin(__r1), ranges::end(__r1),
-        -:  614:		       ranges::begin(__r2), ranges::end(__r2),
-        -:  615:		       std::move(__pred),
-        -:  616:		       std::move(__proj1), std::move(__proj2));
-        -:  617:      }
-        -:  618:  };
-        -:  619:
-        -:  620:  inline constexpr __mismatch_fn mismatch{};
-        -:  621:
-        -:  622:  struct __search_fn
-        -:  623:  {
-        -:  624:    template<forward_iterator _Iter1, sentinel_for<_Iter1> _Sent1,
-        -:  625:	     forward_iterator _Iter2, sentinel_for<_Iter2> _Sent2,
-        -:  626:	     typename _Pred = ranges::equal_to,
-        -:  627:	     typename _Proj1 = identity, typename _Proj2 = identity>
-        -:  628:      requires indirectly_comparable<_Iter1, _Iter2, _Pred, _Proj1, _Proj2>
-        -:  629:      constexpr subrange<_Iter1>
-        -:  630:      operator()(_Iter1 __first1, _Sent1 __last1,
-        -:  631:		 _Iter2 __first2, _Sent2 __last2, _Pred __pred = {},
-        -:  632:		 _Proj1 __proj1 = {}, _Proj2 __proj2 = {}) const
-        -:  633:      {
-        -:  634:	if (__first1 == __last1 || __first2 == __last2)
-        -:  635:	  return {__first1, __first1};
-        -:  636:
-        -:  637:	for (;;)
-        -:  638:	  {
-        -:  639:	    for (;;)
-        -:  640:	      {
-        -:  641:		if (__first1 == __last1)
-        -:  642:		  return {__first1, __first1};
-        -:  643:		if (std::__invoke(__pred,
-        -:  644:				  std::__invoke(__proj1, *__first1),
-        -:  645:				  std::__invoke(__proj2, *__first2)))
-        -:  646:		  break;
-        -:  647:		++__first1;
-        -:  648:	      }
-        -:  649:	    auto __cur1 = __first1;
-        -:  650:	    auto __cur2 = __first2;
-        -:  651:	    for (;;)
-        -:  652:	      {
-        -:  653:		if (++__cur2 == __last2)
-        -:  654:		  return {__first1, ++__cur1};
-        -:  655:		if (++__cur1 == __last1)
-        -:  656:		  return {__cur1, __cur1};
-        -:  657:		if (!(bool)std::__invoke(__pred,
-        -:  658:					 std::__invoke(__proj1, *__cur1),
-        -:  659:					 std::__invoke(__proj2, *__cur2)))
-        -:  660:		  {
-        -:  661:		    ++__first1;
-        -:  662:		    break;
-        -:  663:		  }
-        -:  664:	      }
-        -:  665:	  }
-        -:  666:      }
-        -:  667:
-        -:  668:    template<forward_range _Range1, forward_range _Range2,
-        -:  669:	     typename _Pred = ranges::equal_to,
-        -:  670:	     typename _Proj1 = identity, typename _Proj2 = identity>
-        -:  671:      requires indirectly_comparable<iterator_t<_Range1>, iterator_t<_Range2>,
-        -:  672:				     _Pred, _Proj1, _Proj2>
-        -:  673:      constexpr borrowed_subrange_t<_Range1>
-        -:  674:      operator()(_Range1&& __r1, _Range2&& __r2, _Pred __pred = {},
-        -:  675:		 _Proj1 __proj1 = {}, _Proj2 __proj2 = {}) const
-        -:  676:      {
-        -:  677:	return (*this)(ranges::begin(__r1), ranges::end(__r1),
-        -:  678:		       ranges::begin(__r2), ranges::end(__r2),
-        -:  679:		       std::move(__pred),
-        -:  680:		       std::move(__proj1), std::move(__proj2));
-        -:  681:      }
-        -:  682:  };
-        -:  683:
-        -:  684:  inline constexpr __search_fn search{};
-        -:  685:
-        -:  686:  struct __min_fn
-        -:  687:  {
-        -:  688:    template<typename _Tp, typename _Proj = identity,
-        -:  689:	     indirect_strict_weak_order<projected<const _Tp*, _Proj>>
-        -:  690:	       _Comp = ranges::less>
-        -:  691:      constexpr const _Tp&
-        -:  692:      operator()(const _Tp& __a, const _Tp& __b,
-        -:  693:		 _Comp __comp = {}, _Proj __proj = {}) const
-        -:  694:      {
-        -:  695:	if (std::__invoke(__comp,
-        -:  696:			  std::__invoke(__proj, __b),
-        -:  697:			  std::__invoke(__proj, __a)))
-        -:  698:	  return __b;
-        -:  699:	else
-        -:  700:	  return __a;
-        -:  701:      }
-        -:  702:
-        -:  703:    template<input_range _Range, typename _Proj = identity,
-        -:  704:	     indirect_strict_weak_order<projected<iterator_t<_Range>, _Proj>>
-        -:  705:	       _Comp = ranges::less>
-        -:  706:      requires indirectly_copyable_storable<iterator_t<_Range>,
-        -:  707:					    range_value_t<_Range>*>
-        -:  708:      constexpr range_value_t<_Range>
-        -:  709:      operator()(_Range&& __r, _Comp __comp = {}, _Proj __proj = {}) const
-        -:  710:      {
-        -:  711:	auto __first = ranges::begin(__r);
-        -:  712:	auto __last = ranges::end(__r);
-        -:  713:	__glibcxx_assert(__first != __last);
-        -:  714:	auto __result = *__first;
-        -:  715:	while (++__first != __last)
-        -:  716:	  {
-        -:  717:	    auto __tmp = *__first;
-        -:  718:	    if (std::__invoke(__comp,
-        -:  719:			      std::__invoke(__proj, __tmp),
-        -:  720:			      std::__invoke(__proj, __result)))
-        -:  721:	      __result = std::move(__tmp);
-        -:  722:	  }
-        -:  723:	return __result;
-        -:  724:      }
-        -:  725:
-        -:  726:    template<copyable _Tp, typename _Proj = identity,
-        -:  727:	     indirect_strict_weak_order<projected<const _Tp*, _Proj>>
-        -:  728:	       _Comp = ranges::less>
-        -:  729:      constexpr _Tp
-        -:  730:      operator()(initializer_list<_Tp> __r,
-        -:  731:		 _Comp __comp = {}, _Proj __proj = {}) const
-        -:  732:      {
-        -:  733:	return (*this)(ranges::subrange(__r),
-        -:  734:		       std::move(__comp), std::move(__proj));
-        -:  735:      }
-        -:  736:  };
-        -:  737:
-        -:  738:  inline constexpr __min_fn min{};
-        -:  739:
-        -:  740:  struct __adjacent_find_fn
-        -:  741:  {
-        -:  742:    template<forward_iterator _Iter, sentinel_for<_Iter> _Sent,
-        -:  743:	     typename _Proj = identity,
-        -:  744:	     indirect_binary_predicate<projected<_Iter, _Proj>,
-        -:  745:				       projected<_Iter, _Proj>> _Pred
-        -:  746:	       = ranges::equal_to>
-        -:  747:      constexpr _Iter
-        -:  748:      operator()(_Iter __first, _Sent __last,
-        -:  749:		 _Pred __pred = {}, _Proj __proj = {}) const
-        -:  750:      {
-        -:  751:	if (__first == __last)
-        -:  752:	  return __first;
-        -:  753:	auto __next = __first;
-        -:  754:	for (; ++__next != __last; __first = __next)
-        -:  755:	  {
-        -:  756:	    if (std::__invoke(__pred,
-        -:  757:			      std::__invoke(__proj, *__first),
-        -:  758:			      std::__invoke(__proj, *__next)))
-        -:  759:	      return __first;
-        -:  760:	  }
-        -:  761:	return __next;
-        -:  762:      }
-        -:  763:
-        -:  764:    template<forward_range _Range, typename _Proj = identity,
-        -:  765:	     indirect_binary_predicate<
-        -:  766:	       projected<iterator_t<_Range>, _Proj>,
-        -:  767:	       projected<iterator_t<_Range>, _Proj>> _Pred = ranges::equal_to>
-        -:  768:      constexpr borrowed_iterator_t<_Range>
-        -:  769:      operator()(_Range&& __r, _Pred __pred = {}, _Proj __proj = {}) const
-        -:  770:      {
-        -:  771:	return (*this)(ranges::begin(__r), ranges::end(__r),
-        -:  772:		       std::move(__pred), std::move(__proj));
-        -:  773:      }
-        -:  774:  };
-        -:  775:
-        -:  776:  inline constexpr __adjacent_find_fn adjacent_find{};
-        -:  777:
-        -:  778:} // namespace ranges
-        -:  779:
-        -:  780:  using ranges::get;
+        -:  519:      }
+        -:  520:  };
+        -:  521:
+        -:  522:  inline constexpr __find_if_fn find_if{};
+        -:  523:
+        -:  524:  struct __find_if_not_fn
+        -:  525:  {
+        -:  526:    template<input_iterator _Iter, sentinel_for<_Iter> _Sent,
+        -:  527:	     typename _Proj = identity,
+        -:  528:	     indirect_unary_predicate<projected<_Iter, _Proj>> _Pred>
+        -:  529:      constexpr _Iter
+        -:  530:      operator()(_Iter __first, _Sent __last,
+        -:  531:		 _Pred __pred, _Proj __proj = {}) const
+        -:  532:      {
+        -:  533:	while (__first != __last
+        -:  534:	    && (bool)std::__invoke(__pred, std::__invoke(__proj, *__first)))
+        -:  535:	  ++__first;
+        -:  536:	return __first;
+        -:  537:      }
+        -:  538:
+        -:  539:    template<input_range _Range, typename _Proj = identity,
+        -:  540:	     indirect_unary_predicate<projected<iterator_t<_Range>, _Proj>>
+        -:  541:	       _Pred>
+        -:  542:      constexpr borrowed_iterator_t<_Range>
+        -:  543:      operator()(_Range&& __r, _Pred __pred, _Proj __proj = {}) const
+        -:  544:      {
+        -:  545:	return (*this)(ranges::begin(__r), ranges::end(__r),
+        -:  546:		       std::move(__pred), std::move(__proj));
+        -:  547:      }
+        -:  548:  };
+        -:  549:
+        -:  550:  inline constexpr __find_if_not_fn find_if_not{};
+        -:  551:
+        -:  552:  template<typename _Iter1, typename _Iter2>
+        -:  553:    struct in_in_result
+        -:  554:    {
+        -:  555:      [[no_unique_address]] _Iter1 in1;
+        -:  556:      [[no_unique_address]] _Iter2 in2;
+        -:  557:
+        -:  558:      template<typename _IIter1, typename _IIter2>
+        -:  559:	requires convertible_to<const _Iter1&, _IIter1>
+        -:  560:	  && convertible_to<const _Iter2&, _IIter2>
+        -:  561:	constexpr
+        -:  562:	operator in_in_result<_IIter1, _IIter2>() const &
+        -:  563:	{ return {in1, in2}; }
+        -:  564:
+        -:  565:      template<typename _IIter1, typename _IIter2>
+        -:  566:	requires convertible_to<_Iter1, _IIter1>
+        -:  567:	  && convertible_to<_Iter2, _IIter2>
+        -:  568:	constexpr
+        -:  569:	operator in_in_result<_IIter1, _IIter2>() &&
+        -:  570:	{ return {std::move(in1), std::move(in2)}; }
+        -:  571:    };
+        -:  572:
+        -:  573:  template<typename _Iter1, typename _Iter2>
+        -:  574:    using mismatch_result = in_in_result<_Iter1, _Iter2>;
+        -:  575:
+        -:  576:  struct __mismatch_fn
+        -:  577:  {
+        -:  578:    template<input_iterator _Iter1, sentinel_for<_Iter1> _Sent1,
+        -:  579:	     input_iterator _Iter2, sentinel_for<_Iter2> _Sent2,
+        -:  580:	     typename _Pred = ranges::equal_to,
+        -:  581:	     typename _Proj1 = identity, typename _Proj2 = identity>
+        -:  582:      requires indirectly_comparable<_Iter1, _Iter2, _Pred, _Proj1, _Proj2>
+        -:  583:      constexpr mismatch_result<_Iter1, _Iter2>
+        -:  584:      operator()(_Iter1 __first1, _Sent1 __last1,
+        -:  585:		 _Iter2 __first2, _Sent2 __last2, _Pred __pred = {},
+        -:  586:		 _Proj1 __proj1 = {}, _Proj2 __proj2 = {}) const
+        -:  587:      {
+        -:  588:	while (__first1 != __last1 && __first2 != __last2
+        -:  589:	       && (bool)std::__invoke(__pred,
+        -:  590:				      std::__invoke(__proj1, *__first1),
+        -:  591:				      std::__invoke(__proj2, *__first2)))
+        -:  592:	{
+        -:  593:	  ++__first1;
+        -:  594:	  ++__first2;
+        -:  595:	}
+        -:  596:	return { std::move(__first1), std::move(__first2) };
+        -:  597:      }
+        -:  598:
+        -:  599:    template<input_range _Range1, input_range _Range2,
+        -:  600:	     typename _Pred = ranges::equal_to,
+        -:  601:	     typename _Proj1 = identity, typename _Proj2 = identity>
+        -:  602:      requires indirectly_comparable<iterator_t<_Range1>, iterator_t<_Range2>,
+        -:  603:				     _Pred, _Proj1, _Proj2>
+        -:  604:      constexpr mismatch_result<iterator_t<_Range1>, iterator_t<_Range2>>
+        -:  605:      operator()(_Range1&& __r1, _Range2&& __r2, _Pred __pred = {},
+        -:  606:		 _Proj1 __proj1 = {}, _Proj2 __proj2 = {}) const
+        -:  607:      {
+        -:  608:	return (*this)(ranges::begin(__r1), ranges::end(__r1),
+        -:  609:		       ranges::begin(__r2), ranges::end(__r2),
+        -:  610:		       std::move(__pred),
+        -:  611:		       std::move(__proj1), std::move(__proj2));
+        -:  612:      }
+        -:  613:  };
+        -:  614:
+        -:  615:  inline constexpr __mismatch_fn mismatch{};
+        -:  616:
+        -:  617:  struct __search_fn
+        -:  618:  {
+        -:  619:    template<forward_iterator _Iter1, sentinel_for<_Iter1> _Sent1,
+        -:  620:	     forward_iterator _Iter2, sentinel_for<_Iter2> _Sent2,
+        -:  621:	     typename _Pred = ranges::equal_to,
+        -:  622:	     typename _Proj1 = identity, typename _Proj2 = identity>
+        -:  623:      requires indirectly_comparable<_Iter1, _Iter2, _Pred, _Proj1, _Proj2>
+        -:  624:      constexpr subrange<_Iter1>
+        -:  625:      operator()(_Iter1 __first1, _Sent1 __last1,
+        -:  626:		 _Iter2 __first2, _Sent2 __last2, _Pred __pred = {},
+        -:  627:		 _Proj1 __proj1 = {}, _Proj2 __proj2 = {}) const
+        -:  628:      {
+        -:  629:	if (__first1 == __last1 || __first2 == __last2)
+        -:  630:	  return {__first1, __first1};
+        -:  631:
+        -:  632:	for (;;)
+        -:  633:	  {
+        -:  634:	    for (;;)
+        -:  635:	      {
+        -:  636:		if (__first1 == __last1)
+        -:  637:		  return {__first1, __first1};
+        -:  638:		if (std::__invoke(__pred,
+        -:  639:				  std::__invoke(__proj1, *__first1),
+        -:  640:				  std::__invoke(__proj2, *__first2)))
+        -:  641:		  break;
+        -:  642:		++__first1;
+        -:  643:	      }
+        -:  644:	    auto __cur1 = __first1;
+        -:  645:	    auto __cur2 = __first2;
+        -:  646:	    for (;;)
+        -:  647:	      {
+        -:  648:		if (++__cur2 == __last2)
+        -:  649:		  return {__first1, ++__cur1};
+        -:  650:		if (++__cur1 == __last1)
+        -:  651:		  return {__cur1, __cur1};
+        -:  652:		if (!(bool)std::__invoke(__pred,
+        -:  653:					 std::__invoke(__proj1, *__cur1),
+        -:  654:					 std::__invoke(__proj2, *__cur2)))
+        -:  655:		  {
+        -:  656:		    ++__first1;
+        -:  657:		    break;
+        -:  658:		  }
+        -:  659:	      }
+        -:  660:	  }
+        -:  661:      }
+        -:  662:
+        -:  663:    template<forward_range _Range1, forward_range _Range2,
+        -:  664:	     typename _Pred = ranges::equal_to,
+        -:  665:	     typename _Proj1 = identity, typename _Proj2 = identity>
+        -:  666:      requires indirectly_comparable<iterator_t<_Range1>, iterator_t<_Range2>,
+        -:  667:				     _Pred, _Proj1, _Proj2>
+        -:  668:      constexpr borrowed_subrange_t<_Range1>
+        -:  669:      operator()(_Range1&& __r1, _Range2&& __r2, _Pred __pred = {},
+        -:  670:		 _Proj1 __proj1 = {}, _Proj2 __proj2 = {}) const
+        -:  671:      {
+        -:  672:	return (*this)(ranges::begin(__r1), ranges::end(__r1),
+        -:  673:		       ranges::begin(__r2), ranges::end(__r2),
+        -:  674:		       std::move(__pred),
+        -:  675:		       std::move(__proj1), std::move(__proj2));
+        -:  676:      }
+        -:  677:  };
+        -:  678:
+        -:  679:  inline constexpr __search_fn search{};
+        -:  680:
+        -:  681:  struct __min_fn
+        -:  682:  {
+        -:  683:    template<typename _Tp, typename _Proj = identity,
+        -:  684:	     indirect_strict_weak_order<projected<const _Tp*, _Proj>>
+        -:  685:	       _Comp = ranges::less>
+        -:  686:      constexpr const _Tp&
+        -:  687:      operator()(const _Tp& __a, const _Tp& __b,
+        -:  688:		 _Comp __comp = {}, _Proj __proj = {}) const
+        -:  689:      {
+        -:  690:	if (std::__invoke(__comp,
+        -:  691:			  std::__invoke(__proj, __b),
+        -:  692:			  std::__invoke(__proj, __a)))
+        -:  693:	  return __b;
+        -:  694:	else
+        -:  695:	  return __a;
+        -:  696:      }
+        -:  697:
+        -:  698:    template<input_range _Range, typename _Proj = identity,
+        -:  699:	     indirect_strict_weak_order<projected<iterator_t<_Range>, _Proj>>
+        -:  700:	       _Comp = ranges::less>
+        -:  701:      requires indirectly_copyable_storable<iterator_t<_Range>,
+        -:  702:					    range_value_t<_Range>*>
+        -:  703:      constexpr range_value_t<_Range>
+        -:  704:      operator()(_Range&& __r, _Comp __comp = {}, _Proj __proj = {}) const
+        -:  705:      {
+        -:  706:	auto __first = ranges::begin(__r);
+        -:  707:	auto __last = ranges::end(__r);
+        -:  708:	__glibcxx_assert(__first != __last);
+        -:  709:	auto __result = *__first;
+        -:  710:	while (++__first != __last)
+        -:  711:	  {
+        -:  712:	    auto __tmp = *__first;
+        -:  713:	    if (std::__invoke(__comp,
+        -:  714:			      std::__invoke(__proj, __tmp),
+        -:  715:			      std::__invoke(__proj, __result)))
+        -:  716:	      __result = std::move(__tmp);
+        -:  717:	  }
+        -:  718:	return __result;
+        -:  719:      }
+        -:  720:
+        -:  721:    template<copyable _Tp, typename _Proj = identity,
+        -:  722:	     indirect_strict_weak_order<projected<const _Tp*, _Proj>>
+        -:  723:	       _Comp = ranges::less>
+        -:  724:      constexpr _Tp
+        -:  725:      operator()(initializer_list<_Tp> __r,
+        -:  726:		 _Comp __comp = {}, _Proj __proj = {}) const
+        -:  727:      {
+        -:  728:	return (*this)(ranges::subrange(__r),
+        -:  729:		       std::move(__comp), std::move(__proj));
+        -:  730:      }
+        -:  731:  };
+        -:  732:
+        -:  733:  inline constexpr __min_fn min{};
+        -:  734:
+        -:  735:  struct __adjacent_find_fn
+        -:  736:  {
+        -:  737:    template<forward_iterator _Iter, sentinel_for<_Iter> _Sent,
+        -:  738:	     typename _Proj = identity,
+        -:  739:	     indirect_binary_predicate<projected<_Iter, _Proj>,
+        -:  740:				       projected<_Iter, _Proj>> _Pred
+        -:  741:	       = ranges::equal_to>
+        -:  742:      constexpr _Iter
+        -:  743:      operator()(_Iter __first, _Sent __last,
+        -:  744:		 _Pred __pred = {}, _Proj __proj = {}) const
+        -:  745:      {
+        -:  746:	if (__first == __last)
+        -:  747:	  return __first;
+        -:  748:	auto __next = __first;
+        -:  749:	for (; ++__next != __last; __first = __next)
+        -:  750:	  {
+        -:  751:	    if (std::__invoke(__pred,
+        -:  752:			      std::__invoke(__proj, *__first),
+        -:  753:			      std::__invoke(__proj, *__next)))
+        -:  754:	      return __first;
+        -:  755:	  }
+        -:  756:	return __next;
+        -:  757:      }
+        -:  758:
+        -:  759:    template<forward_range _Range, typename _Proj = identity,
+        -:  760:	     indirect_binary_predicate<
+        -:  761:	       projected<iterator_t<_Range>, _Proj>,
+        -:  762:	       projected<iterator_t<_Range>, _Proj>> _Pred = ranges::equal_to>
+        -:  763:      constexpr borrowed_iterator_t<_Range>
+        -:  764:      operator()(_Range&& __r, _Pred __pred = {}, _Proj __proj = {}) const
+        -:  765:      {
+        -:  766:	return (*this)(ranges::begin(__r), ranges::end(__r),
+        -:  767:		       std::move(__pred), std::move(__proj));
+        -:  768:      }
+        -:  769:  };
+        -:  770:
+        -:  771:  inline constexpr __adjacent_find_fn adjacent_find{};
+        -:  772:
+        -:  773:} // namespace ranges
+        -:  774:
+        -:  775:  using ranges::get;
+        -:  776:
+        -:  777:  template<typename _Iter, typename _Sent, ranges::subrange_kind _Kind>
+        -:  778:    struct tuple_size<ranges::subrange<_Iter, _Sent, _Kind>>
+        -:  779:    : integral_constant<size_t, 2>
+        -:  780:    { };
         -:  781:
         -:  782:  template<typename _Iter, typename _Sent, ranges::subrange_kind _Kind>
-        -:  783:    struct tuple_size<ranges::subrange<_Iter, _Sent, _Kind>>
-        -:  784:    : integral_constant<size_t, 2>
-        -:  785:    { };
-        -:  786:
-        -:  787:  template<typename _Iter, typename _Sent, ranges::subrange_kind _Kind>
-        -:  788:    struct tuple_element<0, ranges::subrange<_Iter, _Sent, _Kind>>
-        -:  789:    { using type = _Iter; };
-        -:  790:
-        -:  791:  template<typename _Iter, typename _Sent, ranges::subrange_kind _Kind>
-        -:  792:    struct tuple_element<1, ranges::subrange<_Iter, _Sent, _Kind>>
-        -:  793:    { using type = _Sent; };
-        -:  794:
-        -:  795:  template<typename _Iter, typename _Sent, ranges::subrange_kind _Kind>
-        -:  796:    struct tuple_element<0, const ranges::subrange<_Iter, _Sent, _Kind>>
-        -:  797:    { using type = _Iter; };
-        -:  798:
-        -:  799:  template<typename _Iter, typename _Sent, ranges::subrange_kind _Kind>
-        -:  800:    struct tuple_element<1, const ranges::subrange<_Iter, _Sent, _Kind>>
-        -:  801:    { using type = _Sent; };
-        -:  802:
-        -:  803:_GLIBCXX_END_NAMESPACE_VERSION
-        -:  804:} // namespace std
-        -:  805:#endif // library concepts
-        -:  806:#endif // C++20
-        -:  807:#endif // _RANGES_UTIL_H
+        -:  783:    struct tuple_element<0, ranges::subrange<_Iter, _Sent, _Kind>>
+        -:  784:    { using type = _Iter; };
+        -:  785:
+        -:  786:  template<typename _Iter, typename _Sent, ranges::subrange_kind _Kind>
+        -:  787:    struct tuple_element<1, ranges::subrange<_Iter, _Sent, _Kind>>
+        -:  788:    { using type = _Sent; };
+        -:  789:
+        -:  790:  template<typename _Iter, typename _Sent, ranges::subrange_kind _Kind>
+        -:  791:    struct tuple_element<0, const ranges::subrange<_Iter, _Sent, _Kind>>
+        -:  792:    { using type = _Iter; };
+        -:  793:
+        -:  794:  template<typename _Iter, typename _Sent, ranges::subrange_kind _Kind>
+        -:  795:    struct tuple_element<1, const ranges::subrange<_Iter, _Sent, _Kind>>
+        -:  796:    { using type = _Sent; };
+        -:  797:
+        -:  798:_GLIBCXX_END_NAMESPACE_VERSION
+        -:  799:} // namespace std
+        -:  800:#endif // library concepts
+        -:  801:#endif // C++20
+        -:  802:#endif // _RANGES_UTIL_H

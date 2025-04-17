@@ -1,4 +1,6 @@
 #pragma once
+#include <map>
+
 #include "Contract.h"
 #include "Repo.h"
 #include "validator.h"
@@ -43,6 +45,8 @@ public:
     [[nodiscard]] Contract& getContract() {
         return contract;
     }
+
+    [[nodiscard]] std::map<string,int> statistici() const;
     [[nodiscard]] int getContractSize() const {
         return contract.getSize();
     }

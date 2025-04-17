@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/bits/allocator.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocator.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcda
         -:    0:Runs:1
         -:    1:// Allocators -*- C++ -*-
         -:    2:
@@ -164,7 +164,7 @@
         -:  160:      // 3035. std::allocator's constructors should be constexpr
         -:  161:      __attribute__((__always_inline__))
         -:  162:      _GLIBCXX20_CONSTEXPR
-      368:  163:      allocator() _GLIBCXX_NOTHROW { }
+     978*:  163:      allocator() _GLIBCXX_NOTHROW { }
         1:  163-block  0
         1:  163-block  1
         1:  163-block  2
@@ -196,25 +196,42 @@
         1:  163-block 28
         1:  163-block 29
         1:  163-block 30
-      100:  163-block 31
+        1:  163-block 31
       100:  163-block 32
-        1:  163-block 33
-       10:  163-block 34
-        2:  163-block 35
-        2:  163-block 36
-        2:  163-block 37
-      120:  163-block 38
+      100:  163-block 33
+        1:  163-block 34
+       10:  163-block 35
+        1:  163-block 36
+        1:  163-block 37
+        1:  163-block 38
+        1:  163-block 39
+        1:  163-block 40
+        1:  163-block 41
+      100:  163-block 42
+      100:  163-block 43
+      100:  163-block 44
+      100:  163-block 45
+        1:  163-block 46
+        1:  163-block 47
+        1:  163-block 48
+    %%%%%:  163-block 49
+        2:  163-block 50
+        2:  163-block 51
+        2:  163-block 52
+      320:  163-block 53
         -:  164:
         -:  165:      __attribute__((__always_inline__))
         -:  166:      _GLIBCXX20_CONSTEXPR
         -:  167:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-    #####:  168:      : __allocator_base<_Tp>(__a) { }
+       2*:  168:      : __allocator_base<_Tp>(__a) { }
     %%%%%:  168-block  0
     %%%%%:  168-block  1
-    %%%%%:  168-block  2
-    %%%%%:  168-block  3
+        1:  168-block  2
+        1:  168-block  3
     %%%%%:  168-block  4
     %%%%%:  168-block  5
+    %%%%%:  168-block  6
+    %%%%%:  168-block  7
         -:  169:
         -:  170:#if __cplusplus >= 201103L
         -:  171:      // Avoid implicit deprecation.
@@ -230,63 +247,93 @@
         -:  181:#if __cpp_constexpr_dynamic_alloc
         -:  182:      constexpr
         -:  183:#endif
-     368*:  184:      ~allocator() _GLIBCXX_NOTHROW { }
+     979*:  184:      ~allocator() _GLIBCXX_NOTHROW { }
     $$$$$:  184-block  0
-    %%%%%:  184-block  1
+        1:  184-block  1
     $$$$$:  184-block  2
-    $$$$$:  184-block  3
+    %%%%%:  184-block  3
     $$$$$:  184-block  4
-    $$$$$:  184-block  5
-    $$$$$:  184-block  6
-    $$$$$:  184-block  7
-    $$$$$:  184-block  8
+        1:  184-block  5
+        1:  184-block  6
+        1:  184-block  7
+        1:  184-block  8
         1:  184-block  9
         1:  184-block 10
-        1:  184-block 11
+    $$$$$:  184-block 11
     $$$$$:  184-block 12
     $$$$$:  184-block 13
     $$$$$:  184-block 14
     $$$$$:  184-block 15
     $$$$$:  184-block 16
-    $$$$$:  184-block 17
-    $$$$$:  184-block 18
-    $$$$$:  184-block 19
+        1:  184-block 17
+        1:  184-block 18
+        1:  184-block 19
     $$$$$:  184-block 20
     $$$$$:  184-block 21
     $$$$$:  184-block 22
     $$$$$:  184-block 23
     $$$$$:  184-block 24
-        1:  184-block 25
-        1:  184-block 26
-        1:  184-block 27
-        1:  184-block 28
-        1:  184-block 29
+    $$$$$:  184-block 25
+    $$$$$:  184-block 26
+    $$$$$:  184-block 27
+    $$$$$:  184-block 28
+    $$$$$:  184-block 29
     $$$$$:  184-block 30
     $$$$$:  184-block 31
-        1:  184-block 32
+    $$$$$:  184-block 32
         1:  184-block 33
-    $$$$$:  184-block 34
-    $$$$$:  184-block 35
-    $$$$$:  184-block 36
-    $$$$$:  184-block 37
-        1:  184-block 38
+        1:  184-block 34
+        1:  184-block 35
+        1:  184-block 36
+        1:  184-block 37
+    $$$$$:  184-block 38
     $$$$$:  184-block 39
-    $$$$$:  184-block 40
+        1:  184-block 40
+        1:  184-block 41
+    $$$$$:  184-block 42
+    $$$$$:  184-block 43
+    $$$$$:  184-block 44
+    $$$$$:  184-block 45
+    $$$$$:  184-block 46
+    $$$$$:  184-block 47
+    $$$$$:  184-block 48
+    $$$$$:  184-block 49
+        1:  184-block 50
+        1:  184-block 51
+    $$$$$:  184-block 52
+    $$$$$:  184-block 53
+    $$$$$:  184-block 54
+    $$$$$:  184-block 55
+    $$$$$:  184-block 56
+    $$$$$:  184-block 57
+    $$$$$:  184-block 58
+        1:  184-block 59
+    $$$$$:  184-block 60
+    $$$$$:  184-block 61
         -:  185:
         -:  186:#if __cplusplus > 201703L
         -:  187:      [[nodiscard,__gnu__::__always_inline__]]
         -:  188:      constexpr _Tp*
         -:  189:      allocate(size_t __n)
         -:  190:      {
-    #####:  191:	if (std::__is_constant_evaluated())
+     100*:  191:	if (std::__is_constant_evaluated())
     %%%%%:  191-block  0
 call    0 never executed
 branch  1 never executed (fallthrough)
 branch  2 never executed
+call    3 returned 100
+branch  4 taken 0 (fallthrough)
+branch  5 taken 100
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed
     %%%%%:  191-block  1
-call    3 never executed
-branch  4 never executed (fallthrough)
-branch  5 never executed
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed
         -:  192:	  {
     #####:  193:	    if (__builtin_mul_overflow(__n, sizeof(_Tp), &__n))
     %%%%%:  193-block  0
@@ -295,40 +342,76 @@ branch  1 never executed
     %%%%%:  193-block  1
 branch  2 never executed (fallthrough)
 branch  3 never executed
+    %%%%%:  193-block  2
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    %%%%%:  193-block  3
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    %%%%%:  193-block  4
+branch  8 never executed (fallthrough)
+branch  9 never executed
     #####:  194:	      std::__throw_bad_array_new_length();
     %%%%%:  194-block  0
 call    0 never executed
     %%%%%:  194-block  1
 call    1 never executed
+    %%%%%:  194-block  2
+call    2 never executed
+    %%%%%:  194-block  3
+call    3 never executed
+    %%%%%:  194-block  4
+call    4 never executed
     #####:  195:	    return static_cast<_Tp*>(::operator new(__n));
     %%%%%:  195-block  0
 call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
     %%%%%:  195-block  1
-call    1 never executed
+    %%%%%:  195-block  2
+call    3 never executed
+    %%%%%:  195-block  3
+call    4 never executed
+    %%%%%:  195-block  4
+call    5 never executed
+    %%%%%:  195-block  5
+call    6 never executed
         -:  196:	  }
         -:  197:
-    #####:  198:	return __allocator_base<_Tp>::allocate(__n, 0);
+     100*:  198:	return __allocator_base<_Tp>::allocate(__n, 0);
     %%%%%:  198-block  0
 call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
     %%%%%:  198-block  1
-call    1 never executed
+      100:  198-block  2
+call    3 returned 100
+    %%%%%:  198-block  3
+call    4 never executed
+    %%%%%:  198-block  4
+call    5 never executed
+    %%%%%:  198-block  5
+call    6 never executed
         -:  199:      }
         -:  200:
         -:  201:      [[__gnu__::__always_inline__]]
         -:  202:      constexpr void
         -:  203:      deallocate(_Tp* __p, size_t __n)
         -:  204:      {
-    #####:  205:	if (std::__is_constant_evaluated())
-call    0 never executed
-branch  1 never executed (fallthrough)
-branch  2 never executed
+     100*:  205:	if (std::__is_constant_evaluated())
+call    0 returned 100
+branch  1 taken 0 (fallthrough)
+branch  2 taken 100
 call    3 never executed
 branch  4 never executed (fallthrough)
 branch  5 never executed
-    %%%%%:  205-block  0
 call    6 never executed
 branch  7 never executed (fallthrough)
 branch  8 never executed
+    %%%%%:  205-block  0
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
         -:  206:	  {
     #####:  207:	    ::operator delete(__p);
     %%%%%:  207-block  0
@@ -337,15 +420,19 @@ call    0 never executed
 call    1 never executed
     %%%%%:  207-block  2
 call    2 never executed
+    %%%%%:  207-block  3
+call    3 never executed
     #####:  208:	    return;
         -:  209:	  }
-    #####:  210:	__allocator_base<_Tp>::deallocate(__p, __n);
-    %%%%%:  210-block  0
-call    0 never executed
+     100*:  210:	__allocator_base<_Tp>::deallocate(__p, __n);
+      100:  210-block  0
+call    0 returned 100
     %%%%%:  210-block  1
 call    1 never executed
     %%%%%:  210-block  2
 call    2 never executed
+    %%%%%:  210-block  3
+call    3 never executed
         -:  211:      }
         -:  212:#endif // C++20
         -:  213:
@@ -394,42 +481,39 @@ call    2 never executed
         -:  256:    {
         -:  257:    public:
         -:  258:      typedef _Tp value_type;
-        -:  259:      allocator() { }
-        -:  260:      template<typename _Up> allocator(const allocator<_Up>&) { }
-        -:  261:    };
-        -:  262:
-        -:  263:  template<typename _Tp>
-        -:  264:    class allocator<volatile _Tp>
-        -:  265:    {
-        -:  266:    public:
-        -:  267:      typedef _Tp value_type;
-        -:  268:      allocator() { }
-        -:  269:      template<typename _Up> allocator(const allocator<_Up>&) { }
-        -:  270:    };
-        -:  271:
-        -:  272:  template<typename _Tp>
-        -:  273:    class allocator<const volatile _Tp>
-        -:  274:    {
-        -:  275:    public:
-        -:  276:      typedef _Tp value_type;
-        -:  277:      allocator() { }
-        -:  278:      template<typename _Up> allocator(const allocator<_Up>&) { }
-        -:  279:    };
-        -:  280:  /// @endcond
-        -:  281:
-        -:  282:  /// @} group allocator
-        -:  283:
-        -:  284:  // Inhibit implicit instantiations for required instantiations,
-        -:  285:  // which are defined via explicit instantiations elsewhere.
-        -:  286:#if _GLIBCXX_EXTERN_TEMPLATE
-        -:  287:  extern template class allocator<char>;
-        -:  288:  extern template class allocator<wchar_t>;
-        -:  289:#endif
+        -:  259:      template<typename _Up> allocator(const allocator<_Up>&) { }
+        -:  260:    };
+        -:  261:
+        -:  262:  template<typename _Tp>
+        -:  263:    class allocator<volatile _Tp>
+        -:  264:    {
+        -:  265:    public:
+        -:  266:      typedef _Tp value_type;
+        -:  267:      template<typename _Up> allocator(const allocator<_Up>&) { }
+        -:  268:    };
+        -:  269:
+        -:  270:  template<typename _Tp>
+        -:  271:    class allocator<const volatile _Tp>
+        -:  272:    {
+        -:  273:    public:
+        -:  274:      typedef _Tp value_type;
+        -:  275:      template<typename _Up> allocator(const allocator<_Up>&) { }
+        -:  276:    };
+        -:  277:  /// @endcond
+        -:  278:
+        -:  279:  /// @} group allocator
+        -:  280:
+        -:  281:  // Inhibit implicit instantiations for required instantiations,
+        -:  282:  // which are defined via explicit instantiations elsewhere.
+        -:  283:#if _GLIBCXX_EXTERN_TEMPLATE
+        -:  284:  extern template class allocator<char>;
+        -:  285:  extern template class allocator<wchar_t>;
+        -:  286:#endif
+        -:  287:
+        -:  288:  // Undefine.
+        -:  289:#undef __allocator_base
         -:  290:
-        -:  291:  // Undefine.
-        -:  292:#undef __allocator_base
+        -:  291:_GLIBCXX_END_NAMESPACE_VERSION
+        -:  292:} // namespace std
         -:  293:
-        -:  294:_GLIBCXX_END_NAMESPACE_VERSION
-        -:  295:} // namespace std
-        -:  296:
-        -:  297:#endif
+        -:  294:#endif

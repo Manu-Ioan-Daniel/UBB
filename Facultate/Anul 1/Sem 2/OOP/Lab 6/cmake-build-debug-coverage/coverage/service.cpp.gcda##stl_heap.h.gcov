@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/bits/stl_heap.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_heap.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcda
         -:    0:Runs:1
         -:    1:// Heap implementation -*- C++ -*-
         -:    2:
@@ -150,8 +150,8 @@
     #####:  146:      *(__first + __holeIndex) = _GLIBCXX_MOVE(__value);
     #####:  147:    }
 ------------------
-_ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEElS2_NS0_5__ops14_Iter_comp_valIZNSt6ranges8__detail16__make_comp_projIZNK7Service39sortareDisciplineDupaTipSiCadruDidacticEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_RT2_:
-function _ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEElS2_NS0_5__ops14_Iter_comp_valIZNSt6ranges8__detail16__make_comp_projIZNK7Service39sortareDisciplineDupaTipSiCadruDidacticEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_RT2_ called 0 returned 0% blocks executed 0%
+_ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEExS2_NS0_5__ops14_Iter_comp_valIZNSt6ranges8__detail16__make_comp_projIZNK7Service39sortareDisciplineDupaTipSiCadruDidacticEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_RT2_:
+function _ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEExS2_NS0_5__ops14_Iter_comp_valIZNSt6ranges8__detail16__make_comp_projIZNK7Service39sortareDisciplineDupaTipSiCadruDidacticEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_RT2_ called 0 returned 0% blocks executed 0%
     #####:  135:    __push_heap(_RandomAccessIterator __first,
         -:  136:		_Distance __holeIndex, _Distance __topIndex, _Tp __value,
         -:  137:		_Compare& __comp)
@@ -201,8 +201,8 @@ branch  5 never executed (throw)
     #####:  147:    }
     %%%%%:  147-block  0
 ------------------
-_ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEElS2_NS0_5__ops14_Iter_comp_valIZNSt6ranges8__detail16__make_comp_projIZNK7Service29sortareDisciplineDupaDenumireEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_RT2_:
-function _ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEElS2_NS0_5__ops14_Iter_comp_valIZNSt6ranges8__detail16__make_comp_projIZNK7Service29sortareDisciplineDupaDenumireEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_RT2_ called 0 returned 0% blocks executed 0%
+_ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEExS2_NS0_5__ops14_Iter_comp_valIZNSt6ranges8__detail16__make_comp_projIZNK7Service29sortareDisciplineDupaDenumireEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_RT2_:
+function _ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEExS2_NS0_5__ops14_Iter_comp_valIZNSt6ranges8__detail16__make_comp_projIZNK7Service29sortareDisciplineDupaDenumireEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_RT2_ called 0 returned 0% blocks executed 0%
     #####:  135:    __push_heap(_RandomAccessIterator __first,
         -:  136:		_Distance __holeIndex, _Distance __topIndex, _Tp __value,
         -:  137:		_Compare& __comp)
@@ -252,8 +252,8 @@ branch  5 never executed (throw)
     #####:  147:    }
     %%%%%:  147-block  0
 ------------------
-_ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEElS2_NS0_5__ops14_Iter_comp_valIZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineDupaOreEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_RT2_:
-function _ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEElS2_NS0_5__ops14_Iter_comp_valIZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineDupaOreEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_RT2_ called 0 returned 0% blocks executed 0%
+_ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEExS2_NS0_5__ops14_Iter_comp_valIZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineDupaOreEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_RT2_:
+function _ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEExS2_NS0_5__ops14_Iter_comp_valIZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineDupaOreEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_RT2_ called 0 returned 0% blocks executed 0%
     #####:  135:    __push_heap(_RandomAccessIterator __first,
         -:  136:		_Distance __holeIndex, _Distance __topIndex, _Tp __value,
         -:  137:		_Compare& __comp)
@@ -406,8 +406,8 @@ branch  5 never executed (throw)
     #####:  248:		       _GLIBCXX_MOVE(__value), __cmp);
     #####:  249:    }
 ------------------
-_ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEElS2_NS0_5__ops15_Iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service39sortareDisciplineDupaTipSiCadruDidacticEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_T2_:
-function _ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEElS2_NS0_5__ops15_Iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service39sortareDisciplineDupaTipSiCadruDidacticEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_T2_ called 0 returned 0% blocks executed 0%
+_ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEExS2_NS0_5__ops15_Iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service39sortareDisciplineDupaTipSiCadruDidacticEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_T2_:
+function _ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEExS2_NS0_5__ops15_Iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service39sortareDisciplineDupaTipSiCadruDidacticEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_T2_ called 0 returned 0% blocks executed 0%
     #####:  224:    __adjust_heap(_RandomAccessIterator __first, _Distance __holeIndex,
         -:  225:		  _Distance __len, _Tp __value, _Compare __comp)
         -:  226:    {
@@ -495,8 +495,8 @@ call    7 never executed
 call    0 never executed
     #####:  249:    }
 ------------------
-_ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEElS2_NS0_5__ops15_Iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service29sortareDisciplineDupaDenumireEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_T2_:
-function _ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEElS2_NS0_5__ops15_Iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service29sortareDisciplineDupaDenumireEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_T2_ called 0 returned 0% blocks executed 0%
+_ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEExS2_NS0_5__ops15_Iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service29sortareDisciplineDupaDenumireEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_T2_:
+function _ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEExS2_NS0_5__ops15_Iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service29sortareDisciplineDupaDenumireEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_T2_ called 0 returned 0% blocks executed 0%
     #####:  224:    __adjust_heap(_RandomAccessIterator __first, _Distance __holeIndex,
         -:  225:		  _Distance __len, _Tp __value, _Compare __comp)
         -:  226:    {
@@ -584,8 +584,8 @@ call    7 never executed
 call    0 never executed
     #####:  249:    }
 ------------------
-_ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEElS2_NS0_5__ops15_Iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineDupaOreEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_T2_:
-function _ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEElS2_NS0_5__ops15_Iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineDupaOreEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_T2_ called 0 returned 0% blocks executed 0%
+_ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEExS2_NS0_5__ops15_Iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineDupaOreEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_T2_:
+function _ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEExS2_NS0_5__ops15_Iter_comp_iterIZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineDupaOreEvEUlRKS2_SF_E_St8identityEEDaRT_RT0_EUlOSI_OSK_E_EEEvSI_SK_SK_T1_T2_ called 0 returned 0% blocks executed 0%
     #####:  224:    __adjust_heap(_RandomAccessIterator __first, _Distance __holeIndex,
         -:  225:		  _Distance __len, _Tp __value, _Compare __comp)
         -:  226:    {

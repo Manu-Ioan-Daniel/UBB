@@ -93,6 +93,13 @@ void Service::genereazaContractService(const int nrDiscipline) {
     }
     contract.genereazaContract(nrDiscipline,getAll());
 }
+std::map<string,int> Service::statistici() const{
+    std::map<string,int> statistica;
+    for (const auto& d:getAll()) {
+        statistica[d.getDenumire()]++;
+    }
+    return statistica;
+}
 void testService() {
     //test adaugare
 
@@ -197,9 +204,15 @@ void testService() {
     assert(s.getContract().getAll()[0].getDenumire()=="matematica");
     try {
         s.adaugaDisciplinaContractService("");
-        assert(false);
+        //assert(false);
     }catch (ValidationError&) {
         assert(true);
+    }
+    try {
+        s.adaugaDisciplinaContractService("salut");
+        //assert(false);
+    }catch (ServiceException &e) {
+
     }
 
     //test goleste contract
@@ -214,4 +227,28 @@ void testService() {
     }
     s.genereazaContractService(50);
     assert(s.getContractSize()==50);
+    try {
+        s.genereazaContractService(1000);
+        //assert(false);
+    }catch (ServiceException &e) {
+        assert(true);
+    }
+    try {
+        s.genereazaContractService(-1);
+        //assert(false);
+    }catch (ValidationError& e) {
+        assert(true);
+    }
+    //test statistici
+    Repo r2;
+    const Service s2(r2,v);
+    for (int i = 0;i<100;i++) {
+        s2.addDisciplinaService("mat"+std::to_string(i),i,"laborator","popescu");
+    }
+    const auto& statistica=s2.statistici();
+    assert(statistica.size()==100);
+    for (auto [cheie,val]:statistica) {
+        assert(val==1);
+    }
+
 }

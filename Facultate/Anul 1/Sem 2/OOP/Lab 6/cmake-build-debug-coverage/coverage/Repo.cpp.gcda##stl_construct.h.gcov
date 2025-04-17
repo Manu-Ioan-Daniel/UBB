@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/bits/stl_construct.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/Repo.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_construct.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\Repo.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\Repo.cpp.gcda
         -:    0:Runs:1
         -:    1:// nonstandard construct and destroy functions -*- C++ -*-
         -:    2:
@@ -81,8 +81,8 @@
         -:   77:#if __cplusplus >= 201703L
         -:   78:  template <typename _Tp>
         -:   79:    _GLIBCXX20_CONSTEXPR inline void
-function _ZSt10destroy_atI10DisciplinaEvPT_ called 1090 returned 100% blocks executed 100%
-     1090:   80:    destroy_at(_Tp* __location)
+function _ZSt10destroy_atI10DisciplinaEvPT_ called 0 returned 0% blocks executed 0%
+    #####:   80:    destroy_at(_Tp* __location)
         -:   81:    {
         -:   82:      if constexpr (__cplusplus > 201703L && is_array_v<_Tp>)
         -:   83:	{
@@ -90,33 +90,33 @@ function _ZSt10destroy_atI10DisciplinaEvPT_ called 1090 returned 100% blocks exe
         -:   85:	    std::destroy_at(std::__addressof(__x));
         -:   86:	}
         -:   87:      else
-     1090:   88:	__location->~_Tp();
-     1090:   88-block  0
-call    0 returned 1090
-     1090:   89:    }
+    #####:   88:	__location->~_Tp();
+    %%%%%:   88-block  0
+call    0 never executed
+    #####:   89:    }
         -:   90:
         -:   91:#if __cplusplus >= 202002L
         -:   92:  template<typename _Tp, typename... _Args>
         -:   93:    constexpr auto
-     262*:   94:    construct_at(_Tp* __location, _Args&&... __args)
+     514*:   94:    construct_at(_Tp* __location, _Args&&... __args)
         -:   95:    noexcept(noexcept(::new((void*)0) _Tp(std::declval<_Args>()...)))
         -:   96:    -> decltype(::new((void*)0) _Tp(std::declval<_Args>()...))
-     262*:   97:    { return ::new((void*)__location) _Tp(std::forward<_Args>(__args)...); }
+     514*:   97:    { return ::new((void*)__location) _Tp(std::forward<_Args>(__args)...); }
 ------------------
 _ZSt12construct_atI10DisciplinaJRKS0_EEDTgsnwcvPvLi0E_T_pispcl7declvalIT0_EEEEPS4_DpOS5_:
-function _ZSt12construct_atI10DisciplinaJRKS0_EEDTgsnwcvPvLi0E_T_pispcl7declvalIT0_EEEEPS4_DpOS5_ called 262 returned 100% blocks executed 75%
-      262:   94:    construct_at(_Tp* __location, _Args&&... __args)
+function _ZSt12construct_atI10DisciplinaJRKS0_EEDTgsnwcvPvLi0E_T_pispcl7declvalIT0_EEEEPS4_DpOS5_ called 514 returned 100% blocks executed 75%
+      514:   94:    construct_at(_Tp* __location, _Args&&... __args)
         -:   95:    noexcept(noexcept(::new((void*)0) _Tp(std::declval<_Args>()...)))
         -:   96:    -> decltype(::new((void*)0) _Tp(std::declval<_Args>()...))
-      262:   97:    { return ::new((void*)__location) _Tp(std::forward<_Args>(__args)...); }
-      262:   97-block  0
-call    0 returned 262
-call    1 returned 262
-call    2 returned 262
-branch  3 taken 262 (fallthrough)
+      514:   97:    { return ::new((void*)__location) _Tp(std::forward<_Args>(__args)...); }
+      514:   97-block  0
+call    0 returned 514
+call    1 returned 514
+call    2 returned 514
+branch  3 taken 514 (fallthrough)
 branch  4 taken 0 (throw)
-      262:   97-block  1
-      262:   97-block  2
+      514:   97-block  1
+      514:   97-block  2
     $$$$$:   97-block  3
 branch  5 never executed (fallthrough)
 branch  6 never executed
@@ -144,15 +144,15 @@ call    1 never executed
         -:  106:  template<typename _Tp, typename... _Args>
         -:  107:    _GLIBCXX20_CONSTEXPR
         -:  108:    inline void
-function _ZSt10_ConstructI10DisciplinaJRKS0_EEvPT_DpOT0_ called 828 returned 100% blocks executed 62%
-      828:  109:    _Construct(_Tp* __p, _Args&&... __args)
+function _ZSt10_ConstructI10DisciplinaJRKS0_EEvPT_DpOT0_ called 1357 returned 100% blocks executed 62%
+     1357:  109:    _Construct(_Tp* __p, _Args&&... __args)
         -:  110:    {
         -:  111:#if __cplusplus >= 202002L
-      828:  112:      if (std::__is_constant_evaluated())
-      828:  112-block  0
-call    0 returned 828
+     1357:  112:      if (std::__is_constant_evaluated())
+     1357:  112-block  0
+call    0 returned 1357
 branch  1 taken 0 (fallthrough)
-branch  2 taken 828
+branch  2 taken 1357
         -:  113:	{
         -:  114:	  // Allow std::_Construct to be used in constant expressions.
     #####:  115:	  std::construct_at(__p, std::forward<_Args>(__args)...);
@@ -162,14 +162,14 @@ call    1 never executed
     #####:  116:	  return;
         -:  117:	}
         -:  118:#endif
-      828:  119:      ::new((void*)__p) _Tp(std::forward<_Args>(__args)...);
-      828:  119-block  0
-call    0 returned 828
-call    1 returned 828
-call    2 returned 828
-branch  3 taken 828 (fallthrough)
+     1357:  119:      ::new((void*)__p) _Tp(std::forward<_Args>(__args)...);
+     1357:  119-block  0
+call    0 returned 1357
+call    1 returned 1357
+call    2 returned 1357
+branch  3 taken 1357 (fallthrough)
 branch  4 taken 0 (throw)
-      828:  119-block  1
+     1357:  119-block  1
     $$$$$:  119-block  2
 branch  5 never executed (fallthrough)
 branch  6 never executed
@@ -201,36 +201,36 @@ call    7 never executed
         -:  143:   */
         -:  144:  template<typename _Tp>
         -:  145:    _GLIBCXX14_CONSTEXPR inline void
-function _ZSt8_DestroyI10DisciplinaEvPT_ called 1090 returned 100% blocks executed 100%
-     1090:  146:    _Destroy(_Tp* __pointer)
+function _ZSt8_DestroyI10DisciplinaEvPT_ called 0 returned 0% blocks executed 0%
+    #####:  146:    _Destroy(_Tp* __pointer)
         -:  147:    {
         -:  148:#if __cplusplus > 201703L
-     1090:  149:      std::destroy_at(__pointer);
-     1090:  149-block  0
-call    0 returned 1090
+    #####:  149:      std::destroy_at(__pointer);
+    %%%%%:  149-block  0
+call    0 never executed
         -:  150:#else
         -:  151:      __pointer->~_Tp();
         -:  152:#endif
-     1090:  153:    }
+    #####:  153:    }
         -:  154:
         -:  155:  template<bool>
         -:  156:    struct _Destroy_aux
         -:  157:    {
         -:  158:      template<typename _ForwardIterator>
         -:  159:	static _GLIBCXX20_CONSTEXPR void
-function _ZNSt12_Destroy_auxILb0EE9__destroyIP10DisciplinaEEvT_S4_ called 38 returned 100% blocks executed 100%
-       38:  160:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
+function _ZNSt12_Destroy_auxILb0EE9__destroyIP10DisciplinaEEvT_S4_ called 0 returned 0% blocks executed 0%
+    #####:  160:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  161:	{
-     1128:  162:	  for (; __first != __last; ++__first)
-       38:  162-block  0
-     1128:  162-block  1
-branch  0 taken 1090
-branch  1 taken 38 (fallthrough)
-     1090:  163:	    std::_Destroy(std::__addressof(*__first));
-     1090:  163-block  0
-call    0 returned 1090
-call    1 returned 1090
-       38:  164:	}
+    #####:  162:	  for (; __first != __last; ++__first)
+    %%%%%:  162-block  0
+    %%%%%:  162-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:  163:	    std::_Destroy(std::__addressof(*__first));
+    %%%%%:  163-block  0
+call    0 never executed
+call    1 never executed
+    #####:  164:	}
         -:  165:    };
         -:  166:
         -:  167:  template<>
@@ -248,8 +248,8 @@ call    1 returned 1090
         -:  179:   */
         -:  180:  template<typename _ForwardIterator>
         -:  181:    _GLIBCXX20_CONSTEXPR inline void
-function _ZSt8_DestroyIP10DisciplinaEvT_S2_ called 38 returned 100% blocks executed 67%
-       38:  182:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
+function _ZSt8_DestroyIP10DisciplinaEvT_S2_ called 0 returned 0% blocks executed 0%
+    #####:  182:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  183:    {
         -:  184:      typedef typename iterator_traits<_ForwardIterator>::value_type
         -:  185:                       _Value_type;
@@ -259,19 +259,19 @@ function _ZSt8_DestroyIP10DisciplinaEvT_S2_ called 38 returned 100% blocks execu
         -:  189:		    "value type is destructible");
         -:  190:#endif
         -:  191:#if __cplusplus >= 202002L
-       38:  192:      if (std::__is_constant_evaluated())
-       38:  192-block  0
-call    0 returned 38
-branch  1 taken 0 (fallthrough)
-branch  2 taken 38
-    #####:  193:	return std::_Destroy_aux<false>::__destroy(__first, __last);
+    #####:  192:      if (std::__is_constant_evaluated())
+    %%%%%:  192-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  193:	return _Destroy_aux<false>::__destroy(__first, __last);
     %%%%%:  193-block  0
 call    0 never executed
         -:  194:#endif
         -:  195:      std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
-       38:  196:	__destroy(__first, __last);
-       38:  196-block  0
-call    0 returned 38
+    #####:  196:	__destroy(__first, __last);
+    %%%%%:  196-block  0
+call    0 never executed
         -:  197:    }
         -:  198:
         -:  199:  template<bool>
@@ -317,7 +317,7 @@ call    0 returned 38
         -:  239:#endif
         -:  240:#if __cplusplus >= 202002L
         -:  241:      if (std::__is_constant_evaluated())
-        -:  242:	return std::_Destroy_n_aux<false>::__destroy_n(__first, __count);
+        -:  242:	return _Destroy_n_aux<false>::__destroy_n(__first, __count);
         -:  243:#endif
         -:  244:      return std::_Destroy_n_aux<__has_trivial_destructor(_Value_type)>::
         -:  245:	__destroy_n(__first, __count);

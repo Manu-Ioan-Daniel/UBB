@@ -1,6 +1,6 @@
-        -:    0:Source:/usr/include/c++/13/bits/ranges_algo.h
-        -:    0:Graph:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcno
-        -:    0:Data:/mnt/c/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/CMakeFiles/Lab_6.dir/service.cpp.gcda
+        -:    0:Source:D:/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algo.h
+        -:    0:Graph:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcno
+        -:    0:Data:C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug-coverage\CMakeFiles\Lab_6.dir\service.cpp.gcda
         -:    0:Runs:1
         -:    1:// Core algorithmic facilities -*- C++ -*-
         -:    2:
@@ -1578,7 +1578,7 @@ function _ZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineD
         -: 1513:	&& indirectly_copyable<_Iter, _Out>
         -: 1514:	&& uniform_random_bit_generator<remove_reference_t<_Gen>>
         -: 1515:      _Out
-        -: 1516:      operator()(_Iter __first, _Sent __last, _Out __out,
+        -: 1516:      operator()(_Iter __first, _Sent __last, _Out ___out,
         -: 1517:		 iter_difference_t<_Iter> __n, _Gen&& __g) const
         -: 1518:      {
         -: 1519:	if constexpr (forward_iterator<_Iter>)
@@ -1587,7 +1587,7 @@ function _ZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineD
         -: 1522:	    // which may take linear time.
         -: 1523:	    auto __lasti = ranges::next(__first, __last);
         -: 1524:	    return _GLIBCXX_STD_A::
-        -: 1525:	      sample(std::move(__first), std::move(__lasti), std::move(__out),
+        -: 1525:	      sample(std::move(__first), std::move(__lasti), std::move(___out),
         -: 1526:		     __n, std::forward<_Gen>(__g));
         -: 1527:	  }
         -: 1528:	else
@@ -1599,7 +1599,7 @@ function _ZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineD
         -: 1534:	    iter_difference_t<_Iter> __sample_sz = 0;
         -: 1535:	    while (__first != __last && __sample_sz != __n)
         -: 1536:	      {
-        -: 1537:		__out[__sample_sz++] = *__first;
+        -: 1537:		___out[__sample_sz++] = *__first;
         -: 1538:		++__first;
         -: 1539:	      }
         -: 1540:	    for (auto __pop_sz = __sample_sz; __first != __last;
@@ -1607,9 +1607,9 @@ function _ZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineD
         -: 1542:	      {
         -: 1543:		const auto __k = __d(__g, __param_type{0, __pop_sz});
         -: 1544:		if (__k < __n)
-        -: 1545:		  __out[__k] = *__first;
+        -: 1545:		  ___out[__k] = *__first;
         -: 1546:	      }
-        -: 1547:	    return __out + __sample_sz;
+        -: 1547:	    return ___out + __sample_sz;
         -: 1548:	  }
         -: 1549:      }
         -: 1550:
@@ -1618,11 +1618,11 @@ function _ZNSt6ranges8__detail16__make_comp_projIZNK7Service24sortareDisciplineD
         -: 1553:	&& indirectly_copyable<iterator_t<_Range>, _Out>
         -: 1554:	&& uniform_random_bit_generator<remove_reference_t<_Gen>>
         -: 1555:      _Out
-        -: 1556:      operator()(_Range&& __r, _Out __out,
+        -: 1556:      operator()(_Range&& __r, _Out ___out,
         -: 1557:		 range_difference_t<_Range> __n, _Gen&& __g) const
         -: 1558:      {
         -: 1559:	return (*this)(ranges::begin(__r), ranges::end(__r),
-        -: 1560:		       std::move(__out), __n,
+        -: 1560:		       std::move(___out), __n,
         -: 1561:		       std::forward<_Gen>(__g));
         -: 1562:      }
         -: 1563:  };
@@ -2069,11 +2069,11 @@ branch  4 taken 0 (throw)
         -: 1934:				      projected<iterator_t<_Range2>, _Proj2>>
         -: 1935:      constexpr partial_sort_copy_result<borrowed_iterator_t<_Range1>,
         -: 1936:					 borrowed_iterator_t<_Range2>>
-        -: 1937:      operator()(_Range1&& __r, _Range2&& __out, _Comp __comp = {},
+        -: 1937:      operator()(_Range1&& __r, _Range2&& ___out, _Comp __comp = {},
         -: 1938:		 _Proj1 __proj1 = {}, _Proj2 __proj2 = {}) const
         -: 1939:      {
         -: 1940:	return (*this)(ranges::begin(__r), ranges::end(__r),
-        -: 1941:		       ranges::begin(__out), ranges::end(__out),
+        -: 1941:		       ranges::begin(___out), ranges::end(___out),
         -: 1942:		       std::move(__comp),
         -: 1943:		       std::move(__proj1), std::move(__proj2));
         -: 1944:      }
