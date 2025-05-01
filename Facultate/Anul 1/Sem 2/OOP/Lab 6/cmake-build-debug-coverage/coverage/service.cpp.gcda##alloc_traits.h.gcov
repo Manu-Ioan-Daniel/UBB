@@ -483,17 +483,19 @@
         -:  479:      [[__nodiscard__,__gnu__::__always_inline__]]
         -:  480:      static _GLIBCXX20_CONSTEXPR pointer
         -:  481:      allocate(allocator_type& __a, size_type __n)
-     100*:  482:      { return __a.allocate(__n); }
+     117*:  482:      { return __a.allocate(__n); }
     %%%%%:  482-block  0
     %%%%%:  482-block  1
       100:  482-block  2
       100:  482-block  3
-    %%%%%:  482-block  4
-    %%%%%:  482-block  5
+       17:  482-block  4
+       17:  482-block  5
     %%%%%:  482-block  6
     %%%%%:  482-block  7
     %%%%%:  482-block  8
     %%%%%:  482-block  9
+    %%%%%:  482-block 10
+    %%%%%:  482-block 11
         -:  483:
         -:  484:      /**
         -:  485:       *  @brief  Allocate memory.
@@ -531,6 +533,7 @@
       100:  516-block  0
     %%%%%:  516-block  1
     %%%%%:  516-block  2
+    %%%%%:  516-block  3
         -:  517:
         -:  518:      /**
         -:  519:       *  @brief  Construct an object of type `_Up`
@@ -553,22 +556,28 @@
         -:  536:#if __cplusplus <= 201703L
         -:  537:	  __a.construct(__p, std::forward<_Args>(__args)...);
         -:  538:#else
-     100*:  539:	  std::construct_at(__p, std::forward<_Args>(__args)...);
-call    0 returned 100
-call    1 returned 100
+     898*:  539:	  std::construct_at(__p, std::forward<_Args>(__args)...);
+call    0 returned 382
+call    1 returned 382
 call    2 returned 100
 call    3 returned 100
-branch  4 taken 100 (fallthrough)
-branch  5 taken 0 (throw)
-call    6 never executed
-call    7 never executed
-branch  8 never executed (fallthrough)
-branch  9 never executed (throw)
-    %%%%%:  539-block  0
+call    4 returned 100
+call    5 returned 100
+branch  6 taken 100 (fallthrough)
+branch  7 taken 0 (throw)
+call    8 returned 17
+call    9 returned 17
 call   10 never executed
 call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+call   14 returned 399
+call   15 returned 399
+    %%%%%:  539-block  0
+call   16 never executed
+call   17 never executed
         -:  540:#endif
-     100*:  541:	}
+     898*:  541:	}
       100:  541-block  0
     %%%%%:  541-block  1
         -:  542:
@@ -588,12 +597,15 @@ call   11 never executed
         -:  556:#if __cplusplus <= 201703L
         -:  557:	  __a.destroy(__p);
         -:  558:#else
-      100:  559:	  std::destroy_at(__p);
-call    0 returned 100
+      584:  559:	  std::destroy_at(__p);
+call    0 returned 382
+call    1 returned 100
     $$$$$:  559-block  0
-call    1 never executed
+call    2 never executed
+      102:  559-block  1
+call    3 returned 102
         -:  560:#endif
-      100:  561:	}
+      584:  561:	}
         -:  562:
         -:  563:      /**
         -:  564:       *  @brief  The maximum supported allocation size
@@ -607,8 +619,9 @@ call    1 never executed
         -:  572:#if __cplusplus <= 201703L
         -:  573:	return __a.max_size();
         -:  574:#else
-    #####:  575:	return size_t(-1) / sizeof(value_type);
-    %%%%%:  575-block  0
+      34*:  575:	return size_t(-1) / sizeof(value_type);
+       34:  575-block  0
+    %%%%%:  575-block  1
         -:  576:#endif
         -:  577:      }
         -:  578:
@@ -992,6 +1005,7 @@ call    1 never executed
 branch  2 never executed (fallthrough)
 branch  3 never executed (throw)
 call    4 never executed
+call    5 never executed
     #####:  948:    }
     $$$$$:  948-block  0
         -:  949:#endif

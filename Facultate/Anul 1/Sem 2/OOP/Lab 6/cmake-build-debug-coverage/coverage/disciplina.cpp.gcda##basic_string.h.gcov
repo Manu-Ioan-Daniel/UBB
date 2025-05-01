@@ -200,17 +200,17 @@
         -:  196:	: allocator_type(__a), _M_p(__dat) { }
         -:  197:#else
         -:  198:	_GLIBCXX20_CONSTEXPR
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderC1EPcRKS3_ called 993 returned 100% blocks executed 100%
-      993:  199:	_Alloc_hider(pointer __dat, const _Alloc& __a)
-      993:  199-block  0
-      993:  200:	: allocator_type(__a), _M_p(__dat) { }
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderC1EPcRKS3_ called 1304 returned 100% blocks executed 100%
+     1304:  199:	_Alloc_hider(pointer __dat, const _Alloc& __a)
+     1304:  199-block  0
+     1304:  200:	: allocator_type(__a), _M_p(__dat) { }
         -:  201:
         -:  202:	_GLIBCXX20_CONSTEXPR
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderC1EPcOS3_ called 15454 returned 100% blocks executed 100%
-    15454:  203:	_Alloc_hider(pointer __dat, _Alloc&& __a = _Alloc())
-    15454:  204:	: allocator_type(std::move(__a)), _M_p(__dat) { }
-    15454:  204-block  0
-call    0 returned 15454
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderC1EPcOS3_ called 23810 returned 100% blocks executed 100%
+    23810:  203:	_Alloc_hider(pointer __dat, _Alloc&& __a = _Alloc())
+    23810:  204:	: allocator_type(std::move(__a)), _M_p(__dat) { }
+    23810:  204-block  0
+call    0 returned 23810
         -:  205:#endif
         -:  206:
         -:  207:	pointer _M_p; // The actual data.
@@ -229,15 +229,15 @@ call    0 returned 15454
         -:  220:
         -:  221:      _GLIBCXX20_CONSTEXPR
         -:  222:      void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7_M_dataEPc called 1415 returned 100% blocks executed 100%
-     1415:  223:      _M_data(pointer __p)
-     1415:  224:      { _M_dataplus._M_p = __p; }
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7_M_dataEPc called 1821 returned 100% blocks executed 100%
+     1821:  223:      _M_data(pointer __p)
+     1821:  224:      { _M_dataplus._M_p = __p; }
         -:  225:
         -:  226:      _GLIBCXX20_CONSTEXPR
         -:  227:      void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_lengthEy called 22476 returned 100% blocks executed 100%
-    22476:  228:      _M_length(size_type __length)
-    22476:  229:      { _M_string_length = __length; }
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_lengthEy called 31944 returned 100% blocks executed 100%
+    31944:  228:      _M_length(size_type __length)
+    31944:  229:      { _M_string_length = __length; }
         -:  230:
         -:  231:      _GLIBCXX20_CONSTEXPR
         -:  232:      pointer
@@ -248,13 +248,13 @@ function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7_M_dataEv called
         -:  235:
         -:  236:      _GLIBCXX20_CONSTEXPR
         -:  237:      pointer
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_M_local_dataEv called 32884 returned 100% blocks executed 100%
-    32884:  238:      _M_local_data()
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_M_local_dataEv called 50217 returned 100% blocks executed 100%
+    50217:  238:      _M_local_data()
         -:  239:      {
         -:  240:#if __cplusplus >= 201103L
-    32884:  241:	return std::pointer_traits<pointer>::pointer_to(*_M_local_buf);
-    32884:  241-block  0
-call    0 returned 32884
+    50217:  241:	return std::pointer_traits<pointer>::pointer_to(*_M_local_buf);
+    50217:  241-block  0
+call    0 returned 50217
         -:  242:#else
         -:  243:	return pointer(_M_local_buf);
         -:  244:#endif
@@ -276,22 +276,22 @@ call    0 never executed
         -:  257:
         -:  258:      _GLIBCXX20_CONSTEXPR
         -:  259:      void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE11_M_capacityEy called 28 returned 100% blocks executed 100%
-       28:  260:      _M_capacity(size_type __capacity)
-       28:  261:      { _M_allocated_capacity = __capacity; }
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE11_M_capacityEy called 30 returned 100% blocks executed 100%
+       30:  260:      _M_capacity(size_type __capacity)
+       30:  261:      { _M_allocated_capacity = __capacity; }
         -:  262:
         -:  263:      _GLIBCXX20_CONSTEXPR
         -:  264:      void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_M_set_lengthEy called 21089 returned 100% blocks executed 100%
-    21089:  265:      _M_set_length(size_type __n)
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_M_set_lengthEy called 30153 returned 100% blocks executed 100%
+    30153:  265:      _M_set_length(size_type __n)
         -:  266:      {
-    21089:  267:	_M_length(__n);
-    21089:  267-block  0
-call    0 returned 21089
-    21089:  268:	traits_type::assign(_M_data()[__n], _CharT());
-call    0 returned 21089
-call    1 returned 21089
-    21089:  269:      }
+    30153:  267:	_M_length(__n);
+    30153:  267-block  0
+call    0 returned 30153
+    30153:  268:	traits_type::assign(_M_data()[__n], _CharT());
+call    0 returned 30153
+call    1 returned 30153
+    30153:  269:      }
         -:  270:
         -:  271:      _GLIBCXX20_CONSTEXPR
         -:  272:      bool
@@ -400,10 +400,10 @@ function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE16_M_get_allocator
         -:  349:
         -:  350:      _GLIBCXX20_CONSTEXPR
         -:  351:      const allocator_type&
-function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE16_M_get_allocatorEv called 14078 returned 100% blocks executed 100%
-    14078:  352:      _M_get_allocator() const
-    14078:  353:      { return _M_dataplus; }
-    14078:  353-block  0
+function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE16_M_get_allocatorEv called 21712 returned 100% blocks executed 100%
+    21712:  352:      _M_get_allocator() const
+    21712:  353:      { return _M_dataplus; }
+    21712:  353-block  0
         -:  354:
         -:  355:      // Ensure that _M_local_buf is the active member of the union.
         -:  356:      __attribute__((__always_inline__))
@@ -412,15 +412,15 @@ function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE16_M_get_allocato
         -:  359:      _M_use_local_data() _GLIBCXX_NOEXCEPT
         -:  360:      {
         -:  361:#if __cpp_lib_is_constant_evaluated
-    14383:  362:	if (std::is_constant_evaluated())
-    13718:  362-block  0
-call    0 returned 13718
+    22126:  362:	if (std::is_constant_evaluated())
+    21251:  362-block  0
+call    0 returned 21251
 branch  1 taken 0 (fallthrough)
-branch  2 taken 13718
-      665:  362-block  1
-call    3 returned 665
+branch  2 taken 21251
+      875:  362-block  1
+call    3 returned 875
 branch  4 taken 0 (fallthrough)
-branch  5 taken 665
+branch  5 taken 875
     #####:  363:	  for (size_type __i = 0; __i <= _S_local_capacity; ++__i)
     %%%%%:  363-block  0
     %%%%%:  363-block  1
@@ -434,11 +434,11 @@ branch  3 never executed (fallthrough)
     %%%%%:  364-block  0
     %%%%%:  364-block  1
         -:  365:#endif
-    14383:  366:	return _M_local_data();
-    13718:  366-block  0
-call    0 returned 13718
-      665:  366-block  1
-call    1 returned 665
+    22126:  366:	return _M_local_data();
+    21251:  366-block  0
+call    0 returned 21251
+      875:  366-block  1
+call    1 returned 875
         -:  367:      }
         -:  368:
         -:  369:    private:
@@ -498,21 +498,21 @@ call    1 returned 665
         -:  423:      // traits_type::copy/move/assign.
         -:  424:      _GLIBCXX20_CONSTEXPR
         -:  425:      static void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7_S_copyEPcPKcy called 19040 returned 100% blocks executed 100%
-    19040:  426:      _S_copy(_CharT* __d, const _CharT* __s, size_type __n)
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7_S_copyEPcPKcy called 27181 returned 100% blocks executed 100%
+    27181:  426:      _S_copy(_CharT* __d, const _CharT* __s, size_type __n)
         -:  427:      {
-    19040:  428:	if (__n == 1)
-    19040:  428-block  0
+    27181:  428:	if (__n == 1)
+    27181:  428-block  0
 branch  0 taken 1 (fallthrough)
-branch  1 taken 19039
+branch  1 taken 27180
         1:  429:	  traits_type::assign(*__d, *__s);
         1:  429-block  0
 call    0 returned 1
         -:  430:	else
-    19039:  431:	  traits_type::copy(__d, __s, __n);
-    19039:  431-block  0
-call    0 returned 19039
-    19040:  432:      }
+    27180:  431:	  traits_type::copy(__d, __s, __n);
+    27180:  431-block  0
+call    0 returned 27180
+    27181:  432:      }
         -:  433:
         -:  434:      _GLIBCXX20_CONSTEXPR
         -:  435:      static void
@@ -558,20 +558,20 @@ call    0 returned 19039
         -:  475:
         -:  476:      _GLIBCXX20_CONSTEXPR
         -:  477:      static void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_ called 13721 returned 100% blocks executed 100%
-    13721:  478:      _S_copy_chars(_CharT* __p, _CharT* __k1, _CharT* __k2) _GLIBCXX_NOEXCEPT
-    13721:  479:      { _S_copy(__p, __k1, __k2 - __k1); }
-    13721:  479-block  0
-call    0 returned 13721
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_ called 21254 returned 100% blocks executed 100%
+    21254:  478:      _S_copy_chars(_CharT* __p, _CharT* __k1, _CharT* __k2) _GLIBCXX_NOEXCEPT
+    21254:  479:      { _S_copy(__p, __k1, __k2 - __k1); }
+    21254:  479-block  0
+call    0 returned 21254
         -:  480:
         -:  481:      _GLIBCXX20_CONSTEXPR
         -:  482:      static void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcPKcS7_ called 672 returned 100% blocks executed 100%
-      672:  483:      _S_copy_chars(_CharT* __p, const _CharT* __k1, const _CharT* __k2)
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcPKcS7_ called 883 returned 100% blocks executed 100%
+      883:  483:      _S_copy_chars(_CharT* __p, const _CharT* __k1, const _CharT* __k2)
         -:  484:      _GLIBCXX_NOEXCEPT
-      672:  485:      { _S_copy(__p, __k1, __k2 - __k1); }
-      672:  485-block  0
-call    0 returned 672
+      883:  485:      { _S_copy(__p, __k1, __k2 - __k1); }
+      883:  485-block  0
+call    0 returned 883
         -:  486:
         -:  487:      _GLIBCXX20_CONSTEXPR
         -:  488:      static int
@@ -634,27 +634,27 @@ call    0 returned 672
         -:  545:       *  @param  __str  Source string.
         -:  546:       */
         -:  547:      _GLIBCXX20_CONSTEXPR
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1ERKS4_ called 13721 returned 100% blocks executed 94%
-    13721:  548:      basic_string(const basic_string& __str)
-    13721:  549:      : _M_dataplus(_M_local_data(),
-    13721:  549-block  0
-call    0 returned 13721
-call    1 returned 13721
-    13721:  550:		    _Alloc_traits::_S_select_on_copy(__str._M_get_allocator()))
-    13721:  550-block  0
-call    0 returned 13721
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1ERKS4_ called 21254 returned 100% blocks executed 94%
+    21254:  548:      basic_string(const basic_string& __str)
+    21254:  549:      : _M_dataplus(_M_local_data(),
+    21254:  549-block  0
+call    0 returned 21254
+call    1 returned 21254
+    21254:  550:		    _Alloc_traits::_S_select_on_copy(__str._M_get_allocator()))
+    21254:  550-block  0
+call    0 returned 21254
         -:  551:      {
-    13721:  552:	_M_construct(__str._M_data(), __str._M_data() + __str.length(),
-    13721:  552-block  0
-call    0 returned 13721
-call    1 returned 13721
-call    2 returned 13721
-call    3 returned 13721
-branch  4 taken 13721 (fallthrough)
+    21254:  552:	_M_construct(__str._M_data(), __str._M_data() + __str.length(),
+    21254:  552-block  0
+call    0 returned 21254
+call    1 returned 21254
+call    2 returned 21254
+call    3 returned 21254
+branch  4 taken 21254 (fallthrough)
 branch  5 taken 0 (throw)
         -:  553:		     std::forward_iterator_tag());
-    13721:  554:      }
-    13721:  554-block  0
+    21254:  554:      }
+    21254:  554-block  0
     $$$$$:  554-block  1
 call    0 never executed
         -:  555:
@@ -744,33 +744,33 @@ call    0 never executed
         -:  639:      template<typename = _RequireAllocator<_Alloc>>
         -:  640:#endif
         -:  641:      _GLIBCXX20_CONSTEXPR
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1IS3_EEPKcRKS3_ called 672 returned 100% blocks executed 78%
-      672:  642:      basic_string(const _CharT* __s, const _Alloc& __a = _Alloc())
-      672:  643:      : _M_dataplus(_M_local_data(), __a)
-      672:  643-block  0
-call    0 returned 672
-call    1 returned 672
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1IS3_EEPKcRKS3_ called 883 returned 100% blocks executed 78%
+      883:  642:      basic_string(const _CharT* __s, const _Alloc& __a = _Alloc())
+      883:  643:      : _M_dataplus(_M_local_data(), __a)
+      883:  643-block  0
+call    0 returned 883
+call    1 returned 883
         -:  644:      {
         -:  645:	// NB: Not required, but considered best practice.
-      672:  646:	if (__s == 0)
+      883:  646:	if (__s == 0)
 branch  0 taken 0 (fallthrough)
-branch  1 taken 672
+branch  1 taken 883
     #####:  647:	  std::__throw_logic_error(__N("basic_string: "
     %%%%%:  647-block  0
 call    0 never executed
         -:  648:				       "construction from null is not valid"));
-      672:  649:	const _CharT* __end = __s + traits_type::length(__s);
-      672:  649-block  0
-call    0 returned 672
-branch  1 taken 672 (fallthrough)
+      883:  649:	const _CharT* __end = __s + traits_type::length(__s);
+      883:  649-block  0
+call    0 returned 883
+branch  1 taken 883 (fallthrough)
 branch  2 taken 0 (throw)
-      672:  650:	_M_construct(__s, __end, forward_iterator_tag());
-      672:  650-block  0
-call    0 returned 672
-branch  1 taken 672 (fallthrough)
+      883:  650:	_M_construct(__s, __end, forward_iterator_tag());
+      883:  650-block  0
+call    0 returned 883
+branch  1 taken 883 (fallthrough)
 branch  2 taken 0 (throw)
-      672:  651:      }
-      672:  651-block  0
+      883:  651:      }
+      883:  651-block  0
     $$$$$:  651-block  1
 call    0 never executed
         -:  652:
@@ -799,49 +799,49 @@ call    0 never executed
         -:  675:       *  @a __str is a valid, but unspecified string.
         -:  676:       */
         -:  677:      _GLIBCXX20_CONSTEXPR
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EOS4_ called 1387 returned 100% blocks executed 100%
-     1387:  678:      basic_string(basic_string&& __str) noexcept
-     1387:  679:      : _M_dataplus(_M_local_data(), std::move(__str._M_get_allocator()))
-     1387:  679-block  0
-call    0 returned 1387
-call    1 returned 1387
-call    2 returned 1387
-call    3 returned 1387
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EOS4_ called 1791 returned 100% blocks executed 100%
+     1791:  678:      basic_string(basic_string&& __str) noexcept
+     1791:  679:      : _M_dataplus(_M_local_data(), std::move(__str._M_get_allocator()))
+     1791:  679-block  0
+call    0 returned 1791
+call    1 returned 1791
+call    2 returned 1791
+call    3 returned 1791
         -:  680:      {
-     1387:  681:	if (__str._M_is_local())
-call    0 returned 1387
-branch  1 taken 1377 (fallthrough)
-branch  2 taken 10
+     1791:  681:	if (__str._M_is_local())
+call    0 returned 1791
+branch  1 taken 1780 (fallthrough)
+branch  2 taken 11
         -:  682:	  {
-     1377:  683:	    traits_type::copy(_M_local_buf, __str._M_local_buf,
-call    0 returned 1377
-     1377:  684:			      __str.length() + 1);
-     1377:  684-block  0
-call    0 returned 1377
+     1780:  683:	    traits_type::copy(_M_local_buf, __str._M_local_buf,
+call    0 returned 1780
+     1780:  684:			      __str.length() + 1);
+     1780:  684-block  0
+call    0 returned 1780
         -:  685:	  }
         -:  686:	else
         -:  687:	  {
-       10:  688:	    _M_data(__str._M_data());
-       10:  688-block  0
-call    0 returned 10
-call    1 returned 10
-       10:  689:	    _M_capacity(__str._M_allocated_capacity);
-call    0 returned 10
+       11:  688:	    _M_data(__str._M_data());
+       11:  688-block  0
+call    0 returned 11
+call    1 returned 11
+       11:  689:	    _M_capacity(__str._M_allocated_capacity);
+call    0 returned 11
         -:  690:	  }
         -:  691:
         -:  692:	// Must use _M_length() here not _M_set_length() because
         -:  693:	// basic_stringbuf relies on writing into unallocated capacity so
         -:  694:	// we mess up the contents if we put a '\0' in the string.
-     1387:  695:	_M_length(__str.length());
-     1387:  695-block  0
-call    0 returned 1387
-call    1 returned 1387
-     1387:  696:	__str._M_data(__str._M_local_data());
-call    0 returned 1387
-call    1 returned 1387
-     1387:  697:	__str._M_set_length(0);
-call    0 returned 1387
-     1387:  698:      }
+     1791:  695:	_M_length(__str.length());
+     1791:  695-block  0
+call    0 returned 1791
+call    1 returned 1791
+     1791:  696:	__str._M_data(__str._M_local_data());
+call    0 returned 1791
+call    1 returned 1791
+     1791:  697:	__str._M_set_length(0);
+call    0 returned 1791
+     1791:  698:      }
         -:  699:
         -:  700:      /**
         -:  701:       *  @brief  Construct string from an initializer %list.
@@ -1217,29 +1217,29 @@ call    1 never executed
         -: 1067:      ///  null-termination.
         -: 1068:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 1069:      size_type
-function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4sizeEv called 79361 returned 100% blocks executed 100%
-    79361: 1070:      size() const _GLIBCXX_NOEXCEPT
-    79361: 1071:      { return _M_string_length; }
-    79361: 1071-block  0
+function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4sizeEv called 124601 returned 100% blocks executed 100%
+   124601: 1070:      size() const _GLIBCXX_NOEXCEPT
+   124601: 1071:      { return _M_string_length; }
+   124601: 1071-block  0
         -: 1072:
         -: 1073:      ///  Returns the number of characters in the string, not including any
         -: 1074:      ///  null-termination.
         -: 1075:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 1076:      size_type
-function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6lengthEv called 20811 returned 100% blocks executed 100%
-    20811: 1077:      length() const _GLIBCXX_NOEXCEPT
-    20811: 1078:      { return _M_string_length; }
-    20811: 1078-block  0
+function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6lengthEv called 29448 returned 100% blocks executed 100%
+    29448: 1077:      length() const _GLIBCXX_NOEXCEPT
+    29448: 1078:      { return _M_string_length; }
+    29448: 1078-block  0
         -: 1079:
         -: 1080:      ///  Returns the size() of the largest possible %string.
         -: 1081:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 1082:      size_type
-function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE8max_sizeEv called 356 returned 100% blocks executed 100%
-      356: 1083:      max_size() const _GLIBCXX_NOEXCEPT
-      712: 1084:      { return (_Alloc_traits::max_size(_M_get_allocator()) - 1) / 2; }
-      356: 1084-block  0
-call    0 returned 356
-      356: 1084-block  1
+function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE8max_sizeEv called 457 returned 100% blocks executed 100%
+      457: 1083:      max_size() const _GLIBCXX_NOEXCEPT
+      914: 1084:      { return (_Alloc_traits::max_size(_M_get_allocator()) - 1) / 2; }
+      457: 1084-block  0
+call    0 returned 457
+      457: 1084-block  1
         -: 1085:
         -: 1086:      /**
         -: 1087:       *  @brief  Resizes the %string to the specified number of characters.
@@ -2762,11 +2762,11 @@ call    0 returned 356
         -: 2604:      */
         -: 2605:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 2606:      const _CharT*
-function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4dataEv called 32359 returned 100% blocks executed 100%
-    32359: 2607:      data() const _GLIBCXX_NOEXCEPT
-    32359: 2608:      { return _M_data(); }
-    32359: 2608-block  0
-call    0 returned 32359
+function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4dataEv called 57559 returned 100% blocks executed 100%
+    57559: 2607:      data() const _GLIBCXX_NOEXCEPT
+    57559: 2608:      { return _M_data(); }
+    57559: 2608-block  0
+call    0 returned 57559
         -: 2609:
         -: 2610:#if __cplusplus >= 201703L
         -: 2611:      /**

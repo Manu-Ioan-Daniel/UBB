@@ -541,16 +541,16 @@
         -:  537:  // The macro _GLIBCXX_HAVE_IS_CONSTANT_EVALUATED can be used to check if
         -:  538:  // the compiler support is present to make this function work as expected.
         -:  539:  _GLIBCXX_CONSTEXPR inline bool
-function _ZSt23__is_constant_evaluatedv called 63594 returned 100% blocks executed 100%
-    63594:  540:  __is_constant_evaluated() _GLIBCXX_NOEXCEPT
+function _ZSt23__is_constant_evaluatedv called 94744 returned 100% blocks executed 100%
+    94744:  540:  __is_constant_evaluated() _GLIBCXX_NOEXCEPT
         -:  541:  {
         -:  542:#if __cpp_if_consteval >= 202106L
         -:  543:# define _GLIBCXX_HAVE_IS_CONSTANT_EVALUATED 1
         -:  544:    if consteval { return true; } else { return false; }
         -:  545:#elif __cplusplus >= 201103L && __has_builtin(__builtin_is_constant_evaluated)
         -:  546:# define _GLIBCXX_HAVE_IS_CONSTANT_EVALUATED 1
-    63594:  547:    return __builtin_is_constant_evaluated();
-    63594:  547-block  0
+    94744:  547:    return __builtin_is_constant_evaluated();
+    94744:  547-block  0
         -:  548:#else
         -:  549:    return false;
         -:  550:#endif

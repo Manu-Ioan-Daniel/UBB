@@ -116,8 +116,8 @@
         -:  112:	requires is_array_v<remove_reference_t<_Tp>> || __member_begin<_Tp>
         -:  113:	  || __adl_begin<_Tp>
         -:  114:	constexpr auto
-function _ZNKSt6ranges13__cust_access6_BeginclIRKSt6vectorI10DisciplinaSaIS4_EEEEDaOT_ called 9 returned 100% blocks executed 100%
-        9:  115:	operator()[[nodiscard]](_Tp&& __t) const noexcept(_S_noexcept<_Tp&>())
+function _ZNKSt6ranges13__cust_access6_BeginclIRKSt6vectorI10DisciplinaSaIS4_EEEEDaOT_ called 115 returned 100% blocks executed 100%
+      115:  115:	operator()[[nodiscard]](_Tp&& __t) const noexcept(_S_noexcept<_Tp&>())
         -:  116:	{
         -:  117:	  if constexpr (is_array_v<remove_reference_t<_Tp>>)
         -:  118:	    {
@@ -125,9 +125,9 @@ function _ZNKSt6ranges13__cust_access6_BeginclIRKSt6vectorI10DisciplinaSaIS4_EEE
         -:  120:	      return __t + 0;
         -:  121:	    }
         -:  122:	  else if constexpr (__member_begin<_Tp>)
-        9:  123:	    return __t.begin();
-        9:  123-block  0
-call    0 returned 9
+      115:  123:	    return __t.begin();
+      115:  123-block  0
+call    0 returned 115
         -:  124:	  else
         -:  125:	    return begin(__t);
         -:  126:	}
@@ -170,8 +170,8 @@ call    0 returned 9
         -:  163:	requires is_bounded_array_v<remove_reference_t<_Tp>>
         -:  164:	  || __member_end<_Tp> || __adl_end<_Tp>
         -:  165:	constexpr auto
-function _ZNKSt6ranges13__cust_access4_EndclIRKSt6vectorI10DisciplinaSaIS4_EEEEDaOT_ called 9 returned 100% blocks executed 100%
-        9:  166:	operator()[[nodiscard]](_Tp&& __t) const noexcept(_S_noexcept<_Tp&>())
+function _ZNKSt6ranges13__cust_access4_EndclIRKSt6vectorI10DisciplinaSaIS4_EEEEDaOT_ called 115 returned 100% blocks executed 100%
+      115:  166:	operator()[[nodiscard]](_Tp&& __t) const noexcept(_S_noexcept<_Tp&>())
         -:  167:	{
         -:  168:	  if constexpr (is_bounded_array_v<remove_reference_t<_Tp>>)
         -:  169:	    {
@@ -179,9 +179,9 @@ function _ZNKSt6ranges13__cust_access4_EndclIRKSt6vectorI10DisciplinaSaIS4_EEEED
         -:  171:	      return __t + extent_v<remove_reference_t<_Tp>>;
         -:  172:	    }
         -:  173:	  else if constexpr (__member_end<_Tp>)
-        9:  174:	    return __t.end();
-        9:  174-block  0
-call    0 returned 9
+      115:  174:	    return __t.end();
+      115:  174-block  0
+call    0 returned 115
         -:  175:	  else
         -:  176:	    return end(__t);
         -:  177:	}

@@ -234,10 +234,10 @@
         -:  230:
         -:  231:      _GLIBCXX20_CONSTEXPR
         -:  232:      pointer
-function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7_M_dataEv called 130651 returned 100% blocks executed 100%
-   130651:  233:      _M_data() const
-   130651:  234:      { return _M_dataplus._M_p; }
-   130651:  234-block  0
+function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7_M_dataEv called 198289 returned 100% blocks executed 100%
+   198289:  233:      _M_data() const
+   198289:  234:      { return _M_dataplus._M_p; }
+   198289:  234-block  0
         -:  235:
         -:  236:      _GLIBCXX20_CONSTEXPR
         -:  237:      pointer
@@ -252,13 +252,13 @@ function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7_M_dataEv called
         -:  246:
         -:  247:      _GLIBCXX20_CONSTEXPR
         -:  248:      const_pointer
-function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_M_local_dataEv called 22492 returned 100% blocks executed 100%
-    22492:  249:      _M_local_data() const
+function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_M_local_dataEv called 31960 returned 100% blocks executed 100%
+    31960:  249:      _M_local_data() const
         -:  250:      {
         -:  251:#if __cplusplus >= 201103L
-    22492:  252:	return std::pointer_traits<const_pointer>::pointer_to(*_M_local_buf);
-    22492:  252-block  0
-call    0 returned 22492
+    31960:  252:	return std::pointer_traits<const_pointer>::pointer_to(*_M_local_buf);
+    31960:  252-block  0
+call    0 returned 31960
         -:  253:#else
         -:  254:	return const_pointer(_M_local_buf);
         -:  255:#endif
@@ -279,28 +279,28 @@ call    0 returned 22492
         -:  270:
         -:  271:      _GLIBCXX20_CONSTEXPR
         -:  272:      bool
-function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE11_M_is_localEv called 22492 returned 100% blocks executed 88%
-    22492:  273:      _M_is_local() const
+function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE11_M_is_localEv called 31960 returned 100% blocks executed 88%
+    31960:  273:      _M_is_local() const
         -:  274:      {
-    22492:  275:	if (_M_data() == _M_local_data())
-    22492:  275-block  0
-call    0 returned 22492
-call    1 returned 22492
-branch  2 taken 22452 (fallthrough)
-branch  3 taken 40
+    31960:  275:	if (_M_data() == _M_local_data())
+    31960:  275-block  0
+call    0 returned 31960
+call    1 returned 31960
+branch  2 taken 31918 (fallthrough)
+branch  3 taken 42
         -:  276:	  {
-    22452:  277:	    if (_M_string_length > _S_local_capacity)
-    22452:  277-block  0
+    31918:  277:	    if (_M_string_length > _S_local_capacity)
+    31918:  277-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 22452
+branch  1 taken 31918
     #####:  278:	      __builtin_unreachable();
     %%%%%:  278-block  0
 call    0 never executed
-    22452:  279:	    return true;
-    22452:  279-block  0
+    31918:  279:	    return true;
+    31918:  279-block  0
         -:  280:	  }
-       40:  281:	return false;
-       40:  281-block  0
+       42:  281:	return false;
+       42:  281-block  0
         -:  282:      }
         -:  283:
         -:  284:      // Create & Destroy
@@ -310,27 +310,27 @@ call    0 never executed
         -:  288:
         -:  289:      _GLIBCXX20_CONSTEXPR
         -:  290:      void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv called 16455 returned 100% blocks executed 100%
-    16455:  291:      _M_dispose()
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv called 25122 returned 100% blocks executed 100%
+    25122:  291:      _M_dispose()
         -:  292:      {
-    16455:  293:	if (!_M_is_local())
-    16455:  293-block  0
-call    0 returned 16455
-branch  1 taken 18 (fallthrough)
-branch  2 taken 16437
-       18:  294:	  _M_destroy(_M_allocated_capacity);
-       18:  294-block  0
-call    0 returned 18
-    16455:  295:      }
+    25122:  293:	if (!_M_is_local())
+    25122:  293-block  0
+call    0 returned 25122
+branch  1 taken 19 (fallthrough)
+branch  2 taken 25103
+       19:  294:	  _M_destroy(_M_allocated_capacity);
+       19:  294-block  0
+call    0 returned 19
+    25122:  295:      }
         -:  296:
         -:  297:      _GLIBCXX20_CONSTEXPR
         -:  298:      void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_destroyEy called 18 returned 100% blocks executed 78%
-       18:  299:      _M_destroy(size_type __size) throw()
-       18:  300:      { _Alloc_traits::deallocate(_M_get_allocator(), _M_data(), __size + 1); }
-       18:  300-block  0
-call    0 returned 18
-call    1 returned 18
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_destroyEy called 19 returned 100% blocks executed 78%
+       19:  299:      _M_destroy(size_type __size) throw()
+       19:  300:      { _Alloc_traits::deallocate(_M_get_allocator(), _M_data(), __size + 1); }
+       19:  300-block  0
+call    0 returned 19
+call    1 returned 19
         -:  301:
         -:  302:#if __cplusplus < 201103L || defined _GLIBCXX_DEFINING_STRING_INSTANTIATIONS
         -:  303:      // _M_construct_aux is used to implement the 21.3.1 para 15 which
@@ -377,10 +377,10 @@ call    1 returned 18
         -:  344:
         -:  345:      _GLIBCXX20_CONSTEXPR
         -:  346:      allocator_type&
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE16_M_get_allocatorEv called 1423 returned 100% blocks executed 100%
-     1423:  347:      _M_get_allocator()
-     1423:  348:      { return _M_dataplus; }
-     1423:  348-block  0
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE16_M_get_allocatorEv called 1829 returned 100% blocks executed 100%
+     1829:  347:      _M_get_allocator()
+     1829:  348:      { return _M_dataplus; }
+     1829:  348-block  0
         -:  349:
         -:  350:      _GLIBCXX20_CONSTEXPR
         -:  351:      const allocator_type&
@@ -834,12 +834,12 @@ function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE16_M_get_allocator
         -:  799:       *  @brief  Destroy the string instance.
         -:  800:       */
         -:  801:      _GLIBCXX20_CONSTEXPR
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev called 16447 returned 100% blocks executed 100%
-    16447:  802:      ~basic_string()
-    16447:  803:      { _M_dispose(); }
-    16447:  803-block  0
-call    0 returned 16447
-call    1 returned 16447
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev called 25114 returned 100% blocks executed 100%
+    25114:  802:      ~basic_string()
+    25114:  803:      { _M_dispose(); }
+    25114:  803-block  0
+call    0 returned 25114
+call    1 returned 25114
         -:  804:
         -:  805:      /**
         -:  806:       *  @brief  Assign the value of @a str to this string.

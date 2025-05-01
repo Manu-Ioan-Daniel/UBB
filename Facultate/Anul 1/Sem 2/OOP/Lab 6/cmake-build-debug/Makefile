@@ -272,6 +272,30 @@ ui.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_6.dir\build.make CMakeFiles/Lab_6.dir/ui.cpp.s
 .PHONY : ui.cpp.s
 
+undo.obj: undo.cpp.obj
+.PHONY : undo.obj
+
+# target to build an object file
+undo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_6.dir\build.make CMakeFiles/Lab_6.dir/undo.cpp.obj
+.PHONY : undo.cpp.obj
+
+undo.i: undo.cpp.i
+.PHONY : undo.i
+
+# target to preprocess a source file
+undo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_6.dir\build.make CMakeFiles/Lab_6.dir/undo.cpp.i
+.PHONY : undo.cpp.i
+
+undo.s: undo.cpp.s
+.PHONY : undo.s
+
+# target to generate assembly for a file
+undo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_6.dir\build.make CMakeFiles/Lab_6.dir/undo.cpp.s
+.PHONY : undo.cpp.s
+
 validator.obj: validator.cpp.obj
 .PHONY : validator.obj
 
@@ -323,6 +347,9 @@ help:
 	@echo ... ui.obj
 	@echo ... ui.i
 	@echo ... ui.s
+	@echo ... undo.obj
+	@echo ... undo.i
+	@echo ... undo.s
 	@echo ... validator.obj
 	@echo ... validator.i
 	@echo ... validator.s

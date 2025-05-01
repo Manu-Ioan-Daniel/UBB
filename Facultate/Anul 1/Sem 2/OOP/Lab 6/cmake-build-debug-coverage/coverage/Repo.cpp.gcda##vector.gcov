@@ -110,52 +110,52 @@
         -:  106:  template<typename _Tp, typename _Alloc, typename _Predicate>
         -:  107:    _GLIBCXX20_CONSTEXPR
         -:  108:    inline typename vector<_Tp, _Alloc>::size_type
-function _ZSt8erase_ifI10DisciplinaSaIS0_EZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_EUlRKS0_E_ENSt6vectorIT_T0_E9size_typeERSH_T1_ called 2 returned 100% blocks executed 76%
-        2:  109:    erase_if(vector<_Tp, _Alloc>& __cont, _Predicate __pred)
+function _ZSt8erase_ifI10DisciplinaSaIS0_EZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_EUlRKS0_E_ENSt6vectorIT_T0_E9size_typeERSH_T1_ called 103 returned 100% blocks executed 76%
+      103:  109:    erase_if(vector<_Tp, _Alloc>& __cont, _Predicate __pred)
         -:  110:    {
         -:  111:      using namespace __gnu_cxx;
-        2:  112:      _GLIBCXX_STD_C::vector<_Tp, _Alloc>& __ucont = __cont;
-        2:  113:      const auto __osz = __cont.size();
-        2:  113-block  0
-call    0 returned 2
-        2:  114:      const auto __end = __ucont.end();
-call    0 returned 2
-        2:  115:      auto __removed = std::__remove_if(__ucont.begin(), __end,
-call    0 returned 2
-call    1 returned 2
-branch  2 taken 2 (fallthrough)
+      103:  112:      _GLIBCXX_STD_C::vector<_Tp, _Alloc>& __ucont = __cont;
+      103:  113:      const auto __osz = __cont.size();
+      103:  113-block  0
+call    0 returned 103
+      103:  114:      const auto __end = __ucont.end();
+call    0 returned 103
+      103:  115:      auto __removed = std::__remove_if(__ucont.begin(), __end,
+call    0 returned 103
+call    1 returned 103
+branch  2 taken 103 (fallthrough)
 branch  3 taken 0 (throw)
-        2:  115-block  0
-call    4 returned 2
-call    5 returned 2
-branch  6 taken 2 (fallthrough)
+      103:  115-block  0
+call    4 returned 103
+call    5 returned 103
+branch  6 taken 103 (fallthrough)
 branch  7 taken 0 (throw)
         -:  116:					__ops::__pred_iter(std::ref(__pred)));
-        2:  117:      if (__removed != __end)
-        2:  117-block  0
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
+      103:  117:      if (__removed != __end)
+      103:  117-block  0
+call    0 returned 103
+branch  1 taken 103 (fallthrough)
 branch  2 taken 0
         -:  118:	{
-        2:  119:	  __cont.erase(__niter_wrap(__cont.begin(), __removed),
-call    0 returned 2
-call    1 returned 2
-call    2 returned 2
-call    3 returned 2
-call    4 returned 2
-branch  5 taken 2 (fallthrough)
+      103:  119:	  __cont.erase(__niter_wrap(__cont.begin(), __removed),
+call    0 returned 103
+call    1 returned 103
+call    2 returned 103
+call    3 returned 103
+call    4 returned 103
+branch  5 taken 103 (fallthrough)
 branch  6 taken 0 (throw)
     $$$$$:  119-block  0
     $$$$$:  119-block  1
     $$$$$:  119-block  2
     $$$$$:  119-block  3
-        2:  120:		       __cont.end());
-        2:  120-block  0
-call    0 returned 2
+      103:  120:		       __cont.end());
+      103:  120-block  0
+call    0 returned 103
     $$$$$:  120-block  1
-        2:  121:	  return __osz - __cont.size();
-        2:  121-block  0
-call    0 returned 2
+      103:  121:	  return __osz - __cont.size();
+      103:  121-block  0
+call    0 returned 103
         -:  122:	}
         -:  123:
     #####:  124:      return 0;

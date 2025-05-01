@@ -56,30 +56,30 @@
         -:   52:  // Generic implementation for arbitrary bases.
         -:   53:  template<typename _Tp>
         -:   54:    _GLIBCXX14_CONSTEXPR unsigned
-function _ZNSt8__detail14__to_chars_lenIjEEjT_i called 320 returned 100% blocks executed 55%
-      320:   55:    __to_chars_len(_Tp __value, int __base = 10) noexcept
+function _ZNSt8__detail14__to_chars_lenIjEEjT_i called 420 returned 100% blocks executed 55%
+      420:   55:    __to_chars_len(_Tp __value, int __base = 10) noexcept
         -:   56:    {
         -:   57:#if __cpp_variable_templates
         -:   58:      static_assert(__integer_to_chars_is_unsigned<_Tp>, "implementation bug");
         -:   59:#endif
         -:   60:
-      320:   61:      unsigned __n = 1;
-      320:   62:      const unsigned __b2 = __base  * __base;
-      320:   63:      const unsigned __b3 = __b2 * __base;
-      320:   64:      const unsigned long __b4 = __b3 * __base;
-      320:   64-block  0
+      420:   61:      unsigned __n = 1;
+      420:   62:      const unsigned __b2 = __base  * __base;
+      420:   63:      const unsigned __b3 = __b2 * __base;
+      420:   64:      const unsigned long __b4 = __b3 * __base;
+      420:   64-block  0
         -:   65:      for (;;)
         -:   66:	{
-      320:   67:	  if (__value < (unsigned)__base) return __n;
-      320:   67-block  0
-branch  0 taken 50 (fallthrough)
-branch  1 taken 270
-       50:   67-block  1
-      270:   68:	  if (__value < __b2) return __n + 1;
-      270:   68-block  0
-branch  0 taken 270 (fallthrough)
+      420:   67:	  if (__value < (unsigned)__base) return __n;
+      420:   67-block  0
+branch  0 taken 60 (fallthrough)
+branch  1 taken 360
+       60:   67-block  1
+      360:   68:	  if (__value < __b2) return __n + 1;
+      360:   68-block  0
+branch  0 taken 360 (fallthrough)
 branch  1 taken 0
-      270:   68-block  1
+      360:   68-block  1
     #####:   69:	  if (__value < __b3) return __n + 2;
     %%%%%:   69-block  0
 branch  0 never executed (fallthrough)
@@ -101,25 +101,25 @@ branch  1 never executed
         -:   78:  // (which can be determined by the __to_chars_len function).
         -:   79:  template<typename _Tp>
         -:   80:    _GLIBCXX23_CONSTEXPR void
-function _ZNSt8__detail18__to_chars_10_implIjEEvPcjT_ called 320 returned 100% blocks executed 86%
-      320:   81:    __to_chars_10_impl(char* __first, unsigned __len, _Tp __val) noexcept
+function _ZNSt8__detail18__to_chars_10_implIjEEvPcjT_ called 420 returned 100% blocks executed 86%
+      420:   81:    __to_chars_10_impl(char* __first, unsigned __len, _Tp __val) noexcept
         -:   82:    {
         -:   83:#if __cpp_variable_templates
         -:   84:      static_assert(__integer_to_chars_is_unsigned<_Tp>, "implementation bug");
         -:   85:#endif
         -:   86:
-      320:   87:      constexpr char __digits[201] =
+      420:   87:      constexpr char __digits[201] =
         -:   88:	"0001020304050607080910111213141516171819"
         -:   89:	"2021222324252627282930313233343536373839"
         -:   90:	"4041424344454647484950515253545556575859"
         -:   91:	"6061626364656667686970717273747576777879"
         -:   92:	"8081828384858687888990919293949596979899";
-      320:   93:      unsigned __pos = __len - 1;
-      320:   94:      while (__val >= 100)
-      320:   94-block  0
-      320:   94-block  1
+      420:   93:      unsigned __pos = __len - 1;
+      420:   94:      while (__val >= 100)
+      420:   94-block  0
+      420:   94-block  1
 branch  0 taken 0
-branch  1 taken 320 (fallthrough)
+branch  1 taken 420 (fallthrough)
         -:   95:	{
     #####:   96:	  auto const __num = (__val % 100) * 2;
     #####:   97:	  __val /= 100;
@@ -128,20 +128,20 @@ branch  1 taken 320 (fallthrough)
     #####:  100:	  __pos -= 2;
     %%%%%:  100-block  0
         -:  101:	}
-      320:  102:      if (__val >= 10)
-      320:  102-block  0
-branch  0 taken 270 (fallthrough)
-branch  1 taken 50
+      420:  102:      if (__val >= 10)
+      420:  102-block  0
+branch  0 taken 360 (fallthrough)
+branch  1 taken 60
         -:  103:	{
-      270:  104:	  auto const __num = __val * 2;
-      270:  105:	  __first[1] = __digits[__num + 1];
-      270:  106:	  __first[0] = __digits[__num];
-      270:  106-block  0
+      360:  104:	  auto const __num = __val * 2;
+      360:  105:	  __first[1] = __digits[__num + 1];
+      360:  106:	  __first[0] = __digits[__num];
+      360:  106-block  0
         -:  107:	}
         -:  108:      else
-       50:  109:	__first[0] = '0' + __val;
-       50:  109-block  0
-      320:  110:    }
+       60:  109:	__first[0] = '0' + __val;
+       60:  109-block  0
+      420:  110:    }
         -:  111:
         -:  112:} // namespace __detail
         -:  113:_GLIBCXX_END_NAMESPACE_VERSION

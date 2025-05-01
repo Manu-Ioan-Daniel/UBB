@@ -1077,8 +1077,18 @@
         -: 1073:      : _M_current(_Iterator()) { }
         -: 1074:
         -: 1075:      explicit _GLIBCXX20_CONSTEXPR
-    #####: 1076:      __normal_iterator(const _Iterator& __i) _GLIBCXX_NOEXCEPT
-    #####: 1077:      : _M_current(__i) { }
+    1276*: 1076:      __normal_iterator(const _Iterator& __i) _GLIBCXX_NOEXCEPT
+    1276*: 1077:      : _M_current(__i) { }
+------------------
+_ZN9__gnu_cxx17__normal_iteratorIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEEC1ERKS6_:
+function _ZN9__gnu_cxx17__normal_iteratorIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEEC1ERKS6_ called 1070 returned 100% blocks executed 100%
+     1070: 1076:      __normal_iterator(const _Iterator& __i) _GLIBCXX_NOEXCEPT
+     1070: 1077:      : _M_current(__i) { }
+------------------
+_ZN9__gnu_cxx17__normal_iteratorIPKSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEEC1ERKS7_:
+function _ZN9__gnu_cxx17__normal_iteratorIPKSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEEC1ERKS7_ called 206 returned 100% blocks executed 100%
+      206: 1076:      __normal_iterator(const _Iterator& __i) _GLIBCXX_NOEXCEPT
+      206: 1077:      : _M_current(__i) { }
 ------------------
 _ZN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS1_SaIS1_EEEC1ERKS2_:
 function _ZN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS1_SaIS1_EEEC1ERKS2_ called 0 returned 0% blocks executed 0%
@@ -1111,8 +1121,14 @@ function _ZN9__gnu_cxx17__normal_iteratorIPK10DisciplinaSt6vectorIS1_SaIS1_EEEC1
         -: 1096:      // Forward iterator requirements
         -: 1097:      _GLIBCXX20_CONSTEXPR
         -: 1098:      reference
-    #####: 1099:      operator*() const _GLIBCXX_NOEXCEPT
-    #####: 1100:      { return *_M_current; }
+     518*: 1099:      operator*() const _GLIBCXX_NOEXCEPT
+     518*: 1100:      { return *_M_current; }
+------------------
+_ZNK9__gnu_cxx17__normal_iteratorIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEEdeEv:
+function _ZNK9__gnu_cxx17__normal_iteratorIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEEdeEv called 518 returned 100% blocks executed 100%
+      518: 1099:      operator*() const _GLIBCXX_NOEXCEPT
+      518: 1100:      { return *_M_current; }
+      518: 1100-block  0
 ------------------
 _ZNK9__gnu_cxx17__normal_iteratorIPK10DisciplinaSt6vectorIS1_SaIS1_EEEdeEv:
 function _ZNK9__gnu_cxx17__normal_iteratorIPK10DisciplinaSt6vectorIS1_SaIS1_EEEdeEv called 0 returned 0% blocks executed 0%
@@ -1209,17 +1225,42 @@ call    0 never executed
         -: 1154:
         -: 1155:      _GLIBCXX20_CONSTEXPR
         -: 1156:      __normal_iterator
+      551: 1157:      operator-(difference_type __n) const _GLIBCXX_NOEXCEPT
+      551: 1158:      { return __normal_iterator(_M_current - __n); }
+------------------
+_ZNK9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS1_SaIS1_EEEmiEx:
 function _ZNK9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS1_SaIS1_EEEmiEx called 33 returned 100% blocks executed 100%
        33: 1157:      operator-(difference_type __n) const _GLIBCXX_NOEXCEPT
        33: 1158:      { return __normal_iterator(_M_current - __n); }
        33: 1158-block  0
 call    0 returned 33
        33: 1158-block  1
+------------------
+_ZNK9__gnu_cxx17__normal_iteratorIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEEmiEx:
+function _ZNK9__gnu_cxx17__normal_iteratorIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEEmiEx called 518 returned 100% blocks executed 100%
+      518: 1157:      operator-(difference_type __n) const _GLIBCXX_NOEXCEPT
+      518: 1158:      { return __normal_iterator(_M_current - __n); }
+      518: 1158-block  0
+call    0 returned 518
+      518: 1158-block  1
+------------------
         -: 1159:
         -: 1160:      _GLIBCXX20_CONSTEXPR
         -: 1161:      const _Iterator&
-    #####: 1162:      base() const _GLIBCXX_NOEXCEPT
-    #####: 1163:      { return _M_current; }
+     274*: 1162:      base() const _GLIBCXX_NOEXCEPT
+     274*: 1163:      { return _M_current; }
+------------------
+_ZNK9__gnu_cxx17__normal_iteratorIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEE4baseEv:
+function _ZNK9__gnu_cxx17__normal_iteratorIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEE4baseEv called 68 returned 100% blocks executed 100%
+       68: 1162:      base() const _GLIBCXX_NOEXCEPT
+       68: 1163:      { return _M_current; }
+       68: 1163-block  0
+------------------
+_ZNK9__gnu_cxx17__normal_iteratorIPKSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEE4baseEv:
+function _ZNK9__gnu_cxx17__normal_iteratorIPKSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEE4baseEv called 206 returned 100% blocks executed 100%
+      206: 1162:      base() const _GLIBCXX_NOEXCEPT
+      206: 1163:      { return _M_current; }
+      206: 1163-block  0
 ------------------
 _ZNK9__gnu_cxx17__normal_iteratorIPK10DisciplinaSt6vectorIS1_SaIS1_EEE4baseEv:
 function _ZNK9__gnu_cxx17__normal_iteratorIPK10DisciplinaSt6vectorIS1_SaIS1_EEE4baseEv called 0 returned 0% blocks executed 0%
@@ -1266,13 +1307,26 @@ function _ZNK9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS1_SaIS1_EEE4b
         -: 1194:  template<typename _Iterator, typename _Container>
         -: 1195:    [[nodiscard]]
         -: 1196:    constexpr bool
-    #####: 1197:    operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
+     103*: 1197:    operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
         -: 1198:	       const __normal_iterator<_Iterator, _Container>& __rhs)
         -: 1199:    noexcept(noexcept(__lhs.base() == __rhs.base()))
         -: 1200:    requires requires {
         -: 1201:      { __lhs.base() == __rhs.base() } -> std::convertible_to<bool>;
         -: 1202:    }
-    #####: 1203:    { return __lhs.base() == __rhs.base(); }
+     103*: 1203:    { return __lhs.base() == __rhs.base(); }
+------------------
+_ZN9__gnu_cxxeqIPKSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_:
+function _ZN9__gnu_cxxeqIPKSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_ called 103 returned 100% blocks executed 100%
+      103: 1197:    operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
+        -: 1198:	       const __normal_iterator<_Iterator, _Container>& __rhs)
+        -: 1199:    noexcept(noexcept(__lhs.base() == __rhs.base()))
+        -: 1200:    requires requires {
+        -: 1201:      { __lhs.base() == __rhs.base() } -> std::convertible_to<bool>;
+        -: 1202:    }
+      103: 1203:    { return __lhs.base() == __rhs.base(); }
+      103: 1203-block  0
+call    0 returned 103
+call    1 returned 103
 ------------------
 _ZN9__gnu_cxxeqIPK10DisciplinaSt6vectorIS1_SaIS1_EEEEbRKNS_17__normal_iteratorIT_T0_EESC_:
 function _ZN9__gnu_cxxeqIPK10DisciplinaSt6vectorIS1_SaIS1_EEEEbRKNS_17__normal_iteratorIT_T0_EESC_ called 0 returned 0% blocks executed 0%
@@ -1435,6 +1489,22 @@ call    2 returned 225
         -: 1331:  template<typename _Iterator, typename _Container>
         -: 1332:    _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 1333:    inline typename __normal_iterator<_Iterator, _Container>::difference_type
+      17*: 1334:    operator-(const __normal_iterator<_Iterator, _Container>& __lhs,
+        -: 1335:	      const __normal_iterator<_Iterator, _Container>& __rhs)
+        -: 1336:    _GLIBCXX_NOEXCEPT
+      17*: 1337:    { return __lhs.base() - __rhs.base(); }
+------------------
+_ZN9__gnu_cxxmiIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSD_SG_:
+function _ZN9__gnu_cxxmiIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EESt6vectorIS5_SaIS5_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSD_SG_ called 17 returned 100% blocks executed 100%
+       17: 1334:    operator-(const __normal_iterator<_Iterator, _Container>& __lhs,
+        -: 1335:	      const __normal_iterator<_Iterator, _Container>& __rhs)
+        -: 1336:    _GLIBCXX_NOEXCEPT
+       17: 1337:    { return __lhs.base() - __rhs.base(); }
+       17: 1337-block  0
+call    0 returned 17
+call    1 returned 17
+------------------
+_ZN9__gnu_cxxmiIP10DisciplinaSt6vectorIS1_SaIS1_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS9_SC_:
 function _ZN9__gnu_cxxmiIP10DisciplinaSt6vectorIS1_SaIS1_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS9_SC_ called 0 returned 0% blocks executed 0%
     #####: 1334:    operator-(const __normal_iterator<_Iterator, _Container>& __lhs,
         -: 1335:	      const __normal_iterator<_Iterator, _Container>& __rhs)
@@ -1443,6 +1513,7 @@ function _ZN9__gnu_cxxmiIP10DisciplinaSt6vectorIS1_SaIS1_EEEENS_17__normal_itera
     %%%%%: 1337-block  0
 call    0 never executed
 call    1 never executed
+------------------
         -: 1338:
         -: 1339:  template<typename _Iterator, typename _Container>
         -: 1340:    _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR

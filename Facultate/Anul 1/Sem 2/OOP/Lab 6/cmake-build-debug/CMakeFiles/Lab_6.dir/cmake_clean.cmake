@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Lab_6.dir/service.cpp.obj.d"
   "CMakeFiles/Lab_6.dir/ui.cpp.obj"
   "CMakeFiles/Lab_6.dir/ui.cpp.obj.d"
+  "CMakeFiles/Lab_6.dir/undo.cpp.obj"
+  "CMakeFiles/Lab_6.dir/undo.cpp.obj.d"
   "CMakeFiles/Lab_6.dir/validator.cpp.obj"
   "CMakeFiles/Lab_6.dir/validator.cpp.obj.d"
   "Lab_6.exe"

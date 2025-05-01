@@ -100,10 +100,22 @@
         -:   96:	pointer _M_end_of_storage;
         -:   97:
         -:   98:	_GLIBCXX20_CONSTEXPR
+       13:   99:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
+       13:  100:	: _M_start(), _M_finish(), _M_end_of_storage()
+       13:  101:	{ }
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE17_Vector_impl_dataC2Ev:
+function _ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE17_Vector_impl_dataC2Ev called 3 returned 100% blocks executed 100%
+        3:   99:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
+        3:  100:	: _M_start(), _M_finish(), _M_end_of_storage()
+        3:  101:	{ }
+------------------
+_ZNSt12_Vector_baseI10DisciplinaSaIS0_EE17_Vector_impl_dataC2Ev:
 function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE17_Vector_impl_dataC2Ev called 10 returned 100% blocks executed 100%
        10:   99:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
        10:  100:	: _M_start(), _M_finish(), _M_end_of_storage()
        10:  101:	{ }
+------------------
         -:  102:
         -:  103:#if __cplusplus >= 201103L
         -:  104:	_GLIBCXX20_CONSTEXPR
@@ -139,6 +151,22 @@ function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE17_Vector_impl_dataC2Ev called 
         -:  134:	: public _Tp_alloc_type, public _Vector_impl_data
         -:  135:      {
         -:  136:	_GLIBCXX20_CONSTEXPR
+        6:  137:	_Vector_impl() _GLIBCXX_NOEXCEPT_IF(
+        -:  138:	    is_nothrow_default_constructible<_Tp_alloc_type>::value)
+        6:  139:	: _Tp_alloc_type()
+        6:  140:	{ }
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE12_Vector_implC1Ev:
+function _ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE12_Vector_implC1Ev called 3 returned 100% blocks executed 100%
+        3:  137:	_Vector_impl() _GLIBCXX_NOEXCEPT_IF(
+        3:  137-block  0
+        -:  138:	    is_nothrow_default_constructible<_Tp_alloc_type>::value)
+        3:  139:	: _Tp_alloc_type()
+        3:  139-block  0
+call    0 returned 3
+        3:  140:	{ }
+------------------
+_ZNSt12_Vector_baseI10DisciplinaSaIS0_EE12_Vector_implC1Ev:
 function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE12_Vector_implC1Ev called 3 returned 100% blocks executed 100%
         3:  137:	_Vector_impl() _GLIBCXX_NOEXCEPT_IF(
         3:  137-block  0
@@ -147,6 +175,7 @@ function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE12_Vector_implC1Ev called 3 ret
         3:  139-block  0
 call    0 returned 3
         3:  140:	{ }
+------------------
         -:  141:
         -:  142:	_GLIBCXX20_CONSTEXPR
         -:  143:	_Vector_impl(_Tp_alloc_type const& __a) _GLIBCXX_NOEXCEPT
@@ -304,10 +333,21 @@ call    0 returned 3
         -:  295:
         -:  296:      _GLIBCXX20_CONSTEXPR
         -:  297:      _Tp_alloc_type&
-function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE19_M_get_Tp_allocatorEv called 150 returned 100% blocks executed 100%
-      150:  298:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
-      150:  299:      { return this->_M_impl; }
-      150:  299-block  0
+      288:  298:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+      288:  299:      { return this->_M_impl; }
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE19_M_get_Tp_allocatorEv:
+function _ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE19_M_get_Tp_allocatorEv called 37 returned 100% blocks executed 100%
+       37:  298:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+       37:  299:      { return this->_M_impl; }
+       37:  299-block  0
+------------------
+_ZNSt12_Vector_baseI10DisciplinaSaIS0_EE19_M_get_Tp_allocatorEv:
+function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE19_M_get_Tp_allocatorEv called 251 returned 100% blocks executed 100%
+      251:  298:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+      251:  299:      { return this->_M_impl; }
+      251:  299-block  0
+------------------
         -:  300:
         -:  301:      _GLIBCXX20_CONSTEXPR
         -:  302:      const _Tp_alloc_type&
@@ -320,10 +360,20 @@ function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE19_M_get_Tp_allocatorEv called 
         -:  309:      { return allocator_type(_M_get_Tp_allocator()); }
         -:  310:
         -:  311:#if __cplusplus >= 201103L
+        6:  312:      _Vector_base() = default;
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EEC2Ev:
+function _ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EEC2Ev called 3 returned 100% blocks executed 100%
+        3:  312:      _Vector_base() = default;
+        3:  312-block  0
+call    0 returned 3
+------------------
+_ZNSt12_Vector_baseI10DisciplinaSaIS0_EEC2Ev:
 function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EEC2Ev called 3 returned 100% blocks executed 100%
         3:  312:      _Vector_base() = default;
         3:  312-block  0
 call    0 returned 3
+------------------
         -:  313:#else
         -:  314:      _Vector_base() { }
         -:  315:#endif
@@ -375,6 +425,24 @@ call    0 returned 3
         -:  361:#endif
         -:  362:
         -:  363:      _GLIBCXX20_CONSTEXPR
+       23:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
+        -:  365:      {
+       23:  366:	_M_deallocate(_M_impl._M_start,
+       23:  367:		      _M_impl._M_end_of_storage - _M_impl._M_start);
+       23:  368:      }
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EED2Ev:
+function _ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EED2Ev called 3 returned 100% blocks executed 100%
+        3:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
+        -:  365:      {
+        3:  366:	_M_deallocate(_M_impl._M_start,
+        3:  367:		      _M_impl._M_end_of_storage - _M_impl._M_start);
+        3:  367-block  0
+call    0 returned 3
+        3:  368:      }
+call    0 returned 3
+------------------
+_ZNSt12_Vector_baseI10DisciplinaSaIS0_EED2Ev:
 function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EED2Ev called 20 returned 100% blocks executed 100%
        20:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
         -:  365:      {
@@ -384,6 +452,7 @@ function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EED2Ev called 20 returned 100% bl
 call    0 returned 20
        20:  368:      }
 call    0 returned 20
+------------------
         -:  369:
         -:  370:    public:
         -:  371:      _Vector_impl _M_impl;
@@ -398,6 +467,28 @@ call    0 returned 20
         -:  380:
         -:  381:      _GLIBCXX20_CONSTEXPR
         -:  382:      void
+       80:  383:      _M_deallocate(pointer __p, size_t __n)
+        -:  384:      {
+        -:  385:	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
+       80:  386:	if (__p)
+       64:  387:	  _Tr::deallocate(_M_impl, __p, __n);
+       80:  388:      }
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE13_M_deallocateEPS4_y:
+function _ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE13_M_deallocateEPS4_y called 20 returned 100% blocks executed 78%
+       20:  383:      _M_deallocate(pointer __p, size_t __n)
+        -:  384:      {
+        -:  385:	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
+       20:  386:	if (__p)
+       20:  386-block  0
+branch  0 taken 17 (fallthrough)
+branch  1 taken 3
+       17:  387:	  _Tr::deallocate(_M_impl, __p, __n);
+       17:  387-block  0
+call    0 returned 17
+       20:  388:      }
+------------------
+_ZNSt12_Vector_baseI10DisciplinaSaIS0_EE13_M_deallocateEPS0_y:
 function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE13_M_deallocateEPS0_y called 60 returned 100% blocks executed 78%
        60:  383:      _M_deallocate(pointer __p, size_t __n)
         -:  384:      {
@@ -410,6 +501,7 @@ branch  1 taken 13
        47:  387-block  0
 call    0 returned 47
        60:  388:      }
+------------------
         -:  389:
         -:  390:    protected:
         -:  391:      _GLIBCXX20_CONSTEXPR
@@ -547,10 +639,20 @@ call    0 returned 47
         -:  523:       *  @brief  Creates a %vector with no elements.
         -:  524:       */
         -:  525:#if __cplusplus >= 201103L
+        6:  526:      vector() = default;
+------------------
+_ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EEC1Ev:
+function _ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EEC1Ev called 3 returned 100% blocks executed 100%
+        3:  526:      vector() = default;
+        3:  526-block  0
+call    0 returned 3
+------------------
+_ZNSt6vectorI10DisciplinaSaIS0_EEC1Ev:
 function _ZNSt6vectorI10DisciplinaSaIS0_EEC1Ev called 3 returned 100% blocks executed 100%
         3:  526:      vector() = default;
         3:  526-block  0
 call    0 returned 3
+------------------
         -:  527:#else
         -:  528:      vector() { }
         -:  529:#endif
@@ -752,6 +854,28 @@ call    0 returned 3
         -:  725:       *  responsibility.
         -:  726:       */
         -:  727:      _GLIBCXX20_CONSTEXPR
+       23:  728:      ~vector() _GLIBCXX_NOEXCEPT
+        -:  729:      {
+       23:  730:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+       23:  731:		      _M_get_Tp_allocator());
+        -:  732:	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
+       23:  733:      }
+------------------
+_ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EED1Ev:
+function _ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EED1Ev called 3 returned 100% blocks executed 100%
+        3:  728:      ~vector() _GLIBCXX_NOEXCEPT
+        -:  729:      {
+        3:  730:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+call    0 returned 3
+        3:  731:		      _M_get_Tp_allocator());
+        3:  731-block  0
+call    0 returned 3
+        -:  732:	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
+        3:  733:      }
+        3:  733-block  0
+call    0 returned 3
+------------------
+_ZNSt6vectorI10DisciplinaSaIS0_EED1Ev:
 function _ZNSt6vectorI10DisciplinaSaIS0_EED1Ev called 20 returned 100% blocks executed 100%
        20:  728:      ~vector() _GLIBCXX_NOEXCEPT
         -:  729:      {
@@ -764,6 +888,7 @@ call    0 returned 20
        20:  733:      }
        20:  733-block  0
 call    0 returned 20
+------------------
         -:  734:
         -:  735:      /**
         -:  736:       *  @brief  %Vector assignment operator.

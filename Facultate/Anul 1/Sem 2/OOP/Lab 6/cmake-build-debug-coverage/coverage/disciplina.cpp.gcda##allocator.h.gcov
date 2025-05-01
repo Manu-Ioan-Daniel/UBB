@@ -172,10 +172,10 @@
         -:  165:      __attribute__((__always_inline__))
         -:  166:      _GLIBCXX20_CONSTEXPR
         -:  167:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-    30168:  168:      : __allocator_base<_Tp>(__a) { }
-    15454:  168-block  0
-      993:  168-block  1
-    13721:  168-block  2
+    46368:  168:      : __allocator_base<_Tp>(__a) { }
+    23810:  168-block  0
+     1304:  168-block  1
+    21254:  168-block  2
         -:  169:
         -:  170:#if __cplusplus >= 201103L
         -:  171:      // Avoid implicit deprecation.
@@ -191,7 +191,7 @@
         -:  181:#if __cpp_constexpr_dynamic_alloc
         -:  182:      constexpr
         -:  183:#endif
-    13724:  184:      ~allocator() _GLIBCXX_NOTHROW { }
+    21257:  184:      ~allocator() _GLIBCXX_NOTHROW { }
     $$$$$:  184-block  0
     $$$$$:  184-block  1
     $$$$$:  184-block  2
@@ -201,10 +201,10 @@
         -:  188:      constexpr _Tp*
         -:  189:      allocate(size_t __n)
         -:  190:      {
-       18:  191:	if (std::__is_constant_evaluated())
-call    0 returned 18
+       19:  191:	if (std::__is_constant_evaluated())
+call    0 returned 19
 branch  1 taken 0 (fallthrough)
-branch  2 taken 18
+branch  2 taken 19
         -:  192:	  {
     #####:  193:	    if (__builtin_mul_overflow(__n, sizeof(_Tp), &__n))
     %%%%%:  193-block  0
@@ -218,9 +218,9 @@ call    0 never executed
 call    0 never executed
         -:  196:	  }
         -:  197:
-       18:  198:	return __allocator_base<_Tp>::allocate(__n, 0);
-       18:  198-block  0
-call    0 returned 18
+       19:  198:	return __allocator_base<_Tp>::allocate(__n, 0);
+       19:  198-block  0
+call    0 returned 19
         -:  199:      }
         -:  200:
         -:  201:      [[__gnu__::__always_inline__]]

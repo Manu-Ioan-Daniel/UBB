@@ -80,12 +80,12 @@ clean: CMakeFiles/Lab_6.dir/clean
 CMakeFiles/Lab_6.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_6.dir\build.make CMakeFiles/Lab_6.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_6.dir\build.make CMakeFiles/Lab_6.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8 "Built target Lab_6"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9 "Built target Lab_6"
 .PHONY : CMakeFiles/Lab_6.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Lab_6.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug\CMakeFiles" 8
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug\CMakeFiles" 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Lab_6.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 1\Sem 2\OOP\Lab 6\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/Lab_6.dir/rule

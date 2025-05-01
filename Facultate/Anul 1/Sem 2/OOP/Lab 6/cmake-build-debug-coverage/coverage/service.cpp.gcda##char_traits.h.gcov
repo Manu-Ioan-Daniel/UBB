@@ -555,27 +555,27 @@ call    0 never executed
         -:  422:      }
         -:  423:
         -:  424:      static _GLIBCXX20_CONSTEXPR char_type*
-function _ZNSt11char_traitsIcE4moveEPcPKcy called 270 returned 100% blocks executed 62%
-      270:  425:      move(char_type* __s1, const char_type* __s2, size_t __n)
+function _ZNSt11char_traitsIcE4moveEPcPKcy called 360 returned 100% blocks executed 62%
+      360:  425:      move(char_type* __s1, const char_type* __s2, size_t __n)
         -:  426:      {
-      270:  427:	if (__n == 0)
-      270:  427-block  0
+      360:  427:	if (__n == 0)
+      360:  427-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 270
+branch  1 taken 360
     #####:  428:	  return __s1;
     %%%%%:  428-block  0
         -:  429:#if __cplusplus >= 202002L
-      270:  430:	if (std::__is_constant_evaluated())
-      270:  430-block  0
-call    0 returned 270
+      360:  430:	if (std::__is_constant_evaluated())
+      360:  430-block  0
+call    0 returned 360
 branch  1 taken 0 (fallthrough)
-branch  2 taken 270
+branch  2 taken 360
     #####:  431:	  return __gnu_cxx::char_traits<char_type>::move(__s1, __s2, __n);
     %%%%%:  431-block  0
 call    0 never executed
         -:  432:#endif
-      270:  433:	return static_cast<char_type*>(__builtin_memmove(__s1, __s2, __n));
-      270:  433-block  0
+      360:  433:	return static_cast<char_type*>(__builtin_memmove(__s1, __s2, __n));
+      360:  433-block  0
         -:  434:      }
         -:  435:
         -:  436:      static _GLIBCXX20_CONSTEXPR char_type*
@@ -603,27 +603,27 @@ call    0 never executed
         -:  446:      }
         -:  447:
         -:  448:      static _GLIBCXX20_CONSTEXPR char_type*
-function _ZNSt11char_traitsIcE6assignEPcyc called 270 returned 100% blocks executed 71%
-      270:  449:      assign(char_type* __s, size_t __n, char_type __a)
+function _ZNSt11char_traitsIcE6assignEPcyc called 360 returned 100% blocks executed 71%
+      360:  449:      assign(char_type* __s, size_t __n, char_type __a)
         -:  450:      {
-      270:  451:	if (__n == 0)
-      270:  451-block  0
+      360:  451:	if (__n == 0)
+      360:  451-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 270
+branch  1 taken 360
     #####:  452:	  return __s;
     %%%%%:  452-block  0
         -:  453:#if __cplusplus >= 202002L
-      270:  454:	if (std::__is_constant_evaluated())
-      270:  454-block  0
-call    0 returned 270
+      360:  454:	if (std::__is_constant_evaluated())
+      360:  454-block  0
+call    0 returned 360
 branch  1 taken 0 (fallthrough)
-branch  2 taken 270
+branch  2 taken 360
     #####:  455:	  return __gnu_cxx::char_traits<char_type>::assign(__s, __n, __a);
     %%%%%:  455-block  0
 call    0 never executed
         -:  456:#endif
-      270:  457:	return static_cast<char_type*>(__builtin_memset(__s, __a, __n));
-      270:  457-block  0
+      360:  457:	return static_cast<char_type*>(__builtin_memset(__s, __a, __n));
+      360:  457-block  0
         -:  458:      }
         -:  459:
         -:  460:      static _GLIBCXX_CONSTEXPR char_type

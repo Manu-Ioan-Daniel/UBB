@@ -517,9 +517,10 @@
         -:  513:      [[__gnu__::__always_inline__]]
         -:  514:      static _GLIBCXX20_CONSTEXPR void
         -:  515:      deallocate(allocator_type& __a, pointer __p, size_type __n)
-       65:  516:      { __a.deallocate(__p, __n); }
-       18:  516-block  0
-       47:  516-block  1
+       83:  516:      { __a.deallocate(__p, __n); }
+       19:  516-block  0
+       17:  516-block  1
+       47:  516-block  2
         -:  517:
         -:  518:      /**
         -:  519:       *  @brief  Construct an object of type `_Up`
@@ -950,9 +951,10 @@
         -:  944:    _Destroy(_ForwardIterator __first, _ForwardIterator __last,
         -:  945:	     allocator<_Tp>&)
         -:  946:    {
-       20:  947:      _Destroy(__first, __last);
-call    0 returned 20
-       20:  948:    }
+       23:  947:      _Destroy(__first, __last);
+call    0 returned 3
+call    1 returned 20
+       23:  948:    }
         -:  949:#endif
         -:  950:  /// @endcond
         -:  951:

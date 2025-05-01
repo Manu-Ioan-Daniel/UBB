@@ -16,4 +16,5 @@ public:
         return listaDiscipline.size();
     }
     void genereazaContract(int nrDiscipline,vector<Disciplina> discipline);
+    void exportCSV(const string& filename) const;
 };

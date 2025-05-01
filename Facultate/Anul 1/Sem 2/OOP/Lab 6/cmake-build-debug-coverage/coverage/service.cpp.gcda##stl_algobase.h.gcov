@@ -334,9 +334,11 @@ branch  1 never executed
         -:  313:  template<typename _Iterator>
         -:  314:    _GLIBCXX20_CONSTEXPR
         -:  315:    inline _Iterator
-        -:  316:    __niter_base(_Iterator __it)
+function _ZSt12__niter_baseIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEET_S6_ called 102 returned 100% blocks executed 100%
+      102:  316:    __niter_base(_Iterator __it)
         -:  317:    _GLIBCXX_NOEXCEPT_IF(std::is_nothrow_copy_constructible<_Iterator>::value)
-        -:  318:    { return __it; }
+      102:  318:    { return __it; }
+      102:  318-block  0
         -:  319:
         -:  320:  template<typename _Ite, typename _Seq>
         -:  321:    _Ite

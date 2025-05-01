@@ -7,22 +7,22 @@
         -:    3:
         -:    4:#include <cassert>
         -:    5:
-function _ZNK10Disciplina8getNrOreEv called 1607 returned 100% blocks executed 100%
-     1607:    6:int Disciplina::getNrOre() const {
-     1607:    7:    return nrOre;
-     1607:    7-block  0
+function _ZNK10Disciplina8getNrOreEv called 1608 returned 100% blocks executed 100%
+     1608:    6:int Disciplina::getNrOre() const {
+     1608:    7:    return nrOre;
+     1608:    7-block  0
         -:    8:}
-function _ZNK10Disciplina11getDenumireB5cxx11Ev called 2189 returned 100% blocks executed 100%
-     2189:    9:string Disciplina::getDenumire() const {
-     2189:   10:    return denumire;
-     2189:   10-block  0
-call    0 returned 2189
+function _ZNK10Disciplina11getDenumireB5cxx11Ev called 7444 returned 100% blocks executed 100%
+     7444:    9:string Disciplina::getDenumire() const {
+     7444:   10:    return denumire;
+     7444:   10-block  0
+call    0 returned 7444
         -:   11:}
-function _ZNK10Disciplina6getTipB5cxx11Ev called 1339 returned 100% blocks executed 100%
-     1339:   12:string Disciplina::getTip() const {
-     1339:   13:    return tip;
-     1339:   13-block  0
-call    0 returned 1339
+function _ZNK10Disciplina6getTipB5cxx11Ev called 1545 returned 100% blocks executed 100%
+     1545:   12:string Disciplina::getTip() const {
+     1545:   13:    return tip;
+     1545:   13-block  0
+call    0 returned 1545
         -:   14:}
 function _ZNK10Disciplina16getCadruDidacticB5cxx11Ev called 1291 returned 100% blocks executed 100%
      1291:   15:string Disciplina::getCadruDidactic() const {

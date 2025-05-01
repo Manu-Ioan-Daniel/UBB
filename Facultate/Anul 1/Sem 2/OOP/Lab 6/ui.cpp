@@ -7,7 +7,7 @@ using std::cin;
 void Ui::startUi() const {
     int cmd=0;
     while (true) {
-        cout<<"0.Exit\n1.Adauga disciplina\n2.Modifica disciplina\n3.Sterge disciplina\n4.Cauta disciplina\n5.Afiseaza discipline\n6.Filtrare discipline dupa ore\n7.Filtrare discipline dupa cadru didactic\n8.Sortare discipline dupa ore\n9.Sortare discipline dupa denumire\n10.Sortare discipline dupa tip si cadru didactic\n11.Adauga disciplina in contract\n12.Goleste contract\n13.Genereaza contract\n14.Statistici\n";
+        cout<<"0.Exit\n1.Adauga disciplina\n2.Modifica disciplina\n3.Sterge disciplina\n4.Cauta disciplina\n5.Afiseaza discipline\n6.Filtrare discipline dupa ore\n7.Filtrare discipline dupa cadru didactic\n8.Sortare discipline dupa ore\n9.Sortare discipline dupa denumire\n10.Sortare discipline dupa tip si cadru didactic\n11.Adauga disciplina in contract\n12.Goleste contract\n13.Genereaza contract\n14.Statistici\n15.Undo\n16.Export CSV\n";
         readInteger(cmd,"Introdu optiunea dorita: ");
         if (cmd==0) {
             break;
@@ -189,6 +189,23 @@ void Ui::startUi() const {
                 cout<<e.getMsg();
             }
         }
+        if (cmd==15) {
+            try {
+                undo();
+            }catch (RepoException& e) {
+                cout<<e.getMsg();
+            }catch (ServiceException& e) {
+                cout<<e.getMsg();
+            }catch (ValidationError& e) {
+                cout<<e.getError();
+            }
+        }
+        if (cmd==16) {
+            cout<<"Introdu numele fisierului:";
+            string filename;
+            getline(cin,filename);
+            service.exportCSVService(filename);
+        }
         if (cmd<0 || cmd>13) {
             cout<<"Optiune invalida!\n";
         }
@@ -263,3 +280,6 @@ void Ui::afiseazaDiscipline() const {
     }
 }
 
+void Ui::undo() const {
+    service.undo();
+}

@@ -30,10 +30,10 @@ call    2 returned 3
         -:   21:    void stergeDisciplina(const string& denumire,const string& tip);
         -:   22:    [[nodiscard]] Disciplina cautaDisciplina(const string &denumire, const string &tip) const;
         -:   23:    void modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina);
-function _ZN4Repo6getAllEv called 17 returned 100% blocks executed 100%
-       17:   24:    [[nodiscard]] vector<Disciplina>& getAll(){
-       17:   25:        return discipline;
-       17:   25-block  0
+function _ZN4Repo6getAllEv called 120 returned 100% blocks executed 100%
+      120:   24:    [[nodiscard]] vector<Disciplina>& getAll(){
+      120:   25:        return discipline;
+      120:   25-block  0
         -:   26:    }
         -:   27:
         -:   28:

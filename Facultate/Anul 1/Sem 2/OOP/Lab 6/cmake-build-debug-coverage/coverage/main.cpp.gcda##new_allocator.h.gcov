@@ -89,8 +89,9 @@
         -:   85:
         -:   86:      __attribute__((__always_inline__))
         -:   87:      _GLIBCXX20_CONSTEXPR
-        3:   88:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+        6:   88:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
         3:   88-block  0
+        3:   88-block  1
         -:   89:
         -:   90:      __attribute__((__always_inline__))
         -:   91:      _GLIBCXX20_CONSTEXPR
@@ -154,7 +155,7 @@
         -:  149:
         -:  150:      // __p is not permitted to be a null pointer.
         -:  151:      void
-       65:  152:      deallocate(_Tp* __p, size_type __n __attribute__ ((__unused__)))
+       83:  152:      deallocate(_Tp* __p, size_type __n __attribute__ ((__unused__)))
         -:  153:      {
         -:  154:#if __cpp_sized_deallocation
         -:  155:# define _GLIBCXX_SIZED_DEALLOC(p, n) (p), (n) * sizeof(_Tp)
@@ -170,7 +171,7 @@
         -:  165:	    return;
         -:  166:	  }
         -:  167:#endif
-       65:  168:	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+       83:  168:	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
         -:  169:      }
         -:  170:
         -:  171:#undef _GLIBCXX_SIZED_DEALLOC

@@ -142,11 +142,11 @@
         -:  138:       *  @return `addressof(__r)`
         -:  139:      */
         -:  140:      static _GLIBCXX20_CONSTEXPR pointer
-function _ZNSt19__ptr_traits_ptr_toIPKcS0_Lb0EE10pointer_toERS0_ called 22492 returned 100% blocks executed 100%
-    22492:  141:      pointer_to(element_type& __r) noexcept
-    22492:  142:      { return std::addressof(__r); }
-    22492:  142-block  0
-call    0 returned 22492
+function _ZNSt19__ptr_traits_ptr_toIPKcS0_Lb0EE10pointer_toERS0_ called 31960 returned 100% blocks executed 100%
+    31960:  141:      pointer_to(element_type& __r) noexcept
+    31960:  142:      { return std::addressof(__r); }
+    31960:  142-block  0
+call    0 returned 31960
         -:  143:    };
         -:  144:
         -:  145:  template<typename _Ptr, typename _Elt>

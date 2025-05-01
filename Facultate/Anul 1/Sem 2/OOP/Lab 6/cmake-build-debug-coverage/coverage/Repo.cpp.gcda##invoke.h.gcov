@@ -61,35 +61,35 @@
         -:   57:
         -:   58:  template<typename _Res, typename _Fn, typename... _Args>
         -:   59:    constexpr _Res
-       18:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
-       18:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
+    15474:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
+    15474:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
 ------------------
 _ZSt13__invoke_implIbRZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_JRS9_EET_St14__invoke_otherOT0_DpOT1_:
-function _ZSt13__invoke_implIbRZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_JRS9_EET_St14__invoke_otherOT0_DpOT1_ called 2 returned 100% blocks executed 100%
-        2:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
-        2:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
-        2:   61-block  0
-call    0 returned 2
-call    1 returned 2
-call    2 returned 2
+function _ZSt13__invoke_implIbRZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_JRS9_EET_St14__invoke_otherOT0_DpOT1_ called 5152 returned 100% blocks executed 100%
+     5152:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
+     5152:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
+     5152:   61-block  0
+call    0 returned 5152
+call    1 returned 5152
+call    2 returned 5152
 ------------------
 _ZSt13__invoke_implIbRZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_JSB_EET_St14__invoke_otherOT0_DpOT1_:
-function _ZSt13__invoke_implIbRZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_JSB_EET_St14__invoke_otherOT0_DpOT1_ called 8 returned 100% blocks executed 100%
-        8:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
-        8:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
-        8:   61-block  0
-call    0 returned 8
-call    1 returned 8
-call    2 returned 8
+function _ZSt13__invoke_implIbRZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_JSB_EET_St14__invoke_otherOT0_DpOT1_ called 5161 returned 100% blocks executed 100%
+     5161:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
+     5161:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
+     5161:   61-block  0
+call    0 returned 5161
+call    1 returned 5161
+call    2 returned 5161
 ------------------
 _ZSt13__invoke_implIRK10DisciplinaRSt8identityJS2_EET_St14__invoke_otherOT0_DpOT1_:
-function _ZSt13__invoke_implIRK10DisciplinaRSt8identityJS2_EET_St14__invoke_otherOT0_DpOT1_ called 8 returned 100% blocks executed 100%
-        8:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
-        8:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
-        8:   61-block  0
-call    0 returned 8
-call    1 returned 8
-call    2 returned 8
+function _ZSt13__invoke_implIRK10DisciplinaRSt8identityJS2_EET_St14__invoke_otherOT0_DpOT1_ called 5161 returned 100% blocks executed 100%
+     5161:   60:    __invoke_impl(__invoke_other, _Fn&& __f, _Args&&... __args)
+     5161:   61:    { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
+     5161:   61-block  0
+call    0 returned 5161
+call    1 returned 5161
+call    2 returned 5161
 ------------------
         -:   62:
         -:   63:  template<typename _Res, typename _MemFun, typename _Tp, typename... _Args>
@@ -119,14 +119,14 @@ call    2 returned 8
         -:   87:  /// Invoke a callable object.
         -:   88:  template<typename _Callable, typename... _Args>
         -:   89:    constexpr typename __invoke_result<_Callable, _Args...>::type
-       18:   90:    __invoke(_Callable&& __fn, _Args&&... __args)
+    15474:   90:    __invoke(_Callable&& __fn, _Args&&... __args)
         -:   91:    noexcept(__is_nothrow_invocable<_Callable, _Args...>::value)
         -:   92:    {
         -:   93:      using __result = __invoke_result<_Callable, _Args...>;
         -:   94:      using __type = typename __result::type;
         -:   95:      using __tag = typename __result::__invoke_type;
-       18:   96:      return std::__invoke_impl<__type>(__tag{}, std::forward<_Callable>(__fn),
-       18:   97:					std::forward<_Args>(__args)...);
+    15474:   96:      return std::__invoke_impl<__type>(__tag{}, std::forward<_Callable>(__fn),
+    15474:   97:					std::forward<_Args>(__args)...);
         -:   98:    }
         -:   99:
         -:  100:#if __cplusplus >= 201703L

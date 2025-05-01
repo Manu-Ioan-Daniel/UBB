@@ -100,10 +100,22 @@
         -:   96:	pointer _M_end_of_storage;
         -:   97:
         -:   98:	_GLIBCXX20_CONSTEXPR
+    #####:   99:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
+    #####:  100:	: _M_start(), _M_finish(), _M_end_of_storage()
+    #####:  101:	{ }
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE17_Vector_impl_dataC2Ev:
+function _ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE17_Vector_impl_dataC2Ev called 0 returned 0% blocks executed 0%
+    #####:   99:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
+    #####:  100:	: _M_start(), _M_finish(), _M_end_of_storage()
+    #####:  101:	{ }
+------------------
+_ZNSt12_Vector_baseI10DisciplinaSaIS0_EE17_Vector_impl_dataC2Ev:
 function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE17_Vector_impl_dataC2Ev called 0 returned 0% blocks executed 0%
     #####:   99:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
     #####:  100:	: _M_start(), _M_finish(), _M_end_of_storage()
     #####:  101:	{ }
+------------------
         -:  102:
         -:  103:#if __cplusplus >= 201103L
         -:  104:	_GLIBCXX20_CONSTEXPR
@@ -139,6 +151,22 @@ function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE17_Vector_impl_dataC2Ev called 
         -:  134:	: public _Tp_alloc_type, public _Vector_impl_data
         -:  135:      {
         -:  136:	_GLIBCXX20_CONSTEXPR
+    #####:  137:	_Vector_impl() _GLIBCXX_NOEXCEPT_IF(
+        -:  138:	    is_nothrow_default_constructible<_Tp_alloc_type>::value)
+    #####:  139:	: _Tp_alloc_type()
+    #####:  140:	{ }
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE12_Vector_implC1Ev:
+function _ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE12_Vector_implC1Ev called 0 returned 0% blocks executed 0%
+    #####:  137:	_Vector_impl() _GLIBCXX_NOEXCEPT_IF(
+    %%%%%:  137-block  0
+        -:  138:	    is_nothrow_default_constructible<_Tp_alloc_type>::value)
+    #####:  139:	: _Tp_alloc_type()
+    %%%%%:  139-block  0
+call    0 never executed
+    #####:  140:	{ }
+------------------
+_ZNSt12_Vector_baseI10DisciplinaSaIS0_EE12_Vector_implC1Ev:
 function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE12_Vector_implC1Ev called 0 returned 0% blocks executed 0%
     #####:  137:	_Vector_impl() _GLIBCXX_NOEXCEPT_IF(
     %%%%%:  137-block  0
@@ -147,6 +175,7 @@ function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE12_Vector_implC1Ev called 0 ret
     %%%%%:  139-block  0
 call    0 never executed
     #####:  140:	{ }
+------------------
         -:  141:
         -:  142:	_GLIBCXX20_CONSTEXPR
 function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE12_Vector_implC1ERKS1_ called 0 returned 0% blocks executed 0%
@@ -308,17 +337,39 @@ call    0 never executed
         -:  295:
         -:  296:      _GLIBCXX20_CONSTEXPR
         -:  297:      _Tp_alloc_type&
+    #####:  298:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+    #####:  299:      { return this->_M_impl; }
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE19_M_get_Tp_allocatorEv:
+function _ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE19_M_get_Tp_allocatorEv called 0 returned 0% blocks executed 0%
+    #####:  298:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+    #####:  299:      { return this->_M_impl; }
+    %%%%%:  299-block  0
+------------------
+_ZNSt12_Vector_baseI10DisciplinaSaIS0_EE19_M_get_Tp_allocatorEv:
 function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE19_M_get_Tp_allocatorEv called 0 returned 0% blocks executed 0%
     #####:  298:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
     #####:  299:      { return this->_M_impl; }
     %%%%%:  299-block  0
+------------------
         -:  300:
         -:  301:      _GLIBCXX20_CONSTEXPR
         -:  302:      const _Tp_alloc_type&
+      34*:  303:      _M_get_Tp_allocator() const _GLIBCXX_NOEXCEPT
+      34*:  304:      { return this->_M_impl; }
+------------------
+_ZNKSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE19_M_get_Tp_allocatorEv:
+function _ZNKSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE19_M_get_Tp_allocatorEv called 34 returned 100% blocks executed 100%
+       34:  303:      _M_get_Tp_allocator() const _GLIBCXX_NOEXCEPT
+       34:  304:      { return this->_M_impl; }
+       34:  304-block  0
+------------------
+_ZNKSt12_Vector_baseI10DisciplinaSaIS0_EE19_M_get_Tp_allocatorEv:
 function _ZNKSt12_Vector_baseI10DisciplinaSaIS0_EE19_M_get_Tp_allocatorEv called 0 returned 0% blocks executed 0%
     #####:  303:      _M_get_Tp_allocator() const _GLIBCXX_NOEXCEPT
     #####:  304:      { return this->_M_impl; }
     %%%%%:  304-block  0
+------------------
         -:  305:
         -:  306:      _GLIBCXX20_CONSTEXPR
         -:  307:      allocator_type
@@ -326,10 +377,20 @@ function _ZNKSt12_Vector_baseI10DisciplinaSaIS0_EE19_M_get_Tp_allocatorEv called
         -:  309:      { return allocator_type(_M_get_Tp_allocator()); }
         -:  310:
         -:  311:#if __cplusplus >= 201103L
+    #####:  312:      _Vector_base() = default;
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EEC2Ev:
+function _ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EEC2Ev called 0 returned 0% blocks executed 0%
+    #####:  312:      _Vector_base() = default;
+    %%%%%:  312-block  0
+call    0 never executed
+------------------
+_ZNSt12_Vector_baseI10DisciplinaSaIS0_EEC2Ev:
 function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EEC2Ev called 0 returned 0% blocks executed 0%
     #####:  312:      _Vector_base() = default;
     %%%%%:  312-block  0
 call    0 never executed
+------------------
         -:  313:#else
         -:  314:      _Vector_base() { }
         -:  315:#endif
@@ -390,6 +451,24 @@ call    3 never executed
         -:  361:#endif
         -:  362:
         -:  363:      _GLIBCXX20_CONSTEXPR
+    #####:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
+        -:  365:      {
+    #####:  366:	_M_deallocate(_M_impl._M_start,
+    #####:  367:		      _M_impl._M_end_of_storage - _M_impl._M_start);
+    #####:  368:      }
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EED2Ev:
+function _ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EED2Ev called 0 returned 0% blocks executed 0%
+    #####:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
+        -:  365:      {
+    #####:  366:	_M_deallocate(_M_impl._M_start,
+    #####:  367:		      _M_impl._M_end_of_storage - _M_impl._M_start);
+    %%%%%:  367-block  0
+call    0 never executed
+    #####:  368:      }
+call    0 never executed
+------------------
+_ZNSt12_Vector_baseI10DisciplinaSaIS0_EED2Ev:
 function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EED2Ev called 0 returned 0% blocks executed 0%
     #####:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
         -:  365:      {
@@ -399,12 +478,36 @@ function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EED2Ev called 0 returned 0% block
 call    0 never executed
     #####:  368:      }
 call    0 never executed
+------------------
         -:  369:
         -:  370:    public:
         -:  371:      _Vector_impl _M_impl;
         -:  372:
         -:  373:      _GLIBCXX20_CONSTEXPR
         -:  374:      pointer
+      17*:  375:      _M_allocate(size_t __n)
+        -:  376:      {
+        -:  377:	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
+      34*:  378:	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
+        -:  379:      }
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE11_M_allocateEy:
+function _ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE11_M_allocateEy called 17 returned 100% blocks executed 67%
+       17:  375:      _M_allocate(size_t __n)
+        -:  376:      {
+        -:  377:	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
+      34*:  378:	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
+       17:  378-block  0
+branch  0 taken 17 (fallthrough)
+branch  1 taken 0
+       17:  378-block  1
+call    2 returned 17
+       17:  378-block  2
+    %%%%%:  378-block  3
+       17:  378-block  4
+        -:  379:      }
+------------------
+_ZNSt12_Vector_baseI10DisciplinaSaIS0_EE11_M_allocateEy:
 function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE11_M_allocateEy called 0 returned 0% blocks executed 0%
     #####:  375:      _M_allocate(size_t __n)
         -:  376:      {
@@ -419,9 +522,32 @@ call    2 never executed
     %%%%%:  378-block  3
     %%%%%:  378-block  4
         -:  379:      }
+------------------
         -:  380:
         -:  381:      _GLIBCXX20_CONSTEXPR
         -:  382:      void
+    #####:  383:      _M_deallocate(pointer __p, size_t __n)
+        -:  384:      {
+        -:  385:	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
+    #####:  386:	if (__p)
+    #####:  387:	  _Tr::deallocate(_M_impl, __p, __n);
+    #####:  388:      }
+------------------
+_ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE13_M_deallocateEPS4_y:
+function _ZNSt12_Vector_baseISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE13_M_deallocateEPS4_y called 0 returned 0% blocks executed 0%
+    #####:  383:      _M_deallocate(pointer __p, size_t __n)
+        -:  384:      {
+        -:  385:	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
+    #####:  386:	if (__p)
+    %%%%%:  386-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  387:	  _Tr::deallocate(_M_impl, __p, __n);
+    %%%%%:  387-block  0
+call    0 never executed
+    #####:  388:      }
+------------------
+_ZNSt12_Vector_baseI10DisciplinaSaIS0_EE13_M_deallocateEPS0_y:
 function _ZNSt12_Vector_baseI10DisciplinaSaIS0_EE13_M_deallocateEPS0_y called 0 returned 0% blocks executed 0%
     #####:  383:      _M_deallocate(pointer __p, size_t __n)
         -:  384:      {
@@ -434,6 +560,7 @@ branch  1 never executed
     %%%%%:  387-block  0
 call    0 never executed
     #####:  388:      }
+------------------
         -:  389:
         -:  390:    protected:
         -:  391:      _GLIBCXX20_CONSTEXPR
@@ -547,12 +674,15 @@ call    0 never executed
         -:  496:      { return __result; }
         -:  497:
         -:  498:      static _GLIBCXX20_CONSTEXPR pointer
-        -:  499:      _S_relocate(pointer __first, pointer __last, pointer __result,
+function _ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE11_S_relocateEPS4_S7_S7_RS5_ called 34 returned 100% blocks executed 100%
+       34:  499:      _S_relocate(pointer __first, pointer __last, pointer __result,
         -:  500:		  _Tp_alloc_type& __alloc) noexcept
         -:  501:      {
         -:  502:#if __cpp_if_constexpr
         -:  503:	// All callers have already checked _S_use_relocate() so just do it.
-        -:  504:	return std::__relocate_a(__first, __last, __result, __alloc);
+       34:  504:	return std::__relocate_a(__first, __last, __result, __alloc);
+       34:  504-block  0
+call    0 returned 34
         -:  505:#else
         -:  506:	using __do_it = __bool_constant<_S_use_relocate()>;
         -:  507:	return _S_do_relocate(__first, __last, __result, __alloc, __do_it{});
@@ -574,10 +704,20 @@ call    0 never executed
         -:  523:       *  @brief  Creates a %vector with no elements.
         -:  524:       */
         -:  525:#if __cplusplus >= 201103L
+    #####:  526:      vector() = default;
+------------------
+_ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EEC1Ev:
+function _ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EEC1Ev called 0 returned 0% blocks executed 0%
+    #####:  526:      vector() = default;
+    %%%%%:  526-block  0
+call    0 never executed
+------------------
+_ZNSt6vectorI10DisciplinaSaIS0_EEC1Ev:
 function _ZNSt6vectorI10DisciplinaSaIS0_EEC1Ev called 0 returned 0% blocks executed 0%
     #####:  526:      vector() = default;
     %%%%%:  526-block  0
 call    0 never executed
+------------------
         -:  527:#else
         -:  528:      vector() { }
         -:  529:#endif
@@ -799,6 +939,28 @@ call    0 never executed
         -:  725:       *  responsibility.
         -:  726:       */
         -:  727:      _GLIBCXX20_CONSTEXPR
+    #####:  728:      ~vector() _GLIBCXX_NOEXCEPT
+        -:  729:      {
+    #####:  730:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+    #####:  731:		      _M_get_Tp_allocator());
+        -:  732:	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
+    #####:  733:      }
+------------------
+_ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EED1Ev:
+function _ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EED1Ev called 0 returned 0% blocks executed 0%
+    #####:  728:      ~vector() _GLIBCXX_NOEXCEPT
+        -:  729:      {
+    #####:  730:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+call    0 never executed
+    #####:  731:		      _M_get_Tp_allocator());
+    %%%%%:  731-block  0
+call    0 never executed
+        -:  732:	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
+    #####:  733:      }
+    %%%%%:  733-block  0
+call    0 never executed
+------------------
+_ZNSt6vectorI10DisciplinaSaIS0_EED1Ev:
 function _ZNSt6vectorI10DisciplinaSaIS0_EED1Ev called 0 returned 0% blocks executed 0%
     #####:  728:      ~vector() _GLIBCXX_NOEXCEPT
         -:  729:      {
@@ -811,6 +973,7 @@ call    0 never executed
     #####:  733:      }
     %%%%%:  733-block  0
 call    0 never executed
+------------------
         -:  734:
         -:  735:      /**
         -:  736:       *  @brief  %Vector assignment operator.
@@ -945,12 +1108,25 @@ call    0 never executed
         -:  865:       */
         -:  866:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  867:      iterator
+      17*:  868:      begin() _GLIBCXX_NOEXCEPT
+      17*:  869:      { return iterator(this->_M_impl._M_start); }
+------------------
+_ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE5beginEv:
+function _ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE5beginEv called 17 returned 100% blocks executed 100%
+       17:  868:      begin() _GLIBCXX_NOEXCEPT
+       17:  869:      { return iterator(this->_M_impl._M_start); }
+       17:  869-block  0
+call    0 returned 17
+       17:  869-block  1
+------------------
+_ZNSt6vectorI10DisciplinaSaIS0_EE5beginEv:
 function _ZNSt6vectorI10DisciplinaSaIS0_EE5beginEv called 0 returned 0% blocks executed 0%
     #####:  868:      begin() _GLIBCXX_NOEXCEPT
     #####:  869:      { return iterator(this->_M_impl._M_start); }
     %%%%%:  869-block  0
 call    0 never executed
     %%%%%:  869-block  1
+------------------
         -:  870:
         -:  871:      /**
         -:  872:       *  Returns a read-only (constant) iterator that points to the
@@ -959,12 +1135,25 @@ call    0 never executed
         -:  875:       */
         -:  876:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  877:      const_iterator
+     103*:  878:      begin() const _GLIBCXX_NOEXCEPT
+     103*:  879:      { return const_iterator(this->_M_impl._M_start); }
+------------------
+_ZNKSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE5beginEv:
+function _ZNKSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE5beginEv called 103 returned 100% blocks executed 100%
+      103:  878:      begin() const _GLIBCXX_NOEXCEPT
+      103:  879:      { return const_iterator(this->_M_impl._M_start); }
+      103:  879-block  0
+call    0 returned 103
+      103:  879-block  1
+------------------
+_ZNKSt6vectorI10DisciplinaSaIS0_EE5beginEv:
 function _ZNKSt6vectorI10DisciplinaSaIS0_EE5beginEv called 0 returned 0% blocks executed 0%
     #####:  878:      begin() const _GLIBCXX_NOEXCEPT
     #####:  879:      { return const_iterator(this->_M_impl._M_start); }
     %%%%%:  879-block  0
 call    0 never executed
     %%%%%:  879-block  1
+------------------
         -:  880:
         -:  881:      /**
         -:  882:       *  Returns a read/write iterator that points one past the last
@@ -973,12 +1162,25 @@ call    0 never executed
         -:  885:       */
         -:  886:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  887:      iterator
+     535*:  888:      end() _GLIBCXX_NOEXCEPT
+     535*:  889:      { return iterator(this->_M_impl._M_finish); }
+------------------
+_ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE3endEv:
+function _ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE3endEv called 535 returned 100% blocks executed 100%
+      535:  888:      end() _GLIBCXX_NOEXCEPT
+      535:  889:      { return iterator(this->_M_impl._M_finish); }
+      535:  889-block  0
+call    0 returned 535
+      535:  889-block  1
+------------------
+_ZNSt6vectorI10DisciplinaSaIS0_EE3endEv:
 function _ZNSt6vectorI10DisciplinaSaIS0_EE3endEv called 0 returned 0% blocks executed 0%
     #####:  888:      end() _GLIBCXX_NOEXCEPT
     #####:  889:      { return iterator(this->_M_impl._M_finish); }
     %%%%%:  889-block  0
 call    0 never executed
     %%%%%:  889-block  1
+------------------
         -:  890:
         -:  891:      /**
         -:  892:       *  Returns a read-only (constant) iterator that points one past
@@ -987,12 +1189,25 @@ call    0 never executed
         -:  895:       */
         -:  896:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  897:      const_iterator
+     103*:  898:      end() const _GLIBCXX_NOEXCEPT
+     103*:  899:      { return const_iterator(this->_M_impl._M_finish); }
+------------------
+_ZNKSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE3endEv:
+function _ZNKSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE3endEv called 103 returned 100% blocks executed 100%
+      103:  898:      end() const _GLIBCXX_NOEXCEPT
+      103:  899:      { return const_iterator(this->_M_impl._M_finish); }
+      103:  899-block  0
+call    0 returned 103
+      103:  899-block  1
+------------------
+_ZNKSt6vectorI10DisciplinaSaIS0_EE3endEv:
 function _ZNKSt6vectorI10DisciplinaSaIS0_EE3endEv called 0 returned 0% blocks executed 0%
     #####:  898:      end() const _GLIBCXX_NOEXCEPT
     #####:  899:      { return const_iterator(this->_M_impl._M_finish); }
     %%%%%:  899-block  0
 call    0 never executed
     %%%%%:  899-block  1
+------------------
         -:  900:
         -:  901:      /**
         -:  902:       *  Returns a read/write reverse iterator that points to the
@@ -1080,20 +1295,44 @@ call    0 never executed
         -:  984:      /**  Returns the number of elements in the %vector.  */
         -:  985:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  986:      size_type
+      68*:  987:      size() const _GLIBCXX_NOEXCEPT
+      68*:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+------------------
+_ZNKSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE4sizeEv:
+function _ZNKSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE4sizeEv called 68 returned 100% blocks executed 100%
+       68:  987:      size() const _GLIBCXX_NOEXCEPT
+       68:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+       68:  988-block  0
+------------------
+_ZNKSt6vectorI10DisciplinaSaIS0_EE4sizeEv:
 function _ZNKSt6vectorI10DisciplinaSaIS0_EE4sizeEv called 0 returned 0% blocks executed 0%
     #####:  987:      size() const _GLIBCXX_NOEXCEPT
     #####:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
     %%%%%:  988-block  0
+------------------
         -:  989:
         -:  990:      /**  Returns the size() of the largest possible %vector.  */
         -:  991:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  992:      size_type
+      34*:  993:      max_size() const _GLIBCXX_NOEXCEPT
+      34*:  994:      { return _S_max_size(_M_get_Tp_allocator()); }
+------------------
+_ZNKSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE8max_sizeEv:
+function _ZNKSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE8max_sizeEv called 34 returned 100% blocks executed 100%
+       34:  993:      max_size() const _GLIBCXX_NOEXCEPT
+       34:  994:      { return _S_max_size(_M_get_Tp_allocator()); }
+       34:  994-block  0
+call    0 returned 34
+call    1 returned 34
+------------------
+_ZNKSt6vectorI10DisciplinaSaIS0_EE8max_sizeEv:
 function _ZNKSt6vectorI10DisciplinaSaIS0_EE8max_sizeEv called 0 returned 0% blocks executed 0%
     #####:  993:      max_size() const _GLIBCXX_NOEXCEPT
     #####:  994:      { return _S_max_size(_M_get_Tp_allocator()); }
     %%%%%:  994-block  0
 call    0 never executed
 call    1 never executed
+------------------
         -:  995:
         -:  996:#if __cplusplus >= 201103L
         -:  997:      /**
@@ -1182,6 +1421,10 @@ call    1 never executed
         -: 1080:       */
         -: 1081:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 1082:      bool
+     103*: 1083:      empty() const _GLIBCXX_NOEXCEPT
+     103*: 1084:      { return begin() == end(); }
+------------------
+_ZNKSt6vectorI10DisciplinaSaIS0_EE5emptyEv:
 function _ZNKSt6vectorI10DisciplinaSaIS0_EE5emptyEv called 0 returned 0% blocks executed 0%
     #####: 1083:      empty() const _GLIBCXX_NOEXCEPT
     #####: 1084:      { return begin() == end(); }
@@ -1189,6 +1432,16 @@ function _ZNKSt6vectorI10DisciplinaSaIS0_EE5emptyEv called 0 returned 0% blocks 
 call    0 never executed
 call    1 never executed
 call    2 never executed
+------------------
+_ZNKSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE5emptyEv:
+function _ZNKSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE5emptyEv called 103 returned 100% blocks executed 100%
+      103: 1083:      empty() const _GLIBCXX_NOEXCEPT
+      103: 1084:      { return begin() == end(); }
+      103: 1084-block  0
+call    0 returned 103
+call    1 returned 103
+call    2 returned 103
+------------------
         -: 1085:
         -: 1086:      /**
         -: 1087:       *  @brief  Attempt to preallocate enough memory for specified number of
@@ -1225,12 +1478,12 @@ call    2 never executed
         -: 1118:       */
         -: 1119:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 1120:      reference
-function _ZNSt6vectorI10DisciplinaSaIS0_EEixEy called 1 returned 100% blocks executed 100%
-        1: 1121:      operator[](size_type __n) _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorI10DisciplinaSaIS0_EEixEy called 2 returned 100% blocks executed 100%
+        2: 1121:      operator[](size_type __n) _GLIBCXX_NOEXCEPT
         -: 1122:      {
         -: 1123:	__glibcxx_requires_subscript(__n);
-        1: 1124:	return *(this->_M_impl._M_start + __n);
-        1: 1124-block  0
+        2: 1124:	return *(this->_M_impl._M_start + __n);
+        2: 1124-block  0
         -: 1125:      }
         -: 1126:
         -: 1127:      /**
@@ -1334,10 +1587,15 @@ function _ZNSt6vectorI10DisciplinaSaIS0_EEixEy called 1 returned 100% blocks exe
         -: 1225:       */
         -: 1226:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 1227:      reference
-        -: 1228:      back() _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE4backEv called 518 returned 100% blocks executed 100%
+      518: 1228:      back() _GLIBCXX_NOEXCEPT
         -: 1229:      {
         -: 1230:	__glibcxx_requires_nonempty();
-        -: 1231:	return *(end() - 1);
+      518: 1231:	return *(end() - 1);
+      518: 1231-block  0
+call    0 returned 518
+call    1 returned 518
+call    2 returned 518
         -: 1232:      }
         -: 1233:
         -: 1234:      /**
@@ -1409,8 +1667,12 @@ call    1 never executed
         -: 1290:#if __cplusplus >= 201103L
         -: 1291:      _GLIBCXX20_CONSTEXPR
         -: 1292:      void
-        -: 1293:      push_back(value_type&& __x)
-        -: 1294:      { emplace_back(std::move(__x)); }
+function _ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE9push_backEOS4_ called 416 returned 100% blocks executed 100%
+      416: 1293:      push_back(value_type&& __x)
+      416: 1294:      { emplace_back(std::move(__x)); }
+      416: 1294-block  0
+call    0 returned 416
+call    1 returned 416
         -: 1295:
         -: 1296:      template<typename... _Args>
         -: 1297:#if __cplusplus > 201402L
@@ -1433,13 +1695,16 @@ call    1 never executed
         -: 1314:       */
         -: 1315:      _GLIBCXX20_CONSTEXPR
         -: 1316:      void
-        -: 1317:      pop_back() _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE8pop_backEv called 102 returned 100% blocks executed 100%
+      102: 1317:      pop_back() _GLIBCXX_NOEXCEPT
         -: 1318:      {
         -: 1319:	__glibcxx_requires_nonempty();
-        -: 1320:	--this->_M_impl._M_finish;
-        -: 1321:	_Alloc_traits::destroy(this->_M_impl, this->_M_impl._M_finish);
+      102: 1320:	--this->_M_impl._M_finish;
+      102: 1321:	_Alloc_traits::destroy(this->_M_impl, this->_M_impl._M_finish);
+      102: 1321-block  0
+call    0 returned 102
         -: 1322:	_GLIBCXX_ASAN_ANNOTATE_SHRINK(1);
-        -: 1323:      }
+      102: 1323:      }
         -: 1324:
         -: 1325:#if __cplusplus >= 201103L
         -: 1326:      /**
@@ -2007,6 +2272,49 @@ call    1 never executed
         -: 1888:      // Called by _M_fill_insert, _M_insert_aux etc.
         -: 1889:      _GLIBCXX20_CONSTEXPR
         -: 1890:      size_type
+      17*: 1891:      _M_check_len(size_type __n, const char* __s) const
+        -: 1892:      {
+      17*: 1893:	if (max_size() - size() < __n)
+    #####: 1894:	  __throw_length_error(__N(__s));
+        -: 1895:
+      17*: 1896:	const size_type __len = size() + (std::max)(size(), __n);
+      17*: 1897:	return (__len < size() || __len > max_size()) ? max_size() : __len;
+        -: 1898:      }
+------------------
+_ZNKSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE12_M_check_lenEyPKc:
+function _ZNKSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE12_M_check_lenEyPKc called 17 returned 100% blocks executed 87%
+       17: 1891:      _M_check_len(size_type __n, const char* __s) const
+        -: 1892:      {
+       17: 1893:	if (max_size() - size() < __n)
+       17: 1893-block  0
+call    0 returned 17
+call    1 returned 17
+branch  2 taken 0 (fallthrough)
+branch  3 taken 17
+    #####: 1894:	  __throw_length_error(__N(__s));
+    %%%%%: 1894-block  0
+call    0 never executed
+        -: 1895:
+       17: 1896:	const size_type __len = size() + (std::max)(size(), __n);
+       17: 1896-block  0
+call    0 returned 17
+call    1 returned 17
+call    2 returned 17
+      17*: 1897:	return (__len < size() || __len > max_size()) ? max_size() : __len;
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
+branch  2 taken 0
+       17: 1897-block  0
+call    3 returned 17
+branch  4 taken 0 (fallthrough)
+branch  5 taken 17
+    %%%%%: 1897-block  1
+call    6 never executed
+       17: 1897-block  2
+       17: 1897-block  3
+        -: 1898:      }
+------------------
+_ZNKSt6vectorI10DisciplinaSaIS0_EE12_M_check_lenEyPKc:
 function _ZNKSt6vectorI10DisciplinaSaIS0_EE12_M_check_lenEyPKc called 0 returned 0% blocks executed 0%
     #####: 1891:      _M_check_len(size_type __n, const char* __s) const
         -: 1892:      {
@@ -2038,6 +2346,7 @@ call    6 never executed
     %%%%%: 1897-block  2
     %%%%%: 1897-block  3
         -: 1898:      }
+------------------
         -: 1899:
         -: 1900:      // Called by constructors to check initial size.
         -: 1901:      static _GLIBCXX20_CONSTEXPR size_type
@@ -2050,19 +2359,15 @@ call    6 never executed
         -: 1908:      }
         -: 1909:
         -: 1910:      static _GLIBCXX20_CONSTEXPR size_type
-function _ZNSt6vectorI10DisciplinaSaIS0_EE11_S_max_sizeERKS1_ called 0 returned 0% blocks executed 0%
-    #####: 1911:      _S_max_size(const _Tp_alloc_type& __a) _GLIBCXX_NOEXCEPT
+      34*: 1911:      _S_max_size(const _Tp_alloc_type& __a) _GLIBCXX_NOEXCEPT
         -: 1912:      {
         -: 1913:	// std::distance(begin(), end()) cannot be greater than PTRDIFF_MAX,
         -: 1914:	// and realistically we can't store more than PTRDIFF_MAX/sizeof(T)
         -: 1915:	// (even if std::allocator_traits::max_size says we can).
-    #####: 1916:	const size_t __diffmax
-    %%%%%: 1916-block  0
+      34*: 1916:	const size_t __diffmax
         -: 1917:	  = __gnu_cxx::__numeric_traits<ptrdiff_t>::__max / sizeof(_Tp);
-    #####: 1918:	const size_t __allocmax = _Alloc_traits::max_size(__a);
-    #####: 1919:	return (std::min)(__diffmax, __allocmax);
-    %%%%%: 1919-block  0
-call    0 never executed
+      34*: 1918:	const size_t __allocmax = _Alloc_traits::max_size(__a);
+      34*: 1919:	return (std::min)(__diffmax, __allocmax);
         -: 1920:      }
         -: 1921:
         -: 1922:      // Internal erase functions follow.

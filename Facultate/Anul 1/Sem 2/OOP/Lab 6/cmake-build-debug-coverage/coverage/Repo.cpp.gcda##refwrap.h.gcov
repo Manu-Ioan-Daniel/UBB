@@ -314,10 +314,10 @@
         -:  310:      _Tp* _M_data;
         -:  311:
         -:  312:      _GLIBCXX20_CONSTEXPR
-function _ZNSt17reference_wrapperIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_E6_S_funERSC_ called 2 returned 100% blocks executed 100%
-        2:  313:      static _Tp* _S_fun(_Tp& __r) noexcept { return std::__addressof(__r); }
-        2:  313-block  0
-call    0 returned 2
+function _ZNSt17reference_wrapperIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_E6_S_funERSC_ called 103 returned 100% blocks executed 100%
+      103:  313:      static _Tp* _S_fun(_Tp& __r) noexcept { return std::__addressof(__r); }
+      103:  313-block  0
+call    0 returned 103
         -:  314:
         -:  315:      static void _S_fun(_Tp&&) = delete;
         -:  316:
@@ -334,14 +334,14 @@ call    0 returned 2
         -:  327:      template<typename _Up, typename = __not_same<_Up>, typename
         -:  328:		= decltype(reference_wrapper::_S_fun(std::declval<_Up>()))>
         -:  329:	_GLIBCXX20_CONSTEXPR
-function _ZNSt17reference_wrapperIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_EC2IRSC_vPSC_EEOT_ called 2 returned 100% blocks executed 100%
-        2:  330:	reference_wrapper(_Up&& __uref)
+function _ZNSt17reference_wrapperIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_EC2IRSC_vPSC_EEOT_ called 103 returned 100% blocks executed 100%
+      103:  330:	reference_wrapper(_Up&& __uref)
         -:  331:	noexcept(noexcept(reference_wrapper::_S_fun(std::declval<_Up>())))
-        2:  332:	: _M_data(reference_wrapper::_S_fun(std::forward<_Up>(__uref)))
-        2:  332-block  0
-call    0 returned 2
-call    1 returned 2
-        2:  333:	{ }
+      103:  332:	: _M_data(reference_wrapper::_S_fun(std::forward<_Up>(__uref)))
+      103:  332-block  0
+call    0 returned 103
+call    1 returned 103
+      103:  333:	{ }
         -:  334:
         -:  335:      reference_wrapper(const reference_wrapper&) = default;
         -:  336:
@@ -354,27 +354,27 @@ call    1 returned 2
         -:  343:
         -:  344:      _GLIBCXX20_CONSTEXPR
         -:  345:      _Tp&
-function _ZNKSt17reference_wrapperIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_E3getEv called 2 returned 100% blocks executed 100%
-        2:  346:      get() const noexcept
-        2:  347:      { return *_M_data; }
-        2:  347-block  0
+function _ZNKSt17reference_wrapperIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_E3getEv called 5152 returned 100% blocks executed 100%
+     5152:  346:      get() const noexcept
+     5152:  347:      { return *_M_data; }
+     5152:  347-block  0
         -:  348:
         -:  349:      template<typename... _Args>
         -:  350:	_GLIBCXX20_CONSTEXPR
         -:  351:	typename __invoke_result<_Tp&, _Args...>::type
-function _ZNKSt17reference_wrapperIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_EclIJRS9_EEENSt15__invoke_resultIRSC_JDpT_EE4typeEDpOSI_ called 2 returned 100% blocks executed 100%
-        2:  352:	operator()(_Args&&... __args) const
+function _ZNKSt17reference_wrapperIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_EclIJRS9_EEENSt15__invoke_resultIRSC_JDpT_EE4typeEDpOSI_ called 5152 returned 100% blocks executed 100%
+     5152:  352:	operator()(_Args&&... __args) const
         -:  353:	noexcept(__is_nothrow_invocable<_Tp&, _Args...>::value)
         -:  354:	{
         -:  355:#if __cplusplus > 201703L
         -:  356:	  if constexpr (is_object_v<type>)
         -:  357:	    static_assert(sizeof(type), "type must be complete");
         -:  358:#endif
-        2:  359:	  return std::__invoke(get(), std::forward<_Args>(__args)...);
-        2:  359-block  0
-call    0 returned 2
-call    1 returned 2
-call    2 returned 2
+     5152:  359:	  return std::__invoke(get(), std::forward<_Args>(__args)...);
+     5152:  359-block  0
+call    0 returned 5152
+call    1 returned 5152
+call    2 returned 5152
         -:  360:	}
         -:  361:    };
         -:  362:
@@ -389,12 +389,12 @@ call    2 returned 2
         -:  371:  template<typename _Tp>
         -:  372:    _GLIBCXX20_CONSTEXPR
         -:  373:    inline reference_wrapper<_Tp>
-function _ZSt3refIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_ESt17reference_wrapperIT_ERSE_ called 2 returned 100% blocks executed 100%
-        2:  374:    ref(_Tp& __t) noexcept
-        2:  375:    { return reference_wrapper<_Tp>(__t); }
-        2:  375-block  0
-call    0 returned 2
-        2:  375-block  1
+function _ZSt3refIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_EUlRK10DisciplinaE_ESt17reference_wrapperIT_ERSE_ called 103 returned 100% blocks executed 100%
+      103:  374:    ref(_Tp& __t) noexcept
+      103:  375:    { return reference_wrapper<_Tp>(__t); }
+      103:  375-block  0
+call    0 returned 103
+      103:  375-block  1
         -:  376:
         -:  377:  /// Denotes a const reference should be taken to a variable.
         -:  378:  template<typename _Tp>

@@ -4,11 +4,12 @@
 #include <cassert>
 #include <iostream>
 
-void Service::addDisciplinaService(const string& denumire,int nrOre,const string& tip,const string& cadruDidactic) const {
+void Service::addDisciplinaService(const string& denumire,int nrOre,const string& tip,const string& cadruDidactic){
 
     Validator::validateDisciplina(denumire,nrOre,tip,cadruDidactic);
     const Disciplina d{denumire,nrOre,tip,cadruDidactic};
     repo.addDisciplina(d);
+    undoActions.push_back(std::make_unique<UndoAdauga>(repo,d));
 
 }
 Disciplina Service::cautaDisciplinaService(const string &denumire, const string &tip) const {
@@ -16,16 +17,18 @@ Disciplina Service::cautaDisciplinaService(const string &denumire, const string 
     Disciplina d = repo.cautaDisciplina(denumire, tip);
     return d;
 }
-void Service::modificaDisciplinaService(const string &denumire, const string &tip,const string& denumireNoua,const string& tipNou,int nrOreNou,const string& cadruDidacticNou) const {
+void Service::modificaDisciplinaService(const string &denumire, const string &tip,const string& denumireNoua,const string& tipNou,int nrOreNou,const string& cadruDidacticNou) {
     Validator::validateDisciplina(denumire,20,tip,"salut");
     Validator::validateDisciplina(denumireNoua,nrOreNou,tipNou,cadruDidacticNou);
     const Disciplina& d = cautaDisciplinaService(denumire,tip);
     const Disciplina disciplinaNoua{denumireNoua,nrOreNou,tipNou,cadruDidacticNou};
     repo.modificaDisciplina(disciplinaNoua,d);
+    undoActions.push_back(std::make_unique<UndoModifica>(repo,disciplinaNoua,d));
 }
-void Service::stergeDisciplinaService(const string &denumire, const string &tip) const {
+void Service::stergeDisciplinaService(const string &denumire, const string &tip){
     Validator::validateDisciplina(denumire,20,tip,"salut");
     repo.stergeDisciplina(denumire,tip);
+    undoActions.push_back(std::make_unique<UndoSterge>(repo,repo.cautaDisciplina(denumire,tip)));
 }
 vector<Disciplina>Service::filtrareDisciplineDupaOre(const int nrOre) const {
     vector<Disciplina> discipline=getAll();
@@ -86,10 +89,10 @@ void Service::golesteContractService() {
 }
 void Service::genereazaContractService(const int nrDiscipline) {
     if (nrDiscipline<=0) {
-        throw ValidationError("Numar de discipline invalid!");
+        throw ValidationError("Numar de discipline invalid!\n");
     }
-    if (nrDiscipline>=getAll().size()) {
-        throw ServiceException("Numar de discipline prea mare!");
+    if (nrDiscipline>getAll().size()) {
+        throw ServiceException("Numar de discipline prea mare!\n");
     }
     contract.genereazaContract(nrDiscipline,getAll());
 }
@@ -99,6 +102,16 @@ std::map<string,int> Service::statistici() const{
         statistica[d.getDenumire()]++;
     }
     return statistica;
+}
+void Service::undo() {
+    if (undoActions.empty()) {
+        throw ServiceException("Nu mai exista actiuni de undo!");
+    }
+    undoActions.back()->doUndo();
+    undoActions.pop_back();
+}
+void Service::exportCSVService(const string& filename) const {
+    contract.exportCSV(filename);
 }
 void testService() {
     //test adaugare
@@ -211,8 +224,8 @@ void testService() {
     try {
         s.adaugaDisciplinaContractService("salut");
         //assert(false);
-    }catch (ServiceException &e) {
-
+    }catch (ServiceException&) {
+        assert(true);
     }
 
     //test goleste contract
@@ -241,14 +254,36 @@ void testService() {
     }
     //test statistici
     Repo r2;
-    const Service s2(r2,v);
+    Service s2(r2,v);
     for (int i = 0;i<100;i++) {
         s2.addDisciplinaService("mat"+std::to_string(i),i,"laborator","popescu");
     }
     const auto& statistica=s2.statistici();
     assert(statistica.size()==100);
-    for (auto [cheie,val]:statistica) {
+    for (const auto& [cheie,val]:statistica) {
         assert(val==1);
     }
+    //test undo
 
+    for (int i = 99;i>=0;i--) {
+        s2.undo();
+        assert(s2.getAll().size()==i);
+    }
+    try {
+        s2.undo();
+        //assert(false);
+    }catch (ServiceException&) {
+        assert(true);
+    }
+    for (int i = 0;i<100;i++) {
+        s2.addDisciplinaService("mat"+std::to_string(i),i,"laborator","popescu");
+    }
+    s2.modificaDisciplinaService("mat0","laborator","mat0","laborator",5,"popescu");
+    s2.undo();
+    assert(s2.getAll().size()==100);
+    assert(s2.getAll()[0].getNrOre()==0);
+    s2.stergeDisciplinaService("mat0","laborator");
+    s2.undo();
+    assert(s2.getAll().size()==100);
+    s2.getContract().exportCSV("mama.txt");
 }

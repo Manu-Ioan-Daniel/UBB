@@ -503,50 +503,50 @@
         -:  499:	     typename _Proj = identity,
         -:  500:	     indirect_unary_predicate<projected<_Iter, _Proj>> _Pred>
         -:  501:      constexpr _Iter
-function _ZNKSt6ranges12__find_if_fnclIN9__gnu_cxx17__normal_iteratorIPK10DisciplinaSt6vectorIS4_SaIS4_EEEESA_St8identityZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESK_EUlRS5_E_EET_SN_T0_T2_T1_ called 9 returned 100% blocks executed 100%
-        9:  502:      operator()(_Iter __first, _Sent __last,
+function _ZNKSt6ranges12__find_if_fnclIN9__gnu_cxx17__normal_iteratorIPK10DisciplinaSt6vectorIS4_SaIS4_EEEESA_St8identityZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESK_EUlRS5_E_EET_SN_T0_T2_T1_ called 115 returned 100% blocks executed 100%
+      115:  502:      operator()(_Iter __first, _Sent __last,
         -:  503:		 _Pred __pred, _Proj __proj = {}) const
         -:  504:      {
-       10:  505:	while (__first != __last
-        9:  505-block  0
-       10:  505-block  1
-call    0 returned 10
-       10:  506:	    && !(bool)std::__invoke(__pred, std::__invoke(__proj, *__first)))
-branch  0 taken 8 (fallthrough)
-branch  1 taken 2
-        8:  506-block  0
-call    2 returned 8
-call    3 returned 8
-call    4 returned 8
-branch  5 taken 1 (fallthrough)
-branch  6 taken 7
-        1:  506-block  1
-        9:  506-block  2
-       10:  506-block  3
-branch  7 taken 1
-branch  8 taken 9 (fallthrough)
-        1:  507:	  ++__first;
-        1:  507-block  0
-call    0 returned 1
-        9:  508:	return __first;
-        9:  508-block  0
+     5165:  505:	while (__first != __last
+      115:  505-block  0
+     5165:  505-block  1
+call    0 returned 5165
+     5165:  506:	    && !(bool)std::__invoke(__pred, std::__invoke(__proj, *__first)))
+branch  0 taken 5161 (fallthrough)
+branch  1 taken 4
+     5161:  506-block  0
+call    2 returned 5161
+call    3 returned 5161
+call    4 returned 5161
+branch  5 taken 5050 (fallthrough)
+branch  6 taken 111
+     5050:  506-block  1
+      115:  506-block  2
+     5165:  506-block  3
+branch  7 taken 5050
+branch  8 taken 115 (fallthrough)
+     5050:  507:	  ++__first;
+     5050:  507-block  0
+call    0 returned 5050
+      115:  508:	return __first;
+      115:  508-block  0
         -:  509:      }
         -:  510:
         -:  511:    template<input_range _Range, typename _Proj = identity,
         -:  512:	     indirect_unary_predicate<projected<iterator_t<_Range>, _Proj>>
         -:  513:	       _Pred>
         -:  514:      constexpr borrowed_iterator_t<_Range>
-function _ZNKSt6ranges12__find_if_fnclIRKSt6vectorI10DisciplinaSaIS3_EESt8identityZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESH_EUlRKS3_E_EENSt13__conditionalIX14borrowed_rangeIT_EEE4typeIDTcl7__begincl7declvalIRSM_EEEENS_8danglingEEEOSM_T1_T0_ called 9 returned 100% blocks executed 100%
-        9:  515:      operator()(_Range&& __r, _Pred __pred, _Proj __proj = {}) const
+function _ZNKSt6ranges12__find_if_fnclIRKSt6vectorI10DisciplinaSaIS3_EESt8identityZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESH_EUlRKS3_E_EENSt13__conditionalIX14borrowed_rangeIT_EEE4typeIDTcl7__begincl7declvalIRSM_EEEENS_8danglingEEEOSM_T1_T0_ called 115 returned 100% blocks executed 100%
+      115:  515:      operator()(_Range&& __r, _Pred __pred, _Proj __proj = {}) const
         -:  516:      {
-        9:  517:	return (*this)(ranges::begin(__r), ranges::end(__r),
-call    0 returned 9
-call    1 returned 9
-call    2 returned 9
-       18:  518:		       std::move(__pred), std::move(__proj));
-        9:  518-block  0
-call    0 returned 9
-call    1 returned 9
+      115:  517:	return (*this)(ranges::begin(__r), ranges::end(__r),
+call    0 returned 115
+call    1 returned 115
+call    2 returned 115
+      230:  518:		       std::move(__pred), std::move(__proj));
+      115:  518-block  0
+call    0 returned 115
+call    1 returned 115
         -:  519:      }
         -:  520:  };
         -:  521:

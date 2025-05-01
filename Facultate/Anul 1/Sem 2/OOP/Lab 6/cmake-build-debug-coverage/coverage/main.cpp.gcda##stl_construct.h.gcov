@@ -81,8 +81,7 @@
         -:   77:#if __cplusplus >= 201703L
         -:   78:  template <typename _Tp>
         -:   79:    _GLIBCXX20_CONSTEXPR inline void
-function _ZSt10destroy_atI10DisciplinaEvPT_ called 1871 returned 100% blocks executed 100%
-     1871:   80:    destroy_at(_Tp* __location)
+     2770:   80:    destroy_at(_Tp* __location)
         -:   81:    {
         -:   82:      if constexpr (__cplusplus > 201703L && is_array_v<_Tp>)
         -:   83:	{
@@ -90,10 +89,39 @@ function _ZSt10destroy_atI10DisciplinaEvPT_ called 1871 returned 100% blocks exe
         -:   85:	    std::destroy_at(std::__addressof(__x));
         -:   86:	}
         -:   87:      else
-     1871:   88:	__location->~_Tp();
-     1871:   88-block  0
-call    0 returned 1871
-     1871:   89:    }
+     2770:   88:	__location->~_Tp();
+     2770:   89:    }
+------------------
+_ZSt10destroy_atISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEEvPT_:
+function _ZSt10destroy_atISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEEvPT_ called 798 returned 100% blocks executed 100%
+      798:   80:    destroy_at(_Tp* __location)
+        -:   81:    {
+        -:   82:      if constexpr (__cplusplus > 201703L && is_array_v<_Tp>)
+        -:   83:	{
+        -:   84:	  for (auto& __x : *__location)
+        -:   85:	    std::destroy_at(std::__addressof(__x));
+        -:   86:	}
+        -:   87:      else
+      798:   88:	__location->~_Tp();
+      798:   88-block  0
+call    0 returned 798
+      798:   89:    }
+------------------
+_ZSt10destroy_atI10DisciplinaEvPT_:
+function _ZSt10destroy_atI10DisciplinaEvPT_ called 1972 returned 100% blocks executed 100%
+     1972:   80:    destroy_at(_Tp* __location)
+        -:   81:    {
+        -:   82:      if constexpr (__cplusplus > 201703L && is_array_v<_Tp>)
+        -:   83:	{
+        -:   84:	  for (auto& __x : *__location)
+        -:   85:	    std::destroy_at(std::__addressof(__x));
+        -:   86:	}
+        -:   87:      else
+     1972:   88:	__location->~_Tp();
+     1972:   88-block  0
+call    0 returned 1972
+     1972:   89:    }
+------------------
         -:   90:
         -:   91:#if __cplusplus >= 202002L
         -:   92:  template<typename _Tp, typename... _Args>
@@ -150,36 +178,83 @@ call    0 returned 1871
         -:  143:   */
         -:  144:  template<typename _Tp>
         -:  145:    _GLIBCXX14_CONSTEXPR inline void
-function _ZSt8_DestroyI10DisciplinaEvPT_ called 1871 returned 100% blocks executed 100%
-     1871:  146:    _Destroy(_Tp* __pointer)
+     2286:  146:    _Destroy(_Tp* __pointer)
         -:  147:    {
         -:  148:#if __cplusplus > 201703L
-     1871:  149:      std::destroy_at(__pointer);
-     1871:  149-block  0
-call    0 returned 1871
+     2286:  149:      std::destroy_at(__pointer);
         -:  150:#else
         -:  151:      __pointer->~_Tp();
         -:  152:#endif
-     1871:  153:    }
+     2286:  153:    }
+------------------
+_ZSt8_DestroyISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEEvPT_:
+function _ZSt8_DestroyISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEEvPT_ called 314 returned 100% blocks executed 100%
+      314:  146:    _Destroy(_Tp* __pointer)
+        -:  147:    {
+        -:  148:#if __cplusplus > 201703L
+      314:  149:      std::destroy_at(__pointer);
+      314:  149-block  0
+call    0 returned 314
+        -:  150:#else
+        -:  151:      __pointer->~_Tp();
+        -:  152:#endif
+      314:  153:    }
+------------------
+_ZSt8_DestroyI10DisciplinaEvPT_:
+function _ZSt8_DestroyI10DisciplinaEvPT_ called 1972 returned 100% blocks executed 100%
+     1972:  146:    _Destroy(_Tp* __pointer)
+        -:  147:    {
+        -:  148:#if __cplusplus > 201703L
+     1972:  149:      std::destroy_at(__pointer);
+     1972:  149-block  0
+call    0 returned 1972
+        -:  150:#else
+        -:  151:      __pointer->~_Tp();
+        -:  152:#endif
+     1972:  153:    }
+------------------
         -:  154:
         -:  155:  template<bool>
         -:  156:    struct _Destroy_aux
         -:  157:    {
         -:  158:      template<typename _ForwardIterator>
         -:  159:	static _GLIBCXX20_CONSTEXPR void
-function _ZNSt12_Destroy_auxILb0EE9__destroyIP10DisciplinaEEvT_S4_ called 63 returned 100% blocks executed 100%
-       63:  160:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
+      167:  160:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  161:	{
-     1934:  162:	  for (; __first != __last; ++__first)
-       63:  162-block  0
-     1934:  162-block  1
-branch  0 taken 1871
-branch  1 taken 63 (fallthrough)
-     1871:  163:	    std::_Destroy(std::__addressof(*__first));
-     1871:  163-block  0
-call    0 returned 1871
-call    1 returned 1871
-       63:  164:	}
+     2453:  162:	  for (; __first != __last; ++__first)
+     2286:  163:	    std::_Destroy(std::__addressof(*__first));
+      167:  164:	}
+------------------
+_ZNSt12_Destroy_auxILb0EE9__destroyIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS3_EEEEvT_S8_:
+function _ZNSt12_Destroy_auxILb0EE9__destroyIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS3_EEEEvT_S8_ called 3 returned 100% blocks executed 100%
+        3:  160:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
+        -:  161:	{
+      317:  162:	  for (; __first != __last; ++__first)
+        3:  162-block  0
+      317:  162-block  1
+branch  0 taken 314
+branch  1 taken 3 (fallthrough)
+      314:  163:	    std::_Destroy(std::__addressof(*__first));
+      314:  163-block  0
+call    0 returned 314
+call    1 returned 314
+        3:  164:	}
+------------------
+_ZNSt12_Destroy_auxILb0EE9__destroyIP10DisciplinaEEvT_S4_:
+function _ZNSt12_Destroy_auxILb0EE9__destroyIP10DisciplinaEEvT_S4_ called 164 returned 100% blocks executed 100%
+      164:  160:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
+        -:  161:	{
+     2136:  162:	  for (; __first != __last; ++__first)
+      164:  162-block  0
+     2136:  162-block  1
+branch  0 taken 1972
+branch  1 taken 164 (fallthrough)
+     1972:  163:	    std::_Destroy(std::__addressof(*__first));
+     1972:  163-block  0
+call    0 returned 1972
+call    1 returned 1972
+      164:  164:	}
+------------------
         -:  165:    };
         -:  166:
         -:  167:  template<>
@@ -197,8 +272,7 @@ call    1 returned 1871
         -:  179:   */
         -:  180:  template<typename _ForwardIterator>
         -:  181:    _GLIBCXX20_CONSTEXPR inline void
-function _ZSt8_DestroyIP10DisciplinaEvT_S2_ called 63 returned 100% blocks executed 67%
-       63:  182:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
+      167:  182:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  183:    {
         -:  184:      typedef typename iterator_traits<_ForwardIterator>::value_type
         -:  185:                       _Value_type;
@@ -208,19 +282,11 @@ function _ZSt8_DestroyIP10DisciplinaEvT_S2_ called 63 returned 100% blocks execu
         -:  189:		    "value type is destructible");
         -:  190:#endif
         -:  191:#if __cplusplus >= 202002L
-       63:  192:      if (std::__is_constant_evaluated())
-       63:  192-block  0
-call    0 returned 63
-branch  1 taken 0 (fallthrough)
-branch  2 taken 63
+      167:  192:      if (std::__is_constant_evaluated())
     #####:  193:	return _Destroy_aux<false>::__destroy(__first, __last);
-    %%%%%:  193-block  0
-call    0 never executed
         -:  194:#endif
         -:  195:      std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
-       63:  196:	__destroy(__first, __last);
-       63:  196-block  0
-call    0 returned 63
+      167:  196:	__destroy(__first, __last);
         -:  197:    }
         -:  198:
         -:  199:  template<bool>

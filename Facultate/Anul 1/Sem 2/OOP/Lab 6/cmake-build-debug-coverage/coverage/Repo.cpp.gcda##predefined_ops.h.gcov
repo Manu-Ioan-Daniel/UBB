@@ -311,34 +311,34 @@
         -:  307:
         -:  308:      _GLIBCXX20_CONSTEXPR
         -:  309:      explicit
-function _ZN9__gnu_cxx5__ops10_Iter_predISt17reference_wrapperIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_EUlRK10DisciplinaE_EEC2ESG_ called 2 returned 100% blocks executed 100%
-        2:  310:      _Iter_pred(_Predicate __pred)
-        2:  311:	: _M_pred(_GLIBCXX_MOVE(__pred))
-        2:  311-block  0
-call    0 returned 2
-        2:  312:      { }
+function _ZN9__gnu_cxx5__ops10_Iter_predISt17reference_wrapperIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_EUlRK10DisciplinaE_EEC2ESG_ called 103 returned 100% blocks executed 100%
+      103:  310:      _Iter_pred(_Predicate __pred)
+      103:  311:	: _M_pred(_GLIBCXX_MOVE(__pred))
+      103:  311-block  0
+call    0 returned 103
+      103:  312:      { }
         -:  313:
         -:  314:      template<typename _Iterator>
         -:  315:	_GLIBCXX20_CONSTEXPR
         -:  316:	bool
-function _ZN9__gnu_cxx5__ops10_Iter_predISt17reference_wrapperIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_EUlRK10DisciplinaE_EEclINS_17__normal_iteratorIPSC_St6vectorISC_SaISC_EEEEEEbT_ called 2 returned 100% blocks executed 100%
-        2:  317:	operator()(_Iterator __it)
-        2:  318:	{ return bool(_M_pred(*__it)); }
-        2:  318-block  0
-call    0 returned 2
-call    1 returned 2
+function _ZN9__gnu_cxx5__ops10_Iter_predISt17reference_wrapperIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_EUlRK10DisciplinaE_EEclINS_17__normal_iteratorIPSC_St6vectorISC_SaISC_EEEEEEbT_ called 5152 returned 100% blocks executed 100%
+     5152:  317:	operator()(_Iterator __it)
+     5152:  318:	{ return bool(_M_pred(*__it)); }
+     5152:  318-block  0
+call    0 returned 5152
+call    1 returned 5152
         -:  319:    };
         -:  320:
         -:  321:  template<typename _Predicate>
         -:  322:    _GLIBCXX20_CONSTEXPR
         -:  323:    inline _Iter_pred<_Predicate>
-function _ZN9__gnu_cxx5__ops11__pred_iterISt17reference_wrapperIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_EUlRK10DisciplinaE_EEENS0_10_Iter_predIT_EESI_ called 2 returned 100% blocks executed 100%
-        2:  324:    __pred_iter(_Predicate __pred)
-        2:  325:    { return _Iter_pred<_Predicate>(_GLIBCXX_MOVE(__pred)); }
-        2:  325-block  0
-call    0 returned 2
-call    1 returned 2
-        2:  325-block  1
+function _ZN9__gnu_cxx5__ops11__pred_iterISt17reference_wrapperIZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_EUlRK10DisciplinaE_EEENS0_10_Iter_predIT_EESI_ called 103 returned 100% blocks executed 100%
+      103:  324:    __pred_iter(_Predicate __pred)
+      103:  325:    { return _Iter_pred<_Predicate>(_GLIBCXX_MOVE(__pred)); }
+      103:  325-block  0
+call    0 returned 103
+call    1 returned 103
+      103:  325-block  1
         -:  326:
         -:  327:  template<typename _Compare, typename _Value>
         -:  328:    struct _Iter_comp_to_val

@@ -63,8 +63,8 @@
         -:   59:  class exception
         -:   60:  {
         -:   61:  public:
-function _ZNSt9exceptionC2Ev called 10 returned 100% blocks executed 100%
-       10:   62:    exception() _GLIBCXX_NOTHROW { }
+function _ZNSt9exceptionC2Ev called 11 returned 100% blocks executed 100%
+       11:   62:    exception() _GLIBCXX_NOTHROW { }
         -:   63:    virtual ~exception() _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_NOTHROW;
         -:   64:#if __cplusplus >= 201103L
         -:   65:    exception(const exception&) = default;

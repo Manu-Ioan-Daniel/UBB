@@ -412,7 +412,7 @@ function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE16_M_get_allocato
         -:  359:      _M_use_local_data() _GLIBCXX_NOEXCEPT
         -:  360:      {
         -:  361:#if __cpp_lib_is_constant_evaluated
-     346*:  362:	if (std::is_constant_evaluated())
+     765*:  362:	if (std::is_constant_evaluated())
 call    0 never executed
 branch  1 never executed (fallthrough)
 branch  2 never executed
@@ -425,7 +425,7 @@ call    6 never executed
 branch  7 never executed (fallthrough)
 branch  8 never executed
 branch  9 taken 0 (fallthrough)
-branch 10 taken 346
+branch 10 taken 765
     #####:  363:	  for (size_type __i = 0; __i <= _S_local_capacity; ++__i)
     %%%%%:  363-block  0
     %%%%%:  363-block  1
@@ -449,15 +449,15 @@ branch  7 never executed (fallthrough)
     %%%%%:  364-block  2
     %%%%%:  364-block  3
         -:  365:#endif
-     346*:  366:	return _M_local_data();
+     765*:  366:	return _M_local_data();
     %%%%%:  366-block  0
 call    0 never executed
     %%%%%:  366-block  1
 call    1 never executed
     %%%%%:  366-block  2
 call    2 never executed
-      346:  366-block  3
-call    3 returned 346
+      765:  366-block  3
+call    3 returned 765
         -:  367:      }
         -:  368:
         -:  369:    private:
@@ -628,22 +628,22 @@ call    0 never executed
         -:  520:       *  @brief  Default constructor creates an empty string.
         -:  521:       */
         -:  522:      _GLIBCXX20_CONSTEXPR
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1Ev called 346 returned 100% blocks executed 79%
-      346:  523:      basic_string()
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1Ev called 765 returned 100% blocks executed 79%
+      765:  523:      basic_string()
         -:  524:      _GLIBCXX_NOEXCEPT_IF(is_nothrow_default_constructible<_Alloc>::value)
-     1038:  525:      : _M_dataplus(_M_local_data())
-      346:  525-block  0
-      346:  525-block  1
-call    0 returned 346
-call    1 returned 346
-      346:  525-block  2
-call    2 returned 346
+     2295:  525:      : _M_dataplus(_M_local_data())
+      765:  525-block  0
+      765:  525-block  1
+call    0 returned 765
+call    1 returned 765
+      765:  525-block  2
+call    2 returned 765
         -:  526:      {
         -:  527:	_M_use_local_data();
-      346:  528:	_M_set_length(0);
-      346:  528-block  0
-call    0 returned 346
-      346:  529:      }
+      765:  528:	_M_set_length(0);
+      765:  528-block  0
+call    0 returned 765
+      765:  529:      }
         -:  530:
         -:  531:      /**
         -:  532:       *  @brief  Construct an empty string using allocator @a a.
@@ -986,12 +986,12 @@ call    1 never executed
         -:  808:       */
         -:  809:      _GLIBCXX20_CONSTEXPR
         -:  810:      basic_string&
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEaSERKS4_ called 4326 returned 100% blocks executed 100%
-     4326:  811:      operator=(const basic_string& __str)
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEaSERKS4_ called 4629 returned 100% blocks executed 100%
+     4629:  811:      operator=(const basic_string& __str)
         -:  812:      {
-     4326:  813:	return this->assign(__str);
-     4326:  813-block  0
-call    0 returned 4326
+     4629:  813:	return this->assign(__str);
+     4629:  813-block  0
+call    0 returned 4629
         -:  814:      }
         -:  815:
         -:  816:      /**
@@ -1354,18 +1354,18 @@ call    0 never executed
         -: 1165:       */
         -: 1166:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 1167:      size_type
-function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE8capacityEv called 4650 returned 100% blocks executed 100%
-     4650: 1168:      capacity() const _GLIBCXX_NOEXCEPT
+function _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE8capacityEv called 5047 returned 100% blocks executed 100%
+     5047: 1168:      capacity() const _GLIBCXX_NOEXCEPT
         -: 1169:      {
-     4650: 1170:	return _M_is_local() ? size_type(_S_local_capacity)
-     4650: 1170-block  0
-call    0 returned 4650
-branch  1 taken 4638 (fallthrough)
+     5047: 1170:	return _M_is_local() ? size_type(_S_local_capacity)
+     5047: 1170-block  0
+call    0 returned 5047
+branch  1 taken 5035 (fallthrough)
 branch  2 taken 12
-     4638: 1170-block  1
+     5035: 1170-block  1
        12: 1170-block  2
-     4650: 1171:	                     : _M_allocated_capacity;
-     4650: 1171-block  0
+     5047: 1171:	                     : _M_allocated_capacity;
+     5047: 1171-block  0
         -: 1172:      }
         -: 1173:
         -: 1174:      /**
@@ -1770,15 +1770,15 @@ branch  2 taken 12
         -: 1573:       */
         -: 1574:      _GLIBCXX20_CONSTEXPR
         -: 1575:      basic_string&
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignERKS4_ called 4326 returned 100% blocks executed 12%
-     4326: 1576:      assign(const basic_string& __str)
-     4326: 1576-block  0
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignERKS4_ called 4629 returned 100% blocks executed 12%
+     4629: 1576:      assign(const basic_string& __str)
+     4629: 1576-block  0
         -: 1577:      {
         -: 1578:#if __cplusplus >= 201103L
-     4326: 1579:	if (_Alloc_traits::_S_propagate_on_copy_assign())
-     4326: 1579-block  0
+     4629: 1579:	if (_Alloc_traits::_S_propagate_on_copy_assign())
+     4629: 1579-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 4326
+branch  1 taken 4629
         -: 1580:	  {
     #####: 1581:	    if (!_Alloc_traits::_S_always_equal() && !_M_is_local()
     %%%%%: 1581-block  0
@@ -1846,11 +1846,11 @@ call    0 never executed
 call    1 never executed
         -: 1605:	  }
         -: 1606:#endif
-     4326: 1607:	this->_M_assign(__str);
-     4326: 1607-block  0
-call    0 returned 4326
-     4326: 1608:	return *this;
-     4326: 1608-block  0
+     4629: 1607:	this->_M_assign(__str);
+     4629: 1607-block  0
+call    0 returned 4629
+     4629: 1608:	return *this;
+     4629: 1608-block  0
         -: 1609:      }
         -: 1610:
         -: 1611:#if __cplusplus >= 201103L
@@ -3954,28 +3954,28 @@ call    0 never executed
         -: 3706:  template<typename _CharT, typename _Traits, typename _Alloc>
         -: 3707:    _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 3708:    inline bool
-function _ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EESA_ called 28091 returned 100% blocks executed 100%
-    28091: 3709:    operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+function _ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EESA_ called 43953 returned 100% blocks executed 100%
+    43953: 3709:    operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
         -: 3710:	       const basic_string<_CharT, _Traits, _Alloc>& __rhs)
         -: 3711:    _GLIBCXX_NOEXCEPT
         -: 3712:    {
-    28091: 3713:      return __lhs.size() == __rhs.size()
-    28091: 3713-block  0
-call    0 returned 28091
-call    1 returned 28091
-    28091: 3714:	       && !_Traits::compare(__lhs.data(), __rhs.data(), __lhs.size());
-branch  0 taken 14820 (fallthrough)
-branch  1 taken 13271
-    14820: 3714-block  0
-call    2 returned 14820
-call    3 returned 14820
-call    4 returned 14820
-call    5 returned 14820
-branch  6 taken 696 (fallthrough)
-branch  7 taken 14124
-      696: 3714-block  1
-    27395: 3714-block  2
-    28091: 3714-block  3
+    43953: 3713:      return __lhs.size() == __rhs.size()
+    43953: 3713-block  0
+call    0 returned 43953
+call    1 returned 43953
+    43953: 3714:	       && !_Traits::compare(__lhs.data(), __rhs.data(), __lhs.size());
+branch  0 taken 27420 (fallthrough)
+branch  1 taken 16533
+    27420: 3714-block  0
+call    2 returned 27420
+call    3 returned 27420
+call    4 returned 27420
+call    5 returned 27420
+branch  6 taken 1110 (fallthrough)
+branch  7 taken 26310
+     1110: 3714-block  1
+    42843: 3714-block  2
+    43953: 3714-block  3
         -: 3715:    }
         -: 3716:
         -: 3717:  /**

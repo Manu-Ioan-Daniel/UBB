@@ -8,24 +8,24 @@
         -:    4:#include <random>
         -:    5:#include "LinkedList.h"
         -:    6:
-function _ZN4Repo13addDisciplinaERK10Disciplina called 314 returned 100% blocks executed 76%
-      314:    7:void Repo::addDisciplina(const Disciplina& disciplina) {
-    27419:    8:    for (const Disciplina& d : discipline) {
-      314:    8-block  0
-call    0 returned 314
-call    1 returned 314
-    27106:    8-block  1
-call    2 returned 27106
-    27105:    8-block  2
-call    3 returned 27105
-    27419:    8-block  3
-call    4 returned 27419
-branch  5 taken 27106
-branch  6 taken 313 (fallthrough)
-    27106:    9:        if (d==disciplina) {
-call    0 returned 27106
+function _ZN4Repo13addDisciplinaERK10Disciplina called 415 returned 100% blocks executed 76%
+      415:    7:void Repo::addDisciplina(const Disciplina& disciplina) {
+    32569:    8:    for (const Disciplina& d : discipline) {
+      415:    8-block  0
+call    0 returned 415
+call    1 returned 415
+    32155:    8-block  1
+call    2 returned 32155
+    32154:    8-block  2
+call    3 returned 32154
+    32569:    8-block  3
+call    4 returned 32569
+branch  5 taken 32155
+branch  6 taken 414 (fallthrough)
+    32155:    9:        if (d==disciplina) {
+call    0 returned 32155
 branch  1 taken 1 (fallthrough)
-branch  2 taken 27105
+branch  2 taken 32154
         3:   10:            throw RepoException("Disciplina exista deja!\n");
         1:   10-block  0
 call    0 returned 1
@@ -45,55 +45,55 @@ call    7 never executed
         -:   11:        }
         -:   12:
         -:   13:    }
-      313:   14:    discipline.push_back(disciplina);
-      313:   14-block  0
-call    0 returned 313
-      313:   15:}
+      414:   14:    discipline.push_back(disciplina);
+      414:   14-block  0
+call    0 returned 414
+      414:   15:}
         -:   16:
-function _ZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 9 returned 100% blocks executed 100%
-        9:   17:Disciplina Repo::cautaDisciplina(const string &denumire, const string &tip) const {
-function _ZZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ENKUlRK10DisciplinaE_clESA_ called 8 returned 100% blocks executed 70%
-       17:   18:    if (const auto it=std::ranges::find_if(discipline,[&denumire,&tip](const Disciplina& d) {return d.getDenumire()==denumire && d.getTip()==tip;}); it!=discipline.end()) {
-        9:   18-block  0
-call    0 returned 9
-branch  1 taken 9 (fallthrough)
+function _ZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 115 returned 100% blocks executed 100%
+      115:   17:Disciplina Repo::cautaDisciplina(const string &denumire, const string &tip) const {
+function _ZZNK4Repo15cautaDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ENKUlRK10DisciplinaE_clESA_ called 5161 returned 100% blocks executed 70%
+     5276:   18:    if (const auto it=std::ranges::find_if(discipline,[&denumire,&tip](const Disciplina& d) {return d.getDenumire()==denumire && d.getTip()==tip;}); it!=discipline.end()) {
+      115:   18-block  0
+call    0 returned 115
+branch  1 taken 115 (fallthrough)
 branch  2 taken 0 (throw)
-        9:   18-block  1
-call    3 returned 9
-call    4 returned 9
-branch  5 taken 7 (fallthrough)
-branch  6 taken 2
-        8:   18-block  2
-call    7 returned 8
-branch  8 taken 8 (fallthrough)
+      115:   18-block  1
+call    3 returned 115
+call    4 returned 115
+branch  5 taken 111 (fallthrough)
+branch  6 taken 4
+     5161:   18-block  2
+call    7 returned 5161
+branch  8 taken 5161 (fallthrough)
 branch  9 taken 0 (throw)
-        8:   18-block  3
-call   10 returned 8
-branch 11 taken 7 (fallthrough)
-branch 12 taken 1
-        7:   18-block  4
-call   13 returned 7
-branch 14 taken 7 (fallthrough)
+     5161:   18-block  3
+call   10 returned 5161
+branch 11 taken 111 (fallthrough)
+branch 12 taken 5050
+      111:   18-block  4
+call   13 returned 111
+branch 14 taken 111 (fallthrough)
 branch 15 taken 0 (throw)
-        7:   18-block  5
-call   16 returned 7
-branch 17 taken 7 (fallthrough)
+      111:   18-block  5
+call   16 returned 111
+branch 17 taken 111 (fallthrough)
 branch 18 taken 0
-        7:   18-block  6
-        1:   18-block  7
-        8:   18-block  8
-        8:   18-block  9
-branch 19 taken 7 (fallthrough)
-branch 20 taken 1
-        7:   18-block 10
-call   21 returned 7
-        8:   18-block 11
-branch 22 taken 8 (fallthrough)
+      111:   18-block  6
+     5050:   18-block  7
+     5161:   18-block  8
+     5161:   18-block  9
+branch 19 taken 111 (fallthrough)
+branch 20 taken 5050
+      111:   18-block 10
+call   21 returned 111
+     5161:   18-block 11
+branch 22 taken 5161 (fallthrough)
 branch 23 taken 0
-        8:   18-block 12
-call   24 returned 8
-        8:   18-block 13
-        8:   18-block 14
+     5161:   18-block 12
+call   24 returned 5161
+     5161:   18-block 13
+     5161:   18-block 14
     $$$$$:   18-block 15
 branch 25 never executed (fallthrough)
 branch 26 never executed
@@ -105,32 +105,32 @@ branch 28 never executed (fallthrough)
 branch 29 never executed
     $$$$$:   18-block 19
 call   30 never executed
-        7:   19:        return *it;
-        7:   19-block  0
-call    0 returned 7
-call    1 returned 7
-branch  2 taken 7 (fallthrough)
+      111:   19:        return *it;
+      111:   19-block  0
+call    0 returned 111
+call    1 returned 111
+branch  2 taken 111 (fallthrough)
 branch  3 taken 0 (throw)
-        7:   19-block  1
+      111:   19-block  1
         -:   20:    }
-        2:   21:    return {};
-        2:   21-block  0
-call    0 returned 2
+        4:   21:    return {};
+        4:   21-block  0
+call    0 returned 4
         -:   22:}
-function _ZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 3 returned 67% blocks executed 76%
-        3:   23:void Repo::stergeDisciplina(const string& denumire,const string& tip) {
-        3:   24:    const Disciplina d= cautaDisciplina(denumire,tip);
-        3:   24-block  0
-call    0 returned 3
-branch  1 taken 3 (fallthrough)
+function _ZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 104 returned 99% blocks executed 76%
+      104:   23:void Repo::stergeDisciplina(const string& denumire,const string& tip) {
+      104:   24:    const Disciplina d= cautaDisciplina(denumire,tip);
+      104:   24-block  0
+call    0 returned 104
+branch  1 taken 104 (fallthrough)
 branch  2 taken 0 (throw)
-        3:   25:    if (d==Disciplina{}) {
-        3:   25-block  0
-call    0 returned 3
-call    1 returned 3
-call    2 returned 3
+      104:   25:    if (d==Disciplina{}) {
+      104:   25-block  0
+call    0 returned 104
+call    1 returned 104
+call    2 returned 104
 branch  3 taken 1 (fallthrough)
-branch  4 taken 2
+branch  4 taken 103
         3:   26:        throw RepoException("Disciplina nu exista!\n");
         1:   26-block  0
 call    0 returned 1
@@ -148,50 +148,50 @@ call    6 returned 1
     $$$$$:   26-block  6
 call    7 never executed
         -:   27:    }
-function _ZZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ENKUlRK10DisciplinaE_clESA_ called 2 returned 100% blocks executed 100%
-        4:   28:    std::erase_if(discipline, [&d](const Disciplina& disc){return disc == d;});
-        2:   28-block  0
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
+function _ZZN4Repo16stergeDisciplinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ENKUlRK10DisciplinaE_clESA_ called 5152 returned 100% blocks executed 100%
+     5255:   28:    std::erase_if(discipline, [&d](const Disciplina& disc){return disc == d;});
+      103:   28-block  0
+call    0 returned 103
+branch  1 taken 103 (fallthrough)
 branch  2 taken 0 (throw)
-        2:   28-block  1
-call    3 returned 2
+     5152:   28-block  1
+call    3 returned 5152
         -:   29:
-        3:   30:}
-        2:   30-block  0
-call    0 returned 2
+      104:   30:}
+      103:   30-block  0
+call    0 returned 103
         1:   30-block  1
 call    1 returned 1
-function _ZN4Repo18modificaDisciplinaERK10DisciplinaS2_ called 3 returned 67% blocks executed 68%
-        3:   31:void Repo::modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina) {
-        3:   32:    const Disciplina d =cautaDisciplina(disciplina.getDenumire(),disciplina.getTip());
-        3:   32-block  0
-call    0 returned 3
-branch  1 taken 3 (fallthrough)
+function _ZN4Repo18modificaDisciplinaERK10DisciplinaS2_ called 5 returned 80% blocks executed 68%
+        5:   31:void Repo::modificaDisciplina(const Disciplina& disciplinaNoua,const Disciplina& disciplina) {
+        5:   32:    const Disciplina d =cautaDisciplina(disciplina.getDenumire(),disciplina.getTip());
+        5:   32-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
 branch  2 taken 0 (throw)
-        3:   32-block  1
-call    3 returned 3
-branch  4 taken 3 (fallthrough)
+        5:   32-block  1
+call    3 returned 5
+branch  4 taken 5 (fallthrough)
 branch  5 taken 0 (throw)
-        3:   32-block  2
-call    6 returned 3
-branch  7 taken 3 (fallthrough)
+        5:   32-block  2
+call    6 returned 5
+branch  7 taken 5 (fallthrough)
 branch  8 taken 0 (throw)
-        3:   32-block  3
-call    9 returned 3
-call   10 returned 3
+        5:   32-block  3
+call    9 returned 5
+call   10 returned 5
     $$$$$:   32-block  4
 call   11 never executed
     $$$$$:   32-block  5
     $$$$$:   32-block  6
 call   12 never executed
     $$$$$:   32-block  7
-        3:   33:    if (d==Disciplina{}) {
-call    0 returned 3
-call    1 returned 3
-call    2 returned 3
+        5:   33:    if (d==Disciplina{}) {
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
 branch  3 taken 1 (fallthrough)
-branch  4 taken 2
+branch  4 taken 4
         3:   34:        throw RepoException("Disciplina nu exista!\n");
         1:   34-block  0
 call    0 returned 1
@@ -209,20 +209,20 @@ call    6 returned 1
     $$$$$:   34-block  6
 call    7 never executed
         -:   35:    }
-function _ZZN4Repo18modificaDisciplinaERK10DisciplinaS2_ENKUlS2_E_clES2_ called 2 returned 100% blocks executed 100%
-        4:   36:    std::replace_if(discipline.begin(), discipline.end(), [&d](const Disciplina& disc) {return disc == d;}, disciplinaNoua);
-        2:   36-block  0
-call    0 returned 2
-call    1 returned 2
-call    2 returned 2
-branch  3 taken 2 (fallthrough)
+function _ZZN4Repo18modificaDisciplinaERK10DisciplinaS2_ENKUlS2_E_clES2_ called 202 returned 100% blocks executed 100%
+      206:   36:    std::replace_if(discipline.begin(), discipline.end(), [&d](const Disciplina& disc) {return disc == d;}, disciplinaNoua);
+        4:   36-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+branch  3 taken 4 (fallthrough)
 branch  4 taken 0 (throw)
-        2:   36-block  1
-call    5 returned 2
+      202:   36-block  1
+call    5 returned 202
         -:   37:
-        3:   38:}
-        2:   38-block  0
-call    0 returned 2
+        5:   38:}
+        4:   38-block  0
+call    0 returned 4
         1:   38-block  1
 call    1 returned 1
         -:   39:

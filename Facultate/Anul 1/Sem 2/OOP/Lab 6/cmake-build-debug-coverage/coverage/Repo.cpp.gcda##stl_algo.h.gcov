@@ -4403,8 +4403,8 @@
         -: 4399:  template<typename _ForwardIterator, typename _Predicate, typename _Tp>
         -: 4400:    _GLIBCXX20_CONSTEXPR
         -: 4401:    void
-function _ZSt10replace_ifIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEEZN4Repo18modificaDisciplinaERKS2_SA_EUlSA_E_S2_EvT_SC_T0_RKT1_ called 2 returned 100% blocks executed 100%
-        2: 4402:    replace_if(_ForwardIterator __first, _ForwardIterator __last,
+function _ZSt10replace_ifIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorIS2_SaIS2_EEEEZN4Repo18modificaDisciplinaERKS2_SA_EUlSA_E_S2_EvT_SC_T0_RKT1_ called 4 returned 100% blocks executed 100%
+        4: 4402:    replace_if(_ForwardIterator __first, _ForwardIterator __last,
         -: 4403:	       _Predicate __pred, const _Tp& __new_value)
         -: 4404:    {
         -: 4405:      // concept requirements
@@ -4416,25 +4416,25 @@ function _ZSt10replace_ifIN9__gnu_cxx17__normal_iteratorIP10DisciplinaSt6vectorI
         -: 4411:	    typename iterator_traits<_ForwardIterator>::value_type>)
         -: 4412:      __glibcxx_requires_valid_range(__first, __last);
         -: 4413:
-        4: 4414:      for (; __first != __last; ++__first)
-        2: 4414-block  0
-        2: 4414-block  1
-call    0 returned 2
-        4: 4414-block  2
+      206: 4414:      for (; __first != __last; ++__first)
+        4: 4414-block  0
+      202: 4414-block  1
+call    0 returned 202
+      206: 4414-block  2
+call    1 returned 206
+branch  2 taken 202
+branch  3 taken 4 (fallthrough)
+      202: 4415:	if (__pred(*__first))
+      202: 4415-block  0
+call    0 returned 202
+call    1 returned 202
+branch  2 taken 4 (fallthrough)
+branch  3 taken 198
+        4: 4416:	  *__first = __new_value;
+        4: 4416-block  0
+call    0 returned 4
 call    1 returned 4
-branch  2 taken 2
-branch  3 taken 2 (fallthrough)
-        2: 4415:	if (__pred(*__first))
-        2: 4415-block  0
-call    0 returned 2
-call    1 returned 2
-branch  2 taken 2 (fallthrough)
-branch  3 taken 0
-        2: 4416:	  *__first = __new_value;
-        2: 4416-block  0
-call    0 returned 2
-call    1 returned 2
-        2: 4417:    }
+        4: 4417:    }
         -: 4418:
         -: 4419:  /**
         -: 4420:   *  @brief Assign the result of a function object to each value in a

@@ -53,11 +53,11 @@
         -:   49:    template<typename _Tp>
         -:   50:      [[nodiscard]]
         -:   51:      constexpr _Tp&&
-function _ZNKSt8identityclIRK10DisciplinaEEOT_S5_ called 8 returned 100% blocks executed 100%
-        8:   52:      operator()(_Tp&& __t) const noexcept
-        8:   53:      { return std::forward<_Tp>(__t); }
-        8:   53-block  0
-call    0 returned 8
+function _ZNKSt8identityclIRK10DisciplinaEEOT_S5_ called 5161 returned 100% blocks executed 100%
+     5161:   52:      operator()(_Tp&& __t) const noexcept
+     5161:   53:      { return std::forward<_Tp>(__t); }
+     5161:   53-block  0
+call    0 returned 5161
         -:   54:
         -:   55:    using is_transparent = __is_transparent;
         -:   56:  };

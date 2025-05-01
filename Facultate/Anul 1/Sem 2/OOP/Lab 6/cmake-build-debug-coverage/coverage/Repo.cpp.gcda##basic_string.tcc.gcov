@@ -401,25 +401,25 @@ call    0 never executed
         -:  270:  template<typename _CharT, typename _Traits, typename _Alloc>
         -:  271:    _GLIBCXX20_CONSTEXPR
         -:  272:    void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_ called 4326 returned 100% blocks executed 71%
-     4326:  273:    basic_string<_CharT, _Traits, _Alloc>::
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_ called 4629 returned 100% blocks executed 71%
+     4629:  273:    basic_string<_CharT, _Traits, _Alloc>::
         -:  274:    _M_assign(const basic_string& __str)
         -:  275:    {
-     4326:  276:      if (this != std::__addressof(__str))
-     4326:  276-block  0
-call    0 returned 4326
-branch  1 taken 4311 (fallthrough)
-branch  2 taken 15
+     4629:  276:      if (this != std::__addressof(__str))
+     4629:  276-block  0
+call    0 returned 4629
+branch  1 taken 4608 (fallthrough)
+branch  2 taken 21
         -:  277:	{
-     4311:  278:	  const size_type __rsize = __str.length();
-     4311:  278-block  0
-call    0 returned 4311
-     4311:  279:	  const size_type __capacity = capacity();
-call    0 returned 4311
+     4608:  278:	  const size_type __rsize = __str.length();
+     4608:  278-block  0
+call    0 returned 4608
+     4608:  279:	  const size_type __capacity = capacity();
+call    0 returned 4608
         -:  280:
-     4311:  281:	  if (__rsize > __capacity)
+     4608:  281:	  if (__rsize > __capacity)
 branch  0 taken 0 (fallthrough)
-branch  1 taken 4311
+branch  1 taken 4608
         -:  282:	    {
     #####:  283:	      size_type __new_capacity = __rsize;
     #####:  284:	      pointer __tmp = _M_create(__new_capacity, __capacity);
@@ -439,22 +439,22 @@ call    0 never executed
 call    0 never executed
         -:  288:	    }
         -:  289:
-     4311:  290:	  if (__rsize)
-     4311:  290-block  0
-branch  0 taken 4311 (fallthrough)
+     4608:  290:	  if (__rsize)
+     4608:  290-block  0
+branch  0 taken 4608 (fallthrough)
 branch  1 taken 0
-     4311:  291:	    this->_S_copy(_M_data(), __str._M_data(), __rsize);
-     4311:  291-block  0
-call    0 returned 4311
-call    1 returned 4311
-call    2 returned 4311
+     4608:  291:	    this->_S_copy(_M_data(), __str._M_data(), __rsize);
+     4608:  291-block  0
+call    0 returned 4608
+call    1 returned 4608
+call    2 returned 4608
         -:  292:
-     4311:  293:	  _M_set_length(__rsize);
-     4311:  293-block  0
-call    0 returned 4311
+     4608:  293:	  _M_set_length(__rsize);
+     4608:  293-block  0
+call    0 returned 4608
         -:  294:	}
-     4326:  295:    }
-     4326:  295-block  0
+     4629:  295:    }
+     4629:  295-block  0
         -:  296:
         -:  297:  template<typename _CharT, typename _Traits, typename _Alloc>
         -:  298:    _GLIBCXX20_CONSTEXPR

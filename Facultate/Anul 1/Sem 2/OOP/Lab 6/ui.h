@@ -6,7 +6,7 @@ class Ui {
     Service& service;
     static void readInteger(int &x,const string& msg);
     void adaugaDisciplina() const;
-
+    void undo() const;
     void modificaDisciplina() const;
 
     void stergeDisciplina() const;

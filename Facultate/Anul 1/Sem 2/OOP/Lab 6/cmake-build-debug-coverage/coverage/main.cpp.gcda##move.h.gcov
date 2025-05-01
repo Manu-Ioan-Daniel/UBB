@@ -50,20 +50,26 @@
         -:   46:   */
         -:   47:  template<typename _Tp>
         -:   48:    inline _GLIBCXX_CONSTEXPR _Tp*
-    25720:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
-    25720:   50:    { return __builtin_addressof(__r); }
+    36749:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+    36749:   50:    { return __builtin_addressof(__r); }
 ------------------
 _ZSt11__addressofIKcEPT_RS1_:
-function _ZSt11__addressofIKcEPT_RS1_ called 22492 returned 100% blocks executed 100%
-    22492:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
-    22492:   50:    { return __builtin_addressof(__r); }
-    22492:   50-block  0
+function _ZSt11__addressofIKcEPT_RS1_ called 31960 returned 100% blocks executed 100%
+    31960:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+    31960:   50:    { return __builtin_addressof(__r); }
+    31960:   50-block  0
+------------------
+_ZSt11__addressofISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEEPT_RS5_:
+function _ZSt11__addressofISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEEPT_RS5_ called 1460 returned 100% blocks executed 100%
+     1460:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+     1460:   50:    { return __builtin_addressof(__r); }
+     1460:   50-block  0
 ------------------
 _ZSt11__addressofI10DisciplinaEPT_RS1_:
-function _ZSt11__addressofI10DisciplinaEPT_RS1_ called 3228 returned 100% blocks executed 100%
-     3228:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
-     3228:   50:    { return __builtin_addressof(__r); }
-     3228:   50-block  0
+function _ZSt11__addressofI10DisciplinaEPT_RS1_ called 3329 returned 100% blocks executed 100%
+     3329:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+     3329:   50:    { return __builtin_addressof(__r); }
+     3329:   50-block  0
 ------------------
         -:   51:
         -:   52:#if __cplusplus >= 201103L
@@ -118,8 +124,10 @@ function _ZSt11__addressofI10DisciplinaEPT_RS1_ called 3228 returned 100% blocks
         -:  101:  template<typename _Tp>
         -:  102:    _GLIBCXX_NODISCARD
         -:  103:    constexpr typename std::remove_reference<_Tp>::type&&
-        -:  104:    move(_Tp&& __t) noexcept
-        -:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+function _ZSt4moveIRP11ActiuneUndoEONSt16remove_referenceIT_E4typeEOS4_ called 416 returned 100% blocks executed 100%
+      416:  104:    move(_Tp&& __t) noexcept
+      416:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+      416:  105-block  0
         -:  106:
         -:  107:
         -:  108:  template<typename _Tp>
@@ -159,11 +167,11 @@ function _ZSt11__addressofI10DisciplinaEPT_RS1_ called 3228 returned 100% blocks
         -:  142:  template<typename _Tp>
         -:  143:    _GLIBCXX_NODISCARD
         -:  144:    inline _GLIBCXX17_CONSTEXPR _Tp*
-function _ZSt9addressofIKcEPT_RS1_ called 22492 returned 100% blocks executed 100%
-    22492:  145:    addressof(_Tp& __r) noexcept
-    22492:  146:    { return std::__addressof(__r); }
-    22492:  146-block  0
-call    0 returned 22492
+function _ZSt9addressofIKcEPT_RS1_ called 31960 returned 100% blocks executed 100%
+    31960:  145:    addressof(_Tp& __r) noexcept
+    31960:  146:    { return std::__addressof(__r); }
+    31960:  146-block  0
+call    0 returned 31960
         -:  147:
         -:  148:  // _GLIBCXX_RESOLVE_LIB_DEFECTS
         -:  149:  // 2598. addressof works on temporaries

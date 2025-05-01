@@ -935,12 +935,12 @@ call    0 never executed
         -:  865:       */
         -:  866:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  867:      iterator
-function _ZNSt6vectorI10DisciplinaSaIS0_EE5beginEv called 377 returned 100% blocks executed 100%
-      377:  868:      begin() _GLIBCXX_NOEXCEPT
-      377:  869:      { return iterator(this->_M_impl._M_start); }
-      377:  869-block  0
-call    0 returned 377
-      377:  869-block  1
+function _ZNSt6vectorI10DisciplinaSaIS0_EE5beginEv called 783 returned 100% blocks executed 100%
+      783:  868:      begin() _GLIBCXX_NOEXCEPT
+      783:  869:      { return iterator(this->_M_impl._M_start); }
+      783:  869-block  0
+call    0 returned 783
+      783:  869-block  1
         -:  870:
         -:  871:      /**
         -:  872:       *  Returns a read-only (constant) iterator that points to the
@@ -949,12 +949,12 @@ call    0 returned 377
         -:  875:       */
         -:  876:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  877:      const_iterator
-function _ZNKSt6vectorI10DisciplinaSaIS0_EE5beginEv called 26 returned 100% blocks executed 100%
-       26:  878:      begin() const _GLIBCXX_NOEXCEPT
-       26:  879:      { return const_iterator(this->_M_impl._M_start); }
-       26:  879-block  0
-call    0 returned 26
-       26:  879-block  1
+function _ZNKSt6vectorI10DisciplinaSaIS0_EE5beginEv called 132 returned 100% blocks executed 100%
+      132:  878:      begin() const _GLIBCXX_NOEXCEPT
+      132:  879:      { return const_iterator(this->_M_impl._M_start); }
+      132:  879-block  0
+call    0 returned 132
+      132:  879-block  1
         -:  880:
         -:  881:      /**
         -:  882:       *  Returns a read/write iterator that points one past the last
@@ -963,12 +963,12 @@ call    0 returned 26
         -:  885:       */
         -:  886:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  887:      iterator
-function _ZNSt6vectorI10DisciplinaSaIS0_EE3endEv called 376 returned 100% blocks executed 100%
-      376:  888:      end() _GLIBCXX_NOEXCEPT
-      376:  889:      { return iterator(this->_M_impl._M_finish); }
-      376:  889-block  0
-call    0 returned 376
-      376:  889-block  1
+function _ZNSt6vectorI10DisciplinaSaIS0_EE3endEv called 883 returned 100% blocks executed 100%
+      883:  888:      end() _GLIBCXX_NOEXCEPT
+      883:  889:      { return iterator(this->_M_impl._M_finish); }
+      883:  889-block  0
+call    0 returned 883
+      883:  889-block  1
         -:  890:
         -:  891:      /**
         -:  892:       *  Returns a read-only (constant) iterator that points one past
@@ -977,12 +977,12 @@ call    0 returned 376
         -:  895:       */
         -:  896:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  897:      const_iterator
-function _ZNKSt6vectorI10DisciplinaSaIS0_EE3endEv called 803 returned 100% blocks executed 100%
-      803:  898:      end() const _GLIBCXX_NOEXCEPT
-      803:  899:      { return const_iterator(this->_M_impl._M_finish); }
-      803:  899-block  0
-call    0 returned 803
-      803:  899-block  1
+function _ZNKSt6vectorI10DisciplinaSaIS0_EE3endEv called 1015 returned 100% blocks executed 100%
+     1015:  898:      end() const _GLIBCXX_NOEXCEPT
+     1015:  899:      { return const_iterator(this->_M_impl._M_finish); }
+     1015:  899-block  0
+call    0 returned 1015
+     1015:  899-block  1
         -:  900:
         -:  901:      /**
         -:  902:       *  Returns a read/write reverse iterator that points to the
@@ -1032,12 +1032,12 @@ call    0 returned 803
         -:  946:       */
         -:  947:      [[__nodiscard__]] _GLIBCXX20_CONSTEXPR
         -:  948:      const_iterator
-function _ZNKSt6vectorI10DisciplinaSaIS0_EE6cbeginEv called 4 returned 100% blocks executed 100%
-        4:  949:      cbegin() const noexcept
-        4:  950:      { return const_iterator(this->_M_impl._M_start); }
-        4:  950-block  0
-call    0 returned 4
-        4:  950-block  1
+function _ZNKSt6vectorI10DisciplinaSaIS0_EE6cbeginEv called 105 returned 100% blocks executed 100%
+      105:  949:      cbegin() const noexcept
+      105:  950:      { return const_iterator(this->_M_impl._M_start); }
+      105:  950-block  0
+call    0 returned 105
+      105:  950-block  1
         -:  951:
         -:  952:      /**
         -:  953:       *  Returns a read-only (constant) iterator that points one past
@@ -1074,10 +1074,10 @@ call    0 returned 4
         -:  984:      /**  Returns the number of elements in the %vector.  */
         -:  985:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  986:      size_type
-function _ZNKSt6vectorI10DisciplinaSaIS0_EE4sizeEv called 183 returned 100% blocks executed 100%
-      183:  987:      size() const _GLIBCXX_NOEXCEPT
-      183:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
-      183:  988-block  0
+function _ZNKSt6vectorI10DisciplinaSaIS0_EE4sizeEv called 487 returned 100% blocks executed 100%
+      487:  987:      size() const _GLIBCXX_NOEXCEPT
+      487:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+      487:  988-block  0
         -:  989:
         -:  990:      /**  Returns the size() of the largest possible %vector.  */
         -:  991:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
@@ -1374,21 +1374,21 @@ call    2 returned 2
         -: 1273:       */
         -: 1274:      _GLIBCXX20_CONSTEXPR
         -: 1275:      void
-function _ZNSt6vectorI10DisciplinaSaIS0_EE9push_backERKS0_ called 514 returned 100% blocks executed 100%
-      514: 1276:      push_back(const value_type& __x)
+function _ZNSt6vectorI10DisciplinaSaIS0_EE9push_backERKS0_ called 615 returned 100% blocks executed 100%
+      615: 1276:      push_back(const value_type& __x)
         -: 1277:      {
-      514: 1278:	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
-      514: 1278-block  0
-branch  0 taken 474 (fallthrough)
+      615: 1278:	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
+      615: 1278-block  0
+branch  0 taken 575 (fallthrough)
 branch  1 taken 40
         -: 1279:	  {
         -: 1280:	    _GLIBCXX_ASAN_ANNOTATE_GROW(1);
-      474: 1281:	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
-      474: 1281-block  0
-call    0 returned 474
+      575: 1281:	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
+      575: 1281-block  0
+call    0 returned 575
         -: 1282:				     __x);
-      474: 1283:	    ++this->_M_impl._M_finish;
-      474: 1283-block  0
+      575: 1283:	    ++this->_M_impl._M_finish;
+      575: 1283-block  0
         -: 1284:	    _GLIBCXX_ASAN_ANNOTATE_GREW(1);
         -: 1285:	  }
         -: 1286:	else
@@ -1396,7 +1396,7 @@ call    0 returned 474
        40: 1287-block  0
 call    0 returned 40
 call    1 returned 40
-      514: 1288:      }
+      615: 1288:      }
         -: 1289:
         -: 1290:#if __cplusplus >= 201103L
         -: 1291:      _GLIBCXX20_CONSTEXPR
@@ -1665,24 +1665,24 @@ call    1 returned 40
         -: 1554:      _GLIBCXX20_CONSTEXPR
         -: 1555:      iterator
         -: 1556:#if __cplusplus >= 201103L
-function _ZNSt6vectorI10DisciplinaSaIS0_EE5eraseEN9__gnu_cxx17__normal_iteratorIPKS0_S2_EES7_ called 4 returned 100% blocks executed 100%
-        4: 1557:      erase(const_iterator __first, const_iterator __last)
+function _ZNSt6vectorI10DisciplinaSaIS0_EE5eraseEN9__gnu_cxx17__normal_iteratorIPKS0_S2_EES7_ called 105 returned 100% blocks executed 100%
+      105: 1557:      erase(const_iterator __first, const_iterator __last)
         -: 1558:      {
-        4: 1559:	const auto __beg = begin();
-        4: 1559-block  0
-call    0 returned 4
-        4: 1560:	const auto __cbeg = cbegin();
-call    0 returned 4
-        8: 1561:	return _M_erase(__beg + (__first - __cbeg), __beg + (__last - __cbeg));
-call    0 returned 4
-call    1 returned 4
-call    2 returned 4
-call    3 returned 4
-call    4 returned 4
-branch  5 taken 4 (fallthrough)
+      105: 1559:	const auto __beg = begin();
+      105: 1559-block  0
+call    0 returned 105
+      105: 1560:	const auto __cbeg = cbegin();
+call    0 returned 105
+      210: 1561:	return _M_erase(__beg + (__first - __cbeg), __beg + (__last - __cbeg));
+call    0 returned 105
+call    1 returned 105
+call    2 returned 105
+call    3 returned 105
+call    4 returned 105
+branch  5 taken 105 (fallthrough)
 branch  6 taken 0 (throw)
-        4: 1561-block  0
-        4: 1561-block  1
+      105: 1561-block  0
+      105: 1561-block  1
         -: 1562:      }
         -: 1563:#else
         -: 1564:      erase(iterator __first, iterator __last)
@@ -2076,24 +2076,24 @@ call    0 returned 80
         -: 1925:      // _M_assign_aux.
         -: 1926:      _GLIBCXX20_CONSTEXPR
         -: 1927:      void
-function _ZNSt6vectorI10DisciplinaSaIS0_EE15_M_erase_at_endEPS0_ called 3 returned 100% blocks executed 100%
-        3: 1928:      _M_erase_at_end(pointer __pos) _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorI10DisciplinaSaIS0_EE15_M_erase_at_endEPS0_ called 104 returned 100% blocks executed 100%
+      104: 1928:      _M_erase_at_end(pointer __pos) _GLIBCXX_NOEXCEPT
         -: 1929:      {
-        3: 1930:	if (size_type __n = this->_M_impl._M_finish - __pos)
-        3: 1930-block  0
-branch  0 taken 3 (fallthrough)
+      104: 1930:	if (size_type __n = this->_M_impl._M_finish - __pos)
+      104: 1930-block  0
+branch  0 taken 104 (fallthrough)
 branch  1 taken 0
         -: 1931:	  {
-        3: 1932:	    std::_Destroy(__pos, this->_M_impl._M_finish,
-call    0 returned 3
-        3: 1933:			  _M_get_Tp_allocator());
-        3: 1933-block  0
-call    0 returned 3
-        3: 1934:	    this->_M_impl._M_finish = __pos;
-        3: 1934-block  0
+      104: 1932:	    std::_Destroy(__pos, this->_M_impl._M_finish,
+call    0 returned 104
+      104: 1933:			  _M_get_Tp_allocator());
+      104: 1933-block  0
+call    0 returned 104
+      104: 1934:	    this->_M_impl._M_finish = __pos;
+      104: 1934-block  0
         -: 1935:	    _GLIBCXX_ASAN_ANNOTATE_SHRINK(__n);
         -: 1936:	  }
-        3: 1937:      }
+      104: 1937:      }
         -: 1938:
         -: 1939:      _GLIBCXX20_CONSTEXPR
         -: 1940:      iterator

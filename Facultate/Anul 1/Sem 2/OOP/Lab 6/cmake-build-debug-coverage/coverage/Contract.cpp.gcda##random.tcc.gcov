@@ -52,7 +52,7 @@
         -:   48:    // Note: only works correctly for __m % __a < __m / __a.
         -:   49:    template<typename _Tp, _Tp __m, _Tp __a, _Tp __c>
         -:   50:      _Tp
-function _ZNSt8__detail4_ModIjLj2147483647ELj16807ELj0ELb0ELb1EE6__calcEj called 105 returned 100% blocks executed 83%
+function _ZNSt8__detail4_ModIjLj2147483647ELj16807ELj0ELb0ELb1EE6__calcEj called 105 returned 100% blocks executed 100%
       105:   51:      _Mod<_Tp, __m, __a, __c, false, true>::
       105:   51-block  0
         -:   52:      __calc(_Tp __x)
@@ -68,13 +68,13 @@ function _ZNSt8__detail4_ModIjLj2147483647ELj16807ELj0ELb0ELb1EE6__calcEj called
       105:   62:	    _Tp __t2 = __r * (__x / __q);
       105:   63:	    if (__t1 >= __t2)
       105:   63-block  0
-branch  0 taken 105 (fallthrough)
-branch  1 taken 0
-      105:   64:	      __x = __t1 - __t2;
-      105:   64-block  0
+branch  0 taken 101 (fallthrough)
+branch  1 taken 4
+      101:   64:	      __x = __t1 - __t2;
+      101:   64-block  0
         -:   65:	    else
-    #####:   66:	      __x = __m - __t2 + __t1;
-    %%%%%:   66-block  0
+        4:   66:	      __x = __m - __t2 + __t1;
+        4:   66-block  0
         -:   67:	  }
         -:   68:
         -:   69:	if (__c != 0)

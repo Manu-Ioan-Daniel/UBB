@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <random>
 #include <chrono>
+#include <fstream>
 void Contract::golesteContract() {
     listaDiscipline.erase(listaDiscipline.begin(),listaDiscipline.end());
 }
@@ -17,4 +18,14 @@ void Contract::genereazaContract(const int nrDiscipline,vector<Disciplina> disci
 }
 void Contract::adaugaDisciplinaContract(const Disciplina &disciplina) {
     listaDiscipline.push_back(disciplina);
+}
+void Contract::exportCSV(const string& filename) const {
+    std::ofstream out(filename);
+    if (!out.is_open()) {
+        throw std::runtime_error("Could not open file");
+    }
+    for (const auto& d:listaDiscipline) {
+        out<<d.getDenumire()<<" ,"<<d.getTip()<<" ,"<<d.getCadruDidactic()<<", "<<d.getNrOre()<<"."<<std::endl;
+    }
+    out.close();
 }

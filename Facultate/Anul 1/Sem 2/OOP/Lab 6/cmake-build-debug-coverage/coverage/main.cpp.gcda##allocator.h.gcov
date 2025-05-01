@@ -164,8 +164,9 @@
         -:  160:      // 3035. std::allocator's constructors should be constexpr
         -:  161:      __attribute__((__always_inline__))
         -:  162:      _GLIBCXX20_CONSTEXPR
-        3:  163:      allocator() _GLIBCXX_NOTHROW { }
+        6:  163:      allocator() _GLIBCXX_NOTHROW { }
         3:  163-block  0
+        3:  163-block  1
         -:  164:
         -:  165:      __attribute__((__always_inline__))
         -:  166:      _GLIBCXX20_CONSTEXPR
@@ -207,27 +208,35 @@
         -:  202:      constexpr void
         -:  203:      deallocate(_Tp* __p, size_t __n)
         -:  204:      {
-       65:  205:	if (std::__is_constant_evaluated())
-call    0 returned 18
+       83:  205:	if (std::__is_constant_evaluated())
+call    0 returned 19
 branch  1 taken 0 (fallthrough)
-branch  2 taken 18
-       47:  205-block  0
-call    3 returned 47
+branch  2 taken 19
+       17:  205-block  0
+call    3 returned 17
 branch  4 taken 0 (fallthrough)
-branch  5 taken 47
+branch  5 taken 17
+       47:  205-block  1
+call    6 returned 47
+branch  7 taken 0 (fallthrough)
+branch  8 taken 47
         -:  206:	  {
     #####:  207:	    ::operator delete(__p);
     %%%%%:  207-block  0
 call    0 never executed
     %%%%%:  207-block  1
 call    1 never executed
+    %%%%%:  207-block  2
+call    2 never executed
     #####:  208:	    return;
         -:  209:	  }
-       65:  210:	__allocator_base<_Tp>::deallocate(__p, __n);
-       18:  210-block  0
-call    0 returned 18
-       47:  210-block  1
-call    1 returned 47
+       83:  210:	__allocator_base<_Tp>::deallocate(__p, __n);
+       19:  210-block  0
+call    0 returned 19
+       17:  210-block  1
+call    1 returned 17
+       47:  210-block  2
+call    2 returned 47
         -:  211:      }
         -:  212:#endif // C++20
         -:  213:

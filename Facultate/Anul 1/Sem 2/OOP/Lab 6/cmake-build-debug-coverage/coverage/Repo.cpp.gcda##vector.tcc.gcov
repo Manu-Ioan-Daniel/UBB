@@ -196,35 +196,35 @@
         -:  192:  template<typename _Tp, typename _Alloc>
         -:  193:    _GLIBCXX20_CONSTEXPR
         -:  194:    typename vector<_Tp, _Alloc>::iterator
-function _ZNSt6vectorI10DisciplinaSaIS0_EE8_M_eraseEN9__gnu_cxx17__normal_iteratorIPS0_S2_EES6_ called 4 returned 100% blocks executed 86%
-        4:  195:    vector<_Tp, _Alloc>::
+function _ZNSt6vectorI10DisciplinaSaIS0_EE8_M_eraseEN9__gnu_cxx17__normal_iteratorIPS0_S2_EES6_ called 105 returned 100% blocks executed 86%
+      105:  195:    vector<_Tp, _Alloc>::
         -:  196:    _M_erase(iterator __first, iterator __last)
         -:  197:    {
-        4:  198:      if (__first != __last)
-        4:  198-block  0
-call    0 returned 4
-branch  1 taken 3 (fallthrough)
+      105:  198:      if (__first != __last)
+      105:  198-block  0
+call    0 returned 105
+branch  1 taken 104 (fallthrough)
 branch  2 taken 1
         -:  199:	{
-        3:  200:	  if (__last != end())
-        3:  200-block  0
-call    0 returned 3
-call    1 returned 3
+      104:  200:	  if (__last != end())
+      104:  200-block  0
+call    0 returned 104
+call    1 returned 104
 branch  2 taken 0 (fallthrough)
-branch  3 taken 3
+branch  3 taken 104
     #####:  201:	    _GLIBCXX_MOVE3(__last, end(), __first);
     %%%%%:  201-block  0
 call    0 never executed
 call    1 never executed
-        3:  202:	  _M_erase_at_end(__first.base() + (end() - __last));
-        3:  202-block  0
-call    0 returned 3
-call    1 returned 3
-call    2 returned 3
-call    3 returned 3
+      104:  202:	  _M_erase_at_end(__first.base() + (end() - __last));
+      104:  202-block  0
+call    0 returned 104
+call    1 returned 104
+call    2 returned 104
+call    3 returned 104
         -:  203:	}
-        4:  204:      return __first;
-        4:  204-block  0
+      105:  204:      return __first;
+      105:  204-block  0
         -:  205:    }
         -:  206:
         -:  207:  template<typename _Tp, typename _Alloc>

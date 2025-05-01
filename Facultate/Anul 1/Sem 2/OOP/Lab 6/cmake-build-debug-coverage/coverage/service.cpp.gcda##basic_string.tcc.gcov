@@ -381,14 +381,14 @@ call    0 never executed
         -:  250:  template<typename _CharT, typename _Traits, typename _Alloc>
         -:  251:    _GLIBCXX20_CONSTEXPR
         -:  252:    void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructEyc called 320 returned 100% blocks executed 65%
-      320:  253:    basic_string<_CharT, _Traits, _Alloc>::
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructEyc called 420 returned 100% blocks executed 65%
+      420:  253:    basic_string<_CharT, _Traits, _Alloc>::
         -:  254:    _M_construct(size_type __n, _CharT __c)
         -:  255:    {
-      320:  256:      if (__n > size_type(_S_local_capacity))
-      320:  256-block  0
+      420:  256:      if (__n > size_type(_S_local_capacity))
+      420:  256-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 320
+branch  1 taken 420
         -:  257:	{
     #####:  258:	  _M_data(_M_create(__n, size_type(0)));
     %%%%%:  258-block  0
@@ -400,19 +400,19 @@ call    0 never executed
         -:  261:      else
         -:  262:	_M_use_local_data();
         -:  263:
-      320:  264:      if (__n)
-      320:  264-block  0
-branch  0 taken 320 (fallthrough)
+      420:  264:      if (__n)
+      420:  264-block  0
+branch  0 taken 420 (fallthrough)
 branch  1 taken 0
-      320:  265:	this->_S_assign(_M_data(), __n, __c);
-      320:  265-block  0
-call    0 returned 320
-call    1 returned 320
+      420:  265:	this->_S_assign(_M_data(), __n, __c);
+      420:  265-block  0
+call    0 returned 420
+call    1 returned 420
         -:  266:
-      320:  267:      _M_set_length(__n);
-      320:  267-block  0
-call    0 returned 320
-      320:  268:    }
+      420:  267:      _M_set_length(__n);
+      420:  267-block  0
+call    0 returned 420
+      420:  268:    }
         -:  269:
         -:  270:  template<typename _CharT, typename _Traits, typename _Alloc>
         -:  271:    _GLIBCXX20_CONSTEXPR
@@ -755,34 +755,34 @@ call    0 returned 11
         -:  504:  template<typename _CharT, typename _Traits, typename _Alloc>
         -:  505:    _GLIBCXX20_CONSTEXPR
         -:  506:    basic_string<_CharT, _Traits, _Alloc>&
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEyyPKcy called 320 returned 100% blocks executed 40%
-      320:  507:    basic_string<_CharT, _Traits, _Alloc>::
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEyyPKcy called 420 returned 100% blocks executed 40%
+      420:  507:    basic_string<_CharT, _Traits, _Alloc>::
         -:  508:    _M_replace(size_type __pos, size_type __len1, const _CharT* __s,
         -:  509:	       const size_type __len2)
         -:  510:    {
-      320:  511:      _M_check_length(__len1, __len2, "basic_string::_M_replace");
-      320:  511-block  0
-call    0 returned 320
+      420:  511:      _M_check_length(__len1, __len2, "basic_string::_M_replace");
+      420:  511-block  0
+call    0 returned 420
         -:  512:
-      320:  513:      const size_type __old_size = this->size();
-call    0 returned 320
-      320:  514:      const size_type __new_size = __old_size + __len2 - __len1;
+      420:  513:      const size_type __old_size = this->size();
+call    0 returned 420
+      420:  514:      const size_type __new_size = __old_size + __len2 - __len1;
         -:  515:
-      320:  516:      if (__new_size <= this->capacity())
-call    0 returned 320
-branch  1 taken 320 (fallthrough)
+      420:  516:      if (__new_size <= this->capacity())
+call    0 returned 420
+branch  1 taken 420 (fallthrough)
 branch  2 taken 0
         -:  517:	{
-      320:  518:	  pointer __p = this->_M_data() + __pos;
-      320:  518-block  0
-call    0 returned 320
+      420:  518:	  pointer __p = this->_M_data() + __pos;
+      420:  518-block  0
+call    0 returned 420
         -:  519:
-      320:  520:	  const size_type __how_much = __old_size - __pos - __len1;
+      420:  520:	  const size_type __how_much = __old_size - __pos - __len1;
         -:  521:#if __cpp_lib_is_constant_evaluated
-      320:  522:	  if (std::is_constant_evaluated())
-call    0 returned 320
+      420:  522:	  if (std::is_constant_evaluated())
+call    0 returned 420
 branch  1 taken 0 (fallthrough)
-branch  2 taken 320
+branch  2 taken 420
         -:  523:	    {
     #####:  524:	      auto __newp = _Alloc_traits::allocate(_M_get_allocator(),
     %%%%%:  524-block  0
@@ -804,29 +804,29 @@ call    0 never executed
         -:  531:	    }
         -:  532:	  else
         -:  533:#endif
-      320:  534:	  if (__builtin_expect(_M_disjunct(__s), true))
-      320:  534-block  0
-call    0 returned 320
-branch  1 taken 320 (fallthrough)
+      420:  534:	  if (__builtin_expect(_M_disjunct(__s), true))
+      420:  534-block  0
+call    0 returned 420
+branch  1 taken 420 (fallthrough)
 branch  2 taken 0
         -:  535:	    {
-      320:  536:	      if (__how_much && __len1 != __len2)
-      320:  536-block  0
-branch  0 taken 320 (fallthrough)
+      420:  536:	      if (__how_much && __len1 != __len2)
+      420:  536-block  0
+branch  0 taken 420 (fallthrough)
 branch  1 taken 0
-      320:  536-block  1
-branch  2 taken 320 (fallthrough)
+      420:  536-block  1
+branch  2 taken 420 (fallthrough)
 branch  3 taken 0
-      320:  537:		this->_S_move(__p + __len2, __p + __len1, __how_much);
-      320:  537-block  0
-call    0 returned 320
-      320:  538:	      if (__len2)
-      320:  538-block  0
-branch  0 taken 320 (fallthrough)
+      420:  537:		this->_S_move(__p + __len2, __p + __len1, __how_much);
+      420:  537-block  0
+call    0 returned 420
+      420:  538:	      if (__len2)
+      420:  538-block  0
+branch  0 taken 420 (fallthrough)
 branch  1 taken 0
-      320:  539:		this->_S_copy(__p, __s, __len2);
-      320:  539-block  0
-call    0 returned 320
+      420:  539:		this->_S_copy(__p, __s, __len2);
+      420:  539-block  0
+call    0 returned 420
         -:  540:	    }
         -:  541:	  else
     #####:  542:	    _M_replace_cold(__p, __len1, __s, __len2, __how_much);
@@ -838,10 +838,10 @@ call    0 never executed
     %%%%%:  545-block  0
 call    0 never executed
         -:  546:
-      320:  547:      this->_M_set_length(__new_size);
-      320:  547-block  0
-call    0 returned 320
-      320:  548:      return *this;
+      420:  547:      this->_M_set_length(__new_size);
+      420:  547-block  0
+call    0 returned 420
+      420:  548:      return *this;
         -:  549:    }
         -:  550:
         -:  551:  template<typename _CharT, typename _Traits, typename _Alloc>

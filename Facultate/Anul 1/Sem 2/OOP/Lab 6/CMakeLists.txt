@@ -16,4 +16,6 @@ add_executable(Lab_6 main.cpp
         ui.h
         LinkedList.h
         Contract.cpp
-        Contract.h)
+        Contract.h
+        undo.cpp
+        undo.h)

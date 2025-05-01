@@ -1,8 +1,9 @@
 #pragma once
 #include <map>
-
+#include <memory>
 #include "Contract.h"
 #include "Repo.h"
+#include "undo.h"
 #include "validator.h"
 class ServiceException final: public std::exception {
     string msg;
@@ -17,16 +18,18 @@ class Service {
     Repo& repo;
     Validator& validator;
     Contract contract;
+    std::vector<std::unique_ptr<ActiuneUndo>> undoActions;
+
 public:
     explicit Service(Repo& repo,Validator& validator): repo(repo), validator(validator) {
     }
 
-    void addDisciplinaService(const string& denumire, int nrOre, const string& tip, const string& cadruDidactic) const;
+    void addDisciplinaService(const string& denumire, int nrOre, const string& tip, const string& cadruDidactic);
     [[nodiscard]] vector<Disciplina>& getAll() const {
         return repo.getAll();
     }
-    void modificaDisciplinaService(const string& denumire,const string& tip,const string& denumireNoua,const string& tipNou,int nrOreNou,const string& cadruDidacticNou) const;
-    void stergeDisciplinaService(const string& denumire,const string& tip) const;
+    void modificaDisciplinaService(const string& denumire,const string& tip,const string& denumireNoua,const string& tipNou,int nrOreNou,const string& cadruDidacticNou) ;
+    void stergeDisciplinaService(const string& denumire,const string& tip) ;
 
     [[nodiscard]]vector<Disciplina> filtrareDisciplineDupaOre(int nrOre) const;
 
@@ -50,6 +53,8 @@ public:
     [[nodiscard]] int getContractSize() const {
         return contract.getSize();
     }
+    void undo();
 
+    void exportCSVService(const string &filename) const;
 };
 void testService();

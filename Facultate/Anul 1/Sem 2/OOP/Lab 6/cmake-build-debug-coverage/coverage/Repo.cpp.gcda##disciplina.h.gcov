@@ -32,48 +32,48 @@ function _ZN10DisciplinaD1Ev called 0 returned 0% blocks executed 0%
 call    0 never executed
 call    1 never executed
 call    2 never executed
-function _ZN10DisciplinaC1ERKS_ called 2620 returned 100% blocks executed 62%
-     2620:   18:        Disciplina(const Disciplina& d)= default;
-     2620:   18-block  0
-call    0 returned 2620
-call    1 returned 2620
-branch  2 taken 2620 (fallthrough)
+function _ZN10DisciplinaC1ERKS_ called 3243 returned 100% blocks executed 62%
+     3243:   18:        Disciplina(const Disciplina& d)= default;
+     3243:   18-block  0
+call    0 returned 3243
+call    1 returned 3243
+branch  2 taken 3243 (fallthrough)
 branch  3 taken 0 (throw)
-     2620:   18-block  1
-call    4 returned 2620
-branch  5 taken 2620 (fallthrough)
+     3243:   18-block  1
+call    4 returned 3243
+branch  5 taken 3243 (fallthrough)
 branch  6 taken 0 (throw)
-     2620:   18-block  2
+     3243:   18-block  2
     $$$$$:   18-block  3
 call    7 never executed
     $$$$$:   18-block  4
 call    8 never executed
-function _ZN10DisciplinaC1Ev called 8 returned 100% blocks executed 100%
-        8:   19:        Disciplina()=default;
-        8:   19-block  0
-call    0 returned 8
-call    1 returned 8
-call    2 returned 8
-function _ZN10DisciplinaaSERKS_ called 1442 returned 100% blocks executed 100%
-     1442:   20:        Disciplina& operator=(const Disciplina& d) = default;
-     1442:   20-block  0
-call    0 returned 1442
-call    1 returned 1442
-call    2 returned 1442
-function _ZNK10DisciplinaeqERKS_ called 27122 returned 100% blocks executed 100%
-    27122:   21:        bool operator==(const Disciplina& d) const {
-    27122:   22:            return denumire==d.denumire && tip==d.tip;
-    27122:   22-block  0
-call    0 returned 27122
-branch  1 taken 23 (fallthrough)
-branch  2 taken 27099
-       23:   22-block  1
-call    3 returned 23
-branch  4 taken 13 (fallthrough)
+function _ZN10DisciplinaC1Ev called 113 returned 100% blocks executed 100%
+      113:   19:        Disciplina()=default;
+      113:   19-block  0
+call    0 returned 113
+call    1 returned 113
+call    2 returned 113
+function _ZN10DisciplinaaSERKS_ called 1543 returned 100% blocks executed 100%
+     1543:   20:        Disciplina& operator=(const Disciplina& d) = default;
+     1543:   20-block  0
+call    0 returned 1543
+call    1 returned 1543
+call    2 returned 1543
+function _ZNK10DisciplinaeqERKS_ called 37624 returned 100% blocks executed 100%
+    37624:   21:        bool operator==(const Disciplina& d) const {
+    37624:   22:            return denumire==d.denumire && tip==d.tip;
+    37624:   22-block  0
+call    0 returned 37624
+branch  1 taken 126 (fallthrough)
+branch  2 taken 37498
+      126:   22-block  1
+call    3 returned 126
+branch  4 taken 116 (fallthrough)
 branch  5 taken 10
-       13:   22-block  2
-    27109:   22-block  3
-    27122:   22-block  4
+      116:   22-block  2
+    37508:   22-block  3
+    37624:   22-block  4
         -:   23:        }
         -:   24:
         -:   25:

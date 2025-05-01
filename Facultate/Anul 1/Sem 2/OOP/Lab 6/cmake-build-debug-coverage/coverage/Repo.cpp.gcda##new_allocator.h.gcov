@@ -89,8 +89,8 @@
         -:   85:
         -:   86:      __attribute__((__always_inline__))
         -:   87:      _GLIBCXX20_CONSTEXPR
-      357:   88:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
-      346:   88-block  0
+      776:   88:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+      765:   88-block  0
         1:   88-block  1
         1:   88-block  2
         1:   88-block  3

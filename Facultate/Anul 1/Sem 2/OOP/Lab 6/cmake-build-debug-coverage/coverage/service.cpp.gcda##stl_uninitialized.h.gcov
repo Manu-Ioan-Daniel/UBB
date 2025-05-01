@@ -1273,7 +1273,8 @@ call    2 never executed
         -: 1061:  template<typename _Tp, typename _Up, typename _Allocator>
         -: 1062:    _GLIBCXX20_CONSTEXPR
         -: 1063:    inline void
-        -: 1064:    __relocate_object_a(_Tp* __restrict __dest, _Up* __restrict __orig,
+function _ZSt19__relocate_object_aISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EES4_SaIS4_EEvPT_PT0_RT1_ called 382 returned 100% blocks executed 100%
+      382: 1064:    __relocate_object_a(_Tp* __restrict __dest, _Up* __restrict __orig,
         -: 1065:			_Allocator& __alloc)
         -: 1066:    noexcept(noexcept(std::allocator_traits<_Allocator>::construct(__alloc,
         -: 1067:			 __dest, std::move(*__orig)))
@@ -1281,9 +1282,13 @@ call    2 never executed
         -: 1069:			    __alloc, std::__addressof(*__orig))))
         -: 1070:    {
         -: 1071:      typedef std::allocator_traits<_Allocator> __traits;
-        -: 1072:      __traits::construct(__alloc, __dest, std::move(*__orig));
-        -: 1073:      __traits::destroy(__alloc, std::__addressof(*__orig));
-        -: 1074:    }
+      382: 1072:      __traits::construct(__alloc, __dest, std::move(*__orig));
+      382: 1072-block  0
+call    0 returned 382
+      382: 1073:      __traits::destroy(__alloc, std::__addressof(*__orig));
+      382: 1073-block  0
+call    0 returned 382
+      382: 1074:    }
         -: 1075:
         -: 1076:  // This class may be specialized for specific types.
         -: 1077:  // Also known as is_trivially_relocatable.
@@ -1295,7 +1300,8 @@ call    2 never executed
         -: 1083:	    typename _Allocator>
         -: 1084:    _GLIBCXX20_CONSTEXPR
         -: 1085:    inline _ForwardIterator
-        -: 1086:    __relocate_a_1(_InputIterator __first, _InputIterator __last,
+function _ZSt14__relocate_a_1IPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EES5_SaIS4_EET0_T_S8_S7_RT1_ called 34 returned 100% blocks executed 100%
+       34: 1086:    __relocate_a_1(_InputIterator __first, _InputIterator __last,
         -: 1087:		   _ForwardIterator __result, _Allocator& __alloc)
         -: 1088:    noexcept(noexcept(std::__relocate_object_a(std::addressof(*__result),
         -: 1089:					       std::addressof(*__first),
@@ -1307,11 +1313,20 @@ call    2 never executed
         -: 1095:	_ValueType2;
         -: 1096:      static_assert(std::is_same<_ValueType, _ValueType2>::value,
         -: 1097:	  "relocation is only possible for values of the same type");
-        -: 1098:      _ForwardIterator __cur = __result;
-        -: 1099:      for (; __first != __last; ++__first, (void)++__cur)
-        -: 1100:	std::__relocate_object_a(std::__addressof(*__cur),
+       34: 1098:      _ForwardIterator __cur = __result;
+      416: 1099:      for (; __first != __last; ++__first, (void)++__cur)
+       34: 1099-block  0
+      416: 1099-block  1
+branch  0 taken 382
+branch  1 taken 34 (fallthrough)
+      382: 1100:	std::__relocate_object_a(std::__addressof(*__cur),
+      382: 1100-block  0
+call    0 returned 382
+call    1 returned 382
+call    2 returned 382
         -: 1101:				 std::__addressof(*__first), __alloc);
-        -: 1102:      return __cur;
+       34: 1102:      return __cur;
+       34: 1102-block  0
         -: 1103:    }
         -: 1104:
         -: 1105:#if _GLIBCXX_HOSTED
@@ -1345,15 +1360,21 @@ call    2 never executed
         -: 1133:	    typename _Allocator>
         -: 1134:    _GLIBCXX20_CONSTEXPR
         -: 1135:    inline _ForwardIterator
-        -: 1136:    __relocate_a(_InputIterator __first, _InputIterator __last,
+function _ZSt12__relocate_aIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EES5_SaIS4_EET0_T_S8_S7_RT1_ called 34 returned 100% blocks executed 100%
+       34: 1136:    __relocate_a(_InputIterator __first, _InputIterator __last,
         -: 1137:		 _ForwardIterator __result, _Allocator& __alloc)
         -: 1138:    noexcept(noexcept(__relocate_a_1(std::__niter_base(__first),
         -: 1139:				     std::__niter_base(__last),
         -: 1140:				     std::__niter_base(__result), __alloc)))
         -: 1141:    {
-        -: 1142:      return std::__relocate_a_1(std::__niter_base(__first),
+       34: 1142:      return std::__relocate_a_1(std::__niter_base(__first),
+       34: 1142-block  0
+call    0 returned 34
+call    1 returned 34
+call    2 returned 34
+call    3 returned 34
         -: 1143:				 std::__niter_base(__last),
-        -: 1144:				 std::__niter_base(__result), __alloc);
+       34: 1144:				 std::__niter_base(__result), __alloc);
         -: 1145:    }
         -: 1146:
         -: 1147:  /// @endcond

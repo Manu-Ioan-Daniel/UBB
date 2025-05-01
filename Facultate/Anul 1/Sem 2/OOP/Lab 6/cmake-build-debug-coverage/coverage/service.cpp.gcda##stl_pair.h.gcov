@@ -198,10 +198,7 @@
         -:  194:      _T2 second;                ///< The second member
         -:  195:
         -:  196:#if __cplusplus >= 201103L
-function _ZNSt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEC1ERKS7_ called 100 returned 100% blocks executed 100%
-      100:  197:      constexpr pair(const pair&) = default;	///< Copy constructor
-      100:  197-block  0
-call    0 returned 100
+        -:  197:      constexpr pair(const pair&) = default;	///< Copy constructor
         -:  198:      constexpr pair(pair&&) = default;		///< Move constructor
         -:  199:
         -:  200:      template<typename... _Args1, typename... _Args2>
@@ -1016,16 +1013,15 @@ call    1 returned 21
         -:  987:
         -:  988:      template<typename _Tp1, typename _Tp2>
         -:  989:	static constexpr _Tp1&&
-function _ZNSt10__pair_getILy0EE10__move_getIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEEOT_OSt4pairIS9_T0_E called 100 returned 100% blocks executed 100%
-      100:  990:	__move_get(pair<_Tp1, _Tp2>&& __pair) noexcept
-      100:  991:	{ return std::forward<_Tp1>(__pair.first); }
-      100:  991-block  0
-call    0 returned 100
+        -:  990:	__move_get(pair<_Tp1, _Tp2>&& __pair) noexcept
+        -:  991:	{ return std::forward<_Tp1>(__pair.first); }
         -:  992:
         -:  993:      template<typename _Tp1, typename _Tp2>
         -:  994:	static constexpr const _Tp1&
-        -:  995:	__const_get(const pair<_Tp1, _Tp2>& __pair) noexcept
-        -:  996:	{ return __pair.first; }
+function _ZNSt10__pair_getILy0EE11__const_getIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEERKT_RKSt4pairIS9_T0_E called 100 returned 100% blocks executed 100%
+      100:  995:	__const_get(const pair<_Tp1, _Tp2>& __pair) noexcept
+      100:  996:	{ return __pair.first; }
+      100:  996-block  0
         -:  997:
         -:  998:      template<typename _Tp1, typename _Tp2>
         -:  999:	static constexpr const _Tp1&&
@@ -1043,16 +1039,15 @@ call    0 returned 100
         -: 1011:
         -: 1012:      template<typename _Tp1, typename _Tp2>
         -: 1013:	static constexpr _Tp2&&
-function _ZNSt10__pair_getILy1EE10__move_getIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEEOT0_OSt4pairIT_S9_E called 100 returned 100% blocks executed 100%
-      100: 1014:	__move_get(pair<_Tp1, _Tp2>&& __pair) noexcept
-      100: 1015:	{ return std::forward<_Tp2>(__pair.second); }
-      100: 1015-block  0
-call    0 returned 100
+        -: 1014:	__move_get(pair<_Tp1, _Tp2>&& __pair) noexcept
+        -: 1015:	{ return std::forward<_Tp2>(__pair.second); }
         -: 1016:
         -: 1017:      template<typename _Tp1, typename _Tp2>
         -: 1018:	static constexpr const _Tp2&
-        -: 1019:	__const_get(const pair<_Tp1, _Tp2>& __pair) noexcept
-        -: 1020:	{ return __pair.second; }
+function _ZNSt10__pair_getILy1EE11__const_getIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEERKT0_RKSt4pairIT_S9_E called 100 returned 100% blocks executed 100%
+      100: 1019:	__const_get(const pair<_Tp1, _Tp2>& __pair) noexcept
+      100: 1020:	{ return __pair.second; }
+      100: 1020-block  0
         -: 1021:
         -: 1022:      template<typename _Tp1, typename _Tp2>
         -: 1023:	static constexpr const _Tp2&&
@@ -1072,30 +1067,28 @@ call    0 returned 100
         -: 1037:
         -: 1038:  template<size_t _Int, class _Tp1, class _Tp2>
         -: 1039:    constexpr typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&&
-      200: 1040:    get(pair<_Tp1, _Tp2>&& ___in) noexcept
-      200: 1041:    { return __pair_get<_Int>::__move_get(std::move(___in)); }
-------------------
-_ZSt3getILy1EKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEONSt13tuple_elementIXT_ESt4pairIT0_T1_EE4typeEOSB_:
-function _ZSt3getILy1EKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEONSt13tuple_elementIXT_ESt4pairIT0_T1_EE4typeEOSB_ called 100 returned 100% blocks executed 100%
-      100: 1040:    get(pair<_Tp1, _Tp2>&& ___in) noexcept
-      100: 1041:    { return __pair_get<_Int>::__move_get(std::move(___in)); }
-      100: 1041-block  0
-call    0 returned 100
-call    1 returned 100
-------------------
-_ZSt3getILy0EKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEONSt13tuple_elementIXT_ESt4pairIT0_T1_EE4typeEOSB_:
-function _ZSt3getILy0EKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiEONSt13tuple_elementIXT_ESt4pairIT0_T1_EE4typeEOSB_ called 100 returned 100% blocks executed 100%
-      100: 1040:    get(pair<_Tp1, _Tp2>&& ___in) noexcept
-      100: 1041:    { return __pair_get<_Int>::__move_get(std::move(___in)); }
-      100: 1041-block  0
-call    0 returned 100
-call    1 returned 100
-------------------
+        -: 1040:    get(pair<_Tp1, _Tp2>&& ___in) noexcept
+        -: 1041:    { return __pair_get<_Int>::__move_get(std::move(___in)); }
         -: 1042:
         -: 1043:  template<size_t _Int, class _Tp1, class _Tp2>
         -: 1044:    constexpr const typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&
-        -: 1045:    get(const pair<_Tp1, _Tp2>& ___in) noexcept
-        -: 1046:    { return __pair_get<_Int>::__const_get(___in); }
+      200: 1045:    get(const pair<_Tp1, _Tp2>& ___in) noexcept
+      200: 1046:    { return __pair_get<_Int>::__const_get(___in); }
+------------------
+_ZSt3getILy1EKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiERKNSt13tuple_elementIXT_ESt4pairIT0_T1_EE4typeERKSB_:
+function _ZSt3getILy1EKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiERKNSt13tuple_elementIXT_ESt4pairIT0_T1_EE4typeERKSB_ called 100 returned 100% blocks executed 100%
+      100: 1045:    get(const pair<_Tp1, _Tp2>& ___in) noexcept
+      100: 1046:    { return __pair_get<_Int>::__const_get(___in); }
+      100: 1046-block  0
+call    0 returned 100
+------------------
+_ZSt3getILy0EKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiERKNSt13tuple_elementIXT_ESt4pairIT0_T1_EE4typeERKSB_:
+function _ZSt3getILy0EKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiERKNSt13tuple_elementIXT_ESt4pairIT0_T1_EE4typeERKSB_ called 100 returned 100% blocks executed 100%
+      100: 1045:    get(const pair<_Tp1, _Tp2>& ___in) noexcept
+      100: 1046:    { return __pair_get<_Int>::__const_get(___in); }
+      100: 1046-block  0
+call    0 returned 100
+------------------
         -: 1047:
         -: 1048:  template<size_t _Int, class _Tp1, class _Tp2>
         -: 1049:    constexpr const typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&&
