@@ -1,0 +1,3 @@
+/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 4/TAD Lista cu pozitie iterator/cmake-build-debug/CMakeFiles/TAD_Lista_cu_pozitie_iterator.dir
+/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 4/TAD Lista cu pozitie iterator/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 4/TAD Lista cu pozitie iterator/cmake-build-debug/CMakeFiles/rebuild_cache.dir

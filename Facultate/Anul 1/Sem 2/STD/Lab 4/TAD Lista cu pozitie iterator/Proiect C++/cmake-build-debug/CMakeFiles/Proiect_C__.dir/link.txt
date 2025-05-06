@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Proiect_C__.dir/App.cpp.o CMakeFiles/Proiect_C__.dir/IteratorLP.cpp.o CMakeFiles/Proiect_C__.dir/Lista.cpp.o -o Proiect_C__ 
