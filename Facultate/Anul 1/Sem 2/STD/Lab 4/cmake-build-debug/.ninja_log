@@ -1,0 +1,7 @@
+# ninja log v6
+3	668	7685292082318193	CMakeFiles/Lab_4.dir/TAD_Lista_cu_pozitie_iterator/Proiect_C++/App.cpp.obj	c643df5bf369937c
+7	685	7685292082363191	CMakeFiles/Lab_4.dir/TAD_Lista_cu_pozitie_iterator/Proiect_C++/IteratorLP.cpp.obj	e8098d1c5891540
+16	696	7685292082453210	CMakeFiles/Lab_4.dir/TAD_Lista_cu_pozitie_iterator/Teste/TestExtins.cpp.obj	90bdac81f225dffe
+20	697	7685292082503193	CMakeFiles/Lab_4.dir/TAD_Lista_cu_pozitie_iterator/Teste/TestScurt.cpp.obj	177ca0fa06fb3f69
+12	702	7685292082413201	CMakeFiles/Lab_4.dir/TAD_Lista_cu_pozitie_iterator/Proiect_C++/Lista.cpp.obj	2ea677c769948aa8
+702	1034	7685292089313197	Lab_4.exe	12b0c556164272af

@@ -2,6 +2,20 @@
 #include <exception>
 #include "IteratorLP.h"
 #include "Lista.h"
+//numele functiilor si complexitatile lor (best case, worst case, average, overall)
+//Lista::Lista - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
+//Lista::dim - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
+//Lista::vida - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
+//Lista::prim - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
+//Lista::elem - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
+//Lista::sterge - Complexitate:best case:Theta(1), worst case:Theta(n), average:Theta(n), overall:O(n)
+//Lista::cauta - Complexitate:best case:Theta(1), worst case:Theta(n), average:Theta(n), overall:O(n)
+//Lista::modifica - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
+//Lista::adauga - Complexitate:best case:Theta(1), worst case:Theta(n), average:Theta(n), overall:O(n)
+//Lista::adaugaInceput - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
+//Lista::adaugaSfarsit - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
+//Lista::~Lista - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
+//Lista::resize - Complexitate:best case:Theta(n), worst case:Theta(n), average:Theta(n), overall:Theta(n)
 Lista::Lista() {
 	capacity=10;
 	element=new TElem[capacity];

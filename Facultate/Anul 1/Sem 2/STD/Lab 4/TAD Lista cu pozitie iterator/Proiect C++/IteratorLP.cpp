@@ -2,6 +2,13 @@
 #include "Lista.h"
 #include <exception>
 
+//numele functiilor si complexitatile lor (best case, worst case, average, overall)
+//IteratorLP::IteratorLP - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
+//IteratorLP::prim - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
+//IteratorLP::urmator - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
+//IteratorLP::valid - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
+//IteratorLP::element - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
+//IteratorLP::avanseazaKPasi - Complexitate:best case:Theta(1), worst case:Theta(1), average:Theta(1), overall:Theta(1)
 IteratorLP::IteratorLP(const Lista& lista):current(lista.head), lista(lista) {
 
 }
@@ -27,23 +34,21 @@ TElem IteratorLP::element() const{
 	}
 	return lista.element[current];
 }
-int c2p[2],p2c[2];
 /*pseudocod:
  *preconditii:k este un numar mai mare decat 0
  *postconditii:iterator.current<-iterator.current+k
  *arunca exceptie daca iteratorul nu e valid sau k nu este mai mare decat 0
  functie avanseazaKPasi(IteratorLP iterator,intreg k)
-	daca(!iterator.valid() || k<0) atunci
+	daca(!valid(iterator) || k<0) atunci
 		arunca exceptie
 	sf.daca
-	daca(iterator.current+k>iterator.lista.size) atunci
-        iterator.current<--(-1)
-        returneaza
-	sf.daca
-	iterator.current<-iterator.current+k
-sf.functie
+	cat timp(k!=0) executa
+		iterator.current=iterator.lista.next[iterator.current]
+		k--
+    sf.cat timp
+ sf.functie
 */
-
+//IteratorLP::avanseazaKPasi - Complexitate:best case:Theta(k), worst case:Theta(k), average:Theta(k), overall:O(k)
 void IteratorLP::avanseazaKPasi(int k) {
 	if (!valid() || k<0) {
 		throw std::exception();
@@ -52,7 +57,10 @@ void IteratorLP::avanseazaKPasi(int k) {
         current=-1;
 		return;
     }
-	current+=k;
+	while(k!=0){
+        current=lista.next[current];
+		k--;
+	}
 
 }
 
