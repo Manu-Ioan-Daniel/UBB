@@ -12,7 +12,7 @@
 using namespace std;
 
 void testAll(){
-	Lista lista = Lista();
+	auto lista = Lista();
 	assert(lista.dim() == 0);
 	assert(lista.vida());
 
@@ -36,6 +36,8 @@ void testAll(){
     lista.adaugaInceput(1);
     assert(lista.dim() == 1);
     assert(!lista.vida());
+
+
 
 }
 

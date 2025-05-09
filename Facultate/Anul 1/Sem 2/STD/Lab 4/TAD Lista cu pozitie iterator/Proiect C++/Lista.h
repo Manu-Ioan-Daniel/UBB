@@ -1,5 +1,4 @@
 #pragma once
-#include <vector>
 typedef int TElem;
 
 class IteratorLP;
@@ -37,7 +36,7 @@ public:
 
 		// modifica element de pe pozitia poz si returneaza vechea valoare
 		//arunca exceptie daca poz nu e valid
-		TElem modifica(IteratorLP poz, TElem e);
+		TElem modifica(IteratorLP poz, TElem e) const;
 
 		// adaugare element la inceput
 		void adaugaInceput(TElem e);

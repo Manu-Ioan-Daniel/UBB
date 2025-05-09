@@ -32,6 +32,8 @@ public:
 		//arunca exceptie daca iteratorul nu e valid
 		TElem element() const;
 
+		void avanseazaKPasi(int k);
+
 };
 
 

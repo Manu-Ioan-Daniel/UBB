@@ -8,9 +8,9 @@
 using namespace std;
 
 void testAllExtins() {
-    Lista lista = Lista(); // creem lista vida
+    auto lista = Lista(); // creem lista vida
     assert(lista.vida());
-    IteratorLP it0 = lista.prim(); //creem un iterator pe lista vida
+    const IteratorLP it0 = lista.prim(); //creem un iterator pe lista vida
     assert(!it0.valid());
     try {
         it0.element();  // nu ar trebui sa fie posibil ca iteratorul sa returneze un element
@@ -89,6 +89,23 @@ void testAllExtins() {
     }
     try {
         lista.sterge(it);
+        assert(false);
+    } catch (exception&) {
+        assert(true);
+    }
+    IteratorLP it6 = lista.prim(); //reinitializam iteratorul
+    try {
+        it6.avanseazaKPasi(-1);
+        assert(false);
+    }catch (exception&) {
+        assert(true);
+    }
+    it6.avanseazaKPasi(3);
+    assert(it6.valid());
+    it6.avanseazaKPasi(1000); //avansam iteratorul cu 100 de pozitii
+    assert(!it6.valid()); //verificam ca iteratorul e invalid
+    try {
+        it6.avanseazaKPasi(1);
         assert(false);
     } catch (exception&) {
         assert(true);

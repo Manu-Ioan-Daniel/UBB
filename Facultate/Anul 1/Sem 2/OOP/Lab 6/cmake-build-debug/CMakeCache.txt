@@ -147,6 +147,9 @@ CMAKE_OBJCOPY:FILEPATH=D:/CLion 2024.3.3/bin/mingw/bin/objcopy.exe
 //Path to a program.
 CMAKE_OBJDUMP:FILEPATH=D:/CLion 2024.3.3/bin/mingw/bin/objdump.exe
 
+//No help, variable specified on the command line.
+CMAKE_PREFIX_PATH:UNINITIALIZED=C:\Qt\6.9.0\mingw_64\lib\cmake
+
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
 

@@ -40,8 +40,8 @@ TElem Lista::sterge(IteratorLP& poz) {
 	if (!poz.valid()) {
 		throw std::exception();
 	}
-	int toDelete=poz.current;
-	TElem deletedElement=element[toDelete];
+	const int toDelete=poz.current;
+	const TElem deletedElement=element[toDelete];
 	if (toDelete==head) {
 		head=next[toDelete];
 	}else {
@@ -73,11 +73,11 @@ IteratorLP Lista::cauta(TElem e) const{
 	return it;
 }
 
-TElem Lista::modifica(IteratorLP poz, TElem e) {
+TElem Lista::modifica(const IteratorLP poz, const TElem e) const {
 	if (!poz.valid()) {
 		throw std::exception();
 	}
-	TElem old=element[poz.current];
+	const TElem old=element[poz.current];
 	element[poz.current]=e;
 	return old;
 }
@@ -89,7 +89,7 @@ void Lista::adauga(IteratorLP& poz, TElem e) {
 	if (firstFree==-1) {
 		resize();
 	}
-	int newNode=firstFree;
+	const int newNode=firstFree;
 	firstFree=next[firstFree];
 	element[newNode]=e;
 	next[newNode]=next[poz.current];
@@ -105,7 +105,7 @@ void Lista::adaugaInceput(TElem e) {
 	if (firstFree==-1) {
 		resize();
 	}
-	int newNode=firstFree;
+	const int newNode=firstFree;
 	firstFree=next[newNode];
 	element[newNode]=e;
 	next[newNode]=head;
@@ -139,9 +139,9 @@ Lista::~Lista() {
 	delete[] next;
 }
 void Lista::resize() {
-	int newCapacity=capacity*2;
+	const int newCapacity=capacity*2;
 	auto* newElement= new TElem[newCapacity];
-	auto newNext=new int[newCapacity];
+	const auto newNext=new int[newCapacity];
 	for (int i=0; i<capacity; i++) {
 		newElement[i]=element[i];
 		newNext[i]=next[i];

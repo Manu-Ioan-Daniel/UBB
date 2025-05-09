@@ -2,4 +2,4 @@ ToolSet: 11.0 w64 (local)@D:\CLion 2024.3.3\bin\mingw
 Ninja: 1.12.1@D:\CLion 2024.3.3\bin\ninja\win\x64\ninja.exe
 Options: 
 
-Options:
+Options:-DCMAKE_PREFIX_PATH=C:\Qt\6.9.0\mingw_64\lib\cmake
