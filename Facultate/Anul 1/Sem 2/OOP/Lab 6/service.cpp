@@ -42,6 +42,9 @@ vector<Disciplina>Service::filtrareDisciplineDupaOre(const int nrOre) const {
     return disciplineFiltrate;
 }
 vector<Disciplina> Service::filtrareDisciplineDupaCadruDidactic(const string& cadruDidactic) const {
+    if (cadruDidactic.empty()) {
+        throw ValidationError("Cadru didactic invalid!");
+    }
     const vector<Disciplina> discipline=getAll();
     vector<Disciplina> disciplineFiltrate;
     for (const auto& d:discipline) {
