@@ -173,7 +173,7 @@ private:
             }catch (const std::out_of_range&) {
                 QMessageBox::warning(this,"Validation Error","Numar de ore invalid!");
             }catch (const std::invalid_argument&) {
-                QMessageBox::warning(this,"Validation Error","Introduce numarul de ore corect!");
+                QMessageBox::warning(this,"Validation Error","Introdu numarul de ore corect!");
             }catch (const RepoException& e){
                 QMessageBox::warning(this,"Repo Error",QString::fromStdString(e.getMsg()));
             }
@@ -379,6 +379,8 @@ private:
                 loadData();
             }catch (const ServiceException& e) {
                 QMessageBox::warning(this,"Service Error",QString::fromStdString(e.getMsg()));
+            }catch (const RepoException& e) {
+                QMessageBox::warning(this,"Repo Error",QString::fromStdString(e.getMsg()));
             }
         });
 

@@ -128,6 +128,32 @@ Lab_6/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_6.dir\build.make CMakeFiles/Lab_6.dir/build
 .PHONY : Lab_6/fast
 
+#=============================================================================
+# Target rules for targets named Lab_6_autogen_timestamp_deps
+
+# Build rule for target.
+Lab_6_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Lab_6_autogen_timestamp_deps
+.PHONY : Lab_6_autogen_timestamp_deps
+
+# fast build rule for target.
+Lab_6_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_6_autogen_timestamp_deps.dir\build.make CMakeFiles/Lab_6_autogen_timestamp_deps.dir/build
+.PHONY : Lab_6_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named Lab_6_autogen
+
+# Build rule for target.
+Lab_6_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Lab_6_autogen
+.PHONY : Lab_6_autogen
+
+# fast build rule for target.
+Lab_6_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_6_autogen.dir\build.make CMakeFiles/Lab_6_autogen.dir/build
+.PHONY : Lab_6_autogen/fast
+
 Contract.obj: Contract.cpp.obj
 .PHONY : Contract.obj
 
@@ -151,6 +177,30 @@ Contract.s: Contract.cpp.s
 Contract.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_6.dir\build.make CMakeFiles/Lab_6.dir/Contract.cpp.s
 .PHONY : Contract.cpp.s
+
+Lab_6_autogen/mocs_compilation.obj: Lab_6_autogen/mocs_compilation.cpp.obj
+.PHONY : Lab_6_autogen/mocs_compilation.obj
+
+# target to build an object file
+Lab_6_autogen/mocs_compilation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_6.dir\build.make CMakeFiles/Lab_6.dir/Lab_6_autogen/mocs_compilation.cpp.obj
+.PHONY : Lab_6_autogen/mocs_compilation.cpp.obj
+
+Lab_6_autogen/mocs_compilation.i: Lab_6_autogen/mocs_compilation.cpp.i
+.PHONY : Lab_6_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+Lab_6_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_6.dir\build.make CMakeFiles/Lab_6.dir/Lab_6_autogen/mocs_compilation.cpp.i
+.PHONY : Lab_6_autogen/mocs_compilation.cpp.i
+
+Lab_6_autogen/mocs_compilation.s: Lab_6_autogen/mocs_compilation.cpp.s
+.PHONY : Lab_6_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+Lab_6_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_6.dir\build.make CMakeFiles/Lab_6.dir/Lab_6_autogen/mocs_compilation.cpp.s
+.PHONY : Lab_6_autogen/mocs_compilation.cpp.s
 
 Repo.obj: Repo.cpp.obj
 .PHONY : Repo.obj
@@ -328,10 +378,15 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Lab_6_autogen
+	@echo ... Lab_6_autogen_timestamp_deps
 	@echo ... Lab_6
 	@echo ... Contract.obj
 	@echo ... Contract.i
 	@echo ... Contract.s
+	@echo ... Lab_6_autogen/mocs_compilation.obj
+	@echo ... Lab_6_autogen/mocs_compilation.i
+	@echo ... Lab_6_autogen/mocs_compilation.s
 	@echo ... Repo.obj
 	@echo ... Repo.i
 	@echo ... Repo.s

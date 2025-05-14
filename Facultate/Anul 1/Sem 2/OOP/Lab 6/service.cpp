@@ -27,8 +27,9 @@ void Service::modificaDisciplinaService(const string &denumire, const string &ti
 }
 void Service::stergeDisciplinaService(const string &denumire, const string &tip){
     Validator::validateDisciplina(denumire,20,tip,"salut");
+    auto disciplina=repo.cautaDisciplina(denumire,tip);
     repo.stergeDisciplina(denumire,tip);
-    undoActions.push_back(std::make_unique<UndoSterge>(repo,repo.cautaDisciplina(denumire,tip)));
+    undoActions.push_back(std::make_unique<UndoSterge>(repo,disciplina));
 }
 vector<Disciplina>Service::filtrareDisciplineDupaOre(const int nrOre) const {
     vector<Disciplina> discipline=getAll();
@@ -288,5 +289,7 @@ void testService() {
     s2.stergeDisciplinaService("mat0","laborator");
     s2.undo();
     assert(s2.getAll().size()==100);
+    assert(s2.getAll()[99].getNrOre()==0);
+    assert(s2.getAll()[99].getDenumire()=="mat0");
     s2.getContract().exportCSV("mama.txt");
 }

@@ -1,0 +1,32 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/Lab_6_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/Lab_6_autogen.dir/ParseCache.txt"
+  "Lab_6_autogen"
+  "CMakeFiles/Lab_6.dir/Contract.cpp.obj"
+  "CMakeFiles/Lab_6.dir/Contract.cpp.obj.d"
+  "CMakeFiles/Lab_6.dir/Lab_6_autogen/mocs_compilation.cpp.obj"
+  "CMakeFiles/Lab_6.dir/Lab_6_autogen/mocs_compilation.cpp.obj.d"
+  "CMakeFiles/Lab_6.dir/Repo.cpp.obj"
+  "CMakeFiles/Lab_6.dir/Repo.cpp.obj.d"
+  "CMakeFiles/Lab_6.dir/disciplina.cpp.obj"
+  "CMakeFiles/Lab_6.dir/disciplina.cpp.obj.d"
+  "CMakeFiles/Lab_6.dir/main.cpp.obj"
+  "CMakeFiles/Lab_6.dir/main.cpp.obj.d"
+  "CMakeFiles/Lab_6.dir/service.cpp.obj"
+  "CMakeFiles/Lab_6.dir/service.cpp.obj.d"
+  "CMakeFiles/Lab_6.dir/ui.cpp.obj"
+  "CMakeFiles/Lab_6.dir/ui.cpp.obj.d"
+  "CMakeFiles/Lab_6.dir/undo.cpp.obj"
+  "CMakeFiles/Lab_6.dir/undo.cpp.obj.d"
+  "CMakeFiles/Lab_6.dir/validator.cpp.obj"
+  "CMakeFiles/Lab_6.dir/validator.cpp.obj.d"
+  "Lab_6.exe"
+  "Lab_6.exe.manifest"
+  "Lab_6.pdb"
+  "libLab_6.dll.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/Lab_6.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
