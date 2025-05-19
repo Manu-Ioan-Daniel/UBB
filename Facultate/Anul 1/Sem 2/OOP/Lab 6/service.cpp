@@ -80,6 +80,11 @@ void Service::adaugaDisciplinaContractService(const string &denumire){
     if (denumire.empty()) {
         throw ValidationError("Denumire Invalida!");
     }
+    for (auto& d:contract.getAll()) {
+        if (d.getDenumire()==denumire) {
+            throw ServiceException("Disciplina deja adaugata in contract!");
+        }
+    }
     for (auto& d:getAll()) {
         if (d.getDenumire()==denumire) {
             contract.adaugaDisciplinaContract(d);

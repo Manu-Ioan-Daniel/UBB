@@ -404,11 +404,13 @@ CMakeFiles/Lab_6.dir/Lab_6_autogen/mocs_compilation.cpp.obj: Lab_6_autogen/mocs_
   C:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QFormLayout \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QHBoxLayout \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QHeaderView \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QLayout \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QLineEdit \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QPushButton \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QTableWidget \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -422,6 +424,7 @@ CMakeFiles/Lab_6.dir/Lab_6_autogen/mocs_compilation.cpp.obj: Lab_6_autogen/mocs_
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qformlayout.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgridlayout.h \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qheaderview.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlayout.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlineedit.h \
@@ -435,6 +438,8 @@ CMakeFiles/Lab_6.dir/Lab_6_autogen/mocs_compilation.cpp.obj: Lab_6_autogen/mocs_
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qstyle.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qstyleoption.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabbar.h \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtableview.h \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtablewidget.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
@@ -615,6 +620,7 @@ CMakeFiles/Lab_6.dir/Lab_6_autogen/mocs_compilation.cpp.obj: Lab_6_autogen/mocs_
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/pstl_config.h \
+  D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ranges \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span \
@@ -1166,11 +1172,13 @@ CMakeFiles/Lab_6.dir/main.cpp.obj: C:/Users/Lenovo/Documents/GitHub/UBB/Facultat
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QApplication \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QFormLayout \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QHBoxLayout \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QHeaderView \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QLayout \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QLineEdit \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QPushButton \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QTableWidget \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -1185,6 +1193,7 @@ CMakeFiles/Lab_6.dir/main.cpp.obj: C:/Users/Lenovo/Documents/GitHub/UBB/Facultat
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qformlayout.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgridlayout.h \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qheaderview.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlayout.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlineedit.h \
@@ -1198,6 +1207,8 @@ CMakeFiles/Lab_6.dir/main.cpp.obj: C:/Users/Lenovo/Documents/GitHub/UBB/Facultat
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qstyle.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qstyleoption.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabbar.h \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtableview.h \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtablewidget.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
@@ -1377,6 +1388,7 @@ CMakeFiles/Lab_6.dir/main.cpp.obj: C:/Users/Lenovo/Documents/GitHub/UBB/Facultat
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/pstl_config.h \
+  D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ranges \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span \
@@ -1839,11 +1851,13 @@ CMakeFiles/Lab_6.dir/ui.cpp.obj: C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/
   C:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QFormLayout \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QHBoxLayout \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QHeaderView \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QLayout \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QLineEdit \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QPushButton \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QTableWidget \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -1857,6 +1871,7 @@ CMakeFiles/Lab_6.dir/ui.cpp.obj: C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qformlayout.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgridlayout.h \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qheaderview.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlayout.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlineedit.h \
@@ -1870,6 +1885,8 @@ CMakeFiles/Lab_6.dir/ui.cpp.obj: C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qstyle.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qstyleoption.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabbar.h \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtableview.h \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtablewidget.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
@@ -2049,6 +2066,7 @@ CMakeFiles/Lab_6.dir/ui.cpp.obj: C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/pstl_config.h \
+  D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ranges \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span \
@@ -2410,8 +2428,6 @@ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractitemview.h:
 
 D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/alloc_traits.h:
 
-C:/Qt/6.9.0/mingw_64/include/QtWidgets/QApplication:
-
 C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/OOP/Lab\ 6/disciplina.h:
 
 C:/Qt/6.9.0/mingw_64/include/QtWidgets/QLineEdit:
@@ -2732,6 +2748,8 @@ D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_6
 
 C:/Qt/6.9.0/mingw_64/include/QtCore/qbindingstorage.h:
 
+C:/Qt/6.9.0/mingw_64/include/QtWidgets/QHeaderView:
+
 D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/charconv:
 
 D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numbers:
@@ -2770,8 +2788,6 @@ D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/excep
 
 D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/aligned_buffer.h:
 
-C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/OOP/Lab\ 6/undo.cpp:
-
 D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/alloc_traits.h:
 
 C:/Qt/6.9.0/mingw_64/include/QtGui/qpalette.h:
@@ -2788,11 +2804,11 @@ D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/t
 
 D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/format:
 
-D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream:
+C:/Qt/6.9.0/mingw_64/include/QtCore/qobjectdefs_impl.h:
 
 C:/Qt/6.9.0/mingw_64/include/QtWidgets/qapplication.h:
 
-C:/Qt/6.9.0/mingw_64/include/QtCore/qobjectdefs_impl.h:
+D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream:
 
 D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list:
 
@@ -2837,6 +2853,8 @@ D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/
 D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_map.h:
 
 C:/Qt/6.9.0/mingw_64/include/QtCore/qtdeprecationdefinitions.h:
+
+C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtablewidget.h:
 
 D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random:
 
@@ -2907,6 +2925,8 @@ D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_6
 C:/Qt/6.9.0/mingw_64/include/QtCore/qset.h:
 
 D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h:
+
+D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ranges:
 
 D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h:
 
@@ -3000,13 +3020,13 @@ C:/Qt/6.9.0/mingw_64/include/QtGui/qpolygon.h:
 
 D:/CLion\ 2024.3.3/bin/mingw/x86_64-w64-mingw32/include/limits.h:
 
-D:/CLion\ 2024.3.3/bin/mingw/x86_64-w64-mingw32/include/pthread_time.h:
-
-D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream:
-
 D:/CLion\ 2024.3.3/bin/mingw/x86_64-w64-mingw32/include/malloc.h:
 
 C:/Qt/6.9.0/mingw_64/include/QtCore/qhash.h:
+
+D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream:
+
+D:/CLion\ 2024.3.3/bin/mingw/x86_64-w64-mingw32/include/pthread_time.h:
 
 C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgets-config.h:
 
@@ -3093,6 +3113,8 @@ C:/Qt/6.9.0/mingw_64/include/QtCore/qabstractitemmodel.h:
 C:/Qt/6.9.0/mingw_64/include/QtCore/qalgorithms.h:
 
 C:/Qt/6.9.0/mingw_64/include/QtCore/qarraydatapointer.h:
+
+C:/Qt/6.9.0/mingw_64/include/QtWidgets/QTableWidget:
 
 C:/Qt/6.9.0/mingw_64/include/QtCore/qanystringview.h:
 
@@ -3210,11 +3232,11 @@ D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/
 
 C:/Qt/6.9.0/mingw_64/include/QtCore/qstring.h:
 
+C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/OOP/Lab\ 6/service.cpp:
+
 C:/Qt/6.9.0/mingw_64/include/QtCore/qstringbuilder.h:
 
 D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/utility:
-
-C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/OOP/Lab\ 6/service.cpp:
 
 C:/Qt/6.9.0/mingw_64/include/QtWidgets/QMessageBox:
 
@@ -3304,9 +3326,13 @@ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qboxlayout.h:
 
 C:/Qt/6.9.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h:
 
+C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtableview.h:
+
 C:/Qt/6.9.0/mingw_64/include/QtWidgets/qformlayout.h:
 
 C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgridlayout.h:
+
+C:/Qt/6.9.0/mingw_64/include/QtWidgets/qheaderview.h:
 
 C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlayout.h:
 
@@ -3392,6 +3418,10 @@ C:/Qt/6.9.0/mingw_64/include/QtCore/qbasictimer.h:
 
 C:/Qt/6.9.0/mingw_64/include/QtCore/qcoreapplication.h:
 
+C:/Qt/6.9.0/mingw_64/include/QtWidgets/QApplication:
+
 C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/OOP/Lab\ 6/ui.cpp:
+
+C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/OOP/Lab\ 6/undo.cpp:
 
 C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/OOP/Lab\ 6/validator.cpp:

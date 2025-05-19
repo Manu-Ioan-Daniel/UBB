@@ -472,4 +472,10 @@ CMakeFiles/Lab_6.dir/ui.cpp.obj: \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QMessageBox \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qmessagebox.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qdialog.h \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/QTableWidget \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtablewidget.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtableview.h \
+ D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ranges \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/QHeaderView \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qheaderview.h

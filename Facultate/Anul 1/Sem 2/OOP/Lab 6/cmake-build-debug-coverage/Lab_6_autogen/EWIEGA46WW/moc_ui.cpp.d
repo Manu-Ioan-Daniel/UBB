@@ -164,11 +164,13 @@ C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/OOP/Lab\ 6/cmake-b
   C:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QFormLayout \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QHBoxLayout \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QHeaderView \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QLayout \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QLineEdit \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QPushButton \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QTableWidget \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -182,6 +184,7 @@ C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/OOP/Lab\ 6/cmake-b
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qformlayout.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgridlayout.h \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qheaderview.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlayout.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlineedit.h \
@@ -195,6 +198,8 @@ C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/OOP/Lab\ 6/cmake-b
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qstyle.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qstyleoption.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabbar.h \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtableview.h \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtablewidget.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
@@ -372,6 +377,7 @@ C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul\ 1/Sem\ 2/OOP/Lab\ 6/cmake-b
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h \
+  D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ranges \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
   D:/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span \
