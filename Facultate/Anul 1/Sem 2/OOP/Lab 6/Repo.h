@@ -25,6 +25,5 @@ public:
         return discipline;
     }
 
-
 };
 void testRepo();

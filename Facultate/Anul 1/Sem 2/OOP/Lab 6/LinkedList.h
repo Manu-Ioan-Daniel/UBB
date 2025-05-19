@@ -1,7 +1,8 @@
 #pragma once
 #pragma once
 #include <functional>
-template<typename T> class Iterator;
+template<typename T>
+class Iterator;
 
 template <typename T>
 class LinkedList {
