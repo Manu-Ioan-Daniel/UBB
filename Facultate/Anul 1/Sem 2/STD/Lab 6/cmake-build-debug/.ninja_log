@@ -1,0 +1,21 @@
+# ninja log v6
+1	318	7694673969963927	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Proiect_C++/App.cpp.obj	7ddb521267542f4e
+4	346	7694673969983930	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Proiect_C++/IteratorMD.cpp.obj	f5cfc837f036fed
+9	364	7694673970033921	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Teste/TestScurt.cpp.obj	83551d5ef1729bc7
+7	456	7694673970013932	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Teste/TestExtins.cpp.obj	1cf00c0c9ec190c
+3	328	7694677052016137	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Proiect_C++/MD.cpp.obj	af06d2294d4d48f7
+328	399	7694677055266123	Lab_6.exe	9142a1019fdf5039
+16	253	7694709006722934	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Proiect_C++/IteratorMD.cpp.obj	c4c506c6f7b0c958
+14	358	7694709006692936	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Proiect_C++/App.cpp.obj	536ebdd278d1fe6e
+21	502	7694709006762945	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Teste/TestScurt.cpp.obj	e48cf38cb29751cf
+19	541	7694709006752933	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Teste/TestExtins.cpp.obj	7bcc28d69cb30bd7
+18	605	7694709006732941	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Proiect_C++/MD.cpp.obj	bb0ff5b65770cb68
+605	679	7694709012612935	Lab_6.exe	9142a1019fdf5039
+19	422	7694715824002817	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Teste/TestExtins.cpp.obj	7bcc28d69cb30bd7
+16	539	7694715823972831	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Proiect_C++/MD.cpp.obj	bb0ff5b65770cb68
+539	603	7694715829202835	Lab_6.exe	9142a1019fdf5039
+14	204	7694722463697242	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Proiect_C++/IteratorMD.cpp.obj	c4c506c6f7b0c958
+20	386	7694722463757257	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Teste/TestScurt.cpp.obj	e48cf38cb29751cf
+19	442	7694722463747259	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Teste/TestExtins.cpp.obj	7bcc28d69cb30bd7
+17	562	7694722463727242	CMakeFiles/Lab_6.dir/TAD_MultiDictionar/Proiect_C++/MD.cpp.obj	bb0ff5b65770cb68
+562	627	7694722469177241	Lab_6.exe	9142a1019fdf5039
