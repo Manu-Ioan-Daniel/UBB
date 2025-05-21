@@ -4,7 +4,7 @@
 #include <assert.h>
 #include <vector>
 #include<iostream>
-
+void testAdaugaInexistente();
 void testAll() {
 	MD m;
 	m.adauga(1, 100);
@@ -39,4 +39,26 @@ void testAll() {
 	assert(im.valid() == false);
 	im.prim();
 	assert(im.valid() == true);
+	testAdaugaInexistente();
+}
+
+
+void testAdaugaInexistente() {
+	MD md1;
+	MD md2;
+
+
+	md1.adauga(1, 10);
+	md1.adauga(2, 20);
+
+	md2.adauga(2, 20); // Cheie și valoare deja existente în md1
+	md2.adauga(2, 30); // Cheie existentă, valoare nouă
+	md2.adauga(3, 40); // Cheie și valoare noi
+	const int added = md1.adaugaInexistente(md2);
+	assert(added == 2);
+	assert(md1.cauta(2).size() == 2);
+	assert(md1.cauta(3).size() == 1);
+	assert(md1.dim() == 4);
+
+	std::cout << "Test adaugaInexistente passed!" << std::endl;
 }

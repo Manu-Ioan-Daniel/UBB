@@ -110,6 +110,47 @@ bool MD::sterge(const TCheie c, const TValoare v) {
     }
     return false;
 }
+
+//Complexitate:Best case:Theta(m),worst case:Theta(n+m),average case:nu stiu,overall:O(n+m)
+//Pseudocod:
+/*
+ *preconditii:md este un MD
+ *postconditii:orice pereche (cheie, valoare) din md apartine multidictionarului curent
+ *Functie adaugaInexistente(MD mdCurent,MD md)
+ *  IteratorMD it<-iterator(md)
+ *  count<-0
+ *  cat timp valid(it) executa
+ *      (cheie,valoare)<-element(it)
+ *      ?? values<-cauta(mdCurent,cheie)
+ *      daca empty(values) atunci
+ *          adauga(mdCurent,cheie,valoare)
+ *          count<-count+1
+ *          urmator(it)
+ *          continua
+ *      sf.daca
+ *      daca valoare nu apartine values executa
+ *          adauga(mdCurent,cheie,valoare)
+ *          count<-count+1
+ *      sf.daca
+ *      urmator(it)
+ *  sf.cat timp
+ *  adaugaInexistente<-count
+ *sf.functie
+ */
+
+int MD::adaugaInexistente(const MD &md) {
+    auto it=md.iterator();
+    int count=0;
+    while (it.valid()) {
+        const auto [cheie, valoare]=it.element();
+        if (const auto values=cauta(cheie); ranges::find(values, valoare) == values.end()) {
+            adauga(cheie, valoare);
+            count++;
+        }
+        it.urmator();
+    }
+    return count;
+}
 //Complexitate:Theta(1)
 int MD::dim() const {
     return nrElemente;
