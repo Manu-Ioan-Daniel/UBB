@@ -2,21 +2,22 @@
 #include <vector>
 #include <queue>
 #include <climits>
-
 using namespace std;
-
+struct Edge {
+    int from;
+    int to;
+    int weight;
+};
 #define INF INT_MAX
+// graph as adjacency list of vectors of Edge
+// start: starting node for Prim
+void primMST(const vector<vector<Edge>>& graph, int start) {
+    int n = graph.size();
+    vector<int> key(n, INF);
+    vector<int> parent(n, -1);
+    vector<bool> inMST(n, false);
 
-// graph: lista de adiacenta, fiecare element e pair<nod vecin, cost>
-// start: nodul de start
-void primMST(const vector<vector<pair<int,int>>>& graph, int start) {
-    const int n = graph.size();
-
-    vector key(n, INF);      // costul minim pentru a conecta nodul la MST
-    vector parent(n, -1);    // parintele in MST
-    vector inMST(n, false); // daca nodul e deja in MST
-
-    // priority_queue: pereche {key, nod}, ordonata crescator dupa key
+    // priority queue holds pairs {key, node} with the smallest key on top
     priority_queue<pair<int,int>, vector<pair<int,int>>, greater<>> pq;
 
     key[start] = 0;
@@ -26,11 +27,12 @@ void primMST(const vector<vector<pair<int,int>>>& graph, int start) {
         const int u = pq.top().second;
         pq.pop();
 
-        if (inMST[u]) continue; // daca l-am procesat deja
-
+        if (inMST[u]) continue;
         inMST[u] = true;
 
-        for (auto const& [v, cost] : graph[u]) {
+        for (const Edge& e : graph[u]) {
+            int v = e.to;
+            int cost = e.weight;
             if (!inMST[v] && cost < key[v]) {
                 key[v] = cost;
                 parent[v] = u;
@@ -46,16 +48,16 @@ void primMST(const vector<vector<pair<int,int>>>& graph, int start) {
         }
     }
 }
-
 int main() {
-    const vector<vector<pair<int,int>>> graph = {
-        {{1, 10}, {3, 5}},
-        {{0, 10}, {2, 1}, {3, 2}},
-        {{1, 1}, {3, 9}, {4, 4}},
-        {{0, 5}, {1, 2}, {2, 9}, {4, 6}},
-        {{2, 4}, {3, 6}}
+    // Graph as adjacency list of Edges
+    vector<vector<Edge>> graph = {
+        { {0,1,10}, {0,3,5} },
+        { {1,0,10}, {1,2,1}, {1,3,2} },
+        { {2,1,1}, {2,3,9}, {2,4,4} },
+        { {3,0,5}, {3,1,2}, {3,2,9}, {3,4,6} },
+        { {4,2,4}, {4,3,6} }
     };
+
     primMST(graph, 0);
     return 0;
 }
-
