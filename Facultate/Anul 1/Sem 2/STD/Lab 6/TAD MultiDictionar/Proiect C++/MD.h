@@ -34,6 +34,9 @@ public:
 	void adauga(TCheie c, TValoare v);
 	vector<TValoare> cauta(TCheie c) const;
 	bool sterge(TCheie c, TValoare v);
+	// adauga în multidicționarul curent toate perechile din md care nu se află deja în multidicționar.
+	// returnează numărul de perechi adăugate
+	int adaugaInexistente(const MD& md);
 	int dim() const;
 	bool vid() const;
 	IteratorMD iterator() const;

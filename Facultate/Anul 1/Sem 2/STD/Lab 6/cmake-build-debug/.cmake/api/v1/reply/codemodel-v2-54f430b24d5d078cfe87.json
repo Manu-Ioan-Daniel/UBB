@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Lab_6::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Lab_6-Debug-7a5d9c47f3ad8e576244.json",
+					"jsonFile" : "target-Lab_6-Debug-9c596bb213631f721cd3.json",
 					"name" : "Lab_6",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 6/cmake-build-debug",
-		"source" : "C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 6"
+		"build" : "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 6/cmake-build-debug",
+		"source" : "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/STD/Lab 6"
 	},
 	"version" : 
 	{
