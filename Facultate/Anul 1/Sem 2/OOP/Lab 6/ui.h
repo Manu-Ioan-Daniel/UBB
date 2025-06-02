@@ -10,6 +10,7 @@
 #include <QTableWidget>
 #include <ranges>
 #include <QHeaderView>
+#include <QDateTime>
 
 class ModifyDialog final : public QDialog {
     Q_OBJECT
