@@ -1,0 +1,9 @@
+# ninja log v6
+1	330	7706849068073681	CMakeFiles/Lab_7.dir/TAD_Colectie/Proiect_C++/Colectie_(cu_rel)/App.cpp.obj	f87ee1d64edd8ef2
+4	375	7706849068093671	CMakeFiles/Lab_7.dir/TAD_Colectie/Proiect_C++/Colectie_(cu_rel)/Colectie.cpp.obj	b0cec2bfc96e2ebc
+9	380	7706849068143659	CMakeFiles/Lab_7.dir/TAD_Colectie/Teste_(cu_relatie)/TestScurt.cpp.obj	fa5aadfa73e686c8
+7	407	7706849068123656	CMakeFiles/Lab_7.dir/TAD_Colectie/Teste_(cu_relatie)/TestExtins.cpp.obj	bd96e9232661231f
+5	485	7706849068113661	CMakeFiles/Lab_7.dir/TAD_Colectie/Proiect_C++/Colectie_(cu_rel)/IteratorColectie.cpp.obj	f945a7ad0e55d977
+485	695	7706849072903677	Lab_7.exe	1ecf09427dbce3e9
+17	214	7706849218508170	CMakeFiles/Lab_7.dir/TAD_Colectie/Proiect_C++/Colectie_(cu_rel)/App.cpp.obj	f87ee1d64edd8ef2
+214	275	7706849220478159	Lab_7.exe	1ecf09427dbce3e9
