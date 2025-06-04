@@ -7,6 +7,26 @@ using namespace std;
 bool rel(TElem e1, TElem e2) {
     return e1 <= e2;
 }
+int Colectie::transformăÎnMulțime() {
+    return transformaNoduri(radacina);
+}
+int Colectie::transformaNoduri(Nod* nod) {
+    if (nod == nullptr)
+        return 0;
+
+    int eliminari = 0;
+
+    eliminari += transformaNoduri(nod->stanga);
+    eliminari += transformaNoduri(nod->dreapta);
+
+    if (nod->frecventa > 1) {
+        eliminari += nod->frecventa - 1;
+        dimensiune -= nod->frecventa - 1;
+        nod->frecventa = 1;
+    }
+
+    return eliminari;
+}
 
 Colectie::Colectie() {
     radacina = nullptr;

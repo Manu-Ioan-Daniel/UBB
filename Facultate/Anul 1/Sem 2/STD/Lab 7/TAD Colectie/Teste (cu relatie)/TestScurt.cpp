@@ -32,3 +32,32 @@ void testAll() {
 	assert(ic.valid() == true);
 
 }
+void testTransformaInMultime() {
+	Colectie c;
+
+	c.adauga(5);
+	c.adauga(5);
+	c.adauga(3);
+	c.adauga(3);
+	c.adauga(3);
+	c.adauga(7);
+
+	assert(c.dim() == 6);
+	assert(c.nrAparitii(5) == 2);
+	assert(c.nrAparitii(3) == 3);
+	assert(c.nrAparitii(7) == 1);
+
+	int eliminati = c.transformăÎnMulțime();
+
+	assert(eliminati == 3);
+	assert(c.dim() == 3);
+	assert(c.nrAparitii(5) == 1);
+	assert(c.nrAparitii(3) == 1);
+	assert(c.nrAparitii(7) == 1);
+
+	assert(c.cauta(5) == true);
+	assert(c.cauta(3) == true);
+	assert(c.cauta(7) == true);
+	assert(c.cauta(10) == false);
+
+}

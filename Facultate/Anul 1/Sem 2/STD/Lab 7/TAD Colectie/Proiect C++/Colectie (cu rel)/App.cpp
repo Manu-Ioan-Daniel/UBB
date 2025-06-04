@@ -8,5 +8,6 @@ using namespace std;
 int main() {
 	testAllExtins();
 	testAll();
+	testTransformaInMultime();
 	cout<<"Teste finished!";
 }

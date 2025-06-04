@@ -34,6 +34,8 @@ public:
 	//adauga un element in colectie
 	void adauga(TElem e);
 
+	int transformaNoduri(Nod* nod);
+
 	//sterge o aparitie a unui element din colectie
 	//returneaza adevarat daca s-a putut sterge
 	bool sterge(TElem e);
@@ -43,6 +45,10 @@ public:
 
 	//returneaza numar de aparitii ale unui element in colectie
 	int nrAparitii(TElem elem) const;
+
+	// păstrează doar o apariție a tuturor elementelor din colecție
+	// returnează numărul de elemente eliminate
+	int transformăÎnMulțime();
 
 	//intoarce numarul de elemente din colectie (cu tot cu frecvențe)
 	int dim() const;
