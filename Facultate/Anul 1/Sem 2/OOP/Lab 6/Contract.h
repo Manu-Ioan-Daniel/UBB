@@ -1,9 +1,9 @@
 #pragma once
 #include <vector>
-
+#include "observer.h"
 #include "disciplina.h"
 using std::vector;
-class Contract {
+class Contract:public Observable {
 private:
     vector<Disciplina>listaDiscipline;
 public:

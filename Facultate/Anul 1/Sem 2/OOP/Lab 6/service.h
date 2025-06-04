@@ -5,6 +5,7 @@
 #include "Repo.h"
 #include "undo.h"
 #include "validator.h"
+#include "observer.h"
 class ServiceException final: public std::exception {
     string msg;
 public:
@@ -14,7 +15,7 @@ public:
         return msg;
     }
 };
-class Service {
+class Service:public Observable {
     Repo& repo;
     Validator& validator;
     Contract contract;
@@ -35,7 +36,7 @@ public:
 
     [[nodiscard]]vector<Disciplina> filtrareDisciplineDupaCadruDidactic(const string &cadruDidactic) const;
 
-    [[nodiscard]]vector<Disciplina> sortareDisciplineDupaOre() const;
+    [[nodiscard]]vector<Disciplina> sortareDisciplineDupaOre();
 
     [[nodiscard]]vector<Disciplina> sortareDisciplineDupaDenumire() const;
 

@@ -1,16 +1,13 @@
 #pragma once
 #include "service.h"
-#include <QWidget>
-#include <QListWidget>
-#include <QHBoxLayout>
-#include <QFormLayout>
-#include <QLineEdit>
-#include <QPushButton>
-#include <QMessageBox>
+#include "ContractReadOnlyGUI.h"
 #include <QTableWidget>
 #include <ranges>
 #include <QHeaderView>
 #include <QDateTime>
+
+#include "ContractCRUDGUI.h"
+#include "ContractTableModel.h"
 
 class ModifyDialog final : public QDialog {
     Q_OBJECT
@@ -89,7 +86,7 @@ public:
         return filename->text().toStdString();
     }
 };
-class Ui final :public QWidget {
+class Ui final :public QWidget,public Observer {
 private:
     Service &service;
     Validator &validator;
@@ -114,7 +111,10 @@ private:
     QLineEdit* cadruDidactic=new QLineEdit;
     QLineEdit* nrOre=new QLineEdit;
     QListWidget* list=new QListWidget;
-    QTableWidget* contractTable=new QTableWidget;
+    QTableView* contractTable = new QTableView;
+    ContractTableModel* modelContract = new ContractTableModel(this);
+    QPushButton* openContractCRUDGUIButton = new QPushButton("Open Contract CRUD GUI", this);
+    QPushButton* openContractReadOnlyGUIButton = new QPushButton("Open Contract Read-Only GUI", this);
     void startUi() {
         auto *lyMain=new QHBoxLayout;
         setLayout(lyMain);
@@ -124,11 +124,9 @@ private:
         const auto leftLy=new QVBoxLayout;
         leftLy->addWidget(list);
         leftLy->addWidget(contractTable);
-        contractTable->clear();
-        contractTable->setColumnCount(4);
-        contractTable->setHorizontalHeaderLabels({"Disciplina", "Nr Ore", "Tip", "Cadru Didactic"});
-
-
+        modelContract->setDiscipline(service.getContract().getAll());
+        contractTable->setModel(modelContract);
+        contractTable->resizeColumnsToContents();
 
         const auto lyBtnFilterSort=new QHBoxLayout;
         lyBtnFilterSort->addWidget(filterByHoursButton);
@@ -160,7 +158,8 @@ private:
         lyBtnContract->addWidget(generateContractButton);
         lyBtnContract->addWidget(statisticsButton);
         lyBtnContract->addWidget(exportCSVButton);
-
+        lyBtnContract->addWidget(openContractCRUDGUIButton);
+        lyBtnContract->addWidget(openContractReadOnlyGUIButton);
         rightLy->addLayout(lyBtn);
         rightLy->addLayout(lyBtnContract);
         rightLy->addStretch();
@@ -275,6 +274,18 @@ private:
             }catch (const RepoException& e){
                 QMessageBox::warning(this,"Repo Error",QString::fromStdString(e.getMsg()));
             }
+        });
+        connect(openContractCRUDGUIButton, QPushButton::clicked, this, [this]() {
+            auto* cosCRUDGUI = new ContractCRUDGUI(service,this);
+            cosCRUDGUI->setAttribute(Qt::WA_DeleteOnClose);
+            cosCRUDGUI->setWindowFlag(Qt::Window);
+            cosCRUDGUI->show();
+        });
+        connect(openContractReadOnlyGUIButton, QPushButton::clicked, this, [this]() {
+            auto* cosReadOnlyGUI = new ContractReadOnlyGUI(service,this);
+            cosReadOnlyGUI->setAttribute(Qt::WA_DeleteOnClose); // Automatically delete when closed
+            cosReadOnlyGUI->setWindowFlag(Qt::Window);
+            cosReadOnlyGUI->show();
         });
         connect(filterByTeacherButton,QPushButton::clicked,[&]() {
             try {
@@ -417,28 +428,14 @@ private:
 
     }
 
-    void loadData(){
+    void loadData() {
         list->clear();
-        contractTable->clear();
         list->addItem("Lista de discipline:");
         for (const auto& d : service.getAll()) {
-            list->addItem(QString::fromStdString("Disciplina:"+d.getDenumire() + " Tip: " + d.getTip() + " Cadru didactic:" + d.getCadruDidactic() + " Numar ore: " + std::to_string(d.getNrOre())));
+            list->addItem(QString::fromStdString(d.getDenumire() + " " + d.getTip() + " " + d.getCadruDidactic() + " " + std::to_string(d.getNrOre())));
         }
-
-        contractTable->setRowCount(0); // clear table rows
-        contractTable->setColumnCount(4); // ensure column count is correct
-        contractTable->setHorizontalHeaderLabels({"Disciplina", "Nr Ore", "Tip", "Cadru Didactic"}); // reset headers
-        contractTable->horizontalHeader()->setStretchLastSection(true);
-        const auto& contract = service.getContract().getAll();
-        contractTable->setRowCount(contract.size());
-        int row = 0;
-        for (const auto& d : contract) {
-            contractTable->setItem(row, 0, new QTableWidgetItem(QString::fromStdString(d.getDenumire())));
-            contractTable->setItem(row, 1, new QTableWidgetItem(QString::number(d.getNrOre())));
-            contractTable->setItem(row, 2, new QTableWidgetItem(QString::fromStdString(d.getTip())));
-            contractTable->setItem(row, 3, new QTableWidgetItem(QString::fromStdString(d.getCadruDidactic())));
-            row++;
-        }
+        modelContract->setDiscipline(service.getContract().getAll());
+        contractTable->resizeColumnsToContents();
         loadDisciplineButtons();
     }
     void loadDisciplineButtons(){
@@ -452,19 +449,26 @@ private:
             disciplineCount[d.getDenumire()]++;
         }
         for (const auto& [cheie,val]:disciplineCount) {
-            QPushButton* button=new QPushButton(QString::fromStdString(cheie));
-            connect(button,&QPushButton::clicked,[this,val]() {
+            auto* button=new QPushButton(QString::fromStdString(cheie));
+            connect(button,QPushButton::clicked,[this,val]() {
                 QMessageBox::information(this,"Discipline info",QString::fromStdString("Numar: "+std::to_string(val)));
             });
             layoutStatistics->addWidget(button);
         }
     }
+    void update() override {
+        loadData();
+    }
 public:
     Ui(Service &service,Validator &validator):service{service},validator{validator} {
+        service.getContract().addObserver(this);
         startUi();
         initConnect();
         loadData();
 
+    }
+    ~Ui() override {
+        service.getContract().removeObserver(this);
     }
 
 };

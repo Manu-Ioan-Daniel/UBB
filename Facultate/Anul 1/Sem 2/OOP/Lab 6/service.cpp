@@ -10,6 +10,7 @@ void Service::addDisciplinaService(const string& denumire,int nrOre,const string
     const Disciplina d{denumire,nrOre,tip,cadruDidactic};
     repo.addDisciplina(d);
     undoActions.push_back(std::make_unique<UndoAdauga>(repo,d));
+    notify();
 
 }
 Disciplina Service::cautaDisciplinaService(const string &denumire, const string &tip) const {
@@ -24,12 +25,14 @@ void Service::modificaDisciplinaService(const string &denumire, const string &ti
     const Disciplina disciplinaNoua{denumireNoua,nrOreNou,tipNou,cadruDidacticNou};
     repo.modificaDisciplina(disciplinaNoua,d);
     undoActions.push_back(std::make_unique<UndoModifica>(repo,disciplinaNoua,d));
+    notify();
 }
 void Service::stergeDisciplinaService(const string &denumire, const string &tip){
     Validator::validateDisciplina(denumire,20,tip,"salut");
     auto disciplina=repo.cautaDisciplina(denumire,tip);
     repo.stergeDisciplina(denumire,tip);
     undoActions.push_back(std::make_unique<UndoSterge>(repo,disciplina));
+    notify();
 }
 vector<Disciplina>Service::filtrareDisciplineDupaOre(const int nrOre) const {
     vector<Disciplina> discipline=getAll();
@@ -56,9 +59,10 @@ vector<Disciplina> Service::filtrareDisciplineDupaCadruDidactic(const string& ca
 
     return disciplineFiltrate;
 }
-vector<Disciplina> Service::sortareDisciplineDupaOre() const {
+vector<Disciplina> Service::sortareDisciplineDupaOre(){
     vector<Disciplina> discipline=getAll();
     std::ranges::sort(discipline,[](const Disciplina& d1, const Disciplina& d2) {return d1.getNrOre() < d2.getNrOre();});
+    notify();
     return discipline;
 }
 vector<Disciplina> Service::sortareDisciplineDupaDenumire() const {
@@ -88,6 +92,7 @@ void Service::adaugaDisciplinaContractService(const string &denumire){
     for (auto& d:getAll()) {
         if (d.getDenumire()==denumire) {
             contract.adaugaDisciplinaContract(d);
+            notify();
             return;
         }
     }
@@ -95,6 +100,7 @@ void Service::adaugaDisciplinaContractService(const string &denumire){
 }
 void Service::golesteContractService() {
     contract.golesteContract();
+    notify();
 }
 void Service::genereazaContractService(const int nrDiscipline) {
     if (nrDiscipline<=0) {
@@ -104,6 +110,7 @@ void Service::genereazaContractService(const int nrDiscipline) {
         throw ServiceException("Numar de discipline prea mare!\n");
     }
     contract.genereazaContract(nrDiscipline,getAll());
+    notify();
 }
 std::map<string,int> Service::statistici() const{
     std::map<string,int> statistica;
@@ -118,6 +125,7 @@ void Service::undo() {
     }
     undoActions.back()->doUndo();
     undoActions.pop_back();
+    notify();
 }
 void Service::exportCSVService(const string& filename) const {
     contract.exportCSV(filename);

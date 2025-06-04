@@ -31,7 +31,11 @@ add_executable(Lab_6
         Contract.cpp
         Contract.h
         undo.cpp
-        undo.h)
+        undo.h
+        observer.h
+        ContractCRUDGUI.h
+        ContractReadOnlyGUI.h
+        ContractTableModel.h)
 
 # Then link it to Qt
 target_link_libraries(Lab_6 PRIVATE Qt6::Core Qt6::Widgets)
