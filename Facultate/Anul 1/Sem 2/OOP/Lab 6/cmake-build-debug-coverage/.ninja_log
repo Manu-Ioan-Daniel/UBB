@@ -1,28 +1,29 @@
 # ninja log v6
-21	111	7707626494530862	C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/Lab_6_autogen/timestamp	884989b48500f4b
-21	111	7707626494530862	Lab_6_autogen/timestamp	884989b48500f4b
-1493	4340	7707624365501007	CMakeFiles/Lab_6.dir/Lab_6_autogen/mocs_compilation.cpp.obj	cb442680d4bca093
-21	111	7707626494530862	Lab_6_autogen/mocs_compilation.cpp	884989b48500f4b
+22	122	7710335336888055	C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/Lab_6_autogen/timestamp	884989b48500f4b
+22	122	7710335336888055	Lab_6_autogen/timestamp	884989b48500f4b
+509	3439	7707630318818433	CMakeFiles/Lab_6.dir/Lab_6_autogen/mocs_compilation.cpp.obj	cb442680d4bca093
+22	122	7710335336888055	Lab_6_autogen/mocs_compilation.cpp	884989b48500f4b
 1540	1955	7693981714948802	CMakeFiles/Lab_6.dir/validator.cpp.obj	537c6c208101623d
-21	111	7707626494530862	C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/Lab_6_autogen/mocs_compilation.cpp	884989b48500f4b
+22	122	7710335336888055	C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/Lab_6_autogen/mocs_compilation.cpp	884989b48500f4b
 1535	1955	7693981714898818	CMakeFiles/Lab_6.dir/disciplina.cpp.obj	1562beafb47613c2
 1545	1941	7693981714998806	CMakeFiles/Lab_6.dir/undo.cpp.obj	22a8e8d5c356992c
-1496	4172	7707624365531013	CMakeFiles/Lab_6.dir/ui.cpp.obj	913f10f7d38974c1
+512	3219	7707630318858443	CMakeFiles/Lab_6.dir/ui.cpp.obj	913f10f7d38974c1
 1536	2433	7693981714918802	CMakeFiles/Lab_6.dir/Repo.cpp.obj	ce4c79438aa8a60f
 112	1226	7707626495439363	CMakeFiles/Lab_6.dir/Contract.cpp.obj	f8e80a9a2ec320b1
 1530	2836	7707620749429142	CMakeFiles/Lab_6.dir/service.cpp.obj	44739fabd42aee6e
-1495	5089	7707624365521014	CMakeFiles/Lab_6.dir/main.cpp.obj	cac75207a5400eb6
-1226	1943	7707626506579948	Lab_6.exe	e0cd455a95f38b5c
-117	2212	7707605515921110	CMakeFiles/Lab_6.dir/DisciplinaReadOnlyGUI.cpp.obj	6aa6bc3d6b4d558a
-21	2503	7707630201863641	Lab_6_autogen/timestamp	884989b48500f4b
-21	2503	7707630201863641	Lab_6_autogen/mocs_compilation.cpp	884989b48500f4b
-21	2503	7707630201863641	C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/Lab_6_autogen/timestamp	884989b48500f4b
-21	2503	7707630201863641	C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/Lab_6_autogen/mocs_compilation.cpp	884989b48500f4b
-20	508	7707630318323303	Lab_6_autogen/timestamp	884989b48500f4b
-20	508	7707630318323303	Lab_6_autogen/mocs_compilation.cpp	884989b48500f4b
-20	508	7707630318323303	C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/Lab_6_autogen/timestamp	884989b48500f4b
-20	508	7707630318323303	C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/Lab_6_autogen/mocs_compilation.cpp	884989b48500f4b
-512	3219	7707630318858443	CMakeFiles/Lab_6.dir/ui.cpp.obj	913f10f7d38974c1
-509	3439	7707630318818433	CMakeFiles/Lab_6.dir/Lab_6_autogen/mocs_compilation.cpp.obj	cb442680d4bca093
-511	4125	7707630318838433	CMakeFiles/Lab_6.dir/main.cpp.obj	cac75207a5400eb6
-4125	4860	7707630354981984	Lab_6.exe	e0cd455a95f38b5c
+123	2934	7710335337898046	CMakeFiles/Lab_6.dir/main.cpp.obj	cac75207a5400eb6
+2934	3356	7710335366012268	Lab_6.exe	e0cd455a95f38b5c
+201	1098	7716331459416577	Lab_6_autogen/timestamp	884989b48500f4b
+201	1098	7716331459416577	Lab_6_autogen/mocs_compilation.cpp	884989b48500f4b
+201	1098	7716331459416577	C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/Lab_6_autogen/timestamp	884989b48500f4b
+201	1098	7716331459416577	C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 1/Sem 2/OOP/Lab 6/cmake-build-debug-coverage/Lab_6_autogen/mocs_compilation.cpp	884989b48500f4b
+1109	1730	7716331460076593	CMakeFiles/Lab_6.dir/validator.cpp.obj	537c6c208101623d
+1115	1762	7716331460136579	CMakeFiles/Lab_6.dir/undo.cpp.obj	22a8e8d5c356992c
+1103	1806	7716331460016572	CMakeFiles/Lab_6.dir/disciplina.cpp.obj	1562beafb47613c2
+1105	2462	7716331460036584	CMakeFiles/Lab_6.dir/Repo.cpp.obj	ce4c79438aa8a60f
+1113	3137	7716331460116578	CMakeFiles/Lab_6.dir/Contract.cpp.obj	f8e80a9a2ec320b1
+1107	3294	7716331460056589	CMakeFiles/Lab_6.dir/service.cpp.obj	44739fabd42aee6e
+1111	5174	7716331460096581	CMakeFiles/Lab_6.dir/ui.cpp.obj	913f10f7d38974c1
+1099	5469	7716331459966585	CMakeFiles/Lab_6.dir/Lab_6_autogen/mocs_compilation.cpp.obj	cb442680d4bca093
+1101	6295	7716331459996592	CMakeFiles/Lab_6.dir/main.cpp.obj	cac75207a5400eb6
+6295	7126	7716331511927420	Lab_6.exe	e0cd455a95f38b5c

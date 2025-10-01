@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "ui.h"
 #include <QApplication>
 
