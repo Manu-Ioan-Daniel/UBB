@@ -1,0 +1,37 @@
+NodLSI
+
+e:TElement//informatia utila a nodului
+urm:↑NodLSI//adresa la care e memorat urmat nod
+
+LSI
+
+prim:↑NodLSI//adresa primului nod din lista
+
+Functia creeazaNodLSI(e)
+{pre: e:TElem}
+{post: se returneaza un ↑NodLSI continand e ca informatie utila}
+	{se aloca n spatiu de memorare pentru un NodLSI}
+	{p:↑NodLSI}
+	aloca(p)
+	[p].e<--e
+	[p].urm<--NIL
+	{rezultatul returnat de functie}
+	creeazaNodLSI<--p
+Sf.Functie
+
+Functia creare(i,n)
+{post:se returneaza un ↑NodLSI pointer spre capul listei inlantuie formate(primul elem)}
+	Daca i>n atunci
+		creare<--NIL
+	altfel
+		{se aloca un spatiu de memorare pentru un NodLSI avand informatia utila e}
+		q<--creeazaNodLSI(i)
+		[q].urm<--creare(i+1,n)
+		creare<--q
+	Sf.Daca
+Sf.Functie
+
+Functia creareLista(n)
+{post:se returneaza un ↑NodLSI, pointer spre capul listei inlantuie formate din elementele 1,2..n}
+	creareLista<--creare(1,n)
+Sf.Functie
