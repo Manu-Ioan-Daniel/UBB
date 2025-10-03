@@ -62,5 +62,15 @@ void main() {
 
     //apelarea unei functii statice dintr o clasa
     Motor.EngineSound();
+    AB.generateAB();
+
+    //Legare dinamica
+
+    Persoana stud=new Student("Andu",(byte)3,34);
+    System.out.println(stud.toString());//afiseaza cu metoda de la student,nu cea de la persoana
+    Student stud2=(Student)stud;//downcasting
+    System.out.println(stud2.toString());//merge tati
+    stud=(Persoana)stud2;//upcasting
 
 }
+
