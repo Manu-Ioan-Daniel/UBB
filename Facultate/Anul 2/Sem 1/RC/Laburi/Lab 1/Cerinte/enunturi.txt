@@ -1,14 +1,19 @@
-Tema 1a
-Sa se implementeze in C o pereche de programe client/server care comunica prin socket-uri TCP/IP pentru rezolvarea urmatoarelor probleme:
+1. Un client trimite unui server un șir de numere. Serverul va returna clientului suma numerelor primite.
 
-Un client trimite unui server un sir de numere. Serverul va returna clientului suma numerelor primite.
-Un client trimite unui server un sir de caractere. Serverul va returna clientului numarul de caractere spatiu din sir.
-Un client trimite unui server un sir de caractere. Serverul va returna clientului acest sir oglindit (caracterele sirului in ordine inversa).
-Un client trimite unui server doua siruri de caractere ordonate. Serverul va interclasa cele doua siruri si va returna clientului sirul rezultat interclasat.
-Un client trimite unui server un numar. Serverul va returna clientului sirul divizorilor acestui numar.
-Un client trimite unui server un sir de caractere si un caracter. Serverul va returna clientului toate pozitiile pe care caracterul primit se regaseste in sir.
-Un client trimite unui server un sir de caractere si doua numere (fie acestea s, i, l). Serverul va returna clientului subsirul de lungime l a lui s care incepe la pozitia i.
-Un client trimite unui server doua siruri de numere. Serverul va returna clientului sirul de numere comune celor doua siruri primite.
-Un client trimite unui server doua siruri de numere. Serverul va returna clientului sirul de numere care se regaseste in primul sir dar nu se regasesc in al doilea.
-Un client trimite unui server doua siruri de caractere. Serverul ii raspunde clientului cu caracterul care se regaseste de cele mai multe ori pe pozitii identice in cele doua siruri si cu numarul de aparitii ale acestui caracter.
-Odata cu rezolvarea acestor probleme, studentii se vor familiariza cu utilizarea comenzilor strace si ltrace.
+2. Un client trimite unui server un șir de caractere. Serverul va returna clientului numărul de caractere spațiu din șir.
+
+3. Un client trimite unui server un șir de caractere. Serverul va returna clientului acest șir oglindit (caracterele șirului în ordine inversă).
+
+4. Un client trimite unui server două șiruri de caractere ordonate. Serverul va interclasa cele două șiruri și va returna clientului șirul rezultat interclasat.
+
+5. Un client trimite unui server un număr. Serverul va returna clientului șirul divizorilor acestui număr.
+
+6. Un client trimite unui server un șir de caractere și un caracter. Serverul va returna clientului toate pozițiile pe care caracterul primit se regăsește în șir.
+
+7. Un client trimite unui server un șir de caractere și două numere (fie acestea s, i, l). Serverul va returna clientului subșirul de lungime l a lui s care începe la poziția i.
+
+8. Un client trimite unui server două șiruri de numere. Serverul va returna clientului șirul de numere comune celor două șiruri primite.
+
+9. Un client trimite unui server două șiruri de numere. Serverul va returna clientului șirul de numere care se regăsesc în primul șir dar nu se regăsesc în al doilea.
+
+10. Un client trimite unui server două șiruri de caractere. Serverul îi răspunde clientului cu caracterul care se regăsește de cele mai multe ori pe poziții identice în cele două șiruri și cu numărul de apariții ale acestui caracter.

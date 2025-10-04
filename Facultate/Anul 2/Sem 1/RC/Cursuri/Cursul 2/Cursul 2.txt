@@ -1,0 +1,38 @@
+CLIENT----------------------------->SERVER
+	IP,portul serverului
+		      |
+		      identificarea procesului cu care se comunica
+Server->hardware
+      ->sistem de operare
+      ->proces
+CLIENT						SERVER(un server iterativ)
+------------------------------------------------|----------------------------
+c=socket(, )			       		|	s=socket( , )
+	|->e vorba de protocoale       		|	if(bind(s, INADDR_ANY/port,sizeof(structura)<0)
+			->Transport-TCP		|		listen(s,5)->asta ii confera atributul de server
+			->Retea-IPV4   		|
+if(connect(c,IP server/port,sizeof(structura)<0)|
+						|	while(1){
+		sub forma unei structuri			c'=accept(s,IP client/Port client,sizeof ...)
+			(AF_INET)				recv(c',..)
+	send(c,&i,sizeof(i),0)					send(c',..)
+	recv(c,&j,sizeof(j),MSG_WAITALL)			close(c')
+	close(c)					}close(s)
+-------------------------------------------------------------------------------
+pentru a verifica ce pachete sunt ocupate:netstat
+bind->la client este optional(in general,nu se face) pentru ca portul clientului nu este important si de asemenea daca s-ar face bind la client exista riscul
+de a ajunge pe un port deja ocupat.
+TRANSOFRMAREA SERVERULUI ITERATIV IN SERVER CONCURENT:
+while(1){
+	c'=accept...
+	if(fork()==0){
+		recv...
+		send...
+		close(c')
+		exit())
+	}
+}close(s)
+inainte de a trimite date folosim htons(host to network short),htonl(host to network long(32 de biti))
+dupa primire folosim ntohs(network to host short),ntohl(network to host long)
+datele in retea circula in format big endian
+daca vrem sa dam direct send si recv,fara htons respectiv ntohs,este necesar ca arhitecturile sa fie aceleasi

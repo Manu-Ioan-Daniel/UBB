@@ -37,4 +37,5 @@ SSH->port 22
 Nivelul-->Retea->adrese IP(Internet Protocol)
        -->Data Link->switch,adresa MAC/ethernet/hardware
        -->Fizic ->cablu,fibra,linie telefonica,wireless
+VPN- se introduc niste pachete IP peste o alta stiva TCP/IP
 
