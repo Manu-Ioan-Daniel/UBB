@@ -1,0 +1,4 @@
+si celelalte 2(Aplicatie,Transport)
+Nivelul-->Retea->adrese IP(Internet Protocol)
+       -->Data Link->switch,adresa MAC/ethernet/hardware
+       -->Fizic ->cablu,fibra,linie telefonica,wireless

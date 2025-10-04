@@ -1,0 +1,10 @@
+-protocoalele sunt descrise in RFC-uri
+	IS-Mi
+	Apache-Linux
+protocoale
+	->deschise
+	->proprietary
+protocoale de la nivelul-->Transport->TCP(face toate verificarile,ordinea,completitudinea)
+	                          ->UDP(mai rapid,se pot pierde pachete)
+			-->Aplicatie->NTP,DNF
+				    ->HTTP,HTTPS,FTP,SSH,SMTP,IMAP,POP3

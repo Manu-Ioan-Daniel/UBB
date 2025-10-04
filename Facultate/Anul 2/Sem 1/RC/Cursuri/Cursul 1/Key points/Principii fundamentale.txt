@@ -1,0 +1,10 @@
+Stiva TCP/IP - Principii fundamentale ale functionarii retelelor de calculatoare:
+-->Dirijarea(routarea) pachetelor->facuta de routere
+	pachete
+sursa ---------> destinatie
+-->Mecanismul de adresare IP
+-->Sistemul numelor de domeniu(DNS)
+	->translatarea din nume de calculatoare in adrese IP
+	->ajuta la localizarea altor sisteme DNS,la distribuirea de dui publice,etc.
+->Stiva de protocoale TCP/IP RFC(Request for Comments)
+	*protocol=set de reguli de comunicare

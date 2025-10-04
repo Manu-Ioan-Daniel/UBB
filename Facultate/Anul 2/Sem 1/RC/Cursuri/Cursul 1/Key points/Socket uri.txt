@@ -1,0 +1,5 @@
+Socket-uri:
+-comunicare intre procese de pe calculatoare diferite(pot fi si sisteme de operare diferite)
+-model client-server
+-codurile pot fi scrise in orice limbaj de programare(cele care comunica nu trebuie sa fie de acelasi tip pt a functiona comunicarea)
+-compatibilitatea este data de protocolul de comunicare

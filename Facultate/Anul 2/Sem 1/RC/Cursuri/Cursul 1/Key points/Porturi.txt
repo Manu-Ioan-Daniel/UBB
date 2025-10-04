@@ -1,0 +1,6 @@
+porturi->fizice(din switch)
+       ->de la nivelul Transport
+HTTP->port 80
+HTTPS->port 443
+FTP->port 21
+SSH->port 22
