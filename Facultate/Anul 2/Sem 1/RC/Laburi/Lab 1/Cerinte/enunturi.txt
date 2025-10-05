@@ -18,6 +18,9 @@
 
 10. Un client trimite unui server două șiruri de caractere. Serverul îi răspunde clientului cu caracterul care se regăsește de cele mai multe ori pe poziții identice în cele două șiruri și cu numărul de apariții ale acestui caracter.
 client.c:
+1.creeam socket-ul,verificam daca da eroare
+2.setam atributele pt server
+3.incercam sa ne conectam
 #include <sys/types.h>
 #include <unistd.h>
 #include <sys/socket.h>
@@ -32,7 +35,7 @@ int main(){
 
         c=socket(AF_INET,SOCK_STREAM,0);
         if(c<0){
-                printf("Eroare la crearea socketului client!\n);
+                printf("Eroare la crearea socketului client!\n");
                 return 1;
         }
         memset(&server,0,sizeof(server));
@@ -48,3 +51,9 @@ int main(){
         close(c);
 }
 server.c:
+1.creare socket server
+2.setarea atributelor
+3.bind
+4.listen
+5.l=sizeof(client),memset(client)
+6.in while,c=accept...
