@@ -1,0 +1,9 @@
+Metoda 1:-verificam cate 2 elemente din lista
+	 -avem o variabila auxiliara care memoreaza unu daca suntem intr o secventa crescatoare,0 altfel
+				elimSecv(l2 l3 ... ln,1) daca l1<l2
+elimSecv(l1 l2 ... ln,flag):	elimSecv(l2 l3 ... ln,0) daca l1>=l2 si flag=1
+				l1(+)elimSecv(l2 l3 ... ln,0) daca l1>=l2 si flag=0
+				multime vida,daca n=0 sau daca n=1 si flag=1
+				l1 daca n=1 si flag=0
+						
+	

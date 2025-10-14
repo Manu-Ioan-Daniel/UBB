@@ -1,0 +1,9 @@
+				1+nr_aparitii(el,l2 ... ln),daca el=l1
+nr_aparitii(el,l1 l2 ... ln)=   0 daca n=0
+				nr_aparitii(el,l2 ... ln) altfel
+
+			l1(+)elimina(l2 ... ln,li1 li2 ... lin) daca nr_aparitii(el,li1 li2 ... lin)>1
+elimina(l1 l2 ... ln,li1 li2 ... lin)=	multime vida,daca l e vida
+			elimina(l2 ... ln) altfel
+
+eliminaPrincipal(l1 l2 ... ln)=elimina(l1 l2 ... ln,l1 l2 ... ln)

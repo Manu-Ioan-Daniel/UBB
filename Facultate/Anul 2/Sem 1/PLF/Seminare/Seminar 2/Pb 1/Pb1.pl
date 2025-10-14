@@ -1,0 +1,25 @@
+%enuntul problemei:elimina toate elementele care apar exact o singura data
+%nr_aparitii(El - element,L-lista,N-int)
+%model de flux:nr_aparitii(i,i,o)
+nr_aparitii(El,[H|T],N):-
+ El=H,
+ nr_aparitii(El,T,Rez),N is Rez+1.
+nr_aparitii(El,[],0).
+nr_aparitii(El,[H|T],N):-
+ El\=H,
+ nr_aparitii(El,T,N).
+
+%elimina(L-lista,LI-lista,Rez-lista)
+elimina([],_,[]).
+elimina([H|T],LI,Rez):-
+ nr_aparitii(H,LI,N),
+ N>1,!,
+ elimina(T,LI,RezT),
+ Rez=[H|RezT].
+elimina([H|T],LI,Rez):-
+ elimina(T,LI,Rez).
+elimina_principal(L,Rez):-
+ elimina(L,L,Rez).
+
+
+
