@@ -1,4 +1,5 @@
 CREATE DATABASE LostArkDB
+GO
 USE LostArkDB
 CREATE TABLE Players(
 	PlayerID INT PRIMARY KEY IDENTITY(1,1),
@@ -7,13 +8,26 @@ CREATE TABLE Players(
 	PlayerCreationDate DATE NOT NULL
 
 	);
+CREATE TABLE Guilds(
+    GuildID INT PRIMARY KEY IDENTITY(1,1),
+    GuildName NVARCHAR(100) NOT NULL,
+    GuildCreationDate DATE NOT NULL
+);
 
 CREATE TABLE Characters(
 	CharacterID INT PRIMARY KEY IDENTITY(1,1),
 	PlayerID INT NOT NULL,
 	CharacterName NVARCHAR(50) NOT NULL,
+	GuildID INT NOT NULL,
 	Class NVARCHAR(50) NOT NULL,
-	FOREIGN KEY (PlayerID) REFERENCES Players(PlayerID)
+	GuildRole NVARCHAR(100),
+	GuildJoinDate DATE,
+	FOREIGN KEY (PlayerID) REFERENCES Players(PlayerID),
+	FOREIGN KEY (GuildID) REFERENCES Guilds(GuildID)
+);
+CREATE TABLE EquipmentCategories(
+	EquipmentCategoryID INT PRIMARY KEY IDENTITY(1,1),
+	CategoryName NVARCHAR(100) NOT NULL
 );
 CREATE TABLE Currencies(
 	CurrencyID INT PRIMARY KEY IDENTITY(1,1),
@@ -31,7 +45,8 @@ CREATE TABLE Equipments(
 	EquipmentID INT PRIMARY KEY IDENTITY(1,1),
 	EquipmentRarity NVARCHAR(50) NOT NULL,
 	EquipmentName NVARCHAR(50) NOT NULL,
-	EquipmentSlot NVARCHAR(50) NOT NULL
+	EquipmentSlot NVARCHAR(50) NOT NULL,
+	EquipmentCategoryID INT FOREIGN KEY REFERENCES EquipmentCategories(EquipmentCategoryID)
 	);
 CREATE TABLE CharacterEquipments(
 	EquipmentID INT NOT NULL,
@@ -40,20 +55,6 @@ CREATE TABLE CharacterEquipments(
 	FOREIGN KEY (EquipmentID) REFERENCES Equipments(EquipmentID),
 	FOREIGN KEY (CharacterID) REFERENCES Characters(CharacterID)
 	);
-CREATE TABLE Guilds(
-    GuildID INT PRIMARY KEY IDENTITY(1,1),
-    GuildName NVARCHAR(100) NOT NULL,
-    GuildCreationDate DATE NOT NULL
-);
-
-CREATE TABLE GuildMembers(
-    CharacterID INT PRIMARY KEY,
-    GuildID INT NOT NULL,
-    JoinDate DATE NOT NULL,
-    GuildRole NVARCHAR(50) DEFAULT 'Member',
-    FOREIGN KEY (CharacterID) REFERENCES Characters(CharacterID),
-    FOREIGN KEY (GuildID) REFERENCES Guilds(GuildID)
-);
 CREATE TABLE Raids(
 	RaidID INT PRIMARY KEY IDENTITY(1,1),
 	RaidName NVARCHAR(50) NOT NULL,
@@ -69,7 +70,6 @@ CREATE TABLE CharacterRaids(
     FOREIGN KEY (CharacterID) REFERENCES Characters(CharacterID),
     FOREIGN KEY (RaidID) REFERENCES Raids(RaidID)
 );
-
 
 
 	
