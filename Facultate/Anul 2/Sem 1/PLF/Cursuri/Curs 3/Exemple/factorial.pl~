@@ -1,0 +1,16 @@
+%fact(N:integer,F:integer)
+%(i,i),(i,o)-determinist
+fact(N,F):-factAux(N,F,1,1).
+%factAux(N:integer,F:integer,I:integer,P:integer)
+%(i,i,i,i),(i,o,i,i)- determinist
+factAux(N,F,N,F):-!.
+factAux(N,F,I,P):-
+    I1 is I+1,
+    P1 is P*I1,
+    factAux(N,F,I1,P1).
+fact2(0,1):-!.
+fact2(N,F):-
+    N>0,
+    N1 is N-1,
+    fact2(N1,F1),
+    F is N*F1.
