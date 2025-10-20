@@ -1,13 +1,15 @@
 package algorithm;
+import factory.TaskMethodFactory;
 import model.Task;
-import strategies.SolvingStrategy;
+import strategies.SolvingMethod;
+import utils.enums.SolvingStrategy;
 
 public class MyAlgorithm {
-    SolvingStrategy strategy;
-    public MyAlgorithm(SolvingStrategy strategy){
-        this.strategy = strategy;
+    private SolvingMethod method;
+    public MyAlgorithm(SolvingStrategy strat){
+        this.method=TaskMethodFactory.getInstance().createMethod(strat);
     }
     public void executeStrategy(Task t) {
-        strategy.solve(t);
+        method.solve(t);
     }
 }

@@ -1,13 +1,13 @@
 package strategies;
-import model.MyNextTask;
+import model.NatatieTask;
 import model.NatatieData;
 import model.Rata;
 import model.Task;
 
-public class BinarySearchStrategy implements SolvingStrategy {
+public class BinarySearchMethod implements SolvingMethod {
     @Override
     public void solve(Task t) {
-        if(t instanceof MyNextTask myTask){
+        if(t instanceof NatatieTask myTask){
             NatatieData data=myTask.getData();
             Rata[] rate=data.getRate();
             //sortam dupa rezistenta
