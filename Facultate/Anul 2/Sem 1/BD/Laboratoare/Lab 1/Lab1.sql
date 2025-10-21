@@ -71,5 +71,3 @@ CREATE TABLE CharacterRaids(
     FOREIGN KEY (RaidID) REFERENCES Raids(RaidID)
 );
 
-
-	
