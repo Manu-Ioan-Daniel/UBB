@@ -1,8 +1,8 @@
 %sterge(L:lista,E:element,Rez:lista)
 %model de flux (i,i,o)
 sterge([],_,[]).
-sterge(L,E,Rez):-L=[H|T],H=E,sterge(T,E,Rez).
-sterge(L,E,Rez):-L=[H|T],H\=E,sterge(T,E,Rez2),Rez=[H|Rez2].
+sterge([H|T],E,Rez):-H=E,sterge(T,E,Rez).
+sterge([H|T],E,Rez):-H\=E,sterge(T,E,Rez2),Rez=[H|Rez2].
 %nrAparitii(L:lista,E:element,Rez:intreg)
 %model de flux(i,i,o)
 nrAparitii([],_,0).
@@ -21,4 +21,13 @@ listaPerechi(L,Rez):-
     nrAparitii(L,H,NrAp),
     sterge(L,H,L2),
     listaPerechi(L2,Rez2),
-    Rez=[[H,NrAp]|Rez2].
+    Rez=[[H,NrAp]|Rez2],!.
+%cazuri de testare
+%listaPerechi([1,2,3],Rez).
+%Rez=[[1,1],[2,1],[3,1]].
+%listaPerechi([],Rez).
+%Rez=[].
+%listaPerechi([0,1,-1,2,1,0,3,4,3],Rez).
+%Rez = [[0, 2], [1, 2], [-1, 1], [2, 1], [3, 2], [4, 1]].
+%listaPerechi([1],Rez).
+%Rez=[[1,1]].

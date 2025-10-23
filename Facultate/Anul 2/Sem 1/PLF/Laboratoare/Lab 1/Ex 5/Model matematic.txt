@@ -3,8 +3,8 @@
 stergere(E,l1 l2 ... ln)= l1 (+) stergere(E,l2 l3 ... ln),daca l1 dif de E
                           stergere(E,l2 l3 ... ln),altfel
 b)
-                         X,daca l e vida
-perechi(l1 l2 ... ln,X)= perechi(stergere(l1),[l1,nrAp(l1,l1 l2 ... ln)](+)X)
+                        multime vida daca l e vida
+perechi(l1 l2 ... ln)= [l1,nrAp(l1,l1 l2 ... ln)] (+) perechi(stergere(l1,[l1 l2 ... ln]))
 
 		     0 daca l e vida
 nrAp(E,l1 l2 ... ln)=1+nrAp(E,l2 l3 ... ln) daca l1=E
