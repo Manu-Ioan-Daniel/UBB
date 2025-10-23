@@ -75,3 +75,6 @@ VALUES
 INSERT INTO Characters (PlayerID, CharacterName, GuildID, Class, GuildRole, GuildJoinDate)
 VALUES
 (1, 'CharacterD', 3, 'Mage' , 'Member', '2025-02-23');
+INSERT INTO CharacterRaids (CharacterID, RaidID, CompletionStatus, CompletionDate)
+VALUES
+(1,2,1,'2025-07-02');
