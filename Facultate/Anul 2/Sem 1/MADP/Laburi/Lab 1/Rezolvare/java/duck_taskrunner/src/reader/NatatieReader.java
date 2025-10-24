@@ -8,8 +8,9 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class NatatieReader {
-    public static NatatieData readData(){
-        File file = new File("src/data/natatie.in");
+
+    public static NatatieData readData(String f){
+        File file = new File("src/data/"+f);
         try(Scanner scanner = new Scanner(file)) {
             int n = scanner.nextInt();
             int m = scanner.nextInt();

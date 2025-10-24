@@ -1,0 +1,13 @@
+Best time: 74.857 s
+Lane 1 (d=4) <- Duck 1 (v=71, st=19)
+Lane 2 (d=137) <- Duck 2 (v=89, st=21)
+Lane 3 (d=165) <- Duck 3 (v=84, st=27)
+Lane 4 (d=242) <- Duck 4 (v=87, st=42)
+Lane 5 (d=315) <- Duck 5 (v=67, st=52)
+Lane 6 (d=440) <- Duck 6 (v=73, st=53)
+Lane 7 (d=615) <- Duck 7 (v=55, st=59)
+Lane 8 (d=724) <- Duck 8 (v=22, st=72)
+Lane 9 (d=743) <- Duck 9 (v=98, st=73)
+Lane 10 (d=761) <- Duck 10 (v=51, st=78)
+Lane 11 (d=786) <- Duck 11 (v=21, st=88)
+Lane 12 (d=986) <- Duck 12 (v=27, st=89)

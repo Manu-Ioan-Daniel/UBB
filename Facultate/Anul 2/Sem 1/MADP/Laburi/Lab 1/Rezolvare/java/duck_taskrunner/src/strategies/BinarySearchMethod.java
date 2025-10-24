@@ -3,10 +3,13 @@ import model.NatatieTask;
 import model.NatatieData;
 import model.Rata;
 import model.Task;
+import writer.NatatieWriter;
+
+import java.io.IOException;
 
 public class BinarySearchMethod implements SolvingMethod {
     @Override
-    public void solve(Task t) {
+    public void solve(Task t) throws IOException {
         if(t instanceof NatatieTask myTask){
             NatatieData data=myTask.getData();
             Rata[] rate=data.getRate();
@@ -32,10 +35,16 @@ public class BinarySearchMethod implements SolvingMethod {
                 }
             }
             canFinish(rate,data.getDistante(),data.getM(),high,rateFolosite);
-            System.out.println("Best time: "+String.format("%.3f s",high));
-            for(int m=0;m<data.getM();m++){
-                System.out.println("Lane "+(m+1)+" ("+"d="+data.getDistante()[m]+") <- Duck "+m+1+" (v="+rateFolosite[m].getViteza()+", st="+rateFolosite[m].getRezistenta()+")");
+            NatatieWriter writer=new NatatieWriter(myTask.getFile());
+            writer.println("Best time: " + String.format("%.3f s", high));
+
+            for (int m = 0; m < data.getM(); m++) {
+                writer.println("Lane " + (m + 1) + " (d=" + data.getDistante()[m] +
+                        ") <- Duck " + (m + 1) +
+                        " (v=" + rateFolosite[m].getViteza() +
+                        ", st=" + rateFolosite[m].getRezistenta() + ")");
             }
+            writer.close();
 
 
         }else {

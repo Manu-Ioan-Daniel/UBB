@@ -1,0 +1,4 @@
+Best time: 4.000 s
+Lane 1 (d=3) <- Duck 1 (v=4, st=2)
+Lane 2 (d=6) <- Duck 2 (v=5, st=2)
+Lane 3 (d=10) <- Duck 3 (v=5, st=5)

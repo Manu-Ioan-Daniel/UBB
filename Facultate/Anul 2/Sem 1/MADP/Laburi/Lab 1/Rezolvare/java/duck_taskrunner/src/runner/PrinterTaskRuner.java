@@ -19,7 +19,9 @@ public class PrinterTaskRuner extends AbstractTaskRunner{
 
     @Override
     public void executeAll() {
-        super.executeAll();
+        while(hasTask()){
+            executeOneTask();
+        }
     }
 
     @Override
