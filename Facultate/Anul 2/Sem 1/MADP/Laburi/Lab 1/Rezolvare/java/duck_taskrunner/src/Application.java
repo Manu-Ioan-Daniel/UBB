@@ -39,6 +39,7 @@ public class Application {
         printRunner.addTask(task13);
         printRunner.addTask(task14);
         printRunner.addTask(task15);
+        printRunner.addTask(task16);
         printRunner.executeAll();
         /*
             task1-expected time 42.977777778
