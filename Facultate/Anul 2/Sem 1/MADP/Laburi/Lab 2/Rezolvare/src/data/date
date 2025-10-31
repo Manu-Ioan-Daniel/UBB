@@ -1,6 +1,5 @@
-person,1,alex,alex@gmail.com,asd1234,Popescu,Andrei,student,2001-05-10,8,2,3
-person,2,maria,maria@yahoo.com,asdpass,Mihai,Maria,doctor,2000-08-21,9,1
+person,1,alex,alex@gmail.com,asd1234,Popescu,Andrei,2001-05-10,student,8,2,3
 duck,3,donald,donald@duck.com,qasduack,FLYING,25.5,70.0,1,4,6
 duck,4,daisy,daisy@duckmail.com,asdasducky,SWIMMING,10.2,90.5,3
-person,5,george,george@abc.com,asdas4321,Ionescu,George,programator,1999-01-15,7
-duck,6,daniel,daniel@gmail.com,quickpassword,SWIMMING,5.0,15.0,3
+person,5,george,george@abc.com,asdas4321,Ionescu,George,1999-01-15,programator,7
+person,6,daniel,daniel@gmail.com,daniel,daniel,ioan,2020-05-27,student,10

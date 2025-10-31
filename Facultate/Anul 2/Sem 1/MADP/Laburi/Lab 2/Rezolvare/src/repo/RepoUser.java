@@ -23,7 +23,7 @@ public class RepoUser {
     public void addUser(User user){
         readDataFromFile();
         if(users.contains(user))
-            throw new RepoError("domain.User already exists");
+            throw new RepoError("User already exists");
         users.add(user);
         writeDataToFile();
     }
@@ -32,10 +32,10 @@ public class RepoUser {
         for(User user:users){
             if(user.getId().equals(id)){
                 users.remove(user);
+                writeDataToFile();
                 return;
             }
         }
-        writeDataToFile();
         throw new RepoError("User does not exist!");
     }
     public void readDataFromFile() {
