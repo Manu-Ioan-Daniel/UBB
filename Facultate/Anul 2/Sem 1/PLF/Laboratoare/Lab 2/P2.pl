@@ -1,0 +1,43 @@
+%getMin(L:lista,Rez:minimul din lista)
+%model de flux (i,o)
+getMin([H],H).
+getMin([H|T],H):-
+    getMin(T,MinT),
+    H<MinT.
+getMin([H|T],MinT):-
+    getMin(T,MinT),
+    H>=MinT.
+%eliminaElem(L:lista,E:element,Rez:lista fara elementele E)
+%model de flux(i,i,o)
+eliminaElem([],_,[]).
+eliminaElem([E|T],E,Rez):-
+    eliminaElem(T,E,Rez),!.
+eliminaElem([H|T],E,[H|RezT]):-
+    eliminaElem(T,E,RezT).
+%sortareLista(L:lista,Rez:lista sortata fara dubluri)
+%model de flux (i,o)
+sortareLista([],[]).
+sortareLista(L,[Min|RezT]):-
+    getMin(L,Min),
+    eliminaElem(L,Min,L2),
+    sortareLista(L2,RezT),!.
+%cazuri de testare
+%sortareLista([6,6,5,4,7,6,3,3,1],Rez).
+%Rez = [1, 3, 4, 5, 6, 7].
+%sortareLista([3,4,1,3,1,2],Rez).
+%Rez=[1,2,3,4]
+
+%sortareSubListe(L:lista,Rez:lista cu sublistele sortate)
+%model de flux (i,o)
+sortareSubListe([],[]).
+sortareSubListe([H|T],[RezH|RezT]):-
+    is_list(H),
+    sortareLista(H,RezH),
+    sortareSubListe(T,RezT),!.
+sortareSubListe([H|T],[H|RezT]):-
+    sortareSubListe(T,RezT).
+%cazuri de testare:
+%sortareSubListe([1,[1,2,1,3,4,1],[3,2],3,4,9,1],Rez).
+%Rez=[1, [1, 2, 3, 4], [2, 3], 3, 4, 9, 1].
+% sortareSubListe([1, 2, [4, 1, 4], 3, 6, [7, 10, 1, 3, 9], 5, [1, 1, 1],7],Rez).
+% Rez = [1, 2, [1, 4], 3, 6, [1, 3, 7|...], 5, [1], 7].
