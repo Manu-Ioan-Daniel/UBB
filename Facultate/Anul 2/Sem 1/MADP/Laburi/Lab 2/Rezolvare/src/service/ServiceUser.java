@@ -1,14 +1,13 @@
 package service;
 
+import domain.*;
 import errors.ServiceError;
 import errors.ValidationError;
 import repo.RepoUser;
 import validation.DuckValidationStrategy;
 import validation.PersonValidationStrategy;
+import validation.UserValidationStrategy;
 import validation.ValidationStrategy;
-import domain.Duck;
-import domain.Person;
-import domain.User;
 
 import java.util.HashMap;
 import java.util.List;
@@ -20,7 +19,10 @@ public class ServiceUser {
     public ServiceUser(RepoUser repoUser) {
         this.repoUser = repoUser;
         validators.put(Duck.class,new DuckValidationStrategy());
+        validators.put(FlyingDuck.class,new DuckValidationStrategy());
+        validators.put(SwimmingDuck.class,new DuckValidationStrategy());
         validators.put(Person.class,new PersonValidationStrategy());
+        validators.put(User.class,new UserValidationStrategy());
     }
     public void addUser(User user){
         validators.get(user.getClass()).validate(user);
@@ -62,13 +64,7 @@ public class ServiceUser {
         repoUser.writeDataToFile();
     }
     public User getUserById(Long id){
-        List<User> users=repoUser.getAllUsers();
-        for(User user:users){
-            if(user.getId().equals(id)){
-                return user;
-            }
-        }
-        return null;
+        return repoUser.getUserById(id);
     }
     public int getNumberOfCommunities(){
         List<User> users=repoUser.getAllUsers();

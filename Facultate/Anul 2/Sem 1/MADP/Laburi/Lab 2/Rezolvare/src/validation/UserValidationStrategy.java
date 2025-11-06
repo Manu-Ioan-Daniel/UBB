@@ -7,7 +7,7 @@ public class UserValidationStrategy implements ValidationStrategy<User> {
     public void validate(User user) {
         String errors="";
         if (user.getUsername() == null || user.getUsername().isEmpty()) {
-            errors+="domain.User name cannot be null or empty\n";
+            errors+="User name cannot be null or empty\n";
         }
         if (user.getEmail() == null || !user.getEmail().contains("@")) {
             errors+="Invalid email address\n";

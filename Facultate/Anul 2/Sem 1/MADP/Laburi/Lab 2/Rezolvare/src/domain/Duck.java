@@ -2,12 +2,12 @@ package domain;
 
 import enums.DuckType;
 
-public class Duck extends User{
+public abstract class Duck extends User{
     private DuckType type;
     private double speed;
     private double rezistance;
-    private Flock flock;
-    public Duck(Long id, String username, String email, String password, DuckType type, double speed, double rezistance,Flock flock) {
+    private Flock<? extends Duck> flock;
+    public Duck(Long id, String username, String email, String password, DuckType type, double speed, double rezistance) {
         super(id, username, email, password);
         this.type = type;
         this.speed = speed;
@@ -25,7 +25,11 @@ public class Duck extends User{
         return rezistance;
     }
 
-    public Flock getFlock() {
+    public void setFlock(Flock<? extends Duck> flock) {
+        this.flock = flock;
+    }
+
+    public Flock<? extends Duck> getFlock() {
         return flock;
     }
     @Override
@@ -34,12 +38,8 @@ public class Duck extends User{
                 "type=" + type +
                 ", speed=" + speed +
                 ", rezistance=" + rezistance +
-                ", flock=" + flock +
+                ", flock=" + flock.getFlockName() +
                 "} " + super.toString();
     }
-//    @Override
-//    public void sendMessage(){
-//        return;
-//    }
 
 }

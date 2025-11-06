@@ -12,13 +12,16 @@ public class DuckValidationStrategy extends UserValidationStrategy {
         String errors="";
         Duck duck = (Duck) user;
         if (duck.getType() == null || duck.getType()!= DuckType.FLYING && duck.getType()!=DuckType.SWIMMING && duck.getType()!=DuckType.FLYING_AND_SWIMMING) {
-           errors+="domain.Duck type is invalid!";
+           errors+="Duck type is invalid!";
         }
         if (duck.getSpeed() <= 0) {
-            errors+="domain.Duck speed must be greater than 0!";
+            errors+="Duck speed must be greater than 0!";
         }
         if (duck.getRezistance() <= 0) {
-            errors += "domain.Duck rezistance must be greater than 0!";
+            errors += "Duck rezistance must be greater than 0!";
+        }
+        if(duck.getFlock()==null){
+            errors+="Duck must belong to a flock!";
         }
         if(!errors.isEmpty()){
             throw new ValidationError(errors);

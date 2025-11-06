@@ -1,7 +1,5 @@
 package repo;
-import domain.Duck;
-import domain.Person;
-import domain.User;
+import domain.*;
 import enums.DuckType;
 import errors.RepoError;
 import java.io.*;
@@ -64,7 +62,13 @@ public class RepoUser {
                     DuckType duckType = DuckType.valueOf(parts[5]);
                     double speed = Double.parseDouble(parts[6]);
                     double rez = Double.parseDouble(parts[7]);
-                    user = new Duck(id, username, email, password, duckType, speed, rez, null);
+                    if(duckType==DuckType.FLYING){
+                        user=new FlyingDuck(id, username, email, password,speed, rez);
+                    }else if(duckType==DuckType.SWIMMING){
+                        user=new SwimmingDuck(id, username, email, password,speed, rez);
+                    }else{
+                        throw new RepoError("Unknown duck type: "+duckType);
+                    }
                     friendStartIndex = 8;
                 }else{
                     throw new RepoError("Unknown user type: " + type);
@@ -124,5 +128,15 @@ public class RepoUser {
     }
     public List<User> getAllUsers(){
         return Collections.unmodifiableList(users);
+    }
+
+    public User getUserById(Long id) {
+        List<User> users = getAllUsers();
+        for (User user : users) {
+            if (user.getId().equals(id)) {
+                return user;
+            }
+        }
+        return null;
     }
 }

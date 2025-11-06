@@ -11,16 +11,16 @@ public class PersonValidationStrategy extends UserValidationStrategy {
         String errors="";
         Person p = (Person) user;
         if(p.getName()==null || p.getName().isEmpty()){
-            errors+="domain.Person name is invalid!";
+            errors+="Person name is invalid!";
         }
         if(p.getDateOfBirth()==null || p.getDateOfBirth().isEmpty()){
-            errors+="domain.Person date of birth is invalid!";
+            errors+="Person date of birth is invalid!";
         }
         if(p.getSurname()==null || p.getSurname().isEmpty()){
-            errors+="domain.Person surname is invalid!";
+            errors+="Person surname is invalid!";
         }
         if(p.getEmpathyScore()<0 || p.getEmpathyScore()>10){
-            errors+="domain.Person empathy score must be between 0 and 10!";
+            errors+="Person empathy score must be between 0 and 10!";
         }
         if(!errors.isEmpty()){
             throw new ValidationError(errors);

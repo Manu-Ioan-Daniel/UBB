@@ -34,11 +34,11 @@ public abstract class User {
     public void logout(){
         return;
     }
-    public  void sendMessage(){
-        return;
+    public  void sendMessage(String message){
+        System.out.println("User "+this.username+" sent message: "+message);
     }
-    public  void receiveMessage(){
-        return;
+    public  void receiveMessage(String message){
+        System.out.println("User "+this.username+" received message: "+message);
     }
     public List<Long> getFriends() {
         return friends;
