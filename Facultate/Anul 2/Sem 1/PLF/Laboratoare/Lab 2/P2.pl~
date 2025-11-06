@@ -36,3 +36,8 @@ sortareSubListe([H|T],[RezH|RezT]):-
     sortareSubListe(T,RezT),!.
 sortareSubListe([H|T],[H|RezT]):-
     sortareSubListe(T,RezT).
+%cazuri de testare:
+%sortareSubListe([1,[1,2,1,3,4,1],[3,2],3,4,9,1],Rez).
+%Rez=[1, [1, 2, 3, 4], [2, 3], 3, 4, 9, 1].
+% sortareSubListe([1, 2, [4, 1, 4], 3, 6, [7, 10, 1, 3, 9], 5, [1, 1, 1],7],Rez).
+% Rez = [1, 2, [1, 4], 3, 6, [1, 3, 7|...], 5, [1], 7].

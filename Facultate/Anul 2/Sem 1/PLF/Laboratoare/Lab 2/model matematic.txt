@@ -1,9 +1,10 @@
-				min(l1,getMin([l2 l3 ... ln]))
+				min(l1,getMin([l2 l3 ... ln])) altfel
 getMin([l1 l2 ... ln])= 	multime vida,daca l e vida
 				l1 daca L=[l1]
 
 				l1 (+) eliminaElem([l2 l3 ... ln]),daca l1!=E
 eliminaElem([l1 l2 ... ln],E)=	eliminaElem([l2 l3 ... ln]),daca l1=e
+				multime vida daca l e vida
 
 				multime vida,daca l e vida
 sortareLista([l1 l2 ... ln])= 
