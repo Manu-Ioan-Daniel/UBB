@@ -34,7 +34,7 @@ public abstract class Duck extends User{
     }
     @Override
     public String toString() {
-        return "domain.Duck{" +
+        return "Duck{" +
                 "type=" + type +
                 ", speed=" + speed +
                 ", rezistance=" + rezistance +
