@@ -1,0 +1,2 @@
+ALTER TABLE Guilds
+ADD CONSTRAINT DF_GuildCreateDate DEFAULT GETDATE() FOR GuildCreationDate;

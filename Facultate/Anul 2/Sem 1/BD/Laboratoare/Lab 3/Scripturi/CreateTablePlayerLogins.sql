@@ -1,0 +1,5 @@
+CREATE TABLE PlayerLogins (
+    LoginID INT PRIMARY KEY IDENTITY,
+    PlayerID INT FOREIGN KEY REFERENCES Players(PlayerID),
+    LoginDate DATETIME DEFAULT GETDATE()
+);

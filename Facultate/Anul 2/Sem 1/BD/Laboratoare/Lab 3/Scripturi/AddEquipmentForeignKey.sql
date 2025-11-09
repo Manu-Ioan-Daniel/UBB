@@ -1,0 +1,3 @@
+ALTER TABLE Equipments
+ADD CONSTRAINT FK_Equipments_Categories FOREIGN KEY (EquipmentCategoryID)
+REFERENCES EquipmentCategories(EquipmentCategoryID);

@@ -1,0 +1,2 @@
+ALTER TABLE Equipments
+DROP CONSTRAINT FK_Equipments_Categories;

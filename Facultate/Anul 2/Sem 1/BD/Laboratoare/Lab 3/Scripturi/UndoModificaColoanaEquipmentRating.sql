@@ -1,0 +1,2 @@
+ALTER TABLE Equipments
+ALTER COLUMN EquipmentName NVARCHAR(50);

@@ -1,0 +1,2 @@
+ALTER TABLE Guilds
+DROP CONSTRAINT DF_GuildCreateDate;
