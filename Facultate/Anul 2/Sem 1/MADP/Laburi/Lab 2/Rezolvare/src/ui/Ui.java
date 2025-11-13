@@ -1,16 +1,14 @@
 package ui;
+import java.sql.*;
 import domain.*;
 import enums.DuckType;
-import events.Event;
 import events.RaceEvent;
-import repo.RepoCard;
-import repo.RepoEvent;
-import repo.RepoUser;
+import repo.*;
 import service.ServiceCard;
 import service.ServiceEvent;
 import service.ServiceUser;
 
-import javax.smartcardio.Card;
+import java.util.Properties;
 import java.util.Scanner;
 
 public class Ui {
@@ -27,10 +25,10 @@ public class Ui {
 
     public void run() {
         while (true) {
+
             showMenu();
             System.out.print("Alege o optiune: ");
             String option = scanner.nextLine();
-
             switch (option) {
                 case "1" -> addUser();
                 case "2" -> removeUser();
@@ -43,6 +41,16 @@ public class Ui {
                 case "9" ->afiseazaCarduri();
                 case "10"->addEvent();
                 case "11"->incepeEveniment();
+                case "12"->{
+                    for(User user:service.databaseGetAllUsers()){
+                        System.out.println(user);
+                    }
+                }
+                case "13"->{
+                    for(Flock<Duck> flock:serviceCard.databaseGetAll()){
+                        System.out.println(flock);
+                    }
+                }
                 case "0" -> {
                     System.out.println("Ceau!");
                     return;
@@ -72,6 +80,8 @@ public class Ui {
         System.out.println("9. Afiseaza toate cardurile si membrii lor");
         System.out.println("10. Adauga eveniment");
         System.out.println("11. Incepe eveniment");
+        System.out.println("12.Afiseaza utilizatori baza de date");
+        System.out.println("13.Afiseaza carduri baza de date");
         System.out.println("0. Iesire");
     }
 
@@ -140,7 +150,7 @@ public class Ui {
         }
     }
     void afiseazaCarduri(){
-        for(Flock<? extends Duck> flock:serviceCard.getAll()){
+        for(Flock<Duck> flock:serviceCard.getAll()){
             System.out.println(flock);
         }
     }
@@ -214,8 +224,10 @@ public class Ui {
     }
     public static void main(String[] args) {
         RepoUser repo = new RepoUser("src/data/date");
-        ServiceUser service = new ServiceUser(repo);
-        ServiceCard serviceCard=new ServiceCard(repo,new RepoCard());
+        DatabaseRepoCard databaseRepoCard=new repo.DatabaseRepoCard("localhost",5432,"MAP","postgres","123");
+        DatabaseRepoUser databaseRepoUser = new DatabaseRepoUser("localhost",5432,"MAP","postgres","123", databaseRepoCard);
+        ServiceUser service = new ServiceUser(repo, databaseRepoUser);
+        ServiceCard serviceCard=new ServiceCard(repo,new RepoCard(),databaseRepoCard, databaseRepoUser);
         RepoEvent repoEvent=new RepoEvent();
         ServiceEvent serviceEvent=new ServiceEvent(repoEvent,repo);
         Ui ui = new Ui(service,serviceCard,serviceEvent);
