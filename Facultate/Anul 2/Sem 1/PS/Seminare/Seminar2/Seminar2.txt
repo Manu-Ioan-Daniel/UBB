@@ -1,0 +1,24 @@
+Variabile aleatoare
+ex:x=fata unui zar cu n fete
+ X~( 1   2  ...  n)
+   (1/n 1/n ... 1/n)
+X ~ Unid(n), n apartine N
+  distributie
+pt n=6 Media lui X=?
+Aplicam X de N=10^6 ori
+Media nr este (1+...+1+2+...+2+...+6+...+6)/N=1* N1/N + 2 * N2/N + ... + 6 * N6/N~
+1/6+2/6+...+6/6=3.5 deci media lui X=3.5 
+
+X~( x_i )
+  ( p_i ),i apartine I
+E(x)=suma de la i apartine I de x_i*p_i
+
+--------------------------------------------------------------------------------------------
+Problema 1
+S={toate numerele de 2 cifre cu cifre cu paritati diferite,mai mici sau egale cu 50}
+X=suma cifrelor unui nr ales aleator din S
+--------------------------------------------------------------------------------------------
+Rezolvare 
+
+
+    
