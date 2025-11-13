@@ -3,6 +3,7 @@ package service;
 import domain.*;
 import errors.ServiceError;
 import errors.ValidationError;
+import repo.DatabaseRepoUser;
 import repo.RepoUser;
 import validation.DuckValidationStrategy;
 import validation.PersonValidationStrategy;
@@ -15,9 +16,11 @@ import java.util.Map;
 
 public class ServiceUser {
     private RepoUser repoUser;
+    private DatabaseRepoUser databaseRepoUser;
     private final Map <Class<? extends User>, ValidationStrategy<User>> validators=new HashMap<>();
-    public ServiceUser(RepoUser repoUser) {
+    public ServiceUser(RepoUser repoUser, DatabaseRepoUser databaseRepoUser) {
         this.repoUser = repoUser;
+        this.databaseRepoUser = databaseRepoUser;
         validators.put(Duck.class,new DuckValidationStrategy());
         validators.put(FlyingDuck.class,new DuckValidationStrategy());
         validators.put(SwimmingDuck.class,new DuckValidationStrategy());
@@ -33,6 +36,9 @@ public class ServiceUser {
             throw new ValidationError("Invalid id!");
         }
         repoUser.removeUser(id);
+    }
+    public List<User> databaseGetAllUsers(){
+        return databaseRepoUser.getAll();
     }
     public List<User> getAllUsers(){
         return repoUser.getAllUsers();

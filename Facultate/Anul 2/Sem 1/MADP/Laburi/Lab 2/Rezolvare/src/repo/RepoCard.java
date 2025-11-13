@@ -8,12 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RepoCard {
-    private List<Flock<? extends Duck>> flocks;
+    private List<Flock<Duck>> flocks;
     private final String filePath="src/data/dateCard";
     public RepoCard(){
         flocks=new ArrayList<>();
     }
-    public void addFlock(Flock<? extends Duck> flock){
+    public void addFlock(Flock<Duck> flock){
         if(flocks.contains(flock)){
             throw new RepoError("Flock already exists!");
         }
@@ -49,7 +49,7 @@ public class RepoCard {
     }
     public void writeDataToFile(){
         try(BufferedWriter bw=new BufferedWriter(new FileWriter(filePath))){
-            for(Flock<? extends Duck> flock:flocks){
+            for(Flock<Duck> flock:flocks){
                 StringBuilder sb=new StringBuilder();
                 sb.append(flock.getId()).append(",").append(flock.getFlockName());
                 for(Duck duck:flock.getMembers()){
@@ -62,13 +62,13 @@ public class RepoCard {
             throw new RepoError("Error writing to file: "+e.getMessage());
         }
     }
-    public List<Flock<? extends Duck>> getAll(){
+    public List<Flock<Duck>> getAll(){
         return flocks;
     }
 
 
-    public Flock<? extends Duck> getFlockById(Long cardId) {
-        for(Flock<? extends Duck> flock:flocks){
+    public Flock<Duck> getFlockById(Long cardId) {
+        for(Flock<Duck> flock:flocks){
             if(flock.getId().equals(cardId)){
                 return flock;
             }

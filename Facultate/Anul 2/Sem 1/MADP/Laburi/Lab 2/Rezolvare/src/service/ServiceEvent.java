@@ -8,7 +8,7 @@ import repo.RepoEvent;
 import repo.RepoUser;
 import validation.EventValidationStrategy;
 import validation.ValidationStrategy;
-
+import events.Event;
 import java.util.List;
 
 public class ServiceEvent {
@@ -29,7 +29,7 @@ public class ServiceEvent {
         if(events.isEmpty()){
             throw new ServiceError("No events available to run!");
         }
-        Event event=events.getLast();
+        Event event=events.get(events.size()-1);
         if(event instanceof RaceEvent re){
             re.startRace(repoUser.getAllUsers());
             repo.removeEvent(event);

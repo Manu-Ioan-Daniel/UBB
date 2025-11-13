@@ -6,7 +6,7 @@ public abstract class Duck extends User{
     private DuckType type;
     private double speed;
     private double rezistance;
-    private Flock<? extends Duck> flock;
+    private Flock<Duck> flock;
     public Duck(Long id, String username, String email, String password, DuckType type, double speed, double rezistance) {
         super(id, username, email, password);
         this.type = type;
@@ -25,11 +25,11 @@ public abstract class Duck extends User{
         return rezistance;
     }
 
-    public void setFlock(Flock<? extends Duck> flock) {
+    public void setFlock(Flock<Duck> flock) {
         this.flock = flock;
     }
 
-    public Flock<? extends Duck> getFlock() {
+    public Flock<Duck> getFlock() {
         return flock;
     }
     @Override
