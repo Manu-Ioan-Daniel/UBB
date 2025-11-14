@@ -7,8 +7,6 @@ import repo.*;
 import service.ServiceCard;
 import service.ServiceEvent;
 import service.ServiceUser;
-
-import java.util.Properties;
 import java.util.Scanner;
 
 public class Ui {
@@ -52,7 +50,7 @@ public class Ui {
                     }
                 }
                 case "0" -> {
-                    System.out.println("Ceau!");
+                    System.out.println("Salut");
                     return;
                 }
                 default -> System.out.println("Optiune invalida!");
