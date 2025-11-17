@@ -20,7 +20,7 @@ CREATE TABLE ducks (
     userId BIGINT PRIMARY KEY REFERENCES users(userId) ON DELETE CASCADE,
     duckType VARCHAR(100) NOT NULL,
     duckSpeed DOUBLE PRECISION NOT NULL,
-    duckRezistance DOUBLE PRECISION NOT NULL,
+    duckRezistance DOUBLE PRECISION NOT NULL
 );
 
 CREATE TABLE persons (
@@ -35,4 +35,17 @@ CREATE TABLE persons (
 CREATE TABLE flockMembers (
     userId BIGINT REFERENCES users(userId) ON DELETE CASCADE,
     flockId BIGINT REFERENCES flocks(flockId) ON DELETE CASCADE
+);
+CREATE TABLE events(
+	eventId BIGINT PRIMARY KEY,
+	eventType VARCHAR(100) NOT NULL
+);
+CREATE TABLE eventMembers(
+	eventId BIGINT REFERENCES events(eventId) ON DELETE CASCADE,
+	userId BIGINT  REFERENCES users(userId) ON DELETE CASCADE,
+	PRIMARY KEY (eventId,userId)
+);
+CREATE TABLE raceEvents(
+	eventId BIGINT PRIMARY KEY REFERENCES events(eventId),
+	M BIGINT
 );
