@@ -32,6 +32,8 @@ public class Ui {
                 case "6" -> addDuckToFlock();
                 case "7" -> addFriend();
                 case "8" -> removeFriend();
+                case "9" -> numberOfCommunities();
+                case "10" -> largestCommunity();
                 case "0" -> {
                     System.out.println("Salut!");
                     return;
@@ -40,6 +42,7 @@ public class Ui {
             }
         }
     }
+
 
     private void showMenu() {
         System.out.println("1. Adauga utilizator");
@@ -50,6 +53,8 @@ public class Ui {
         System.out.println("6. Adauga rata intr-un flock");
         System.out.println("7. Adauga prieten");
         System.out.println("8. Sterge prieten");
+        System.out.println("9. Numarul de comunitati");
+        System.out.println("10. Dimensiunea celei mai mari comunitati");
         System.out.println("0. Iesire");
     }
 
@@ -180,5 +185,22 @@ public class Ui {
             System.out.println("Eroare: " + e.getMessage());
         }
     }
+    private void numberOfCommunities() {
+        try {
+            int nr = serviceUser.getNumberOfCommunities();
+            System.out.println("Numarul de comunitati este: " + nr);
+        } catch(Exception e){
+            System.out.println("Eroare: " + e.getMessage());
+        }
+    }
+    private void largestCommunity() {
+        try {
+            int size = serviceUser.getBiggestCommunitySize();
+            System.out.println("Dimensiunea celei mai mari comunitati este: " + size);
+        } catch(Exception e){
+            System.out.println("Eroare: " + e.getMessage());
+        }
+    }
 
 }
+

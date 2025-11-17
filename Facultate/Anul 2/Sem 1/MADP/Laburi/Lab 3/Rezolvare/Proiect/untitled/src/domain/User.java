@@ -1,9 +1,11 @@
 package domain;
 
+import observer.Observer;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class User {
+public abstract class User implements Observer {
     private final Long id;
     private final String username;
     private final String email;
@@ -69,6 +71,10 @@ public abstract class User {
     @Override
     public int hashCode() {
         return id.hashCode();
+    }
+    @Override
+    public void update() {
+        System.out.println("User "+this.username+" got notified!");
     }
 
 

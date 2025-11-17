@@ -72,7 +72,7 @@ public class ServiceUser {
         return communities;
     }
 
-    public int biggestCommunitySize() {
+    public int getBiggestCommunitySize() {
         List<User> users = repo.getUsers();
         Map<Long, User> userMap = new HashMap<>();
         for (User u : users) {
