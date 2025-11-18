@@ -6,6 +6,7 @@ reuniune([H|T], L, Rez) :-
     apartine(L, H),
     reuniune(T, L, Rez),!.
 reuniune([H|T], L, [H|RezT]) :-
+    \+ apartine(L, H),
     reuniune(T, L, RezT).
 
 
