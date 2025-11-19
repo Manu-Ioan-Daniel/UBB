@@ -1,0 +1,20 @@
+cmmdc(A,0,A):-!.
+cmmdc(A, B, Rez) :-
+    R is A mod B,
+    cmmdc(B,R,Rez).
+cmmmcLista([],0):-!.
+cmmmcLista([H],H):-!.
+cmmmcLista([H1,H2|T],Rez):-
+    cmmdc(H1,H2,RezH),
+    Multiplu is H1*H2/RezH,
+    cmmmcLista([Multiplu|T],Rez).
+adaugaListaa([],_,[],_,_):-!.
+adaugaListaa([H|T],E,[H,E|RezT],CurrentPoz,NextPoz):-
+    CurrentPoz=NextPoz,
+    CurrentPoz2 is CurrentPoz + 1,
+    NextPoz2 is NextPoz * 2,
+    adaugaListaa(T,E,RezT,CurrentPoz2,NextPoz2).
+adaugaListaa([H|T],E,[H|RezT],CurrentPoz,NextPoz):-
+    CurrentPoz\=NextPoz,
+    CurrentPoz2 is CurrentPoz + 1,
+    adaugaListaa(T,E,RezT,CurrentPoz2,NextPoz).
