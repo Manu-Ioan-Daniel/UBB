@@ -1,0 +1,13 @@
+nrAparitii([],_,0).
+nrAparitii([H|T],H,Rez):-
+    nrAparitii(T,H,RezT),
+    Rez is RezT+1,!.
+nrAparitii([_|T],E,Rez):-
+    nrAparitii(T,E,Rez).
+multime([],[]).
+multime([H|T],[H|RezT]):-
+    nrAparitii(T,H,Ap),
+    Ap=0,
+    multime(T,RezT).
+multime([_|T],Rez):-
+    multime(T,Rez).

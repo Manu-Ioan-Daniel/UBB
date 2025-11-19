@@ -1,0 +1,27 @@
+vale([],_):-!.
+vale([_],_):-!.
+vale([H1,H2,H3|T],0):-
+    H1>H2,
+    H2<H3,
+    vale([H3|T],1),!.
+vale([H1,H2|T],0):-
+    H1>H2,
+    vale([H2|T],0),!.
+vale([H1,H2|T],1):-
+    H1<H2,
+    vale([H2|T],1),!.
+esteVale(L):-vale(L,0).
+sumaImpare([],0).
+sumaImpare([H],H):-!.
+sumaImpare([H1,_|T],Rez):-
+    sumaImpare(T,RezT),
+    Rez is H1+RezT.
+sumaPare([],0).
+sumaPare([H],H):-!.
+sumaPare([_,H2|T],Rez):-
+    sumaPare(T,RezT),
+    Rez is H2+RezT.
+sumaAlternanta(L,Rez):-
+    sumaPare(L,RezP),
+    sumaImpare(L,RezI),
+    Rez is RezI - RezP.

@@ -1,0 +1,16 @@
+eg([],[]).
+eg([H|T],B):-
+    apartine(B,H),
+    eg(T,B).
+egal(A,B):-
+    nrElemente(A,RezA),
+    nrElemente(B,RezB),
+    RezA=RezB,
+    eg(A,B).
+nrElemente([],0).
+nrElemente([_|T],Rez):-
+    nrElemente(T,RezT),
+    Rez is RezT + 1.
+apartine([H|_],H):-!.
+apartine([_|T],E):-apartine(T,E).
+
