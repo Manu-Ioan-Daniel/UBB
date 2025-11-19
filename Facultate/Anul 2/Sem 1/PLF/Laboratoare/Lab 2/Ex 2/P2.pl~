@@ -1,0 +1,17 @@
+getMin([],0).
+getMin([H],H):-!.
+getMin([H|T],H):-
+    getMin(T,RezT),
+    H<RezT,!.
+getMin([_|T],Rez):-
+    getMin(T,Rez).
+sortare([],[]).
+sortare(L,[Min|RezT]):-
+    getMin(L,Min),
+    elimina(L,Min,L2),
+    sortare(L2,RezT).
+elimina([],_,[]).
+elimina([H|T],H,Rez):-
+    elimina(T,-1,Rez).
+elimina([H|T],E,[H|RezT]):-
+    elimina(T,E,RezT).

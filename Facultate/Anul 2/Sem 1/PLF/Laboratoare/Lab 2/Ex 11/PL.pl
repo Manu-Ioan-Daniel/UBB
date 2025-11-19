@@ -1,0 +1,14 @@
+
+isPrime(N,D):-
+    (N=2;N=3;D is N//2+1),!.
+isPrime(N,D):-
+     N>=2,
+     N mod D =\= 0,
+     D2 is D+1,
+     isPrime(N,D2).
+dubleazaPrime([],[]).
+dubleazaPrime([H|T],[H,H|RezT]):-
+    isPrime(H,2),
+    dubleazaPrime(T,RezT),!.
+dubleazaPrime([H|T],[H|RezT]):-
+    dubleazaPrime(T,RezT).

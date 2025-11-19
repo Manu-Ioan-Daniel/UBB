@@ -1,0 +1,10 @@
+interclasare([],[],[]):-!.
+interclasare([H|T],[H2|T2],[H|RezT]):-
+    H<H2,
+    interclasare(T,[H2|T2],RezT),!.
+interclasare([H|T],[H2|T2],[H2|RezT]):-
+    interclasare([H|T],T2,RezT),!.
+interclasare([],[H|T],[H|RezT]):-
+    interclasare([],T,RezT).
+interclasare([H|T],[],[H|RezT]):-
+    interclasare(T,[],RezT).

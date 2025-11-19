@@ -1,0 +1,16 @@
+getMax([H],H):-!.
+getMax([H|T],H):-
+    getMax(T,RezT),
+    H>RezT,!.
+getMax([_|T],Rez):-
+    getMax(T,Rez).
+po([],_,_,[]).
+po([H|T],H,CurrentPoz,[CurrentPoz|RezT]):-
+    CurrentPoz2 is CurrentPoz + 1,
+    po(T,H,CurrentPoz2,RezT),!.
+po([_|T],E,CurrentPoz,Rez):-
+    CurrentPoz2 is CurrentPoz + 1,
+    po(T,E,CurrentPoz2,Rez).
+pozMax(L,Rez):-
+    getMax(L,Max),
+    po(L,Max,1,Rez).

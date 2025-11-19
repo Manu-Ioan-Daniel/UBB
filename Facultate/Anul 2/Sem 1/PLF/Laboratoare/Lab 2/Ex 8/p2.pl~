@@ -1,0 +1,10 @@
+succesor([],[]):-!.
+succesor(L,Rez):-
+    succ(L,CF,RezR),
+    (CF>0 -> Rez = [CF|RezR]; Rez = RezR).
+succ([],1,[]).
+succ([H|T],CF,[NewH|RezT]):-
+    succ(T,CFT,RezT),
+    E is H+CFT,
+    NewH is E mod 10,
+    CF is NewH//10.

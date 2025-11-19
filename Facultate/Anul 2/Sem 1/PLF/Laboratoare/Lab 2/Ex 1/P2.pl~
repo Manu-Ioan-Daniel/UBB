@@ -1,0 +1,10 @@
+listaInNumar([],_,0).
+listaInNumar([H],10,H):-!.
+listaInNumar([H|T],P,Rez):-
+    listaInNumar(T,P2,RezT),
+    Rez is P2*H+RezT,
+    P is P2*10.
+suma(L1,L2,Rez):-
+    listaInNumar(L1,_,Nr1),
+    listaInNumar(L2,_,Nr2),
+    Rez is Nr1 + Nr2.
