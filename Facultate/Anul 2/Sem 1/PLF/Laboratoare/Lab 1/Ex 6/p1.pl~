@@ -1,0 +1,31 @@
+elimina([],_,[]).
+elimina([H|T],H,Rez):-
+    elimina(T,H,Rez),!.
+elimina([H|T],E,[H|RezT]):-
+    elimina(T,E,RezT).
+nrAparitii([],_,0).
+nrAparitii([H],H,1):-!.
+nrAparitii([H|T],H,NrAparitii):-
+    nrAparitii(T,H,NrAparitiiT),
+    NrAparitii is NrAparitiiT + 1,!.
+nrAparitii([_|T],E,NrAparitii):-
+    nrAparitii(T,E,NrAparitii).
+eliminaRepetitii([],[]).
+eliminaRepetitii([H|T],Rez):-
+    nrAparitii([H|T],H,NrAp),
+    NrAp>1,
+    elimina([H|T],H,L),
+    eliminaRepetitii(L,Rez),!.
+eliminaRepetitii([H|T],[H|RezT]):-
+    eliminaRepetitii(T,RezT).
+maxim([H],H):-!.
+maxim([H|T],H):-
+    maxim(T,RezT),
+    H>=RezT,!.
+maxim([_|T],Rez):-
+    maxim(T,Rez).
+eliminaMaxim(L,Rez):-
+    maxim(L,Max),
+    elimina(L,Max,Rez).
+
+

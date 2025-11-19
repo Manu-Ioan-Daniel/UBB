@@ -1,0 +1,19 @@
+eliminare([H|T],H,RezT):-
+    eliminare(T,H,RezT),!.
+eliminare([H|T],E,[H|RezT]):-
+    eliminare(T,E,RezT).
+eliminare([],_,[]).
+listaInMultime([],[]).
+listaInMultime([H|T],[H|RezT]):-
+    eliminare([H|T],H,Elim),
+    listaInMultime(Elim,RezT).
+transformare([],[],[],0,0).
+transformare([H|T],[H|RezT],RezT2,NrPare,NrImpare):-
+    H mod 2 =:= 0,
+    transformare(T,RezT,RezT2,NrPare2,NrImpare),
+    NrPare is NrPare2 + 1,!.
+transformare([H|T],RezT,[H|RezT2],NrPare,NrImpare):-
+    transformare(T,RezT,RezT2,NrPare,NrImpare2),
+    NrImpare is NrImpare2 + 1,!.
+transformareFinala(L,NrPare,NrImpare,[RezPare,RezImpare]):-
+    transformare(L,RezPare,RezImpare,NrPare,NrImpare).
