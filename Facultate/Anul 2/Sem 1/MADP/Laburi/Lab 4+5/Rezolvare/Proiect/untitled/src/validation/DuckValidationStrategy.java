@@ -29,6 +29,7 @@ public class DuckValidationStrategy implements ValidationStrategy<Duck> {
         if(duck.getSpeed()<0){
             dbErrors.append("Speed must be non-negative\n ");
         }
+
         if(!dbErrors.isEmpty()){
             throw new ValidationError("Duck validation failed:\n"+dbErrors.toString());
         }

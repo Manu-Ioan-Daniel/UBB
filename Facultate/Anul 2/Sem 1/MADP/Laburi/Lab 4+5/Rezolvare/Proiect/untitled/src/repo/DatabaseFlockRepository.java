@@ -125,4 +125,13 @@ public class DatabaseFlockRepository {
         }
         return false;
     }
+    public Flock getFlockById(Long flockId){
+        List<Flock> flocks = getFlocks();
+        for(Flock flock:flocks){
+            if(flock.getId().equals(flockId)){
+                return flock;
+            }
+        }
+        return null;
+    }
 }

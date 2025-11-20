@@ -18,4 +18,7 @@ public class Observable {
             obs.update();
         }
     }
+    public List<Observer> getObservers() {
+        return observers;
+    }
 }

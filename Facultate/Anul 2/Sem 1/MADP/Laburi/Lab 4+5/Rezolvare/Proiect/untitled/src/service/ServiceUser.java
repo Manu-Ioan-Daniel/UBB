@@ -1,5 +1,6 @@
 package service;
 import domain.*;
+import enums.DuckType;
 import errors.ValidationError;
 import repo.DatabaseUserRepository;
 import validation.DuckValidationStrategy;
@@ -8,6 +9,7 @@ import validation.ValidationStrategy;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class ServiceUser {
     private final DatabaseUserRepository repo;
@@ -29,8 +31,8 @@ public class ServiceUser {
         }
         repo.deleteUser(id);
     }
-    public List<User> getUsers(){
-        return repo.getUsers();
+    public List<User> getAllUsers(){
+        return repo.getAllUsers();
     }
     public void addFriend(Long idUser,Long idFriend) {
         if(idUser==null || idUser<=0 || idFriend==null || idFriend<=0){
@@ -48,7 +50,7 @@ public class ServiceUser {
         if(id==null || id<=0){
             throw new ValidationError("Invalid id!");
         }
-        for(User user:repo.getUsers()){
+        for(User user:repo.getAllUsers()){
             if(user.getId().equals(id)){
                 return user;
             }
@@ -56,7 +58,7 @@ public class ServiceUser {
         return null;
     }
     public int getNumberOfCommunities() {
-        List<User> users = repo.getUsers();
+        List<User> users = repo.getAllUsers();
         Map<Long, User> userMap = new HashMap<>();
         for (User u : users) {
             userMap.put(u.getId(), u);
@@ -73,7 +75,7 @@ public class ServiceUser {
     }
 
     public int getBiggestCommunitySize() {
-        List<User> users = repo.getUsers();
+        List<User> users = repo.getAllUsers();
         Map<Long, User> userMap = new HashMap<>();
         for (User u : users) {
             userMap.put(u.getId(), u);
@@ -114,5 +116,14 @@ public class ServiceUser {
                 }
             }
         }
+    }
+    public List<Duck> getAllSwimmingDucks(){
+        List<User> users=getAllUsers();
+        return users.stream()
+                .filter(user -> user instanceof Duck)
+                .map(user -> (Duck) user)
+                .filter(duck-> duck.getType().equals(DuckType.SWIMMING))
+                .collect(Collectors.toList());
+
     }
 }

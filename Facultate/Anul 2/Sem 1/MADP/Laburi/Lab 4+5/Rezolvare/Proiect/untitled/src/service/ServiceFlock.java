@@ -1,6 +1,7 @@
 package service;
 import domain.Duck;
 import domain.Flock;
+import errors.ValidationError;
 import repo.DatabaseFlockRepository;
 import validation.DuckValidationStrategy;
 import validation.FlockValidationStrategy;
@@ -32,13 +33,10 @@ public class ServiceFlock {
     }
 
     public Flock getFlockById(Long flockId) {
-        List<Flock> flocks = repoFlock.getFlocks();
-        for(Flock flock:flocks){
-            if(flock.getId().equals(flockId)){
-                return flock;
-            }
+        if(flockId == null || flockId <= 0){
+            throw new ValidationError("Invalid flock id!");
         }
-        return null;
+        return repoFlock.getFlockById(flockId);
     }
 
     public List<Flock> getFlocks() {

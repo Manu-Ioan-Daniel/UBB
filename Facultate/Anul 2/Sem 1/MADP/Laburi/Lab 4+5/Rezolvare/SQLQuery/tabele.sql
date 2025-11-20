@@ -46,6 +46,6 @@ CREATE TABLE eventMembers(
 	PRIMARY KEY (eventId,userId)
 );
 CREATE TABLE raceEvents(
-	eventId BIGINT PRIMARY KEY REFERENCES events(eventId),
+	eventId BIGINT PRIMARY KEY REFERENCES events(eventId) ON DELETE CASCADE,
 	M BIGINT
 );

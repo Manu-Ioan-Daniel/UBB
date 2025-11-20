@@ -2,25 +2,29 @@ package Ui;
 
 import domain.*;
 import enums.DuckType;
+import event.Event;
+import event.RaceEvent;
 import service.ServiceFlock;
 import service.ServiceUser;
-
+import service.ServiceEvent;
 import java.util.List;
 import java.util.Scanner;
 
 public class Ui {
     private final ServiceUser serviceUser;
     private final ServiceFlock serviceFlock;
+    private final ServiceEvent serviceEvent;
     private final Scanner scanner = new Scanner(System.in);
 
-    public Ui(ServiceUser serviceUser, ServiceFlock serviceFlock) {
+    public Ui(ServiceUser serviceUser, ServiceFlock serviceFlock, ServiceEvent serviceEvent) {
+        this.serviceEvent = serviceEvent;
         this.serviceUser = serviceUser;
         this.serviceFlock = serviceFlock;
     }
 
     public void run() {
+        showMenu();
         while (true) {
-            showMenu();
             System.out.print("Alege o optiune: ");
             String option = scanner.nextLine();
             switch (option) {
@@ -34,6 +38,15 @@ public class Ui {
                 case "8" -> removeFriend();
                 case "9" -> numberOfCommunities();
                 case "10" -> largestCommunity();
+                case "11"-> addEvent();
+                case "12"-> startEvent();
+                case "13"->removeEvent();
+                case "14"->{
+                    List<Event> events=serviceEvent.getAllEvents();
+                    for(Event event:events){
+                        System.out.println(event);
+                    }
+                }
                 case "0" -> {
                     System.out.println("Salut!");
                     return;
@@ -55,6 +68,10 @@ public class Ui {
         System.out.println("8. Sterge prieten");
         System.out.println("9. Numarul de comunitati");
         System.out.println("10. Dimensiunea celei mai mari comunitati");
+        System.out.println("11.Adauga event");
+        System.out.println("12.Porneste event");
+        System.out.println("13.Sterge event");
+        System.out.println("14.Afiseaza toate eventurile");
         System.out.println("0. Iesire");
     }
 
@@ -119,7 +136,7 @@ public class Ui {
     }
 
     private void showAllUsers() {
-        List<User> users = serviceUser.getUsers();
+        List<User> users = serviceUser.getAllUsers();
         for (User user : users) {
             System.out.println(user);
         }
@@ -198,6 +215,55 @@ public class Ui {
             int size = serviceUser.getBiggestCommunitySize();
             System.out.println("Dimensiunea celei mai mari comunitati este: " + size);
         } catch(Exception e){
+            System.out.println("Eroare: " + e.getMessage());
+        }
+    }
+    private void addEvent(){
+        System.out.print("ID Event: ");
+        Long id = Long.parseLong(scanner.nextLine());
+        System.out.print("Tip Event(avem numai RaceEvent momentan): ");
+        String type= scanner.nextLine().trim().toLowerCase();
+        if(type.equals("raceevent")){
+            System.out.print("Numar participanti M: ");
+            int M=Integer.parseInt(scanner.nextLine());
+            Event event=new RaceEvent(id, serviceUser.getAllSwimmingDucks(), M);
+            try {
+                serviceEvent.addEvent(event);
+                System.out.println("Event adaugat cu succes!");
+            } catch (Exception e) {
+                System.out.println("Eroare: " + e.getMessage());
+            }
+        }else{
+            System.out.println("Tip event invalid!");
+        }
+
+    }
+    public void removeEvent(){
+        System.out.print("ID Event de sters: ");
+        Long id = Long.parseLong(scanner.nextLine());
+        try {
+            serviceEvent.removeEvent(id);
+            System.out.println("Event sters cu succes!");
+        } catch (Exception e) {
+            System.out.println("Eroare: " + e.getMessage());
+        }
+    }
+    public void startEvent(){
+        System.out.print("ID Event de pornit: ");
+        Long id = Long.parseLong(scanner.nextLine());
+        try {
+            Event event=serviceEvent.getEventById(id);
+            if(event==null){
+                System.out.println("Eventul cu ID-ul "+id+" nu exista!");
+                return;
+            }
+            if(event instanceof RaceEvent){
+                ((RaceEvent) event).startRace();
+                System.out.println("Event pornit cu succes!");
+            }else{
+                System.out.println("Eventul cu ID-ul "+id+" nu este de tip RaceEvent!");
+            }
+        } catch (Exception e) {
             System.out.println("Eroare: " + e.getMessage());
         }
     }

@@ -5,12 +5,12 @@ import java.util.List;
 
 public class RaceEvent extends Event{
     private final int M;
-    public RaceEvent(List<Duck> ducks,int M) {
-        super();
+    public RaceEvent(Long id,List<Duck> ducks,int M) {
+        super(id);
         this.M=M;
         chooseMembers(ducks);
     }
-    public RaceEvent(int M){super();this.M=M;}
+    public RaceEvent(Long id,int M){super(id);this.M=M;}
     public void startRace(){
         System.out.println("Race Started");
         this.notifySubscribers();

@@ -19,7 +19,7 @@ public class DatabaseUserRepository {
         this.databaseURL = databaseURL;
     }
 
-    public List<User> getUsers() {
+    public List<User> getAllUsers() {
         List<User> result = new ArrayList<>();
 
         try (Connection connection = DriverManager.getConnection(databaseURL)) {
@@ -208,5 +208,14 @@ public class DatabaseUserRepository {
             System.err.println("Error checking friendship existence: " + e.getMessage());
         }
         return false;
+    }
+    public User getUserById(Long userId){
+        List<User> users= getAllUsers();
+        for(User user:users){
+            if(user.getId().equals(userId)){
+                return user;
+            }
+        }
+        return null;
     }
 }
