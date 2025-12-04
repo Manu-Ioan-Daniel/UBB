@@ -218,4 +218,121 @@ public class DatabaseUserRepository {
         }
         return null;
     }
+    public int duckCount(DuckType type){
+        try{
+            Connection connection = DriverManager.getConnection(databaseURL);
+            String sql;
+            if(type!=null) {
+                sql = "SELECT COUNT(*) AS duckCount FROM ducks WHERE duckType=?";
+            }
+            else {
+                sql = "SELECT COUNT(*) AS duckCount FROM ducks";
+            }
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            if(type!=null){
+                stmt.setString(1,type.name());
+            }
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return rs.getInt("duckCount");
+            }
+            return 0;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public List<Duck> getDucksPage(int pageIndex, int pageSize, DuckType type) {
+        List<Duck> ducks = new ArrayList<>();
+        String sql;
+        if (type == null) {
+            sql = "SELECT u.userId, u.username, u.email, u.userPassword, " +
+                    "d.duckType, d.duckSpeed, d.duckRezistance " +
+                    "FROM users u INNER JOIN ducks d ON u.userId = d.userId " +
+                    "ORDER BY u.userId LIMIT ? OFFSET ?";
+        } else {
+            sql = "SELECT u.userId, u.username, u.email, u.userPassword, " +
+                    "d.duckType, d.duckSpeed, d.duckRezistance " +
+                    "FROM users u INNER JOIN ducks d ON u.userId = d.userId " +
+                    "WHERE d.duckType = ? " +
+                    "ORDER BY u.userId LIMIT ? OFFSET ?";
+        }
+
+        try (Connection c = DriverManager.getConnection(databaseURL);
+             PreparedStatement ps = c.prepareStatement(sql)) {
+
+            int paramIndex = 1;
+            if (type != null) {
+                ps.setString(paramIndex++, type.name());
+            }
+
+            ps.setInt(paramIndex++, pageSize);
+            ps.setInt(paramIndex, pageIndex * pageSize);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Duck d = new Duck(
+                        rs.getLong("userId"),
+                        rs.getString("username"),
+                        rs.getString("email"),
+                        rs.getString("userPassword"),
+                        DuckType.valueOf(rs.getString("duckType")),
+                        rs.getDouble("duckSpeed"),
+                        rs.getDouble("duckRezistance")
+                );
+                ducks.add(d);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return ducks;
+    }
+    public int personCount(){
+        try{
+            Connection connection = DriverManager.getConnection(databaseURL);
+            String sql = "SELECT COUNT(*) AS personCount FROM persons";
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return rs.getInt("personCount");
+            }
+            return 0;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    public List<Person> getPersonsPage(int pageIndex, int pageSize) {
+        List<Person> persons = new ArrayList<>();
+        String sql = "SELECT u.userId, u.username, u.email, u.userPassword, " +
+                "p.personName, p.personSurname, p.personOccupation, p.personDateOfBirth, p.personEmpathyScore " +
+                "FROM users u INNER JOIN persons p ON u.userId = p.userId " +
+                "ORDER BY u.userId LIMIT ? OFFSET ?";
+
+        try (Connection c = DriverManager.getConnection(databaseURL);
+             PreparedStatement ps = c.prepareStatement(sql)) {
+
+            ps.setInt(1, pageSize);
+            ps.setInt(2, pageIndex * pageSize);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Person p = new Person(
+                        rs.getLong("userId"),
+                        rs.getString("username"),
+                        rs.getString("email"),
+                        rs.getString("userPassword"),
+                        rs.getString("personName"),
+                        rs.getString("personSurname"),
+                        rs.getString("personOccupation"),
+                        rs.getString("personDateOfBirth"),
+                        rs.getInt("personEmpathyScore")
+                );
+                persons.add(p);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return persons;
+    }
 }
