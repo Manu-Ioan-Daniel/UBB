@@ -1,5 +1,4 @@
 package Ui;
-
 import domain.Duck;
 import domain.Person;
 import enums.DuckType;
