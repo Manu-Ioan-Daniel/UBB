@@ -86,8 +86,4 @@ public class UiJavaFx extends Application implements Observer {
     }
     public static void main(String[] args) {
         launch();
-    }
-    public void setServiceUser(ServiceUser serviceUser) {
-        this.serviceUser = serviceUser;
-    }
-}
+    }}
