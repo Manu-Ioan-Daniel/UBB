@@ -1,0 +1,30 @@
+elimina-din-n-in-n(L)=helper(L,1)
+helper([l1 l2 ... ln],i)=lista vida daca l e vida
+			 helper([l2 l3 ... ln],1) daca i=n
+			 l1 (+) helper([l2 l3 ... ln],i+1) altfel
+
+
+
+vale(L)=helperVale(L,0)
+helperVale([l1 l2 l3 ... ln],state)=true daca state=1 si l este vida sau l=[l1]
+				    false daca state=0 si l este vida sau l=[l1]
+				    helperVale([l2 l3 ... ln],0) daca l1>l2 si state=0
+				    helperVale([l2 l3 ... ln],1) daca l1<l2 si state=0
+				    false,daca l1=l2 si state=0
+				    helperVale([l2 l3 ... ln],1) daca l1<l2 si state=1
+				    false,daca l1>l2 si state=1
+				    
+min-lista(L)=helperMin(L,cel mai mare nr pozitiv)
+helperMin([l1 l2 l3 ... ln],minim)=minim daca l e vida
+				   helperMin([l2 l3 ... ln],helperMin(l1,minim)),daca l1 este lista	
+				   helperMin([l2 l3 ... ln],min(l1,minim)),daca l1 este numar
+				   helperMin([l2 l3 ... ln],minim),altfel
+
+sterge-max(L)=sterge(L,get-max(L,cel mai mic nr))
+get-max([l1 l2 l3 ... ln],max)=max daca l e vida
+			       get-max([l2 l3 ... ln],max),daca l1 nu este numar
+			       get-max([l2 l3 ... ln],l1),daca l1>max
+			       get-max([l2 l3 ... ln],max),altfel
+sterge([l1 l2 ... ln],max)=lista vida daca l e vida
+			   sterge([l2 l3 ... ln],max) daca l1=max
+			   l1 (+) sterge([l2 l3 ... ln],max) altfel
