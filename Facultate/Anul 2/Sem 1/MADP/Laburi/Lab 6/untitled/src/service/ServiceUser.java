@@ -7,6 +7,8 @@ import repo.DatabaseUserRepository;
 import validation.DuckValidationStrategy;
 import validation.PersonValidationStrategy;
 import validation.ValidationStrategy;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -161,8 +163,45 @@ public class ServiceUser extends Observable {
     public List<Person> getPersonsPage(int pageIndex,int pageSize){
         return repo.getPersonsPage(pageIndex,pageSize);
     }
+    public List<User> getBiggestCommunity() {
+        List<User> users = repo.getAllUsers();
+        Map<Long, User> userMap = new HashMap<>();
+        for (User u : users) {
+            userMap.put(u.getId(), u);
+        }
 
+        boolean[] visited = new boolean[users.size()];
+        List<User> biggestCommunity = new ArrayList<>();
 
+        for (int i = 0; i < users.size(); i++) {
+            if (!visited[i]) {
+                List<User> currentCommunity = new ArrayList<>();
+                dfsCollect(users, visited, i, userMap, currentCommunity);
+
+                if (currentCommunity.size() > biggestCommunity.size()) {
+                    biggestCommunity = currentCommunity;
+                }
+            }
+        }
+
+        return biggestCommunity;
+    }
+    private void dfsCollect(List<User> users, boolean[] visited, int index,
+                            Map<Long, User> userMap, List<User> community) {
+        visited[index] = true;
+        User user = users.get(index);
+        community.add(user);
+
+        for (Long friendID : user.getFriends()) {
+            User friend = userMap.get(friendID);
+            if (friend != null) {
+                int friendIndex = users.indexOf(friend);
+                if (!visited[friendIndex]) {
+                    dfsCollect(users, visited, friendIndex, userMap, community);
+                }
+            }
+        }
+    }
 
 
 }

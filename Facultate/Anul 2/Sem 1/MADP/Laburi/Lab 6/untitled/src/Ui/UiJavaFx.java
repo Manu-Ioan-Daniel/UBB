@@ -1,6 +1,7 @@
 package Ui;
 import domain.Duck;
 import domain.Person;
+import domain.User;
 import enums.DuckType;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.geometry.Insets;
@@ -8,6 +9,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import observer.Observer;
@@ -202,35 +204,114 @@ public class UiJavaFx extends Application implements Observer {
     }
 
     private void addUserFx() {
-        try {
-            Long id = Long.parseLong(input("ID:"));
-            String username = input("Username:");
-            String email = input("Email:");
-            String password = input("Parola:");
-            String typeStr = input("Tip utilizator (duck/person):").trim().toLowerCase();
+        Dialog<ButtonType> dialog = new Dialog<>();
+        dialog.setTitle("Adaugă utilizator");
+        dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
+        dialog.getDialogPane().setPrefHeight(500);
+        GridPane grid = new GridPane();
+        grid.setHgap(15);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(10));
+        TextField id = new TextField();
+        TextField username = new TextField();
+        TextField email = new TextField();
+        TextField password = new TextField();
 
-            if (typeStr.equals("duck")) {
-                DuckType dt = DuckType.valueOf(input("Tip rata (FLYING/SWIMMING/FLYING_AND_SWIMMING):").toUpperCase());
-                double speed = Double.parseDouble(input("Viteza:"));
-                double rez = Double.parseDouble(input("Rezistenta:"));
+        ComboBox<String> userType = new ComboBox<>();
+        userType.getItems().addAll("duck", "person");
+        userType.setValue("duck");
+        ComboBox<String> duckType = new ComboBox<>();
+        duckType.getItems().addAll("FLYING", "SWIMMING", "FLYING_AND_SWIMMING");
 
-                Duck d = new Duck(id, username, email, password, dt, speed, rez);
-                serviceUser.addUser(d);
+        TextField speed = new TextField();
+        TextField rez = new TextField();
 
-            } else {
-                String name = input("Nume:");
-                String surname = input("Prenume:");
-                String dob = input("Data nașterii:");
-                String occupation = input("Ocupație:");
-                int empathy = Integer.parseInt(input("Empatie (0-100):"));
+        TextField name = new TextField();
+        TextField surname = new TextField();
+        TextField occupation = new TextField();
+        TextField dob = new TextField();
+        TextField empathy = new TextField();
 
-                Person p = new Person(id, username, email, password, name, surname, occupation, dob, empathy);
-                serviceUser.addUser(p);
+        int r = 0;
+        grid.add(new Label("ID:"), 0, r); grid.add(id, 1, r);
+        grid.add(new Label("Username:"), 2, r); grid.add(username, 3, r); r++;
+
+        grid.add(new Label("Email:"), 0, r); grid.add(email, 1, r);
+        grid.add(new Label("Parola:"), 2, r); grid.add(password, 3, r); r++;
+        grid.add(new Label("Tip utilizator:"), 0, r);
+        grid.add(userType, 1, r);
+        r++;
+
+        VBox duckBox = new VBox(8);
+        duckBox.getChildren().addAll(
+                new Label("DuckType:"), duckType,
+                new Label("Viteză:"), speed,
+                new Label("Rezistență:"), rez
+        );
+        duckBox.setVisible(true);
+        duckBox.setManaged(true);
+        grid.add(duckBox, 0, r, 4, 1);
+        r++;
+
+        VBox personBox = new VBox(8);
+        personBox.getChildren().addAll(
+                new Label("Nume:"), name,
+                new Label("Prenume:"), surname,
+                new Label("Ocupație:"), occupation,
+                new Label("Data nașterii:"), dob,
+                new Label("Empatie:"), empathy
+        );
+        personBox.setVisible(false);
+        personBox.setManaged(false);
+        grid.add(personBox, 0, r, 4, 1);
+
+        userType.setOnAction(e -> {
+            boolean isDuck = userType.getValue() != null && userType.getValue().equals("duck");
+
+            duckBox.setVisible(isDuck);
+            duckBox.setManaged(isDuck);
+
+            personBox.setVisible(!isDuck);
+            personBox.setManaged(!isDuck);
+        });
+
+        dialog.getDialogPane().setContent(grid);
+
+        dialog.showAndWait().ifPresent(bt -> {
+            if (bt == ButtonType.OK) {
+                try {
+                    long idVal = Long.parseLong(id.getText());
+                    String type = userType.getValue();
+                    if (type.equals("duck")) {
+                        Duck d = new Duck(
+                                idVal,
+                                username.getText(),
+                                email.getText(),
+                                password.getText(),
+                                DuckType.valueOf(duckType.getValue()),
+                                Double.parseDouble(speed.getText()),
+                                Double.parseDouble(rez.getText())
+                        );
+                        serviceUser.addUser(d);
+                    } else {
+                        Person p = new Person(
+                                idVal,
+                                username.getText(),
+                                email.getText(),
+                                password.getText(),
+                                name.getText(),
+                                surname.getText(),
+                                occupation.getText(),
+                                dob.getText(),
+                                Integer.parseInt(empathy.getText())
+                        );
+                        serviceUser.addUser(p);
+                    }
+                } catch (Exception e) {
+                    alert("Eroare: " + e.getMessage());
+                }
             }
-
-        } catch (Exception e) {
-            alert("Eroare: " + e.getMessage());
-        }
+        });
     }
 
     private void removeUserFx() {
@@ -243,23 +324,73 @@ public class UiJavaFx extends Application implements Observer {
     }
 
     private void addFriendFx() {
-        try {
-            long id1 = Long.parseLong(input("ID utilizator:"));
-            long id2 = Long.parseLong(input("ID prieten:"));
-            serviceUser.addFriend(id1, id2);
-        } catch (Exception e) {
-            alert("Eroare: " + e.getMessage());
-        }
+        Dialog<ButtonType> dialog = new Dialog<>();
+        dialog.setTitle("Adaugă prietenie");
+        dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
+
+        GridPane grid = new GridPane();
+        grid.setHgap(15);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(10));
+
+        TextField userIdField = new TextField();
+        TextField friendIdField = new TextField();
+
+        grid.add(new Label("ID utilizator:"), 0, 0);
+        grid.add(userIdField, 1, 0);
+        grid.add(new Label("ID prieten:"), 0, 1);
+        grid.add(friendIdField, 1, 1);
+
+        dialog.getDialogPane().setContent(grid);
+
+        dialog.showAndWait().ifPresent(bt -> {
+            if (bt == ButtonType.OK) {
+                try {
+                    long id1 = Long.parseLong(userIdField.getText());
+                    long id2 = Long.parseLong(friendIdField.getText());
+                    serviceUser.addFriend(id1, id2);
+                    serviceUser.addFriend(id2, id1);
+                    alert("Prietenie adaugata!");
+                } catch (Exception e) {
+                    alert("Eroare: " + e.getMessage());
+                }
+            }
+        });
     }
 
     private void removeFriendFx() {
-        try {
-            long id1 = Long.parseLong(input("ID utilizator:"));
-            long id2 = Long.parseLong(input("ID prieten:"));
-            serviceUser.removeFriend(id1, id2);
-        } catch (Exception e) {
-            alert("Eroare: " + e.getMessage());
-        }
+        Dialog<ButtonType> dialog = new Dialog<>();
+        dialog.setTitle("Șterge prietenie");
+        dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
+
+        GridPane grid = new GridPane();
+        grid.setHgap(15);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(10));
+
+        TextField userIdField = new TextField();
+        TextField friendIdField = new TextField();
+
+        grid.add(new Label("ID utilizator:"), 0, 0);
+        grid.add(userIdField, 1, 0);
+        grid.add(new Label("ID prieten:"), 0, 1);
+        grid.add(friendIdField, 1, 1);
+
+        dialog.getDialogPane().setContent(grid);
+
+        dialog.showAndWait().ifPresent(bt -> {
+            if (bt == ButtonType.OK) {
+                try {
+                    long id1 = Long.parseLong(userIdField.getText());
+                    long id2 = Long.parseLong(friendIdField.getText());
+                    serviceUser.removeFriend(id1, id2);
+                    serviceUser.removeFriend(id2, id1);
+                    alert("Prietenie ștearsă!");
+                } catch (Exception e) {
+                    alert("Eroare: " + e.getMessage());
+                }
+            }
+        });
     }
 
     private void showNumberOfCommunitiesFx() {
@@ -273,8 +404,12 @@ public class UiJavaFx extends Application implements Observer {
 
     private void showLargestCommunityFx() {
         try {
-            int size = serviceUser.getBiggestCommunitySize();
-            alert("Cea mai mare comunitate are: " + size + " membri");
+            List<User> community = serviceUser.getBiggestCommunity();
+            StringBuilder users= new StringBuilder();
+            for(User u:community){
+                users.append(u.getId()).append(" ").append(u.getUsername()).append("\n");
+            }
+            alert(users.toString());
         } catch (Exception e) {
             alert("Eroare: " + e.getMessage());
         }
