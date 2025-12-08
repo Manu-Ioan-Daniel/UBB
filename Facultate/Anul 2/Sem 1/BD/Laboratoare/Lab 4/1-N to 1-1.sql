@@ -1,0 +1,29 @@
+USE LostArkDB2
+GO
+
+SELECT 'Continents', Z.ContinentID, 'Zones', Z.ZoneID
+FROM Zones Z
+WHERE Z.ZoneID NOT IN (
+    SELECT MAX(Z2.ZoneID)
+    FROM Zones Z2
+    WHERE Z2.ContinentID = Z.ContinentID
+);
+
+DELETE Z
+FROM Zones Z
+WHERE Z.ZoneID NOT IN (
+    SELECT MAX(Z2.ZoneID)
+    FROM Zones Z2
+    WHERE Z2.ContinentID = Z.ContinentID
+);
+
+
+ALTER TABLE Zones
+DROP CONSTRAINT PK__Zones__6016679536EA995F
+ALTER TABLE Zones
+DROP COLUMN ZoneID
+ALTER TABLE Zones
+ADD CONSTRAINT UQ_ZONES_CONTINENT UNIQUE (ContinentID);
+
+
+

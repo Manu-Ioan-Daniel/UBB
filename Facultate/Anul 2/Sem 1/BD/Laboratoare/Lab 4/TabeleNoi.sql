@@ -1,7 +1,7 @@
 
 USE LostArkDB2
 GO
-
+-- 1:N
 CREATE TABLE Continents(
     ContinentID INT PRIMARY KEY IDENTITY(1,1),
     ContinentName NVARCHAR(50)
