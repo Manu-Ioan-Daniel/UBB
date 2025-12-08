@@ -257,6 +257,8 @@ public class DatabaseUserRepository {
                     "ORDER BY u.userId LIMIT ? OFFSET ?";
         }
 
+        Map<Long, Duck> duckMap = new HashMap<>();
+
         try (Connection c = DriverManager.getConnection(databaseURL);
              PreparedStatement ps = c.prepareStatement(sql)) {
 
@@ -279,7 +281,32 @@ public class DatabaseUserRepository {
                         rs.getDouble("duckRezistance")
                 );
                 ducks.add(d);
+                duckMap.put(d.getId(), d);
             }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        //adaugare prieteni
+        try (Connection c = DriverManager.getConnection(databaseURL);
+             PreparedStatement ps = c.prepareStatement(
+                     "SELECT userId, friendId FROM userfriends WHERE userId IN (" +
+                             String.join(",", duckMap.keySet().stream().map(id -> "?").toList()) +
+                             ")")) {
+
+            int index = 1;
+            for (Long id : duckMap.keySet()) {
+                ps.setLong(index++, id);
+            }
+
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                long userId = rs.getLong("userId");
+                long friendId = rs.getLong("friendId");
+                Duck d = duckMap.get(userId);
+                if (d != null) d.addFriend(friendId);
+            }
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -309,6 +336,8 @@ public class DatabaseUserRepository {
                 "FROM users u INNER JOIN persons p ON u.userId = p.userId " +
                 "ORDER BY u.userId LIMIT ? OFFSET ?";
 
+        Map<Long, Person> personMap = new HashMap<>();
+
         try (Connection c = DriverManager.getConnection(databaseURL);
              PreparedStatement ps = c.prepareStatement(sql)) {
 
@@ -328,7 +357,32 @@ public class DatabaseUserRepository {
                         rs.getInt("personEmpathyScore")
                 );
                 persons.add(p);
+                personMap.put(p.getId(), p);
             }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        //adaugare prieteni
+        try (Connection c = DriverManager.getConnection(databaseURL);
+             PreparedStatement ps = c.prepareStatement(
+                     "SELECT userId, friendId FROM userfriends WHERE userId IN (" +
+                             String.join(",", personMap.keySet().stream().map(id -> "?").toList()) +
+                             ")")) {
+
+            int index = 1;
+            for (Long id : personMap.keySet()) {
+                ps.setLong(index++, id);
+            }
+
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                long userId = rs.getLong("userId");
+                long friendId = rs.getLong("friendId");
+                Person p = personMap.get(userId);
+                if (p != null) p.addFriend(friendId);
+            }
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
