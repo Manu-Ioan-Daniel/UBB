@@ -1,0 +1,210 @@
+{
+  "main": {
+    "id": "4058a80b2e7a6e6a",
+    "type": "split",
+    "children": [
+      {
+        "id": "9b5c9281d70a6587",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "857bcb0335960e5e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Teoria Probabilitatilor/Algoritmi Aleatori/Definitie.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Definitie"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c56adce71bdef699",
+    "type": "split",
+    "children": [
+      {
+        "id": "dca3c9a3e433bade",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7fd4f729ebcb6a5a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a7e791d44f91a9f8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "71cd67a33d5aaec4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b756810172b59f73",
+    "type": "split",
+    "children": [
+      {
+        "id": "06538260a1709876",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "44d9b1a501fca2ab",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Teoria Probabilitatilor/Algoritmi Aleatori/Definitie.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Definitie"
+            }
+          },
+          {
+            "id": "de9c17bf2987f767",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Teoria Probabilitatilor/Algoritmi Aleatori/Definitie.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Definitie"
+            }
+          },
+          {
+            "id": "fbaaae4816b9b4f6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "db908d01dd8a643c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "edab70dbb5089661",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Teoria Probabilitatilor/Algoritmi Aleatori/Definitie.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Definitie"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "857bcb0335960e5e",
+  "lastOpenFiles": [
+    "Teoria Probabilitatilor/Algoritmi Aleatori/Tipuri/Algoritm de tip Monte Carlo.md",
+    "Teoria Probabilitatilor/Algoritmi Aleatori/Tipuri/Algoritm de tip Las Vegas.md",
+    "Untitled.base",
+    "Teoria Probabilitatilor/Algoritmi Aleatori/Definitie.md",
+    "Teoria Probabilitatilor/Algoritmi Aleatori/Tipuri",
+    "Exemple/Python/Generarea de valori aleatoare.md",
+    "Exercitii",
+    "Exemple/Python",
+    "Generare de valori aleatoare in python/Untitled.md",
+    "Formule",
+    "Teoria Probabilitatilor/Algoritmi Aleatori",
+    "Exemple",
+    "Teoria Probabilitatilor",
+    "Untitled.canvas",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
+    "2025-12-09.md",
+    "Algoritmi aleatori/Untitled.md",
+    "Generare de valori aleatoare in python",
+    "Welcome.md",
+    "Algoritmi aleatori"
+  ]
+}
