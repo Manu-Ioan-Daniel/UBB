@@ -1,0 +1,1 @@
+- **Experienta aleatoare** este acea experienta al carei rezultat nu poate fi cunoscut decat dupa incheierea ei
