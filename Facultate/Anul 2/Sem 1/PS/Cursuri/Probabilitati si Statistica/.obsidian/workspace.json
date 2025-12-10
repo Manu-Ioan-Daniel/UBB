@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teoria Probabilitatilor/Algoritmi Aleatori.md",
+                "file": "Teoria Probabilitatilor/1.Algoritmi Aleatori.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algoritmi Aleatori"
+              "title": "1.Algoritmi Aleatori"
+            }
+          },
+          {
+            "id": "d532a47a22bf2d94",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Teoria Probabilitatilor/2.Notiuni introductive.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2.Notiuni introductive"
             }
           }
         ]
@@ -94,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Teoria Probabilitatilor/Algoritmi Aleatori.md",
+                "file": "Teoria Probabilitatilor/1.Algoritmi Aleatori.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Algoritmi Aleatori"
+              "title": "Backlinks for 1.Algoritmi Aleatori"
             }
           },
           {
@@ -113,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Teoria Probabilitatilor/Algoritmi Aleatori.md",
+                "file": "Teoria Probabilitatilor/1.Algoritmi Aleatori.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Algoritmi Aleatori"
+              "title": "Outgoing links from 1.Algoritmi Aleatori"
             }
           },
           {
@@ -156,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Teoria Probabilitatilor/Algoritmi Aleatori.md",
+                "file": "Teoria Probabilitatilor/1.Algoritmi Aleatori.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Algoritmi Aleatori"
+              "title": "Outline of 1.Algoritmi Aleatori"
             }
           }
         ]
@@ -180,13 +194,22 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "custom-sort:Toggle custom sorting": false
     }
   },
   "active": "857bcb0335960e5e",
   "lastOpenFiles": [
-    "Teoria Probabilitatilor/Notiuni introductive.md",
-    "Teoria Probabilitatilor/Algoritmi Aleatori.md",
+    "Teoria Probabilitatilor/3.Definitia axiomatica a probabilitatilor.md",
+    "Exercitii/Exercitii.md",
+    "Teoria Probabilitatilor/2.Notiuni introductive.md",
+    "Teoria Probabilitatilor/1.Algoritmi Aleatori.md",
+    "Formule/Formule.md",
+    "Images",
+    "Images/Pasted image 20251210011203.png",
+    "Images/Pasted image 20251210005347.png",
+    "Exemple/Matematice/Exemple.md",
+    "Exemple/Matematice",
     "Teoria Probabilitatilor/Algoritmi Aleatori/Definitie.md",
     "Untitled.base",
     "Teoria Probabilitatilor/Algoritmi Aleatori/Tipuri/Algoritm de tip Monte Carlo.md",
@@ -205,8 +228,6 @@
     "Untitled 1.canvas",
     "2025-12-09.md",
     "Algoritmi aleatori/Untitled.md",
-    "Generare de valori aleatoare in python",
-    "Welcome.md",
-    "Algoritmi aleatori"
+    "Welcome.md"
   ]
 }
