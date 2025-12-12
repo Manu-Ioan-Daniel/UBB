@@ -3,48 +3,7 @@
     {
       "type": "group",
       "ctime": 1765320614714,
-      "items": [
-        {
-          "type": "group",
-          "ctime": 1765320689726,
-          "items": [
-            {
-              "type": "group",
-              "ctime": 1765320614715,
-              "items": [
-                {
-                  "type": "group",
-                  "ctime": 1765320689726,
-                  "items": [],
-                  "title": "Exercitii"
-                }
-              ],
-              "title": "Teoria Probabilitatilor"
-            }
-          ],
-          "title": "\\\\Exemple"
-        },
-        {
-          "type": "group",
-          "ctime": 1765320689726,
-          "items": [
-            {
-              "type": "group",
-              "ctime": 1765320614715,
-              "items": [
-                {
-                  "type": "group",
-                  "ctime": 1765320689726,
-                  "items": [],
-                  "title": "Exercitii"
-                }
-              ],
-              "title": "Teoria Probabilitatilor"
-            }
-          ],
-          "title": "\\\\Exemple"
-        }
-      ],
+      "items": [],
       "title": "sortspec"
     }
   ]
