@@ -46,5 +46,7 @@
 28. $\displaystyle P(\mathbb X = \mathbb x_k) := P \left( \{\omega \in \Omega : \mathbb X(\omega) = \mathbb x_k\} \right), \quad k \in K$ - [[9.Variabile aleatoare independente#**Definitie vector aleator discret**|de aici]]
 29. $\displaystyle \mathbb X \sim \begin{pmatrix} \mathbb x_k \\ P(X = \mathbb x_k) \end{pmatrix}_{k \in K}$ - [[9.Variabile aleatoare independente#**Definitie vector aleator discret**|de aici]]
 30. $P(X = x_i) = \sum_{j \in J} p_{ij} \quad \forall i \in I, \quad P(Y = y_j ) = \sum_{i \in I} p_{ij} \quad \forall j \in J$ - [[9.Variabile aleatoare independente#Observatie 2|de aici]]
-31. 
+31. $P(A \cap B|C) = P(A|C)P(B|C)$ trebe conditional independenta - [[13.Clasificarea naiva Bayes#Definitie conditional independenta|de aici]] 
+32. $P(X = x, Y = y|Z = z) = P(X = x|Z = z)P(Y = y|Z = z)$ - [[13.Clasificarea naiva Bayes#Definitie conditional independenta variabile aleatoare|de aici]]
+33. 
 
