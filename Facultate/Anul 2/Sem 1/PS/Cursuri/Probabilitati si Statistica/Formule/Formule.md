@@ -43,4 +43,8 @@
 25. $P(X_1 = k_1, \dots, X_r = k_r) \displaystyle= \frac{n!}{k_1! \dots k_r!} \cdot p_1^{k_1} \cdot \dots \cdot p_r^{k_r}$ - [[8.Distributia de probabilitate#Distributia multinomiala|de aici]]
 26. $\displaystyle P(X_1 = k_1, \dots, X_r = k_r) = \frac{C_{n_1}^{k_1} \cdot \dots \cdot C_{n_r}^{k_r}}{C_{n_1+\dots+n_r}^{n}}$ - [[8.Distributia de probabilitate#Distributia hipergeometrica multidimensionala|de aici]]
 27. $P(X = k) = p(1 - p)^{k} \quad \text{pentru } k \in \{0, 1, 2, \dots \}$ - [[8.Distributia de probabilitate#Distributia geometrica $X sim Geo(p)$, $p in (0, 1)$|de aici]]
-28. 
+28. $\displaystyle P(\mathbb X = \mathbb x_k) := P \left( \{\omega \in \Omega : \mathbb X(\omega) = \mathbb x_k\} \right), \quad k \in K$ - [[9.Variabile aleatoare independente#**Definitie vector aleator discret**|de aici]]
+29. $\displaystyle \mathbb X \sim \begin{pmatrix} \mathbb x_k \\ P(X = \mathbb x_k) \end{pmatrix}_{k \in K}$ - [[9.Variabile aleatoare independente#**Definitie vector aleator discret**|de aici]]
+30. $P(X = x_i) = \sum_{j \in J} p_{ij} \quad \forall i \in I, \quad P(Y = y_j ) = \sum_{i \in I} p_{ij} \quad \forall j \in J$ - [[9.Variabile aleatoare independente#Observatie 2|de aici]]
+31. 
+

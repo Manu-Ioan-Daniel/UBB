@@ -11,6 +11,7 @@ public abstract class User implements Observer {
     private final String email;
     private final String password;
     private final List<Long> friends;
+    private boolean loggedIn;
     public User(Long id, String username, String email, String password) {
         this.id = id;
         this.username = username;
@@ -38,6 +39,13 @@ public abstract class User implements Observer {
     }
     public String getPassword() {
         return password;
+    }
+    public boolean isLoggedIn() {
+        return loggedIn;
+    }
+    public boolean setLoggedIn(boolean loggedIn) {
+        this.loggedIn = loggedIn;
+        return this.loggedIn;
     }
     public void login(){
         return;
