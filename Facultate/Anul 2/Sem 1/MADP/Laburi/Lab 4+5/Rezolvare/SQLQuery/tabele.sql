@@ -50,3 +50,17 @@ CREATE TABLE raceEvents(
 	eventId BIGINT PRIMARY KEY REFERENCES events(eventId) ON DELETE CASCADE,
 	M BIGINT NOT NULL
 );
+CREATE TABLE messages (
+    id BIGSERIAL PRIMARY KEY,
+    from_id BIGINT NOT NULL REFERENCES users(userid),
+    message TEXT NOT NULL,
+    date TIMESTAMP NOT NULL,
+    reply_to BIGINT REFERENCES messages(id)
+);
+
+CREATE TABLE message_recipients (
+    message_id BIGINT NOT NULL REFERENCES messages(id) ON DELETE CASCADE,
+    user_id BIGINT NOT NULL REFERENCES users(userid),
+    PRIMARY KEY(message_id, user_id)
+);
+
