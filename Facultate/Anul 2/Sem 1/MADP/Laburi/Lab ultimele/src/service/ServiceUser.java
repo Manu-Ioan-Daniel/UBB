@@ -159,19 +159,6 @@ public class ServiceUser extends Observable {
 
     // ------------------ Ducks ------------------
 
-    public List<Duck> getDucks() {
-        return getAllUsers().stream()
-                .filter(user -> user instanceof Duck)
-                .map(user -> (Duck) user)
-                .collect(Collectors.toList());
-    }
-
-    public List<Duck> getDucksByType(DuckType type) {
-        if (type == null) return getDucks();
-        return getDucks().stream()
-                .filter(duck -> duck.getType().equals(type))
-                .collect(Collectors.toList());
-    }
 
     public List<Duck> getDucksPage(int pageIndex, int pageSize, DuckType type) {
         return repo.getDucksPage(pageIndex, pageSize, type);
@@ -182,13 +169,6 @@ public class ServiceUser extends Observable {
     }
 
     // ------------------ Persons ------------------
-
-    public List<Person> getAllPersons() {
-        return getAllUsers().stream()
-                .filter(user -> user instanceof Person)
-                .map(user -> (Person) user)
-                .collect(Collectors.toList());
-    }
 
     public List<Person> getPersonsPage(int pageIndex, int pageSize) {
         return repo.getPersonsPage(pageIndex, pageSize);

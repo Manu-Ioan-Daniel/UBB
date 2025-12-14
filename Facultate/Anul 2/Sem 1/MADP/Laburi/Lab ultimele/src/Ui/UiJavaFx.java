@@ -16,6 +16,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import observer.Observer;
+import service.ServiceMessage;
 import service.ServiceUser;
 import java.util.Arrays;
 import java.util.List;
@@ -27,6 +28,7 @@ public class UiJavaFx  implements Observer {
     private static final int PERSONS_PER_PAGE = 1;
 
     private final ServiceUser serviceUser;
+    private final ServiceMessage serviceMessage;
 
     private TableView<Duck> tableDucks;
     private TableView<Person> tablePersons;
@@ -36,10 +38,11 @@ public class UiJavaFx  implements Observer {
 
     private ComboBox<String> filterBox;
 
-    public UiJavaFx(ServiceUser service,User currentUser){
+    public UiJavaFx(ServiceUser service, User currentUser, ServiceMessage serviceMessage){
         this.serviceUser=service;
         this.currentUser=currentUser;
         this.serviceUser.addObserver(this);
+        this.serviceMessage=serviceMessage;
     }
     public void show(Stage stage) {
         BorderPane root = new BorderPane();
@@ -52,6 +55,7 @@ public class UiJavaFx  implements Observer {
         stage.setScene(scene);
         stage.setTitle("All Ducks Table");
         stage.show();
+
     }
 
     /* ---------------------- INITIALIZATION ---------------------- */
@@ -223,10 +227,24 @@ public class UiJavaFx  implements Observer {
         Button largestBtn = new Button("Cea mai mare comunitate");
         largestBtn.setOnAction(e -> showLargestCommunityFx());
 
+        Button chatBtn = new Button("Chat");
+        chatBtn.setOnAction(e -> {
+            ChatWindow window = new ChatWindow(serviceUser, serviceMessage, currentUser.getId());
+            window.show();
+        });
+
+        Button logoutBtn = new Button("Logout");
+        logoutBtn.setOnAction(e -> {
+                    Stage stage = (Stage) logoutBtn.getScene().getWindow();
+                    stage.close();
+                    LoginWindow loginWindow = new LoginWindow(serviceUser, serviceMessage);
+                    loginWindow.start(new Stage());
+        });
         HBox h = new HBox(10,
                 addUserBtn, removeUserBtn,
                 addFriendBtn, removeFriendBtn,
-                communitiesBtn, largestBtn
+                communitiesBtn, largestBtn,
+                chatBtn, logoutBtn
         );
         h.setPadding(new Insets(10));
         h.setAlignment(Pos.CENTER);

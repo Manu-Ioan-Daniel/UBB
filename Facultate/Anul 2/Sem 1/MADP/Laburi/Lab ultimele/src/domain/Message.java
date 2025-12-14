@@ -5,33 +5,29 @@ import java.util.List;
 
 public class Message {
     private Long id;
-    private final User from;
-    private List<User> to;
+    private final Long fromId;
+    private final List<Long> toIds;
     private String message;
     private final LocalDateTime date;
-    Message(Long id, User from, List<User> to, String message, LocalDateTime date){
-        this.id=id;
-        this.from=from;
-        this.to=to;
-        this.message=message;
-        this.date=date;
-    }
-    Message(User from, List<User> to, String message, LocalDateTime date) {
-        this.from = from;
-        this.to = to;
+
+    public Message(Long id, Long fromId, List<Long> toIds, String message, LocalDateTime date){
+        this.id = id;
+        this.fromId = fromId;
+        this.toIds = toIds;
         this.message = message;
         this.date = date;
     }
-    public Long getId() {
-        return id;
+
+    public Message(Long fromId, List<Long> toIds, String message, LocalDateTime date) {
+        this.fromId = fromId;
+        this.toIds = toIds;
+        this.message = message;
+        this.date = date;
     }
-    public User getFrom() {
-        return from;
-    }
-    public List<User> getTo() {
-        return to;
-    }
-    public String getMessage() {
-        return message;
-    }
+
+    public Long getId() { return id; }
+    public Long getFromId() { return fromId; }
+    public List<Long> getToIds() { return toIds; }
+    public String getMessage() { return message; }
+    public LocalDateTime getDate() { return date; }
 }

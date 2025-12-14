@@ -4,17 +4,19 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import main.Main;
+import service.ServiceMessage;
 import service.ServiceUser;
-import utils.UserLogins;
 
 
 public class LoginWindow{
-    private static ServiceUser serviceUser;
+    private final ServiceUser serviceUser;
+    private final ServiceMessage serviceMessage;
+    public LoginWindow(ServiceUser serviceUser, ServiceMessage serviceMessage) {
+        this.serviceUser = serviceUser;
+        this.serviceMessage = serviceMessage;
+    }
     public void start(Stage stage) {
         stage.setTitle("Login");
-        init();
-
         GridPane grid = new GridPane();
         grid.setPadding(new Insets(20));
         grid.setVgap(10);
@@ -31,9 +33,7 @@ public class LoginWindow{
         grid.add(passwordField, 1, 1);
 
         Button loginButton = new Button("Login");
-        Label messageLabel = new Label();
         grid.add(loginButton, 1, 2);
-        grid.add(messageLabel, 1, 3);
 
         loginButton.setOnAction(e -> {
             String username = usernameField.getText();
@@ -42,33 +42,17 @@ public class LoginWindow{
             try {
                 boolean success = login(username, password);
                 if (success) {
-                    if(UserLogins.getLoggedInUsers().contains(username)) {
-                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                        alert.setTitle("Login Info");
-                        alert.setHeaderText(null);
-                        alert.setContentText("User " + username + " is already logged in.");
-                        alert.showAndWait();
-                        return;
-                    }
-
-                    UserLogins.getLoggedInUsers().add(username);
-
-                    UiJavaFx mainUI = new UiJavaFx(serviceUser, serviceUser.getUserByUsername(username));
+                    showAlert(Alert.AlertType.INFORMATION, "Login Successful", "Welcome, " + username + "!");
+                    stage.close();
+                    UiJavaFx mainUI = new UiJavaFx(serviceUser, serviceUser.getUserByUsername(username),serviceMessage);
                     Stage mainStage = new Stage();
                     mainUI.show(mainStage);
-                    mainStage.setOnCloseRequest(ev -> {
-                        UserLogins.getLoggedInUsers().remove(username);
-                    });
-
-                    usernameField.clear();
-                    passwordField.clear();
-                    messageLabel.setText("Login successful! New window opened.");
 
                 } else {
-                    messageLabel.setText("Invalid username or password.");
+                    showAlert(Alert.AlertType.ERROR, "Login Failed", "Invalid username or password.");
                 }
             } catch (Exception ex) {
-                messageLabel.setText("Error: " + ex.getMessage());
+                showAlert(Alert.AlertType.ERROR, "Login Failed", ex.getMessage());
             }
         });
 
@@ -76,10 +60,14 @@ public class LoginWindow{
         stage.setScene(scene);
         stage.show();
     }
-    public void init() {
-        serviceUser = Main.getService();
-    }
     private boolean login(String username, String password) {
         return serviceUser.authenticateUser(username, password);
+    }
+    private void showAlert(Alert.AlertType type, String title, String message) {
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }

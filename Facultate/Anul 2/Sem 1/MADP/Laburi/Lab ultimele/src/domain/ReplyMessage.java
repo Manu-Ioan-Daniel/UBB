@@ -4,16 +4,17 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class ReplyMessage extends Message {
-    private final Message replyTo;
-    public ReplyMessage(Long id, User from, List<User> to, String message, LocalDateTime date, Message replyTo) {
-        super(id, from, to, message, date);
-        this.replyTo=replyTo;
+    private final Long replyToId;
+
+    public ReplyMessage(Long id, Long fromId, List<Long> toIds, String message, LocalDateTime date, Long replyToId) {
+        super(id, fromId, toIds, message, date);
+        this.replyToId = replyToId;
     }
-    public ReplyMessage(User from, List<User> to, String message, LocalDateTime date, Message replyTo) {
-        super(from, to, message, date);
-        this.replyTo=replyTo;
+
+    public ReplyMessage(Long fromId, List<Long> toIds, String message, LocalDateTime date, Long replyToId) {
+        super(fromId, toIds, message, date);
+        this.replyToId = replyToId;
     }
-    public Message getReplyTo() {
-        return replyTo;
-    }
+
+    public Long getReplyToId() { return replyToId; }
 }

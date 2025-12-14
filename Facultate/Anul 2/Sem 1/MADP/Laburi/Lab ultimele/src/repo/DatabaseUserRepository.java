@@ -13,19 +13,23 @@ import java.util.*;
 public class DatabaseUserRepository {
 
     private final String databaseURL;
+    private final Connection connection;
 
     public DatabaseUserRepository(String databaseURL) {
         this.databaseURL = databaseURL;
+        try {
+            this.connection = DriverManager.getConnection(databaseURL);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     // ------------------ Users ------------------
 
     public List<User> getAllUsers() {
         List<User> result = new ArrayList<>();
-
-        try (Connection connection = DriverManager.getConnection(databaseURL)) {
-
-
+        try {
+            // Fetch Ducks
             String sqlDucks = """
                     SELECT u.userId, u.username, u.email, u.userPassword, 
                            d.duckType, d.duckSpeed, d.duckRezistance
@@ -34,7 +38,6 @@ public class DatabaseUserRepository {
                     """;
             PreparedStatement stmtDucks = connection.prepareStatement(sqlDucks);
             ResultSet rsDucks = stmtDucks.executeQuery();
-
             while (rsDucks.next()) {
                 Duck duck = new Duck(
                         rsDucks.getLong("userId"),
@@ -47,8 +50,10 @@ public class DatabaseUserRepository {
                 );
                 result.add(duck);
             }
+            rsDucks.close();
+            stmtDucks.close();
 
-
+            // Fetch Persons
             String sqlPersons = """
                     SELECT u.userId, u.username, u.email, u.userPassword, 
                            p.personName, p.personSurname, p.personOccupation, 
@@ -58,7 +63,6 @@ public class DatabaseUserRepository {
                     """;
             PreparedStatement stmtPersons = connection.prepareStatement(sqlPersons);
             ResultSet rsPersons = stmtPersons.executeQuery();
-
             while (rsPersons.next()) {
                 Person person = new Person(
                         rsPersons.getLong("userId"),
@@ -73,21 +77,25 @@ public class DatabaseUserRepository {
                 );
                 result.add(person);
             }
+            rsPersons.close();
+            stmtPersons.close();
 
-
+            // Fetch Friends
             Statement stmtFriends = connection.createStatement();
             ResultSet rsFriends = stmtFriends.executeQuery("SELECT * FROM userfriends");
 
             Map<Long, User> userMap = new HashMap<>();
-            for (User u : result) {
-                userMap.put(u.getId(), u);
-            }
+            for (User u : result) userMap.put(u.getId(), u);
+
             while (rsFriends.next()) {
                 long userId = rsFriends.getLong("userId");
                 long friendId = rsFriends.getLong("friendId");
                 User u = userMap.get(userId);
                 if (u != null) u.addFriend(friendId);
             }
+
+            rsFriends.close();
+            stmtFriends.close();
 
         } catch (SQLException e) {
             System.err.println("Error fetching users: " + e.getMessage());
@@ -104,9 +112,8 @@ public class DatabaseUserRepository {
             throw new RepoError("User with email: " + user.getEmail() + " already exists.");
         }
 
-        try (Connection connection = DriverManager.getConnection(databaseURL)) {
-
-            // Insert into users table
+        try {
+            // Insert user
             String sqlUser = "INSERT INTO users (username, email, userPassword) VALUES (?, ?, ?)";
             PreparedStatement stmtUser = connection.prepareStatement(sqlUser, Statement.RETURN_GENERATED_KEYS);
             stmtUser.setString(1, user.getUsername());
@@ -121,8 +128,10 @@ public class DatabaseUserRepository {
             } else {
                 throw new SQLException("No ID generated for user");
             }
+            generatedKeys.close();
+            stmtUser.close();
 
-            // Insert into specific table
+            // Insert specific table
             if (user instanceof Duck duck) {
                 String sqlDuck = "INSERT INTO ducks (userId, duckType, duckSpeed, duckRezistance) VALUES (?, ?, ?, ?)";
                 PreparedStatement stmtDuck = connection.prepareStatement(sqlDuck);
@@ -131,6 +140,7 @@ public class DatabaseUserRepository {
                 stmtDuck.setDouble(3, duck.getSpeed());
                 stmtDuck.setDouble(4, duck.getRezistance());
                 stmtDuck.executeUpdate();
+                stmtDuck.close();
             } else if (user instanceof Person person) {
                 String sqlPerson = """
                         INSERT INTO persons (userId, personName, personSurname, personOccupation, 
@@ -145,6 +155,7 @@ public class DatabaseUserRepository {
                 stmtPerson.setString(5, person.getDateOfBirth());
                 stmtPerson.setInt(6, person.getEmpathyScore());
                 stmtPerson.executeUpdate();
+                stmtPerson.close();
             }
 
         } catch (SQLException e) {
@@ -156,33 +167,42 @@ public class DatabaseUserRepository {
         if (!usernameExists(username)) {
             throw new RepoError("User with username " + username + " does not exist.");
         }
-        try (Connection connection = DriverManager.getConnection(databaseURL)) {
+        try {
             String sql = "DELETE FROM users WHERE username = ?";
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, username);
             stmt.executeUpdate();
+            stmt.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
     private boolean usernameExists(String username) {
-        try (Connection connection = DriverManager.getConnection(databaseURL)) {
+        try {
             String sql = "SELECT 1 FROM users WHERE username = ?";
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, username);
-            return stmt.executeQuery().next();
+            ResultSet rs = stmt.executeQuery();
+            boolean exists = rs.next();
+            rs.close();
+            stmt.close();
+            return exists;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
     private boolean emailExists(String email) {
-        try (Connection connection = DriverManager.getConnection(databaseURL)) {
+        try {
             String sql = "SELECT 1 FROM users WHERE email = ?";
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, email);
-            return stmt.executeQuery().next();
+            ResultSet rs = stmt.executeQuery();
+            boolean exists = rs.next();
+            rs.close();
+            stmt.close();
+            return exists;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -194,12 +214,13 @@ public class DatabaseUserRepository {
         if (friendExists(username, friendUsername)) {
             throw new RepoError("Friendship already exists between " + username + " and " + friendUsername);
         }
-        try (Connection connection = DriverManager.getConnection(databaseURL)) {
+        try {
             String sql = "INSERT INTO userfriends (userId, friendId) VALUES (?, ?)";
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setLong(1, getUserId(username));
             stmt.setLong(2, getUserId(friendUsername));
             stmt.executeUpdate();
+            stmt.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -209,19 +230,20 @@ public class DatabaseUserRepository {
         if (!friendExists(username, friendUsername)) {
             throw new RepoError("Friendship does not exist between " + username + " and " + friendUsername);
         }
-        try (Connection connection = DriverManager.getConnection(databaseURL)) {
+        try {
             String sql = "DELETE FROM userfriends WHERE userId = ? AND friendId = ?";
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setLong(1, getUserId(username));
             stmt.setLong(2, getUserId(friendUsername));
             stmt.executeUpdate();
+            stmt.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
     private boolean friendExists(String username1, String username2) {
-        try (Connection connection = DriverManager.getConnection(databaseURL)) {
+        try {
             String sql = """
                     SELECT 1 FROM userfriends uf
                     JOIN users u1 ON uf.userId = u1.userId
@@ -231,35 +253,45 @@ public class DatabaseUserRepository {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, username1);
             stmt.setString(2, username2);
-            return stmt.executeQuery().next();
+            ResultSet rs = stmt.executeQuery();
+            boolean exists = rs.next();
+            rs.close();
+            stmt.close();
+            return exists;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
     public Long getUserId(String username) {
-        try (Connection connection = DriverManager.getConnection(databaseURL)) {
+        try {
             String sql = "SELECT userId FROM users WHERE username = ?";
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, username);
             ResultSet rs = stmt.executeQuery();
-            return rs.next() ? rs.getLong("userId") : null;
+            Long id = rs.next() ? rs.getLong("userId") : null;
+            rs.close();
+            stmt.close();
+            return id;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
-    // ------------------ Duck Pagination Functions ------------------
+    // ------------------ Duck Pagination ------------------
 
     public int duckCount(DuckType type) {
-        try (Connection connection = DriverManager.getConnection(databaseURL)) {
+        try {
             String sql = (type != null)
                     ? "SELECT COUNT(*) AS duckCount FROM ducks WHERE duckType=?"
                     : "SELECT COUNT(*) AS duckCount FROM ducks";
             PreparedStatement stmt = connection.prepareStatement(sql);
             if (type != null) stmt.setString(1, type.name());
             ResultSet rs = stmt.executeQuery();
-            return rs.next() ? rs.getInt("duckCount") : 0;
+            int count = rs.next() ? rs.getInt("duckCount") : 0;
+            rs.close();
+            stmt.close();
+            return count;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -284,17 +316,15 @@ public class DatabaseUserRepository {
                 LIMIT ? OFFSET ?
                 """;
 
-        Map<Long, Duck> duckMap = new HashMap<>();
-
-        try (Connection c = DriverManager.getConnection(databaseURL);
-             PreparedStatement ps = c.prepareStatement(sql)) {
-
+        try {
+            PreparedStatement ps = connection.prepareStatement(sql);
             int paramIndex = 1;
             if (type != null) ps.setString(paramIndex++, type.name());
             ps.setInt(paramIndex++, pageSize);
             ps.setInt(paramIndex, pageIndex * pageSize);
 
             ResultSet rs = ps.executeQuery();
+            Map<Long, Duck> duckMap = new HashMap<>();
             while (rs.next()) {
                 Duck d = new Duck(
                         rs.getLong("userId"),
@@ -308,27 +338,29 @@ public class DatabaseUserRepository {
                 ducks.add(d);
                 duckMap.put(d.getId(), d);
             }
+            rs.close();
+            ps.close();
+
+            if (!duckMap.isEmpty()) addFriendsToUsers(duckMap);
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        // Add friends
-        if (!duckMap.isEmpty()) {
-            addFriendsToUsers(duckMap);
-        }
-
         return ducks;
     }
 
-    // ------------------ Person Pagination Functions ------------------
+    // ------------------ Person Pagination ------------------
 
     public int personCount() {
-        try (Connection connection = DriverManager.getConnection(databaseURL)) {
+        try {
             String sql = "SELECT COUNT(*) AS personCount FROM persons";
             PreparedStatement stmt = connection.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
-            return rs.next() ? rs.getInt("personCount") : 0;
+            int count = rs.next() ? rs.getInt("personCount") : 0;
+            rs.close();
+            stmt.close();
+            return count;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -346,15 +378,13 @@ public class DatabaseUserRepository {
                 LIMIT ? OFFSET ?
                 """;
 
-        Map<Long, Person> personMap = new HashMap<>();
-
-        try (Connection c = DriverManager.getConnection(databaseURL);
-             PreparedStatement ps = c.prepareStatement(sql)) {
-
+        try {
+            PreparedStatement ps = connection.prepareStatement(sql);
             ps.setInt(1, pageSize);
             ps.setInt(2, pageIndex * pageSize);
-
             ResultSet rs = ps.executeQuery();
+            Map<Long, Person> personMap = new HashMap<>();
+
             while (rs.next()) {
                 Person p = new Person(
                         rs.getLong("userId"),
@@ -370,33 +400,29 @@ public class DatabaseUserRepository {
                 persons.add(p);
                 personMap.put(p.getId(), p);
             }
+            rs.close();
+            ps.close();
+
+            if (!personMap.isEmpty()) addFriendsToUsers(personMap);
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        if (!personMap.isEmpty()) {
-            addFriendsToUsers(personMap);
-        }
-
         return persons;
     }
 
-
+    // ------------------ Helpers ------------------
 
     private <T extends User> void addFriendsToUsers(Map<Long, T> usersMap) {
-        try (Connection c = DriverManager.getConnection(databaseURL)) {
-            if (usersMap.isEmpty()) return;
-
+        if (usersMap.isEmpty()) return;
+        try {
             String sql = "SELECT userId, friendId FROM userfriends WHERE userId IN (" +
                     String.join(",", usersMap.keySet().stream().map(id -> "?").toList()) +
                     ")";
-            PreparedStatement ps = c.prepareStatement(sql);
-
+            PreparedStatement ps = connection.prepareStatement(sql);
             int index = 1;
-            for (Long id : usersMap.keySet()) {
-                ps.setLong(index++, id);
-            }
+            for (Long id : usersMap.keySet()) ps.setLong(index++, id);
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
@@ -405,98 +431,74 @@ public class DatabaseUserRepository {
                 T user = usersMap.get(userId);
                 if (user != null) user.addFriend(friendId);
             }
-
+            rs.close();
+            ps.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public User getUserById(Long uid) {
-        try (Connection connection = DriverManager.getConnection(databaseURL)) {
+    private User getUserByField(String fieldName, Object value) {
+        if (!List.of("userId", "username", "email", "userPassword").contains(fieldName)) {
+            throw new IllegalArgumentException("Unsupported field name");
+        }
 
-            String sql = """
-                    SELECT u.userId, u.username, u.email, u.userPassword,
-                           d.duckType, d.duckSpeed, d.duckRezistance,
-                           p.personName, p.personSurname, p.personOccupation, 
-                           p.personDateOfBirth, p.personEmpathyScore
-                    FROM users u
-                    LEFT JOIN ducks d ON u.userId = d.userId
-                    LEFT JOIN persons p ON u.userId = p.userId
-                    WHERE u.userId = ?
-                    """;
+        String sql = """
+        SELECT u.userId, u.username, u.email, u.userPassword,
+               d.duckType, d.duckSpeed, d.duckRezistance,
+               p.personName, p.personSurname, p.personOccupation, 
+               p.personDateOfBirth, p.personEmpathyScore
+        FROM users u
+        LEFT JOIN ducks d ON u.userId = d.userId
+        LEFT JOIN persons p ON u.userId = p.userId
+        WHERE u.""" + fieldName + " = ?";
 
-            PreparedStatement stmt = connection.prepareStatement(sql);
-            stmt.setLong(1, uid);
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            if (value instanceof String s) stmt.setString(1, s);
+            else if (value instanceof Long l) stmt.setLong(1, l);
+            else throw new IllegalArgumentException("Unsupported value type");
 
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                Long id = rs.getLong("userId");
-                String username = rs.getString("username");
-                String email = rs.getString("email");
-                String password = rs.getString("userPassword");
-
-                if (rs.getString("duckType") != null) {
-                    return new Duck(id, username, email, password,
-                            DuckType.valueOf(rs.getString("duckType")),
-                            rs.getDouble("duckSpeed"),
-                            rs.getDouble("duckRezistance"));
-                } else if (rs.getString("personName") != null) {
-                    return new Person(id, username, email, password,
-                            rs.getString("personName"),
-                            rs.getString("personSurname"),
-                            rs.getString("personOccupation"),
-                            rs.getString("personDateOfBirth"),
-                            rs.getInt("personEmpathyScore"));
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    if (rs.getString("duckType") != null) {
+                        return new Duck(
+                                rs.getLong("userId"),
+                                rs.getString("username"),
+                                rs.getString("email"),
+                                rs.getString("userPassword"),
+                                DuckType.valueOf(rs.getString("duckType")),
+                                rs.getDouble("duckSpeed"),
+                                rs.getDouble("duckRezistance")
+                        );
+                    } else if (rs.getString("personName") != null) {
+                        return new Person(
+                                rs.getLong("userId"),
+                                rs.getString("username"),
+                                rs.getString("email"),
+                                rs.getString("userPassword"),
+                                rs.getString("personName"),
+                                rs.getString("personSurname"),
+                                rs.getString("personOccupation"),
+                                rs.getString("personDateOfBirth"),
+                                rs.getInt("personEmpathyScore")
+                        );
+                    }
                 }
             }
-            return null;
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+        return null;
+    }
+
+
+    public User getUserById(Long id) {
+        return getUserByField("userId", id);
     }
 
     public User getUserByUsername(String username) {
-        try (Connection connection = DriverManager.getConnection(databaseURL)) {
-
-            String sql = """
-                    SELECT u.userId, u.username, u.email, u.userPassword,
-                           d.duckType, d.duckSpeed, d.duckRezistance,
-                           p.personName, p.personSurname, p.personOccupation, 
-                           p.personDateOfBirth, p.personEmpathyScore
-                    FROM users u
-                    LEFT JOIN ducks d ON u.userId = d.userId
-                    LEFT JOIN persons p ON u.userId = p.userId
-                    WHERE u.username = ?
-                    """;
-
-            PreparedStatement stmt = connection.prepareStatement(sql);
-            stmt.setString(1, username);
-
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                Long id = rs.getLong("userId");
-                String email = rs.getString("email");
-                String password = rs.getString("userPassword");
-
-                if (rs.getString("duckType") != null) {
-                    return new Duck(id, username, email, password,
-                            DuckType.valueOf(rs.getString("duckType")),
-                            rs.getDouble("duckSpeed"),
-                            rs.getDouble("duckRezistance"));
-                } else if (rs.getString("personName") != null) {
-                    return new Person(id, username, email, password,
-                            rs.getString("personName"),
-                            rs.getString("personSurname"),
-                            rs.getString("personOccupation"),
-                            rs.getString("personDateOfBirth"),
-                            rs.getInt("personEmpathyScore"));
-                }
-            }
-            return null;
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        return getUserByField("username", username);
     }
+
 }
