@@ -22,3 +22,7 @@
 [[9.Variabile aleatoare independente#Exemplu 1]]
 [[9.Variabile aleatoare independente#Exemplu 2]]
 [[10.Operatii cu variabile aleatoare#Exemplu 1 ]]
+[[13.Clasificarea naiva Bayes#Exemplu 1]]
+[[13.Clasificarea naiva Bayes#Exemplu de clasificare Naiva Bayes]]
+[[14.Valoarea medie a unor variabile aleatoare discrete#Exemplu 1]]
+[[15.Multi variabile aleatoare independente#Exemplu]]

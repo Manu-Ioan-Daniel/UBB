@@ -5,3 +5,4 @@
 [[8.Distributia de probabilitate#Exercitii 1]]
 [[8.Distributia de probabilitate#Exercitiu 2]]
 [[10.Operatii cu variabile aleatoare#Exercitii 1]]
+[[14.Valoarea medie a unor variabile aleatoare discrete#Exercitiu 1]]

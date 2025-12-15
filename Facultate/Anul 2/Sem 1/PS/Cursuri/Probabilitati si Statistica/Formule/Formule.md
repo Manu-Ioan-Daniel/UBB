@@ -39,14 +39,16 @@
 22. $P(X = k) = C_{n}^{k} p^{k} (1 - p)^{n-k}, \quad k \in \{0, \dots, n\}.$ - [[8.Distributia de probabilitate#Distributia binomiala $X sim Bino(n, p)$, $n in mathbb{N} {*}$, $p in (0, 1)$|de aici]]
 
 23. $X \sim Bino(n, p) \iff X \sim \begin{pmatrix} k \\ C_{n}^{k} p^{k} (1 - p)^{n-k} \end{pmatrix}_{k \in \{0, \dots, n\}}$ - [[8.Distributia de probabilitate#Distributia binomiala $X sim Bino(n, p)$, $n in mathbb{N} {*}$, $p in (0, 1)$|de aici]]
-24. $(p+(1-p))^n=1=\sum_{k=0}^n C_n^k \ p^k \ (1-p)^{n-k},\quad \forall n \in \mathbb {N}$ - [[8.Distributia de probabilitate#Formula|de aici]]
+24. $\displaystyle (p+(1-p))^n=1=\sum_{k=0}^n C_n^k \ p^k \ (1-p)^{n-k},\quad \forall n \in \mathbb {N}$ - [[8.Distributia de probabilitate#Formula|de aici]]
 25. $P(X_1 = k_1, \dots, X_r = k_r) \displaystyle= \frac{n!}{k_1! \dots k_r!} \cdot p_1^{k_1} \cdot \dots \cdot p_r^{k_r}$ - [[8.Distributia de probabilitate#Distributia multinomiala|de aici]]
 26. $\displaystyle P(X_1 = k_1, \dots, X_r = k_r) = \frac{C_{n_1}^{k_1} \cdot \dots \cdot C_{n_r}^{k_r}}{C_{n_1+\dots+n_r}^{n}}$ - [[8.Distributia de probabilitate#Distributia hipergeometrica multidimensionala|de aici]]
 27. $P(X = k) = p(1 - p)^{k} \quad \text{pentru } k \in \{0, 1, 2, \dots \}$ - [[8.Distributia de probabilitate#Distributia geometrica $X sim Geo(p)$, $p in (0, 1)$|de aici]]
 28. $\displaystyle P(\mathbb X = \mathbb x_k) := P \left( \{\omega \in \Omega : \mathbb X(\omega) = \mathbb x_k\} \right), \quad k \in K$ - [[9.Variabile aleatoare independente#**Definitie vector aleator discret**|de aici]]
 29. $\displaystyle \mathbb X \sim \begin{pmatrix} \mathbb x_k \\ P(X = \mathbb x_k) \end{pmatrix}_{k \in K}$ - [[9.Variabile aleatoare independente#**Definitie vector aleator discret**|de aici]]
-30. $P(X = x_i) = \sum_{j \in J} p_{ij} \quad \forall i \in I, \quad P(Y = y_j ) = \sum_{i \in I} p_{ij} \quad \forall j \in J$ - [[9.Variabile aleatoare independente#Observatie 2|de aici]]
+30. $\displaystyle P(X = x_i) = \sum_{j \in J} p_{ij} \quad \forall i \in I, \quad P(Y = y_j ) = \sum_{i \in I} p_{ij} \quad \forall j \in J$ - [[9.Variabile aleatoare independente#Observatie 2|de aici]]
 31. $P(A \cap B|C) = P(A|C)P(B|C)$ trebe conditional independenta - [[13.Clasificarea naiva Bayes#Definitie conditional independenta|de aici]] 
 32. $P(X = x, Y = y|Z = z) = P(X = x|Z = z)P(Y = y|Z = z)$ - [[13.Clasificarea naiva Bayes#Definitie conditional independenta variabile aleatoare|de aici]]
-33. 
+33. $\displaystyle E(X) = \sum_{i \in I} x_i P(X = x_i)$ - [[14.Valoarea medie a unor variabile aleatoare discrete#Definitie|de aici]]
+34. $\displaystyle E(g(X)) = \sum_{i \in I} g(x_i) P(X = x_i)$ - [[14.Valoarea medie a unor variabile aleatoare discrete#Definitie|de aici]]
+35. $P(X_1 = x_1, \dots, X_n = x_n) = P(X_1 = x_1) \cdot \dots \cdot P(X_n = x_n)$ daca sunt independente - [[15.Multi variabile aleatoare independente#Definitie|de aici]]
 
