@@ -30,12 +30,7 @@ ALTER TABLE Characters
 DROP CONSTRAINT FK__Character__Playe__3B75D760
 ALTER TABLE Characters
 DROP COLUMN PlayerID
-
-
-
-
-
-
+SELECT * FROM Legaturi_Eliminate
 
 
 

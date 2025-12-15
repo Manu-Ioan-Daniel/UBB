@@ -1,29 +1,28 @@
 USE LostArkDB2
 GO
-
-SELECT 'Continents', Z.ContinentID, 'Zones', Z.ZoneID
-FROM Zones Z
-WHERE Z.ZoneID NOT IN (
-    SELECT MAX(Z2.ZoneID)
-    FROM Zones Z2
-    WHERE Z2.ContinentID = Z.ContinentID
+INSERT INTO Legaturi_Eliminate
+SELECT 'Continents', ContinentID, 'Zones', ZoneID
+FROM Zones
+WHERE ZoneID NOT IN (
+    SELECT MAX(ZoneID)
+    FROM Zones
+    GROUP BY ContinentID
 );
 
-DELETE Z
-FROM Zones Z
-WHERE Z.ZoneID NOT IN (
-    SELECT MAX(Z2.ZoneID)
-    FROM Zones Z2
-    WHERE Z2.ContinentID = Z.ContinentID
+DELETE FROM Zones
+WHERE ZoneID NOT IN (
+    SELECT MAX(ZoneID)
+    FROM Zones
+    GROUP BY ContinentID
 );
-
-
 ALTER TABLE Zones
-DROP CONSTRAINT PK__Zones__6016679536EA995F
+DROP CONSTRAINT PK__Zones__60166795D32CB487
 ALTER TABLE Zones
 DROP COLUMN ZoneID
 ALTER TABLE Zones
 ADD CONSTRAINT UQ_ZONES_CONTINENT UNIQUE (ContinentID);
+
+SELECT * FROM Legaturi_Eliminate
 
 
 

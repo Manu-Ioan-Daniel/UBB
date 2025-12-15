@@ -18,3 +18,5 @@ ALTER TABLE Equipments
 DROP CONSTRAINT FK__Equipment__Equip__47DBAE45
 ALTER TABLE Equipments
 DROP COLUMN EquipmentCategoryID;
+
+SELECT * FROM EquipmentCategoryEquipments

@@ -6,6 +6,7 @@ ADD MountID INT;
 ALTER TABLE Cosmetics
 ADD CONSTRAINT FK_Cosmetics_Mounts
 FOREIGN KEY (MountID) REFERENCES Mounts(MountID);
+GO
 
 UPDATE Cosmetics
 SET MountID = (
@@ -25,5 +26,4 @@ WHERE MC.MountID <> (
 
 DROP TABLE MountCosmetics
 
-
-
+SELECT * FROM Legaturi_Eliminate
