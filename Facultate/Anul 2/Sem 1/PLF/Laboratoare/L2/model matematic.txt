@@ -1,0 +1,12 @@
+helperListaNoduriNivel(l nivel nivelCurent) = multime vida daca l e vida
+					      [l1],daca nivel=nivelCurent
+					      (helperListaNoduriNivel(l2) nivel nivelCurent+1) (+) helperListaNoduriNivel(l3 nivel nivelCurent+1)),altfel
+listaNoduriNivel(l nivel) = helperListaNoduriNivel(l nivel 0)
+
+helperNivelMaximNoduri(l nivelCurent nivelMax lungMax) = nivelMax,daca listaNoduriNivel(l nivelCurent) este vida
+							 helperNivelMaximNoduri(l,nivelCurent+1,nivelCurent,length(listaNoduriNivel(l nivelCurent))),daca 
+length(listaNoduriNivel(l nivelCurent))) > lungMax
+							 helperNivelMaxNoduri(l,nivelCurent+1,nivelMax,lungMax) altfel
+nivelMaximNoduri(l) = helperNivelMaximNoduri(l 0 0 0)
+
+						

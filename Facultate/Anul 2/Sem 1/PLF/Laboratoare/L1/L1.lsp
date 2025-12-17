@@ -12,16 +12,16 @@
 (defun helperVale (l state)
   (cond
     ((or (null l) (null (cdr l)))
-     (if (= state 1) t 'false))
+     (if (= state 1) t nil))
     ((= state 0)
      (cond
        ((> (car l) (cadr l)) (helperVale (cdr l) 0))
        ((< (car l) (cadr l)) (helperVale (cdr l) 1))
-       (t 'false)))
+       (t nil)))
     ((= state 1)
      (if (< (car l) (cadr l))
          (helperVale (cdr l) 1)
-         'false))))
+         nil))))
 
 
 
@@ -65,6 +65,6 @@
 
 (print (min-lista '(10 (5 2) (20 (1 30)) 7)))
 ;; Așteptat: 1
-(print (sterge-max '(1 5 3 5 2 5 4)))
+(print (sterge-max '(1 5 a 3 5 2 5 4)))
 ;; Așteptat: (1 3 2 4)    ; maximul este 5, toate 5 sunt eliminate
 

@@ -12,7 +12,7 @@ helperVale([l1 l2 l3 ... ln],state)=true daca state=1 si l este vida sau l=[l1]
 				    helperVale([l2 l3 ... ln],1) daca l1<l2 si state=0
 				    false,daca l1=l2 si state=0
 				    helperVale([l2 l3 ... ln],1) daca l1<l2 si state=1
-				    false,daca l1>l2 si state=1
+				    false,daca l1>=l2 si state=1
 				    
 min-lista(L)=helperMin(L,cel mai mare nr pozitiv)
 helperMin([l1 l2 l3 ... ln],minim)=minim daca l e vida
