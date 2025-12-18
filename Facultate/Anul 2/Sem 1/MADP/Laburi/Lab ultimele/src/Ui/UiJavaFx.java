@@ -1,5 +1,6 @@
 package Ui;
 import domain.Duck;
+import domain.FriendRequest;
 import domain.Person;
 import domain.User;
 import enums.DuckType;
@@ -16,10 +17,14 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import observer.Observer;
+import service.ServiceFriendRequest;
 import service.ServiceMessage;
 import service.ServiceUser;
+import utils.InformationAlert;
+
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class UiJavaFx  implements Observer {
     private final User currentUser;
@@ -29,6 +34,7 @@ public class UiJavaFx  implements Observer {
 
     private final ServiceUser serviceUser;
     private final ServiceMessage serviceMessage;
+    private final ServiceFriendRequest serviceFriendRequest;
 
     private TableView<Duck> tableDucks;
     private TableView<Person> tablePersons;
@@ -38,27 +44,50 @@ public class UiJavaFx  implements Observer {
 
     private ComboBox<String> filterBox;
 
-    public UiJavaFx(ServiceUser service, User currentUser, ServiceMessage serviceMessage){
-        this.serviceUser=service;
-        this.currentUser=currentUser;
+    public UiJavaFx(ServiceUser service, User currentUser, ServiceMessage serviceMessage, ServiceFriendRequest serviceFriendRequest){
+        this.serviceUser = service;
+        this.currentUser = currentUser;
         this.serviceUser.addObserver(this);
-        this.serviceMessage=serviceMessage;
+        this.serviceMessage = serviceMessage;
+        this.serviceFriendRequest = serviceFriendRequest;
     }
     public void show(Stage stage) {
         BorderPane root = new BorderPane();
-        initFilter();
-        initTables();
-        initPagination();
+        init();
         initLayout(root);
-
         Scene scene = new Scene(root, 1300, 400);
         stage.setScene(scene);
         stage.setTitle("All Ducks Table");
         stage.show();
+        initNotifications();
 
     }
 
+
+
     /* ---------------------- INITIALIZATION ---------------------- */
+    private void initNotifications() {
+        initFriendRequestNotifications();
+    }
+
+    private void initFriendRequestNotifications() {
+        String notification = serviceFriendRequest.getUserFriendRequests(currentUser.getId()).stream()
+                .filter(fr -> "pending".equals(fr.getStatus()))
+                .map(fr -> "You have a friend request from: "
+                        + serviceUser.getUserById(fr.getFrom()).getUsername())
+                .collect(Collectors.joining("\n"));
+
+        if (!notification.isEmpty()) {
+            InformationAlert.alert(notification);
+        }
+    }
+
+
+    private void init(){
+        initFilter();
+        initTables();
+        initPagination();
+    }
     private void initTables() {
         initDucksTable();
         initPersonsTable();
@@ -230,6 +259,7 @@ public class UiJavaFx  implements Observer {
         Button chatBtn = new Button("Chat");
         chatBtn.setOnAction(e -> {
             ChatWindow window = new ChatWindow(serviceUser, serviceMessage, currentUser.getId());
+            serviceMessage.addObserver(window);
             window.show();
         });
 
@@ -237,19 +267,31 @@ public class UiJavaFx  implements Observer {
         logoutBtn.setOnAction(e -> {
                     Stage stage = (Stage) logoutBtn.getScene().getWindow();
                     stage.close();
-                    LoginWindow loginWindow = new LoginWindow(serviceUser, serviceMessage);
+                    LoginWindow loginWindow = new LoginWindow(serviceUser, serviceMessage,serviceFriendRequest);
                     loginWindow.start(new Stage());
+        });
+
+        Button friendRequestBtn = new Button("Send Friend Request");
+        friendRequestBtn.setOnAction(e->{
+           sendFriendRequestFx();
+        });
+
+        Button checkFriendRequestsBtn = new Button("Check Friend Requests");
+        checkFriendRequestsBtn.setOnAction(e->{
+            checkFriendRequests();
         });
         HBox h = new HBox(10,
                 addUserBtn, removeUserBtn,
                 addFriendBtn, removeFriendBtn,
                 communitiesBtn, largestBtn,
-                chatBtn, logoutBtn
+                chatBtn, logoutBtn,
+                friendRequestBtn, checkFriendRequestsBtn
         );
         h.setPadding(new Insets(10));
         h.setAlignment(Pos.CENTER);
         return h;
     }
+
 
 
 
@@ -266,12 +308,7 @@ public class UiJavaFx  implements Observer {
         d.setHeaderText(text);
         return d.showAndWait().orElse("");
     }
-
-    private void alert(String msg) {
-        Alert a = new Alert(Alert.AlertType.INFORMATION);
-        a.setHeaderText(msg);
-        a.showAndWait();
-    }
+    
 
     /* ---------------------- FUNCTIONALITY ---------------------- */
 
@@ -365,20 +402,34 @@ public class UiJavaFx  implements Observer {
                         serviceUser.addUser(p);
                     }
                 } catch (Exception e) {
-                    alert("Eroare: " + e.getMessage());
+                    InformationAlert.alert("Eroare: " + e.getMessage());
                 }
             }
         });
     }
 
     public void removeUserFx() {
-        try {
-            String nume = input("Introdu username-ul utilizatorului de sters:");
-            serviceUser.removeUser(nume);
-            alert("Utilizator șters!");
-        } catch (Exception e) {
-            alert("Eroare: " + e.getMessage());
-        }
+        Dialog<ButtonType> dialog = new Dialog<>();
+        dialog.setTitle("Sterge utliziator");
+        dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
+        GridPane grid = new GridPane();
+        grid.setHgap(15); grid.setVgap(15); grid.setPadding(new Insets(10));
+
+        TextField username = new TextField();
+        grid.add(new Label("Nume utilizator:"), 0, 0);
+        grid.add(username, 1, 0);
+        dialog.getDialogPane().setContent(grid);
+        dialog.showAndWait().ifPresent(bt -> {
+            if (bt == ButtonType.OK) {
+                try {
+                    String u = username.getText();
+                    serviceUser.removeUser(u);
+                    InformationAlert.alert("User sters cu succes!");
+                } catch (Exception e) {
+                    InformationAlert.alert("Eroare: " + e.getMessage());
+                }
+            }
+        });
     }
 
     public void addFriendFx() {
@@ -406,9 +457,9 @@ public class UiJavaFx  implements Observer {
                     String friendUsername = friendIdField.getText();
                     serviceUser.addFriend(username, friendUsername);
                     serviceUser.addFriend(friendUsername, username);
-                    alert("Prietenie adaugata!");
+                    InformationAlert.alert("Prietenie adaugata!");
                 } catch (Exception e) {
-                    alert("Eroare: " + e.getMessage());
+                    InformationAlert.alert("Eroare: " + e.getMessage());
                 }
             }
         });
@@ -439,9 +490,33 @@ public class UiJavaFx  implements Observer {
                     String friendUsername = friendUsernameField.getText();
                     serviceUser.removeFriend(username, friendUsername);
                     serviceUser.removeFriend(friendUsername, username);
-                    alert("Prietenie ștearsă!");
+                    InformationAlert.alert("Prietenie ștearsă!");
                 } catch (Exception e) {
-                    alert("Eroare: " + e.getMessage());
+                    InformationAlert.alert("Eroare: " + e.getMessage());
+                }
+            }
+        });
+    }
+
+    private void sendFriendRequestFx() {
+        Dialog<ButtonType> dialog = new Dialog<>();
+        dialog.setTitle("Trimitere cerere de prietenie");
+        dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
+        GridPane grid = new GridPane();
+        grid.setHgap(15); grid.setVgap(15); grid.setPadding(new Insets(10));
+
+        TextField username = new TextField();
+        grid.add(new Label("Nume utilizator:"), 0, 0);
+        grid.add(username, 1, 0);
+        dialog.getDialogPane().setContent(grid);
+        dialog.showAndWait().ifPresent(bt -> {
+            if (bt == ButtonType.OK) {
+                try {
+                    String u = username.getText();
+                    serviceFriendRequest.addFriendRequest(currentUser.getId(),serviceUser.getUserByUsername(u).getId());
+                    InformationAlert.alert("Prietenie trimisa cu succes!");
+                } catch (Exception e) {
+                    InformationAlert.alert("Eroare: " + e.getMessage());
                 }
             }
         });
@@ -450,9 +525,9 @@ public class UiJavaFx  implements Observer {
     public void showNumberOfCommunitiesFx() {
         try {
             int nr = serviceUser.getNumberOfCommunities();
-            alert("Număr comunități: " + nr);
+            InformationAlert.alert("Număr comunități: " + nr);
         } catch (Exception e) {
-            alert("Eroare: " + e.getMessage());
+            InformationAlert.alert("Eroare: " + e.getMessage());
         }
     }
 
@@ -463,10 +538,15 @@ public class UiJavaFx  implements Observer {
             for (User u : community) {
                 users.append(u.getId()).append(" ").append(u.getUsername()).append("\n");
             }
-            alert(users.toString());
+            InformationAlert.alert(users.toString());
         } catch (Exception e) {
-            alert("Eroare: " + e.getMessage());
+            InformationAlert.alert("Eroare: " + e.getMessage());
         }
+    }
+
+    public void checkFriendRequests(){
+        FriendRequestWindow window = new FriendRequestWindow(serviceFriendRequest,serviceUser,currentUser.getId());
+        window.show();
     }
 
 

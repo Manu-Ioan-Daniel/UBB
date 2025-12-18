@@ -16,7 +16,6 @@ public class ServiceMessage extends Observable {
         this.messageRepo = repo;
     }
 
-    // Folosim Long fromId și List<Long> toIds
     public void sendMessage(Long fromId, List<Long> toIds, String text) {
         Message m = new Message(fromId, toIds, text, LocalDateTime.now());
         messageRepo.save(m);

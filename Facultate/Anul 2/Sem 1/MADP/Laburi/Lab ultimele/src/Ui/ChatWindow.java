@@ -8,17 +8,21 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import observer.Observer;
 import service.ServiceMessage;
 import service.ServiceUser;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
-public class ChatWindow {
+public class ChatWindow implements Observer {
 
     private final ServiceUser serviceUser;
     private final ServiceMessage serviceMessage;
     private final Long currentUserId;
+    private final Map<Long, ListView<String>> openChats = new HashMap<>();
 
     public ChatWindow(ServiceUser serviceUser, ServiceMessage serviceMessage, Long currentUserId) {
         this.serviceUser = serviceUser;
@@ -84,10 +88,25 @@ public class ChatWindow {
             String from = m.getFromId().equals(currentUserId) ? "You" : otherUsername;
             historyList.getItems().add(from + ": " + m.getMessage());
         });
-
+        openChats.put(otherUserId, historyList);
         Scene scene = new Scene(historyList, 400, 300);
         historyStage.setScene(scene);
         historyStage.setTitle("Chat with " + otherUsername);
         historyStage.show();
+        historyStage.setOnCloseRequest(e-> openChats.remove(otherUserId));
+    }
+    @Override
+    public void update() {
+        for(Long otherUserId : openChats.keySet()) {
+            updateChatHistory(otherUserId, openChats.get(otherUserId));
+        }
+    }
+    private void updateChatHistory(Long otherUserId, ListView<String> historyList) {
+        historyList.getItems().clear();
+        String otherUsername = serviceUser.getUserById(otherUserId).getUsername();
+        serviceMessage.getConversation(currentUserId, otherUserId).forEach(m -> {
+            String from = m.getFromId().equals(currentUserId) ? "You" : otherUsername;
+            historyList.getItems().add(from + ": " + m.getMessage());
+        });
     }
 }

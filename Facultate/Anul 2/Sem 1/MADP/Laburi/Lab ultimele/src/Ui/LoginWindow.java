@@ -4,6 +4,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import service.ServiceFriendRequest;
 import service.ServiceMessage;
 import service.ServiceUser;
 
@@ -11,9 +12,11 @@ import service.ServiceUser;
 public class LoginWindow{
     private final ServiceUser serviceUser;
     private final ServiceMessage serviceMessage;
-    public LoginWindow(ServiceUser serviceUser, ServiceMessage serviceMessage) {
+    private final ServiceFriendRequest serviceFriendRequest;
+    public LoginWindow(ServiceUser serviceUser, ServiceMessage serviceMessage, ServiceFriendRequest serviceFriendRequest) {
         this.serviceUser = serviceUser;
         this.serviceMessage = serviceMessage;
+        this.serviceFriendRequest = serviceFriendRequest;
     }
     public void start(Stage stage) {
         stage.setTitle("Login");
@@ -44,7 +47,7 @@ public class LoginWindow{
                 if (success) {
                     showAlert(Alert.AlertType.INFORMATION, "Login Successful", "Welcome, " + username + "!");
                     stage.close();
-                    UiJavaFx mainUI = new UiJavaFx(serviceUser, serviceUser.getUserByUsername(username),serviceMessage);
+                    UiJavaFx mainUI = new UiJavaFx(serviceUser, serviceUser.getUserByUsername(username),serviceMessage,serviceFriendRequest);
                     Stage mainStage = new Stage();
                     mainUI.show(mainStage);
 

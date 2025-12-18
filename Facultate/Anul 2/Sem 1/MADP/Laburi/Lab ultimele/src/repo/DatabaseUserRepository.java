@@ -12,11 +12,9 @@ import java.util.*;
 
 public class DatabaseUserRepository {
 
-    private final String databaseURL;
     private final Connection connection;
 
     public DatabaseUserRepository(String databaseURL) {
-        this.databaseURL = databaseURL;
         try {
             this.connection = DriverManager.getConnection(databaseURL);
         } catch (SQLException e) {
@@ -498,6 +496,9 @@ public class DatabaseUserRepository {
     }
 
     public User getUserByUsername(String username) {
+        if(!usernameExists(username)){
+            throw new RepoError("Username does not exist!");
+        }
         return getUserByField("username", username);
     }
 
