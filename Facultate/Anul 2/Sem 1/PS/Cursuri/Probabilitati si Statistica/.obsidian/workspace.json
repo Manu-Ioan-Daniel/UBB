@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teoria Probabilitatilor/Convergenta aproape sigura.md",
+                "file": "Teoria Probabilitatilor/22.Statistica matematica(lung).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Convergenta aproape sigura"
+              "title": "22.Statistica matematica(lung)"
             }
           }
         ],
@@ -201,18 +201,22 @@
   },
   "active": "d57d779a8364d825",
   "lastOpenFiles": [
-    "Teoria Probabilitatilor/19.Vectori aleatori continui.md",
-    "Teoria Probabilitatilor/Convergenta aproape sigura.md",
-    "Teoria Probabilitatilor/17.Variabile aleatoare continue.md",
+    "Teoria Probabilitatilor/21. LTNM.md",
+    "Teoria Probabilitatilor/22.Statistica matematica(lung).md",
     "Teoria Probabilitatilor/18.Varianta unei variabile aleatoare.md",
+    "Teoria Probabilitatilor/14.Valoarea medie a unor variabile aleatoare discrete.md",
+    "Teoria Probabilitatilor/15.Multi variabile aleatoare independente.md",
+    "Teoria Probabilitatilor/16.Functia de repartitie.md",
+    "Teoria Probabilitatilor/17.Variabile aleatoare continue.md",
+    "Teoria Probabilitatilor/20. Convergenta aproape sigura.md",
     "Teoria Probabilitatilor/8.Distributia de probabilitate.md",
+    "Images/Pasted image 20251218150659.png",
+    "Teoria Probabilitatilor/Untitled",
+    "Teoria Probabilitatilor/19.Vectori aleatori continui.md",
     "Teoria Probabilitatilor/7.Variabile aleatoare.md",
     "Teoria Probabilitatilor/6.Formula lui Bayes.md",
     "Exercitii si exemple/Exemple.md",
     "Exercitii si exemple/Exercitii.md",
-    "Teoria Probabilitatilor/16.Functia de repartitie.md",
-    "Teoria Probabilitatilor/15.Multi variabile aleatoare independente.md",
-    "Teoria Probabilitatilor/14.Valoarea medie a unor variabile aleatoare discrete.md",
     "Teoria Probabilitatilor/13.Clasificarea naiva Bayes.md",
     "Teoria Probabilitatilor/10.Operatii cu variabile aleatoare.md",
     "Teoria Probabilitatilor/9.Variabile aleatoare independente.md",
@@ -238,15 +242,11 @@
     "Images/Pasted image 20251212180104.png",
     "Images/Pasted image 20251210011203.png",
     "Images/Pasted image 20251212170030.png",
-    "Images/Pasted image 20251210005347.png",
-    "Teoria Probabilitatilor/1.Algoritmi Aleatori.md",
     "Exercitii si exemple",
-    "Exemple/Python/Generarea de valori aleatoare.md",
     "Proiect engleza",
     "Images",
     "Exemple/Matematice",
     "Untitled.base",
-    "Teoria Probabilitatilor/Algoritmi Aleatori/Tipuri",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
