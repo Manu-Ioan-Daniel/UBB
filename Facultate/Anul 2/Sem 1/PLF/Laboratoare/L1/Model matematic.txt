@@ -1,7 +1,7 @@
-elimina-din-n-in-n(L)=helper(L,1)
-helper([l1 l2 ... ln],i)=lista vida daca l e vida
-			 helper([l2 l3 ... ln],1) daca i=n
-			 l1 (+) helper([l2 l3 ... ln],i+1) altfel
+elimina-din-n-in-n(L,n)=helper(L,n,1)
+helper([l1 l2 ... ln],n,i)=lista vida daca l e vida
+			 helper([l2 l3 ... ln],n,1) daca i=n
+			 l1 (+) helper([l2 l3 ... ln],n,i+1) altfel
 
 
 
