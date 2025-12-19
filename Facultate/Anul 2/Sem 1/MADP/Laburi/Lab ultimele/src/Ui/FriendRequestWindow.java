@@ -9,13 +9,14 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import observer.Observer;
 import service.ServiceFriendRequest;
 import service.ServiceUser;
 import utils.InformationAlert;
 
 import java.util.List;
 
-public class FriendRequestWindow {
+public class FriendRequestWindow implements Observer {
     private final ServiceFriendRequest serviceFriendRequest;
     private final ServiceUser serviceUser;
     private ListView<String> friendRequestList;
@@ -93,6 +94,10 @@ public class FriendRequestWindow {
         }catch(Exception e){
             InformationAlert.alert(e.getMessage());
         }
+    }
+    @Override
+    public void update(){
+        refreshFriendRequestList();
     }
 
 }
