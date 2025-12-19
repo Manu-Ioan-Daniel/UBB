@@ -24,5 +24,7 @@ public class Main extends Application{
         ServiceFriendRequest serviceFriendRequest = new ServiceFriendRequest(new DatabaseFriendRequestRepository(url));
         LoginWindow loginWindow = new LoginWindow(serviceUser,serviceMessage,serviceFriendRequest);
         loginWindow.start(new Stage());
+        LoginWindow loginWindow2 = new LoginWindow(serviceUser,serviceMessage,serviceFriendRequest);
+        loginWindow2.start(new Stage());
     }
 }

@@ -49,6 +49,7 @@ public class UiJavaFx  implements Observer {
         this.serviceUser.addObserver(this);
         this.serviceMessage = serviceMessage;
         this.serviceFriendRequest = serviceFriendRequest;
+        this.serviceFriendRequest.addObserver(this);
     }
     public void show(Stage stage) {
         BorderPane root = new BorderPane();
@@ -66,10 +67,10 @@ public class UiJavaFx  implements Observer {
 
     /* ---------------------- INITIALIZATION ---------------------- */
     private void initNotifications() {
-        initFriendRequestNotifications();
+        refreshFriendRequestNotifications();
     }
 
-    private void initFriendRequestNotifications() {
+    private void refreshFriendRequestNotifications() {
         String notification = serviceFriendRequest.getUserFriendRequests(currentUser.getId()).stream()
                 .filter(fr -> "pending".equals(fr.getStatus()))
                 .map(fr -> "You have a friend request from: "
@@ -298,6 +299,7 @@ public class UiJavaFx  implements Observer {
     public void update() {
         initDucksPagination();
         initPersonsPagination();
+        refreshFriendRequestNotifications();
     }
 
     /* ---------------------- HELPERS ---------------------- */
