@@ -1,6 +1,5 @@
 package Ui;
 import domain.Duck;
-import domain.FriendRequest;
 import domain.Person;
 import domain.User;
 import enums.DuckType;
@@ -121,11 +120,11 @@ public class UiJavaFx  implements Observer {
         Label loggedInLabel = new Label("Logged in as: " + currentUser.getUsername());
         loggedInLabel.setPadding(new Insets(5));
 
-        VBox topBox = new VBox(loggedInLabel, createButtonsBar());
+        VBox topBox = new VBox(loggedInLabel, filterBox);
 
         root.setCenter(tablesBox);
-        root.setBottom(filterBox);
         root.setTop(topBox);
+        root.setBottom(createButtonsBar());
     }
 
 

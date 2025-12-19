@@ -1,15 +1,11 @@
 package service;
-
 import domain.FriendRequest;
-import errors.RepoError;
 import errors.ValidationError;
 import observer.Observable;
 import repo.DatabaseFriendRequestRepository;
-
-import java.sql.PreparedStatement;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
+
 
 public class ServiceFriendRequest extends Observable {
     private final DatabaseFriendRequestRepository frRepo;
@@ -30,10 +26,6 @@ public class ServiceFriendRequest extends Observable {
         }
         frRepo.changeFriendRequestStatus(fromId, toId, status);
         notifyObservers();
-    }
-
-    public void removeFriendRequest(Long fromId, Long toId){
-        frRepo.removeFriendRequest(fromId,toId);
     }
 
 }
