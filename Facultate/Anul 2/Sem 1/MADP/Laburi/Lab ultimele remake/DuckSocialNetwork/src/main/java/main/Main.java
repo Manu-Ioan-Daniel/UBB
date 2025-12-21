@@ -13,8 +13,10 @@ public class Main extends Application {
     @Override
     public void start(Stage stage){
         try {
-            Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("/ui/Ui.fxml"))));
+            Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("/view/loginWindow.fxml"))));
             Scene scene = new Scene(root);
+
+            stage.setTitle("Duck Social Network");
             stage.setScene(scene);
             stage.show();
         }catch(Exception e){
