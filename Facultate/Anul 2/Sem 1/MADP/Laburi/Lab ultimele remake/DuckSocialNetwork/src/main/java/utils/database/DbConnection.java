@@ -8,7 +8,7 @@ public class DbConnection {
     private static DbConnection instance = null;
     private final Connection connection;
     private DbConnection() throws SQLException {
-        connection= DriverManager.getConnection("jdbc:postgresql://localhost:5432/MAP?user=postgres&password=123");
+        connection= DriverManager.getConnection("jdbc:postgresql://localhost:5432/MAP2?user=postgres&password=123");
     }
     public static DbConnection getInstance() throws SQLException {
         if(instance==null){

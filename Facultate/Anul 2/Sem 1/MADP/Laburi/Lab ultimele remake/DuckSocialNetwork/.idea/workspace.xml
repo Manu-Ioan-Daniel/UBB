@@ -5,26 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c762a8d-4181-4a7d-b140-1c9194a1201b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Duck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Friendship.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enums/DuckType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repo/DbUserRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repo/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/containers/Tuple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/database/DbConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/passwordUtils/PasswordHasher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/validation/ValidationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/validation/Validator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/styling/loginDesign.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/UsersFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/UserModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/passwordUtils/PasswordMigrator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/add-user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/logout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/man-in-suit-and-tie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/multiple-users-silhouette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/notes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/rubber-duck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/three-ducks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/userIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/userIcon2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/styling/dashboardDesign.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/usersForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Ui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ui/Ui.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/loginWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/database/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/database/DbConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/passwordUtils/PasswordHasher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/passwordUtils/PasswordHasher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styling/loginDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styling/loginDesign.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/loginWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/loginWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/.gradle/8.14/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/.gradle/8.14/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/.gradle/8.14/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/.gradle/8.14/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/build/reports/problems/problems-report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +56,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Enum" />
         <option value="Interface" />
         <option value="Exception" />
-        <option value="CSS File" />
+        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -74,6 +81,7 @@
   "keyToString": {
     "Gradle.Download Sources.executor": "Run",
     "Gradle.DuckSocialNetwork [:main.Main.main()].executor": "Run",
+    "Gradle.DuckSocialNetwork [:utils.passwordUtils.PasswordMigrator.main()].executor": "Run",
     "Gradle.DuckSocialNetwork [run].executor": "Run",
     "Gradle.DuckSocialNetwork.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -81,6 +89,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 2/Sem 1/MADP/Laburi/Lab ultimele remake/DuckSocialNetwork/src/main/resources/images",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -96,33 +105,28 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="domain" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 1\MADP\Laburi\Lab ultimele remake\DuckSocialNetwork\src\main\resources\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 1\MADP\Laburi\Lab ultimele remake\DuckSocialNetwork\src\main\resources\images" />
       <recent name="C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 1\MADP\Laburi\Lab ultimele remake\DuckSocialNetwork\src\main\resources\ui" />
       <recent name="C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 1\MADP\Laburi\Lab ultimele remake\DuckSocialNetwork\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="DuckSocialNetwork [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="run" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
+  <component name="RunManager" selected="Gradle.DuckSocialNetwork [run]">
+    <configuration name="PasswordMigrator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utils.passwordUtils.PasswordMigrator" />
+      <module name="DuckSocialNetwork.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utils.passwordUtils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="DuckSocialNetwork [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
@@ -146,6 +150,33 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="DuckSocialNetwork [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PasswordMigrator" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -165,6 +196,7 @@
       <workItem from="1766160602734" duration="280000" />
       <workItem from="1766232087011" duration="698000" />
       <workItem from="1766264740997" duration="15595000" />
+      <workItem from="1766306574179" duration="21001000" />
     </task>
     <servers />
   </component>

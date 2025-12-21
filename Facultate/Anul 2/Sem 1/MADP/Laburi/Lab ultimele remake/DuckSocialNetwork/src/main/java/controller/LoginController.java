@@ -5,6 +5,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.util.Duration;
+import models.UserModel;
+
 
 
 public class LoginController{
@@ -18,6 +20,7 @@ public class LoginController{
     @FXML
     private Label errorLabel;
 
+    private UserModel userModel;
 
     public void login() {
         String user = username.getText();
@@ -25,7 +28,16 @@ public class LoginController{
         if (user.isEmpty() || pass.isEmpty()){
             showError(username);
             showError(password);
+            return;
         }
+        if(!userModel.validLogin(user,pass)){
+            showError(username);
+            showError(password);
+            return;
+        }
+        //open the actual ui window now
+        System.out.println("Login succesful");
+
 
     }
     private void showError(TextField field) {
@@ -40,5 +52,10 @@ public class LoginController{
         });
         pause.play();
     }
+
+    public void setUserModel(UserModel model){
+        this.userModel=model;
+    }
+
 
 }
