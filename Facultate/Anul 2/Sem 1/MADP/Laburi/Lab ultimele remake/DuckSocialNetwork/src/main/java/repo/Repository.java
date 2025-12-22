@@ -1,6 +1,7 @@
 package repo;
 import domain.Entity;
-import validation.ValidationException;
+import exceptions.RepoException;
+import exceptions.ValidationException;
 
 import java.util.Optional;
 
@@ -31,12 +32,12 @@ public interface Repository<ID, E extends Entity<ID>> {
      *
      * @param entity
      *         entity must be not null
-     * @return an {@code Optional} - null if the entity was saved,
-     *                             - the entity (id already exists)
+     *
      * @throws ValidationException
      *            if the entity is not valid
      * @throws IllegalArgumentException
-     *             if the given entity is null.     *
+     *             if the given entity is null.
+     * @throws RepoException if given entity breaks uniqueness
      */
     Optional<E> save(E entity);
 

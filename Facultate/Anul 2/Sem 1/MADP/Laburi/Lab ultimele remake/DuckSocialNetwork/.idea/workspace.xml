@@ -5,33 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c762a8d-4181-4a7d-b140-1c9194a1201b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/UsersFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/UserModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/passwordUtils/PasswordMigrator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/add-user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/logout.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/man-in-suit-and-tie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/multiple-users-silhouette.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/notes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/rubber-duck.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/three-ducks.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/userIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/userIcon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/styling/dashboardDesign.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/usersForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/IntelliLang.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/AddUserFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ConfirmationAlertController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ErrorAlertController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/RepoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/alerts/Alert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/observer/Observable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/observer/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/validation/UserValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/chat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/styling/addFormDesign.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/styling/alertDesign.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/addUserForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/confirmationAlert.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/errorAlert.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseQueries/inserts.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../DatabaseQueries/inserts.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DatabaseQueries/tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../DatabaseQueries/tables.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UsersFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UsersFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Duck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Friendship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Friendship.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/database/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/database/DbConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/passwordUtils/PasswordHasher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/passwordUtils/PasswordHasher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repo/DbUserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repo/DbUserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repo/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repo/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/passwordUtils/PasswordHasher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/passwords/PasswordHasher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/passwordUtils/PasswordMigrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/passwords/PasswordMigrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validation/ValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/ValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validation/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validation/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styling/dashboardDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styling/dashboardDesign.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/styling/loginDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styling/loginDesign.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/loginWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/loginWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/.gradle/8.14/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/.gradle/8.14/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/.gradle/8.14/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/.gradle/8.14/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/usersForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/usersForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PS/Cursuri/Probabilitati si Statistica/.obsidian/workspace.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../PS/Cursuri/Probabilitati si Statistica/.obsidian/workspace.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PS/Cursuri/Probabilitati si Statistica/Teoria Probabilitatilor/18.Varianta unei variabile aleatoare.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../PS/Cursuri/Probabilitati si Statistica/Teoria Probabilitatilor/18.Varianta unei variabile aleatoare.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PS/Cursuri/Probabilitati si Statistica/Teoria Probabilitatilor/19.Vectori aleatori continui.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../PS/Cursuri/Probabilitati si Statistica/Teoria Probabilitatilor/19.Vectori aleatori continui.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PS/Cursuri/Probabilitati si Statistica/Teoria Probabilitatilor/20. Convergenta aproape sigura.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../PS/Cursuri/Probabilitati si Statistica/Teoria Probabilitatilor/20. Convergenta aproape sigura.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PS/Cursuri/Probabilitati si Statistica/Teoria Probabilitatilor/21. LTNM.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../PS/Cursuri/Probabilitati si Statistica/Teoria Probabilitatilor/21. LTNM.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PS/Cursuri/Probabilitati si Statistica/Teoria Probabilitatilor/22.Statistica matematica(lung).md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../PS/Cursuri/Probabilitati si Statistica/Teoria Probabilitatilor/22.Statistica matematica(lung).md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../PS/Cursuri/Probabilitati si Statistica/Teoria Probabilitatilor/9.Variabile aleatoare independente.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../PS/Cursuri/Probabilitati si Statistica/Teoria Probabilitatilor/9.Variabile aleatoare independente.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +73,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Exception" />
+        <option value="Interface" />
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -81,15 +97,20 @@
   "keyToString": {
     "Gradle.Download Sources.executor": "Run",
     "Gradle.DuckSocialNetwork [:main.Main.main()].executor": "Run",
+    "Gradle.DuckSocialNetwork [:repo.DbUserRepo.main()].executor": "Run",
+    "Gradle.DuckSocialNetwork [:utils.alerts.ConfirmationAlert.main()].executor": "Run",
+    "Gradle.DuckSocialNetwork [:utils.alerts.TestAlertApp.main()].executor": "Run",
     "Gradle.DuckSocialNetwork [:utils.passwordUtils.PasswordMigrator.main()].executor": "Run",
+    "Gradle.DuckSocialNetwork [:utils.passwords.PasswordMigrator.main()].executor": "Run",
     "Gradle.DuckSocialNetwork [run].executor": "Run",
     "Gradle.DuckSocialNetwork.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 2/Sem 1/MADP/Laburi/Lab ultimele remake/DuckSocialNetwork/src/main/resources/images",
+    "last_opened_file_path": "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 2/Sem 1/MADP/Laburi/Lab ultimele remake/DuckSocialNetwork/src/main/resources/view",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -97,6 +118,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 2/Sem 1/MADP/Laburi/Lab ultimele remake/DuckSocialNetwork/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.JavaFX",
     "vue.rearranger.settings.migration": "true"
   }
@@ -106,6 +130,8 @@
       <recent name="domain" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 2\Sem 1\MADP\Laburi\Lab ultimele remake\DuckSocialNetwork\src\main\resources\view" />
+      <recent name="C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 2\Sem 1\MADP\Laburi\Lab ultimele remake\DuckSocialNetwork\src\main\resources\images" />
       <recent name="C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 1\MADP\Laburi\Lab ultimele remake\DuckSocialNetwork\src\main\resources\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -115,12 +141,38 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.DuckSocialNetwork [run]">
-    <configuration name="PasswordMigrator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="utils.passwordUtils.PasswordMigrator" />
+    <configuration name="ConfirmationAlert" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utils.alerts.ConfirmationAlert" />
       <module name="DuckSocialNetwork.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="utils.passwordUtils.*" />
+          <option name="PATTERN" value="utils.alerts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PasswordMigrator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utils.passwords.PasswordMigrator" />
+      <module name="DuckSocialNetwork.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utils.passwords.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAlertApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utils.alerts.TestAlertApp" />
+      <module name="DuckSocialNetwork.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utils.alerts.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -174,6 +226,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestAlertApp" />
+        <item itemvalue="Application.ConfirmationAlert" />
         <item itemvalue="Application.PasswordMigrator" />
       </list>
     </recent_temporary>
@@ -197,6 +251,8 @@
       <workItem from="1766232087011" duration="698000" />
       <workItem from="1766264740997" duration="15595000" />
       <workItem from="1766306574179" duration="21001000" />
+      <workItem from="1766351888660" duration="9693000" />
+      <workItem from="1766397627321" duration="45436000" />
     </task>
     <servers />
   </component>

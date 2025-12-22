@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
@@ -14,8 +16,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="653.0" prefWidth="1113.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="653.0" prefWidth="1153.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UsersFormController">
    <top>
       <HBox styleClass="top-form" stylesheets="@../styling/dashboardDesign.css" BorderPane.alignment="CENTER">
          <BorderPane.margin>
@@ -48,33 +49,39 @@
       </HBox>
    </top>
    <left>
-      <VBox alignment="TOP_CENTER" prefHeight="611.0" styleClass="left-form" stylesheets="@../styling/dashboardDesign.css" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER_LEFT" prefHeight="606.0" prefWidth="237.0" spacing="10.0" styleClass="left-form" stylesheets="@../styling/dashboardDesign.css" BorderPane.alignment="CENTER_LEFT">
          <children>
-            <ImageView fitHeight="143.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+            <ImageView fitHeight="144.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
                <image>
                   <Image url="@../images/userIcon2.png" />
                </image>
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets />
                </VBox.margin>
             </ImageView>
-            <Label alignment="CENTER" maxWidth="-Infinity" prefHeight="43.0" text="Welcome," textFill="WHITE" VBox.vgrow="ALWAYS">
+            <Label maxWidth="1.7976931348623157E308" prefHeight="43.0" prefWidth="240.0" text="Welcome," textFill="WHITE" VBox.vgrow="ALWAYS">
                <font>
                   <Font name="Impact" size="21.0" />
                </font>
                <VBox.margin>
-                  <Insets top="10.0" />
+                  <Insets />
                </VBox.margin>
             </Label>
-            <Label alignment="CENTER" prefHeight="37.0" text="&lt;username&gt;" textFill="WHITE" VBox.vgrow="ALWAYS">
+            <Label fx:id="usernameLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="37.0" text="&lt;username&gt;" textFill="WHITE" VBox.vgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="31.0" />
                </font>
-            </Label>
-            <Line endX="100.0" startX="-130.0" stroke="WHITE" strokeWidth="4.0" VBox.vgrow="ALWAYS" />
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="43.0" styleClass="user-button" stylesheets="@../styling/dashboardDesign.css" text="Users" VBox.vgrow="ALWAYS">
                <VBox.margin>
-                  <Insets left="40.0" right="50.0" top="40.0" />
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Line endX="100.0" startX="-130.0" stroke="WHITE" strokeWidth="4.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></Line>
+            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="43.0" styleClass="side-buttons" stylesheets="@../styling/dashboardDesign.css" text="Users" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
                </VBox.margin>
                <graphic>
                   <ImageView fitHeight="55.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
@@ -84,9 +91,9 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="43.0" text="Friends" VBox.vgrow="ALWAYS">
+            <Button fx:id="friendsBtn" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="43.0" text="Friends" VBox.vgrow="ALWAYS">
                <VBox.margin>
-                  <Insets left="40.0" right="40.0" top="40.0" />
+                  <Insets />
                </VBox.margin>
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
@@ -96,9 +103,21 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="37.0" prefWidth="212.0" text="Sign out" VBox.vgrow="ALWAYS">
+            <Button fx:id="chatBtn" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="43.0" text="Chat">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/chat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
                <VBox.margin>
-                  <Insets top="100.0" />
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="signoutBtn" alignment="TOP_LEFT" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handleSignout" prefHeight="46.0" prefWidth="231.0" text="Sign out" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
                </VBox.margin>
                <font>
                   <Font size="14.0" />
@@ -115,6 +134,9 @@
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
       </VBox>
    </left>
    <center>
@@ -128,14 +150,14 @@
          <children>
             <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="849.0" spacing="50.0" VBox.vgrow="ALWAYS">
                <children>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="1.0" minWidth="1.0" prefHeight="100.0" prefWidth="200.0" styleClass="top-labels" stylesheets="@../styling/dashboardDesign.css" HBox.hgrow="ALWAYS">
+                  <AnchorPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="1.0" minWidth="1.0" prefHeight="100.0" prefWidth="230.0" styleClass="top-labels" stylesheets="@../styling/dashboardDesign.css" HBox.hgrow="ALWAYS">
                      <children>
                         <Label alignment="BOTTOM_CENTER" layoutX="67.0" layoutY="57.0" prefHeight="37.0" prefWidth="173.0" text="Total Users" textFill="WHITE">
                            <font>
                               <Font name="Arial" size="24.0" />
                            </font>
                         </Label>
-                        <Label alignment="TOP_RIGHT" layoutX="153.0" layoutY="14.0" prefHeight="39.0" prefWidth="80.0" text="0" textFill="WHITE">
+                        <Label fx:id="userCount" alignment="TOP_RIGHT" layoutX="153.0" layoutY="14.0" prefHeight="39.0" prefWidth="80.0" text="0" textFill="WHITE">
                            <font>
                               <Font name="Comic Sans MS" size="31.0" />
                            </font>
@@ -147,14 +169,14 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane maxHeight="100.0" maxWidth="1.7976931348623157E308" minHeight="1.0" minWidth="1.0" prefHeight="100.0" prefWidth="200.0" styleClass="top-labels" stylesheets="@../styling/dashboardDesign.css" HBox.hgrow="ALWAYS">
+                  <AnchorPane maxHeight="100.0" maxWidth="1.7976931348623157E308" minHeight="1.0" minWidth="1.0" prefHeight="100.0" prefWidth="238.0" styleClass="top-labels" stylesheets="@../styling/dashboardDesign.css" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label alignment="BOTTOM_CENTER" layoutX="77.0" layoutY="57.0" prefHeight="37.0" prefWidth="173.0" text="Total Ducks" textFill="WHITE">
+                        <Label alignment="BOTTOM_CENTER" layoutX="77.0" layoutY="61.0" prefHeight="37.0" prefWidth="157.0" text="Total Ducks" textFill="WHITE">
                            <font>
                               <Font name="Arial" size="24.0" />
                            </font>
                         </Label>
-                        <Label alignment="TOP_RIGHT" layoutX="156.0" layoutY="14.0" prefHeight="39.0" prefWidth="80.0" text="0" textFill="WHITE">
+                        <Label fx:id="duckCount" alignment="TOP_RIGHT" layoutX="156.0" layoutY="14.0" prefHeight="39.0" prefWidth="80.0" text="0" textFill="WHITE">
                            <font>
                               <Font name="Comic Sans MS" size="31.0" />
                            </font>
@@ -166,14 +188,14 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane maxHeight="100.0" maxWidth="1.7976931348623157E308" minHeight="1.0" minWidth="1.0" prefHeight="100.0" prefWidth="200.0" styleClass="top-labels" stylesheets="@../styling/dashboardDesign.css" HBox.hgrow="ALWAYS">
+                  <AnchorPane maxHeight="100.0" maxWidth="1.7976931348623157E308" minHeight="1.0" minWidth="1.0" prefHeight="100.0" prefWidth="237.0" styleClass="top-labels" stylesheets="@../styling/dashboardDesign.css" HBox.hgrow="ALWAYS">
                      <children>
                         <Label alignment="BOTTOM_CENTER" layoutX="62.0" layoutY="57.0" prefHeight="37.0" prefWidth="173.0" text="Total People" textFill="WHITE">
                            <font>
                               <Font name="Arial" size="24.0" />
                            </font>
                         </Label>
-                        <Label alignment="TOP_RIGHT" layoutX="155.0" layoutY="14.0" prefHeight="39.0" prefWidth="80.0" text="0" textFill="WHITE">
+                        <Label fx:id="peopleCount" alignment="TOP_RIGHT" layoutX="155.0" layoutY="14.0" prefHeight="39.0" prefWidth="80.0" text="0" textFill="WHITE">
                            <font>
                               <Font name="Comic Sans MS" size="31.0" />
                            </font>
@@ -187,32 +209,56 @@
                   </AnchorPane>
                </children>
                <VBox.margin>
-                  <Insets left="10.0" top="10.0" />
+                  <Insets left="20.0" right="20.0" top="10.0" />
                </VBox.margin>
             </HBox>
-            <TableView prefHeight="123.0" prefWidth="543.0" VBox.vgrow="ALWAYS">
+            <TableView fx:id="usersTableView" prefHeight="123.0" prefWidth="543.0" VBox.vgrow="ALWAYS">
               <columns>
-                <TableColumn prefWidth="165.0" text="Username" />
-                <TableColumn prefWidth="193.0" text="Email" />
-                  <TableColumn minWidth="0.0" prefWidth="191.0" text="Friends" />
-                  <TableColumn minWidth="0.0" prefWidth="151.0" text="Type" />
-                  <TableColumn minWidth="0.0" prefWidth="112.0" text="Delete" />
+                <TableColumn fx:id="usernameColumn" prefWidth="165.0" text="Username" />
+                <TableColumn fx:id="emailColumn" prefWidth="193.0" text="Email" />
+                  <TableColumn fx:id="friendsColumn" minWidth="0.0" prefWidth="191.0" text="Friends" />
+                  <TableColumn fx:id="typeColumn" minWidth="0.0" prefWidth="151.0" text="Type" />
               </columns>
                <VBox.margin>
-                  <Insets bottom="50.0" left="20.0" right="20.0" />
+                  <Insets bottom="30.0" left="20.0" right="20.0" />
                </VBox.margin>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
             </TableView>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="810.0" styleClass="user-button" text="Add User">
+            <Pagination fx:id="pagination" prefHeight="42.0" prefWidth="853.0">
                <VBox.margin>
-                  <Insets bottom="20.0" />
+                  <Insets bottom="10.0" />
                </VBox.margin>
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Button>
+            </Pagination>
+            <HBox spacing="20.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="addUserBtn" alignment="CENTER" mnemonicParsing="false" onAction="#handleAdd" prefHeight="50.0" prefWidth="810.0" text="Add User">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="user-button" />
+                        <String fx:value="bottom-buttons" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="deleteUserBtn" alignment="CENTER" mnemonicParsing="false" onAction="#handleDelete" prefHeight="50.0" prefWidth="810.0" text="Delete User">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="user-button" />
+                        <String fx:value="bottom-buttons" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </VBox>
    </center>

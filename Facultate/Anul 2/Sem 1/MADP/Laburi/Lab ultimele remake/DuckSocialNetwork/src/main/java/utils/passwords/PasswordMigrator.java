@@ -1,4 +1,4 @@
-package utils.passwordUtils;
+package utils.passwords;
 
 import utils.database.DbConnection;
 

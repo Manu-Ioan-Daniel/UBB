@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox fx:id="root" alignment="CENTER" prefHeight="360.0" prefWidth="330.0" spacing="10.0" styleClass="form" stylesheets="@../styling/addFormDesign.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddUserFormController">
+   <children>
+      <HBox spacing="10.0">
+         <children>
+            <TextField fx:id="usernameField" minHeight="1.0" minWidth="1.0" prefHeight="40.0" prefWidth="150.0" promptText="Username" stylesheets="@../styling/addFormDesign.css" />
+            <TextField fx:id="emailField" minHeight="1.0" minWidth="1.0" prefHeight="40.0" prefWidth="150.0" promptText="Email" stylesheets="@../styling/addFormDesign.css" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox spacing="10.0">
+         <children>
+            <PasswordField fx:id="passwordField" prefHeight="40.0" prefWidth="150.0" promptText="Password" />
+            <ComboBox fx:id="typeComboBox" prefHeight="40.0" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <StackPane prefHeight="169.0" prefWidth="310.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <VBox fx:id="duckFieldsVBox" alignment="CENTER" spacing="10.0" visible="false">
+               <children>
+                  <ComboBox fx:id="duckTypeComboBox" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="150.0" />
+                  <HBox spacing="10.0">
+                     <children>
+                        <TextField fx:id="resistance" minHeight="1.0" minWidth="1.0" prefHeight="40.0" prefWidth="150.0" promptText="Speed" stylesheets="@../styling/addFormDesign.css" />
+                        <TextField fx:id="speed" minHeight="1.0" minWidth="1.0" prefHeight="40.0" prefWidth="150.0" promptText="Resistance" stylesheets="@../styling/addFormDesign.css" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="personFieldsVBox" alignment="TOP_CENTER" prefHeight="173.0" prefWidth="310.0" spacing="10.0" StackPane.alignment="TOP_CENTER">
+               <children>
+                  <HBox spacing="10.0">
+                     <children>
+                        <TextField fx:id="name" minHeight="1.0" minWidth="1.0" prefHeight="40.0" prefWidth="150.0" promptText="Name" stylesheets="@../styling/addFormDesign.css" />
+                        <TextField fx:id="surname" minHeight="1.0" minWidth="1.0" prefHeight="40.0" prefWidth="150.0" promptText="Surname" stylesheets="@../styling/addFormDesign.css" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <TextField fx:id="occupation" minHeight="1.0" minWidth="1.0" prefHeight="40.0" prefWidth="150.0" promptText="Occupation" stylesheets="@../styling/addFormDesign.css" />
+                        <DatePicker fx:id="date" prefHeight="40.0" prefWidth="150.0" promptText="Date" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Slider fx:id="empathySlider" majorTickUnit="2.0" max="10.0" minorTickCount="1" prefHeight="21.0" prefWidth="310.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <Label prefHeight="21.0" prefWidth="114.0" text="Empathy level" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+      <HBox alignment="CENTER" spacing="10.0">
+         <children>
+            <Button fx:id="addBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAdd" prefHeight="40.0" styleClass="add-button" text="Add" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="closeBtn" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleClose" prefHeight="40.0" styleClass="add-button" text="Close" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets left="10.0" right="10.0" top="20.0" />
+   </padding>
+</VBox>

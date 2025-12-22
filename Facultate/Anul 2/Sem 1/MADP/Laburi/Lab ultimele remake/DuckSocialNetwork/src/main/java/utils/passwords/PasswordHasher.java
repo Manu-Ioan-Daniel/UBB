@@ -1,4 +1,4 @@
-package utils.passwordUtils;
+package utils.passwords;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
@@ -10,10 +10,14 @@ public class PasswordHasher {
     private static final int SALT_LENGTH = 16;
     private static final int ITERATIONS = 10000;
     private static final int KEY_LENGTH = 256;
-    public static byte[] hashPassword(String password,byte[] salt) throws Exception {
-        PBEKeySpec spec = new PBEKeySpec(password.toCharArray(),salt,ITERATIONS,KEY_LENGTH);
-        SecretKeyFactory skf = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
-        return skf.generateSecret(spec).getEncoded();
+    public static byte[] hashPassword(String password,byte[] salt)  {
+        try {
+            PBEKeySpec spec = new PBEKeySpec(password.toCharArray(), salt, ITERATIONS, KEY_LENGTH);
+            SecretKeyFactory skf = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
+            return skf.generateSecret(spec).getEncoded();
+        }catch(Exception e){
+            throw new RuntimeException(e);
+        }
     }
 
     public static boolean verifyPassword(String passwordAttempt, String storedHash) throws Exception{

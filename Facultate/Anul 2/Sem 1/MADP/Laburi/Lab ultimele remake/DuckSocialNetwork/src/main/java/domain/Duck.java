@@ -5,12 +5,12 @@ import enums.DuckType;
 public class Duck extends User {
     private final DuckType type;
     private final Double speed;
-    private final Double rezistance;
-    public Duck(String username, String email, String password, DuckType type, Double speed, Double rezistance) {
+    private final Double resistance;
+    public Duck(String username, String email, String password, DuckType type, Double speed, Double resistance) {
         super(username, email, password);
         this.type = type;
         this.speed = speed;
-        this.rezistance = rezistance;
+        this.resistance = resistance;
     }
 
     public DuckType getType() {
@@ -21,7 +21,7 @@ public class Duck extends User {
         return speed;
     }
 
-    public Double getRezistance() {
-        return rezistance;
+    public Double getResistance() {
+        return resistance;
     }
 }

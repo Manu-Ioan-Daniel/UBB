@@ -16,6 +16,7 @@
     -fx-border-width:2px;
     -fx-background-color: linear-gradient(to bottom, #FFFFFF, #E0E0E0);
 }
+
 .text-field:focused{
     -fx-background-color: transparent;
 }

@@ -1,0 +1,26 @@
+.background{
+    -fx-background-color:#fff;
+    -fx-background-radius:10px;
+    -fx-border-color:#8602FD;
+    -fx-border-radius:10px;
+}
+.button-yes{
+    -fx-background-radius:20px;
+    -fx-background-color:#8602FD;
+    -fx-border-radius:20px;
+    -fx-border-color:#8602DA;
+    -fx-border-width:2px;
+}
+.button-yes:hover{
+    -fx-background-color:#8602DA;
+}
+.button-no{
+    -fx-background-color:#fff;
+    -fx-border-radius:20px;
+    -fx-border-color:#8602FD;
+    -fx-border-width:1px;
+}
+.button-no:hover{
+    -fx-background-color:#e8e9ed;
+    -fx-background-radius:20px;
+}

@@ -1,0 +1,39 @@
+.text-field,
+.button,
+.combo-box{
+    -fx-background-radius:4px;
+    -fx-border-color:linear-gradient(to bottom, #8B1BE4,#031AFC);
+    -fx-border-radius:4px;
+    -fx-border-width:2px;
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #E0E0E0);
+}
+.date-picker:focused{
+    -fx-background-color: transparent;
+}
+.text-field:focused{
+    -fx-background-color: transparent;
+}
+.form{
+    -fx-background-color: white;
+    -fx-border-color:linear-gradient(to bottom, #8B1BE4,#031AFC);
+    -fx-border-width:2px;
+}
+.slider .thumb {
+    -fx-background-color:linear-gradient(to right, #8B1BE4,#031AFC);
+}
+.slider .track {
+    -fx-background-color:linear-gradient(to right, #8B1BE4,#031AFC);
+}
+.add-button{
+    -fx-background-color:linear-gradient(to right, #8B1BE4,#031AFC);
+    -fx-background-radius:10px;
+    -fx-border-radius:10px;
+    -fx-border-color:black;
+}
+.add-button:hover{
+    -fx-background-color: linear-gradient(to right, #8B1BCC,#031ACC);
+    -fx-background-radius:10px;
+}
+.text-field-error{
+    -fx-border-color:red;
+}

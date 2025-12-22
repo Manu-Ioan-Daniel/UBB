@@ -6,8 +6,11 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import models.UserModel;
+import repo.DbUserRepo;
 
 
 public class Main extends Application {
@@ -17,12 +20,12 @@ public class Main extends Application {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/loginWindow.fxml"));
             Parent root = loader.load();
-            LoginController controller = loader.getController();
-            UserModel userModel =new UserModel();
-            controller.setUserModel(userModel);
-            Scene scene = new Scene(root);
 
-            stage.setTitle("Duck Social Network");
+            LoginController controller = loader.getController();
+            UserModel userModel =new UserModel(new DbUserRepo());
+            controller.setUserModel(userModel);
+
+            Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
         }catch(Exception e){
