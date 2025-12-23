@@ -12,25 +12,32 @@ import javafx.stage.StageStyle;
 import models.UserModel;
 import repo.DbUserRepo;
 
+import java.io.IOException;
+
 
 public class Main extends Application {
 
     @Override
     public void start(Stage stage){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/loginWindow.fxml"));
-            Parent root = loader.load();
-
-            LoginController controller = loader.getController();
             UserModel userModel =new UserModel(new DbUserRepo());
-            controller.setUserModel(userModel);
-
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            openLoginWindow(userModel);
+            openLoginWindow(userModel);
         }catch(Exception e){
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
+    }
+    private void openLoginWindow(UserModel userModel) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/loginWindow.fxml"));
+        Parent root = loader.load();
 
+        LoginController controller = loader.getController();
+        controller.setUserModel(userModel);
+
+        Scene scene = new Scene(root);
+
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
     }
 }

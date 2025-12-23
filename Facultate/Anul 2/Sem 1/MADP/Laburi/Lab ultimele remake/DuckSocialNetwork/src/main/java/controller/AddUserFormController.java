@@ -130,6 +130,7 @@ public class AddUserFormController implements Initializable {
         }
         try {
             userModel.addUser(user);
+            ((Stage)root.getScene().getWindow()).close();
         }catch(Exception ex){
             if(errorAlertStage!=null){
                 errorAlertStage.close();

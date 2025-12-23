@@ -27,16 +27,7 @@ public class UsersFormController implements Observer {
     private BorderPane root;
 
     @FXML
-    private Button addUserBtn;
-
-    @FXML
     private Button friendsBtn;
-
-    @FXML
-    private Button signoutBtn;
-
-    @FXML
-    private Button deleteUserBtn;
 
     @FXML
     private Button chatBtn;
