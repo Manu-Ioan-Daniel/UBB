@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "9b5c9281d70a6587",
+        "id": "03730d4df8b05aee",
         "type": "tabs",
         "children": [
           {
-            "id": "857bcb0335960e5e",
+            "id": "506b96ffb23c44cf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teoria Probabilitatilor/14.Valoarea medie a unor variabile aleatoare discrete.md",
+                "file": "Teoria Probabilitatilor/16.Functia de repartitie.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "14.Valoarea medie a unor variabile aleatoare discrete"
-            }
-          },
-          {
-            "id": "d57d779a8364d825",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Teoria Probabilitatilor/22.Statistica matematica(lung).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "22.Statistica matematica(lung)"
+              "title": "16.Functia de repartitie"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -49,19 +34,6 @@
         "id": "dca3c9a3e433bade",
         "type": "tabs",
         "children": [
-          {
-            "id": "7fd4f729ebcb6a5a",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
-            }
-          },
           {
             "id": "a7e791d44f91a9f8",
             "type": "leaf",
@@ -88,8 +60,22 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "94b195ef20dce0b4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -109,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Teoria Probabilitatilor/1.Algoritmi Aleatori.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 1.Algoritmi Aleatori"
+              "title": "Backlinks for Untitled"
             }
           },
           {
@@ -199,28 +185,38 @@
       "custom-sort:Toggle custom sorting": false
     }
   },
-  "active": "d57d779a8364d825",
+  "active": "506b96ffb23c44cf",
   "lastOpenFiles": [
-    "Teoria Probabilitatilor/21. LTNM.md",
-    "Teoria Probabilitatilor/22.Statistica matematica(lung).md",
-    "Teoria Probabilitatilor/18.Varianta unei variabile aleatoare.md",
+    "Untitled.md",
     "Teoria Probabilitatilor/14.Valoarea medie a unor variabile aleatoare discrete.md",
+    "Untitled.base",
+    "Untitled",
+    "2026-01-06.md",
+    "Untitled.canvas",
+    "Untitled 1.base",
+    "Teoria Probabilitatilor/2.Notiuni introductive.md",
+    "Teoria Probabilitatilor/1.Algoritmi Aleatori.md",
+    "Teoria Probabilitatilor/22.Statistica matematica(lung).md",
+    "Teoria Probabilitatilor/21. LTNM.md",
+    "Teoria Probabilitatilor/20. Convergenta aproape sigura.md",
+    "Teoria Probabilitatilor/19.Vectori aleatori continui.md",
+    "Teoria Probabilitatilor/18.Varianta unei variabile aleatoare.md",
+    "Teoria Probabilitatilor/17.Variabile aleatoare continue.md",
+    "Teoria Probabilitatilor/7.Variabile aleatoare.md",
+    "Teoria Probabilitatilor/6.Formula lui Bayes.md",
+    "Teoria Probabilitatilor/5.Probabilitate conditionata.md",
+    "Teoria Probabilitatilor/4.Evenimente independente.md",
+    "Teoria Probabilitatilor/3.Definitia axiomatica a probabilitatilor.md",
     "Teoria Probabilitatilor/15.Multi variabile aleatoare independente.md",
     "Teoria Probabilitatilor/16.Functia de repartitie.md",
-    "Teoria Probabilitatilor/17.Variabile aleatoare continue.md",
-    "Teoria Probabilitatilor/20. Convergenta aproape sigura.md",
     "Teoria Probabilitatilor/8.Distributia de probabilitate.md",
     "Images/Pasted image 20251218150659.png",
     "Teoria Probabilitatilor/Untitled",
-    "Teoria Probabilitatilor/19.Vectori aleatori continui.md",
-    "Teoria Probabilitatilor/7.Variabile aleatoare.md",
-    "Teoria Probabilitatilor/6.Formula lui Bayes.md",
     "Exercitii si exemple/Exemple.md",
     "Exercitii si exemple/Exercitii.md",
     "Teoria Probabilitatilor/13.Clasificarea naiva Bayes.md",
     "Teoria Probabilitatilor/10.Operatii cu variabile aleatoare.md",
     "Teoria Probabilitatilor/9.Variabile aleatoare independente.md",
-    "Teoria Probabilitatilor/4.Evenimente independente.md",
     "Teoria Probabilitatilor/18.Varianta unei variabile aleatoare 1.md",
     "obisidan shortcuts/New Text Document.txt",
     "obisidan shortcuts",
@@ -230,24 +226,14 @@
     "Images/Pasted image 20251215120738.png",
     "Images/Pasted image 20251215120411.png",
     "Formule/Formule.md",
-    "Teoria Probabilitatilor/2.Notiuni introductive.md",
-    "Teoria Probabilitatilor/5.Probabilitate conditionata.md",
-    "Teoria Probabilitatilor/3.Definitia axiomatica a probabilitatilor.md",
-    "Teoria Probabilitatilor/useless stuff(cred)/12.Metoda validarii incrucisate(kinda useless).md",
     "Images/Pasted image 20251214000739.png",
-    "Teoria Probabilitatilor/useless stuff(cred)/11.Metoda bootstrap(kinda useless).md",
     "Teoria Probabilitatilor/useless stuff(cred)",
     "Images/Pasted image 20251213234848.png",
-    "[9.Variabile aleatoare independente.md",
     "Images/Pasted image 20251212180104.png",
     "Images/Pasted image 20251210011203.png",
     "Images/Pasted image 20251212170030.png",
     "Exercitii si exemple",
     "Proiect engleza",
-    "Images",
-    "Exemple/Matematice",
-    "Untitled.base",
-    "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
   ]

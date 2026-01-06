@@ -4,35 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c762a8d-4181-4a7d-b140-1c9194a1201b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/UsersFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/UserModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/passwordUtils/PasswordMigrator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/add-user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/logout.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/man-in-suit-and-tie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/multiple-users-silhouette.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/notes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/rubber-duck.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/three-ducks.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/userIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/userIcon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/styling/dashboardDesign.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/usersForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/database/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/database/DbConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/passwordUtils/PasswordHasher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/passwordUtils/PasswordHasher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styling/loginDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styling/loginDesign.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/loginWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/loginWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/.gradle/8.14/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/.gradle/8.14/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/.gradle/8.14/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/.gradle/8.14/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab ultimele/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab ultimele/build/reports/problems/problems-report.html" afterDir="false" />
-    </list>
+    <list default="true" id="8c762a8d-4181-4a7d-b140-1c9194a1201b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,30 +49,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.DuckSocialNetwork [:main.Main.main()].executor": "Run",
-    "Gradle.DuckSocialNetwork [:utils.passwordUtils.PasswordMigrator.main()].executor": "Run",
-    "Gradle.DuckSocialNetwork [run].executor": "Run",
-    "Gradle.DuckSocialNetwork.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 2/Sem 1/MADP/Laburi/Lab ultimele remake/DuckSocialNetwork/src/main/resources/images",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 2/Sem 1/MADP/Laburi/Lab ultimele remake/DuckSocialNetwork/src/main/java/org/example/Main.java",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.DuckSocialNetwork [:main.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.DuckSocialNetwork [:utils.passwordUtils.PasswordMigrator.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.DuckSocialNetwork [run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.DuckSocialNetwork.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 2/Sem 1/MADP/Laburi/Lab ultimele remake/DuckSocialNetwork/src/main/resources/images&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 2/Sem 1/MADP/Laburi/Lab ultimele remake/DuckSocialNetwork/src/main/java/org/example/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="domain" />
@@ -197,6 +169,7 @@
       <workItem from="1766232087011" duration="698000" />
       <workItem from="1766264740997" duration="15595000" />
       <workItem from="1766306574179" duration="21001000" />
+      <workItem from="1767646166256" duration="10000" />
     </task>
     <servers />
   </component>
