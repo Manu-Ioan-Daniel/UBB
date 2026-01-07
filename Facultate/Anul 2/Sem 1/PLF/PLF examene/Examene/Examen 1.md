@@ -52,7 +52,7 @@ Care este rezultatul evaluării `f([1,2,3,4,5,6,7,8], S)`? Justificați.
 
 ##### Raspuns
 
-Eroare.Cand se ajunge la penultimul element,o sa incerce 0 is S- (penultimul element), ceea ce da o eroare.
+Eroare.Cand se ajunge la ultimul element,o sa incerce 0 is S- (ultimul element), ceea ce da o eroare.
 
 ---
 
