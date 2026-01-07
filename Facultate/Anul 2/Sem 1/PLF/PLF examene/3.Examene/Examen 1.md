@@ -96,7 +96,7 @@ aranjamente(0,Pcur,K,List,[X|Rest]):-
 solutie(P,K,Lista,Rez):-
     findall(Arr, aranjamente(P,1,K,Lista,Arr),Rez).
 ```
-
+#### Model Matematic
 $$
 selecter([x_{1},x_{2},x_{3},\dots x_{n}]) = \begin{cases}
 (E,[x_{2},x_{3},\dots x_{n}]), & \text{ daca } x_{1}=E \\
