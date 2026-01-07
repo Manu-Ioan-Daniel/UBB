@@ -76,7 +76,7 @@ f([H|T], S) :- f(T, S1), S1 is S - H.
 Care este rezultatul evaluării **`f([1,2,3,4,5,6,7,8], S)`**? Justificați răspunsul.
 
 ##### Raspuns
-
+o sa ajunga la 0 is S-8->eroare
 
 
 ---
