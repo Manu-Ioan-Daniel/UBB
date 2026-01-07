@@ -153,7 +153,7 @@ pentru arborele `(a (b (g)) (c (d (e)) (f)))`
 							)
 						) 
 					)
-				    (if cale-copii ; MODIFICARE: IF-ul este acum in interiorul LET
+				    (if cale-copii
 					    (cons (car tree) cale-copii)
 					    nil		
 				    )

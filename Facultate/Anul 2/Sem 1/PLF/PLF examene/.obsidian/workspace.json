@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3.Examene/Examen 5.md",
-                "mode": "source",
+                "file": "3.Examene/Examen 6.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Examen 5"
+              "title": "Examen 6"
             }
           }
         ]
@@ -186,12 +186,12 @@
   "active": "32951a967a8301ce",
   "lastOpenFiles": [
     "3.Examene/Examen 1.md",
+    "3.Examene/Examen 2.md",
     "3.Examene/Examen 3.md",
     "3.Examene/Examen 4.md",
     "3.Examene/Examen 5.md",
-    "3.Examene/Examen 2.md",
-    "1.Combinatorica prolog/Cod.md",
     "3.Examene/Examen 6.md",
+    "1.Combinatorica prolog/Cod.md",
     "2.Teorie-useful/Sintaxa LET.md",
     "2.Teorie-useful/SET  + DEFMACRO.md",
     "2.Teorie-useful/MAP in LISP.md",
