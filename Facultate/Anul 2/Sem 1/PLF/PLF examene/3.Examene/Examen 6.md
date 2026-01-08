@@ -68,4 +68,23 @@ Exemplu: pentru arborele `(a (b (g)) (c (d (e)) (f)))`
 Se dă o listă neliniară. Să se scrie un program LISP pentru determinarea numărului de subliste de la orice nivel pentru care primul atom numeric (la orice nivel) este impar. Prelucrarea se va face folosind o funcție MAP.
 
 #### Exemplu: 
-lista `(A (B 2) (1 C 4) (D 1 (5 F)) ((G 4) 6))` are 3 astfel de subliste: (`1 C 4)` și `(D 1 (5 F))` și `(5 F)`
+ `(A (B 2) (1 C 4) (D 2 (1 F)) ((G 4) 6))` are 3 astfel de subliste: (`1 C 4)` și `(D 1 (5 F))` și `(5 F)`
+```lisp
+(defun primul-par (l)
+  (cond
+    ((null l) 0) 
+    ((and (numberp (car l)) (= 0 (mod (car l) 2))) nil)  
+    ((and (numberp (car l)) (= 1 (mod (car l) 2))) t)
+    ((listp (car l)) (or (primul-par (car l)) (primul-par (cdr l)))) 
+    (t (primul-par (cdr l)))  
+  )
+)
+
+(defun verificare (l)
+  (cond
+    ((atom l) 0)
+    (t (+ (if (primul-par l) 1 0)
+          (apply #'+ (mapcar #'verificare l))))))
+
+```
+

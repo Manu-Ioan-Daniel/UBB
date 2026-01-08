@@ -99,7 +99,6 @@ $$
 (E,[l_{2},l_{3},\dots l_{n}]),& \text{ daca } l_{1} = E \\
 (E,[l_{1} \cup L]) ,& \text{ daca } (E,L) = \text{pick}(T)
 \end{cases}
-
 $$
 $$
 \text{helperPermutations}(L) = \begin{cases}
