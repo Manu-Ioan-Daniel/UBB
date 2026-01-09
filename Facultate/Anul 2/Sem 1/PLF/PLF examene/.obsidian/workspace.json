@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3.Examene/Examen 8.md",
+                "file": "3.Examene/Examen 13.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Examen 8"
+              "title": "Examen 13"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:3.Examene ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -185,19 +185,25 @@
   },
   "active": "32951a967a8301ce",
   "lastOpenFiles": [
-    "3.Examene/Examen 6.md",
-    "3.Examene/Examen 8.md",
-    "3.Examene/Examen 7.md",
-    "3.Examene/Examen 4.md",
-    "3.Examene/Examen 5.md",
+    "3.Examene/Examen 14.md",
+    "3.Examene/Examen 13.md",
+    "3.Examene/Examen 12.md",
+    "3.Examene/Examen 11.md",
     "2.Teorie-useful/Mindfucks.md",
+    "2.Teorie-useful/Lambda in LISP.md",
+    "3.Examene/Examen 8.md",
+    "3.Examene/Examen 4.md",
+    "3.Examene/Examen 3.md",
+    "3.Examene/Examen 1.md",
+    "3.Examene/Examen 10.md",
+    "3.Examene/Examen 6.md",
+    "3.Examene/Examen 9(copie Examen 6).md",
+    "3.Examene/Examen 7.md",
+    "3.Examene/Examen 5.md",
     "2.Teorie-useful/Sintaxa LET.md",
     "2.Teorie-useful/MAP in LISP.md",
     "1.Combinatorica prolog/Cod.md",
     "3.Examene/Examen 2.md",
-    "3.Examene/Examen 1.md",
-    "3.Examene/Examen 3.md",
-    "2.Teorie-useful/Lambda in LISP.md",
     "Teorie-useful/SETF in LISP.md",
     "2.Teorie-useful",
     "1.Combinatorica prolog",

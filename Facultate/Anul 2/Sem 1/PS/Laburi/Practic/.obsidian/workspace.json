@@ -13,28 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Laburi/Lab 2.md",
+                "file": "Laburi/Lab 4.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab 2"
-            }
-          }
-        ]
-      },
-      {
-        "id": "af1b3d5a790879ab",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "2da5a1693a311b91",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Lab 4"
             }
           }
         ]
@@ -199,10 +183,20 @@
       "bases:Create new base": false
     }
   },
-  "active": "d23c385d7d07252c",
+  "active": "393931014dc369c0",
   "lastOpenFiles": [
     "Laburi/Lab 1.md",
     "Laburi/Lab 2.md",
+    "Laburi/Lab 3.md",
+    "Laburi/Lab 4.md",
+    "Images/Pasted image 20260109231907.png",
+    "Images/Pasted image 20260109213243.png",
+    "Images/Pasted image 20260109224757.png",
+    "Images",
+    "Images/Pasted image 20260109213408.png",
+    "Images/Pasted image 20260109213334.png",
+    "Functii importante cu sintaxa/Plot.md",
+    "Functii importante cu sintaxa",
     "Welcome.md",
     "Laburi"
   ]
