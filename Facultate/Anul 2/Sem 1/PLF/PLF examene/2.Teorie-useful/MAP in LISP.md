@@ -48,4 +48,42 @@ Spre deosebire de `MAPCAR` (care ia elementele pe rând), `MAPLIST` aplică func
    (maplist #'(lambda (x) x) '(A B C))
    ;; Rezultat: ((A B C) (B C) (C))
    ```
+### 4.MAPCON 
+
+este o funcție din **LISP** care aplică o funcție pe **toate sublistele succesive (cozile)** unei liste și **concatenează** rezultatele.
+### Definiție intuitivă
+
+👉 `MAPCON` este ca un `MAPCAR`, **dar**:
+
+- nu lucrează pe elemente individuale
+    
+- ci pe **lista curentă + toate cozile ei**
+    
+- iar rezultatele sunt **lipite (concatenate)**, nu puse într-o listă de liste
+    
+
+### Formă generală
+
+`(mapcon functie lista)`
+
+Funcția primește **o listă**, nu un element.
+
+---
+
+### Exemplu simplu
+
+`(mapcon #'list '(1 2 3))`
+
+Pași:
+
+- funcția primește `(1 2 3)` → `( (1 2 3) )`
+    
+- apoi `(2 3)` → `( (2 3) )`
+    
+- apoi `(3)` → `( (3) )`
+    
+
+Rezultat:
+
+`((1 2 3) (2 3) (3))`
 

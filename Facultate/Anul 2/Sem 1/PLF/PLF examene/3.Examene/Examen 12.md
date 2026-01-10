@@ -90,13 +90,16 @@ b) dacă lista este (1 (2 (3))) și $e$ este $A \Rightarrow (1 (2 (3)))$
 		((AND (atom L) (equal L E))
 		  nil
 		)
-		((atom L) L)
+		((atom L) (list L))
 		(t
-		    (mapcar #'(LAMBDA (subL) (elimina subL E)) L)
+		    (list(mapcan #'(LAMBDA (subL) (elimina subL E)) L))
 		)
 	)
 )   
-(print (elimina '(A (B 2) (1 C (C) 4) (1 (6 F)) ((G 4) 6)) 'C))
+(defun eliminaPeBune (L E)
+  (car (elimina L E))
+)
+(print (eliminaPeBune '(A (B 2) (1 C (C) 4) (1 (6 F)) ((G 4) 6)) 'C))
 
 ```
 
