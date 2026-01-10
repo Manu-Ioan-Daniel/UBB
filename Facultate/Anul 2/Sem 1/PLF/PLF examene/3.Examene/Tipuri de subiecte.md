@@ -30,7 +30,6 @@ elimina([H|T],N,NCur,[H|Rez]):-
 
 ```
 
-
 ## Exercitiul 3
 
 ### Enunt 1
@@ -125,6 +124,33 @@ $$
 T(N) = 1 +T(N-1) = 1+1+1+\dots+1 \text{ de N ori} = N \implies \text{complexitate }
 \theta(n)
 $$
+
+## Enunt 3
+
+Suma intre 2 numere scrise sub forma de lista
+
+```lisp
+(defun mate (l l2 p)
+    (cond
+        ((and (null l)(> p 0)) (list p))
+        ((null l) nil)
+        (t  
+          (cons 
+            (mod (+ (car l) (car l2) p) 10)
+            (mate (cdr l) (cdr l2) (floor (+ (car l) (car l2) p) 10))
+          )
+        )
+    )
+        
+)
+
+(defun run(l l2 )
+  (reverse (mate (reverse l) (reverse l2) 0))
+)
+
+(print (run '(9 9 9 9) '(2 3 3 4)))
+```
+
 # Exercitiul 5
 
 ## Enunt 1
