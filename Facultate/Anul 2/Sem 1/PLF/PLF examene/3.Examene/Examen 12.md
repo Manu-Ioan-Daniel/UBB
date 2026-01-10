@@ -135,7 +135,6 @@ Se dă o listă neliniară. Să se scrie un program LISP pentru determinarea num
 (defun chestie(L)
   (cond
   
-    ;((null L) 0)
     ((atom L)
       0
     )
