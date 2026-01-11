@@ -105,7 +105,7 @@ $$
 \text{helperPermutations}(L) = \begin{cases}
 \emptyset,& daca \ L = \emptyset \\
 ([l_{1}],l_{1}),& daca \ L  = [l_{1}] \\
-([H \cup \mathrm{Re}z],H ),& daca \ (Prev,P) = \text{helperPermutations}(\mathrm{Re}z) \ \text{ unde }(H,\mathrm{Re}z) = \text{pick}(L) \text{ si |(Prev - H)|}\leq2
+([H \cup \mathrm{Re}z],H ),& daca \ (\mathrm{Re}z,Prev) = \text{helperPermutations}(\mathrm{Re}st) \ \text{ unde }(H,\mathrm{Re}st) = \text{pick}(L) \text{ si |(Prev - H)|}\leq2
 \end{cases}
 $$
 $$
