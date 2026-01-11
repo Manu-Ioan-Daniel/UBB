@@ -118,23 +118,7 @@ $$
 ### Subiectul III
 
 Un arbore n-ar se reprezintă în LISP astfel: `(nod subarbore1 subarbore2 ...)`. Se cere să se înlocuiască nodurile de pe nivelurile impare din arbore cu o valoare $e$ dată. Nivelul rădăcinii se consideră a fi $0$. Se va folosi o funcție `MAP`.
-```lisp
-(defun inlocuire(tree nivel e)
-	(cond
-		((null tree) nill)
-		(t
-			(cons
-				(if (oddp nivel)e (car tree))
-				(mapcar 
-					#'(LAMBDA (subtree) inlocuire(subtree (+ 1 nivel) e))
-					(cdr tree)
-				)
-			)
-		)
-	)
-)
 
-```
 
 #### Exemplu
 pentru arborele `(a (b (g)) (c (d (e)) (f)))` și $e=h \Rightarrow (a (h (g)) (h (d (h)) (f)))$.
