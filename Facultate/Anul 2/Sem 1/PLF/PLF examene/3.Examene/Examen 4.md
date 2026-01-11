@@ -134,46 +134,7 @@ pentru arborele `(a (b (g)) (c (d (e)) (f)))`
     
 - b) `nod = v` $\Rightarrow$ `()`
 
-```lisp
 
-(defun exista (tree e)
-	(cond
-		((null tree) nil)
-		((eq (car tree) e) t)
-		(t
-			(or (exista (cadr tree) e)
-				(exista (caddr tree) e)
-			)
-		)
-	)
-)
-
-(defun cale(tree e)
-	(cond
-		((null tree) nil)
-		(t
-			(cons
-				(car tree)
-				(if (exista (cadr tree))
-					(mapcar 
-						#'(LAMBDA (subtree)
-							(cale subtree e)
-						)
-						(cadr tree)
-					)
-					(mapcar 
-						#'(LAMBDA (subtree)
-							(cale subtree e)
-						)
-						(caddr tree)
-					)
-				)
-			)
-		)
-	)
-)
-
-```
 #### Rezolvare
 
 ```lisp
@@ -206,6 +167,38 @@ pentru arborele `(a (b (g)) (c (d (e)) (f)))`
 
 (print (Functie '(a (b (g)) (c (d (e)) (f))) 'e))
 
+```
+
+sau
+
+```lisp
+(defun exista (tree e)
+	(cond
+		((null tree) nil)
+		((listp (car tree))
+		  (or (exista (car tree) e) (exista (cdr tree) e))
+		)
+		(t
+		  (if (eq (car tree) e) t (exista (cdr tree) e))
+		)
+	)
+)
+
+(defun cale(tree e)
+	(cond
+		((null tree) nil)
+		((eq (car tree) e) (list (car tree)))
+		((exista tree e)
+		  (cons
+		    (car tree)
+		    (mapcan 
+		      #'(LAMBDA (subtree) (cale subtree e))
+		      (cdr tree)
+		    )
+		  )
+		)
+	)
+)
 ```
 ##### Output
 `(A C D E)`
