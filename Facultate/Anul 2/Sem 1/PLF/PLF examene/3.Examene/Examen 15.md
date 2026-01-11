@@ -140,8 +140,8 @@ $$
 
  \text{replaced(tree,e,nivCurent)} = \begin{cases}
 \text{lista vida},& \text{daca tree este vid} \\
-e\cup L,\text{unde L =}  replaced(l_{2},e,nivCurent+1) \cup replaced(l_{3},e,nivCurent+1),& \text{daca nivCurent \%2 = 1} \\
-l_{1}\cup L,\text{unde L =}  replaced(l_{2},e,nivCurent+1) \cup replaced(l_{3},e,nivCurent+1),& \text{altfel}
+e\cup L,\text{unde L =}  \bigcup_{st \in \text{tree} } replaced(st,e,nivCurent+1) ,& \text{daca nivCurent \%2 = 1} \\
+l_{1}\cup L,\text{unde L =}  \bigcup_{st \in \text{tree} } replaced(st,e,nivCurent+1),& \text{altfel}
 \end{cases}
 
 $$

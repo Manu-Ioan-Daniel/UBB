@@ -22,17 +22,19 @@ Timpul de întârziere în minute al unui student la un examen este o variabilă
 
 ```python
   
-from numpy import exp, mean,linspace  
-from matplotlib.pyplot import hist,plot,grid,show  
-from scipy.stats import expon  
+from numpy import exp, mean, linspace,array,floor  
+from matplotlib.pyplot import hist, plot, grid, show  
+from scipy.stats import expon, randint  
   
-  
-valori = expon.rvs(size = 10000,scale = 2)  
-hist(valori,10,range = (0,10),rwidth = 0.9,density = True)  
-x = linspace(0,10,500)  
-plot(x,expon.pdf(x,scale =2),color = 'red')  
+valori = expon.rvs(size=10000, scale=2)  
+hist(valori, 10, range=(0, 10), rwidth=0.9, density=True)  
+x = linspace(0, 10, 500)  
+plot(x, expon.pdf(x, scale=2), color='red')  
 grid()  
-show()
+show()  
+note_sim = array([randint.rvs(1, 11) - floor(t) for t in valori])  
+print(mean(note_sim >= 5))  
+print(sum([randint.pmf(note,1,11) * expon.cdf(note-4,scale=2) for note in range(5,11)]))
 
 ```
 ---
@@ -58,7 +60,7 @@ from scipy.stats import norm,geom
 from matplotlib.pyplot import hist,show,grid,xticks  
 from numpy import mean  
   
-p = norm.pdf(x = 190,loc = 165,scale = 20)  
+p = 1- norm.cdf(x = 190,loc = 165,scale = 20)  
 X = geom.rvs(p,size = 10000)  
 bin_edges = [k + 0.5 for k in range(0,11)]  
 hist(X,bin_edges,density = True,rwidth = 0.9)  
