@@ -72,7 +72,7 @@ Se dă o listă neliniară. Să se scrie un program LISP pentru determinarea num
 ```lisp
 (defun primul-par (l)
   (cond
-    ((null l) 0) 
+    ((null l) nil) 
     ((and (numberp (car l)) (= 0 (mod (car l) 2))) nil)  
     ((and (numberp (car l)) (= 1 (mod (car l) 2))) t)
     ((listp (car l)) (or (primul-par (car l)) (primul-par (cdr l)))) 

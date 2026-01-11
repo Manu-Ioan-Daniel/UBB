@@ -14,6 +14,7 @@ Fie următoarea definiție de funcție LISP:
 )
 ```
 
+
 Dați o soluție pentru a evita dublul apel **`(FUNCALL F (CAR L))`**. Nu se vor folosi `SET`, `SETQ`, `SETF`.
 
 ##### Raspuns
@@ -100,7 +101,6 @@ Un arbore n-ar se reprezintă în LISP astfel (nod subarbore1 subarbore2). Se ce
 
 #### **Exemplu:** 
 pentru arborele `(a (b (g)) (c (d (e)) (f)))` și $e=h \Rightarrow (a (h (g)) (h (d (h)) (f)))$.
-
 #### Rezolvare
 
 [[Examen 1#Subiectul III]]

@@ -61,6 +61,7 @@ A doua clauza se executa mereu,si din cauza cut ului,nu va intra niciodata pe a 
 ### Subiectul II
 
 Pentru o valoare **N** dată, să se genereze lista permutărilor cu elementele $N, N+1, \dots, 2N-1$ având proprietatea că valoarea absolută a diferenței dintre două valori consecutive din permutare este $\leq 2$. Se vor scrie modelele matematice și modelele de flux pentru predicatele folosite.
+
 #### Rezolvare
 
 ```prolog
@@ -92,7 +93,7 @@ intervalToList(N,I,[I|Rez]):-
     intervalToList(N,I1,Rez).
 
 ```
-#### Model Matematic
+##### Model Matematic
 
 $$
 \text{pick}([l_{1},l_{2},\dots l_{n}]) = \begin{cases}
@@ -132,6 +133,47 @@ pentru arborele `(a (b (g)) (c (d (e)) (f)))`
 - a) `nod = e` $\Rightarrow$ `(a c d e)`
     
 - b) `nod = v` $\Rightarrow$ `()`
+
+```lisp
+
+(defun exista (tree e)
+	(cond
+		((null tree) nil)
+		((eq (car tree) e) t)
+		(t
+			(or (exista (cadr tree) e)
+				(exista (caddr tree) e)
+			)
+		)
+	)
+)
+
+(defun cale(tree e)
+	(cond
+		((null tree) nil)
+		(t
+			(cons
+				(car tree)
+				(if (exista (cadr tree))
+					(mapcar 
+						#'(LAMBDA (subtree)
+							(cale subtree e)
+						)
+						(cadr tree)
+					)
+					(mapcar 
+						#'(LAMBDA (subtree)
+							(cale subtree e)
+						)
+						(caddr tree)
+					)
+				)
+			)
+		)
+	)
+)
+
+```
 #### Rezolvare
 
 ```lisp

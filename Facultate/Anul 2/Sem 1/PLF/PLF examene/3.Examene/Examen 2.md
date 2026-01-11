@@ -57,7 +57,6 @@ O sa afiseze o eroare pentru ca stack ul o sa ramana fara memorie,deoarece o sa 
 ### Subiectul II
 
 Să se scrie un program PROLOG care generează lista submulțimilor cu **N** elemente din mulțimea **[A, B]** (A, B numere întregi, $A < B$), astfel încât suma elementelor dintr-o submulțime să fie număr par. Se vor scrie modelele matematice și de flux pentru predicatele folosite.
-
 #### **Exemplu:** 
 pentru lista $A=1, B=4$ și $N=2 \Rightarrow [[1,3], [2,4]]$
 
@@ -124,6 +123,7 @@ pentru arborele `(a (b (g)) (c (d (e)) (f)))`
 - a) $k=2 \Rightarrow (g \ d \ f)$
     
 - b) $k=5 \Rightarrow ()$
+
 #### Rezolvare
 
 ```lisp

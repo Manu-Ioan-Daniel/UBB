@@ -2,9 +2,7 @@
 
 Fie L o listă numerică și următoarea definiție de predicat `f(list, integer, integer)` având modelul de flux `(i, i, o)`:
 
-Prolog
-
-```
+```prolog
 f([], _, 0).
 f([H|T], V, P):- !,H > V , f(T, V, P1), P = P1 * H.
 f([_|T], V, P):- f(T, V, P).
