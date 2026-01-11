@@ -138,34 +138,29 @@ pentru arborele `(a (b (g)) (c (d (e)) (f)))`
 #### Rezolvare
 
 ```lisp
-(DEFUN Functie (tree nod)
-	(cond
-		((null tree) nil)	
-		(t
-			(if (eq (car tree) nod)
-				(list nod) 
-				(let 
-					(
-						(cale-copii 
-							(mapcan
-								#'(LAMBDA (subtree)
-									(Functie subtree nod)
-								)
-								(cdr tree)
-							)
-						) 
-					)
-				    (if cale-copii
-					    (cons (car tree) cale-copii)
-					    nil		
-				    )
-        ) 
-			)
-		)
-	)
+(defun cale(tree e)
+  (cond
+    ((null tree) nil)
+    ((eq (car tree) e) (list (car tree)))
+    (t
+      (let
+        (
+          (cale-copii 
+            (mapcan 
+              #'(LAMBDA (subtree) (cale subtree e))
+              (cdr tree)
+            )
+          )
+        )
+         (if cale-copii
+            (cons (car tree) cale-copii)
+            nil
+          )
+      )
+    )
+  )
 )
-
-(print (Functie '(a (b (g)) (c (d (e)) (f))) 'e))
+(print (cale '(a (b (g)) (c (d (e)) (f))) 'e))
 
 ```
 

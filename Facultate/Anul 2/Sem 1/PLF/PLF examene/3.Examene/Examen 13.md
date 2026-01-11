@@ -62,25 +62,27 @@ select([H|T],X,[H|Rez]):-
 	select(T,X,Rez).
 
 
-aranjamente_aux(_,0,[],_,_):-!.
+aranjamente_aux(_,0,_,_,_,[]).
 
-aranjamente_aux(L,K,[X|Rez],Prev,0):-
-	K>0,
-	K1 is K-1,
-	select(L,X,List),
-        (Prev = -1 -> aranjamente_aux(List,K1,Rez,X,0);
-        R is X-Prev,R>0,aranjamente_aux(List,K1,Rez,X,R)).
-
-aranjamente_aux(L,K,[X|Rez],Prev,R):-
+aranjamente_aux(L,K,2,Prev,R,[X|Rez]):-
 	K>0,
 	R \= 0,
 	select(L,X,List),
 	K1 is K-1,
 	R is X-Prev,
-	aranjamente_aux(List,K1,Rez,X,R).
+	aranjamente_aux(List,K1,2,Prev,R,Rez).
+aranjamente_aux(L,K,State,Prev,R,[X|Rez]):-
+	K>0,
+	K1 is K-1,
+	select(L,X,List),
+	State\=2,
+        (State = 0 -> aranjamente_aux(List,K1,1,X,R,Rez);
+        R is X-Prev,R>0,aranjamente_aux(List,K1,2,X,R,Rez)).
+
 
 aranjamente(L,K,Rez):-
-	findall(A,aranjamente_aux(L,K,A,-1,0),Rez).
+	findall(A,aranjamente_aux(L,K,0,_,_,A),Rez).
+
 
 ```
 
