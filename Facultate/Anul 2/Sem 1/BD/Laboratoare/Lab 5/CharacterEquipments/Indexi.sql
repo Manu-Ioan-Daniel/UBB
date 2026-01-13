@@ -1,0 +1,3 @@
+CREATE NONCLUSTERED INDEX IX_CharacterEquipments_Character ON CharacterEquipments(CharacterID);
+CREATE NONCLUSTERED INDEX IX_CharacterEquipments_Equipment ON CharacterEquipments(EquipmentID);
+GO
