@@ -1,0 +1,12 @@
+CREATE FUNCTION dbo.isValidID
+(
+    @ID INT
+)
+RETURNS BIT
+AS
+BEGIN
+    IF @ID<=0 OR @ID IS NULL
+        RETURN 0;
+    RETURN 1;
+END;
+GO
