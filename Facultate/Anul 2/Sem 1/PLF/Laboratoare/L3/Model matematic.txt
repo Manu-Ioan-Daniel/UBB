@@ -1,0 +1,9 @@
+maxim([l1 l2 ... ln], maxCur)   = 	max daca lista este vida
+					maxim([l2 l3 ... ln], max(l1,maxCur),daca l1 este un numar,
+					maxim ([l2 l3 ... ln],max),altfel
+
+aplatizare([l1 l2 ... ln]) = 	lista vida daca l este vida
+				[L],daca l este un atom,
+				aplatizare(l1) U aplatizare (l2) U ... U aplatizare(ln),altfel
+
+maxim_neliniara(lista) = maxim(aplatizare(lista), -100)

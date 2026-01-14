@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teoria Probabilitatilor/17.Variabile aleatoare continue.md",
+                "file": "Teoria Probabilitatilor/22.Statistica matematica(lung).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "17.Variabile aleatoare continue"
+              "title": "22.Statistica matematica(lung)"
             }
           }
         ]
@@ -187,9 +187,19 @@
   },
   "active": "506b96ffb23c44cf",
   "lastOpenFiles": [
-    "Teoria Probabilitatilor/8.Distributia de probabilitate.md",
-    "Teoria Probabilitatilor/18.Varianta unei variabile aleatoare.md",
     "Teoria Probabilitatilor/17.Variabile aleatoare continue.md",
+    "Teoria Probabilitatilor/1.Algoritmi Aleatori.md",
+    "Formule/Formule.md",
+    "Teoria Probabilitatilor/22.Statistica matematica(lung).md",
+    "Teoria Probabilitatilor/20. Convergenta aproape sigura.md",
+    "Teoria Probabilitatilor/23.Intervale de inceredere si teste statistice.md",
+    "Teoria Probabilitatilor/21. LTNM.md",
+    "Images/Pasted image 20260114143141.png",
+    "Images/Pasted image 20260114142913.png",
+    "Teoria Probabilitatilor/18.Varianta unei variabile aleatoare.md",
+    "Teoria Probabilitatilor/19.Vectori aleatori continui.md",
+    "Images/Pasted image 20260114142056.png",
+    "Teoria Probabilitatilor/8.Distributia de probabilitate.md",
     "Teoria Probabilitatilor/7.Variabile aleatoare.md",
     "Teoria Probabilitatilor/9.Variabile aleatoare independente.md",
     "Teoria Probabilitatilor/16.Functia de repartitie.md",
@@ -197,15 +207,9 @@
     "Teoria Probabilitatilor/14.Valoarea medie a unor variabile aleatoare discrete.md",
     "Teoria Probabilitatilor/3.Definitia axiomatica a probabilitatilor.md",
     "Teoria Probabilitatilor/2.Notiuni introductive.md",
-    "Teoria Probabilitatilor/1.Algoritmi Aleatori.md",
     "Teoria Probabilitatilor/useless stuff(cred)/11.Metoda bootstrap(kinda useless).md",
     "Teoria Probabilitatilor/useless stuff(cred)/12.Metoda validarii incrucisate(kinda useless).md",
-    "Teoria Probabilitatilor/22.Statistica matematica(lung).md",
-    "Teoria Probabilitatilor/21. LTNM.md",
-    "Teoria Probabilitatilor/20. Convergenta aproape sigura.md",
-    "Teoria Probabilitatilor/19.Vectori aleatori continui.md",
     "Teoria Probabilitatilor/13.Clasificarea naiva Bayes.md",
-    "Untitled.md",
     "Untitled.base",
     "Untitled",
     "2026-01-06.md",
@@ -218,7 +222,6 @@
     "Teoria Probabilitatilor/Untitled",
     "Exercitii si exemple/Exemple.md",
     "Exercitii si exemple/Exercitii.md",
-    "Teoria Probabilitatilor/10.Operatii cu variabile aleatoare.md",
     "obisidan shortcuts/New Text Document.txt",
     "obisidan shortcuts",
     "New folder",
@@ -229,9 +232,6 @@
     "Images/Pasted image 20251214000739.png",
     "Teoria Probabilitatilor/useless stuff(cred)",
     "Images/Pasted image 20251213234848.png",
-    "Images/Pasted image 20251212180104.png",
-    "Images/Pasted image 20251210011203.png",
-    "Images/Pasted image 20251212170030.png",
     "Exercitii si exemple",
     "Proiect engleza",
     "Untitled 2.canvas",
