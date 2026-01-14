@@ -1,4 +1,4 @@
-CREATE TRIGGER dbo.characterEquipmentsTrigger
+CREATE OR ALTER TRIGGER dbo.characterEquipmentsTrigger
 ON CharacterEquipments
 AFTER UPDATE, DELETE
 AS

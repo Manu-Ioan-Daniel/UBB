@@ -7,6 +7,7 @@ DELETE FROM EquipmentCategories;
 DELETE FROM Players;
 DELETE FROM Currencies;
 DELETE FROM Raids;
+DELETE FROM Guilds;
 
 DBCC CHECKIDENT ('Players', RESEED, 0);
 DBCC CHECKIDENT ('Characters', RESEED, 0);
@@ -14,6 +15,7 @@ DBCC CHECKIDENT ('Currencies', RESEED, 0);
 DBCC CHECKIDENT ('Raids', RESEED, 0);
 DBCC CHECKIDENT ('EquipmentCategories', RESEED, 0);
 DBCC CHECKIDENT ('Equipments', RESEED, 0);
+DBCC CHECKIDENT ('Guilds', RESEED, 0);
 
 INSERT INTO Players (PlayerUsername, PlayerPassword, PlayerCreationDate)
 SELECT 
@@ -42,6 +44,14 @@ VALUES
     ('Raid8','Legendary',50),
     ('Raid9','Mythic',100),
     ('Raid10','Mythic',100);
+
+INSERT INTO Guilds (GuildName, GuildCreationDate)
+VALUES
+    ('Guild Alpha', GETDATE()),
+    ('Guild Beta', GETDATE()),
+    ('Guild Gamma', GETDATE()),
+    ('Guild Delta', GETDATE()),
+    ('Guild Omega', GETDATE());
 
 INSERT INTO Characters (PlayerID, CharacterName, GuildID, Class, GuildRole, GuildJoinDate)
 SELECT 

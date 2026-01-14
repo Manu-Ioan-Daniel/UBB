@@ -7,7 +7,8 @@ EXEC dbo.createCharacterEquipment
     @CharacterID = 1, 
     @EquipmentID = 1, 
     @Result = @Result OUTPUT;
-SELECT 'CREATE CharacterEquipment Result:' AS Operation, @Result AS Status;
+
+SELECT * FROM CharacterEquipments
 
 EXEC dbo.readCharacterEquipment @CharacterID = 1, @EquipmentID = 1;
 
@@ -37,6 +38,8 @@ EXEC dbo.createCharacter
     @Result = @CharResult OUTPUT;
 SELECT 'CREATE Character Result:' AS Operation, @CharResult AS Status;
 
+SELECT * FROM Characters
+
 EXEC dbo.readCharacter @CharacterID = 1;
 
 DECLARE @CharResult2 INT;
@@ -63,6 +66,8 @@ EXEC dbo.createEquipment
     @EquipmentCategoryID = 1,
     @Result = @EquipResult OUTPUT;
 SELECT 'CREATE Equipment Result:' AS Operation, @EquipResult AS Status;
+
+SELECT * FROM Equipments
 
 EXEC dbo.readEquipment @EquipmentID = 1;
 
