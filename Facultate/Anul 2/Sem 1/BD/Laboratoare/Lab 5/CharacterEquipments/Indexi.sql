@@ -1,25 +1,17 @@
 CREATE NONCLUSTERED INDEX IX_CharacterEquipments_Character ON CharacterEquipments(CharacterID,EquipmentID);
 GO
-CREATE NONCLUSTERED INDEX IX_Characters_CharacterName
-ON Characters(CharacterName);
+
+CREATE NONCLUSTERED INDEX IX_Characters_Player ON Characters(PlayerID);
 GO
 
-CREATE NONCLUSTERED INDEX IX_Characters_PlayerID
-ON Characters(PlayerID);
+CREATE NONCLUSTERED INDEX IX_Characters_CharacterID ON Characters(CharacterID);
 GO
 
-CREATE NONCLUSTERED INDEX IX_Equipments_EquipmentName
-ON Equipments(EquipmentName);
+CREATE NONCLUSTERED INDEX IX_Equipments_Name ON Equipments(EquipmentName);
 GO
 
-CREATE NONCLUSTERED INDEX IX_Equipments_EquipmentCategoryID
-ON Equipments(EquipmentCategoryID);
-GO
 
-SELECT * FROM dbo.characterList;
 SELECT * FROM dbo.characterCount;
-SELECT * FROM dbo.equipmentList;
-SELECT * FROM dbo.equipmentCount;
-SELECT * FROM dbo.characterEquipmentCount;
+SELECT * FROM equipmentNames;
 SELECT * FROM dbo.characterEquipmentCount;
 GO

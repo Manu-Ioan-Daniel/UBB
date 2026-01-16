@@ -36,14 +36,12 @@ FROM Characters
 GROUP BY PlayerID;
 GO
 
-CREATE VIEW dbo.equipmentList
+
+
+CREATE VIEW dbo.equipmentNames
 AS
 SELECT
-    EquipmentID,
-    EquipmentName,
-    EquipmentRarity,
-    EquipmentSlot,
-    EquipmentCategoryID
+    EquipmentName
 FROM Equipments;
 GO
 

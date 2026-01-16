@@ -191,6 +191,7 @@ BEGIN
         SET @Result = -1;
         RETURN;
     END
+
     SET @Result = 1;
 END;
 GO
