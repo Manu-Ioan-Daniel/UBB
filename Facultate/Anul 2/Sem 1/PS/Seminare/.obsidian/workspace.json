@@ -1,0 +1,201 @@
+{
+  "main": {
+    "id": "a4ba3fd984c94c99",
+    "type": "split",
+    "children": [
+      {
+        "id": "aaf287b2d6a15465",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c6c4e27b392fde11",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Seminarul 2/Seminarul_2.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Seminarul_2"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bbd0aabdec4a9f18",
+    "type": "split",
+    "children": [
+      {
+        "id": "90a47480a110e986",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8f94e5011037f752",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "75ac7468c24be52d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b1d826ba62e26d2a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d6c906765f9bf1ff",
+    "type": "split",
+    "children": [
+      {
+        "id": "02d1522e77e186b3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c19f7bfee27f4e44",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Seminarul 2/Seminarul_2.pdf",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Seminarul_2"
+            }
+          },
+          {
+            "id": "8b8bfbb594560b55",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Seminarul 2/Seminarul_2.pdf",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Seminarul_2"
+            }
+          },
+          {
+            "id": "f4efa7aff41da624",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0975742bfefd49a7",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "4b761fd00461aef3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Seminarul 2/Seminarul_2.pdf",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Seminarul_2"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "c6c4e27b392fde11",
+  "lastOpenFiles": [
+    "Seminarul 1/Seminarul_1.pdf",
+    "Seminarul 2/Seminarul_2.pdf",
+    "Seminarul 3/Seminarul_3.pdf",
+    "Seminarul 4/Seminarul_4.pdf",
+    "Seminarul 5/Seminarul_5.pdf",
+    "Seminarul 6/Seminarul_6.pdf",
+    "Seminarul 6/Rezolvare exercitii.md",
+    "Seminarul 7/Rezolvare exercitii.md",
+    "Seminarul 7/Seminarul_7.pdf",
+    "Pasted image 20260117160848.png",
+    "Seminarul 7",
+    "Seminarul 6",
+    "Seminarul 5",
+    "Seminarul 4"
+  ]
+}

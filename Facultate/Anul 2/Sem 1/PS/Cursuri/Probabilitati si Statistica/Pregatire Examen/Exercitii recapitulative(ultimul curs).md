@@ -122,3 +122,95 @@ $$
 $$
 P(T>2) =\frac{4}{10} \cdot  \int_{2}^{5} \frac{1}{4} \, dt + \frac{6}{10} \cdot  \int_{2}^{3} \frac{1}{2} \, dt = \frac{3}{5}   =1-P(T<2) = 1-\frac{2}{5}
 $$
+
+### Exericitul 5
+
+O tombolă are 2 bilete câștigătoare și 8 bilete necâștigătoare. Se extrag succesiv 3 bilete (fără returnare).
+
+**a)** $P(\text{"nu s-a extras niciun bilet câștigător"}) = ?;$
+
+**b)** Fie $X$ v.a. (variabila aleatorie) care indică numărul de bilete câștigătoare extrase. Să se calculeze 
+$E(X)$.
+
+$$
+a) \frac{8}{10} \cdot  \frac{7}{9} \cdot  \frac{6}{8}
+$$
+$$
+b) P(X = k) = \frac{C_{2}^{k} \cdot C_{8}^{3-k}}{C_{10}^{3}} ,\text{ unde k = } \overline {0,2} \implies E(X) = 0 \cdot  P(X = 0) + 1\cdot P(X = 1) + 2\cdot P(X = 2) = \dots
+$$
+
+### Exericitul 6
+
+Se studiază caracteristica: timpul de producție a unui anumit produs. Această caracteristică se presupune a fi normal distribuită și s-a realizat un eșantion cu 25 de valori (în minute). Pe baza acestora s-a obținut o valoare medie de 8.1 minute și o abatere standard de 1.6 minute. Construiți intervale de încredere 95% bilaterale pentru: **a)** abaterea standard a timpului de prelucrare; **b)** media timpului de prelucrare. Conform normelor de producție timpul de prelucrare ar trebui să fie cel mult 8.6 minute, iar abaterea standard cel mult 2 minute. În baza datelor statistice, se poate concluziona că normele de producție sunt îndeplinite?
+
+|**x**|**0.02**|**0.025**|**0.04**|**0.05**|**0.95**|**0.96**|**0.975**|**0.995**|
+|---|---|---|---|---|---|---|---|---|
+|**norm.ppf($x, 0, 1$)**|-2.05|-1.96|-1.75|-1.64|1.64|1.75|1.96|2.58|
+|**t.ppf($x, 24$)**|-2.17|-2.06|-1.83|-1.71|1.71|1.83|2.06|2.8|
+|**chi2.ppf($x, 24$)**|11.992|12.4|13.35|13.85|36.42|37.39|39.36|45.6|
+
+$$
+\overline {X_{25}} = 8.1;S_{n} =1.6;\alpha = 0.05
+$$
+$$
+\text{un interval de incredere bilateral pentru abaterea standard este : } \left( \sqrt \frac{n-1}{c_{1-\frac{\alpha}{2}}} \cdot S_{n},  \sqrt \frac{n-1}{c_{\frac{\alpha}{2}}} \cdot  S_{n}  \right)  = \left( \sqrt \frac{24}{c_{0.975}} \cdot  1.6, \sqrt{ \frac{24}{c_{0.025}} } \cdot  1.6\right)
+$$
+$$
+\text{un interval de incredere pentru media timpului de prelucrare este:}
+$$
+$$
+\left( \overline {X_{n}} -\frac{S_{n}}{\sqrt{ n }} \cdot  t_{1-\frac{\alpha}{2}}, \overline {X_{n}} + \frac{S_{n}}{\sqrt{ n }} \cdot  t_{1-\frac{\alpha}{2}} \right) = \left( 8.1 - \frac{1.6}{5} \cdot t_{0.975},8.1 + \frac{1.6}{5} \cdot  t_{0.975} \right) = \dots
+$$
+
+### **Exercițiul 7**
+
+Pentru ce valoare a constantei $c \in \mathbb{R}$ funcția $f : \mathbb{R} \to \mathbb{R}$ definită prin
+
+$$f(x) = \begin{cases} cx & : 0 \leq x \leq 3, \\ c(6 - x) & : 3 < x \leq 6, \\ 0 & : \text{altfel} \end{cases}$$
+
+este funcție de densitate a unei v.a. $X$?
+
+Să se determine funcția de repartiție a v.a. $X$. Fie evenimentele $A = \{X < 3\}$ și $B = \{\frac{3}{2} \leq X \leq \frac{9}{2}\}$. Să se calculeze $P(A \cap B)$, $P(A|B)$ și $P(A \cup \bar{B})$.
+
+$$
+\text{f este functie de densitate a lui X} \iff \int_{-\infty}^{\infty} f(t) \, dt = 1 \iff \int_{0}^{3} ct \, dt + \int_{3}^{6}  c(6-t) \, dt  = 1 \iff \frac{9c}{2} + 18c - 18c + \frac{9c}{2} \iff 9c = 1 \iff c = \frac{1}{9}
+$$
+$$
+f(x)\geq0 \iff \begin{cases}
+\frac{1}{9}x\geq0, & 0\leq x \leq3 \\
+\frac{1}{9}(6-x)\geq0, & 3<x\leq6  \\
+0\geq0, & altfel
+\end{cases} \text{ adevarat}
+$$
+$$
+\text{deci,cum} \ f(x) \geq0 \ \forall x \in \mathbb{R} \text{ si } \int_{-\infty}^{\infty} f(t) \, dt = 1,\text{ f este functie de densitate} 
+$$
+$$
+F(X) = \int_{-\infty}^{x} f(t) \, dt  = \begin{cases}
+\int_{-\infty}^{0} 0 \, dt, & x<0  \\
+F(0) + \int_{0}^{x}f(t)  \, dt, & 0\leq x\leq3 \\
+F(3) + \int_{3}^{x}  f(t)\, dt , & 3<x\leq6 \\
+F(6), & x>6
+\end{cases}
+= \begin{cases}
+0, & x<0  \\
+\frac{x^{2}}{18}, & 0\leq x\leq3 \\
+\frac{1}{2} + \frac{2}{3}(x-3) - \frac{x^{2}}{18} + \frac{1}{2}, & 3<x\leq6 \\
+1, & x>6
+\end{cases}
+$$
+
+$$
+P\left( X<3 \cap \frac{3}{2}\leq X\leq \frac{9}{2} \right) = P\left( \frac{3}{2}\leq X < 3 \right) = F(3) - F\left( \frac{3}{2} \right) = \frac{1}{2} - \frac{1}{8} = \frac{3}{8}
+$$
+$$
+P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{\frac{3}{8}}{F\left( \frac{9}{2} \right) - F\left( \frac{3}{2} \right)} = \frac{3}{8} \cdot  \frac{4}{3} = \frac{1}{2}
+$$
+$$
+P(A \cup \overline {B}) = P(A) + P(\overline {B}) - P(A \cap \overline {B}) = \frac{1}{2} + 1 -\frac{3}{4} - P(A \cap \overline {B}) = \frac{3}{4} - \frac{1}{8} = \frac{5}{8}
+$$
+$$
+P(A \cap B) + P(A \cap \overline {B}) = P(A) \implies P(A\cap \overline {B}) = P(A) - P(A\cap B) = \frac{1}{2} - \frac{3}{8} = \frac{1}{8}
+$$
+
+
