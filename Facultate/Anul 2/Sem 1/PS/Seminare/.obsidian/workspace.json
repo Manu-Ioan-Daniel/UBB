@@ -11,12 +11,14 @@
             "id": "c6c4e27b392fde11",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Seminarul 2/Seminarul_2.pdf"
+                "file": "Seminarul 6/Rezolvare exercitii.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Seminarul_2"
+              "icon": "lucide-file",
+              "title": "Rezolvare exercitii"
             }
           }
         ]
@@ -183,19 +185,18 @@
   },
   "active": "c6c4e27b392fde11",
   "lastOpenFiles": [
-    "Seminarul 1/Seminarul_1.pdf",
+    "Seminarul 7/Rezolvare exercitii.md",
+    "Seminarul 5/Seminarul_5.pdf",
+    "Seminarul 6/Rezolvare exercitii.md",
+    "Seminarul 7/Seminarul_7.pdf",
     "Seminarul 2/Seminarul_2.pdf",
+    "Seminarul 1/Seminarul_1.pdf",
     "Seminarul 3/Seminarul_3.pdf",
     "Seminarul 4/Seminarul_4.pdf",
-    "Seminarul 5/Seminarul_5.pdf",
     "Seminarul 6/Seminarul_6.pdf",
-    "Seminarul 6/Rezolvare exercitii.md",
-    "Seminarul 7/Rezolvare exercitii.md",
-    "Seminarul 7/Seminarul_7.pdf",
     "Pasted image 20260117160848.png",
     "Seminarul 7",
     "Seminarul 6",
-    "Seminarul 5",
-    "Seminarul 4"
+    "Seminarul 5"
   ]
 }
