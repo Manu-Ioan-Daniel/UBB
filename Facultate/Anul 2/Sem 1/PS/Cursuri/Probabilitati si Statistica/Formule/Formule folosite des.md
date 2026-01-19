@@ -20,6 +20,9 @@ $$
 $$
 6.P(A\cap B|C) = P(A|C) + P(B|C) \text{ daca A si B sunt conditional independente}
 $$
+$$
+7.P(A\setminus B) = P(A) -P(A \cap B)
+$$
 
 ## Formule la variabile aleatoare discrete
 
