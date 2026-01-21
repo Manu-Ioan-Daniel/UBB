@@ -1,6 +1,7 @@
 package services;
 
 import enums.ChangeEvent;
+import exceptions.ServiceException;
 import models.Notification;
 import repo.NotificationRepo;
 import utils.observer.Observable;
@@ -15,6 +16,9 @@ public class NotificationService extends Observable {
     }
 
     public void save(Notification notification) {
+        if(repo.findOne(notification.getId()).isPresent()) {
+            throw new ServiceException("Notification already exists");
+        }
         repo.save(notification);
         notifyObservers(ChangeEvent.NOTIFICATION);
     }

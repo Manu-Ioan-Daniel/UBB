@@ -26,4 +26,8 @@ public class MainService {
     public List<Notification> getAllNotifications() {
         return notificationService.getAllNotifications();
     }
+
+    public List<String> getUsernames() {
+        return List.of("user1", "user2", "user3");
+    }
 }

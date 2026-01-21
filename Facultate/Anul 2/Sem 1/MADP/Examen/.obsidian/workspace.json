@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "ed0e6bd12de832f4",
+    "id": "d0a0f91e4c336ae8",
     "type": "split",
     "children": [
       {
-        "id": "e1c00dcd17a46671",
+        "id": "0c526d64438f7f50",
         "type": "tabs",
         "children": [
           {
-            "id": "c36af8c514b2c42a",
+            "id": "a2846b16ae9b1251",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teorema lui Cezaro-Stolz.md",
+                "file": "Teorie/Genericitate.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Teorema lui Cezaro-Stolz"
+              "title": "Genericitate"
             }
           }
         ]
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "8b946454684ab613",
+    "id": "78dbdbd458cd718d",
     "type": "split",
     "children": [
       {
-        "id": "716c3c8cf34d6616",
+        "id": "823a625044b9fe58",
         "type": "tabs",
         "children": [
           {
-            "id": "774e93c74ab6f354",
+            "id": "8d2cc0dd8c7fb6d1",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "039e72725929bcf2",
+            "id": "d0d3ceb011497d08",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "74e4590f6c2c41b3",
+            "id": "afdb8456dae43c73",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,20 +81,19 @@
     "width": 300
   },
   "right": {
-    "id": "9dabf05ac9431ab1",
+    "id": "4b257f9ef0bd00fb",
     "type": "split",
     "children": [
       {
-        "id": "6b03a1ad0c4a745d",
+        "id": "b3fd0e80edd98af3",
         "type": "tabs",
         "children": [
           {
-            "id": "2d38a9a5742189d8",
+            "id": "e1855bd4691954c8",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Formule generale care le a uitat edi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +103,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Formule generale care le a uitat edi"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "5ed96cfd2f6b51f4",
+            "id": "cfe099b3f3566f8a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Formule generale care le a uitat edi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Formule generale care le a uitat edi"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "3d4f89ad0d98d4ad",
+            "id": "7c50b1a0c2612f3b",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,7 +135,7 @@
             }
           },
           {
-            "id": "560d4b532b5538ec",
+            "id": "7279d8211665b366",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -151,18 +149,18 @@
             }
           },
           {
-            "id": "babbf46c72d5b839",
+            "id": "de35371771ca4631",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Formule generale care le a uitat edi.md",
+                "file": "Welcome.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Formule generale care le a uitat edi"
+              "title": "Outline of Welcome"
             }
           }
         ]
@@ -183,13 +181,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "c36af8c514b2c42a",
+  "active": "a2846b16ae9b1251",
   "lastOpenFiles": [
-    "Formule generale care le a uitat edi.md",
-    "Limite.md",
-    "Teorema lui Cezaro-Stolz.md",
-    "Untitled.md",
-    "Welcome.md",
-    "Teorema lui Cezaro-Stolz"
+    "Teorie/Concepte OOP de baza.md",
+    "Teorie/Genericitate.md",
+    "Teorie/SOLID.md",
+    "Exercitii/Grile.md",
+    "Exercitii",
+    "Exercitii.md",
+    "Teorie",
+    "Concepte OOP de Baza",
+    "Welcome.md"
   ]
 }
