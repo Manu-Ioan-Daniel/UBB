@@ -96,6 +96,7 @@ $$
 
 **b)** Se știe că timpul de instalare (în minute) al softului pe un calculator urmează distribuția $N(20, 8)$. Dacă un specialist instalează softul (independent) pe două calculatoare, să se aproximeze probabilitatea ca timpul total de instalare să se încadreze în intervalul $[36, 44]$.
 
+
 $$
 a) \overline {X_{64}} = 25,S_{n} = 5,\alpha = 0.05;
 $$
@@ -112,6 +113,7 @@ $$
 $$
 \frac{\overline {X_{2}}-20 }{\frac{2\sqrt{ 2 }}{\sqrt{ 2 }}} \sim N(0,1)
 $$
+
 $$
 P(18\leq \overline {X_{2}}\leq22) = P(-2\leq \overline {X_{2}}-20\leq2) = P(-1\leq \frac{\overline {X_{2}}-20}2\leq 1) \approx \text{norm.cdf(1,0,1)} - \text{norm.cdf(-1},0,1) = 0.6826
 $$
@@ -120,11 +122,12 @@ $$
 
 Un statistician studiază caracteristica $X$ a unei persoane dintr-o populație dată: dacă o persoană aleasă aleator preferă ciocolata neagră, atunci $X$ ia valoarea $1$; dacă o persoană aleasă aleator preferă ciocolata albă, atunci $X$ ia valoarea $0$. Fie $\overline{X}_{100}$ media de selecție a lui $X$ pentru $100$ de variabile de selecție. Folosind TLC, estimați $P(0,49 < \overline{X}_{100} < 0,51)$, știind că proporția de persoane care preferă ciocolata neagră este $50\%$ din populația dată.
 
+
 $$
 n = 100;X \sim Bernoulli\left( \frac{1}{2} \right);E(X) = \frac{1}{2};V(X) = \frac{1}{2} - \frac{1}{4} = \frac{1}{4} \implies \sigma = \frac{1}{2};\mu = \frac{1}{2}; \frac{\sigma}{\sqrt{ n }} = \frac{1}{20}
 $$
 $$
-P(0.49<\overline {X_{100}}<0.51) = P(-0.01<\overline {X_{100}}-0.5<0.01) = P\left( -0.2< \frac{\overline {X_{100}} - 0.5}{\frac{1}{20}} < 0.2 \right) = \dots
+P(0.49<\overline {X_{100}}<0.51) = P(-0.01<\overline {X_{100}}-0.5<0.01) = P\left( -0.2< \frac{\overline {X_{100}} - 0.5}{\frac{1}{20}} < 0.2 \right) = 
 $$
 ### Exercitiul 5
 

@@ -1,56 +1,41 @@
 {
   "main": {
-    "id": "072daad74be558d0",
+    "id": "ed0e6bd12de832f4",
     "type": "split",
     "children": [
       {
-        "id": "983d892b4d314a9c",
+        "id": "e1c00dcd17a46671",
         "type": "tabs",
         "children": [
           {
-            "id": "32951a967a8301ce",
+            "id": "c36af8c514b2c42a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4.Practic Lisp/Subiecte.md",
+                "file": "Formule generale care le a uitat edi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Subiecte"
-            }
-          },
-          {
-            "id": "61a899d330f2c161",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3.Examene pt scris/Examen 2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Examen 2"
+              "title": "Formule generale care le a uitat edi"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "35c8f0b6a2c228c6",
+    "id": "8b946454684ab613",
     "type": "split",
     "children": [
       {
-        "id": "b57f6cfdca4ded47",
+        "id": "716c3c8cf34d6616",
         "type": "tabs",
         "children": [
           {
-            "id": "ed9230a9e51ac074",
+            "id": "774e93c74ab6f354",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -63,13 +48,13 @@
             }
           },
           {
-            "id": "98fab13a099af982",
+            "id": "039e72725929bcf2",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -80,7 +65,7 @@
             }
           },
           {
-            "id": "1b07f7dfbdba71b5",
+            "id": "74e4590f6c2c41b3",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -96,20 +81,20 @@
     "width": 300
   },
   "right": {
-    "id": "4223916234d7a7cb",
+    "id": "9dabf05ac9431ab1",
     "type": "split",
     "children": [
       {
-        "id": "23fab8111943cc61",
+        "id": "6b03a1ad0c4a745d",
         "type": "tabs",
         "children": [
           {
-            "id": "0cc6f866f4dc5468",
+            "id": "2d38a9a5742189d8",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Examene/Examen 2.md",
+                "file": "Formule generale care le a uitat edi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Examen 2"
+              "title": "Backlinks for Formule generale care le a uitat edi"
             }
           },
           {
-            "id": "13813d70b1094ba4",
+            "id": "5ed96cfd2f6b51f4",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Examene/Examen 2.md",
+                "file": "Formule generale care le a uitat edi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Examen 2"
+              "title": "Outgoing links from Formule generale care le a uitat edi"
             }
           },
           {
-            "id": "9e9a4400371e8e1a",
+            "id": "3d4f89ad0d98d4ad",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -152,7 +137,7 @@
             }
           },
           {
-            "id": "5caa8763184836dd",
+            "id": "560d4b532b5538ec",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -166,18 +151,18 @@
             }
           },
           {
-            "id": "2aef40575ca65402",
+            "id": "babbf46c72d5b839",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Examene/Examen 2.md",
+                "file": "Formule generale care le a uitat edi.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Examen 2"
+              "title": "Outline of Formule generale care le a uitat edi"
             }
           }
         ]
@@ -198,36 +183,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "61a899d330f2c161",
+  "active": "c36af8c514b2c42a",
   "lastOpenFiles": [
-    "2.Teorie-useful/MAP in LISP.md",
-    "4.Practic Lisp/Subiecte.md",
-    "3.Examene pt scris/Examen 5.md",
-    "4.Practic Lisp",
-    "3.Examene pt scris/Examen 6.md",
-    "3.Examene pt scris/Examen 4.md",
-    "1.Combinatorica prolog/Cod.md",
-    "3.Examene pt scris/Examen 7.md",
-    "3.Examene pt scris/Examen 3.md",
-    "3.Examene pt scris/Examen 2.md",
-    "3.Examene pt scris/Examen 1.md",
-    "3.Examene pt scris/Examen 15.md",
-    "3.Examene pt scris/Examen 13.md",
-    "3.Examene pt scris/Examen 14.md",
-    "2.Teorie-useful/Sintaxa LET.md",
-    "2.Teorie-useful/Mindfucks.md",
-    "3.Examene/Examen 16.md",
-    "3.Examene pt scris/Examen 9(copie Examen 6).md",
-    "3.Examene pt scris/Examen 8.md",
-    "3.Examene pt scris/Examen 11.md",
-    "3.Examene pt scris/Tipuri de subiecte.md",
-    "3.Examene pt scris/Examen 10.md",
-    "3.Examene pt scris/Examen 12.md",
-    "2.Teorie-useful/Lambda in LISP.md",
-    "Teorie-useful/SETF in LISP.md",
-    "2.Teorie-useful",
-    "1.Combinatorica prolog",
-    "3.Examene pt scris",
-    "Welcome.md"
+    "Limite.md",
+    "Formule generale care le a uitat edi.md",
+    "Teorema lui Cezaro-Stolz.md",
+    "Untitled.md",
+    "Welcome.md",
+    "Teorema lui Cezaro-Stolz"
   ]
 }
