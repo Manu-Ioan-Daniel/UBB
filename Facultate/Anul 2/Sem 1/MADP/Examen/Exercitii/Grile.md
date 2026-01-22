@@ -177,3 +177,271 @@ Object o = lista2.get(0); // linia D
 
 La compilare:linia A nu va merge,linia B nu are probleme,linia C merge,linia D merge
 La runtime:nici nu ajunem
+
+
+## Problema 10
+
+```java
+static int test() {
+    try {
+        return 10;
+    } finally {
+        System.out.println("finally");
+    }
+}
+```
+**Întrebare:**  
+– Ce se afișează?  
+– Ce valoare se întoarce?
+
+### Rezolvare
+
+Se afiseaza "finally" + se returneaza valoarea 10
+
+
+## Problema 11
+
+```java
+static int test() {
+    try {
+        int x = 10 / 0;
+    } catch (ArithmeticException e) {
+        return 1;
+    } finally {
+        return 2;
+    }
+}
+
+```
+
+**Întrebare:**  
+– Compilează?  
+– Ce se întoarce?
+
+### Rezolvare
+
+Compileaza si intoarce valoarea 2
+
+## Problema 12
+
+```java
+static void test() {
+    try {
+        int x = 10 / 0;
+    } finally {
+        System.out.println("finally");
+    }
+}
+
+public static void main(String[] args) {
+    test();
+    System.out.println("end");
+}
+
+```
+**Întrebare:**  
+– Ce se afișează?  
+– Se ajunge la `"end"`?
+
+### Rezolvare
+
+Se afiseaza finally -> exceptia de la 10/0 nu este handled si nu mai ajunge la acel end
+
+## Problema 13
+
+```java
+try {
+    throw new NullPointerException();
+} catch (RuntimeException e) {
+    System.out.println("runtime");
+} catch (NullPointerException e) {
+    System.out.println("null");
+}
+```
+**Întrebare:**  
+– Compilează?  
+– Dacă nu, de ce?
+
+### Rezolvare
+
+Programul nu compileaza,pt ca in Java, blocurile `catch` trebuie ordonate de la **cea mai specifică** excepție la **cea mai generală**. Deoarece `NullPointerException` moștenește `RuntimeException`, orice obiect de tip NPE este automat "prins" de primul bloc (`catch (RuntimeException e)`).
+
+## Problema 14
+
+```java
+static void test() {
+    try {
+        throw new java.io.IOException();
+    } catch (Exception e) {
+        throw new RuntimeException();
+    }
+}
+```
+
+**Întrebare:**  
+– Compilează fără `throws`?  
+– Ce tip de excepție ajunge la apelant?
+
+### Rezolvare
+compileaza fara throws pentru ca dam catch la exceptia de tip checked (IOException) si dam throw la un unchecked exception,adica RuntimeException,deci nu este nevoie de throws.Tipul de exceptie care ajunge la apelant este RuntimeException
+
+## Problema 15
+
+```java
+try {
+    String s = null;
+    s.length();
+} catch (NullPointerException | ArithmeticException e) {
+    System.out.println("prins");
+}
+```
+
+**Întrebare:**  
+– Compilează?  
+– Ce se afișează?
+### Rezolvare
+
+codul compileaza,pentru ca s.length() ne da un NullPointerException,intra in catch,si afiseaza "prins"
+
+## Problema 16
+
+```java
+static int test() {
+    int x = 1;
+    try {
+        return x;
+    } finally {
+        x = 5;
+    }
+}
+```
+
+**Întrebare:**  
+– Ce valoare se întoarce?  
+– Contează modificarea din `finally`?
+
+### Rezolvarea
+
+se returneaza valoarea 1,deci modificarea din finally nu conteaza
+
+
+## Problema 17
+
+```java
+static void test() throws Exception {
+    throw new Exception();
+}
+
+public static void main(String[] args) {
+    test();
+}
+
+```
+
+**Întrebare:**  
+– Compilează?  
+– Ce trebuie adăugat ca să fie corect?
+
+### Rezolvare
+
+nu compileaza ce drq ba baiatule,trebuie adauguat un try catch in main
+
+## Problema 18
+
+```java
+static void test() {
+    try {
+        throw new RuntimeException("A");
+    } finally {
+        throw new RuntimeException("B");
+    }
+}
+```
+**Întrebare:**  
+– Ce excepție ajunge la runtime?  
+– Ce se întâmplă cu prima?
+
+### Rezolvare
+prima exceptie nu ajunge la runtime si este pierduta,pentru ca o metoda nu poate arunca doua exceptii simultan si este pastrata doar cea mai recenta exceptie aruncata,doar a doua
+
+
+## Problema 19
+
+```java
+class R implements AutoCloseable {
+    public void close() {
+        System.out.println("close");
+    }
+}
+
+try (R r = new R()) {
+    System.out.println("try");
+} finally {
+    System.out.println("finally");
+}
+
+```
+
+**Întrebare:**  
+– Ordinea exactă a afișării?
+
+### Rezolvare
+
+Afiseaza try,dupa close,dupa finally
+
+
+## Problema 20
+
+```java
+try {
+    throw new StackOverflowError();
+} catch (Exception e) {
+    System.out.println("exception");
+} finally {
+    System.out.println("finally");
+}
+
+```
+
+**Întrebare:**  
+– Ce se afișează?  
+– Este prins `Error`?
+
+### Rezolvare
+
+Se afiseaza finally,iar error nu este prins pentru ca error nu este considerata o exceptie
+
+## Problema 21
+
+```java
+class A {
+    void run() throws java.io.IOException {}
+}
+
+class B extends A {
+    void run() {}
+}
+
+```
+**Întrebare:**  
+– Compilează?  
+– De ce este permis / interzis?
+
+### Rezolvare
+
+Da,compileaza,este permis pentru ca clasa B da override la metoda din A si nu mai arunca exceptie
+#### Cele 3 reguli de bază la Overriding și Excepții:
+
+Metoda din clasa copil (`B`):
+
+1. **Poate să nu declare nicio excepție**
+    
+2. **Poate declara exact aceleași excepții** ca în părinte.
+    
+3. **Poate declara excepții mai specifice** (subclase ale celei din părinte). De exemplu, dacă `A` aruncă `IOException`, `B` poate arunca `FileNotFoundException`
+#### Ce este interzis:
+
+- `B` **nu** poate arunca o excepție mai generală (ex: dacă `A` aruncă `FileNotFoundException`, `B` nu poate arunca `IOException`).
+    
+- `B` **nu** poate arunca o excepție checked nouă, care nu are nicio legătură cu cea din părinte (ex: `SQLException`).
+

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teorie/Exceptii.md",
+                "file": "Teorie/Interfete functionale.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Exceptii"
+              "title": "Interfete functionale"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4b257f9ef0bd00fb",
@@ -181,12 +182,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "8d2cc0dd8c7fb6d1",
+  "active": "a2846b16ae9b1251",
   "lastOpenFiles": [
-    "Teorie/Genericitate.md",
-    "Teorie/Exceptii.md",
-    "Teorie/Concepte OOP de baza.md",
     "Exercitii/Grile.md",
+    "Teorie/Interfete functionale.md",
+    "Teorie/Exceptii.md",
+    "Teorie/Genericitate.md",
+    "Teorie/Concepte OOP de baza.md",
     "Teorie/SOLID.md",
     "Exercitii",
     "Exercitii.md",

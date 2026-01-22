@@ -130,3 +130,122 @@ list.forEach(x -> {
     // throw new IOException(); // ❌ nu merge
 });
 ```
+
+### Try-catch-finnaly
+
+**`try–catch–finally`** = mecanismul prin care Java **gestionează excepțiile** și **garantează execuția unui cod**, indiferent dacă apare sau nu o eroare.
+
+#### Structura de bază
+
+```java
+try {
+    // cod care poate arunca excepții
+} catch (Exception e) {
+    // tratează excepția
+} finally {
+    // se execută ORICUM
+}
+
+```
+
+#### Fără excepție
+```java
+try {
+    System.out.println("OK");
+} catch (Exception e) {
+    System.out.println("Eroare");
+} finally {
+    System.out.println("Finally");
+}
+/*
+Output:
+OK
+Finally
+*/
+
+```
+
+#### Cu excepție prinsă
+
+```java
+try {
+    int x = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Eroare");
+} finally {
+    System.out.println("Finally");
+}
+/*
+Output:
+Eroare
+Finally
+*/
+```
+
+#### Fără catch (doar try–finally)
+
+```java
+try {
+    int x = 10 / 0;
+} finally {
+    System.out.println("Finally");
+}
+
+```
+
+#### finally + return
+
+```java
+static int test() {
+    try {
+        return 1;
+    } finally {
+        return 2;
+    }
+}
+
+System.out.println(test());
+//Afiseaza 2
+```
+
+#### finally NU se execută
+
+```java
+try{
+	System.exit(0);
+}
+finally{
+	System.out.println("mama");
+}
+```
+
+#### try-with-resources (legat de finally)
+
+```java
+try (FileReader f = new FileReader("a.txt")) {
+    // folosire
+} catch (IOException e) {
+
+}
+```
+
+Echivalent cu:
+
+- `finally` care închide automat resursa
+    
+- mai sigur decât `finally` manual
+
+#### nume
+
+```java
+try {  
+    throw new NullPointerException();  
+} catch (RuntimeException e) {  
+    System.out.println("runtime");  
+} catch (NullPointerException e) {  
+    System.out.println("null");  
+}
+//acest cod da eroare pentru ca NullPointerException deja a fost prins mai sus,deci linia de mai jos este redundanta asa ca compilatorul spune "NullPointerException has already been caught"
+```
+
+
