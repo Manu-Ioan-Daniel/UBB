@@ -427,7 +427,19 @@ Comparator<String> cmp = (a, b) -> a.length() - b.length();
 List<String> list = Arrays.asList("aaa", "b", "cc");
 list.sort(cmp);
 System.out.println(list); // [b, cc, aaa]
+
 ```
+
+#### Functii des folosite
+
+| **Funcție**                        | **Ce face**                                        | **Exemplu**                                        |
+| ---------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
+| **`comparing()`**                  | Extrage o cheie pentru comparare.                  | `Comparator.comparing(User::getName)`              |
+| **`reversed()`**                   | Inversează ordinea curentă.                        | `myComp.reversed()`                                |
+| **`thenComparing()`**              | Adaugă un al doilea criteriu (dacă primul e egal). | `comp.thenComparing(User::getAge)`                 |
+| **`naturalOrder()`**               | Sortare standard (1, 2, 3 sau A, B, C).            | `Comparator.naturalOrder()`                        |
+| **`reverseOrder()`**               | Inversul ordinii naturale.                         | `Comparator.reverseOrder()`                        |
+| **`nullsFirst()` / `nullsLast()`** | Decide unde merg valorile `null`.                  | `Comparator.nullsFirst(Comparator.naturalOrder())` |
 ### Optional
 
 **Definiție:**
