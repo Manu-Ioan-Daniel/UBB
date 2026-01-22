@@ -463,6 +463,54 @@ Consumer<String> c = list::add;
 c.accept("x");
 c.accept("y");
 System.out.println(list); // [x, y]
-
 ```
 
+### Function cu tip generics dubios
+
+```java
+Function<Object, String> f = o -> o.toString();
+System.out.println(f.apply(123)); // "123"
+System.out.println(f.apply(null)); // NPE
+```
+### Supplier care generează valori random
+
+```java
+Supplier<Integer> s = () -> (int)(Math.random()*10);
+System.out.println(s.get());
+System.out.println(s.get());
+```
+
+### Comparator cu lambda cu overflow
+
+```java
+Comparator<Integer> cmp = (a, b) -> a - b;
+System.out.println(cmp.compare(Integer.MAX_VALUE, -1)); // overflow!
+```
+
+### Optional cu map
+
+```java
+Optional<String> opt = Optional.ofNullable("java");
+System.out.println(opt.map(String::toUpperCase).orElse("N/A")); // JAVA
+System.out.println(Optional<String>ofNullable(null).map(String::toUpperCase).orElse("N/A")); // N/A
+```
+
+### Optional care conține null
+
+```java
+Optional<String> opt = Optional.of(null); // ❌ Throws NullPointerException
+Optional<String> opt2 = Optional.ofNullable(null); // ✅ OK
+```
+### Predicate + lambda + method reference
+
+```java
+Predicate<String> p = String::isEmpty;
+System.out.println(p.test("")); // true
+System.out.println(p.test("abc")); // false
+```
+### Function care poate arunca NPE
+
+```java
+Function<String, Integer> f = s -> s.length();
+System.out.println(f.apply(null)); // NPE
+```

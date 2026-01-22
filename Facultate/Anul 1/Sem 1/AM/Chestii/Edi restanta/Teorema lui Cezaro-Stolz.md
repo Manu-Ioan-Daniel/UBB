@@ -95,12 +95,12 @@ $$
 \text{Binomul lui Newton:} (a+b)^{n} = \sum_{k=1}^{n} C_{n}^{k} \cdot a^{k}\cdot b^{n-k}
 $$
 ### Exercitiul 5
-
-#### Rezolvare
-
 $$
 x_{n} = \sqrt[n]{ \frac{3^{3n} \cdot  (n!)^{3}}{(3n)!}};\lim_{ n \to \infty } x_{n} = ?
 $$
+#### Rezolvare
+
+
 $$
 \text{fie }a_{n} = \frac{3^{3n} \cdot  (n!)^{3}}{(3n)!}
 $$
@@ -109,5 +109,24 @@ $$
 $$
 
 
+### Exercitiul 6
 
+$$
+x_{n} = \frac{[1^{p}\cdot x] + [2^{p}\cdot x]+\dots+[n^{p}\cdot x]}{n^{p+1}};\lim_{ n \to \infty } x_{n} = ?
+$$
+$$
+\text{fie } a_{n} = [1^{p}\cdot x] + [2^{p}\cdot x]+\dots+[n^{p}\cdot x] \text{ si } b_{n} = n^{p} \text{ strict crescator si nemarginit daca p>0}
+$$
+$$
+\lim_{ n \to \infty } \frac{[(n+1)^{p}\cdot x]}{(n+1)^{p+1} - n^{p+1}} = \lim_{ n \to \infty } \frac{[(n+1)^{p}\cdot x]}{n^{p} \cdot  (p+1)} = \frac{1}{p+1} \cdot  \lim_{ n \to \infty } \frac{[(n+1)^{p}\cdot x]}{n^{p}}
+$$
+$$
+\text{stim ca } x-1 < [x] \leq x \implies(n+1)^{p} \cdot  x - 1 < \dots \leq (n+1)^{p}\cdot x \implies (n+1)^{p} \cdot  \frac{x}{n^{p}} -\frac{1}{n^{p}} < \dots \leq (n+1)^{p}\cdot \frac{x}{n^{p}}
+$$
+$$
+\implies x< \lim_{ n \to \infty } \dots \leq x \implies \frac{1}{p+1}\lim_{ n \to \infty } \frac{[(n+1)^{p}\cdot x]}{n^{p}} = \frac{x}{p+1} 
+$$
+$$
+
+$$
 
