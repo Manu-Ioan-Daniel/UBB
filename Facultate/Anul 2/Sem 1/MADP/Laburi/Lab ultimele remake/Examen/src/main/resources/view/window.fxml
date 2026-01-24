@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.WindowController">
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.WindowController">
    <children>
-      <Label fx:id="usernameLabel" text="Label" />
+      <TableView fx:id="ordersTable" layoutX="83.0" layoutY="100.0" prefHeight="200.0" prefWidth="441.0">
+        <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Client Name" />
+          <TableColumn fx:id="startDateColumn" prefWidth="75.0" text="Start Date" />
+          <TableColumn fx:id="pickupColumn" prefWidth="75.0" text="Pickup Adress" />
+            <TableColumn fx:id="destinationColumn" prefWidth="111.0" text="Destination Adress" />
+            <TableColumn fx:id="markColumn" prefWidth="111.0" text="Mark" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label fx:id="driverNameLabel" alignment="CENTER" layoutX="134.0" layoutY="26.0" prefHeight="17.0" prefWidth="347.0" text="MATA" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

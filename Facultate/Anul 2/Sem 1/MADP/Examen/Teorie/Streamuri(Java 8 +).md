@@ -190,23 +190,23 @@ nums.stream().peek(x -> x*2).forEach(System.out::println); // afișează 1 2 3, 
 
 ### Collectors
 
-|**Metodă**|**Rezultat**|**Exemplu de cod**|
-|---|---|---|
-|**`toList()`**|O listă (`ArrayList`)|`.collect(Collectors.toList())`|
-|**`toSet()`**|Un set (elimină duplicatele)|`.collect(Collectors.toSet())`|
-|**`toCollection()`**|O colecție specifică|`.collect(Collectors.toCollection(LinkedList::new))`|
-|**`toMap()`**|Un `Map<K, V>`|`.collect(Collectors.toMap(User::getId, u -> u))`|
+| **Metodă**           | **Rezultat**                 | **Exemplu de cod**                                   |
+| -------------------- | ---------------------------- | ---------------------------------------------------- |
+| **`toList()`**       | O listă (`ArrayList`)        | `.collect(Collectors.toList())`                      |
+| **`toSet()`**        | Un set (elimină duplicatele) | `.collect(Collectors.toSet())`                       |
+| **`toCollection()`** | O colecție specifică         | `.collect(Collectors.toCollection(LinkedList::new))` |
+| **`toMap()`**        | Un `Map<K, V>`               | `.collect(Collectors.toMap(User::getId, u -> u))`    |
 
-|**Metodă**|**Ce face**|**Rezultat**|
-|---|---|---|
-|**`groupingBy()`**|Grupează elementele după un criteriu.|`Map<Cheie, List<T>>`|
-|**`partitioningBy()`**|Împarte lista în două (True/False) bazat pe un `Predicate`.|`Map<Boolean, List<T>>`|
-|**`counting()`**|Numără elementele (se folosește des cu `groupingBy`).|`Long`|
+| **Metodă**             | **Ce face**                                                 | **Rezultat**            |
+| ---------------------- | ----------------------------------------------------------- | ----------------------- |
+| **`groupingBy()`**     | Grupează elementele după un criteriu.                       | `Map<Cheie, List<T>>`   |
+| **`partitioningBy()`** | Împarte lista în două (True/False) bazat pe un `Predicate`. | `Map<Boolean, List<T>>` |
+| **`counting()`**       | Numără elementele (se folosește des cu `groupingBy`).       | `Long`                  |
 
-|**Metodă**|**Ce face**|**Exemplu**|
-|---|---|---|
-|**`joining()`**|Unește String-uri (opțional cu separator).|`.collect(Collectors.joining(", "))`|
-|**`summingInt()`**|Calculează suma valorilor `int`.|`.collect(Collectors.summingInt(User::getAge))`|
-|**`averagingDouble()`**|Calculează media aritmetică.|`.collect(Collectors.averagingDouble(p -> p.price))`|
-|**`summarizingInt()`**|Îți dă dintr-o dată: min, max, sumă, medie și count.|`.collect(Collectors.summarizingInt(x -> x))`|
+| **Metodă**              | **Ce face**                                          | **Exemplu**                                          |
+| ----------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
+| **`joining()`**         | Unește String-uri (opțional cu separator).           | `.collect(Collectors.joining(", "))`                 |
+| **`summingInt()`**      | Calculează suma valorilor `int`.                     | `.collect(Collectors.summingInt(User::getAge))`      |
+| **`averagingDouble()`** | Calculează media aritmetică.                         | `.collect(Collectors.averagingDouble(p -> p.price))` |
+| **`summarizingInt()`**  | Îți dă dintr-o dată: min, max, sumă, medie și count. | `.collect(Collectors.summarizingInt(x -> x))`        |
 

@@ -1,6 +1,7 @@
 package models;
 
 public class Notification extends Entity<Long>{
+    
     private final Long toId;
     private final String message;
 

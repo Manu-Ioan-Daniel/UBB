@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teorie/C Sharp.md",
+                "file": "Teorie/SOLID.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "C Sharp"
+              "title": "SOLID"
             }
           }
         ]
@@ -183,14 +183,16 @@
   },
   "active": "a2846b16ae9b1251",
   "lastOpenFiles": [
-    "Teorie/Concurenta.md",
-    "Teorie/C Sharp.md",
-    "Teorie/Streamuri(Java 8 +).md",
+    "Teorie/Concepte OOP de baza.md",
     "Teorie/SOLID.md",
+    "Examene/Model examen1.md",
+    "Examene",
+    "Teorie/C Sharp.md",
     "Teorie/Interfete functionale.md",
+    "Teorie/Concurenta.md",
+    "Teorie/Streamuri(Java 8 +).md",
     "Teorie/Genericitate.md",
     "Teorie/Exceptii.md",
-    "Teorie/Concepte OOP de baza.md",
     "Exercitii/Grile.md",
     "Exercitii",
     "Exercitii.md",

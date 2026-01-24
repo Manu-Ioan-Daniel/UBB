@@ -1,12 +1,11 @@
 package models;
 
-public class ExamEntity2 extends Entity<Long> {
+public class Driver extends Entity<Long> {
     private final String name;
 
-    public ExamEntity2(String name) {
+    public Driver(String name) {
         this.name = name;
     }
-
     public String getName() {
         return name;
     }

@@ -1,4 +1,6 @@
 
+
+
 $$
 1.x_{n} = \frac{\sqrt[3]{ n }}{3^{n}};\lim_{ n \to \infty } x_{n } = 0
 $$

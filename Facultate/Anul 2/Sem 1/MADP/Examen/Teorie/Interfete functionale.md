@@ -160,13 +160,14 @@ interface A {
 ## ## 2.Interfețe funcționale (Java 8+)
 
 **Interfață funcțională** = interfață care are **exact o metodă abstractă**  
-→ poate fi implementată cu **lambda expression**, daddy 😈
+→ poate fi implementată cu **lambda expression**
 
 Este **baza** pentru Java 8: lambda, streams, API-uri funcționale.
 
 
 ## Definiție clară
 
+> [!IMPortant]
 > O interfață funcțională are **o singură metodă abstractă**, indiferent câte metode `default` sau `static` are.
 
 ```java

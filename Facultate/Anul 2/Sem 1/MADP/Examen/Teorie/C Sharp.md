@@ -102,7 +102,7 @@ p2.Varsta = 30;    // modificăm prin p2
 Console.WriteLine(p1.Varsta); // Afișează: 30 !!! (p1 și p2 arată spre ACELAȘI obiect)
 ```
 
-###  Boxing și Unboxing (Ciudățenie importantă!)
+###  Boxing și Unboxing
 
 Când pui un value type într-o variabilă de tip `object`, se face **boxing** (se împachetează pe heap).
 
@@ -117,7 +117,7 @@ Console.WriteLine(x); // Afișează: 42 (x e independent, boxing a făcut o copi
 ```
 
 >[!WARNING] 
-**Capcană la examen:** Boxing/Unboxing e LENT (overhead de memorie). Evită-l în bucle!
+Boxing/Unboxing e LENT (overhead de memorie). Evită-l în bucle!
 ###  Operatorii `is` și `as` (Downcasting Sigur)
 
 1. **`is`**: Verifică dacă un obiect este de un anumit tip. Returnează `true`/`false`.
@@ -694,7 +694,6 @@ class Manager<T> where T : class, IComparable, new()
 T GetDefaultValue<T>() {
     return default(T);  // sau doar: default (C# 7.1+)
 }
-
 Console.WriteLine(GetDefaultValue<int>());      // 0
 Console.WriteLine(GetDefaultValue<string>());   // (null)
 Console.WriteLine(GetDefaultValue<bool>());     // False
@@ -860,7 +859,9 @@ metode -= Metoda2; // Îndepărtează Metoda2
 metode(); // Apelează doar Metoda1 și Metoda3
 ```
 
+> [!WARNING]
 > **Capcană:** Dacă metodele returnează valoare (nu sunt `void`), delegatul returnează **doar rezultatul ultimei metode apelate**!
+>
 
 ```csharp
 Func<int> multi = () => { Console.WriteLine("Prima"); return 1; };
@@ -1287,7 +1288,7 @@ unchecked {
 
 checked {
     int b = int.MaxValue;
-    // b++; // Aruncă OverflowException!
+    b++; // Aruncă OverflowException!
 }
 
 // Unchecked e default pentru performanță
@@ -1364,8 +1365,8 @@ Console.WriteLine(a == 5);   // FALSE
 
 ## 18. String Interpolation vs Format
 ```csharp
-string nume = "Ion";
-int varsta = 25;
+string nume = "Ioan";
+int varsta = 20;
 
 // Interpolation (preferată)
 string s1 = $"Nume: {nume}, Vârsta: {varsta}";

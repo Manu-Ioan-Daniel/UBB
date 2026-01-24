@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teorema lui Cezaro-Stolz.md",
+                "file": "Formule generale care le a uitat edi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Teorema lui Cezaro-Stolz"
+              "title": "Formule generale care le a uitat edi"
             }
           }
         ]
@@ -185,10 +185,13 @@
   },
   "active": "c36af8c514b2c42a",
   "lastOpenFiles": [
+    "Serii geometrice si telescopice.md",
     "Limite.md",
-    "Untitled.md",
-    "Teorema lui Cezaro-Stolz.md",
+    "Serii cu termeni pozitivi.md",
+    "Serii alternante.md",
     "Formule generale care le a uitat edi.md",
+    "Teorema lui Cezaro-Stolz.md",
+    "Untitled.md",
     "Welcome.md",
     "Teorema lui Cezaro-Stolz"
   ]
