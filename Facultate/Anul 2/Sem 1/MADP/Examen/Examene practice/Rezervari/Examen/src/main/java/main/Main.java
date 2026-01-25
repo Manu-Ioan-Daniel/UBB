@@ -7,6 +7,8 @@ import services.MainService;
 import utils.StageManager;
 
 
+
+
 public class Main extends Application {
 
 
@@ -15,6 +17,7 @@ public class Main extends Application {
         StageManager stageManager = new StageManager();
         MainService mainService = new MainService(new LocationRepo(), new HotelRepo(), new SpecialOfferRepo(),new ClientRepo(),new ReservationRepo());
         stageManager.showMainWindow(stage, mainService);
+
     }
 
 }

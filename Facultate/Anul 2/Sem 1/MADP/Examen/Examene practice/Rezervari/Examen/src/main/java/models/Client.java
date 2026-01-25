@@ -16,6 +16,8 @@ public class Client extends Entity<Long>{
         this.fidelityGrade = fidelityGrade;
         this.age = age;
         this.hobbies = hobbies;
+        Object c;
+
     }
 
     public String getName() {
@@ -35,3 +37,4 @@ public class Client extends Entity<Long>{
     }
 
 }
+

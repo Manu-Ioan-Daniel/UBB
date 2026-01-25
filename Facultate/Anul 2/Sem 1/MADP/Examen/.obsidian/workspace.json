@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teorie/Interfete functionale.md",
+                "file": "Teorie/C Sharp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Interfete functionale"
+              "title": "C Sharp"
             }
           }
         ]
@@ -183,17 +183,21 @@
   },
   "active": "a2846b16ae9b1251",
   "lastOpenFiles": [
+    "Teorie/Concurenta.md",
+    "Teorie/Exceptii.md",
+    "Teorie/Interfete functionale.md",
+    "Examene practice/Rezervari/Examen/build/tmp/compileJava/compileTransaction/stash-dir/Main.class.uniqueId0",
+    "Examene practice/Rezervari/Examen/build/tmp/compileJava/compileTransaction/stash-dir/WindowController.class.uniqueId7",
+    "Examene practice/Rezervari/Examen/build/tmp/compileJava/compileTransaction/stash-dir/Client.class.uniqueId1",
+    "Examene practice/Rezervari/Examen/build/tmp/compileJava/compileTransaction/stash-dir/ClientRepo.class.uniqueId0",
+    "Teorie/Streamuri(Java 8 +).md",
     "Teorie/SOLID.md",
+    "Teorie/Genericitate.md",
     "Teorie/Concepte OOP de baza.md",
+    "Teorie/C Sharp.md",
+    "Exercitii/Grile.md",
     "Examene/Model examen1.md",
     "Examene",
-    "Teorie/C Sharp.md",
-    "Teorie/Interfete functionale.md",
-    "Teorie/Concurenta.md",
-    "Teorie/Streamuri(Java 8 +).md",
-    "Teorie/Genericitate.md",
-    "Teorie/Exceptii.md",
-    "Exercitii/Grile.md",
     "Exercitii",
     "Exercitii.md",
     "Teorie",

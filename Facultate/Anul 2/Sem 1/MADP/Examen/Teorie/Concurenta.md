@@ -1,20 +1,4 @@
 
-## 📖 Cuprins
-
-1. [Ce este un Thread?](#ce-este-un-thread)
-2. [Funcțiile unui Thread](#funcțiile-unui-thread)
-3. [Crearea unui Thread](#crearea-unui-thread)
-4. [ExecutorService și ThreadPool](#executorservice-și-threadpool)
-5. [Stările unui Thread](#stările-unui-thread)
-6. [Sincronizarea Thread-urilor](#sincronizarea-thread-urilor)
-7. [Deadlock și Soluții](#deadlock-și-soluții)
-8. [Pachetul java.util.concurrent](#pachetul-javautilconcurrent)
-9. [Runnable, Callable, Future, CompletableFuture](#runnable-callable-future-completablefuture)
-10. [Clase de Sincronizare](#clase-de-sincronizare)
-11. [Colecții Thread-Safe](#colecții-thread-safe)
-12. [Parallel Streams](#parallel-streams)
-
----
 
 ## Ce este un Thread?
 
@@ -179,12 +163,12 @@ public class Main {
 > - `Runnable` separă task-ul de mecanismul de execuție
 ### Comparație Runnable vs Thread
 
-| Aspect | `Runnable` | `extends Thread` |
-|--------|-----------|------------------|
-| Moștenire | Permite extinderea altei clase | Nu permite (Java nu are moștenire multiplă) |
-| Reutilizare | Ușor de reutilizat cu ExecutorService | Legat de clasa Thread |
-| Flexibilitate | Mare | Limitată |
-| Recomandare | ✅ **DA** | ⚠️ Rar |
+| Aspect        | `Runnable`                            | `extends Thread`                            |
+| ------------- | ------------------------------------- | ------------------------------------------- |
+| Moștenire     | Permite extinderea altei clase        | Nu permite (Java nu are moștenire multiplă) |
+| Reutilizare   | Ușor de reutilizat cu ExecutorService | Legat de clasa Thread                       |
+| Flexibilitate | Mare                                  | Limitată                                    |
+| Recomandare   | ✅ **DA**                              | ⚠️ Rar                                      |
 
 ---
 
@@ -220,8 +204,6 @@ public class ExempluExecutorService {
         // 4. Scheduled Thread Pool - pentru task-uri programate
         ScheduledExecutorService scheduledPool = Executors.newScheduledThreadPool(2);
         
-        // 5. Work Stealing Pool (Java 8+) - optimizat pentru task-uri paralele
-        ExecutorService workStealingPool = Executors.newWorkStealingPool();
     }
 }
 ```
@@ -353,7 +335,7 @@ public class ThreadStatesDemo {
         Thread.sleep(500);
         System.out.println("În timpul sleep: " + thread.getState()); // TIMED_WAITING
         
-        Thread.sleep(1000);
+        
         System.out.println("În timpul wait: " + thread.getState()); // WAITING
         
         synchronized (lock) {
@@ -1330,6 +1312,8 @@ int wrong = numbers.parallelStream()
 > 5. **Evită variabilele partajate** - folosește mesaje/queue-uri
 > 6. **Folosește `CompletableFuture`** pentru operații asincrone complexe
 > 7. **Testează pentru race conditions** cu instrumente ca JCStress
+> 8. Daca ai citit pana aici esti un nerd
+
 
 ### Cheatsheet rapid
 

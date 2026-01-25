@@ -520,9 +520,4 @@ Predicate<String> p = String::isEmpty;
 System.out.println(p.test("")); // true
 System.out.println(p.test("abc")); // false
 ```
-### Function care poate arunca NPE
 
-```java
-Function<String, Integer> f = s -> s.length();
-System.out.println(f.apply(null)); // NPE
-```
