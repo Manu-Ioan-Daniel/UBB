@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OffersWindowController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <DatePicker fx:id="startDatePicker" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <TableView fx:id="offersTable" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="startDateColumn" prefWidth="75.0" text="Start Date" />
+          <TableColumn fx:id="endDateColumn" prefWidth="75.0" text="End Date" />
+            <TableColumn fx:id="discountColumn" prefWidth="75.0" text="Discount" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+   <padding>
+      <Insets left="20.0" right="20.0" />
+   </padding>
+</VBox>

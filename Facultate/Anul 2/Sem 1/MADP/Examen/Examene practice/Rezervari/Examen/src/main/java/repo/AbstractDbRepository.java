@@ -54,7 +54,6 @@ public abstract class AbstractDbRepository<E extends Entity<Long>> implements Re
 
     @Override
     public Optional<E> save(E entity) {
-        
         try (PreparedStatement statement = saveStatement(entity)) {
             statement.executeUpdate();
             return Optional.empty();
