@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teorie/SOLID.md",
+                "file": "Teorie/Interfete functionale.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SOLID"
+              "title": "Interfete functionale"
             }
           }
         ]
@@ -183,8 +183,8 @@
   },
   "active": "a2846b16ae9b1251",
   "lastOpenFiles": [
-    "Teorie/Concepte OOP de baza.md",
     "Teorie/SOLID.md",
+    "Teorie/Concepte OOP de baza.md",
     "Examene/Model examen1.md",
     "Examene",
     "Teorie/C Sharp.md",

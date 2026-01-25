@@ -249,9 +249,8 @@ Runnable r = () -> System.out.println(x);
 void test(Runnable r) {}
 void test(Callable<Integer> c) {}
 
-test(() -> 1); // ❌ ambiguu
+test(() -> 1); // merge
 
-//Compilatorul nu știe ce interfață vrei
 ```
 
 ## 3.Method References și Constructor References (Java 8+)
