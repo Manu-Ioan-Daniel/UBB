@@ -516,13 +516,13 @@ Aici, fiecare router încearcă să își construiască propria **hartă complet
 
 
 ## Stiva TCP/IP
-| **Nivel (Layer)**     | **Rolul principal**                             | **Protocoale și Concepte (Extins)**                                                       |
-| --------------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| **1. Aplicație**      | Interfața cu utilizatorul și programele.        | **HTTP**, **URL**, **DNS** (Port 53), server proxy, proces server, **SMTP** (Email).      |
-| **--- Interfață ---** | _Puntea între program și rețea_                 | **Socket** (ușa prin care aplicația trimite date către transport).                        |
-| **2. Transport**      | Se ocupă cu livrarea datelor (sigur sau rapid). | **Port**, **TCP** (cu confirmare), **UDP** (fără confirmare).                             |
-| **3. Internet**       | Găsește drumul și pune adresa IP pe pachete.    | **IP** (IPv4, IPv6), **Netmask**, **Tabela de dirijare**, **Clasa de adrese**, ICMP, ARP. |
-| **4. Acces la Rețea** | Transformă datele în biți pe fir/aer.           | **Switch**, **Ethernet**, Wi-Fi, Adresa MAC, Modem, Cablu optic.                          |
+| **Nivel (Layer)**     | **Rolul principal**                             | **Protocoale și Concepte (Extins)**                                                          |
+| --------------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **4. Aplicație**      | Interfața cu utilizatorul și programele.        | **HTTP**, **URL**, **DNS** (Port 53), server proxy, proces server, **SMTP** (Email),browser. |
+| **--- Interfață ---** | _Puntea între program și rețea_                 | **Socket** (ușa prin care aplicația trimite date către transport).                           |
+| **3. Transport**      | Se ocupă cu livrarea datelor (sigur sau rapid). | **Port**, **TCP** (cu confirmare), **UDP** (fără confirmare).                                |
+| **2. Internet**       | Găsește drumul și pune adresa IP pe pachete.    | **IP** (IPv4, IPv6), **Netmask**, **Tabela de dirijare**, **Clasa de adrese**, ICMP,router.  |
+| **1. Acces la Rețea** | Transformă datele în biți pe fir/aer.           | **Switch**, **Ethernet**, Wi-Fi, Adresa MAC, Modem, Cablu optic,ARP.                         |
 
 ## Bridge vs Switch
 
@@ -534,3 +534,8 @@ Aici, fiecare router încearcă să își construiască propria **hartă complet
 |**Metodă de Transmisie**|Poate folosi metodele: _store and forward_, _fragment free_ sau _cut through_.|Folosește exclusiv metoda _store and forward_.|
 |**Verificarea Erorilor**|Sarcina de verificare a erorilor este realizată de către switch.|Un bridge nu poate efectua verificarea erorilor.|
 |**Memorie Buffer**|Un switch dispune de buffere (memorii temporare).|Un bridge s-ar putea să nu aibă memorie buffer.|
+
+
+## Mod de scriere al unei adrese MAC
+
+![[Pasted image 20260128155051.png]]

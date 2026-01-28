@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Formule generale care le a uitat edi.md",
+                "file": "Serii cu termeni pozitivi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Formule generale care le a uitat edi"
+              "title": "Serii cu termeni pozitivi"
             }
           }
         ]
@@ -185,6 +185,8 @@
   },
   "active": "c36af8c514b2c42a",
   "lastOpenFiles": [
+    "Serii geometrice si telescopice.md",
+    "Formule generale care le a uitat edi.md",
     "Derivate partiale.md",
     "Pasted image 20260126223951.png",
     "Convergenta integralelor.md",
@@ -192,8 +194,6 @@
     "Serii alternante.md",
     "Serii cu termeni pozitivi.md",
     "Teorema lui Cezaro-Stolz.md",
-    "Formule generale care le a uitat edi.md",
-    "Serii geometrice si telescopice.md",
     "Welcome.md",
     "Teorema lui Cezaro-Stolz"
   ]
