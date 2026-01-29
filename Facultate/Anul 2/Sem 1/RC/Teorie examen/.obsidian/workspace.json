@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teorie big.md",
+                "file": "TCP si UDP functii obligatorii si optionale, protocoale.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Teorie big"
+              "title": "TCP si UDP functii obligatorii si optionale, protocoale"
             }
           }
         ]
@@ -185,14 +185,14 @@
   },
   "active": "8d5e56a4e51aa31b",
   "lastOpenFiles": [
-    "Default gateway vs ruta default vs gateway of last resort.md",
-    "Porturi.md",
     "Teorie big.md",
     "TCP si UDP functii obligatorii si optionale, protocoale.md",
-    "Tabel TTL.md",
+    "Default gateway vs ruta default vs gateway of last resort.md",
     "NAT,DNAT,SNAT.md",
-    "Pasted image 20260128155051.png",
     "Formule sau metode.md",
+    "Porturi.md",
+    "Tabel TTL.md",
+    "Pasted image 20260128155051.png",
     "Pasted image 20260127143304.png"
   ]
 }

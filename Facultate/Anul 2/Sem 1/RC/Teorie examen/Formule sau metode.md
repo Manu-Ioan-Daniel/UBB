@@ -27,3 +27,4 @@ doua adrese din acelasi submask au primii *submask* biti la fel
 | **E**     | **240 – 255**             | Fără mască            | Scopuri **experimentale** și cercetare                |
 
 ### 127.x.x.x este rezervata pentru loopback
+
