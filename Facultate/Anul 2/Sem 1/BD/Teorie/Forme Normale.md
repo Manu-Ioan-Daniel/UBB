@@ -7,7 +7,7 @@
 
 ### 2NF
 
-Spunem că avem o _dependență funcțională parțială_ într-o relație atunci când un atribut _ne-cheie_ este dependent funcțional de o parte a unei chei candidat a relației (dar nu de întreaga cheie).
+Spunem că avem o _dependență funcțională parțială_ într-o relație atunci când un atribut neprim este dependent funcțional de o parte a unei chei candidat a relației (dar nu de întreaga cheie).
 
 **Definiție.** O relație se află în _A Doua Formă Normală_ (2NF) dacă este 1NF și nu are dependențe parțiale.
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Organizare directa.md",
+                "file": "Forme Normale.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Organizare directa"
+              "title": "Forme Normale"
             }
           }
         ]
@@ -185,23 +185,23 @@
   },
   "active": "d1daddf5f679c1af",
   "lastOpenFiles": [
+    "Dependente functionale.md",
+    "Chei si atribute.md",
+    "Arbori B.md",
+    "Algebra relationala.md",
+    "Forme Normale.md",
+    "Expresii.md",
+    "Teorie cringe.md",
+    "Indexi.md",
     "Valoare NULL.md",
-    "Images/Pasted image 20260204141905.png",
     "Organizare directa.md",
+    "Images/Pasted image 20260204141905.png",
     "Images",
     "Untitled.md",
     "Images/Pasted image 20260204141638.png",
     "Images/Pasted image 20260204141557.png",
-    "Arbori B.md",
-    "Indexi.md",
-    "Teorie cringe.md",
-    "Algebra relationala.md",
-    "Forme Normale.md",
     "Limbaje SGBD.md",
     "Relatii.md",
-    "Expresii.md",
-    "Dependente functionale.md",
-    "Chei si atribute.md",
     "Welcome.md"
   ]
 }
