@@ -374,7 +374,7 @@ BCNF- la fel ca 3NF(orice ce nu este in 3NF nu este in BCNF)
 **c.** Dacă este cazul, determinați o descompunere a lui R care să fie în BCNF.
 #### Raspuns
 
-Alegem C->D deci (A,B,C,D) se descompune in (A,B,C),(C,D) dupa care alegem A->C si ajungem la (A,B),(A,C),(C,D) ->dependenta functionala B->AD nu mai este respectata ->nu este in forma BCNF
+Alegem C->D deci (A,B,C,D) se descompune in (A,B,C),(C,D) dupa care alegem A->C si ajungem la (A,B),(A,C),(C,D) 
 
 facem in 3NF practice
 

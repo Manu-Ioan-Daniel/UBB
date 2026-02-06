@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Forme Normale.md",
+                "file": "Arbori B.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Forme Normale"
+              "title": "Arbori B"
             }
           }
         ],
@@ -198,8 +198,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "c870f1055be21e7f",
+  "active": "ea463b29134defcc",
   "lastOpenFiles": [
+    "Algebra relationala.md",
+    "Forme Normale.md",
     "Dependente functionale.md",
     "Chei si atribute.md",
     "Valoare NULL.md",
@@ -208,10 +210,8 @@
     "Organizare directa.md",
     "Limbaje SGBD.md",
     "Indexi.md",
-    "Forme Normale.md",
     "Expresii.md",
     "Arbori B.md",
-    "Algebra relationala.md",
     "Images/Pasted image 20260204141905.png",
     "Images",
     "Untitled.md",
