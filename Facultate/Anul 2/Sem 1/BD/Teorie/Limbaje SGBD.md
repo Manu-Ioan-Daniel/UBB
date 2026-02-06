@@ -12,7 +12,7 @@
     
     - Operații aplicate instanțelor unei baze de date
         
-    - DML procedural (**cum?**) vs. DML declarative (**ce?**)
+    - DML procedural  vs. DML declarative 
         
 - _Limbaj gazdă_
     

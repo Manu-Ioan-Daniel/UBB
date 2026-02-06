@@ -81,7 +81,7 @@ $$F \Rightarrow R_1 \cap R_2 \rightarrow R_2$$
 
 $(F - \{\alpha \rightarrow B\}) \cup \{\alpha - A \rightarrow B\} \equiv F$
 
-Pentru a verifica dacă $A \in \alpha$ e redundant în $\alpha \rightarrow B$, calculăm $(\alpha - A)^{+}$. Apoi $A \in \alpha$ e redundant în $\alpha \rightarrow B$ dacă $B \in (\alpha - A)^{+}$
+Pentru a verifica dacă $A \in \alpha$ e redundant în $\alpha \rightarrow B$,  verificam daca B $\in$ $(\alpha - A)^{+}$
 
 ---
 

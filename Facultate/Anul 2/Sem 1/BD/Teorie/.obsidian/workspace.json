@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Forme Normale.md",
-                "mode": "source",
+                "file": "Teorie cringe.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Forme Normale"
+              "title": "Teorie cringe"
             }
           }
         ]
@@ -185,23 +185,23 @@
   },
   "active": "d1daddf5f679c1af",
   "lastOpenFiles": [
+    "Valoare NULL.md",
+    "Teorie cringe.md",
+    "Relatii.md",
+    "Organizare directa.md",
+    "Limbaje SGBD.md",
+    "Indexi.md",
+    "Forme Normale.md",
+    "Expresii.md",
     "Dependente functionale.md",
     "Chei si atribute.md",
     "Arbori B.md",
     "Algebra relationala.md",
-    "Forme Normale.md",
-    "Expresii.md",
-    "Teorie cringe.md",
-    "Indexi.md",
-    "Valoare NULL.md",
-    "Organizare directa.md",
     "Images/Pasted image 20260204141905.png",
     "Images",
     "Untitled.md",
     "Images/Pasted image 20260204141638.png",
     "Images/Pasted image 20260204141557.png",
-    "Limbaje SGBD.md",
-    "Relatii.md",
     "Welcome.md"
   ]
 }

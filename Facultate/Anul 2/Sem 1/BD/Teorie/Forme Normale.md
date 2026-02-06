@@ -1,4 +1,4 @@
-
+ 
 ### 1NF
 
 **Definiție.** O relație se află în _Prima Formă Normală_ (1NF) dacă fiecare atribut al relației poate avea doar valori atomice (deci listele și mulțimile sunt excluse)

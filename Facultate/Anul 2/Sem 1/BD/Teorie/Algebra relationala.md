@@ -76,7 +76,7 @@ Relațiile $R_1$ și $R_2$ trebuie să fie _compatibile_:
     
     $R_1 / R_2 = \{ <x> \mid \exists <x,y> \in R_1 \quad \forall <y> \in R_2 \}$
     
-    adică, **$R_1 / R_2$ conține toate tuplurile $x$ a.î. pentru _fiecare_ dintre tuplurile $y$ din $R_2$, există câte un tupl $xy$ în $R_1$.**
+    adică, **$R_1 / R_2$ conține toate tuplurile $x$ a.î. pentru _fiecare_ dintre tuplurile $y$ din $R_2$, există câte un tuplu $xy$ în $R_1$.**
     
     _Sau:_ Dacă mulțimea valorilor $y$ asociate cu o valoare $x$ din $R_1$ conține toate valorile $y$ din $R_2$, atunci $x$ va fi returnat în rezultat $R_1 / R_2$.
     
