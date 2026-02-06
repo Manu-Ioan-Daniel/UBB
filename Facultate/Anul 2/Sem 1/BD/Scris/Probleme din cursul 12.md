@@ -145,7 +145,7 @@ F_2 = {B->C,B->E,C->B,C->D,C->E}
 Calculam B+ pe baza  F_2 - {B->E}  si ajungem la B+ = {B,C,D,E} si cum E apartine =>B->E este redundant ajungem la F_3 = {B->C,C->B,C->D,C->E} gata asta e 
 
 3. Nu este in BCNF,avem dependente partiale de exemplu B->E,C->D
-4. (A,B,C,D,E) => (A,B,C),(C,D),(B,E) =>nu putem aduce la BCNF pentru ca nu se respecta toate dependentele functionale initiale
+4. (A,B,C,D,E) => (A,B,C),(C,D),(B,E)
 5. nu
 6. nu
 7. descompunere 3NF F_3 = {B->C,C->BDE} => (A,B,C,D,E) descompunem in (B,C),(C,B,D,E),(A,B),(A,C) deoarece A,B nu este inclus nici in (B,C) nici in (C,B,D,E) la fel si AC
