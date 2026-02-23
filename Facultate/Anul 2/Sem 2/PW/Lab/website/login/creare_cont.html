@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Calisthenics Pro - Creare cont</title>
+</head>
+
+<body>
+
+<header>
+    <center>
+        <h1>Calisthenics Pro</h1>
+        <img src="/assets/logo.png" width=100" height="120" alt="Logo Calisthenics" title="Calisthenics">
+    </center>
+</header>
+
+<br>
+
+<nav>
+    <center>
+        <a href="login.html" target="_self">Login</a> |
+        <a href="home.html" target="_self">Home</a> |
+        <a href = "../programe/programe.html" target="_self">Programe</a>
+    </center>
+</nav>
+
+<br><br>
+
+<section>
+    <h2 align="center">Creare cont utilizator</h2>
+
+    <form name="formularCont">
+        <fieldset>
+            <legend><b>Date cont</b></legend>
+
+            Nume utilizator:<br>
+            <input type="text" name="username" size="30" maxlength="20"><br><br>
+
+            Email:<br>
+            <input type="text" name="email" size="30"><br><br>
+
+            Parolă:<br>
+            <input type="password" name="parola" size="30" maxlength="20"><br><br>
+
+            Confirmare parolă:<br>
+            <input type="password" name="confirmare" size="30" maxlength="20"><br><br>
+
+            Vârstă:<br>
+            <input type="number" name="varsta" max="100" step="1"><br><br>
+
+            Nivel pregătire:<br>
+            <input type="radio" name="nivel" value="incepator" checked> Începător<br>
+            <input type="radio" name="nivel" value="intermediar"> Intermediar<br>
+            <input type="radio" name="nivel" value="avansat"> Avansat<br><br>
+
+            Obiective:<br>
+            <input type="checkbox" name="forta" value="forta"> Forță<br>
+            <input type="checkbox" name="rezistenta" value="rezistenta"> Rezistență<br>
+            <input type="checkbox" name="mobilitate" value="mobilitate"> Mobilitate<br><br>
+
+            Tip program dorit:<br>
+            <select name="program">
+                <option value="fullbody" selected>Full Body</option>
+                <option value="upper">Upper Body</option>
+                <option value="lower">Lower Body</option>
+            </select><br><br>
+
+            Descriere obiective:<br>
+            <textarea name="descriere" cols="40" rows="4"></textarea><br><br>
+
+            <input type="submit" value="Creează cont">
+        </fieldset>
+    </form>
+</section>
+
+<br><br>
+
+<footer>
+    <center>
+        <p>
+            <span title="Copyright">© 2026 Calisthenics Pro</span><br>
+            Contact: <a href="mailto:manudaniel@calisthenicspro.ro" target="_self">manudaniel@calisthenicspro.ro</a>
+        </p>
+    </center>
+</footer>
+
+</body>
+</html>
