@@ -1,0 +1,12 @@
+CREATE TABLE materii(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    credits INT NOT NULL
+);
+
+INSERT INTO materii(name, credits)
+VALUES
+    ('Matematica', 5),
+    ('Informatica', 4),
+    ('Fizica', 3),
+    ('Chimie', 2);

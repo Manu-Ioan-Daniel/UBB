@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="683.0" spacing="20.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UiController">
+   <children>
+      <TableView fx:id="materiiTable" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Nume" />
+            <TableColumn fx:id="creditColumn" prefWidth="75.0" text="Credite" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox spacing="20.0">
+         <children>
+            <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Profesori">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="professorsTable" prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="profNameColumn" prefWidth="75.0" text="Nume" />
+                        <TableColumn fx:id="profAgeColumn" prefWidth="75.0" text="Varsta" />
+                        <TableColumn fx:id="profEmailColumn" prefWidth="75.0" text="Email" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Elevi">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="studentsTable" prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="studNameColumn" prefWidth="75.0" text="Nume" />
+                        <TableColumn fx:id="studEmailColumn" prefWidth="75.0" text="Email" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+         <children>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: black;" text="Adauga" HBox.hgrow="ALWAYS" />
+            <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: black;" text="Sterge" HBox.hgrow="ALWAYS" />
+            <Button layoutX="62.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: black;" text="Modifica" HBox.hgrow="ALWAYS" />
+         </children></HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

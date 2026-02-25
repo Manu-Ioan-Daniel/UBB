@@ -167,6 +167,6 @@ public class Probleme {
 
         //problema 4
         String text2 = "ana are ana are mere rosii ana";
-        
+
     }
 }
