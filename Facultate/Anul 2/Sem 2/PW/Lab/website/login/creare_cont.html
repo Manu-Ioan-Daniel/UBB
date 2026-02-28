@@ -2,32 +2,30 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>Calisthenics Pro - Creare cont</title>
+    <title>Calisthenics Core - Creare cont</title>
 </head>
 
 <body>
 
 <header>
-    <center>
-        <h1>Calisthenics Pro</h1>
-        <img src="/assets/logo.png" width=100" height="120" alt="Logo Calisthenics" title="Calisthenics">
-    </center>
+    <h1>Calisthenics Core</h1>
+    <img src="/assets/logo.png" width="100" height="120" alt="Logo Calisthenics" title="Calisthenics">
 </header>
 
 <br>
 
 <nav>
-    <center>
-        <a href="login.html" target="_self">Login</a> |
+    <div>
         <a href="home.html" target="_self">Home</a> |
+        <a href="login.html" target="_self">Login</a> |
         <a href = "../programe/programe.html" target="_self">Programe</a>
-    </center>
+    </div>
 </nav>
 
 <br><br>
 
 <section>
-    <h2 align="center">Creare cont utilizator</h2>
+    <h2>Creare cont utilizator</h2>
 
     <form name="formularCont">
         <fieldset>
@@ -39,16 +37,16 @@
             Email:<br>
             <input type="text" name="email" size="30"><br><br>
 
-            Parolă:<br>
+            Parola:<br>
             <input type="password" name="parola" size="30" maxlength="20"><br><br>
 
-            Confirmare parolă:<br>
+            Confirmare parola:<br>
             <input type="password" name="confirmare" size="30" maxlength="20"><br><br>
 
-            Vârstă:<br>
+            Varsta:<br>
             <input type="number" name="varsta" max="100" step="1"><br><br>
 
-            Nivel pregătire:<br>
+            Nivel pregatire:<br>
             <input type="radio" name="nivel" value="incepator" checked> Începător<br>
             <input type="radio" name="nivel" value="intermediar"> Intermediar<br>
             <input type="radio" name="nivel" value="avansat"> Avansat<br><br>
@@ -58,8 +56,13 @@
             <input type="checkbox" name="rezistenta" value="rezistenta"> Rezistență<br>
             <input type="checkbox" name="mobilitate" value="mobilitate"> Mobilitate<br><br>
 
+            Tara:<br>
+            <input type="text" value="România" readonly> <br><br>
+
+            <input type="text" value="Cod promo indisponibil" disabled> <br><br>
+
             Tip program dorit:<br>
-            <select name="program">
+            <select name="program" multiple size = "3">
                 <option value="fullbody" selected>Full Body</option>
                 <option value="upper">Upper Body</option>
                 <option value="lower">Lower Body</option>
@@ -76,12 +79,12 @@
 <br><br>
 
 <footer>
-    <center>
+    <div>
         <p>
-            <span title="Copyright">© 2026 Calisthenics Pro</span><br>
+            <span title="Copyright">© 2026 Calisthenics Core</span><br>
             Contact: <a href="mailto:manudaniel@calisthenicspro.ro" target="_self">manudaniel@calisthenicspro.ro</a>
         </p>
-    </center>
+    </div>
 </footer>
 
 </body>
