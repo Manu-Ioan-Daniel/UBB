@@ -8,11 +8,12 @@ import repos.ProfessorRepo;
 import repos.StudRepo;
 import services.Service;
 import utils.StageManager;
+import validator.ProfessorValidator;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage stage) {
-        StageManager.showMainWindow(new Service(new MaterieRepo(),new StudRepo(),new ProfessorRepo(),new NoteRepo()));
+        StageManager.showMainWindow(new Service(new MaterieRepo(),new StudRepo(),new ProfessorRepo(),new NoteRepo(), new ProfessorValidator()));
     }
 }

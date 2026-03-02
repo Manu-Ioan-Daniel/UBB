@@ -10,6 +10,7 @@ import models.Materie;
 import models.Professor;
 import models.Student;
 import services.Service;
+import utils.StageManager;
 
 public class UiController {
 
@@ -99,14 +100,17 @@ public class UiController {
         profAgeColumn.setCellValueFactory(new PropertyValueFactory<>("age"));
     }
 
+    @FXML
     private void handleAdd(){
-
+        StageManager.showFormWindow(service);
     }
 
+    @FXML
     private void handleDelete(){
 
     }
 
+    @FXML
     private void handleUpdate(){
 
     }
