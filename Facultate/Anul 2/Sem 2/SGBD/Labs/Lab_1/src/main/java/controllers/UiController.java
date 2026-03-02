@@ -1,5 +1,7 @@
 package controllers;
 
+import javafx.beans.property.SimpleLongProperty;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -30,10 +32,13 @@ public class UiController {
     private TableColumn<Professor, String> profNameColumn;
 
     @FXML
-    private TableColumn<Student, String> studEmailColumn;
+    private TableColumn<Student, Integer> studAgeColumn;
 
     @FXML
     private TableColumn<Student, String> studNameColumn;
+
+    @FXML
+    private TableColumn<Student,Long> studNotaColumn;
 
     @FXML
     private TableView<Materie> materiiTable;
@@ -46,11 +51,13 @@ public class UiController {
 
     private Service service;
 
-    private void init(){
-
+    public void init(){
+        initMateriiTable();
+        initStudentsTable();
+        initProfessorsTable();
     }
 
-    private void setService(Service service){
+    public void setService(Service service){
         this.service = service;
     }
 
@@ -58,6 +65,49 @@ public class UiController {
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         creditColumn.setCellValueFactory(new PropertyValueFactory<>("credits"));
-        materiiTable.setItems
+
+        materiiTable.setItems(FXCollections.observableList(service.getAllMaterii()));
+        materiiTable.getSelectionModel().selectedItemProperty().addListener((obs,oldVal,newVal)->{
+           if(newVal!=null){
+               studentsTable.setItems(FXCollections.observableList(service.getAllStudentsByMaterie(newVal.getId())));
+               professorsTable.setItems(FXCollections.observableList(service.getAllProfessorsByMaterie(newVal.getId())));
+           }
+        });
+    }
+
+    private void initStudentsTable(){
+        studNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        studAgeColumn.setCellValueFactory(new PropertyValueFactory<>("age"));
+        studNotaColumn.setCellValueFactory(cell->{
+            if(materiiTable.getSelectionModel().getSelectedItem()!=null){
+                Materie materie = materiiTable.getSelectionModel().getSelectedItem();
+                Student student = cell.getValue();
+                if(service.getNota(materie.getId(), student.getId()) == null){
+                    return null;
+                }
+                return new SimpleLongProperty(service.getNota(materie.getId(),student.getId())).asObject();
+            }
+            else{
+                return null;
+            }
+        });
+    }
+
+    private void initProfessorsTable(){
+        profNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        profEmailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
+        profAgeColumn.setCellValueFactory(new PropertyValueFactory<>("age"));
+    }
+
+    private void handleAdd(){
+
+    }
+
+    private void handleDelete(){
+
+    }
+
+    private void handleUpdate(){
+
     }
 }

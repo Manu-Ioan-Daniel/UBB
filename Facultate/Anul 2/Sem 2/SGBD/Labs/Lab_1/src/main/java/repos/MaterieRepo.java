@@ -3,7 +3,6 @@ package repos;
 import models.Materie;
 import utils.DatabaseManager;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,10 +19,9 @@ public class MaterieRepo implements Repository<Long, Materie>{
     @Override
     public List<Materie> findAll() {
         String sql = "SELECT * FROM materii";
-        try(Connection connection = DatabaseManager.getInstance().getConnection()){
+        try(PreparedStatement ps = DatabaseManager.getInstance().getConnection().prepareStatement(sql)){
 
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            ResultSet resultSet = preparedStatement.executeQuery();
+            ResultSet resultSet = ps.executeQuery();
 
             List<Materie> materii = new ArrayList<>();
 

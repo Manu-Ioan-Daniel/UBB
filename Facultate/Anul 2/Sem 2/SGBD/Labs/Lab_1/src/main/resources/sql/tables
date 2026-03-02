@@ -4,9 +4,52 @@ CREATE TABLE materii(
     credits INT NOT NULL
 );
 
+CREATE TABLE studenti(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    age INT NOT NULL
+);
+
+CREATE TABLE profesori(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    age INT NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    materie_id INT FOREIGN KEY REFERENCES materii(id) ON DELETE CASCADE,
+);
+CREATE TABLE note_studenti(
+    student_id INT FOREIGN KEY REFERENCES studenti(id) ON DELETE CASCADE,
+    materie_id INT FOREIGN KEY REFERENCES materii(id) ON DELETE CASCADE,
+    nota BIGINT NOT NULL,
+    PRIMARY KEY(student_id, materie_id)
+);
+
 INSERT INTO materii(name, credits)
 VALUES
     ('Matematica', 5),
     ('Informatica', 4),
     ('Fizica', 3),
     ('Chimie', 2);
+
+INSERT INTO studenti(name, age)
+VALUES
+    ('Ion Popescu', 20),
+    ('Maria Ionescu', 22),
+    ('Vasile Georgescu', 21);
+
+INSERT INTO profesori(name, age, email, materie_id)
+VALUES
+    ('Prof. Andrei', 45, 1),
+    ('Prof. Elena', 50, 2),
+    ('Prof. Mihai', 40, 3),
+    ('Prof. Ana', 35, 4);
+
+INSERT INTO note_studenti(student_id, materie_id, nota)
+VALUES
+    (1, 1, 9.5),
+    (1, 2, 8.0),
+    (2, 1, 7.0),
+    (2, 3, 8.5),
+    (3, 2, 9.0),
+    (3, 4, 7.5);
+

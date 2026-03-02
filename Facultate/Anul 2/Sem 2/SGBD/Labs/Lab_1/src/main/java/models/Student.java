@@ -3,18 +3,18 @@ package models;
 public class Student extends Entity<Long>{
 
     private final String name;
-    private final String email;
+    private final Integer age;
 
-    public Student(String name, String email) {
+    public Student(String name, Integer age) {
         this.name = name;
-        this.email = email;
+        this.age = age;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getEmail() {
-        return email;
+    public Integer getAge() {
+        return age;
     }
 }

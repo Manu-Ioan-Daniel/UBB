@@ -52,7 +52,8 @@
                   <TableView fx:id="studentsTable" prefHeight="200.0" prefWidth="200.0">
                      <columns>
                         <TableColumn fx:id="studNameColumn" prefWidth="75.0" text="Nume" />
-                        <TableColumn fx:id="studEmailColumn" prefWidth="75.0" text="Email" />
+                        <TableColumn fx:id="studAgeColumn" prefWidth="75.0" text="Age" />
+                        <TableColumn fx:id="studNotaColumn" prefWidth="75.0" text="Nota" />
                      </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -64,9 +65,9 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
          <children>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: black;" text="Adauga" HBox.hgrow="ALWAYS" />
-            <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: black;" text="Sterge" HBox.hgrow="ALWAYS" />
-            <Button layoutX="62.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: black;" text="Modifica" HBox.hgrow="ALWAYS" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAdd" prefHeight="40.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: black;" text="Adauga" HBox.hgrow="ALWAYS" />
+            <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleDelete" prefHeight="40.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: black;" text="Sterge" HBox.hgrow="ALWAYS" />
+            <Button layoutX="62.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="40.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: black;" text="Modifica" HBox.hgrow="ALWAYS" />
          </children></HBox>
    </children>
    <padding>
