@@ -11,7 +11,7 @@ public class Probleme {
         }
     }
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Probleme p = new Probleme();
         p.teste();
     }
