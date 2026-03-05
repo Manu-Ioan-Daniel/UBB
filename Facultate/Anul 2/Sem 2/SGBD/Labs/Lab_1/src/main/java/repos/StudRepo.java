@@ -32,6 +32,11 @@ public class StudRepo implements Repository<Long, Student>{
         }
     }
 
+    /***
+     * @param rs result set ul din care se creeaza studentul, trebuie sa contina coloanele id, name si age
+     * @return studentul creat
+     * @throws SQLException daca result set ul nu contine coloanele necesare sau daca valorile din coloane nu sunt de tipul corect
+     */
     private Student studentFromResultSet(ResultSet rs) throws SQLException {
         Long id = rs.getLong("id");
         String nume = rs.getString("name");

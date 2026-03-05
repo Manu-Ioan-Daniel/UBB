@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class NoteRepo implements Repository<Tuple<Long,Long>, Long>{
+public class NoteDBRepo implements Repository<Tuple<Long,Long>, Long>{
 
     // id-ul este format din id-ul studentului si id-ul materiei
     @Override

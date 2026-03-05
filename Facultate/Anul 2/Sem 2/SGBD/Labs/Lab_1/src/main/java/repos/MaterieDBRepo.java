@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MaterieRepo implements Repository<Long, Materie>{
+public class MaterieDBRepo implements Repository<Long, Materie>{
 
     @Override
     public Materie findOne(Long id) {
@@ -51,6 +51,12 @@ public class MaterieRepo implements Repository<Long, Materie>{
 
     }
 
+    /***
+     * Creeaza o materie dintr un result set
+     * @param rs result set ul din care se creeaza materia, trebuie sa contina coloanele id, name si credits
+     * @return materia creata
+     * @throws SQLException daca result set ul nu contine coloanele necesare sau daca valorile din coloane nu sunt de tipul corect
+     */
     private Materie createMaterieFromRS(ResultSet rs) throws SQLException {
         String name = rs.getString("name");
         int credits = rs.getInt("credits");

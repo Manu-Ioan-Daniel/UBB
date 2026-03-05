@@ -8,10 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="215.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FormController">
+<VBox fx:id="root" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="215.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UpdateFormController">
    <children>
-      <Label text="Adauga/Update Profesor">
+      <Label text="Update Profesor">
          <font>
             <Font size="27.0" />
          </font>
@@ -28,7 +27,7 @@
       <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
          <children>
             <TextField fx:id="emailField" maxWidth="1.7976931348623157E308" promptText="email" HBox.hgrow="ALWAYS" />
-            <TextField fx:id="materieField" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" promptText="ID Materie" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="materieField" editable="false" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" promptText="ID Materie" HBox.hgrow="ALWAYS" />
          </children>
          <VBox.margin>
             <Insets left="20.0" right="20.0" />

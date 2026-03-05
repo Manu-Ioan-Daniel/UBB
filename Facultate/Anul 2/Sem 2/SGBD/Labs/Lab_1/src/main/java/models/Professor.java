@@ -2,9 +2,9 @@ package models;
 
 public class Professor extends Entity<Long> {
     private final String name;
-    private final Integer age;
+    private Integer age;
     private final String email;
-    private final Long materieId;
+    private Long materieId;
 
     public Professor(String name, Integer age, String email, Long materieId) {
         this.name = name;
@@ -27,5 +27,13 @@ public class Professor extends Entity<Long> {
 
     public Long getMaterieId() {
         return materieId;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public void setMaterieId(Long materieId) {
+        this.materieId = materieId;
     }
 }

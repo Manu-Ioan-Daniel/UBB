@@ -5,6 +5,10 @@ import javafx.beans.value.ObservableValue;
 import javafx.scene.control.TextField;
 
 public class TextFieldUtils {
+    /***
+     * Permite doar introducerea cifrelor intr un textfield
+     * @param field textfield ul pe care vrem aceata proprietate
+     */
     public static void makeNumericField(TextField field){
         field.textProperty().addListener(new ChangeListener<String>() {
             @Override

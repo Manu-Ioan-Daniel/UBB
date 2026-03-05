@@ -68,6 +68,7 @@
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAdd" prefHeight="40.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: black;" text="Adauga" HBox.hgrow="ALWAYS" />
             <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleDelete" prefHeight="40.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: black;" text="Sterge" HBox.hgrow="ALWAYS" />
             <Button layoutX="62.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="40.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: black;" text="Modifica" HBox.hgrow="ALWAYS" />
+            <Button layoutX="466.0" layoutY="26.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleRefresh" prefHeight="40.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: black;" text="Refresh" HBox.hgrow="ALWAYS" />
          </children></HBox>
    </children>
    <padding>
