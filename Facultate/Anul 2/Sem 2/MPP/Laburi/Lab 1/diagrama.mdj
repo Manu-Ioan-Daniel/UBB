@@ -794,7 +794,7 @@
 											"top": 358,
 											"width": 228.4775390625,
 											"height": 13,
-											"text": "+destination: String",
+											"text": "-destination: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -811,7 +811,7 @@
 											"top": 373,
 											"width": 228.4775390625,
 											"height": 13,
-											"text": "+date: LocalDate",
+											"text": "-date: LocalDate",
 											"horizontalAlignment": 0
 										},
 										{
@@ -828,7 +828,7 @@
 											"top": 388,
 											"width": 228.4775390625,
 											"height": 13,
-											"text": "+departureTime: LocalTime",
+											"text": "-departureTime: LocalTime",
 											"horizontalAlignment": 0
 										},
 										{
@@ -845,7 +845,7 @@
 											"top": 403,
 											"width": 228.4775390625,
 											"height": 13,
-											"text": "+availableSeats: Integer = 18",
+											"text": "-availableSeats: Integer = 18",
 											"horizontalAlignment": 0
 										}
 									],
@@ -1124,7 +1124,7 @@
 											"top": 374,
 											"width": 235.587890625,
 											"height": 13,
-											"text": "+clientName: String",
+											"text": "-clientName: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1141,7 +1141,7 @@
 											"top": 389,
 											"width": 235.587890625,
 											"height": 13,
-											"text": "+reservedSeatsCount: Integer",
+											"text": "-reservedSeatsCount: Integer",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1158,7 +1158,7 @@
 											"top": 404,
 											"width": 235.587890625,
 											"height": 13,
-											"text": "+ride: Ride",
+											"text": "-ride: Ride",
 											"horizontalAlignment": 0
 										}
 									],
@@ -5843,7 +5843,8 @@
 								"$ref": "AAAAAAGcv6ysPTe8gc4="
 							},
 							"name": "ID id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -6088,6 +6089,7 @@
 								"$ref": "AAAAAAGcv7mLRzjNP5o="
 							},
 							"name": "destination",
+							"visibility": "private",
 							"type": "String"
 						},
 						{
@@ -6097,6 +6099,7 @@
 								"$ref": "AAAAAAGcv7mLRzjNP5o="
 							},
 							"name": "date",
+							"visibility": "private",
 							"type": "LocalDate"
 						},
 						{
@@ -6106,6 +6109,7 @@
 								"$ref": "AAAAAAGcv7mLRzjNP5o="
 							},
 							"name": "departureTime",
+							"visibility": "private",
 							"type": "LocalTime"
 						},
 						{
@@ -6115,6 +6119,7 @@
 								"$ref": "AAAAAAGcv7mLRzjNP5o="
 							},
 							"name": "availableSeats",
+							"visibility": "private",
 							"type": "Integer",
 							"defaultValue": "18"
 						}
@@ -6260,6 +6265,7 @@
 								"$ref": "AAAAAAGcv72+uTmYbIE="
 							},
 							"name": "clientName",
+							"visibility": "private",
 							"type": "String"
 						},
 						{
@@ -6269,6 +6275,7 @@
 								"$ref": "AAAAAAGcv72+uTmYbIE="
 							},
 							"name": "reservedSeatsCount",
+							"visibility": "private",
 							"type": "Integer"
 						},
 						{
@@ -6278,6 +6285,7 @@
 								"$ref": "AAAAAAGcv72+uTmYbIE="
 							},
 							"name": "ride",
+							"visibility": "private",
 							"type": {
 								"$ref": "AAAAAAGcv7mLRzjNP5o="
 							}
