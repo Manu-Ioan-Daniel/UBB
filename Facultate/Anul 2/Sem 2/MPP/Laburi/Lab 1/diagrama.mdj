@@ -2358,7 +2358,7 @@
 											"top": 571,
 											"width": 131.85986328125,
 											"height": 13,
-											"text": "+save()",
+											"text": "+save(entity: Entity)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2375,7 +2375,7 @@
 											"top": 586,
 											"width": 131.85986328125,
 											"height": 13,
-											"text": "+delete()",
+											"text": "+delete(id: ID)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2392,7 +2392,7 @@
 											"top": 601,
 											"width": 131.85986328125,
 											"height": 13,
-											"text": "+update()",
+											"text": "+update(entity: Entity)",
 											"horizontalAlignment": 0
 										}
 									],
@@ -6932,7 +6932,20 @@
 							"_parent": {
 								"$ref": "AAAAAAGcv81vajt2VYs="
 							},
-							"name": "save"
+							"name": "save",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGc3WKvj+SW2PY=",
+									"_parent": {
+										"$ref": "AAAAAAGcv82dQjuyh+E="
+									},
+									"name": "entity",
+									"type": {
+										"$ref": "AAAAAAGcv6ysPTe8gc4="
+									}
+								}
+							]
 						},
 						{
 							"_type": "UMLOperation",
@@ -6940,7 +6953,20 @@
 							"_parent": {
 								"$ref": "AAAAAAGcv81vajt2VYs="
 							},
-							"name": "delete"
+							"name": "delete",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGc3WLQweVr6L8=",
+									"_parent": {
+										"$ref": "AAAAAAGcv82e9ju49lc="
+									},
+									"name": "id",
+									"type": {
+										"$ref": "AAAAAAGcv6z1ljgmJtg="
+									}
+								}
+							]
 						},
 						{
 							"_type": "UMLOperation",
@@ -6948,7 +6974,20 @@
 							"_parent": {
 								"$ref": "AAAAAAGcv81vajt2VYs="
 							},
-							"name": "update"
+							"name": "update",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGc3WL04eZATEg=",
+									"_parent": {
+										"$ref": "AAAAAAGcv8+mYTwacwU="
+									},
+									"name": "entity",
+									"type": {
+										"$ref": "AAAAAAGcv6ysPTe8gc4="
+									}
+								}
+							]
 						}
 					]
 				},
