@@ -2,9 +2,7 @@
 
 public class Reservation : Entity<long>
 {
-    public required string ClientName { get; set; }
-    public int ReservedSeatsCount { get; set; }
-        
-    // Înlocuit obiectul Ride cu RideId de tip long
-    public long RideId { get; set; } 
+    public required string ClientName { get; init; }
+    public required int ReservedSeatsCount { get; init; }
+    public required long RideId { get; init; } 
 }
