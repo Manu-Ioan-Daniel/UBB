@@ -1,0 +1,8 @@
+.menu{
+    width:120px;
+    float:left;
+    min-height:100vh;
+}
+.menu li{
+    margin-top:10px;
+}
