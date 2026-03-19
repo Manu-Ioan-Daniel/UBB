@@ -1,0 +1,23 @@
+CREATE TABLE employees(
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    office VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE rides(
+    id SERIAL PRIMARY KEY,
+    destination VARCHAR(255) NOT NULL,
+    ride_date DATE NOT NULL,
+    departure_time TIME NOT NULL,
+    available_seats INT NOT NULL DEFAULT 18
+);
+
+CREATE TABLE reservations(
+    id SERIAL PRIMARY KEY,
+    client_name VARCHAR(255) NOT NULL,
+    reserved_seats_count INT NOT NULL,
+    ride_id BIGINT UNSIGNED NOT NULL,
+    CONSTRAINT fk_reservations_ride FOREIGN KEY (ride_id) REFERENCES rides(id) ON DELETE CASCADE
+);
