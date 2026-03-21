@@ -2,91 +2,123 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programe Calisthenics</title>
     <link rel="stylesheet" href="../styling/base.css">
-    <link rel="stylesheet" href="../styling/verticalNav.css">
+<!--    <link rel="stylesheet" href="../styling/verticalNav.css">-->
+    <link rel ="stylesheet" href="../styling/horizontalNav.css">
+    <link rel="stylesheet" href="../styling/responsive.css">
+
 </head>
 <body>
 
 <header>
     <h1>Calisthenics Core</h1>
-    <img src="../assets/logo.png" alt="Logo Calisthenics" title="Calisthenics" id = "logo">
+    <img src="../assets/logo.png" alt="Logo Calisthenics" title="Calisthenics" id="logo">
 </header>
 
 <nav>
     <ul class="menu">
         <li><a href="../home/home.html" target="_self">Home</a></li>
-        <li><a href="../login/login.html" target="_self">Login</a></li>
+        <li>
+            <a href="#">Login</a>
+            <div class="dropdown">
+                <a href="../login/login.html">Autentificare</a>
+                <a href="../login/creare_cont.html">Creare cont</a>
+            </div>
+        </li>
         <li><a href="../programe/programe.html" target="_self">Programe</a></li>
     </ul>
 </nav>
 
-<br><br>
 
 <section>
     <h2>Programe saptamanale</h2>
 
+    <div class="table-container">
+        <table>
+            <tr>
+                <th colspan="5">Program Full Body</th>
+            </tr>
+            <tr>
+                <th>Ziua</th>
+                <th>Exercitii</th>
+                <th>Seturi</th>
+                <th>Repetari</th>
+                <th>Detalii</th>
+            </tr>
 
-    <table>
-        <tr>
-            <th colspan="3">Program Full Body</th>
-        </tr>
-        <tr>
-            <th>Ziua</th>
-            <th>Exercitii</th>
-            <th>Detalii</th>
-        </tr>
+            <tr>
+                <td rowspan="2">Luni</td>
+                <td>Flotari</td>
+                <td>3</td>
+                <td>15</td>
+                <td>Focus: Forta</td>
+            </tr>
+            <tr>
+                <td>Genuflexiuni</td>
+                <td>3</td>
+                <td>20</td>
+                <td>Focus: Rezistenta</td>
+            </tr>
 
+            <tr>
+                <td rowspan="2">Marti</td>
+                <td>Tractiuni</td>
+                <td>3</td>
+                <td>10</td>
+                <td>Focus: Upper Body</td>
+            </tr>
+            <tr>
+                <td>Dips</td>
+                <td>3</td>
+                <td>12</td>
+                <td>Focus: Triceps</td>
+            </tr>
 
-        <tr>
-            <td rowspan="2">Luni</td>
-            <td>
+            <tr>
+                <td>Miercuri</td>
+                <td colspan="3">Rest</td>
+                <td>Recuperare activa</td>
+            </tr>
 
-                <table>
-                    <tr>
-                        <th>Exercițiu</th>
-                        <th>Repetari</th>
-                    </tr>
-                    <tr>
-                        <td>Flotari</td>
-                        <td>3x15</td>
-                    </tr>
-                    <tr>
-                        <td>Genuflexiuni</td>
-                        <td>3x20</td>
-                    </tr>
-                </table>
-            </td>
-            <td>Focus: Forta si rezistenta</td>
-        </tr>
+            <tr>
+                <td rowspan="2">Joi</td>
+                <td>Fandari</td>
+                <td>3</td>
+                <td>12</td>
+                <td>Focus: Lower Body</td>
+            </tr>
+            <tr>
+                <td>Plank</td>
+                <td>3</td>
+                <td>60s</td>
+                <td>Focus: Core</td>
+            </tr>
 
-        <tr>
-            <td>
-                <table>
-                    <tr>
-                        <th>Exercitiu</th>
-                        <th>Repetari</th>
-                    </tr>
-                    <tr>
-                        <td>Tractiuni</td>
-                        <td>3x10</td>
-                    </tr>
-                    <tr>
-                        <td>Dips</td>
-                        <td>3x12</td>
-                    </tr>
-                </table>
-            </td>
-            <td>Focus: Upper Body</td>
-        </tr>
+            <tr>
+                <td>Vineri</td>
+                <td>Muscle Up</td>
+                <td>3</td>
+                <td>5</td>
+                <td>Focus: Full Body</td>
+            </tr>
 
-        <tr>
-            <td>Rest</td>
-            <td colspan="2">Recuperare activa si mobilitate</td>
-        </tr>
-    </table>
+            <tr>
+                <td>Sambata</td>
+                <td colspan="3">Rest</td>
+                <td>Mobilitate si stretching</td>
+            </tr>
 
-    <br><br>
+            <tr>
+                <td>Duminica</td>
+                <td>L-Sit</td>
+                <td>3</td>
+                <td>20s</td>
+                <td>Focus: Core si flexibilitate</td>
+            </tr>
+        </table>
+    </div>
 
     <h3>Tipuri de programe</h3>
     <ol type="A" start="1">
@@ -116,19 +148,18 @@
         <li>Arde grasimi</li>
     </ul>
 
-    <br>
 
 </section>
 
-<br><br>
+
 <footer>
     <div>
         <p>
-            <span title="Copyright">© 2026 Calisthenics Core</span><br>
+            <span title="Copyright">© 2026 Calisthenics Core</span>
             Contact: <a href="mailto:manudaniel@calisthenicspro.ro" target="_self">manudaniel@calisthenicspro.ro</a>
         </p>
     </div>
 </footer>
-
+<script src="../js/dropdown.js"></script>
 </body>
 </html>

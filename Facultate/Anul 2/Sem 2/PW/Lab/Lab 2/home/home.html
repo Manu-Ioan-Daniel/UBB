@@ -2,21 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calisthenics Core - Home</title>
     <link rel="stylesheet" href="../styling/base.css">
-    <link rel="stylesheet" href="../styling/verticalNav.css">
+<!--    <link rel="stylesheet" href="../styling/verticalNav.css">-->
+    <link rel ="stylesheet" href="../styling/horizontalNav.css">
+    <link rel="stylesheet" href="../styling/responsive.css">
+    <link rel="stylesheet" href="../styling/animation.css">
+
 </head>
 <body>
 <header>
     <h1>Calisthenics Core</h1>
-    <img src="../assets/logo.png" alt="Logo Calisthenics" title="Calisthenics" id = "logo">
+    <img src="../assets/logo.png" alt="Logo Calisthenics" title="Calisthenics" id="logo">
 </header>
 <nav>
     <ul class="menu">
-    <li><a href="home.html" target="_self">Home</a></li>
-    <li><a href="../login/login.html" target="_self">Login</a></li>
-    <li><a href="../programe/programe.html" target="_self">Programe</a></li>
-</ul>
+        <li><a href="../home/home.html" target="_self">Home</a></li>
+        <li>
+            <a href="#">Login</a>
+            <div class="dropdown">
+                <a href="../login/login.html">Autentificare</a>
+                <a href="../login/creare_cont.html">Creare cont</a>
+            </div>
+        </li>
+        <li><a href="../programe/programe.html" target="_self">Programe</a></li>
+    </ul>
 </nav>
+<section>
+    <h2>Despre noi</h2>
+    <div class="carduri">
+        <div class="card">
+            <div class="card-icon">💪</div>
+            <h3>Forta</h3>
+            <p>Dezvolta-ti forta prin exercitii de calisthenics progresive, de la basic la avansat.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🧘</div>
+            <h3>Mobilitate</h3>
+            <p>Imbunatateste flexibilitatea si mobilitatea articulatiilor prin miscare controlata.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🏃</div>
+            <h3>Rezistenta</h3>
+            <p>Creste rezistenta cardiovasculara si musculara cu antrenamente complete.</p>
+        </div>
+    </div>
+</section>
+<footer>
+    <div>
+        <p>
+            <span title="Copyright">© 2026 Calisthenics Core</span>
+            Contact: <a href="mailto:manudaniel@calisthenicspro.ro" target="_self">manudaniel@calisthenicspro.ro</a>
+        </p>
+    </div>
+</footer>
+<script src="../js/dropdown.js"></script>
 </body>
 </html>

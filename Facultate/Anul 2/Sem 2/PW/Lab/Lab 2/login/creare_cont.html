@@ -2,9 +2,12 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calisthenics Core - Creare cont</title>
     <link rel="stylesheet" href="../styling/base.css">
-    <link rel="stylesheet" href="../styling/verticalNav.css">
+<!--    <link rel="stylesheet" href="../styling/verticalNav.css">-->
+    <link rel ="stylesheet" href="../styling/horizontalNav.css">
+    <link rel="stylesheet" href="../styling/responsive.css">
 </head>
 
 <body>
@@ -18,7 +21,13 @@
 <nav>
     <ul class="menu">
         <li><a href="../home/home.html" target="_self">Home</a></li>
-        <li><a href="login.html" target="_self">Login</a></li>
+        <li>
+            <a href="#">Login</a>
+            <div class="dropdown">
+                <a href="login.html">Autentificare</a>
+                <a href="creare_cont.html">Creare cont</a>
+            </div>
+        </li>
         <li><a href="../programe/programe.html" target="_self">Programe</a></li>
     </ul>
 </nav>
@@ -90,7 +99,7 @@
             </div>
 
             <div>
-                <label for="program">Tip program dorit (Ctrl+Click):</label>
+                <label for="program">Tip program dorit:</label>
                 <select id="program" name="program" multiple size="3">
                     <option value="fullbody" selected>Full Body</option>
                     <option value="upper">Upper Body</option>
@@ -118,6 +127,6 @@
         </p>
     </div>
 </footer>
-
+<script src="../js/dropdown.js"></script>
 </body>
 </html>
