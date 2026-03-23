@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -7,14 +7,39 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+section {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
-    display:flex;
+    display: flex;
     align-items: center;
-    justify-items:center;
-    width:500px;
+    justify-content: center;
+}
 
+footer {
+    text-align: center;
+}
+
+h2::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #333;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 #logo {
@@ -25,17 +50,11 @@ header {
     padding: 1px;
 }
 
-.menu{
-    list-style:none;
-    margin:0;
-    padding:0;
-    background-color:#333;
-}
-
 .menu li a {
-    display: block;
+    display: flex;
+    align-items: center;
     color: white;
-    padding: 14px 16px;
+    padding:5px;
     text-decoration: none;
 }
 
@@ -43,7 +62,202 @@ header {
     background-color: #111111;
 }
 
-fieldset div{
-    margin-bottom:10px;
+fieldset div {
+    margin-bottom: 10px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    display: block;
+    width: 90%;
+    max-width:650px;
+    text-align: left;
+    margin: auto;
+}
+
+legend {
+    padding: 0 8px;
+    color: #333;
+}
+
+label {
+    display: inline-block;
+    width: 160px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+    padding: 6px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+input[type="radio"]:checked {
+    background-color: #333;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    width: auto;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+}
+
+
+input[type="submit"]:hover {
+    background-color: #111;
+}
+
+label[for="program"],
+label[for="descriere"] {
+    vertical-align: top;
+}
+
+
+:root {
+    --culoare-primara: #333;
+    --culoare-accent: #555;
+    --culoare-header: #333;
+    --culoare-text-header: #ffffff;
+    --border-tabel: #ddd;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50vw;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th {
+    background-color: var(--culoare-header);
+    color: var(--culoare-text-header);
+    padding: 12px 16px;
+    text-align: center;
+}
+
+td {
+    padding: 10px 16px;
+    border: 1px solid var(--border-tabel);
+    text-align:center;
+}
+
+td:hover{
+    background-color: var(--culoare-accent);
+    color: white;
+}
+
+ol, ul {
+    text-align: left;
+    display: inline-block;
+}
+
+ol li, ul li {
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+ul li::before {
+    content: "▸ ";
+    color: var(--culoare-primara);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu li a::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/css_sprites.png'); /*iconite de 512x512 fiecare, imaginea are 1024x1024,vrem 20x20 iconite deci 512/20 = 25.6, 1024/25.6 = 41.5 */
+    background-size: 42px 42px;
+    margin-right: 6px;
+    vertical-align: middle;
+    filter:invert(1);
+
+}
+
+.menu li:nth-child(1) a::before {
+    background-position: 0 0;
+}
+
+.menu li:nth-child(2) a::before {
+    background-position: -21px 0;
+}
+
+.menu li:nth-child(3) a::before {
+    background-position: 0 -21px;
+}
+
+.carduri {
+    display: flex;
+    gap: 20px;
+    padding:10px;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding:30px 20px;
+    width: 30%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    color: var(--culoare-primara);
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
