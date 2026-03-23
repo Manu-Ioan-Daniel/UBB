@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9f6e7f2d-1d6f-42dd-bee0-7405523a3d9b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/images/IoU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/IoU2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/PR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/animals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/bike01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/bike02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/bike03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/bike04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/bike05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/bike06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/bike07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/bike08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/bike09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/bike10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/traffic01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/traffic02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/traffic03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/traffic04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/traffic05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/traffic06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/traffic07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/traffic08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/traffic09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bikes/traffic10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/binClass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/cm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/objectDetection.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/people.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab04_solution.ipynb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3BM4a8cvUJKdYQdguODj2r0PY1F" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 2/Sem 2/AI/Laburi/Lab 4",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\AI\Laburi\Lab 4" />
+      <recent name="C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\AI\Laburi\Lab 4\images" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.31033.139" />
+        <option value="bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9f6e7f2d-1d6f-42dd-bee0-7405523a3d9b" name="Changes" comment="" />
+      <created>1774285665668</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774285665668</updated>
+      <workItem from="1774285666683" duration="670000" />
+      <workItem from="1774286355700" duration="3613000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
