@@ -32,6 +32,7 @@ section, header, footer {
     top: 0;
     background-color: #333;
     width: 150px;
+    z-index:999;
 }
 
 .menu li:hover .dropdown {
@@ -46,6 +47,8 @@ footer {
     .menu {
         width: 90px;
         overflow:hidden;
+        justify-content: center;
+        height:100%;
     }
 
     .menu li a{
@@ -66,4 +69,32 @@ footer {
         width:auto;
     }
 
+}
+
+@media (max-width: 300px) {
+    .menu {
+        position: static;
+        width: 100%;
+        margin-left:10px;
+        margin-right:10px;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    section, header, footer {
+        margin-left: 0;
+    }
+
+    .dropdown {
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
 }

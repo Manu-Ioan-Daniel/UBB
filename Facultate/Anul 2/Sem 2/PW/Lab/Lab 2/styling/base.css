@@ -152,13 +152,18 @@ label[for="descriere"] {
     --border-tabel: #ddd;
 }
 
+.table-container{
+    overflow-x:auto;
+    width:100%;
+}
+
 table {
     border-collapse: collapse;
     width: 50vw;
     margin: 20px auto;
+    min-width:300px;
     background-color: white;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
