@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS departments (
+                                           id SERIAL PRIMARY KEY,
+                                           name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS employees (
+                                         id SERIAL PRIMARY KEY,
+                                         name VARCHAR(100) NOT NULL,
+                                         salary DECIMAL(10,2) NOT NULL,
+                                         department_id INT REFERENCES departments(id)
+);
+
+INSERT INTO departments (id, name) VALUES
+                                       (1, 'HR'), (2, 'IT'), (3, 'Finance'), (4, 'Marketing'), (5, 'Operations')
+
+INSERT INTO employees (id, name, salary, department_id) VALUES
+                                                            (1, 'Ion Popescu', 5000.00, 1),
+                                                            (2, 'Maria Ionescu', 6000.00, 2),
+                                                            (3, 'Gheorghe Stan', 4500.00, 3)
+
