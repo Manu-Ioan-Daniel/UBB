@@ -15,6 +15,7 @@ public class DeadlockDemo {
 
         try { DatabaseConnection.resetData(); } catch (SQLException e) { return; }
         runSolution();
+        DatabaseConnection.showFinalState();
     }
 
     private static void runDeadlock() {

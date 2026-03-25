@@ -18,6 +18,8 @@ public class PhantomReadDemo {
         try { DatabaseConnection.resetData(); } catch (SQLException e) { return; }
 
         runWithSolution();
+
+        DatabaseConnection.showFinalState();
     }
 
     private static void runWithProblem() {

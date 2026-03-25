@@ -32,6 +32,7 @@ public class BatchInsertDemo {
         }
 
         printResults(timesA, timesB, timesC);
+        DatabaseConnection.showFinalState();
     }
 
     private static long approach1AutoCommit() {
@@ -141,8 +142,8 @@ public class BatchInsertDemo {
         System.out.println("╚══════════════╩═════════════╩═════════════╩═══════════╝");
 
         System.out.println("\nConcluzii:");
-        System.out.println("  Batch vs Auto-commit: de ~" + (avgA / Math.max(avgC, 1)) + "x mai rapid");
-        System.out.println("  Commit/100 vs Auto-commit: de ~" + (avgA / Math.max(avgB, 1)) + "x mai rapid");
+        System.out.printf("  Batch vs Auto-commit: de ~%.2fx mai rapid%n", (double)avgA/avgC);
+        System.out.printf("  Batch vs Commit/100: de ~%.2fx mai rapid%n", (double)avgB/avgC);
     }
 
     private static long average(long[] arr) {

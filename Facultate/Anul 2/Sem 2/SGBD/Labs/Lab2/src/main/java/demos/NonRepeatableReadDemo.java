@@ -15,7 +15,10 @@ public class NonRepeatableReadDemo {
         try { Thread.sleep(1000); } catch (InterruptedException ignored) {}
 
         try { DatabaseConnection.resetData(); } catch (SQLException e) { return; }
+
         runWithSolution();
+
+        DatabaseConnection.showFinalState();
     }
 
     private static void runWithProblem() {

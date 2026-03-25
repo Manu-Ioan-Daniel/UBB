@@ -1,5 +1,7 @@
 package demos;
 
+import utils.DatabaseConnection;
+
 import java.sql.*;
 
 public class DirtyReadDemo {
@@ -34,6 +36,19 @@ public class DirtyReadDemo {
         } catch (SQLException ignored) {}
 
         runWithSolution();
+
+        try (Connection conn = getConnection()){
+                PreparedStatement ps = conn.prepareStatement(
+                        "SELECT id, salary FROM employees_dirty WHERE id = 1");
+                ResultSet rs = ps.executeQuery();
+                if (rs.next()) {
+                    int id = rs.getInt("id");
+                    double salary = rs.getDouble("salary");
+                    System.out.printf("[FINAL] ID: %d, Salary: %.2f%n", id, salary);
+                }
+        }catch(SQLException e){
+            System.out.println("Eroare la afisarea starii finale: " + e.getMessage());
+        }
     }
 
     private static void runWithProblem() {

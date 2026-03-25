@@ -24,4 +24,20 @@ public class DatabaseConnection {
 
         }
     }
+
+    public static void showFinalState() {
+        try (Connection conn = getConnection()){
+            var stmt = conn.createStatement();
+            var rs = stmt.executeQuery("SELECT id, name, salary FROM employees ORDER BY id");
+            System.out.println("Starea finala a tabelului employees:");
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                double salary = rs.getDouble("salary");
+                System.out.printf("ID: %d, Name: %s, Salary: %.2f%n", id, name, salary);
+            }
+        }catch(SQLException e){
+            System.out.println("Eroare la afisarea starii finale: " + e.getMessage());
+        }
+    }
 }

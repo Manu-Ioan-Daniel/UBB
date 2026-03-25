@@ -14,7 +14,10 @@ public class LostUpdateDemo {
         try { Thread.sleep(1000); } catch (InterruptedException ignored) {}
 
         try { DatabaseConnection.resetData(); } catch (SQLException e) { return; }
+
         runWithSolution();
+
+        DatabaseConnection.showFinalState();
     }
 
     private static void runWithProblem() {
@@ -95,8 +98,7 @@ public class LostUpdateDemo {
                      "SELECT salary FROM employees WHERE id = 1");
              ResultSet rs = ps.executeQuery()) {
             if (rs.next())
-                System.out.println("[FINAL] Salariu in BD: " + rs.getDouble("salary")
-                        + " (ar trebui 6500, update-ul lui B de +500 s-a pierdut)");
+                System.out.println("[FINAL] Salariu in BD: " + rs.getDouble("salary"));
         } catch (SQLException e) {
             System.out.println("[FINAL] Eroare: " + e.getMessage());
         }
