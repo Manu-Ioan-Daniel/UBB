@@ -28,7 +28,7 @@ public class PhantomReadDemo {
             try (Connection conn = DatabaseConnection.getConnection()) {
                 conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
                 conn.setAutoCommit(false);
-                System.out.println("[A] Pornesc tranzactia (READ COMMITTED)");
+                System.out.println("[A] Pornesc tranzactia");
 
                 PreparedStatement count = conn.prepareStatement(
                         "SELECT COUNT(*) AS cnt FROM employees WHERE department_id = 5");

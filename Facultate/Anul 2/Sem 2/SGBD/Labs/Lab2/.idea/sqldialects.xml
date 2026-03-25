@@ -2,8 +2,10 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/main/java/demos/BatchInsertDemo.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/demos/DeadlockDemo.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/demos/DirtyReadDemo.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/demos/LostUpdateDemo.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/demos/NonRepeatableReadDemo.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/utils/DatabaseConnection.java" dialect="GenericSQL" />
   </component>
 </project>
