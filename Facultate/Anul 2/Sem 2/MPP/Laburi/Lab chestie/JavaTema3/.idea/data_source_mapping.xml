@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="DataSourcePerFileMappings">
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/aed93258-48d9-4267-a810-ca8d4a6cc993/console_1.sql" value="aed93258-48d9-4267-a810-ca8d4a6cc993" />
-    <file url="file://$PROJECT_DIR$/src/main/java/repos/EmployeeDBRepo.java" value="aed93258-48d9-4267-a810-ca8d4a6cc993" />
-    <file url="file://$PROJECT_DIR$/src/main/java/repos/ReservationsDBRepo.java" value="aed93258-48d9-4267-a810-ca8d4a6cc993" />
-    <file url="file://$PROJECT_DIR$/src/main/java/repos/RidesDBRepo.java" value="aed93258-48d9-4267-a810-ca8d4a6cc993" />
-  </component>
-</project>

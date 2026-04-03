@@ -1,0 +1,606 @@
+19 Mar 2026 13:27:58,764 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+19 Mar 2026 13:27:58,766 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+19 Mar 2026 13:27:58,766 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+19 Mar 2026 13:27:58,767 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,768 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,768 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,768 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,768 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,877 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@5456afaa)
+19 Mar 2026 13:27:58,889 INFO  repos.EmployeeDBRepo 131 save - Employee saved successfully: Employee: Demo Employee 1, Office 1
+19 Mar 2026 13:27:58,893 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,893 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,893 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,893 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,893 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,896 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@57c03d88)
+19 Mar 2026 13:27:58,900 INFO  repos.EmployeeDBRepo 131 save - Employee saved successfully: Employee: Demo Employee 2, Office 2
+19 Mar 2026 13:27:58,901 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,901 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,901 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,901 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,901 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,904 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@45ac5f9b)
+19 Mar 2026 13:27:58,916 INFO  repos.EmployeeDBRepo 43 findByUsername - Employee found with username emp1: Employee: Demo Employee 1, Office 1
+19 Mar 2026 13:27:58,916 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,917 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,917 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,917 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,917 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,919 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@5e403b4a)
+19 Mar 2026 13:27:58,920 INFO  repos.EmployeeDBRepo 43 findByUsername - Employee found with username emp2: Employee: Demo Employee 2, Office 2
+19 Mar 2026 13:27:58,920 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,920 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,920 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,920 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,920 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,922 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@2931522b)
+19 Mar 2026 13:27:58,927 INFO  repos.EmployeeDBRepo 177 update - Employee updated successfully: Employee: Demo Employee 1 Updated, Office 1 Updated
+19 Mar 2026 13:27:58,927 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,927 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,927 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,928 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,928 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,929 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@327af41b)
+19 Mar 2026 13:27:58,934 INFO  repos.EmployeeDBRepo 152 delete - Employee with id 7 deleted successfully
+19 Mar 2026 13:27:58,934 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,934 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,935 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,935 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,935 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,937 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@f99f5e0)
+19 Mar 2026 13:27:58,941 INFO  repos.EmployeeDBRepo 152 delete - Employee with id 8 deleted successfully
+19 Mar 2026 13:27:58,942 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,942 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,942 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,942 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,942 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,944 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@7e19ebf0)
+19 Mar 2026 13:27:58,952 INFO  repos.RidesDBRepo 104 save - Ride saved successfully: models.Ride@5026735c
+19 Mar 2026 13:27:58,953 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,953 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,953 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,953 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,953 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,955 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@10f7f7de)
+19 Mar 2026 13:27:58,960 INFO  repos.RidesDBRepo 104 save - Ride saved successfully: models.Ride@73a8da0f
+19 Mar 2026 13:27:58,960 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,960 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,961 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,961 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,961 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,963 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@6bf08014)
+19 Mar 2026 13:27:58,964 INFO  repos.RidesDBRepo 80 findAll - Found 2 rides in the database
+19 Mar 2026 13:27:58,964 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,964 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,964 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,965 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,965 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,966 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@302f7971)
+19 Mar 2026 13:27:58,971 INFO  repos.RidesDBRepo 150 update - Ride updated successfully: models.Ride@332729ad
+19 Mar 2026 13:27:58,972 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,972 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,972 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,972 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,972 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,974 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@3370f42)
+19 Mar 2026 13:27:58,979 INFO  repos.ReservationsDBRepo 100 save - Reservation saved successfully: models.Reservation@6057aebb
+19 Mar 2026 13:27:58,979 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,979 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,979 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,979 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,979 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,981 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@6853425f)
+19 Mar 2026 13:27:58,987 INFO  repos.ReservationsDBRepo 100 save - Reservation saved successfully: models.Reservation@352c1b98
+19 Mar 2026 13:27:58,988 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,988 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,988 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,988 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,988 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,990 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@282cb7c7)
+19 Mar 2026 13:27:58,990 INFO  repos.ReservationsDBRepo 75 findAll - Found 2 reservations in the database
+19 Mar 2026 13:27:58,991 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,991 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,991 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,991 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,991 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:58,992 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@68d279ec)
+19 Mar 2026 13:27:58,998 INFO  repos.ReservationsDBRepo 145 update - Reservation updated successfully: models.Reservation@258d79be
+19 Mar 2026 13:27:58,998 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:58,998 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:58,998 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:58,998 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:58,998 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:59,000 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@71e693fa)
+19 Mar 2026 13:27:59,005 INFO  repos.ReservationsDBRepo 121 delete - Reservation with id 3 deleted successfully
+19 Mar 2026 13:27:59,005 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:59,005 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:59,005 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:59,005 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:59,005 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:59,007 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@3eb77ea8)
+19 Mar 2026 13:27:59,013 INFO  repos.ReservationsDBRepo 121 delete - Reservation with id 4 deleted successfully
+19 Mar 2026 13:27:59,013 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:59,013 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:59,013 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:59,013 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:59,013 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:59,015 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@44c73c26)
+19 Mar 2026 13:27:59,020 INFO  repos.RidesDBRepo 124 delete - Ride with id 5 deleted successfully
+19 Mar 2026 13:27:59,020 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:27:59,020 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:27:59,020 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:27:59,020 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:27:59,020 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:27:59,022 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@7fcf2fc1)
+19 Mar 2026 13:27:59,027 INFO  repos.RidesDBRepo 124 delete - Ride with id 6 deleted successfully
+19 Mar 2026 13:33:16,592 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+19 Mar 2026 13:33:16,594 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+19 Mar 2026 13:33:16,594 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+19 Mar 2026 13:33:16,595 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,595 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:33:16,595 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:33:16,596 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:33:16,596 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:33:16,708 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@bb9e6dc)
+19 Mar 2026 13:33:16,722 INFO  repos.EmployeeDBRepo 135 save - Employee saved successfully: Employee: Demo Employee 1, Office 1
+19 Mar 2026 13:33:16,723 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,723 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@bb9e6dc)
+19 Mar 2026 13:33:16,728 INFO  repos.EmployeeDBRepo 135 save - Employee saved successfully: Employee: Demo Employee 2, Office 2
+19 Mar 2026 13:33:16,728 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,729 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@bb9e6dc)
+19 Mar 2026 13:33:16,743 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username emp1: Employee: Demo Employee 1, Office 1
+19 Mar 2026 13:33:16,743 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,743 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@bb9e6dc)
+19 Mar 2026 13:33:16,744 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username emp2: Employee: Demo Employee 2, Office 2
+19 Mar 2026 13:33:16,744 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,744 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@bb9e6dc)
+19 Mar 2026 13:33:16,749 INFO  repos.EmployeeDBRepo 180 update - Employee updated successfully: Employee: Demo Employee 1 Updated, Office 1 Updated
+19 Mar 2026 13:33:16,750 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,750 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@bb9e6dc)
+19 Mar 2026 13:33:16,756 INFO  repos.EmployeeDBRepo 155 delete - Employee with id 9 deleted successfully
+19 Mar 2026 13:33:16,756 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,756 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@bb9e6dc)
+19 Mar 2026 13:33:16,761 INFO  repos.EmployeeDBRepo 155 delete - Employee with id 10 deleted successfully
+19 Mar 2026 13:33:16,762 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,762 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:33:16,762 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:33:16,762 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:33:16,762 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:33:16,765 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@1f75a668)
+19 Mar 2026 13:33:16,776 INFO  repos.RidesDBRepo 102 save - Ride saved successfully: models.Ride@c7045b9
+19 Mar 2026 13:33:16,776 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,776 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@1f75a668)
+19 Mar 2026 13:33:16,782 INFO  repos.RidesDBRepo 102 save - Ride saved successfully: models.Ride@6aa61224
+19 Mar 2026 13:33:16,782 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,782 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@1f75a668)
+19 Mar 2026 13:33:16,784 INFO  repos.RidesDBRepo 78 findAll - Found 2 rides in the database
+19 Mar 2026 13:33:16,784 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,784 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@1f75a668)
+19 Mar 2026 13:33:16,788 INFO  repos.RidesDBRepo 146 update - Ride updated successfully: models.Ride@4eaf3684
+19 Mar 2026 13:33:16,789 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,789 TRACE utils.JdbcUtils 22 getNewConnection - Enter
+19 Mar 2026 13:33:16,789 INFO  utils.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC
+19 Mar 2026 13:33:16,789 INFO  utils.JdbcUtils 29 getNewConnection - user: root
+19 Mar 2026 13:33:16,789 INFO  utils.JdbcUtils 30 getNewConnection - pass: 1234
+19 Mar 2026 13:33:16,791 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@727eb8cb)
+19 Mar 2026 13:33:16,797 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@39d9314d
+19 Mar 2026 13:33:16,797 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,797 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@727eb8cb)
+19 Mar 2026 13:33:16,804 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@5b7a8434
+19 Mar 2026 13:33:16,804 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,804 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@727eb8cb)
+19 Mar 2026 13:33:16,805 INFO  repos.ReservationsDBRepo 74 findAll - Found 2 reservations in the database
+19 Mar 2026 13:33:16,805 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,805 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@727eb8cb)
+19 Mar 2026 13:33:16,810 INFO  repos.ReservationsDBRepo 141 update - Reservation updated successfully: models.Reservation@1bae316d
+19 Mar 2026 13:33:16,810 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,810 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@727eb8cb)
+19 Mar 2026 13:33:16,817 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 5 deleted successfully
+19 Mar 2026 13:33:16,817 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,817 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@727eb8cb)
+19 Mar 2026 13:33:16,822 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 6 deleted successfully
+19 Mar 2026 13:33:16,822 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,823 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@1f75a668)
+19 Mar 2026 13:33:16,827 INFO  repos.RidesDBRepo 121 delete - Ride with id 7 deleted successfully
+19 Mar 2026 13:33:16,828 TRACE utils.JdbcUtils 46 getConnection - Enter
+19 Mar 2026 13:33:16,828 TRACE utils.JdbcUtils 55 getConnection - Exit with(com.mysql.cj.jdbc.ConnectionImpl@1f75a668)
+19 Mar 2026 13:33:16,832 INFO  repos.RidesDBRepo 121 delete - Ride with id 8 deleted successfully
+19 Mar 2026 13:34:27,824 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+19 Mar 2026 13:34:27,826 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+19 Mar 2026 13:34:27,827 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+19 Mar 2026 13:34:27,827 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:27,932 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:27,945 INFO  repos.EmployeeDBRepo 135 save - Employee saved successfully: Employee: Demo Employee 1, Office 1
+19 Mar 2026 13:34:27,945 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:27,946 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:27,955 INFO  repos.EmployeeDBRepo 135 save - Employee saved successfully: Employee: Demo Employee 2, Office 2
+19 Mar 2026 13:34:27,955 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:27,955 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:27,968 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username emp1: Employee: Demo Employee 1, Office 1
+19 Mar 2026 13:34:27,969 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:27,969 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:27,969 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username emp2: Employee: Demo Employee 2, Office 2
+19 Mar 2026 13:34:27,970 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:27,970 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:27,975 INFO  repos.EmployeeDBRepo 180 update - Employee updated successfully: Employee: Demo Employee 1 Updated, Office 1 Updated
+19 Mar 2026 13:34:27,975 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:27,975 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:27,980 INFO  repos.EmployeeDBRepo 155 delete - Employee with id 11 deleted successfully
+19 Mar 2026 13:34:27,980 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:27,980 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:27,985 INFO  repos.EmployeeDBRepo 155 delete - Employee with id 12 deleted successfully
+19 Mar 2026 13:34:27,985 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:27,988 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:27,996 INFO  repos.RidesDBRepo 102 save - Ride saved successfully: models.Ride@4e31276e
+19 Mar 2026 13:34:27,997 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:27,997 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:28,016 INFO  repos.RidesDBRepo 102 save - Ride saved successfully: models.Ride@27d5a580
+19 Mar 2026 13:34:28,016 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:28,016 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:28,018 INFO  repos.RidesDBRepo 78 findAll - Found 2 rides in the database
+19 Mar 2026 13:34:28,018 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:28,018 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:28,031 INFO  repos.RidesDBRepo 146 update - Ride updated successfully: models.Ride@16b2bb0c
+19 Mar 2026 13:34:28,031 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:28,034 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:28,041 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@f99f5e0
+19 Mar 2026 13:34:28,041 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:28,041 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:28,052 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@30bce90b
+19 Mar 2026 13:34:28,052 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:28,052 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:28,053 INFO  repos.ReservationsDBRepo 74 findAll - Found 2 reservations in the database
+19 Mar 2026 13:34:28,053 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:28,053 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:28,061 INFO  repos.ReservationsDBRepo 141 update - Reservation updated successfully: models.Reservation@2474f125
+19 Mar 2026 13:34:28,061 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:28,061 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:28,066 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 7 deleted successfully
+19 Mar 2026 13:34:28,066 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:28,066 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:28,071 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 8 deleted successfully
+19 Mar 2026 13:34:28,071 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:28,071 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:28,075 INFO  repos.RidesDBRepo 121 delete - Ride with id 9 deleted successfully
+19 Mar 2026 13:34:28,076 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+19 Mar 2026 13:34:28,076 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+19 Mar 2026 13:34:28,080 INFO  repos.RidesDBRepo 121 delete - Ride with id 10 deleted successfully
+27 Mar 2026 08:29:12,561 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+27 Mar 2026 08:29:12,571 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+27 Mar 2026 08:29:12,574 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+27 Mar 2026 08:29:12,575 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+27 Mar 2026 08:29:12,851 ERROR utils.JdbcUtils 34 getNewConnection - com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+27 Mar 2026 08:29:12,854 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+27 Mar 2026 08:29:23,482 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+27 Mar 2026 08:29:23,490 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+27 Mar 2026 08:29:23,492 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+27 Mar 2026 08:29:23,495 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+27 Mar 2026 08:29:23,772 ERROR utils.JdbcUtils 34 getNewConnection - com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+27 Mar 2026 08:29:23,773 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:47:57,255 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:51:32,220 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:51:39,267 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 22:51:39,400 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:51:39,421 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+02 Apr 2026 22:51:39,443 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:51:39,444 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:51:39,445 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:51:39,445 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 22:51:39,448 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:51:39,450 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 22:52:25,561 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 22:52:25,562 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:52:25,563 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 22:52:25,564 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 22:52:25,567 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:52:25,568 INFO  repos.ReservationsDBRepo 168 findReservationsByRideId - Found 2 reservations for ride id 1
+02 Apr 2026 22:54:55,015 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:54:59,317 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 22:54:59,433 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:54:59,452 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+02 Apr 2026 22:54:59,474 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:54:59,475 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:54:59,475 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:54:59,476 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 22:54:59,478 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:54:59,479 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 22:55:11,125 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 22:55:11,126 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:55:11,127 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 22:55:11,128 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 22:55:11,131 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:55:11,133 INFO  repos.ReservationsDBRepo 168 findReservationsByRideId - Found 2 reservations for ride id 1
+02 Apr 2026 22:55:58,381 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:56:05,206 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 22:56:05,321 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:56:05,340 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+02 Apr 2026 22:56:05,360 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:56:05,361 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:56:05,362 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:56:05,362 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 22:56:05,364 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:56:05,366 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 22:57:21,819 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:57:25,906 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 22:57:26,023 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:57:26,042 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+02 Apr 2026 22:57:26,062 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:57:26,063 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:57:26,064 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 22:57:26,064 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 22:57:26,066 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:57:26,068 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 22:57:45,728 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 22:57:45,728 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:57:45,729 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 22:57:45,731 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 22:57:45,733 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 22:57:45,734 INFO  repos.ReservationsDBRepo 168 findReservationsByRideId - Found 2 reservations for ride id 1
+02 Apr 2026 23:12:32,943 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:12:37,924 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:12:38,041 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:12:38,061 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+02 Apr 2026 23:12:38,082 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:12:38,083 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:12:38,083 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:12:38,084 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:12:38,086 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:12:38,088 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 23:13:33,298 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:13:37,779 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:13:37,897 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:13:37,916 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+02 Apr 2026 23:13:37,937 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:13:37,938 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:13:37,938 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:13:37,939 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:13:37,941 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:13:37,943 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 23:13:43,412 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:13:43,414 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:13:43,421 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@63fdad6d
+02 Apr 2026 23:13:43,421 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:13:43,421 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:13:43,422 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@4acd6b8e
+02 Apr 2026 23:13:43,422 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:13:43,422 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:13:43,428 INFO  repos.RidesDBRepo 146 update - Ride updated successfully: models.Ride@4acd6b8e
+02 Apr 2026 23:13:43,428 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:13:43,428 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:13:43,429 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 23:13:57,080 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:13:57,080 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:13:57,081 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 23:14:32,039 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:14:36,131 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:14:36,247 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:14:36,266 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+02 Apr 2026 23:14:36,289 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:14:36,290 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:14:36,291 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:14:36,291 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:14:36,293 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:14:36,295 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 23:14:46,436 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:14:46,437 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:14:46,438 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 23:15:04,855 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:15:09,897 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:15:10,017 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:15:10,036 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+02 Apr 2026 23:15:10,057 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:15:10,058 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:15:10,059 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:15:10,059 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:15:10,061 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:15:10,063 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 23:22:37,179 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:23:11,474 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:11,589 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:11,609 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+02 Apr 2026 23:23:11,630 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:23:11,631 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:23:11,632 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+02 Apr 2026 23:23:11,632 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:11,634 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:11,636 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 23:23:15,113 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,115 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,117 INFO  repos.ReservationsDBRepo 74 findAll - Found 5 reservations in the database
+02 Apr 2026 23:23:15,124 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,124 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,125 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@57c67d1e
+02 Apr 2026 23:23:15,131 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,131 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,132 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@59ef3477
+02 Apr 2026 23:23:15,133 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,133 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,134 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@42f40e57
+02 Apr 2026 23:23:15,134 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,134 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,135 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 2: models.Ride@209f403
+02 Apr 2026 23:23:15,135 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,135 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,136 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 2: models.Ride@301f1f75
+02 Apr 2026 23:23:15,141 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,141 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,142 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 3: models.Ride@53af7488
+02 Apr 2026 23:23:15,142 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,142 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,143 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 3: models.Ride@640d76ba
+02 Apr 2026 23:23:15,144 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,144 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,144 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@2133eb93
+02 Apr 2026 23:23:15,145 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,145 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,145 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@2103dd41
+02 Apr 2026 23:23:15,146 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,146 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,147 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@2d295c97
+02 Apr 2026 23:23:15,149 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,149 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,150 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@145b21ad
+02 Apr 2026 23:23:15,151 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,152 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,152 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 2: models.Ride@6872ce2d
+02 Apr 2026 23:23:15,153 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,153 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,154 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 3: models.Ride@7f5a1830
+02 Apr 2026 23:23:15,155 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:15,155 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:15,156 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@447bf878
+02 Apr 2026 23:23:18,146 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:18,146 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:18,147 INFO  repos.ReservationsDBRepo 43 findOne - Reservation found with id 1: models.Reservation@6d87861f
+02 Apr 2026 23:23:18,147 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:18,147 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:18,147 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@4efa79e5
+02 Apr 2026 23:23:18,148 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:18,148 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:18,159 INFO  repos.RidesDBRepo 146 update - Ride updated successfully: models.Ride@4efa79e5
+02 Apr 2026 23:23:18,159 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:18,159 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:18,162 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 1 deleted successfully
+02 Apr 2026 23:23:18,162 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:18,162 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:18,163 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 23:23:18,164 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:18,164 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:18,165 INFO  repos.ReservationsDBRepo 74 findAll - Found 4 reservations in the database
+02 Apr 2026 23:23:18,166 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:18,166 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:18,166 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@2a45122e
+02 Apr 2026 23:23:18,166 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:18,167 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:18,167 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@683c4e24
+02 Apr 2026 23:23:18,167 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:18,168 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:18,168 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 2: models.Ride@2f9d28f2
+02 Apr 2026 23:23:18,168 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:18,168 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:18,169 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 2: models.Ride@18b54108
+02 Apr 2026 23:23:18,169 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:18,169 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:18,169 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 3: models.Ride@2bfe887c
+02 Apr 2026 23:23:18,170 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:18,170 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:18,170 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 3: models.Ride@43874f4c
+02 Apr 2026 23:23:18,170 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:18,170 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:18,171 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@66c1fcb1
+02 Apr 2026 23:23:18,171 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:18,171 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:18,171 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@299016b1
+02 Apr 2026 23:23:21,580 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:21,581 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:21,581 INFO  repos.ReservationsDBRepo 43 findOne - Reservation found with id 2: models.Reservation@d721dae
+02 Apr 2026 23:23:21,582 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:21,582 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:21,582 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@5eb1637d
+02 Apr 2026 23:23:21,582 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:21,583 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:21,585 INFO  repos.RidesDBRepo 146 update - Ride updated successfully: models.Ride@5eb1637d
+02 Apr 2026 23:23:21,585 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:21,585 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:21,588 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 2 deleted successfully
+02 Apr 2026 23:23:21,588 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:21,588 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:21,588 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 23:23:21,588 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:21,589 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:21,589 INFO  repos.ReservationsDBRepo 74 findAll - Found 3 reservations in the database
+02 Apr 2026 23:23:21,590 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:21,590 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:21,591 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 2: models.Ride@11837ad5
+02 Apr 2026 23:23:21,591 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:21,591 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:21,592 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 2: models.Ride@3d115718
+02 Apr 2026 23:23:21,592 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:21,592 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:21,592 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 3: models.Ride@74425f74
+02 Apr 2026 23:23:21,593 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:21,593 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:21,593 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 3: models.Ride@669a2b26
+02 Apr 2026 23:23:21,593 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:21,593 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:21,594 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@1075884c
+02 Apr 2026 23:23:21,594 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:21,594 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:21,595 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@5688f11e
+02 Apr 2026 23:23:23,668 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:23,668 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:23,669 INFO  repos.ReservationsDBRepo 43 findOne - Reservation found with id 3: models.Reservation@39ae2dfd
+02 Apr 2026 23:23:23,669 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:23,669 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:23,669 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 2: models.Ride@2064c286
+02 Apr 2026 23:23:23,669 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:23,669 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:23,673 INFO  repos.RidesDBRepo 146 update - Ride updated successfully: models.Ride@2064c286
+02 Apr 2026 23:23:23,673 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:23,673 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:23,675 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 3 deleted successfully
+02 Apr 2026 23:23:23,675 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:23,675 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:23,676 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 23:23:23,676 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:23,676 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:23,676 INFO  repos.ReservationsDBRepo 74 findAll - Found 2 reservations in the database
+02 Apr 2026 23:23:23,677 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:23,677 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:23,678 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 3: models.Ride@6cdfb327
+02 Apr 2026 23:23:23,678 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:23,678 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:23,678 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 3: models.Ride@5e62bf19
+02 Apr 2026 23:23:23,679 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:23,679 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:23,679 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@8b3d477
+02 Apr 2026 23:23:23,679 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:23,679 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:23,680 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@566394f1
+02 Apr 2026 23:23:25,837 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:25,837 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:25,838 INFO  repos.ReservationsDBRepo 43 findOne - Reservation found with id 4: models.Reservation@79effe0e
+02 Apr 2026 23:23:25,838 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:25,838 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:25,839 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 3: models.Ride@3d8c6625
+02 Apr 2026 23:23:25,839 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:25,839 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:25,842 INFO  repos.RidesDBRepo 146 update - Ride updated successfully: models.Ride@3d8c6625
+02 Apr 2026 23:23:25,843 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:25,843 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:25,845 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 4 deleted successfully
+02 Apr 2026 23:23:25,845 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:25,845 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:25,846 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 23:23:25,846 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:25,846 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:25,846 INFO  repos.ReservationsDBRepo 74 findAll - Found 1 reservations in the database
+02 Apr 2026 23:23:25,847 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:25,847 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:25,847 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@6e631d13
+02 Apr 2026 23:23:25,847 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:25,848 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:25,848 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@2fa0f5d8
+02 Apr 2026 23:23:27,099 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:27,099 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:27,100 INFO  repos.ReservationsDBRepo 43 findOne - Reservation found with id 5: models.Reservation@43eea5e8
+02 Apr 2026 23:23:27,100 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:27,100 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:27,101 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@710a34cc
+02 Apr 2026 23:23:27,101 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:27,101 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:27,104 INFO  repos.RidesDBRepo 146 update - Ride updated successfully: models.Ride@710a34cc
+02 Apr 2026 23:23:27,104 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:27,104 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:27,106 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 5 deleted successfully
+02 Apr 2026 23:23:27,106 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:27,106 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:27,107 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+02 Apr 2026 23:23:27,107 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+02 Apr 2026 23:23:27,107 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+02 Apr 2026 23:23:27,107 INFO  repos.ReservationsDBRepo 74 findAll - Found 0 reservations in the database
