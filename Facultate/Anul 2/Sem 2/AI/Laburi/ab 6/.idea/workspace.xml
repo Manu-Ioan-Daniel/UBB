@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84d931c8-0d63-40bf-9222-c5f0757ddb8e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab 6/AI-lab06-solution (1).ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 6/AI-lab06-solution.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 6/AI-lab06-solution.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="84d931c8-0d63-40bf-9222-c5f0757ddb8e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +55,7 @@
       <updated>1775473646976</updated>
       <workItem from="1775473647997" duration="461000" />
       <workItem from="1775474158669" duration="1130000" />
-      <workItem from="1775543121342" duration="2853000" />
+      <workItem from="1775543121342" duration="2989000" />
     </task>
     <servers />
   </component>
