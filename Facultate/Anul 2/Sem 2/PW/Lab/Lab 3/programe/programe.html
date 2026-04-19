@@ -37,92 +37,14 @@
     <h2>Programe saptamanale</h2>
 
     <div class="table-container">
-        <table>
-            <tr>
-                <th colspan="5">Program Full Body</th>
-            </tr>
-            <tr>
-                <th>Ziua</th>
-                <th>Exercitii</th>
-                <th>Seturi</th>
-                <th>Repetari</th>
-                <th>Detalii</th>
-            </tr>
-
-            <tr>
-                <td rowspan="2">Luni</td>
-                <td>Flotari</td>
-                <td>3</td>
-                <td>15</td>
-                <td>Focus: Forta</td>
-            </tr>
-            <tr>
-                <td>Genuflexiuni</td>
-                <td>3</td>
-                <td>20</td>
-                <td>Focus: Rezistenta</td>
-            </tr>
-
-            <tr>
-                <td rowspan="2">Marti</td>
-                <td>Tractiuni</td>
-                <td>3</td>
-                <td>10</td>
-                <td>Focus: Upper Body</td>
-            </tr>
-            <tr>
-                <td>Dips</td>
-                <td>3</td>
-                <td>12</td>
-                <td>Focus: Triceps</td>
-            </tr>
-
-            <tr>
-                <td>Miercuri</td>
-                <td colspan="3">Rest</td>
-                <td>Recuperare activa</td>
-            </tr>
-
-            <tr>
-                <td rowspan="2">Joi</td>
-                <td>Fandari</td>
-                <td>3</td>
-                <td>12</td>
-                <td>Focus: Lower Body</td>
-            </tr>
-            <tr>
-                <td>Plank</td>
-                <td>3</td>
-                <td>60s</td>
-                <td>Focus: Core</td>
-            </tr>
-
-            <tr>
-                <td>Vineri</td>
-                <td>Muscle Up</td>
-                <td>3</td>
-                <td>5</td>
-                <td>Focus: Full Body</td>
-            </tr>
-
-            <tr>
-                <td>Sambata</td>
-                <td colspan="3">Rest</td>
-                <td>Mobilitate si stretching</td>
-            </tr>
-
-            <tr>
-                <td>Duminica</td>
-                <td>L-Sit</td>
-                <td>3</td>
-                <td>20s</td>
-                <td>Focus: Core si flexibilitate</td>
-            </tr>
-        </table>
+        <table id="program-table"></table>
+    </div>
+    <div class="table-container">
+        <table id="program-table-vertical"></table>
     </div>
 
     <h3>Tipuri de programe</h3>
-    <ol type="A" start="1">
+    <ol type="A" start="1" class = "collapsible">
         <li>Full Body
             <ol>
                 <li>Flotari</li>
@@ -142,12 +64,6 @@
             </ol>
         </li>
     </ol>
-    <h4>Beneficii:</h4>
-    <ul>
-        <li>Creste forța</li>
-        <li>Imbunatateste mobilitatea</li>
-        <li>Arde grasimi</li>
-    </ul>
 
 
 </section>
@@ -162,5 +78,8 @@
     </div>
 </footer>
 <script src="../js/dropdown.js"></script>
+<script src="../js/data.js"></script>
+<script src="../js/table.js"></script>
+<script src = "../js/collapsible.js"></script>
 </body>
 </html>

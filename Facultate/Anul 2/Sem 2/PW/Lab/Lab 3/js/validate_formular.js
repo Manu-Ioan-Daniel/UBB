@@ -12,6 +12,8 @@ const fields = {
 const clearField = (field) => field.classList.remove('input-invalid');
 const setFieldInvalid = (field) => field.classList.add('input-invalid');
 
+fields.dataStart.min = new Date().toISOString().split('T')[0];
+
 Object.values(fields).forEach((field) => {
     field.addEventListener('input', () => clearField(field));
     field.addEventListener('change', () => clearField(field));
@@ -21,7 +23,6 @@ form.addEventListener('submit', (event) => {
     Object.values(fields).forEach(clearField);
 
     const age = parseInt(fields.varsta.value, 10);
-
     if (fields.nume.value.trim().length < 3) setFieldInvalid(fields.nume);
     if (!fields.email.checkValidity()) setFieldInvalid(fields.email);
     if (!Number.isInteger(age) || age < 1 || age > 100) setFieldInvalid(fields.varsta);
