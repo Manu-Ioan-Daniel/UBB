@@ -20,6 +20,8 @@ public class Service extends Observable {
     private final ProfessorRepository repoProfessor;
     private final Validator<Professor> validatorProfessor;
 
+
+
     public Service(Repository<Long, Materie> repoMaterii, Repository<Long, Student> repoStudenti, ProfessorRepository repoProfessor, Repository<Tuple<Long,Long>, Long> repoNote, Validator<Professor> validatorProfessor) {
         this.repoMaterii = repoMaterii;
         this.repoStudenti = repoStudenti;
