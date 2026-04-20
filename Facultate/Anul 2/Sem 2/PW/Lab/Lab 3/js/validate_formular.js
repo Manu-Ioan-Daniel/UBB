@@ -8,9 +8,13 @@ const fields = {
     dataStart: form.elements['data-start'],
     observatii: form.elements.observatii
 };
+let wrongFieldCounter = 0;
 
 const clearField = (field) => field.classList.remove('input-invalid');
-const setFieldInvalid = (field) => field.classList.add('input-invalid');
+const setFieldInvalid = (field) => {
+    field.classList.add('input-invalid');
+    wrongFieldCounter++;
+}
 
 fields.dataStart.min = new Date().toISOString().split('T')[0];
 
@@ -31,7 +35,16 @@ form.addEventListener('submit', (event) => {
     if (!fields.dataStart.value) setFieldInvalid(fields.dataStart);
     if (fields.observatii.value.trim().length < 5) setFieldInvalid(fields.observatii);
 
-    if (form.querySelector('.input-invalid')) {
-        event.preventDefault();
+    if (form.querySelector('.input-invalid')) event.preventDefault();
+
+    if(wrongFieldCounter>0) {
+        const widget = document.getElementById("widget-tema");
+        const paragraf = document.getElementById("widget-paragraf");
+        widget.style.display = "block";
+        paragraf.textContent = `${wrongFieldCounter} field uri nevalide din 7`
+        wrongFieldCounter = 0;
+        setTimeout(() => {
+            widget.style.display = "none";
+        }, 3000);
     }
 });

@@ -9,7 +9,7 @@ const quizData = [
         exercise: "Front Lever",
         question: "Cat timp trebuie sa tii un Front Lever pentru a fi considerat complet?",
         options: ["1 secunda", "3 secunde", "5 secunde", "10 secunde"],
-        correct: 3
+        correct: 1
     },
     {
         exercise: "One Arm Handstand",

@@ -1,5 +1,4 @@
 
-
 document.querySelectorAll('.menu li').forEach(function(li) {
     li.addEventListener('click', function() {
         if (window.innerWidth <= 600) {
