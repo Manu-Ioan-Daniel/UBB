@@ -16,7 +16,11 @@ const goals = ['forta', 'rezistenta', 'mobilitate'].map((n) => form.elements[n])
 const allFields = [username, email, password, confirmPassword, age, birthDate, county, city, program, description, ...goals];
 
 const clearField = (field) => field?.classList.remove('input-invalid');
-const setFieldInvalid = (field) => field?.classList.add('input-invalid');
+const setFieldInvalid = (field) => {
+    field?.classList.add('input-invalid');
+    wrongFieldCounter+=1;
+};
+
 
 const formatDate = (date) => {
     const y = date.getFullYear();
@@ -90,4 +94,5 @@ form.addEventListener('submit', (event) => {
         event.preventDefault();
         form.querySelector('.input-invalid').focus();
     }
+
 });

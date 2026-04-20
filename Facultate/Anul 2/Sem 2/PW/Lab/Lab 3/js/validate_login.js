@@ -17,8 +17,6 @@ form.addEventListener('submit', (event) => {
 	if (username.value.trim().length < 3) setFieldInvalid(username);
 	if (password.value.trim().length < 6) setFieldInvalid(password);
 
-	if (form.querySelector('.input-invalid')) {
-		event.preventDefault();
-		form.querySelector('.input-invalid').focus();
-	}
+	if (form.querySelector('.input-invalid')) event.preventDefault();
+
 });
