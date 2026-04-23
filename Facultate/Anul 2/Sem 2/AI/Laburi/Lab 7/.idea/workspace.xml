@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a4f020e-3b2d-4326-bf4c-37c3b953c1d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lab_7.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../SGBD/Labs/Lab3/src/main/java/services/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Labs/Lab3/src/main/java/services/Service.java" afterDir="false" />
-    </list>
+    <list default="true" id="4a4f020e-3b2d-4326-bf4c-37c3b953c1d2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,9 +18,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="3CdBMeTG0dsEqgD4AlGqurd30wk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,6 +30,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "ai.playground.ignore.import.keys.banner.in.settings": "true",
@@ -59,6 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1776705519920</updated>
       <workItem from="1776705520951" duration="7222000" />
+      <workItem from="1776761422288" duration="297000" />
     </task>
     <servers />
   </component>
