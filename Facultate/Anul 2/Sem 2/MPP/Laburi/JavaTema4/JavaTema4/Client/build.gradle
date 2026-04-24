@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.14'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+dependencies {
+
+    implementation project(':Shared')
+    implementation 'org.apache.logging.log4j:log4j-core:2.25.3'
+    implementation 'org.apache.logging.log4j:log4j-api:2.25.3'
+    implementation 'org.xerial:sqlite-jdbc:3.41.2.2'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "17"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.base', 'javafx.graphics' ]
+}
+
+application {
+    mainClass = 'Main'
+}
+
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation("org.apache.logging.log4j:log4j-core:2.25.3")
+    implementation("com.mysql:mysql-connector-j:9.6.0")
+    implementation("org.apache.logging.log4j:log4j-api:2.25.3")
+}
+
+test {
+    useJUnitPlatform()
+}

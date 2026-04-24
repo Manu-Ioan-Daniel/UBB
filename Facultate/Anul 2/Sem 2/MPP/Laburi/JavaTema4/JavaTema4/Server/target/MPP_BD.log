@@ -1,0 +1,1122 @@
+23 Apr 2026 22:13:26,734 ERROR ServerMain 19 main - Failed to start server
+java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Integer.parseInt(Integer.java:630)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at ServerMain.main(ServerMain.java:14)
+23 Apr 2026 22:13:32,930 ERROR ServerMain 19 main - Failed to start server
+java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Integer.parseInt(Integer.java:630)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at ServerMain.main(ServerMain.java:14)
+23 Apr 2026 22:13:59,821 INFO  server.ObjectConcurrentServer 28 start - TravelAgencyObjectConcurrentServer started on port 5555
+23 Apr 2026 22:14:38,573 INFO  server.ObjectConcurrentServer 28 start - Server started on port 5555
+23 Apr 2026 22:24:32,997 INFO  server.ObjectConcurrentServer 28 start - Server started on port 5555
+23 Apr 2026 22:25:12,116 INFO  server.ObjectConcurrentServer 28 start - Server started on port 5555
+23 Apr 2026 22:25:22,326 INFO  server.ObjectConcurrentServer 28 start - Server started on port 5555
+23 Apr 2026 22:27:52,586 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:27:52,587 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:27:52,588 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:27:52,588 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:27:52,609 DEBUG server.ClientObjectWorker 68 handleRequest - Handling request of type: LOGIN
+23 Apr 2026 22:27:52,610 INFO  server.ClientObjectWorker 89 handleLogin - Login attempt for user: username1
+23 Apr 2026 22:27:52,610 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:27:52,707 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:27:52,726 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+23 Apr 2026 22:27:52,728 INFO  server.ClientObjectWorker 92 handleLogin - Login successful for user: username1
+23 Apr 2026 22:27:52,732 INFO  server.ClientObjectWorker 53 run - Client disconnected
+23 Apr 2026 22:28:04,425 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:28:04,427 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:28:04,427 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:28:04,427 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:28:04,428 DEBUG server.ClientObjectWorker 68 handleRequest - Handling request of type: LOGIN
+23 Apr 2026 22:28:04,429 INFO  server.ClientObjectWorker 89 handleLogin - Login attempt for user: username1
+23 Apr 2026 22:28:04,429 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:28:04,431 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:28:04,432 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+23 Apr 2026 22:28:04,432 INFO  server.ClientObjectWorker 92 handleLogin - Login successful for user: username1
+23 Apr 2026 22:28:04,433 INFO  server.ClientObjectWorker 53 run - Client disconnected
+23 Apr 2026 22:31:10,256 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:31:10,257 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:31:10,257 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:31:10,257 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:31:10,269 DEBUG server.ClientObjectWorker 68 handleRequest - Handling request of type: LOGIN
+23 Apr 2026 22:31:10,269 INFO  server.ClientObjectWorker 89 handleLogin - Login attempt for user: username1
+23 Apr 2026 22:31:10,269 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:31:10,272 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:31:10,273 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+23 Apr 2026 22:31:10,273 INFO  server.ClientObjectWorker 92 handleLogin - Login successful for user: username1
+23 Apr 2026 22:31:10,280 INFO  server.ClientObjectWorker 53 run - Client disconnected
+23 Apr 2026 22:31:23,161 INFO  server.ObjectConcurrentServer 28 start - Server started on port 5555
+23 Apr 2026 22:31:33,873 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:31:33,874 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:31:33,874 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:31:33,875 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:31:33,895 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: LOGIN
+23 Apr 2026 22:31:33,896 INFO  server.ClientObjectWorker 90 handleLogin - Login attempt for user: username1
+23 Apr 2026 22:31:33,896 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:31:33,994 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:31:34,014 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+23 Apr 2026 22:31:34,015 INFO  server.ClientObjectWorker 93 handleLogin - Login successful for user: username1
+23 Apr 2026 22:32:44,483 INFO  server.ObjectConcurrentServer 28 start - Server started on port 5555
+23 Apr 2026 22:32:56,468 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:32:56,470 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:32:56,470 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:32:56,471 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:32:56,491 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: LOGIN
+23 Apr 2026 22:32:56,491 INFO  server.ClientObjectWorker 90 handleLogin - Login attempt for user: username1
+23 Apr 2026 22:32:56,492 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:32:56,589 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:32:56,608 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+23 Apr 2026 22:32:56,610 INFO  server.ClientObjectWorker 93 handleLogin - Login successful for user: username1
+23 Apr 2026 22:34:32,670 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:34:32,672 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:34:32,672 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:34:32,672 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:34:32,674 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: LOGIN
+23 Apr 2026 22:34:32,674 INFO  server.ClientObjectWorker 90 handleLogin - Login attempt for user: username1
+23 Apr 2026 22:34:32,674 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:34:32,677 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:34:32,678 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+23 Apr 2026 22:34:32,678 INFO  server.ClientObjectWorker 93 handleLogin - Login successful for user: username1
+23 Apr 2026 22:36:59,212 INFO  server.ObjectConcurrentServer 28 start - Server started on port 5555
+23 Apr 2026 22:37:11,994 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:37:11,996 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:37:11,997 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:37:11,997 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:37:12,018 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: LOGIN
+23 Apr 2026 22:37:12,019 INFO  server.ClientObjectWorker 90 handleLogin - Login attempt for user: username1
+23 Apr 2026 22:37:12,019 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:37:12,114 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:37:12,133 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+23 Apr 2026 22:37:12,135 INFO  server.ClientObjectWorker 93 handleLogin - Login successful for user: username1
+23 Apr 2026 22:37:14,190 ERROR server.ClientObjectWorker 56 run - Error handling client request
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:43)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 22:41:14,164 INFO  server.ObjectConcurrentServer 28 start - Server started on port 5555
+23 Apr 2026 22:41:19,219 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:41:19,220 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:41:19,220 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:41:19,221 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:41:23,646 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: LOGIN
+23 Apr 2026 22:41:23,646 INFO  server.ClientObjectWorker 90 handleLogin - Login attempt for user: username1
+23 Apr 2026 22:41:23,647 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:41:23,745 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:41:23,765 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+23 Apr 2026 22:41:23,766 INFO  server.ClientObjectWorker 93 handleLogin - Login successful for user: username1
+23 Apr 2026 22:44:02,777 INFO  server.ObjectConcurrentServer 28 start - Server started on port 5555
+23 Apr 2026 22:44:12,283 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:44:12,284 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:44:12,285 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:44:12,286 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:44:49,561 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: LOGIN
+23 Apr 2026 22:44:49,562 INFO  server.ClientObjectWorker 90 handleLogin - Login attempt for user: username1
+23 Apr 2026 22:44:49,562 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:44:49,659 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:44:49,680 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+23 Apr 2026 22:44:49,682 INFO  server.ClientObjectWorker 93 handleLogin - Login successful for user: username1
+23 Apr 2026 22:44:49,687 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:44:49,687 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:44:49,688 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:44:49,688 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:44:49,716 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_ALL_RIDES
+23 Apr 2026 22:44:49,717 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:44:49,720 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:44:49,722 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 22:44:49,722 INFO  server.ClientObjectWorker 122 handleGetAllRides - Retrieved 3 rides
+23 Apr 2026 22:44:49,727 ERROR server.ClientObjectWorker 56 run - Error handling client request
+java.io.NotSerializableException: models.Ride
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1187)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:350)
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:866)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1070)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1516)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1438)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1181)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1572)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1438)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1181)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:350)
+	at server.ClientObjectWorker.sendResponse(ClientObjectWorker.java:180)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:50)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 22:45:51,463 INFO  server.ObjectConcurrentServer 28 start - Server started on port 5555
+23 Apr 2026 22:45:56,452 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:45:56,453 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:45:56,454 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:45:56,455 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:46:01,123 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: LOGIN
+23 Apr 2026 22:46:01,124 INFO  server.ClientObjectWorker 90 handleLogin - Login attempt for user: username1
+23 Apr 2026 22:46:01,124 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:46:01,219 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:46:01,238 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+23 Apr 2026 22:46:01,240 INFO  server.ClientObjectWorker 93 handleLogin - Login successful for user: username1
+23 Apr 2026 22:46:01,244 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:46:01,244 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:46:01,245 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:46:01,245 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:46:01,271 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_ALL_RIDES
+23 Apr 2026 22:46:01,271 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:46:01,273 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:46:01,275 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 22:46:01,275 INFO  server.ClientObjectWorker 122 handleGetAllRides - Retrieved 3 rides
+23 Apr 2026 22:46:57,514 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:46:57,515 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:46:57,515 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:46:57,515 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:47:03,329 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: LOGIN
+23 Apr 2026 22:47:03,330 INFO  server.ClientObjectWorker 90 handleLogin - Login attempt for user: username2
+23 Apr 2026 22:47:03,330 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:03,333 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:03,334 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username2: Employee: name2, office2
+23 Apr 2026 22:47:03,334 INFO  server.ClientObjectWorker 93 handleLogin - Login successful for user: username2
+23 Apr 2026 22:47:03,337 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:47:03,338 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:47:03,338 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:47:03,338 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:47:03,364 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_ALL_RIDES
+23 Apr 2026 22:47:03,364 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:03,366 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:03,367 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 22:47:03,367 INFO  server.ClientObjectWorker 122 handleGetAllRides - Retrieved 3 rides
+23 Apr 2026 22:47:12,167 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: MAKE_RESERVATION
+23 Apr 2026 22:47:12,168 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:12,170 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:12,179 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@743fdc91
+23 Apr 2026 22:47:12,180 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:12,180 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:12,181 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@43808067
+23 Apr 2026 22:47:12,181 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:12,181 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:12,190 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@43808067
+23 Apr 2026 22:47:12,191 INFO  server.ClientObjectWorker 137 handleMakeReservation - Reservation made for ride 1
+23 Apr 2026 22:47:15,812 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: MAKE_RESERVATION
+23 Apr 2026 22:47:15,812 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:15,812 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:15,818 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@4c484caa
+23 Apr 2026 22:47:15,819 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:15,819 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:15,819 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@ad66f9e
+23 Apr 2026 22:47:15,820 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:15,820 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:15,825 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@ad66f9e
+23 Apr 2026 22:47:15,825 INFO  server.ClientObjectWorker 137 handleMakeReservation - Reservation made for ride 1
+23 Apr 2026 22:47:16,172 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: MAKE_RESERVATION
+23 Apr 2026 22:47:16,172 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,172 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,178 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@5f3d9300
+23 Apr 2026 22:47:16,179 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,179 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,179 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@482d90cb
+23 Apr 2026 22:47:16,179 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,179 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,185 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@482d90cb
+23 Apr 2026 22:47:16,185 INFO  server.ClientObjectWorker 137 handleMakeReservation - Reservation made for ride 1
+23 Apr 2026 22:47:16,371 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: MAKE_RESERVATION
+23 Apr 2026 22:47:16,371 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,371 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,377 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@1e75cc09
+23 Apr 2026 22:47:16,377 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,377 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,377 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@1c8e5d19
+23 Apr 2026 22:47:16,378 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,378 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,383 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@1c8e5d19
+23 Apr 2026 22:47:16,383 INFO  server.ClientObjectWorker 137 handleMakeReservation - Reservation made for ride 1
+23 Apr 2026 22:47:16,554 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: MAKE_RESERVATION
+23 Apr 2026 22:47:16,554 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,554 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,561 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@6649bb22
+23 Apr 2026 22:47:16,561 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,561 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,561 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@7a8f59e1
+23 Apr 2026 22:47:16,562 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,562 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,567 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@7a8f59e1
+23 Apr 2026 22:47:16,567 INFO  server.ClientObjectWorker 137 handleMakeReservation - Reservation made for ride 1
+23 Apr 2026 22:47:16,744 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: MAKE_RESERVATION
+23 Apr 2026 22:47:16,745 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,745 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,750 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@7bfdaa68
+23 Apr 2026 22:47:16,750 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,750 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,751 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@910c7b0
+23 Apr 2026 22:47:16,751 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,751 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,757 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@910c7b0
+23 Apr 2026 22:47:16,757 INFO  server.ClientObjectWorker 137 handleMakeReservation - Reservation made for ride 1
+23 Apr 2026 22:47:16,903 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: MAKE_RESERVATION
+23 Apr 2026 22:47:16,903 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,903 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,909 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@1b2a739d
+23 Apr 2026 22:47:16,909 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,909 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,909 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@4f7da24f
+23 Apr 2026 22:47:16,910 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:16,910 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:16,915 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@4f7da24f
+23 Apr 2026 22:47:16,915 INFO  server.ClientObjectWorker 137 handleMakeReservation - Reservation made for ride 1
+23 Apr 2026 22:47:17,079 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: MAKE_RESERVATION
+23 Apr 2026 22:47:17,079 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:17,079 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:17,085 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@468e2960
+23 Apr 2026 22:47:17,085 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:17,085 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:17,086 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@7f3adfb2
+23 Apr 2026 22:47:17,086 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:17,086 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:17,091 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@7f3adfb2
+23 Apr 2026 22:47:17,091 INFO  server.ClientObjectWorker 137 handleMakeReservation - Reservation made for ride 1
+23 Apr 2026 22:47:21,105 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: FIND_RESERVATIONS
+23 Apr 2026 22:47:21,105 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,105 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,106 INFO  repos.ReservationsDBRepo 74 findAll - Found 8 reservations in the database
+23 Apr 2026 22:47:21,106 INFO  server.ClientObjectWorker 171 handleFindReservations - Found 8 reservations
+23 Apr 2026 22:47:21,119 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,119 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,119 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,120 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@227dd4ed
+23 Apr 2026 22:47:21,121 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,128 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,128 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,128 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,129 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@55145d68
+23 Apr 2026 22:47:21,129 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,130 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,130 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,131 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,131 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@505fd7f0
+23 Apr 2026 22:47:21,131 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,132 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,132 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,132 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,133 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@71f0a536
+23 Apr 2026 22:47:21,133 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,134 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,134 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,134 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,134 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@33e75cf4
+23 Apr 2026 22:47:21,135 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,139 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,139 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,139 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,140 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@a76b6a1
+23 Apr 2026 22:47:21,140 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,141 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,141 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,141 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,142 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@6dd2ba62
+23 Apr 2026 22:47:21,142 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,143 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,143 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,143 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,143 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@7947b8af
+23 Apr 2026 22:47:21,143 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,144 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,144 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,144 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,145 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@2fc2e7c
+23 Apr 2026 22:47:21,145 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,146 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,146 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,146 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,147 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@29b90be5
+23 Apr 2026 22:47:21,147 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,149 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,149 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,149 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,150 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@8776dcf
+23 Apr 2026 22:47:21,150 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,152 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,152 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,153 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,153 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@4688bd4c
+23 Apr 2026 22:47:21,153 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,155 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,155 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,155 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,156 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@58fb55b0
+23 Apr 2026 22:47:21,156 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,158 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,158 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,158 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,158 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@5504fab3
+23 Apr 2026 22:47:21,158 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,160 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,160 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,160 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,161 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@56a5c0ca
+23 Apr 2026 22:47:21,161 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,162 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,162 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,162 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,163 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@f5de7da
+23 Apr 2026 22:47:21,163 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:21,165 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:47:21,165 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:21,165 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:21,165 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@3bac7a79
+23 Apr 2026 22:47:21,166 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:47:23,278 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: CANCEL_RESERVATION
+23 Apr 2026 22:47:23,278 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:23,278 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:23,279 INFO  repos.ReservationsDBRepo 43 findOne - Reservation found with id 17: models.Reservation@6e35eba4
+23 Apr 2026 22:47:23,279 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:23,279 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:23,280 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@1fe8a281
+23 Apr 2026 22:47:23,280 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:23,280 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:23,287 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@1fe8a281
+23 Apr 2026 22:47:23,287 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:23,287 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:23,292 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 17 deleted successfully
+23 Apr 2026 22:47:23,292 INFO  server.ClientObjectWorker 148 handleCancelReservation - Reservation 17 cancelled
+23 Apr 2026 22:47:24,470 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: CANCEL_RESERVATION
+23 Apr 2026 22:47:24,470 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:24,470 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:24,471 INFO  repos.ReservationsDBRepo 43 findOne - Reservation found with id 16: models.Reservation@52d2ac67
+23 Apr 2026 22:47:24,471 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:24,471 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:24,471 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@566e8b71
+23 Apr 2026 22:47:24,471 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:24,471 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:24,477 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@566e8b71
+23 Apr 2026 22:47:24,477 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:24,477 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:24,482 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 16 deleted successfully
+23 Apr 2026 22:47:24,482 INFO  server.ClientObjectWorker 148 handleCancelReservation - Reservation 16 cancelled
+23 Apr 2026 22:47:25,157 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: CANCEL_RESERVATION
+23 Apr 2026 22:47:25,157 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:25,157 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:25,158 INFO  repos.ReservationsDBRepo 43 findOne - Reservation found with id 18: models.Reservation@14a3041a
+23 Apr 2026 22:47:25,158 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:25,158 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:25,158 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@3000e69b
+23 Apr 2026 22:47:25,158 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:25,158 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:25,164 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@3000e69b
+23 Apr 2026 22:47:25,164 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:25,164 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:25,169 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 18 deleted successfully
+23 Apr 2026 22:47:25,170 INFO  server.ClientObjectWorker 148 handleCancelReservation - Reservation 18 cancelled
+23 Apr 2026 22:47:25,733 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: CANCEL_RESERVATION
+23 Apr 2026 22:47:25,733 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:25,733 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:25,734 INFO  repos.ReservationsDBRepo 43 findOne - Reservation found with id 19: models.Reservation@62294286
+23 Apr 2026 22:47:25,734 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:25,734 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:25,735 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@5c5534ff
+23 Apr 2026 22:47:25,735 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:25,735 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:25,740 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@5c5534ff
+23 Apr 2026 22:47:25,740 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:25,740 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:25,745 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 19 deleted successfully
+23 Apr 2026 22:47:25,745 INFO  server.ClientObjectWorker 148 handleCancelReservation - Reservation 19 cancelled
+23 Apr 2026 22:47:26,808 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: CANCEL_RESERVATION
+23 Apr 2026 22:47:26,808 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:26,809 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:26,809 INFO  repos.ReservationsDBRepo 43 findOne - Reservation found with id 13: models.Reservation@cbb3203
+23 Apr 2026 22:47:26,809 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:26,809 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:26,810 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@70d2159a
+23 Apr 2026 22:47:26,810 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:26,810 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:26,815 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@70d2159a
+23 Apr 2026 22:47:26,816 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:47:26,816 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:47:26,820 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 13 deleted successfully
+23 Apr 2026 22:47:26,821 INFO  server.ClientObjectWorker 148 handleCancelReservation - Reservation 13 cancelled
+23 Apr 2026 22:47:29,526 ERROR server.ClientObjectWorker 56 run - Error handling client request
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:43)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 22:47:29,526 ERROR server.ClientObjectWorker 56 run - Error handling client request
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:43)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 22:47:30,541 ERROR server.ClientObjectWorker 56 run - Error handling client request
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:43)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 22:47:30,541 ERROR server.ClientObjectWorker 56 run - Error handling client request
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:43)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 22:52:18,990 INFO  server.ObjectConcurrentServer 28 start - Server started on port 5555
+23 Apr 2026 22:52:22,982 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:22,983 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:22,984 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:22,985 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:27,585 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: LOGIN
+23 Apr 2026 22:52:27,585 INFO  server.ClientObjectWorker 90 handleLogin - Login attempt for user: username1
+23 Apr 2026 22:52:27,586 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:27,685 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:27,704 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+23 Apr 2026 22:52:27,705 INFO  server.ClientObjectWorker 93 handleLogin - Login successful for user: username1
+23 Apr 2026 22:52:27,709 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:27,710 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:27,710 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:27,710 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:27,736 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_ALL_RIDES
+23 Apr 2026 22:52:27,736 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:27,739 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:27,741 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 22:52:27,741 INFO  server.ClientObjectWorker 122 handleGetAllRides - Retrieved 3 rides
+23 Apr 2026 22:52:33,178 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: FIND_RESERVATIONS
+23 Apr 2026 22:52:33,178 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:33,181 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:33,182 INFO  repos.ReservationsDBRepo 74 findAll - Found 3 reservations in the database
+23 Apr 2026 22:52:33,182 INFO  server.ClientObjectWorker 171 handleFindReservations - Found 3 reservations
+23 Apr 2026 22:52:33,197 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:33,197 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:33,197 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:33,199 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@3223a0d1
+23 Apr 2026 22:52:33,199 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:33,208 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:33,208 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:33,209 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:33,210 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@4a1454f
+23 Apr 2026 22:52:33,210 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:33,212 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:33,212 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:33,212 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:33,213 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@605209a3
+23 Apr 2026 22:52:33,213 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:33,215 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:33,216 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:33,216 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:33,217 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@9ef63ca
+23 Apr 2026 22:52:33,217 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:33,218 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:33,218 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:33,218 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:33,219 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@69af421a
+23 Apr 2026 22:52:33,219 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:33,227 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:33,227 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:33,227 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:33,228 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@19ebf14f
+23 Apr 2026 22:52:33,228 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:33,232 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:33,232 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:33,232 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:33,233 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@73f1892b
+23 Apr 2026 22:52:33,233 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:33,236 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:33,236 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:33,237 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:33,238 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@2199c4df
+23 Apr 2026 22:52:33,238 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:37,096 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:37,096 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:37,096 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:37,097 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:43,438 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: LOGIN
+23 Apr 2026 22:52:43,438 INFO  server.ClientObjectWorker 90 handleLogin - Login attempt for user: username2
+23 Apr 2026 22:52:43,438 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:43,441 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:43,442 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username2: Employee: name2, office2
+23 Apr 2026 22:52:43,442 INFO  server.ClientObjectWorker 93 handleLogin - Login successful for user: username2
+23 Apr 2026 22:52:43,445 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:43,445 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:43,445 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:43,445 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 22:52:43,472 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_ALL_RIDES
+23 Apr 2026 22:52:43,472 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:43,474 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:43,475 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 22:52:43,475 INFO  server.ClientObjectWorker 122 handleGetAllRides - Retrieved 3 rides
+23 Apr 2026 22:52:50,736 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: FIND_RESERVATIONS
+23 Apr 2026 22:52:50,737 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:50,737 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:50,737 INFO  repos.ReservationsDBRepo 74 findAll - Found 3 reservations in the database
+23 Apr 2026 22:52:50,738 INFO  server.ClientObjectWorker 171 handleFindReservations - Found 3 reservations
+23 Apr 2026 22:52:50,747 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:50,748 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:50,748 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:50,749 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@38c1265d
+23 Apr 2026 22:52:50,749 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:50,753 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:50,753 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:50,753 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:50,754 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@171c693b
+23 Apr 2026 22:52:50,754 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:50,756 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:50,756 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:50,756 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:50,756 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@f234eb
+23 Apr 2026 22:52:50,757 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:50,758 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:50,758 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:50,758 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:50,758 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@55266cc2
+23 Apr 2026 22:52:50,758 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:50,759 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:50,759 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:50,759 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:50,760 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@1706dc9a
+23 Apr 2026 22:52:50,760 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:50,764 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:50,764 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:50,764 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:50,764 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@3af0d9b4
+23 Apr 2026 22:52:50,765 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:50,767 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:50,767 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:50,767 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:50,767 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@2c886e38
+23 Apr 2026 22:52:50,768 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:50,769 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:52:50,769 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:50,770 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:50,770 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@94cd5a8
+23 Apr 2026 22:52:50,770 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:52:52,899 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: CANCEL_RESERVATION
+23 Apr 2026 22:52:52,900 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:52,900 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:52,901 INFO  repos.ReservationsDBRepo 43 findOne - Reservation found with id 14: models.Reservation@79abeb0
+23 Apr 2026 22:52:52,901 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:52,901 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:52,901 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@46e85b69
+23 Apr 2026 22:52:52,902 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:52,902 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:52,914 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@46e85b69
+23 Apr 2026 22:52:52,914 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:52:52,914 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:52:52,921 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 14 deleted successfully
+23 Apr 2026 22:52:52,921 INFO  server.ClientObjectWorker 148 handleCancelReservation - Reservation 14 cancelled
+23 Apr 2026 22:53:02,497 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: FIND_RESERVATIONS
+23 Apr 2026 22:53:02,498 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:53:02,498 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:53:02,499 INFO  repos.ReservationsDBRepo 74 findAll - Found 2 reservations in the database
+23 Apr 2026 22:53:02,499 INFO  server.ClientObjectWorker 171 handleFindReservations - Found 2 reservations
+23 Apr 2026 22:53:02,508 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:53:02,508 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:53:02,508 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:53:02,509 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@22c7867d
+23 Apr 2026 22:53:02,509 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:53:02,514 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:53:02,514 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:53:02,514 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:53:02,515 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@103b3317
+23 Apr 2026 22:53:02,515 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:53:02,516 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:53:02,516 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:53:02,516 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:53:02,517 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@75bbc1e6
+23 Apr 2026 22:53:02,517 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:53:02,521 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:53:02,521 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:53:02,521 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:53:02,522 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@1e04ea3e
+23 Apr 2026 22:53:02,522 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:53:02,523 DEBUG server.ClientObjectWorker 69 handleRequest - Handling request of type: GET_RIDE
+23 Apr 2026 22:53:02,524 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 22:53:02,524 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 22:53:02,524 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@21274571
+23 Apr 2026 22:53:02,525 INFO  server.ClientObjectWorker 160 handleGetRide - Retrieved ride 1
+23 Apr 2026 22:53:09,984 ERROR server.ClientObjectWorker 56 run - Error handling client request
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:43)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 22:53:09,984 ERROR server.ClientObjectWorker 56 run - Error handling client request
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:43)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 22:53:10,567 ERROR server.ClientObjectWorker 56 run - Error handling client request
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:43)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 22:53:10,567 ERROR server.ClientObjectWorker 56 run - Error handling client request
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:43)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 23:13:00,313 INFO  server.ObjectConcurrentServer 28 start - Server started on port 5555
+23 Apr 2026 23:13:04,588 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:04,589 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:04,590 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:04,590 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:09,705 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:09,856 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:09,876 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+23 Apr 2026 23:13:09,881 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:09,881 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:09,881 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:09,882 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:09,918 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:09,922 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:09,924 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 23:13:20,311 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:20,311 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:20,311 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:20,312 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:26,126 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:26,128 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:26,129 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username2: Employee: name2, office2
+23 Apr 2026 23:13:26,132 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:26,132 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:26,132 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:26,133 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:13:26,158 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:26,161 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:26,162 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 23:13:30,236 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:30,239 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:30,246 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@93ec3ba
+23 Apr 2026 23:13:30,246 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:30,246 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:30,247 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@96abe4b
+23 Apr 2026 23:13:30,247 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:30,248 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:30,257 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@96abe4b
+23 Apr 2026 23:13:30,259 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:30,259 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:30,260 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:30,260 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:30,261 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 23:13:30,261 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 23:13:36,675 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:36,676 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:36,677 INFO  repos.ReservationsDBRepo 74 findAll - Found 3 reservations in the database
+23 Apr 2026 23:13:36,689 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:36,689 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:36,690 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@690fa947
+23 Apr 2026 23:13:36,698 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:36,699 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:36,700 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@1e4e0fd2
+23 Apr 2026 23:13:36,701 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:36,701 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:36,702 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@1e85a6ef
+23 Apr 2026 23:13:36,703 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:36,703 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:36,704 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@58b1e6dc
+23 Apr 2026 23:13:36,705 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:36,705 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:36,706 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@16b27b
+23 Apr 2026 23:13:36,711 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:36,711 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:36,712 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@22cb14a
+23 Apr 2026 23:13:36,715 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:36,715 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:36,716 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@1676de18
+23 Apr 2026 23:13:36,718 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:36,718 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:36,719 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@1a12e270
+23 Apr 2026 23:13:38,512 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:38,513 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:38,513 INFO  repos.ReservationsDBRepo 43 findOne - Reservation found with id 21: models.Reservation@1c29fc59
+23 Apr 2026 23:13:38,514 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:38,514 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:38,514 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@6f021358
+23 Apr 2026 23:13:38,515 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:38,515 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:38,521 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@6f021358
+23 Apr 2026 23:13:38,521 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:38,521 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:38,528 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 21 deleted successfully
+23 Apr 2026 23:13:38,529 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:38,529 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:38,531 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 23:13:38,531 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:38,531 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:38,531 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 23:13:38,533 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:38,533 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:38,534 INFO  repos.ReservationsDBRepo 74 findAll - Found 2 reservations in the database
+23 Apr 2026 23:13:38,537 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:38,537 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:38,538 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@abc7bcb
+23 Apr 2026 23:13:38,539 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:38,539 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:38,539 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@5366cf9e
+23 Apr 2026 23:13:38,540 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:38,540 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:38,541 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@6fdfd04
+23 Apr 2026 23:13:38,541 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:13:38,541 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:13:38,542 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@319dfd72
+23 Apr 2026 23:13:41,076 ERROR server.ClientObjectWorker 66 run - Client error
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:51)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 23:13:41,076 ERROR server.ClientObjectWorker 66 run - Client error
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:51)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 23:13:41,615 ERROR server.ClientObjectWorker 66 run - Client error
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:51)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 23:13:41,615 ERROR server.ClientObjectWorker 66 run - Client error
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:51)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 23:15:14,768 INFO  server.ObjectConcurrentServer 28 start - Server started on port 5555
+23 Apr 2026 23:15:22,884 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:15:22,885 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:15:22,886 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:15:22,886 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:15:28,243 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:15:28,343 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:15:28,364 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+23 Apr 2026 23:15:28,370 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:15:28,370 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:15:28,370 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:15:28,370 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:15:28,398 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:15:28,400 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:15:28,402 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 23:15:35,616 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:15:35,616 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:15:35,616 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:15:35,616 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:15:41,264 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:15:41,267 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:15:41,268 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username2: Employee: name2, office2
+23 Apr 2026 23:15:41,272 ERROR server.ClientObjectWorker 66 run - Client error
+java.io.EOFException
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3214)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:51)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 23:16:18,930 INFO  server.ObjectConcurrentServer 28 start - Server started on port 5555
+23 Apr 2026 23:16:23,948 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:23,949 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:23,950 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:23,950 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:29,224 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:29,225 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:29,225 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:29,226 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:38,887 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:38,986 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:39,006 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username1: Employee: name1, office1
+23 Apr 2026 23:16:39,011 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:39,011 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:39,012 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:39,012 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:39,037 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:39,040 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:39,042 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 23:16:39,795 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:39,797 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:39,798 INFO  repos.EmployeeDBRepo 45 findByUsername - Employee found with username username2: Employee: name2, office2
+23 Apr 2026 23:16:39,802 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:39,802 INFO  repos.RidesDBRepo 25 <init> - Constructing RidesDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:39,802 INFO  repos.ReservationsDBRepo 23 <init> - Constructing ReservationsDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:39,802 INFO  repos.EmployeeDBRepo 22 <init> - Constructing EmployeeDBRepo with properties: {jdbc.user=root, jdbc.url=jdbc:mysql://localhost:3306/mpp?useSSL=false&serverTimezone=UTC, jdbc.pass=1234} 
+23 Apr 2026 23:16:39,829 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:39,832 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:39,833 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 23:16:46,151 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:46,153 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:46,160 INFO  repos.ReservationsDBRepo 98 save - Reservation saved successfully: models.Reservation@78a1f472
+23 Apr 2026 23:16:46,160 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:46,161 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:46,162 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@7b81e15f
+23 Apr 2026 23:16:46,162 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:46,162 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:46,171 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@7b81e15f
+23 Apr 2026 23:16:46,172 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:46,172 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:46,173 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 23:16:46,182 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:46,182 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:46,183 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 23:16:48,895 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:48,899 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:48,900 INFO  repos.ReservationsDBRepo 74 findAll - Found 3 reservations in the database
+23 Apr 2026 23:16:48,913 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:48,913 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:48,914 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@3b2fd1c9
+23 Apr 2026 23:16:48,923 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:48,923 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:48,924 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@413113fa
+23 Apr 2026 23:16:48,926 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:48,926 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:48,926 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@e9d2fc1
+23 Apr 2026 23:16:48,928 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:48,928 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:48,928 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@1a4b058f
+23 Apr 2026 23:16:48,930 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:48,930 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:48,930 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@a25a58b
+23 Apr 2026 23:16:48,938 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:48,938 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:48,940 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@1128306f
+23 Apr 2026 23:16:48,943 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:48,943 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:48,944 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@1337b180
+23 Apr 2026 23:16:48,948 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:48,948 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:48,949 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@54fe7e00
+23 Apr 2026 23:16:50,235 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:50,235 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:50,236 INFO  repos.ReservationsDBRepo 43 findOne - Reservation found with id 15: models.Reservation@2fb134c0
+23 Apr 2026 23:16:50,236 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:50,236 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:50,237 INFO  repos.RidesDBRepo 47 findOne - Ride found with id 1: models.Ride@66724669
+23 Apr 2026 23:16:50,237 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:50,237 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:50,244 INFO  repos.RidesDBRepo 147 update - Ride updated successfully: models.Ride@66724669
+23 Apr 2026 23:16:50,244 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:50,244 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:50,249 INFO  repos.ReservationsDBRepo 118 delete - Reservation with id 15 deleted successfully
+23 Apr 2026 23:16:50,251 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:50,251 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:50,251 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 23:16:50,262 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:50,262 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:50,263 INFO  repos.RidesDBRepo 78 findAll - Found 3 rides in the database
+23 Apr 2026 23:16:50,265 INFO  utils.JdbcUtils 41 getConnection - Connecting to database...
+23 Apr 2026 23:16:50,265 INFO  utils.JdbcUtils 50 getConnection - Database connection established
+23 Apr 2026 23:16:50,266 INFO  repos.ReservationsDBRepo 74 findAll - Found 2 reservations in the database
+23 Apr 2026 23:16:53,859 ERROR server.ClientObjectWorker 66 run - Client error
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:51)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 23:16:53,861 ERROR server.ClientObjectWorker 66 run - Client error
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:51)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 23:16:54,535 ERROR server.ClientObjectWorker 66 run - Client error
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:51)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+23 Apr 2026 23:16:54,535 ERROR server.ClientObjectWorker 66 run - Client error
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:961)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2875)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3202)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3212)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1684)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+	at server.ClientObjectWorker.run(ClientObjectWorker.java:51)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
