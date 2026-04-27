@@ -1,0 +1,5 @@
+
+pandas
+azure-core
+numpy
+scikit-learn
