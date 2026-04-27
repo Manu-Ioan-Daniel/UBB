@@ -1,0 +1,21 @@
+-- Up: Add version and soft-delete columns to relevant tables (profesori, studenti, materii)
+ALTER TABLE profesori ADD COLUMN IF NOT EXISTS version BIGINT DEFAULT 0;
+ALTER TABLE profesori ADD COLUMN IF NOT EXISTS is_deleted BOOLEAN DEFAULT FALSE;
+ALTER TABLE profesori ADD COLUMN IF NOT EXISTS deleted_at TIMESTAMP WITH TIME ZONE;
+ALTER TABLE profesori ADD COLUMN IF NOT EXISTS deleted_by VARCHAR(100);
+
+ALTER TABLE studenti ADD COLUMN IF NOT EXISTS version BIGINT DEFAULT 0;
+ALTER TABLE studenti ADD COLUMN IF NOT EXISTS is_deleted BOOLEAN DEFAULT FALSE;
+ALTER TABLE studenti ADD COLUMN IF NOT EXISTS deleted_at TIMESTAMP WITH TIME ZONE;
+ALTER TABLE studenti ADD COLUMN IF NOT EXISTS deleted_by VARCHAR(100);
+
+ALTER TABLE materii ADD COLUMN IF NOT EXISTS version BIGINT DEFAULT 0;
+ALTER TABLE materii ADD COLUMN IF NOT EXISTS is_deleted BOOLEAN DEFAULT FALSE;
+ALTER TABLE materii ADD COLUMN IF NOT EXISTS deleted_at TIMESTAMP WITH TIME ZONE;
+ALTER TABLE materii ADD COLUMN IF NOT EXISTS deleted_by VARCHAR(100);
+
+-- Initialize version for existing rows
+UPDATE profesori SET version = 0 WHERE version IS NULL;
+UPDATE studenti SET version = 0 WHERE version IS NULL;
+UPDATE materii SET version = 0 WHERE version IS NULL;
+
