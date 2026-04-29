@@ -1,0 +1,6 @@
+Seq Scan on profesori  (cost=0.00..232.65 rows=2665 width=41) (actual time=0.004..0.400 rows=2432.00 loops=1)
+  Filter: (materie_id = 1)
+  Rows Removed by Filter: 7568
+  Buffers: shared hit=94
+Planning Time: 0.026 ms
+Execution Time: 0.451 ms

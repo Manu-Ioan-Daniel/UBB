@@ -34,6 +34,17 @@ public class Service extends Observable {
         return repoMaterii.findAll();
     }
 
+    /**
+     * Return all Materii, initializing 'notas' when using ORM repository (JOIN FETCH) to avoid LazyInitializationException in UI.
+     */
+    public List<Materie> getAllMateriiWithNotas(){
+        if (repoMaterii instanceof repos.MaterieDBRepoORM) {
+            repos.MaterieDBRepoORM orm = (repos.MaterieDBRepoORM) repoMaterii;
+            return orm.findAllWithJoinFetchNotas();
+        }
+        return repoMaterii.findAll();
+    }
+
     /***
      * @param idMaterie id ul materiei pentru care se cauta studentii
      * @return o lista cu toti studentii care au nota la materia cu id ul dat
@@ -106,5 +117,48 @@ public class Service extends Observable {
     public void deleteProfessor(Long id) {
         repoProfessor.delete(id);
         notifyObservers();
+    }
+
+    // Pagination helpers (by materie)
+    public List<Professor> getProfessorsPageOffset(Long materieId, int pageNumber, int pageSize) {
+        return repoProfessor.findPageByMaterieOffset(materieId, pageNumber, pageSize);
+    }
+
+    public List<Professor> getProfessorsPageKeyset(Long materieId, Long lastId, int pageSize) {
+        return repoProfessor.findPageByMaterieAfter(materieId, lastId, pageSize);
+    }
+
+    // direct access to Materie by id (uses underlying repo which has a SimpleEntityCache)
+    public models.Materie getMaterieById(Long id) {
+        return repoMaterii.findOne(id);
+    }
+
+    // numeric cache stats accessor for Materie repo (returns [hits, misses])
+    public long[] getMaterieCacheStatsArray() {
+        if (repoMaterii instanceof repos.MaterieDBRepoORM) {
+            repos.MaterieDBRepoORM mrepo = (repos.MaterieDBRepoORM) repoMaterii;
+            return mrepo.getCacheStats();
+        }
+        return new long[]{0L, 0L};
+    }
+
+    // Explain analyze helper (writes file and returns path)
+    public String explainQueryToFile(String sql, String outPath) {
+        try {
+            bench.ExplainCollector.explainToFile(sql, outPath);
+            return outPath;
+        } catch (Exception e) {
+            throw new RuntimeException("Explain failed: " + e.getMessage(), e);
+        }
+    }
+
+    // Cache stats helper for Materie repo (returns "hits/misses")
+    public String getMaterieCacheStats() {
+        if (repoMaterii instanceof repos.MaterieDBRepoORM) {
+            repos.MaterieDBRepoORM mrepo = (repos.MaterieDBRepoORM) repoMaterii;
+            long[] s = mrepo.getCacheStats();
+            return s[0] + "/" + s[1];
+        }
+        return "N/A";
     }
 }

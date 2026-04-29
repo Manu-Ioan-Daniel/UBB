@@ -3,14 +3,11 @@ package models;
 import jakarta.persistence.Column;
 import jakarta.persistence.Table;
 import jakarta.persistence.Entity;
-import org.hibernate.annotations.SQLDelete;
-import org.hibernate.annotations.Where;
+
 
 
 @Entity
 @Table(name = "profesori")
-@SQLDelete(sql = "UPDATE profesori SET is_deleted = true, deleted_at = now(), deleted_by = current_user WHERE id = ?")
-@Where(clause = "is_deleted = false")
 public class Professor extends models.Entity<Long> {
 
     @Column(name = "name")
@@ -24,9 +21,6 @@ public class Professor extends models.Entity<Long> {
 
     @Column(name = "materie_id")
     private Long materieId;
-
-    @Column(name = "phone")
-    private String phone;
 
     public Professor() {
 
@@ -64,9 +58,4 @@ public class Professor extends models.Entity<Long> {
     public void setMaterieId(Long materieId) {
         this.materieId = materieId;
     }
-
-    // New getters/setters
-    public String getPhone() { return phone; }
-    public void setPhone(String phone) { this.phone = phone; }
-
 }

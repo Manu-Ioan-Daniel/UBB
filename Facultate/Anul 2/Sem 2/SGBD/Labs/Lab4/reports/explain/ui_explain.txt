@@ -1,0 +1,9 @@
+Limit  (cost=0.29..8.00 rows=10 width=41) (actual time=0.007..0.011 rows=10.00 loops=1)
+  Buffers: shared hit=26
+  ->  Index Scan using profesori_pkey on profesori  (cost=0.29..3865.88 rows=5014 width=41) (actual time=0.006..0.010 rows=10.00 loops=1)
+        Filter: (materie_id = 3)
+        Rows Removed by Filter: 40
+        Index Searches: 1
+        Buffers: shared hit=26
+Planning Time: 0.039 ms
+Execution Time: 0.016 ms

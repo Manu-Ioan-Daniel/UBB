@@ -1,0 +1,1 @@
+N+1 demo executed. Check console logs for detailed SQL output and Hibernate statistics.

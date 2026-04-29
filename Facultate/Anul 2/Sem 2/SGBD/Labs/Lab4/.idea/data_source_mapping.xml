@@ -2,5 +2,12 @@
 <project version="4">
   <component name="DataSourcePerFileMappings">
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/0341b71f-e926-45e6-bb97-7fbefa0e0f4b/console.sql" value="0341b71f-e926-45e6-bb97-7fbefa0e0f4b" />
+    <file url="file://$PROJECT_DIR$/src/main/java/bench/BenchmarksRunner.java" value="0341b71f-e926-45e6-bb97-7fbefa0e0f4b" />
+    <file url="file://$PROJECT_DIR$/src/main/java/bench/ProfessorDataGenerator.java" value="0341b71f-e926-45e6-bb97-7fbefa0e0f4b" />
+    <file url="file://$PROJECT_DIR$/src/main/java/repos/MaterieDBRepo.java" value="0341b71f-e926-45e6-bb97-7fbefa0e0f4b" />
+    <file url="file://$PROJECT_DIR$/src/main/java/repos/NoteDBRepo.java" value="0341b71f-e926-45e6-bb97-7fbefa0e0f4b" />
+    <file url="file://$PROJECT_DIR$/src/main/java/repos/ProfessorDBRepo.java" value="0341b71f-e926-45e6-bb97-7fbefa0e0f4b" />
+    <file url="file://$PROJECT_DIR$/src/main/java/repos/StudRepo.java" value="0341b71f-e926-45e6-bb97-7fbefa0e0f4b" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/sql/migrations/001_add_indexes.sql" value="0341b71f-e926-45e6-bb97-7fbefa0e0f4b" />
   </component>
 </project>

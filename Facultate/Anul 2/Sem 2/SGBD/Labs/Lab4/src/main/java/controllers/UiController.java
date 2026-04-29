@@ -3,16 +3,18 @@ package controllers;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import models.Materie;
 import models.Professor;
 import models.Student;
 import services.Service;
+import utils.HibernateStats;
 import utils.Observer;
 import utils.StageManager;
+
+import java.util.List;
+import javafx.event.ActionEvent;
 
 public class UiController implements Observer {
 
@@ -52,8 +54,38 @@ public class UiController implements Observer {
     @FXML
     private TableView<Student> studentsTable;
 
+
+    @FXML
+    private Button prevButton;
+    @FXML
+    private Button nextButton;
+    @FXML
+    private Label pageLabel;
+    @FXML
+    private ComboBox<Integer> pageSizeCombo;
+    @FXML
+    private Button explainButton;
+
+    @FXML
+    private Label queriesLabel;
+    @FXML
+    private Label timeLabel;
+    @FXML
+    private Label cacheLabel;
+    @FXML
+    private TextArea explainText;
+
+    @FXML
+    private CheckBox keysetToggle;
+
     private Service service;
     private StageManager stageManager;
+
+
+    private int pageSize = 10;
+    private int currentPage = 0;
+    private Long lastIdCursor = null;
+    private boolean useKeyset = false;
 
     /***
      * Initializeaza tabelele din interfata
@@ -63,6 +95,11 @@ public class UiController implements Observer {
         initMateriiTable();
         initStudentsTable();
         initProfessorsTable();
+        initPaginationControls();
+        if (explainText != null) {
+            explainText.setEditable(false);
+            explainText.setText("Selecteaza o materie si apasa Explain.");
+        }
         service.addObserver(this);
     }
 
@@ -80,11 +117,13 @@ public class UiController implements Observer {
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         creditColumn.setCellValueFactory(new PropertyValueFactory<>("credits"));
 
-        materiiTable.setItems(FXCollections.observableList(service.getAllMaterii()));
+        // load materii with notas initialized to avoid LazyInitializationException in UI
+        materiiTable.setItems(FXCollections.observableList(service.getAllMateriiWithNotas()));
         materiiTable.getSelectionModel().selectedItemProperty().addListener((obs,oldVal,newVal)->{
            if(newVal!=null){
+               // load first page of professors for selected materie
+               loadProfessorsPage(newVal.getId(), 0);
                studentsTable.setItems(FXCollections.observableList(service.getAllStudentsByMaterie(newVal.getId())));
-               professorsTable.setItems(FXCollections.observableList(service.getAllProfessorsByMaterie(newVal.getId())));
            }
         });
     }
@@ -111,6 +150,129 @@ public class UiController implements Observer {
         profNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         profEmailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
         profAgeColumn.setCellValueFactory(new PropertyValueFactory<>("age"));
+    }
+
+    private void initPaginationControls(){
+        pageSizeCombo.setItems(FXCollections.observableArrayList(10,25,50,100));
+        pageSizeCombo.setValue(pageSize);
+        pageSizeCombo.valueProperty().addListener((obs,oldVal,newVal)->{
+            pageSize = newVal;
+            currentPage = 0;
+            lastIdCursor = null;
+            Materie sel = materiiTable.getSelectionModel().getSelectedItem();
+            if(sel!=null) loadProfessorsPage(sel.getId(), 0);
+        });
+        // init button states
+        prevButton.setDisable(true);
+        nextButton.setDisable(false);
+
+        // wire actions programmatically to avoid FXML parsing issues
+        prevButton.setOnAction(this::onPrevPage);
+        nextButton.setOnAction(this::onNextPage);
+        if (explainButton != null) explainButton.setOnAction(this::handleExplainCurrent);
+        if (keysetToggle != null) {
+            keysetToggle.selectedProperty().addListener((obs, oldV, newV) -> {
+                useKeyset = newV;
+                // reset cursor when changing mode
+                lastIdCursor = null;
+                currentPage = 0;
+                Materie sel = materiiTable.getSelectionModel().getSelectedItem();
+                if (sel != null) loadProfessorsPage(sel.getId(), 0);
+            });
+        }
+    }
+
+    private void loadProfessorsPage(Long materieId, int page) {
+        long t0 = System.currentTimeMillis();
+        List<Professor> pageData;
+        if(useKeyset) {
+            pageData = service.getProfessorsPageKeyset(materieId, lastIdCursor, pageSize);
+            if(!pageData.isEmpty()) {
+                lastIdCursor = pageData.get(pageData.size()-1).getId();
+            }
+        } else {
+            pageData = service.getProfessorsPageOffset(materieId, page, pageSize);
+        }
+        long dt = System.currentTimeMillis() - t0;
+        professorsTable.setItems(FXCollections.observableList(pageData));
+        currentPage = page;
+        pageLabel.setText("Page " + page);
+        timeLabel.setText("Last query ms: " + dt);
+
+        // update Hibernate stats (if enabled)
+        try {
+            var stats = HibernateStats.snapshot();
+            queriesLabel.setText("Queries: " + stats.getQueryExecutionCount());
+        } catch (Exception e) {
+            queriesLabel.setText("Queries: N/A");
+        }
+
+        // update cache stats if SimpleEntityCache is used
+        try {
+            cacheLabel.setText("Cache H/M: " + service.getMaterieCacheStats());
+        } catch (Exception e) {
+            cacheLabel.setText("Cache H/M: N/A");
+        }
+
+        // update buttons
+        prevButton.setDisable(currentPage == 0);
+        nextButton.setDisable(pageData.size() < pageSize);
+
+        // keep explain panel in sync with current selection/page
+        updateExplainPreview();
+    }
+
+    private void updateExplainPreview() {
+        Materie sel = materiiTable.getSelectionModel().getSelectedItem();
+        if (sel == null || explainText == null) {
+            return;
+        }
+        String sql;
+        if (useKeyset) {
+            sql = String.format("SELECT * FROM profesori WHERE materie_id = %d AND id > %d ORDER BY id LIMIT %d", sel.getId(), lastIdCursor == null ? 0 : lastIdCursor, pageSize);
+        } else {
+            int offset = currentPage * pageSize;
+            sql = String.format("SELECT * FROM profesori WHERE materie_id = %d ORDER BY id LIMIT %d OFFSET %d", sel.getId(), pageSize, offset);
+        }
+        try {
+            String out = service.explainQueryToFile(sql, "reports/explain/ui_explain.txt");
+            java.nio.file.Path p = java.nio.file.Paths.get(out);
+            String content = java.nio.file.Files.readString(p);
+            explainText.setText(content);
+        } catch (Exception e) {
+            explainText.setText("Explain failed: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    public void onPrevPage(ActionEvent event){
+        Materie sel = materiiTable.getSelectionModel().getSelectedItem();
+        if(sel==null) return;
+        if(useKeyset){
+            // keyset does not easily support prev without storing cursors stack; for demo, we simply decrement page index and reset
+            currentPage = Math.max(0, currentPage - 1);
+            lastIdCursor = null;
+            for (int i = 0; i < currentPage; i++) {
+                var page = service.getProfessorsPageKeyset(sel.getId(), lastIdCursor, pageSize);
+                if(page.isEmpty()) break;
+                lastIdCursor = page.get(page.size()-1).getId();
+            }
+            loadProfessorsPage(sel.getId(), currentPage);
+        } else {
+            int prev = Math.max(0, currentPage - 1);
+            loadProfessorsPage(sel.getId(), prev);
+        }
+    }
+
+    @FXML
+    public void onNextPage(ActionEvent event){
+        Materie sel = materiiTable.getSelectionModel().getSelectedItem();
+        if(sel==null) return;
+        if(useKeyset){
+            loadProfessorsPage(sel.getId(), currentPage + 1);
+        } else {
+            loadProfessorsPage(sel.getId(), currentPage + 1);
+        }
     }
 
     /***
@@ -172,10 +334,10 @@ public class UiController implements Observer {
      */
     @FXML
     public void handleRefresh(){
-        materiiTable.setItems(FXCollections.observableList(service.getAllMaterii()));
+        materiiTable.setItems(FXCollections.observableList(service.getAllMateriiWithNotas()));
             if(materiiTable.getSelectionModel().getSelectedItem()!=null){
                 studentsTable.setItems(FXCollections.observableList(service.getAllStudentsByMaterie(materiiTable.getSelectionModel().getSelectedItem().getId())));
-                professorsTable.setItems(FXCollections.observableList(service.getAllProfessorsByMaterie(materiiTable.getSelectionModel().getSelectedItem().getId())));
+                loadProfessorsPage(materiiTable.getSelectionModel().getSelectedItem().getId(), 0);
             }
     }
 
@@ -188,13 +350,13 @@ public class UiController implements Observer {
     public void update() {
         Materie selectedMaterie = materiiTable.getSelectionModel().getSelectedItem();
         if (selectedMaterie != null) {
-            professorsTable.setItems(
-                    FXCollections.observableList(
-                            service.getAllProfessorsByMaterie(selectedMaterie.getId())
-                    )
-            );
+            loadProfessorsPage(selectedMaterie.getId(), currentPage);
         }
     }
 
+    @FXML
+    public void handleExplainCurrent(ActionEvent event) {
+        updateExplainPreview();
+    }
 
 }
