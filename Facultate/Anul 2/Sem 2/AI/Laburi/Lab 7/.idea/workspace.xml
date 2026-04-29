@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a4f020e-3b2d-4326-bf4c-37c3b953c1d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab 6/.idea/ab 6.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab 6/.idea/copilot.data.migration.agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab 6/.idea/copilot.data.migration.ask.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab 6/.idea/copilot.data.migration.edit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 6/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 6/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 6/lab06.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 6/lab06.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Lab 7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Lab 7.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_7.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/lab_7.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/myNN.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +69,7 @@
       <workItem from="1776761422288" duration="297000" />
       <workItem from="1777273883523" duration="65000" />
       <workItem from="1777371676480" duration="818000" />
-      <workItem from="1777372531041" duration="327000" />
+      <workItem from="1777372531041" duration="777000" />
     </task>
     <servers />
   </component>
