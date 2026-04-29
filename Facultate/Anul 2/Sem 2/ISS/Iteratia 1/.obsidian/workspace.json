@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8ddd35121bd5a5a0",
+        "id": "ad72737eb385552b",
         "type": "tabs",
         "children": [
           {
-            "id": "eab643c8563c13f5",
+            "id": "139516318c0da726",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Diagrama de secventa.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Diagrama de secventa"
+              "title": "New tab"
             }
           }
         ]
@@ -183,7 +179,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "eab643c8563c13f5",
+  "active": "139516318c0da726",
   "lastOpenFiles": [
     "Diagrama de secventa.md"
   ]
