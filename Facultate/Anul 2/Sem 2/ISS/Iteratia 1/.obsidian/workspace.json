@@ -11,10 +11,14 @@
             "id": "139516318c0da726",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Diagrame.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Diagrame"
             }
           }
         ]
@@ -179,8 +183,8 @@
       "bases:Create new base": false
     }
   },
-  "active": "139516318c0da726",
+  "active": "df71949b636b69e5",
   "lastOpenFiles": [
-    "Diagrama de secventa.md"
+    "Diagrame.md"
   ]
 }
