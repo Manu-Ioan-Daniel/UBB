@@ -1,3 +1,5 @@
+import {programData} from "./data.js";
+
 $(function () {
 
     const columns = Object.keys(programData[0]);
@@ -100,6 +102,7 @@ $(function () {
     }
 
     function sortByVertical(col) {
+
         sortAscV = (sortColV === col) ? !sortAscV : true;
         sortColV = col;
 

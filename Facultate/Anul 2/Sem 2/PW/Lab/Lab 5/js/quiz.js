@@ -1,3 +1,5 @@
+import {programData} from "./data.js";
+
 $(function () {
 
     const quizData = [
@@ -97,9 +99,28 @@ $(function () {
     }
 
     function getResultMessage() {
-        if (score === quizData.length) return "esti regele";
-        if (score >= quizData.length / 2) return "nu prea le ai";
-        return "nu le ai deloc";
+
+        if (score === quizData.length) return "esti regele" + getTodaysWorkout();
+        if (score >= quizData.length / 2) return "nu prea le ai" + getTodaysWorkout();
+        return "nu le ai deloc" + getTodaysWorkout()
+    }
+
+    function getTodaysWorkout() {
+        const zile = ["Duminica", "Luni", "Marti", "Miercuri", "Joi", "Vineri", "Sambata"];
+        const azi = zile[new Date().getDay()];
+        const antrenamentAzi = programData.filter(item => item.ziua === azi);
+        if (antrenamentAzi.length > 0) {
+            let mesaj = `<br><strong>Ai de facut frate:</strong><ul>`;
+
+            $.each(antrenamentAzi, function(i, item) {
+                mesaj += `<li>${item.exercitiu}: ${item.seturi} x ${item.repetari}</li>`;
+            });
+
+            mesaj += `</ul>`;
+            return mesaj;
+        } else {
+            return '<br><br>($azi) e zi de pauza micule bro';
+        }
     }
 
     $container.on("click", "#restart-btn", function () {

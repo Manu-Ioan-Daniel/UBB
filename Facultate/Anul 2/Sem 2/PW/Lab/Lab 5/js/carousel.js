@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
 
     const slides = [
         {
@@ -50,11 +50,9 @@ $(document).ready(function () {
         resetTimer();
     }
 
-    // Optional: bind buttons if you have them
     $("#next-slide-btn").on("click", nextSlide);
     $("#prev-slide-btn").on("click", prevSlide);
 
-    // Init
     timer = setInterval(nextSlide, 3000);
     showSlide(current);
 

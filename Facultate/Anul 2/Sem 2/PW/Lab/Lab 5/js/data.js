@@ -1,4 +1,4 @@
-const programData = [
+export const programData = [
     { ziua: "Luni",     exercitiu: "Flotari",     seturi: 3, repetari: 15, focus: "Forta" },
     { ziua: "Luni",     exercitiu: "Genuflexiuni", seturi: 3, repetari: 20, focus: "Rezistenta" },
     { ziua: "Marti",    exercitiu: "Tractiuni",    seturi: 3, repetari: 10, focus: "Upper Body" },
