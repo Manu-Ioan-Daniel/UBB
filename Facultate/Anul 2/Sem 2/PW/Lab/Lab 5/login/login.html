@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calisthenics Core - Login</title>
+    <link rel="stylesheet" href="../styling/base.css">
+<!--    <link rel="stylesheet" href="../styling/verticalNav.css">-->
+    <link rel ="stylesheet" href="../styling/horizontalNav.css">
+    <link rel="stylesheet" href="../styling/responsive.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Calisthenics Core</h1>
+    <img src="../assets/logo.png" alt="Logo Calisthenics" title="Calisthenics" id="logo">
+</header>
+
+
+<nav>
+    <ul class="menu">
+        <li><a href="../home/home.html" target="_self">Home</a></li>
+        <li>
+            <a href="#">Login</a>
+            <div class="dropdown">
+                <a href="login.html">Autentificare</a>
+                <a href="creare_cont.html">Creare cont</a>
+            </div>
+        </li>
+        <li><a href="../programe/programe.html" target="_self">Programe</a></li>
+        <li><a href="../formular/formular.html" target="_self">Formular</a></li>
+    </ul>
+</nav>
+
+
+<section>
+    <h2>Autentificare utilizator</h2>
+
+    <form id = "loginForm" name="loginForm" novalidate>
+        <fieldset style = "width:18vw;text-align:center;">
+            <legend><b>Login</b></legend>
+            <div>
+                <label for="username">Nume utilizator:</label>
+                <input type="text" name="username" id="username" size="30" maxlength="20">
+            </div>
+            <div>
+                <label for="password">Parola:</label>
+                <input type="password" name="password" id="password" size="30" maxlength="20">
+            </div>
+            <input type="submit" value="Login" style = "width:268px;">
+        </fieldset>
+        <p>Nu ai un cont? <a href="creare_cont.html">Creeaza unul!</a></p>
+    </form>
+</section>
+
+
+<footer>
+    <div>
+        <p>
+            <span title="Copyright">© 2026 Calisthenics Core</span>
+            Contact: <a href="mailto:manudaniel@calisthenicspro.ro" target="_self">manudaniel@calisthenicspro.ro</a>
+        </p>
+    </div>
+</footer>
+<script src="../js/validate_login.js"></script>
+<script src="../js/dropdown.js"></script>
+</body>
+</html>
