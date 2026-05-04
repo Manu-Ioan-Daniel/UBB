@@ -31,7 +31,7 @@ public class NPlusOneDemo {
             em.getTransaction().begin();
             List<Materie> list = em.createQuery("SELECT m FROM Materie m", Materie.class).getResultList();
             parentsCount = Math.min(10, list.size());
-            for (int i = 0; i < parentsCount; i++) { // document at least 10 parents
+            for (int i = 0; i < parentsCount; i++) {
                 Materie m = list.get(i);
                 int size = m.getNotas() == null ? 0 : m.getNotas().size();
                 totalNotas += size;

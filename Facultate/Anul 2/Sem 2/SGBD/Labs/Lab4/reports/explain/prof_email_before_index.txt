@@ -1,0 +1,6 @@
+Seq Scan on profesori  (cost=0.00..102.22 rows=3 width=1044) (actual time=0.166..2.191 rows=1.00 loops=1)
+  Filter: ((email)::text = 'prof500@example.com'::text)
+  Rows Removed by Filter: 10002
+  Buffers: shared hit=94
+Planning Time: 0.065 ms
+Execution Time: 2.211 ms

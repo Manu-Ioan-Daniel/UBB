@@ -39,10 +39,9 @@ public class PaginationBench {
         }
 
         long kt0 = System.currentTimeMillis();
-        List<?> kfirst = repo.findPageAfter(null, pageSize); // after null -> from start
+        List<?> kfirst = repo.findPageAfter(null, pageSize);
         long kdtFirst = System.currentTimeMillis() - kt0;
 
-        // advance to middle using keyset
         Long lastId = null;
         for (int i = 0; i < midPage; i++) {
             List<?> page = repo.findPageAfter(lastId, pageSize);
@@ -61,7 +60,6 @@ public class PaginationBench {
         List<?> kmid = repo.findPageAfter(lastId, pageSize);
         long kdtMid = System.currentTimeMillis() - kt1;
 
-        // advance to last using keyset
         Long cursor = null;
         for (int i = 0; i < totalPages; i++) {
             List<?> p = repo.findPageAfter(cursor, pageSize);
@@ -73,7 +71,6 @@ public class PaginationBench {
             } catch (Exception e) {
                 break;
             }
-            // continue until we reach last
         }
         long kt2 = System.currentTimeMillis();
         long kdtLast = kt2 - kt1;

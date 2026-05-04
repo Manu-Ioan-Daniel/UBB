@@ -22,10 +22,8 @@ public class DatabaseManager{
         try{
             prop.load(DatabaseManager.class.getResourceAsStream("/sql/db.properties"));
         } catch (IOException e) {
-            // continue with empty properties if file missing
         }
 
-        // prefer environment variables for sensitive data
         String url = System.getenv().getOrDefault("DB_URL", prop.getProperty("db.url"));
         String user = System.getenv().getOrDefault("DB_USER", prop.getProperty("db.username"));
         String pass = System.getenv().getOrDefault("DB_PASS", prop.getProperty("db.password"));

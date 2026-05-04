@@ -11,7 +11,7 @@ import java.util.List;
 public class MaterieDBRepoORM implements Repository<Long, Materie>{
 
     private final EntityManagerFactory emf;
-    private final SimpleEntityCache<Long, Materie> cache = new SimpleEntityCache<>(5 * 60 * 1000); // 5 min TTL
+    private final SimpleEntityCache<Long, Materie> cache = new SimpleEntityCache<>(5 * 60 * 1000);
 
     public MaterieDBRepoORM() {
         this.emf = HibernateConfig.getEntityManagerFactory();
@@ -42,14 +42,12 @@ public class MaterieDBRepoORM implements Repository<Long, Materie>{
         }
     }
 
-    // Return list but initialize lazy collection while EntityManager is open to avoid LazyInitializationException
     public List<Materie> findAllLazyAccessNotas() {
         try (EntityManager em = emf.createEntityManager()) {
             List<Materie> list = em.createQuery("SELECT m FROM Materie m", Materie.class).getResultList();
-            // Initialize notas for each materie while EM is open
             for (Materie m : list) {
                 if (m.getNotas() != null) {
-                    m.getNotas().size(); // triggers initialization
+                    m.getNotas().size();
                 }
             }
             return list;
@@ -71,7 +69,6 @@ public class MaterieDBRepoORM implements Repository<Long, Materie>{
         cache.invalidate(materie.getId());
     }
 
-    // expose cache stats: returns long[]{hits, misses}
     public long[] getCacheStats() {
         return new long[]{cache.getHits(), cache.getMisses()};
     }

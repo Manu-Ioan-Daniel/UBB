@@ -1,3 +1,5 @@
-mode,queriesCount,timeMs
-N+1,4,215
-JOIN_FETCH,4,28
+mode,timeMs
+N+1,1660
+JOIN_FETCH,704
+N+1,1558
+JOIN_FETCH,436

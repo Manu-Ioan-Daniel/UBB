@@ -1,10 +1,6 @@
-Bitmap Heap Scan on profesori  (cost=4.31..14.74 rows=3 width=41) (actual time=0.010..0.010 rows=1.00 loops=1)
-  Recheck Cond: ((email)::text = 'prof500@example.com'::text)
-  Heap Blocks: exact=1
+Index Scan using idx_profesori_email on profesori  (cost=0.29..8.30 rows=1 width=41) (actual time=0.020..0.021 rows=1.00 loops=1)
+  Index Cond: ((email)::text = 'prof500@example.com'::text)
+  Index Searches: 1
   Buffers: shared hit=3
-  ->  Bitmap Index Scan on idx_profesori_email  (cost=0.00..4.31 rows=3 width=0) (actual time=0.006..0.006 rows=1.00 loops=1)
-        Index Cond: ((email)::text = 'prof500@example.com'::text)
-        Index Searches: 1
-        Buffers: shared hit=2
-Planning Time: 0.061 ms
-Execution Time: 0.015 ms
+Planning Time: 0.109 ms
+Execution Time: 0.034 ms

@@ -19,7 +19,6 @@ public class CacheDemo {
             Path out = reportsDir.resolve("cache_demo.csv");
             boolean exists = Files.exists(out);
 
-            // ensure there is at least one materie id (ProfessorDataGenerator will seed materii if needed)
             long anyId = ProfessorDataGenerator.getAnyMaterieId();
 
             MaterieDBRepoORM repo = new MaterieDBRepoORM();
@@ -32,28 +31,25 @@ public class CacheDemo {
                 long[] s0 = repo.getCacheStats();
                 fw.write(String.format("initial,stats,0,%d,%d\n", s0[0], s0[1]));
 
-                // First access -> miss (populate)
                 long t1 = System.currentTimeMillis();
                 Materie m1 = repo.findOne(anyId);
                 long d1 = System.currentTimeMillis() - t1;
                 long[] s1 = repo.getCacheStats();
                 fw.write(String.format("first_get,miss,%d,%d,%d\n", d1, s1[0], s1[1]));
 
-                // Second access -> hit
                 long t2 = System.currentTimeMillis();
                 Materie m2 = repo.findOne(anyId);
                 long d2 = System.currentTimeMillis() - t2;
                 long[] s2 = repo.getCacheStats();
                 fw.write(String.format("second_get,hit,%d,%d,%d\n", d2, s2[0], s2[1]));
 
-                // Invalidate cache via update (this repo invalidates in update)
                 if (m2 != null) {
-                    repo.update(m2); // this invalidates cache for that id
+                    repo.update(m2);
                 }
                 long[] s3 = repo.getCacheStats();
                 fw.write(String.format("after_invalidate,invalidated,0,%d,%d\n", s3[0], s3[1]));
 
-                // Access after invalidate -> miss again
+
                 long t3 = System.currentTimeMillis();
                 Materie m3 = repo.findOne(anyId);
                 long d3 = System.currentTimeMillis() - t3;

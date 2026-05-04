@@ -68,7 +68,6 @@ public class ProfessorDataGenerator {
             return ids;
         }
 
-        // Seed a minimal set of materii if table is empty so FK constraints are satisfied.
         String insertSql = "INSERT INTO materii(name, credits) VALUES (?, ?)";
         try (PreparedStatement ps = conn.prepareStatement(insertSql)) {
             for (int i = 1; i <= 20; i++) {

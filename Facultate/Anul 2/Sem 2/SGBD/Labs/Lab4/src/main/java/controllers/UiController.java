@@ -166,14 +166,12 @@ public class UiController implements Observer {
         prevButton.setDisable(true);
         nextButton.setDisable(false);
 
-        // wire actions programmatically to avoid FXML parsing issues
         prevButton.setOnAction(this::onPrevPage);
         nextButton.setOnAction(this::onNextPage);
         if (explainButton != null) explainButton.setOnAction(this::handleExplainCurrent);
         if (keysetToggle != null) {
             keysetToggle.selectedProperty().addListener((obs, oldV, newV) -> {
                 useKeyset = newV;
-                // reset cursor when changing mode
                 lastIdCursor = null;
                 currentPage = 0;
                 Materie sel = materiiTable.getSelectionModel().getSelectedItem();
@@ -199,7 +197,6 @@ public class UiController implements Observer {
         pageLabel.setText("Page " + page);
         timeLabel.setText("Last query ms: " + dt);
 
-        // update Hibernate stats (if enabled)
         try {
             var stats = HibernateStats.snapshot();
             queriesLabel.setText("Queries: " + stats.getQueryExecutionCount());
@@ -214,11 +211,9 @@ public class UiController implements Observer {
             cacheLabel.setText("Cache H/M: N/A");
         }
 
-        // update buttons
         prevButton.setDisable(currentPage == 0);
         nextButton.setDisable(pageData.size() < pageSize);
 
-        // keep explain panel in sync with current selection/page
         updateExplainPreview();
     }
 
@@ -249,7 +244,6 @@ public class UiController implements Observer {
         Materie sel = materiiTable.getSelectionModel().getSelectedItem();
         if(sel==null) return;
         if(useKeyset){
-            // keyset does not easily support prev without storing cursors stack; for demo, we simply decrement page index and reset
             currentPage = Math.max(0, currentPage - 1);
             lastIdCursor = null;
             for (int i = 0; i < currentPage; i++) {
