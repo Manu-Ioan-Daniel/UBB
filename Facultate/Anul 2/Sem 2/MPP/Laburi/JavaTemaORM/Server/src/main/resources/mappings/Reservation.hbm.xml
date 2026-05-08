@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="models.Reservation" table="reservations" lazy="false">
+        <id name="id" column="id" type="long">
+            <generator class="identity"/>
+        </id>
+
+        <property name="clientName" column="client_name"/>
+        <property name="reservedSeatsCount" column="reserved_seats_count"/>
+        <property name="rideId" column="ride_id"/>
+
+    </class>
+</hibernate-mapping>

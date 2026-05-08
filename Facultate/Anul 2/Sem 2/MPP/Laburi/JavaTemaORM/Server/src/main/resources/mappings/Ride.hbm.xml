@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="models.Ride" table="rides" lazy="false">
+        <id name="id" column="id" type="long">
+            <generator class="identity"/>
+        </id>
+
+        <property name="destination" column="destination"/>
+        <property name="date" column="ride_date" type="org.hibernate.type.LocalDateType"/>
+        <property name="departureTime" column="departure_time" type="org.hibernate.type.LocalTimeType"/>
+        <property name="availableSeats" column="available_seats"/>
+    </class>
+</hibernate-mapping>
