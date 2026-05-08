@@ -1,0 +1,57 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+dependencies {
+
+    implementation project(':Shared')
+    implementation 'org.apache.logging.log4j:log4j-core:2.25.3'
+    implementation 'org.apache.logging.log4j:log4j-api:2.25.3'
+    implementation 'org.xerial:sqlite-jdbc:3.41.2.2'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+application {
+    mainClass = 'ServerMain'
+}
+
+tasks.register('runServer', JavaExec) {
+    group = 'application'
+    description = 'Run the server main class'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = application.mainClass
+}
+
+// Added Hibernate and related dependencies below (kept in a single dependencies block)
+dependencies {
+    implementation project(':Shared')
+    implementation 'org.apache.logging.log4j:log4j-core:2.25.3'
+    implementation 'org.apache.logging.log4j:log4j-api:2.25.3'
+    implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.25.3'
+
+    // MySQL connector (matches Shared bd.config)
+    implementation 'com.mysql:mysql-connector-j:8.0.33'
+
+    // Hibernate core and JPA api
+    implementation 'org.hibernate:hibernate-core:5.6.15.Final'
+    implementation 'javax.persistence:javax.persistence-api:2.2'
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+}

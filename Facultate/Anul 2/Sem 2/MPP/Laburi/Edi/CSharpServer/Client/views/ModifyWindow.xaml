@@ -1,0 +1,16 @@
+﻿<Window x:Class="CSharpLab_3.views.ModifyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Modify" Height="200" Width="300"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel Margin="10">
+        <Button DockPanel.Dock="Bottom" Content="Cancel Reservation" Click="HandleCancelReservation" Margin="0,10,0,0"/>
+        <DataGrid x:Name="ReservationsTable" AutoGenerateColumns="False" IsReadOnly="True" ColumnWidth = "*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Client" Binding="{Binding ClientName}"/>
+                <DataGridTextColumn Header="Ride" Binding="{Binding RideId}"/>
+                <DataGridTextColumn Header="Seats" Binding="{Binding ReservedSeatsCount}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>
