@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "dc5c75d0377f97f7",
@@ -183,8 +184,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "df71949b636b69e5",
+  "active": "139516318c0da726",
   "lastOpenFiles": [
+    "diagrame_comunicare.mdj",
+    "diagrame_comunicare.txt",
+    "diagrame.mdj",
+    "New Text Document (2).txt",
+    "Diagrame.mdj",
+    "New Text Document.txt",
+    "Diagrame Com si Secv.mdj",
+    "Diagrame Com si Secvb.mdj",
+    "Diagrama Clase.mdj",
     "Diagrame.md"
   ]
 }

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -21,16 +24,24 @@
 
 <nav>
     <ul class="menu">
-        <li><a href="../home/home.html" target="_self">Home</a></li>
-        <li>
-            <a href="#">Login</a>
-            <div class="dropdown">
-                <a href="login.html">Autentificare</a>
-                <a href="creare_cont.html">Creare cont</a>
-            </div>
-        </li>
-        <li><a href="../programe/programe.html" target="_self">Programe</a></li>
-        <li><a href="../formular/formular.html" target="_self">Formular</a></li>
+        <li><a href="../home/home.php" target="_self">Home</a></li>
+        <?php if (isset($_SESSION['user_id'])): ?>
+            <li>
+                <a href="../backend/login/logout.php">Log out</a>
+            </li>
+        <?php else: ?>
+            <li>
+                <a href="#">Login</a>
+                <div class="dropdown">
+                    <a href="login.php">Autentificare</a>
+                    <a href="../login/creare_cont.php">Creare cont</a>
+                </div>
+            </li>
+        <?php endif; ?>
+
+
+        <li><a href="../programe/programe.php" target="_self">Programe</a></li>
+        <li><a href="../formular/formular.php" target="_self">Formular</a></li>
     </ul>
 </nav>
 
