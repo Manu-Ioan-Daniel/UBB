@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="011-insert-projects-data" author="admin">
+        <insert tableName="projects">
+            <column name="name" value="Platforma Web"/>
+            <column name="description" value="Aplicatie web pentru gestionarea datelor academice"/>
+            <column name="start_date" valueDate="2026-05-01"/>
+            <column name="materie_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="projects">
+            <column name="name" value="Analiza Date"/>
+            <column name="description" value="Proiect pentru analiza si vizualizarea datelor"/>
+            <column name="start_date" valueDate="2026-05-10"/>
+            <column name="materie_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="projects">
+            <column name="name" value="Simulare Fizica"/>
+            <column name="description" value="Simulare numerica pentru experimente fizice"/>
+            <column name="start_date" valueDate="2026-05-15"/>
+            <column name="materie_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="projects">
+            <column name="name" value="Laborator Chimie"/>
+            <column name="description" value="Model de gestionare a experimentelor chimice"/>
+            <column name="start_date" valueDate="2026-05-20"/>
+            <column name="materie_id" valueNumeric="4"/>
+        </insert>
+
+        <rollback>
+            <delete tableName="projects"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
+

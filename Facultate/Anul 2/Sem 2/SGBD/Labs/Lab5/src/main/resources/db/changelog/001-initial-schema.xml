@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="001-create-materii-table" author="admin">
+        <createTable tableName="materii">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="credits" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <comment>Create materii (courses) table</comment>
+    </changeSet>
+
+    <changeSet id="002-create-studenti-table" author="admin">
+        <createTable tableName="studenti">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="age" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <comment>Create studenti (students) table</comment>
+    </changeSet>
+
+    <changeSet id="003-create-profesori-table" author="admin">
+        <createTable tableName="profesori">
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="age" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="materie_id" type="INT">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint
+                baseTableName="profesori"
+                baseColumnNames="materie_id"
+                referencedTableName="materii"
+                referencedColumnNames="id"
+                constraintName="fk_profesori_materii"
+                onDelete="CASCADE"/>
+        <comment>Create profesori (professors) table with foreign key to materii</comment>
+    </changeSet>
+
+    <changeSet id="004-create-note-studenti-table" author="admin">
+        <createTable tableName="note_studenti">
+            <column name="student_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="materie_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nota" type="NUMERIC(4,2)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addPrimaryKey
+                tableName="note_studenti"
+                columnNames="student_id,materie_id"
+                constraintName="pk_note_studenti"/>
+        <addForeignKeyConstraint
+                baseTableName="note_studenti"
+                baseColumnNames="student_id"
+                referencedTableName="studenti"
+                referencedColumnNames="id"
+                constraintName="fk_note_studenti_student"
+                onDelete="CASCADE"/>
+        <addForeignKeyConstraint
+                baseTableName="note_studenti"
+                baseColumnNames="materie_id"
+                referencedTableName="materii"
+                referencedColumnNames="id"
+                constraintName="fk_note_studenti_materie"
+                onDelete="CASCADE"/>
+        <comment>Create note_studenti (student grades) junction table with foreign keys</comment>
+    </changeSet>
+
+    <changeSet id="005-insert-initial-materii-data" author="admin">
+        <insert tableName="materii">
+            <column name="name" value="Matematica"/>
+            <column name="credits" value="5"/>
+        </insert>
+        <insert tableName="materii">
+            <column name="name" value="Informatica"/>
+            <column name="credits" value="4"/>
+        </insert>
+        <insert tableName="materii">
+            <column name="name" value="Fizica"/>
+            <column name="credits" value="3"/>
+        </insert>
+        <insert tableName="materii">
+            <column name="name" value="Chimie"/>
+            <column name="credits" value="2"/>
+        </insert>
+        <comment>Insert initial course data</comment>
+    </changeSet>
+
+    <changeSet id="006-insert-initial-studenti-data" author="admin">
+        <insert tableName="studenti">
+            <column name="name" value="Ion Popescu"/>
+            <column name="age" value="20"/>
+        </insert>
+        <insert tableName="studenti">
+            <column name="name" value="Maria Ionescu"/>
+            <column name="age" value="22"/>
+        </insert>
+        <insert tableName="studenti">
+            <column name="name" value="Vasile Georgescu"/>
+            <column name="age" value="21"/>
+        </insert>
+        <comment>Insert initial student data</comment>
+    </changeSet>
+
+    <changeSet id="007-insert-initial-profesori-data" author="admin">
+        <insert tableName="profesori">
+            <column name="name" value="Prof. Andrei"/>
+            <column name="age" value="45"/>
+            <column name="email" value="andrei@university.com"/>
+            <column name="materie_id" value="1"/>
+        </insert>
+        <insert tableName="profesori">
+            <column name="name" value="Prof. Elena"/>
+            <column name="age" value="50"/>
+            <column name="email" value="elena@university.com"/>
+            <column name="materie_id" value="2"/>
+        </insert>
+        <insert tableName="profesori">
+            <column name="name" value="Prof. Mihai"/>
+            <column name="age" value="40"/>
+            <column name="email" value="mihai@university.com"/>
+            <column name="materie_id" value="3"/>
+        </insert>
+        <insert tableName="profesori">
+            <column name="name" value="Prof. Ana"/>
+            <column name="age" value="35"/>
+            <column name="email" value="ana@university.com"/>
+            <column name="materie_id" value="4"/>
+        </insert>
+        <comment>Insert initial professor data</comment>
+    </changeSet>
+
+    <changeSet id="008-insert-initial-note-studenti-data" author="admin">
+        <insert tableName="note_studenti">
+            <column name="student_id" value="1"/>
+            <column name="materie_id" value="1"/>
+            <column name="nota" value="9.5"/>
+        </insert>
+        <insert tableName="note_studenti">
+            <column name="student_id" value="1"/>
+            <column name="materie_id" value="2"/>
+            <column name="nota" value="8.0"/>
+        </insert>
+        <insert tableName="note_studenti">
+            <column name="student_id" value="2"/>
+            <column name="materie_id" value="1"/>
+            <column name="nota" value="7.0"/>
+        </insert>
+        <insert tableName="note_studenti">
+            <column name="student_id" value="2"/>
+            <column name="materie_id" value="3"/>
+            <column name="nota" value="8.5"/>
+        </insert>
+        <insert tableName="note_studenti">
+            <column name="student_id" value="3"/>
+            <column name="materie_id" value="2"/>
+            <column name="nota" value="9.0"/>
+        </insert>
+        <insert tableName="note_studenti">
+            <column name="student_id" value="3"/>
+            <column name="materie_id" value="4"/>
+            <column name="nota" value="7.5"/>
+        </insert>
+        <comment>Insert initial student grades data</comment>
+    </changeSet>
+
+</databaseChangeLog>
+

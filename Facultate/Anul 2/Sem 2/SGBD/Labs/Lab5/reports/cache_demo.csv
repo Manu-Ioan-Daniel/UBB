@@ -1,0 +1,11 @@
+step,action,timeMs,hits,misses
+initial,stats,0,0,0
+first_get,miss,8,0,1
+second_get,hit,0,1,1
+after_invalidate,invalidated,0,1,1
+after_invalidate_get,miss_again,3,1,2
+initial,stats,0,0,0
+first_get,miss,10,0,1
+second_get,hit,0,1,1
+after_invalidate,invalidated,0,1,1
+after_invalidate_get,miss_again,3,1,2

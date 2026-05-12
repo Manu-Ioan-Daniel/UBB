@@ -115,7 +115,7 @@ if ($last_plan === false) {
             </div>
 
             <div style="margin-top: 15px; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 8px;">
-                <label for="fisier_antrenament"><b>Atașează plan antrenament (PDF/JPG):</b></label>
+                <label for="fisier_antrenament"><b>Atasează plan antrenament (PDF/JPG):</b></label>
                 <input type="file" id="fisier_antrenament" name="fisier_antrenament">
             </div>
 

@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+    id 'application'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'org.postgresql:postgresql:42.7.3'
+    implementation 'org.hibernate.orm:hibernate-core:6.4.4.Final'
+    implementation 'com.zaxxer:HikariCP:5.1.0'
+    implementation 'org.slf4j:slf4j-api:2.0.12'
+    implementation 'ch.qos.logback:logback-classic:1.5.13'
+    implementation 'org.liquibase:liquibase-core:4.24.0'
+}
+
+javafx {
+    version = "17"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+test {
+    useJUnitPlatform()
+}
+application{
+    mainClass='main.Main'
+}
+
+tasks.named('run') {
+    standardInput = System.in
+}
+
+def liquibaseDefaultsFile = file('src/main/resources/liquibase.properties')
+
+tasks.register('liquibaseRollbackLast', JavaExec) {
+    group = 'liquibase'
+    description = 'Rollback the last Liquibase changeset using the configured liquibase.properties file.'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'liquibase.integration.commandline.Main'
+    args = ["--defaultsFile=${liquibaseDefaultsFile}", 'rollbackCount', '1']
+}
+
+tasks.register('liquibaseRollbackCount', JavaExec) {
+    group = 'liquibase'
+    description = 'Rollback N Liquibase changesets. Use -ProllbackCount=N when running the task.'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'liquibase.integration.commandline.Main'
+    def rollbackCount = project.findProperty('rollbackCount') ?: '1'
+    args = ["--defaultsFile=${liquibaseDefaultsFile}", 'rollbackCount', rollbackCount.toString()]
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="009-add-phone-column-to-profesori" author="admin">
+        <comment>Add phone column to profesori table with default value and rollback support</comment>
+
+        <addColumn tableName="profesori">
+            <column name="phone" type="VARCHAR(20)" defaultValue="N/A">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+
+        <update tableName="profesori">
+            <column name="phone" value="0721-123-4567"/>
+            <where>name = 'Prof. Andrei'</where>
+        </update>
+        <update tableName="profesori">
+            <column name="phone" value="0721-234-5678"/>
+            <where>name = 'Prof. Elena'</where>
+        </update>
+        <update tableName="profesori">
+            <column name="phone" value="0721-345-6789"/>
+            <where>name = 'Prof. Mihai'</where>
+        </update>
+        <update tableName="profesori">
+            <column name="phone" value="0721-456-7890"/>
+            <where>name = 'Prof. Ana'</where>
+        </update>
+
+        <rollback>
+            <dropColumn tableName="profesori" columnName="phone"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
+

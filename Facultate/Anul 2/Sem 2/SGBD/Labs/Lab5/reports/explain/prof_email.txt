@@ -1,0 +1,6 @@
+Index Scan using idx_profesori_email on profesori  (cost=0.29..8.30 rows=1 width=41) (actual time=0.020..0.021 rows=1.00 loops=1)
+  Index Cond: ((email)::text = 'prof500@example.com'::text)
+  Index Searches: 1
+  Buffers: shared hit=3
+Planning Time: 0.109 ms
+Execution Time: 0.034 ms
