@@ -3,7 +3,7 @@
 class Database {
     private $host = "localhost";
     private $user = "root";
-    private $pass = "1234";
+    private $pass = "";
     private $dbname = "programare_web";
 
     public function getConnNormal() {

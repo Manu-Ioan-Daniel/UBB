@@ -57,8 +57,15 @@ if (isset($_POST['delete_now'])) {
         if (file_exists($file_to_del)) {
             unlink($file_to_del);
             unset($_SESSION['last_file']);
-            echo "<p style='color:red;'>Fisierul a fost sters de pe server!</p>";
-            
+            require_once '../config/db.php';
+            /** @var PDO $pdo */
+            $stmt = $pdo->prepare("UPDATE planuri_antrenament SET cale_fisier = '' WHERE user_id = :uid AND cale_fisier = :cale");
+            $stmt->execute([
+                    'uid'  => $_SESSION['user_id'],
+                    'cale' => $file_to_del
+            ]);
+            unset($_SESSION['last_file']);
+            echo "<p style='color:red;'>Fisierul a fost sters de pe server si baza de date frate</p>";
         }
     }
 }

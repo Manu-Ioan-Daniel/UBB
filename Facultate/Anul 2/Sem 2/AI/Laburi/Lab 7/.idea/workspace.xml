@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="4a4f020e-3b2d-4326-bf4c-37c3b953c1d2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_7.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/lab_7.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/myNN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 8/sample.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 8/sample.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ISS/Iteratia 1/diagrame.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ISS/Iteratia 1/diagrame.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PW/Lab/Lab 5/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PW/Lab/Lab 5/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PW/Lab/Lab 5/backend/config/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PW/Lab/Lab 5/backend/config/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PW/Lab/Lab 5/backend/formular/procesare_formular.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PW/Lab/Lab 5/backend/formular/procesare_formular.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PW/Lab/Lab 5/js/validate_login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PW/Lab/Lab 5/js/validate_login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +78,10 @@
       <workItem from="1777273883523" duration="65000" />
       <workItem from="1777371676480" duration="818000" />
       <workItem from="1777372531041" duration="777000" />
+      <workItem from="1777973945389" duration="1786000" />
+      <workItem from="1778571772195" duration="381000" />
+      <workItem from="1778578683471" duration="1729000" />
+      <workItem from="1778581781164" duration="333000" />
     </task>
     <servers />
   </component>

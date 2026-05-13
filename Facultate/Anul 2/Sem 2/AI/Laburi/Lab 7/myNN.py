@@ -1,7 +1,6 @@
 import math
 import random
 
-
 def dot(A, B):
     rows_A, cols_A = len(A), len(A[0])
     cols_B = len(B[0])
