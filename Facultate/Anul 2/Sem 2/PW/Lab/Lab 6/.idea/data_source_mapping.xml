@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/backend/formular/procesare_formular.php" value="361c9045-ebdf-4837-a43f-a65b9714c68b" />
+    <file url="file://$PROJECT_DIR$/backend/login/check_auth.php" value="361c9045-ebdf-4837-a43f-a65b9714c68b" />
+    <file url="file://$PROJECT_DIR$/formular/formular.php" value="361c9045-ebdf-4837-a43f-a65b9714c68b" />
+  </component>
+</project>
