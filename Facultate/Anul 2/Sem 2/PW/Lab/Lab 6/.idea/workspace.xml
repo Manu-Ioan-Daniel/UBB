@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="604f5223-e33a-4392-bfe2-7044440369f8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/attack/attack.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attack/shell.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/attack/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/formular/procesare_formular.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/formular/procesare_formular.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/login/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formular/formular.php" beforeDir="false" afterPath="$PROJECT_DIR$/formular/formular.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/login.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="CopilotChats">
+    <option name="panelChat">
+      <chat>
+        <option name="activeSessionId" value="170f5ec3-466f-4b13-a2ba-f4022d65c142" />
+        <option name="sessions">
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="170f5ec3-466f-4b13-a2ba-f4022d65c142" />
+            <option name="modeId" value="Agent" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="8ef678b2-a9e6-44c1-a11e-763e946ef1cb" />
+            <option name="modeId" value="Agent" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="71719cc7-3ce7-4212-87c0-a6b07ca9bbb7" />
+            <option name="modeId" value="Agent" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+        </option>
+        <option name="type" value="PANEL" />
+      </chat>
+    </option>
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 2/Sem 2/PW/Lab/Lab 5" value="3Ca9xSoDastF1Y11p8Ls47Sjaxt" />
+    </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="agent-panel" value="Auto" />
+      <entry key="chat-panel" value="Auto" />
+    </selectedModels>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="PHP File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="D:/Apps/xampp/php" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3Ca9xSoDastF1Y11p8Ls47Sjaxt" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="LOCAL" />
+      </template>
+    </option>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 2/Sem 2/PW/Lab/Lab 5&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\PW\Lab\Lab 3\assets" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="db.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/backend/config/db.php">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PS-261.23567.149" />
+        <option value="bundled-php-predefined-a98d8de5180a-022fa7b8ab75-com.jetbrains.php.sharedIndexes-PS-261.23567.149" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="604f5223-e33a-4392-bfe2-7044440369f8" name="Changes" comment="" />
+      <created>1776613059648</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776613059648</updated>
+      <workItem from="1776613061092" duration="4099000" />
+      <workItem from="1777795235624" duration="1368000" />
+      <workItem from="1778409785483" duration="830000" />
+      <workItem from="1778411524062" duration="4225000" />
+      <workItem from="1778415776096" duration="1630000" />
+      <workItem from="1778417879439" duration="2385000" />
+      <workItem from="1778420325515" duration="2175000" />
+      <workItem from="1778438265327" duration="26000" />
+      <workItem from="1778479876236" duration="610000" />
+      <workItem from="1779009258163" duration="10121000" />
+      <workItem from="1779034915655" duration="4009000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
