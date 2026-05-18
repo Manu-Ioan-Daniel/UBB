@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="604f5223-e33a-4392-bfe2-7044440369f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/attack/attack.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attack/shell.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attack/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/formular/procesare_formular.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/formular/procesare_formular.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/login/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/formular/formular.php" beforeDir="false" afterPath="$PROJECT_DIR$/formular/formular.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/login.php" afterDir="false" />
-    </list>
+    <list default="true" id="604f5223-e33a-4392-bfe2-7044440369f8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +13,7 @@
   <component name="CopilotChats">
     <option name="panelChat">
       <chat>
-        <option name="activeSessionId" value="170f5ec3-466f-4b13-a2ba-f4022d65c142" />
+        <option name="activeSessionId" value="74565667-705e-445c-b187-39e307cd135f" />
         <option name="sessions">
           <session>
             <option name="chatType" value="PANEL" />
@@ -49,6 +40,14 @@
             <option name="modelValue" value="auto" />
             <option name="targetType" value="LOCAL" />
           </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="74565667-705e-445c-b187-39e307cd135f" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
         </option>
         <option name="type" value="PANEL" />
       </chat>
@@ -57,6 +56,7 @@
   <component name="CopilotPersistence">
     <persistenceIdMap>
       <entry key="_C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 2/Sem 2/PW/Lab/Lab 5" value="3Ca9xSoDastF1Y11p8Ls47Sjaxt" />
+      <entry key="_C:/Users/Deny/Documents/GitHub/UBB/Facultate/Anul 2/Sem 2/PW/Lab/Lab 6" value="3DrZVthYwT7mof6zF9Lu7PNd27T" />
     </persistenceIdMap>
   </component>
   <component name="CopilotUserSelectedModel">
@@ -162,6 +162,7 @@
       <workItem from="1778479876236" duration="610000" />
       <workItem from="1779009258163" duration="10121000" />
       <workItem from="1779034915655" duration="4009000" />
+      <workItem from="1779042177508" duration="19000" />
     </task>
     <servers />
   </component>
