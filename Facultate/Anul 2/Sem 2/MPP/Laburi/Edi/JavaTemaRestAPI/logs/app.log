@@ -1,0 +1,413 @@
+2026-05-21T12:39:17.071+03:00  INFO 25448 --- [JavaTemaAPI] [main] org.example.BackEndApplication           : Starting BackEndApplication using Java 17.0.17 with PID 25448 (C:\Users\Deny\Documents\GitHub\mpp-proiect-java-Manu-Ioan-Daniel\JavaTemaRestAPI\build\classes\java\main started by Deny in C:\Users\Deny\Documents\GitHub\mpp-proiect-java-Manu-Ioan-Daniel\JavaTemaRestAPI)
+2026-05-21T12:39:17.075+03:00  INFO 25448 --- [JavaTemaAPI] [main] org.example.BackEndApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-05-21T12:39:17.513+03:00  INFO 25448 --- [JavaTemaAPI] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-21T12:39:17.544+03:00  INFO 25448 --- [JavaTemaAPI] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+2026-05-21T12:39:17.810+03:00  INFO 25448 --- [JavaTemaAPI] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-21T12:39:17.817+03:00  INFO 25448 --- [JavaTemaAPI] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-21T12:39:17.817+03:00  INFO 25448 --- [JavaTemaAPI] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-05-21T12:39:17.845+03:00  INFO 25448 --- [JavaTemaAPI] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 740 ms
+2026-05-21T12:39:17.927+03:00  INFO 25448 --- [JavaTemaAPI] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-21T12:39:19.013+03:00  INFO 25448 --- [JavaTemaAPI] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-21T12:39:19.073+03:00  INFO 25448 --- [JavaTemaAPI] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-05-21T12:39:19.405+03:00  INFO 25448 --- [JavaTemaAPI] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-21T12:39:19.431+03:00  INFO 25448 --- [JavaTemaAPI] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-21T12:39:20.442+03:00  WARN 25448 --- [JavaTemaAPI] [main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 08S01
+2026-05-21T12:39:20.442+03:00  WARN 25448 --- [JavaTemaAPI] [main] org.hibernate.orm.jdbc.error             : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2026-05-21T12:39:20.443+03:00  WARN 25448 --- [JavaTemaAPI] [main] org.hibernate.orm.jdbc                   : HHH100046: Could not obtain connection to query JDBC database metadata
+
+org.hibernate.exception.JDBCConnectionException: Unable to obtain isolated JDBC connection [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:80) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.example.BackEndApplication.main(BackEndApplication.java:11) ~[main/:na]
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	... 37 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	... 50 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	... 53 common frames omitted
+
+2026-05-21T12:39:20.448+03:00 ERROR 25448 --- [JavaTemaAPI] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-05-21T12:39:20.448+03:00  WARN 25448 --- [JavaTemaAPI] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-05-21T12:39:20.449+03:00  INFO 25448 --- [JavaTemaAPI] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-21T12:39:20.453+03:00  INFO 25448 --- [JavaTemaAPI] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-21T12:39:20.463+03:00 ERROR 25448 --- [JavaTemaAPI] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.example.BackEndApplication.main(BackEndApplication.java:11) ~[main/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:273) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.6.jar:7.0.6]
+	... 15 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:190) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:86) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:200) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:452) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	... 31 common frames omitted
+
+2026-05-21T12:39:57.257+03:00  INFO 11860 --- [JavaTemaAPI] [main] org.example.BackEndApplication           : Starting BackEndApplication using Java 17.0.17 with PID 11860 (C:\Users\Deny\Documents\GitHub\mpp-proiect-java-Manu-Ioan-Daniel\JavaTemaRestAPI\build\classes\java\main started by Deny in C:\Users\Deny\Documents\GitHub\mpp-proiect-java-Manu-Ioan-Daniel\JavaTemaRestAPI)
+2026-05-21T12:39:57.258+03:00  INFO 11860 --- [JavaTemaAPI] [main] org.example.BackEndApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-05-21T12:39:57.576+03:00  INFO 11860 --- [JavaTemaAPI] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-21T12:39:57.611+03:00  INFO 11860 --- [JavaTemaAPI] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interface.
+2026-05-21T12:39:57.853+03:00  INFO 11860 --- [JavaTemaAPI] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-21T12:39:57.858+03:00  INFO 11860 --- [JavaTemaAPI] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-21T12:39:57.859+03:00  INFO 11860 --- [JavaTemaAPI] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-05-21T12:39:57.881+03:00  INFO 11860 --- [JavaTemaAPI] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 602 ms
+2026-05-21T12:39:57.947+03:00  INFO 11860 --- [JavaTemaAPI] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-21T12:39:58.036+03:00  INFO 11860 --- [JavaTemaAPI] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24a0c58b
+2026-05-21T12:39:58.037+03:00  INFO 11860 --- [JavaTemaAPI] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-21T12:39:58.050+03:00  INFO 11860 --- [JavaTemaAPI] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-21T12:39:58.080+03:00  INFO 11860 --- [JavaTemaAPI] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-05-21T12:39:58.333+03:00  INFO 11860 --- [JavaTemaAPI] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-21T12:39:58.388+03:00  WARN 11860 --- [JavaTemaAPI] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-21T12:39:58.399+03:00  INFO 11860 --- [JavaTemaAPI] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/mpp]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: mpp/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-21T12:39:58.937+03:00  INFO 11860 --- [JavaTemaAPI] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-21T12:39:58.943+03:00  INFO 11860 --- [JavaTemaAPI] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-21T12:39:58.988+03:00  INFO 11860 --- [JavaTemaAPI] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-21T12:39:59.114+03:00  WARN 11860 --- [JavaTemaAPI] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-21T12:39:59.305+03:00  INFO 11860 --- [JavaTemaAPI] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-21T12:39:59.308+03:00  INFO 11860 --- [JavaTemaAPI] [main] org.example.BackEndApplication           : Started BackEndApplication in 2.266 seconds (process running for 2.544)
+2026-05-21T12:40:06.336+03:00  INFO 11860 --- [JavaTemaAPI] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-21T12:40:06.337+03:00  INFO 11860 --- [JavaTemaAPI] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-21T12:40:06.338+03:00  INFO 11860 --- [JavaTemaAPI] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-21T12:40:32.667+03:00  INFO 11860 --- [JavaTemaAPI] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-21T12:40:32.691+03:00  INFO 11860 --- [JavaTemaAPI] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-21T12:40:32.694+03:00  INFO 11860 --- [JavaTemaAPI] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-21T12:40:32.695+03:00  INFO 11860 --- [JavaTemaAPI] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-21T12:40:32.698+03:00  INFO 11860 --- [JavaTemaAPI] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-21T12:40:35.185+03:00  INFO 9676 --- [JavaTemaAPI] [main] org.example.BackEndApplication           : Starting BackEndApplication using Java 17.0.17 with PID 9676 (C:\Users\Deny\Documents\GitHub\mpp-proiect-java-Manu-Ioan-Daniel\JavaTemaRestAPI\build\classes\java\main started by Deny in C:\Users\Deny\Documents\GitHub\mpp-proiect-java-Manu-Ioan-Daniel\JavaTemaRestAPI)
+2026-05-21T12:40:35.188+03:00  INFO 9676 --- [JavaTemaAPI] [main] org.example.BackEndApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-05-21T12:40:35.511+03:00  INFO 9676 --- [JavaTemaAPI] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-21T12:40:35.540+03:00  INFO 9676 --- [JavaTemaAPI] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
+2026-05-21T12:40:35.779+03:00  INFO 9676 --- [JavaTemaAPI] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-21T12:40:35.785+03:00  INFO 9676 --- [JavaTemaAPI] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-21T12:40:35.785+03:00  INFO 9676 --- [JavaTemaAPI] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-05-21T12:40:35.812+03:00  INFO 9676 --- [JavaTemaAPI] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 601 ms
+2026-05-21T12:40:35.881+03:00  INFO 9676 --- [JavaTemaAPI] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-21T12:40:35.967+03:00  INFO 9676 --- [JavaTemaAPI] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b768a65
+2026-05-21T12:40:35.968+03:00  INFO 9676 --- [JavaTemaAPI] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-21T12:40:35.981+03:00  INFO 9676 --- [JavaTemaAPI] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-21T12:40:36.016+03:00  INFO 9676 --- [JavaTemaAPI] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-05-21T12:40:36.273+03:00  INFO 9676 --- [JavaTemaAPI] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-21T12:40:36.320+03:00  WARN 9676 --- [JavaTemaAPI] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-21T12:40:36.329+03:00  INFO 9676 --- [JavaTemaAPI] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/mpp]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: mpp/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-21T12:40:36.749+03:00  INFO 9676 --- [JavaTemaAPI] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-21T12:40:36.755+03:00  INFO 9676 --- [JavaTemaAPI] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-21T12:40:36.791+03:00  INFO 9676 --- [JavaTemaAPI] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-21T12:40:36.889+03:00  WARN 9676 --- [JavaTemaAPI] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-21T12:40:37.043+03:00  INFO 9676 --- [JavaTemaAPI] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-21T12:40:37.045+03:00  INFO 9676 --- [JavaTemaAPI] [main] org.example.BackEndApplication           : Started BackEndApplication in 2.099 seconds (process running for 2.397)
+2026-05-21T12:40:39.645+03:00  INFO 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-21T12:40:39.646+03:00  INFO 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-21T12:40:39.646+03:00  INFO 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-05-21T12:40:39.753+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:40:39.880+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-2] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:40:45.701+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-4] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:48.363+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-3] org.hibernate.SQL                        : select count(*) from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:48.365+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-3] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:48.374+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-3] org.hibernate.SQL                        : delete from rides where id=?
+2026-05-21T12:40:50.230+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-6] org.hibernate.SQL                        : select count(*) from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:50.231+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-6] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:50.232+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-6] org.hibernate.SQL                        : delete from rides where id=?
+2026-05-21T12:40:51.741+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-8] org.hibernate.SQL                        : select count(*) from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:51.742+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-8] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:51.743+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-8] org.hibernate.SQL                        : delete from rides where id=?
+2026-05-21T12:40:53.017+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] org.hibernate.SQL                        : select count(*) from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:53.018+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:53.019+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] org.hibernate.SQL                        : delete from rides where id=?
+2026-05-21T12:40:54.635+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : select count(*) from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:54.636+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:54.637+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : delete from rides where id=?
+2026-05-21T12:40:55.899+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-3] org.hibernate.SQL                        : select count(*) from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:55.900+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-3] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:55.901+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-3] org.hibernate.SQL                        : delete from rides where id=?
+2026-05-21T12:40:57.922+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-6] org.hibernate.SQL                        : select count(*) from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:57.923+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-6] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:57.924+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-6] org.hibernate.SQL                        : delete from rides where id=?
+2026-05-21T12:40:59.307+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-8] org.hibernate.SQL                        : select count(*) from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:59.308+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-8] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0 where r1_0.id=?
+2026-05-21T12:40:59.309+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-8] org.hibernate.SQL                        : delete from rides where id=?
+2026-05-21T12:41:00.386+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] org.hibernate.SQL                        : select count(*) from rides r1_0 where r1_0.id=?
+2026-05-21T12:41:00.387+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0 where r1_0.id=?
+2026-05-21T12:41:00.388+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] org.hibernate.SQL                        : delete from rides where id=?
+2026-05-21T12:41:02.746+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : select count(*) from rides r1_0 where r1_0.id=?
+2026-05-21T12:41:02.747+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0 where r1_0.id=?
+2026-05-21T12:41:02.748+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : delete from rides where id=?
+2026-05-21T12:41:07.073+03:00 ERROR 9676 --- [JavaTemaAPI] [http-nio-8080-exec-3] o.e.exceptions.GlobalExceptionHandler    : JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String "123213": Failed to deserialize `java.time.LocalDate` (with format 'Value(Year,4,10,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2)'): (java.time.format.DateTimeParseException) Text '123213' could not be parsed at index 0
+
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String "123213": Failed to deserialize `java.time.LocalDate` (with format 'Value(Year,4,10,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2)'): (java.time.format.DateTimeParseException) Text '123213' could not be parsed at index 0
+	at org.springframework.http.converter.AbstractJacksonHttpMessageConverter.readJavaType(AbstractJacksonHttpMessageConverter.java:363) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.http.converter.AbstractJacksonHttpMessageConverter.read(AbstractJacksonHttpMessageConverter.java:319) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:203) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:181) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:156) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.20.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.20.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: tools.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String "123213": Failed to deserialize `java.time.LocalDate` (with format 'Value(Year,4,10,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2)'): (java.time.format.DateTimeParseException) Text '123213' could not be parsed at index 0
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #34] (through reference chain: org.example.dtos.RideRequest["rideDate"])
+	at tools.jackson.databind.exc.InvalidFormatException.from(InvalidFormatException.java:37) ~[jackson-databind-3.1.0.jar:3.1.0]
+	at tools.jackson.databind.DeserializationContext.weirdStringException(DeserializationContext.java:2063) ~[jackson-databind-3.1.0.jar:3.1.0]
+	at tools.jackson.databind.DeserializationContext.handleWeirdStringValue(DeserializationContext.java:1354) ~[jackson-databind-3.1.0.jar:3.1.0]
+	at tools.jackson.databind.ext.javatime.deser.JSR310DeserializerBase._handleDateTimeFormatException(JSR310DeserializerBase.java:179) ~[jackson-databind-3.1.0.jar:3.1.0]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateDeserializer._fromString(LocalDateDeserializer.java:197) ~[jackson-databind-3.1.0.jar:3.1.0]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateDeserializer.deserialize(LocalDateDeserializer.java:87) ~[jackson-databind-3.1.0.jar:3.1.0]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateDeserializer.deserialize(LocalDateDeserializer.java:41) ~[jackson-databind-3.1.0.jar:3.1.0]
+	at tools.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:120) ~[jackson-databind-3.1.0.jar:3.1.0]
+	at tools.jackson.databind.deser.bean.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:652) ~[jackson-databind-3.1.0.jar:3.1.0]
+	at tools.jackson.databind.deser.bean.BeanDeserializer.deserialize(BeanDeserializer.java:200) ~[jackson-databind-3.1.0.jar:3.1.0]
+	at tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:266) ~[jackson-databind-3.1.0.jar:3.1.0]
+	at tools.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:1888) ~[jackson-databind-3.1.0.jar:3.1.0]
+	at tools.jackson.databind.ObjectReader.readValue(ObjectReader.java:1270) ~[jackson-databind-3.1.0.jar:3.1.0]
+	at org.springframework.http.converter.AbstractJacksonHttpMessageConverter.readJavaType(AbstractJacksonHttpMessageConverter.java:352) ~[spring-web-7.0.6.jar:7.0.6]
+	... 46 common frames omitted
+Caused by: java.time.format.DateTimeParseException: Text '123213' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052) ~[na:na]
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954) ~[na:na]
+	at java.base/java.time.LocalDate.parse(LocalDate.java:430) ~[na:na]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateDeserializer._fromString(LocalDateDeserializer.java:195) ~[jackson-databind-3.1.0.jar:3.1.0]
+	... 55 common frames omitted
+
+2026-05-21T12:41:27.267+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-10] org.hibernate.SQL                        : insert into rides (available_seats,departure_time,destination,date) values (?,?,?,?)
+2026-05-21T12:41:32.438+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-6] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:41:32.442+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-9] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:41:36.819+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-8] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:42:08.774+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-7] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:42:08.779+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:42:11.000+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : select count(*) from rides r1_0 where r1_0.id=?
+2026-05-21T12:42:11.001+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0 where r1_0.id=?
+2026-05-21T12:42:11.002+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : delete from rides where id=?
+2026-05-21T12:42:12.468+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-4] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:42:12.473+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-3] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:42:19.102+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-10] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:42:19.106+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-6] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:42:20.394+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-9] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:42:20.397+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-8] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:42:22.006+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-7] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:42:22.010+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:42:50.594+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-2] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:42:51.972+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:42:51.975+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-4] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:43:09.543+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-3] org.hibernate.SQL                        : insert into rides (available_seats,departure_time,destination,date) values (?,?,?,?)
+2026-05-21T12:43:10.680+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-10] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:43:10.684+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-6] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:43:27.046+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-9] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:43:27.049+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-8] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:43:31.513+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-7] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:43:31.517+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:50:40.321+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:50:40.325+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-4] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:56:37.109+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-10] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:56:37.113+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-6] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:56:54.765+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-9] org.hibernate.SQL                        : insert into rides (available_seats,departure_time,destination,date) values (?,?,?,?)
+2026-05-21T12:56:57.065+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-8] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:56:57.070+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-7] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:02.225+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-2] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0 where r1_0.id=?
+2026-05-21T12:57:08.589+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : select count(*) from rides r1_0 where r1_0.id=?
+2026-05-21T12:57:08.590+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0 where r1_0.id=?
+2026-05-21T12:57:08.591+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : delete from rides where id=?
+2026-05-21T12:57:11.177+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-4] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:11.181+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-3] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:16.003+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-10] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:17.360+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-6] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:17.363+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-9] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:21.245+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-8] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:26.825+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-7] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:26.829+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:30.984+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-2] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:31.706+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-5] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:34.396+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-4] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:36.703+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-3] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:36.707+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-10] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:39.427+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-6] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:41.789+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-9] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:41.792+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-8] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:43.955+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-7] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:43.958+03:00 DEBUG 9676 --- [JavaTemaAPI] [http-nio-8080-exec-1] org.hibernate.SQL                        : select r1_0.id,r1_0.available_seats,r1_0.departure_time,r1_0.destination,r1_0.date from rides r1_0
+2026-05-21T12:57:54.126+03:00  INFO 9676 --- [JavaTemaAPI] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-21T12:57:54.152+03:00  INFO 9676 --- [JavaTemaAPI] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-21T12:57:54.154+03:00  INFO 9676 --- [JavaTemaAPI] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-21T12:57:54.155+03:00  INFO 9676 --- [JavaTemaAPI] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-21T12:57:54.160+03:00  INFO 9676 --- [JavaTemaAPI] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
