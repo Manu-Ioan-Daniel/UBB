@@ -1,0 +1,15 @@
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\bin\Debug\net10.0\CSharpTestAPI.exe
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\bin\Debug\net10.0\CSharpTestAPI.deps.json
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\bin\Debug\net10.0\CSharpTestAPI.runtimeconfig.json
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\bin\Debug\net10.0\CSharpTestAPI.dll
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\bin\Debug\net10.0\CSharpTestAPI.pdb
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\obj\Debug\net10.0\CSharpTestAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\obj\Debug\net10.0\CSharpTestAPI.AssemblyInfoInputs.cache
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\obj\Debug\net10.0\CSharpTestAPI.AssemblyInfo.cs
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\obj\Debug\net10.0\CSharpTestAPI.csproj.CoreCompileInputs.cache
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\obj\Debug\net10.0\CSharpTestAPI.sourcelink.json
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\obj\Debug\net10.0\CSharpTestAPI.dll
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\obj\Debug\net10.0\refint\CSharpTestAPI.dll
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\obj\Debug\net10.0\CSharpTestAPI.pdb
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\obj\Debug\net10.0\CSharpTestAPI.genruntimeconfig.cache
+C:\Users\Deny\Documents\GitHub\mpp-proiect-csharp-Manu-Ioan-Daniel\CSharpTestAPI\CSharpTestAPI\obj\Debug\net10.0\ref\CSharpTestAPI.dll
