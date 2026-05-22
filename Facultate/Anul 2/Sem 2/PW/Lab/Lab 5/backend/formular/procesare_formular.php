@@ -18,11 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nume'])) {
 
     if (isset($_FILES['fisier_antrenament']) && $_FILES['fisier_antrenament']['error'] === UPLOAD_ERR_OK) {
         $file_name = time() . "_" . basename($_FILES["fisier_antrenament"]["name"]);
-//        $file_ext = strtolower(pathinfo($_FILES['fisier_antrenament']['name'], PATHINFO_EXTENSION));
-//
-//        if (!in_array($file_ext, $allowed_extensions)) {
-//            die("Fisier nepermis!");
-//        }
+        $file_ext = strtolower(pathinfo($_FILES['fisier_antrenament']['name'], PATHINFO_EXTENSION));
+
+        if (!in_array($file_ext, $allowed_extensions)) {
+            die("Fisier nepermis!");
+        }
         $target_path = $target_dir . $file_name;
 
         if (move_uploaded_file($_FILES["fisier_antrenament"]["tmp_name"], $target_path)) {
