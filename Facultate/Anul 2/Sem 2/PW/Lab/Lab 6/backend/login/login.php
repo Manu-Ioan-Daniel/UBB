@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($username) && !empty($password)) {
 
         //$sql = "SELECT * FROM users WHERE username = ?";
+        //username = 'OR  #
         $sql = "SELECT * FROM users WHERE username = '$username'";
         $stmt = $conn->prepare($sql);
         //$stmt->bind_param("s", $username);
