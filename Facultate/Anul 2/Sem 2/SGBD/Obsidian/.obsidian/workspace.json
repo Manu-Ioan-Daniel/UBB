@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Subiecte practic.md",
+                "file": "Subiecte rezolvate teoretic.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Subiecte practic"
+              "title": "Subiecte rezolvate teoretic"
             }
           }
         ]
@@ -201,8 +201,21 @@
   },
   "active": "ee09d111c24c8012",
   "lastOpenFiles": [
-    "Subiecte rezolvate teoretic.md",
     "Subiecte practic.md",
+    "files/IMG-20250710-WA0001.jpg",
+    "files/IMG-20250710-WA0002.jpg",
+    "files/IMG-20250710-WA0007.jpg",
+    "files/SUB_3_2023.pdf",
+    "files/SUB_2_2023.png",
+    "files/SUB_1_2023.png",
+    "files/SGBD - Examen 2025.pdf",
+    "Subiecte rezolvate teoretic.md",
+    "files/SUB_5_2023.pdf",
+    "files/IMG-20250710-WA0010.jpg",
+    "files/IMG-20250710-WA0009.jpg",
+    "files/IMG-20250710-WA0008.jpg",
+    "files/IMG-20250710-WA0006.jpg",
+    "files/IMG-20250710-WA0005.jpg",
     "files/21.mp4",
     "files/19.mp4",
     "Clipuri.md",
@@ -211,9 +224,6 @@
     "files/Cursuri - SGBD.pdf",
     "files/32.mkv",
     "files/31.mkv",
-    "files/30.webm",
-    "files/29.mkv",
-    "files/28.webm",
-    "files/27.mkv"
+    "files/30.webm"
   ]
 }
