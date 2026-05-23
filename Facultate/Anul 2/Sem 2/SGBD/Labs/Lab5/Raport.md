@@ -240,14 +240,7 @@ Am inclus toate migrarile in fisierul `db.changelog-master.xml`
 ```
 
 
-### Extensiile Posibile
 
-Migrarile viitoare pot include:
-- Adaugare coloane pentru soft delete (deleted_at)
-- Adaugare coloane de versiune pentru optimistic locking (version)
-- Crearea de indecsi pentru optimizare query-uri
-- Adaugare de constrangeri suplimentare (CHECK constraints)
-- Crearea de view-uri materializate pentru rapoarte
 
 
 

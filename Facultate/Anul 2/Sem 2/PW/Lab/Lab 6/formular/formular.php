@@ -1,7 +1,7 @@
 <?php
 require_once '../backend/login/check_auth.php';
 check_auth();
-if ($_SESSION["role"] != "ADMIN") {
+if ($_SESSION["role"] != "admin") {
     header("Location: ../home/home.php");
     exit();
 }

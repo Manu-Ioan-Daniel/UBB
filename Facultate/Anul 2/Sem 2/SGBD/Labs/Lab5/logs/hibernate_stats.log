@@ -11,3 +11,11 @@
 [2026-05-12T16:31:00.4481407] OptimisticLockConflict: professorId=1, error=jakarta.persistence.OptimisticLockException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [models.Professor#1]
 [2026-05-12T16:49:43.5637255] OptimisticLockConflict: professorId=1, error=jakarta.persistence.OptimisticLockException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [models.Professor#1]
 [2026-05-12T16:52:23.7632923] OptimisticLockConflict: professorId=1, error=jakarta.persistence.OptimisticLockException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [models.Professor#1]
+[2026-05-13T16:30:53.6174159] Liquibase: Migration/init failed: Failed to execute Liquibase migrations
+[2026-05-13T16:31:08.6154145] OptimisticLockDemo: Demo failed: Failed to initialize pool: FATAL: database "sgbd_lab" does not exist
+[2026-05-13T16:31:13.7934184] ApplicationStart: Unexpected error in start(): com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: FATAL: database "sgbd_lab" does not exist
+[2026-05-13T16:32:05.9174153] OptimisticLockConflict: professorId=1, error=jakarta.persistence.OptimisticLockException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [models.Professor#1]
+[2026-05-13T16:34:14.6134233] OptimisticLockConflict: professorId=1, error=jakarta.persistence.OptimisticLockException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [models.Professor#1]
+[2026-05-13T16:34:33.639416] OptimisticLockForceUpdate: Forced update applied for professorId=1
+[2026-05-13T17:25:13.1178742] OptimisticLockConflict: professorId=1, error=jakarta.persistence.OptimisticLockException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [models.Professor#1]
+[2026-05-13T17:25:24.4848812] OptimisticLockForceUpdate: Forced update applied for professorId=1

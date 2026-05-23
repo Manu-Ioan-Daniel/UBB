@@ -19,10 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!empty($username) && !empty($password)) {
 
-        //$sql = "SELECT * FROM users WHERE username = ?";
-        $sql = "SELECT * FROM users WHERE username = '$username'";
+        $sql = "SELECT * FROM users WHERE username = ?";
         $stmt = $conn->prepare($sql);
-        //$stmt->bind_param("s", $username);
+        $stmt->bind_param("s", $username);
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -34,13 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['role'] = $user['role'];
                 if (isset($_POST['remember'])) {
-                    //setcookie("user_login", $user['username'], time() + (86400 * 30), "/");
-                    //pentru attack csrf
-                    setcookie("user_login", $user['username'], [
-                        'expires' => time() + 86400,
-                        'samesite' => 'None',
-                        'secure' => false
-                    ]);
+                    setcookie("user_login", $user['username'], time() + (86400 * 30), "/");
+
                 }
                 header("Location: ../dashboard/dashboard.php");
                 exit();

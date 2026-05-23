@@ -1,12 +1,12 @@
-Limit  (cost=1.06..1.06 rows=1 width=1333) (actual time=0.010..0.011 rows=0.00 loops=1)
+Limit  (cost=1.06..1.06 rows=1 width=1333) (actual time=0.076..0.078 rows=0.00 loops=1)
   Buffers: shared hit=1
-  ->  Sort  (cost=1.06..1.06 rows=1 width=1333) (actual time=0.010..0.010 rows=0.00 loops=1)
+  ->  Sort  (cost=1.06..1.06 rows=1 width=1333) (actual time=0.074..0.075 rows=0.00 loops=1)
         Sort Key: id
         Sort Method: quicksort  Memory: 25kB
         Buffers: shared hit=1
-        ->  Seq Scan on profesori  (cost=0.00..1.05 rows=1 width=1333) (actual time=0.009..0.009 rows=0.00 loops=1)
-              Filter: ((NOT is_deleted) AND (materie_id = 4))
+        ->  Seq Scan on profesori  (cost=0.00..1.05 rows=1 width=1333) (actual time=0.059..0.060 rows=0.00 loops=1)
+              Filter: ((NOT is_deleted) AND (materie_id = 3))
               Rows Removed by Filter: 3
               Buffers: shared hit=1
-Planning Time: 0.109 ms
-Execution Time: 0.020 ms
+Planning Time: 0.446 ms
+Execution Time: 0.162 ms

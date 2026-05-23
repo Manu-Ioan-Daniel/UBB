@@ -16,7 +16,7 @@ $(function () {
 		clearField($password);
 
 		if ($username.val().trim().length < 3) setFieldInvalid($username);
-		if ($password.val().trim().length < 6) setFieldInvalid($password);
+		if ($password.val().trim().length < 4) setFieldInvalid($password);
 		if ($form.find(".input-invalid").length) {
 			e.preventDefault();
 		}

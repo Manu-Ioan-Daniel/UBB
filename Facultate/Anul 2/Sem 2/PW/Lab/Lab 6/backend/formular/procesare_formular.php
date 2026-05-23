@@ -3,7 +3,6 @@ require_once '../login/check_auth.php';
 check_auth();
 
 $allowed_extensions = ['jpg', 'jpeg', 'png', 'pdf'];
-$allowed_mimes = ['image/jpeg', 'image/png', 'application/pdf'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nume'])) {
 

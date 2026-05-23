@@ -16,6 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = isset($_POST['password']) ? $_POST['password'] : '';
 
     echo "Salut: " .$username;
+    //FIX:
+    //echo "Salut: " . htmlspecialchars($username, ENT_QUOTES, 'UTF-8');
 
     if (!empty($username) && !empty($password)) {
 
@@ -49,8 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Parola gresita";
             }
         } else {
-            header("Location: ../../login/login.php");
-
+            header("Location: ../../programe/programe.php");
+            exit();
         }
     } else {
         echo "Te rugam sa completezi ambele campuri.";
