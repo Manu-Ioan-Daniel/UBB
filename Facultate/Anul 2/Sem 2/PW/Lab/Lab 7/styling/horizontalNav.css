@@ -1,0 +1,40 @@
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.menu li {
+    position: relative;
+}
+
+section, footer {
+    padding: 20px;
+}
+
+header {
+    padding: 20px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 150px;
+    z-index: 999;
+}
+
+.menu li:hover .dropdown {
+    display: block;
+}

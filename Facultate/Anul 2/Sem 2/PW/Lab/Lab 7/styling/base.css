@@ -1,0 +1,457 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+section {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+}
+
+h2::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #333;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+#logo {
+    width: 32px;
+    height: 32px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 1px;
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding:5px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #111111;
+}
+
+fieldset div {
+    margin-bottom: 10px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    display: block;
+    width: 90%;
+    max-width:650px;
+    text-align: left;
+    margin: auto;
+}
+
+legend {
+    padding: 0 8px;
+    color: #333;
+}
+
+label {
+    display: inline-block;
+    width: 160px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+    padding: 6px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+input.input-invalid,
+select.input-invalid,
+textarea.input-invalid {
+    border-color: #c62828;
+    outline: 2px solid rgba(198, 40, 40, 0.2);
+    background-color: #fff5f5;
+}
+
+.field-hint {
+    display: block;
+    margin-top: 6px;
+    color: #666;
+    font-size: 12px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+input[type="radio"]:checked {
+    background-color: #333;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    width: auto;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+}
+
+
+input[type="submit"]:hover {
+    background-color: #111;
+}
+
+label[for="program"],
+label[for="descriere"] {
+    vertical-align: top;
+}
+
+
+:root {
+    --culoare-primara: #333;
+    --culoare-accent: #555;
+    --culoare-header: #333;
+    --culoare-text-header: #ffffff;
+    --border-tabel: #ddd;
+}
+
+.table-container{
+    overflow-x:auto;
+    width:100%;
+}
+
+.pagination-controls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.pagination-controls-server {
+    align-items: center;
+}
+
+.pagination-form {
+    margin: 0;
+}
+
+.pagination-status-server,
+.pagination-error {
+    margin: 8px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.pagination-error {
+    color: #a00;
+}
+
+.edit-entity-form fieldset {
+    max-width: 480px;
+}
+
+.edit-form-actions {
+    margin-top: 16px;
+}
+
+.edit-form-actions button {
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid var(--culoare-primara);
+    background-color: white;
+}
+
+.edit-form-actions button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.edit-form-actions button:not(:disabled):hover {
+    background-color: var(--culoare-accent);
+    color: white;
+}
+
+.edit-message {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #555;
+}
+
+.edit-message-error {
+    color: #a00;
+}
+
+.pagination-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-controls button:not(:disabled) {
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--culoare-primara);
+    background-color: white;
+}
+
+.pagination-controls button:not(:disabled):hover {
+    background-color: var(--culoare-accent);
+    color: white;
+}
+
+#pagination-status {
+    margin: 8px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50vw;
+    margin: 20px auto;
+    min-width:300px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th {
+    background-color: var(--culoare-header);
+    color: var(--culoare-text-header);
+    padding: 12px 16px;
+    text-align: center;
+}
+
+td {
+    padding: 10px 16px;
+    border: 1px solid var(--border-tabel);
+    text-align:center;
+}
+
+td:hover{
+    background-color: var(--culoare-accent);
+    color: white;
+}
+
+ol, ul {
+    text-align: left;
+    display: inline-block;
+}
+
+ol li, ul li {
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+ul li::before {
+    content: "▸ ";
+    color: var(--culoare-primara);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu li a::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/css_sprites.png'); /*iconite de 512x512 fiecare, imaginea are 1024x1024,vrem 20x20 iconite deci 512/20 = 25.6, 1024/25.6 = 41.5 */
+    background-size: 42px 42px;
+    margin-right: 6px;
+    vertical-align: middle;
+    filter:invert(1);
+
+}
+
+.menu li:nth-child(1) a::before {
+    background-position: 0 0;
+}
+
+.menu li:nth-child(2) a::before {
+    background-position: -21px 0;
+}
+
+.menu li:nth-child(3) a::before {
+    background-position: 0 -21px;
+}
+
+.menu li:nth-child(4) a::before {
+    background-position: -21px -21px;
+}
+
+.carduri {
+    display: flex;
+    gap: 20px;
+    padding:10px;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding:30px 20px;
+    width: 30%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    color: var(--culoare-primara);
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#slide-image {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+.slider-button{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border: 2px solid black;
+    font-size:20px;
+    margin: 0 150px;
+}
+
+th.sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+th.sortable:hover {
+    background-color: #ddd;
+}
+
+th.sorted {
+    background-color: #aac4e0;
+    font-weight: bold;
+}
+
+td.sorted-col {
+    background-color: #eef4fb;
+}
+
+ol.collapsible li > ol {
+    display: none;
+}
+
+ol.collapsible > li {
+    cursor: pointer;
+    list-style: none;
+}
+
+ol.collapsible > li::before {
+    content: "▶ ";
+    font-size: 0.8em;
+}
+
+ol.collapsible > li.open::before {
+    content: "▼ ";
+}
+
+#quiz-container {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.quiz-option {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background: white;
+    font-size: 1em;
+    transition: background 0.2s;
+}
+
+.quiz-option:hover:not(:disabled) {
+    background: #f0f0f0;
+}
+
+.quiz-option.correct {
+    background: #c8f7c5;
+    border-color: green;
+}
+
+.quiz-option.wrong {
+    background: #f7c5c5;
+    border-color: red;
+}

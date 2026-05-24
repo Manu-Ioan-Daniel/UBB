@@ -1,0 +1,70 @@
+@media (max-width: 900px) {
+    fieldset {
+        width: 95%;
+    }
+
+    label {
+        width: 130px;
+    }
+    .card{
+        width:200px;
+    }
+}
+
+@media (max-width: 600px) {
+    fieldset {
+        width: 100%;
+    }
+
+    label {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    select {
+        width: 100%;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    td, th {
+        padding: 4px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+    .carduri{
+        gap:10px;
+        padding:5px;
+    }
+    .card{
+        padding:5px 5px;
+        width:110px;
+    }
+
+    .card h3{
+        font-size: 12px;
+    }
+
+     .card p{
+        font-size: 12px;
+    }
+}
+
+

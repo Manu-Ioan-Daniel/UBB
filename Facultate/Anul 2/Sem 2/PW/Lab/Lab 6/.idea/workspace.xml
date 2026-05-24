@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="604f5223-e33a-4392-bfe2-7044440369f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/login/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Obsidian/.obsidian/workspace.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Obsidian/.obsidian/workspace.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Obsidian/Subiecte practic.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Obsidian/Subiecte practic.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,6 +168,7 @@
       <workItem from="1779042177508" duration="19000" />
       <workItem from="1779532136933" duration="343000" />
       <workItem from="1779532570718" duration="128000" />
+      <workItem from="1779628420823" duration="63000" />
     </task>
     <servers />
   </component>
