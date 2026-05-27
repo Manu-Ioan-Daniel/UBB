@@ -53,3 +53,4 @@ Daca in plus, planul de tranzactii este serializat, atunci este conflict seriali
 ![[Pasted image 20260524210224.png]]
 
 
+![[Pasted image 20260526194158.png]]![[Pasted image 20260526201253.png]]

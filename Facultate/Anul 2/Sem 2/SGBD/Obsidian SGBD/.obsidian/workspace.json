@@ -6,6 +6,7 @@
       {
         "id": "c518670021b27a14",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "ee09d111c24c8012",
@@ -13,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clipuri.md",
+                "file": "Teorie.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Clipuri"
+              "title": "Teorie"
             }
           },
           {
@@ -40,6 +41,7 @@
       {
         "id": "15a1e51a4109d29d",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "156b8f3751196502",
@@ -215,10 +217,13 @@
   },
   "active": "ee09d111c24c8012",
   "lastOpenFiles": [
-    "Teorie.md",
     "Clipuri.md",
+    "Cursuri.md",
     "Subiecte rezolvate teoretic.md",
     "Subiecte practic.md",
+    "Teorie.md",
+    "files/Pasted image 20260526201253.png",
+    "files/Pasted image 20260526194158.png",
     "files/Pasted image 20260524204540.png",
     "files/Pasted image 20260524210224.png",
     "files/Pasted image 20260524205640.png",
@@ -227,10 +232,7 @@
     "files/Pasted image 20260524203903.png",
     "files/Pasted image 20260524201930.png",
     "files/Pasted image 20260524201608.png",
-    "files/Pasted image 20260524201419.png",
     "Untitled",
-    "Cursuri.md",
-    "files/IMG-20250710-WA0001.jpg",
     "files/SUB_3_2023.pdf",
     "files/SGBD - Examen 2025.pdf",
     "files/SUB_5_2023.pdf",
