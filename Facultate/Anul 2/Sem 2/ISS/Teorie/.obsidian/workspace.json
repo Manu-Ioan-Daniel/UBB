@@ -1,64 +1,45 @@
 {
   "main": {
-    "id": "295ee1596180cfa9",
+    "id": "ad6d6914913af1ea",
     "type": "split",
     "children": [
       {
-        "id": "c518670021b27a14",
+        "id": "11a30df1fd4ef550",
         "type": "tabs",
-        "dimension": 49.18341708542712,
         "children": [
           {
-            "id": "ee09d111c24c8012",
+            "id": "ddda95eb7576c86d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Clipuri.md",
-                "mode": "source",
-                "source": false
+                "file": "files/Pasted image 20260601224725.png"
               },
-              "icon": "lucide-file",
-              "title": "Clipuri"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260601224725"
             }
           },
           {
-            "id": "0efd5d7ccf33bacd",
+            "id": "13a18437b105f623",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Subiecte practic.md",
-                "mode": "source",
-                "source": false
+                "file": "files/Pasted image 20260602001257.png"
               },
-              "icon": "lucide-file",
-              "title": "Subiecte practic"
-            }
-          },
-          {
-            "id": "c3432033edf7aeec",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cursuri.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Cursuri"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260602001257"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
-        "id": "15a1e51a4109d29d",
+        "id": "76c679924268c5a2",
         "type": "tabs",
-        "dimension": 50.81658291457288,
         "children": [
           {
-            "id": "156b8f3751196502",
+            "id": "e7854591c5bdaa58",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -73,15 +54,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "23502fec0f41f2e7",
+    "id": "77d3fe9b4be1bb5d",
     "type": "split",
     "children": [
       {
-        "id": "ad0cca87191870b1",
+        "id": "4f3d6894b51f3eed",
         "type": "tabs",
         "children": [
           {
-            "id": "2751a4ba71e53d03",
+            "id": "5821c57ab2ab1a62",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -94,7 +75,7 @@
             }
           },
           {
-            "id": "d97ef1e7fe921ede",
+            "id": "76e47554f43a4ad7",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -111,7 +92,7 @@
             }
           },
           {
-            "id": "c4a9988a6fbad7ac",
+            "id": "f10740203942f323",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -127,20 +108,20 @@
     "width": 300
   },
   "right": {
-    "id": "e187ec8f1886e2bd",
+    "id": "135ee8da40af1904",
     "type": "split",
     "children": [
       {
-        "id": "ac9a2c2c302c875b",
+        "id": "79de7aca4ee27bc1",
         "type": "tabs",
         "children": [
           {
-            "id": "4c44044626533ba0",
+            "id": "491072a5c08746de",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Subiecte rezolvate.md",
+                "file": "files/Pasted image 20260602001257.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,25 +131,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Subiecte rezolvate"
+              "title": "Backlinks for Pasted image 20260602001257"
             }
           },
           {
-            "id": "6c568416648fb597",
+            "id": "2527c67fa0d2556f",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Subiecte rezolvate.md",
+                "file": "files/Pasted image 20260602001257.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Subiecte rezolvate"
+              "title": "Outgoing links from Pasted image 20260602001257"
             }
           },
           {
-            "id": "183a72422d812555",
+            "id": "9607b5f8a6752472",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -183,7 +164,7 @@
             }
           },
           {
-            "id": "c3b8c31deaae1eef",
+            "id": "92ea2de659245104",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -197,18 +178,18 @@
             }
           },
           {
-            "id": "de335d995b4e78b9",
+            "id": "b60836ce7b8d0ffa",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Subiecte rezolvate.md",
+                "file": "files/Pasted image 20260602001257.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Subiecte rezolvate"
+              "title": "Outline of Pasted image 20260602001257"
             }
           }
         ]
@@ -229,33 +210,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "ee09d111c24c8012",
+  "active": "5821c57ab2ab1a62",
   "lastOpenFiles": [
-    "Pasted image 20260529080429.png",
-    "Pasted image 20260529080348.png",
-    "Subiecte practic.md",
-    "Cursuri.md",
-    "Clipuri.md",
-    "Seminare/Seminar 6 (ro).pdf",
-    "Teorie.md",
-    "Seminare/Seminar 2 (ro).pdf",
-    "Subiecte rezolvate teoretic.md",
-    "files/Pasted image 20260528131131.png",
-    "Seminare/Seminar 5 (ro).pdf",
-    "Seminare/Seminar 4 (ro).pdf",
-    "Seminare/Seminar 3 (ro).pdf",
-    "Seminare/Seminar 1 (ro).pdf",
-    "Seminare/Seminar 5 (ro).pptx",
-    "Seminare",
-    "files/Pasted image 20260526201253.png",
-    "files/Pasted image 20260526194158.png",
-    "files/Pasted image 20260524204540.png",
-    "files/Pasted image 20260524210224.png",
-    "files/Pasted image 20260524205640.png",
-    "files/Pasted image 20260524204510.png",
-    "files/Pasted image 20260524204236.png",
-    "files/Pasted image 20260524203903.png",
-    "files/SUB_3_2023.pdf",
-    "files/SGBD - Examen 2025.pdf"
+    "ce pica la examen.md",
+    "Cursuri/5. Curs 5 - esentiale.md",
+    "files/Pasted image 20260602001257.png",
+    "Cursuri/2. Curs 2 - esentiale.md",
+    "Cursuri/3. Curs 3 - esentiale.md",
+    "Cursuri/4. Curs 4 - esentiale.md",
+    "files/Pasted image 20260602000059.png",
+    "files/Pasted image 20260601235439.png",
+    "files/Use case template.pdf",
+    "files/Pasted image 20260601234900.png",
+    "files/Pasted image 20260601234811.png",
+    "files/Pasted image 20260601234721.png",
+    "Cursuri/1. Curs 1 - esentiale.md",
+    "files/Pasted image 20260601225104.png",
+    "files/Pasted image 20260601233934.png",
+    "files/Pasted image 20260601233717.png",
+    "files/Pasted image 20260601233336.png",
+    "Cursuri",
+    "files",
+    "Welcome.md"
   ]
 }
