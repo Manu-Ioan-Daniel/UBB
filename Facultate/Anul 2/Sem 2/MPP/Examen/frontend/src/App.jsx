@@ -13,6 +13,8 @@ function App() {
     const [porecla, setPorecla] = useState("");
     const [gameStatus, setGameStatus] = useState("not_ready");
     const [loginMessage, setLoginMessage] = useState(null);
+    const [configs, setConfigs] = useState([]);
+    const [poreclaAleasa, setPoreclaAleasa] = useState("");
 
     const handleConnected = (socket, nume) => {
         setPorecla(nume);
@@ -38,9 +40,16 @@ function App() {
             if(msg.type === "SUCCES"){
                 setLoginMessage(null);
                 setIsConnected(true);
+
             }
             if (msg.type === "STATUS") {
                 setGameStatus(msg.payload);
+            }
+
+            if(msg.type === "CONFIG"){
+                const msgPayload = JSON.parse(msg.payload);
+                setConfigs(msgPayload.configurations);
+                setPoreclaAleasa(msgPayload.porecla);
             }
         };
 
@@ -53,7 +62,7 @@ function App() {
             <main className="flex-1 container mx-auto px-4 py-8">
                 {!isConnected
                     ? <LoginPage onConnected={handleConnected} loginMessage = {loginMessage} />
-                    : <GamePage ws={globalSocket} porecla={porecla} gameStatus={gameStatus} />
+                    : <GamePage ws={globalSocket} porecla={porecla} gameStatus={gameStatus} configs = {configs} poreclaAleasa = {poreclaAleasa} configuratieAleasa={configuratieAleasa} />
                 }
             </main>
             <Footer />

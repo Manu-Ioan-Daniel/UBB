@@ -1,9 +1,13 @@
 package org.example.network;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.*;
 import org.example.enums.Type;
+import org.example.models.Config;
+
+import java.util.List;
 
 /**
  * DTO schimbat între browser și server ca JSON peste WebSocket.
@@ -29,8 +33,7 @@ public class Message {
     private Type type;
     private String sender;
     private String payload;
-
-
+    private static final ObjectMapper MAPPER = new ObjectMapper();
 
     public static Message update(String payload)           { return new Message(Type.UPDATE,    "SERVER", payload); }
     public static Message response(String payload)         { return new Message(Type.RESPONSE,  "SERVER", payload); }
@@ -38,9 +41,19 @@ public class Message {
     public static Message disconnect(String sender)        { return new Message(Type.DISCONNECT, sender,   "bye");  }
     public static Message succes(String payload)           {return new Message(Type.SUCCES, "SERVER", payload);}
     public static Message gameStatus(String payload)       {return new Message(Type.STATUS, "SERVER", payload);}
-    // ─── Helper — serializare rapidă ──────────────────────────────────────────────
 
-    private static final ObjectMapper MAPPER = new ObjectMapper();
+    public static Message gameConfig(Object configs, String poreclaAleasa) {
+        try {
+            var payloadData = new Object() {
+                public final Object configurations = configs;
+                public final String porecla = poreclaAleasa;
+            };
+            String combinedJson = MAPPER.writeValueAsString(payloadData);
+            return new Message(Type.CONFIG, "SERVER", combinedJson);
+        } catch (Exception e) {
+            throw new RuntimeException("Eroare la serializarea datelor în gameConfig", e);
+        }
+    }
 
     /** Convertește mesajul la JSON string — folosit în handler înainte de sendMessage() */
     public String toJson() {

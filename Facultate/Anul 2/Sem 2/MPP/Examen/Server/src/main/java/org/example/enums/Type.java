@@ -11,5 +11,5 @@ public enum Type {
     ERROR,       // eroare de logică sau validare
 
     SUCCES, // Ambele sensuri
-    STATUS, DISCONNECT   // deconectare curată
+    STATUS, CONFIG, DISCONNECT   // deconectare curată
 }

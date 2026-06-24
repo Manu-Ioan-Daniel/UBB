@@ -2,14 +2,18 @@ package org.example.handler;
 
 import lombok.RequiredArgsConstructor;
 import org.example.network.Message;
+import org.example.service.ConfigService;
 import org.example.service.PlayerService;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.*;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
+
 
 /**
  * Handler principal WebSocket — gestionează toate conexiunile și mesajele.
@@ -37,7 +41,9 @@ public class GameWebSocketHandler extends TextWebSocketHandler {
 
     private final ConcurrentHashMap<String, WebSocketSession> sessions = new ConcurrentHashMap<>();
     private final PlayerService playerService;
-    private final ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+    private final ConfigService configService;
+    private List<Integer> chosenConfig;
+    private Map<String, Integer> playerScores = new ConcurrentHashMap<>();
     private static final int n = 2;
     /**
      * Apelat când un browser deschide conexiunea WebSocket.
@@ -77,6 +83,8 @@ public class GameWebSocketHandler extends TextWebSocketHandler {
 
                 case DISCONNECT -> handleDisconnect(session, msg);
 
+                case CONFIG -> handleChosenConfig(msg);
+
                 default -> sendTo(session, Message.error("Tip mesaj necunoscut: " + msg.getType()));
             }
         }catch(Exception e) {
@@ -115,7 +123,8 @@ public class GameWebSocketHandler extends TextWebSocketHandler {
         sendTo(session, Message.succes("Bun venit, " + porecla + "!"));
         if(sessions.size() == n){
             broadcast(Message.gameStatus("ready"));
-            sendTo(sessions.values().toArray()[n%2], Message.gameConfig(playerService.getConfig));
+            List<String> porecle = new ArrayList<>(sessions.keySet());
+            broadcast(Message.gameConfig(configService.getConfigs(n), porecle.get(n/2)));
         }
         else{
            sendTo(session, Message.gameStatus("not_ready"));
@@ -163,6 +172,12 @@ public class GameWebSocketHandler extends TextWebSocketHandler {
         sendTo(session, Message.disconnect("SERVER"));
         session.close();
         broadcast(Message.update(porecla + " s-a deconectat."));
+    }
+
+    private void handleChosenConfig(Message msg){
+
+        chosenConfig = Arrays.stream(msg.getPayload().split(",")).toList().stream().map(Integer::parseInt).toList();
+        broadcast(Message.succes("Configuratia aleasa"));
     }
 
     // ══════════════════════════════════════════════════════════════════════════════

@@ -1,5 +1,6 @@
 package org.example.repos;
 
+
 import lombok.RequiredArgsConstructor;
 import org.example.models.Player;
 import org.hibernate.Session;
@@ -24,5 +25,4 @@ public class PlayerRepository {
             return Optional.ofNullable(player);
         }
     }
-
 }

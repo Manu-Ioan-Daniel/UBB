@@ -1,4 +1,0 @@
-rootProject.name = 'Template'
-include 'Client'
-include 'Server'
-include 'Shared'
