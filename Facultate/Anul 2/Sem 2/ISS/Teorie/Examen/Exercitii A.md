@@ -112,7 +112,7 @@ class Rata implements Manancator, Dormitor, Zburator, Inotator {
 
 ```mermaid
 classDiagram
-	MyList "1" -- "1" List : +list
+	MyList --> "1" List : +list
 	class MyList{
 		+findAt(index: Integer)
 		+remove(index: Integer)

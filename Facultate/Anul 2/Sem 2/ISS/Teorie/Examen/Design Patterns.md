@@ -1,10 +1,17 @@
 ## Scopuri
 
+Transforma interfata unei clase existente intr o alta interfata asteptata de client astfel incat clientul si clasa sa poata colabora fara modificari la nivelulk acestora
+
 ![[Pasted image 20260603141734.png]]
+
+Decupleaza o abstractizare de implementarea sa, astfel incat cele doua sa poata varia independent. Implementarile posibile vor putea fi astfel substiuite la execuite
 
 ![[Pasted image 20260603141724.png]]
 
+Defineste o familie de algoritmi, incaps
+
 ![[Pasted image 20260603141710.png]]
+
 
 ![[Pasted image 20260603141929.png]]
 

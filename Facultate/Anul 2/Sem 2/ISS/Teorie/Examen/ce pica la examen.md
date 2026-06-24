@@ -3,3 +3,11 @@
 
 
 ![[subiecte_iss_posibile.pdf]]
+
+
+![[Pasted image 20260604175939.png]]
+
+
+B1. Actori:
+- Student, Secretar, Prof. Coordonator
+
