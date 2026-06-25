@@ -6,12 +6,14 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import template.template.service.SampleGameState;
-import template.template.service.SampleService;
 import template.template.utils.Observer.Observer;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
+import java.util.Random;
 
 @Controller
 @CrossOrigin
@@ -19,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api")
 public class SampleGameController implements Observer {
     
-    private final SampleService sampleService;
+
     private final SampleGameState sampleGameState;
     private final SimpMessagingTemplate messagingTemplate;
 
@@ -46,6 +48,19 @@ public class SampleGameController implements Observer {
         System.out.println("Sesiunea " + headerAccessor.getSessionId() + " a fost marcată cu " + username);
     }
 
+    @PostMapping("/generate")
+    public ResponseEntity<?> generateNumber(@RequestBody Map<String, String> request) {
 
+        String username = request.get("username");
+        int maxRandom = 2 * sampleGameState.getN();
+        int y = new Random().nextInt(maxRandom) + 1;
+
+        try {
+            sampleGameState.generateNumber(username, y);
+            return ResponseEntity.ok(Map.of("generated", y));
+        } catch (IllegalStateException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
 
 }

@@ -16,8 +16,6 @@ public class SampleService extends Observable {
 
     private final SampleRepository sampleRepository;
 
-
-
     public Optional<Player> findOne(String username) {
         return sampleRepository.findByName(username);
     }

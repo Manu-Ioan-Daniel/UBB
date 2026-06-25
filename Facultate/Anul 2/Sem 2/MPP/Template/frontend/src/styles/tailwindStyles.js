@@ -33,7 +33,7 @@ export const componentStyles = {
 
     cardNormal: "bg-white p-6 rounded-lg shadow-sm border border-gray-200",
     cardInteractive: "bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-400 cursor-pointer transition-all",
-    listItemRow: "flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg transition-colors",
+    listItemRow: "flex items-center p-4 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg transition-colors",
     badgeGreen: "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800",
     avatarCircle: "w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-semibold text-sm select-none"
 };
