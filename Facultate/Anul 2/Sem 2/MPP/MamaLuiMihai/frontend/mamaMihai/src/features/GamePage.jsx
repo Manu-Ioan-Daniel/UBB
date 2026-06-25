@@ -10,14 +10,28 @@ export default function GamePage() {
         status: "Desconectat de la socket...",
         playerScores: {},
         nrOfPlayers: 0,
-        n: 2
+        n: 2,
+        chosenOne: ""
     });
 
     const [configs, setConfigs] = useState([])
 
+    const handleSendConfig = (config) => {
+        api.post("/choose-config", {
+            porecla: sessionStorage.getItem("porecla"),
+            configId: config.id,
+            numbers: config.numbers
+        })
+            .then((res) => {
+                console.log("Configurația a fost trimisă cu succes:", res.data);
+            })
+            .catch((err) => {
+                console.error("Eroare la trimiterea configurației:", err);
+            });
+    };
     useEffect(() => {
 
-        const poreclaSalvata = localStorage.getItem("porecla") || "Anonym";
+        const poreclaSalvata = sessionStorage.getItem("porecla");
         const socket = new WebSocket(`ws://localhost:8080/ws?porecla=${encodeURIComponent(poreclaSalvata)}`);
 
         socket.onopen = () => {
@@ -32,7 +46,8 @@ export default function GamePage() {
                     status: data.status,
                     playerScores: data.playerScores || {},
                     nrOfPlayers: data.nrOfPlayers,
-                    n: data.n
+                    n: data.n,
+                    chosenOne: data.chosenOne,
                 });
             } catch (err) {
                 console.error("Eroare la parsarea datelor de la socket:", err);
@@ -69,30 +84,35 @@ export default function GamePage() {
     }, [gameState.status, gameState.n]);
 
     return (
-        <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh", fontFamily: "sans-serif" }}>
+        <div className="flex flex-col min-h-screen font-sans">
             <Header />
             <Navbar />
 
-            <main style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", paddingTop: "30px", gap: "20px" }}>
-                <h2>Sala de Așteptare Joc</h2>
+            <main className="flex-1 flex flex-col items-center pt-8 gap-5">
+                <h2 className="text-2xl font-bold">Sala de Așteptare Joc</h2>
 
-
-                <div style={{ border: "1px solid #ccc", padding: "15px", borderRadius: "8px", width: "320px", textAlign: "center" }}>
-                    <h3>Status: <span style={{ color: gameState.status === "ready" ? "green" : "orange" }}>{gameState.status}</span></h3>
-                    <p>Jucători conectați: <strong>{gameState.nrOfPlayers}</strong></p>
+                <div className="border border-gray-300 padding p-4 rounded-lg w-80 text-center">
+                    <h3 className="text-lg font-semibold">
+                        Status:{" "}
+                        <span className={gameState.status === "ready" ? "text-green-600" : "text-orange-500"}>
+                            {gameState.status}
+                        </span>
+                    </h3>
+                    <p className="mt-1">
+                        Jucători conectați: <strong className="font-bold">{gameState.nrOfPlayers}</strong>
+                    </p>
                 </div>
 
-                {/* Lista de Jucători prinși din Map-ul din Java */}
-                <div style={{ border: "1px solid #ccc", padding: "15px", borderRadius: "8px", width: "320px" }}>
-                    <h3 style={{ marginTop: 0, textAlign: "center" }}>Jucători și Scoruri</h3>
+                <div className="border border-gray-300 p-4 rounded-lg w-80">
+                    <h3 className="text-lg font-semibold mt-0 text-center">Jucători și Scoruri</h3>
                     {Object.keys(gameState.playerScores).length === 0 ? (
-                        <p style={{ textAlign: "center", color: "gray" }}>Niciun jucător momentan...</p>
+                        <p className="text-center text-gray-500 mt-2">Niciun jucător momentan...</p>
                     ) : (
-                        <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                        <ul className="list-none p-0 m-0 mt-2">
                             {Object.entries(gameState.playerScores).map(([porecla, scor]) => (
-                                <li key={porecla} style={{ display: "flex", justifyContent: "between", padding: "8px 0", borderBottom: "1px solid #eee" }}>
+                                <li key={porecla} className="flex justify-between py-2 border-b border-gray-100 last:border-0">
                                     <span>👤 {porecla}</span>
-                                    <span style={{ marginLeft: "auto", fontWeight: "bold" }}>{scor} Pct</span>
+                                    <span className="font-bold">{scor} Pct</span>
                                 </li>
                             ))}
                         </ul>
@@ -100,12 +120,15 @@ export default function GamePage() {
                 </div>
 
                 {gameState.status === "ready" && (
-                    <div style={{ border: "1px solid #ccc", padding: "15px", borderRadius: "8px", width: "320px", textAlign: "center" }}>
-                        <h3 style={{ marginTop: 0 }}>Configurații Disponibile</h3>
-                        <div style={{ display: "flex", flexDirection: "column", gap: "10px", textAlign: "left" }}>
+                    <div className="border border-gray-300 p-4 rounded-lg w-80 text-center">
+                        <h3 className="text-lg font-semibold mt-0">Configurații Disponibile</h3>
+                        <div className="flex flex-col gap-2.5 text-left mt-2">
                             {configs.map((config, index) => (
-                                <div key={config.id || index} style={{ padding: "8px", border: "1px dashed #aaa", borderRadius: "4px" }}>
-                                    <strong>Config #{index + 1}:</strong> {config.numbers}
+                                <div key={config.id || index} className="p-2 border border-dashed border-gray-400 rounded">
+                                    <strong className="font-bold">Config #{index + 1}:</strong> {config.numbers}
+                                    {gameState.chosenOne === sessionStorage.getItem("porecla") && (
+                                        <button className = "p-2 border-black border-2" onClick = handleSendConfig>Alege</button>
+                                    )}
                                 </div>
                             ))}
                         </div>

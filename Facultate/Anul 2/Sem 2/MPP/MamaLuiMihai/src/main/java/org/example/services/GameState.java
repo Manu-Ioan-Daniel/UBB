@@ -18,6 +18,7 @@ public class GameState extends Observable {
     private final int n = 2;
     private Map<String, Integer> playerScores = new ConcurrentHashMap<>();
     private Config currentConfig;
+    private String chosenOne;
 
     public int getNrOfPlayers(){
         return playerScores.size();
@@ -30,8 +31,11 @@ public class GameState extends Observable {
             System.out.println("Player adaugat cu porecla " + porecla);
             playerScores.put(porecla, 0);
 
-            if(playerScores.size() == n)
+            if(playerScores.size() == n) {
+
                 status = "ready";
+                chosenOne = playerScores.keySet().toArray()[n/2].toString();
+            }
             else
                 status = "waiting";
 

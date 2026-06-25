@@ -20,11 +20,11 @@ public class LoginController{
     public ResponseEntity<?> login(@Valid @RequestBody LoginRequest loginRequest ){
 
         System.out.println("Login request received for porecla: " + loginRequest.getPorecla());
-        if(playerService.existaPorecla(loginRequest.getPorecla())){
+        if(playerService.existaPorecla(loginRequest.getPorecla()) && gameState.getNrOfPlayers() < gameState.getN()){
             boolean succes = gameState.addPlayer(loginRequest.getPorecla());
             return succes ? ResponseEntity.ok().build() : ResponseEntity.status(409).body("User deja conectat cu porecla asta");
         }
-        return ResponseEntity.status(409).body("Nu exista porecla micule tung tung");
+        return ResponseEntity.status(409).body("Baka anichi!");
 
     }
 

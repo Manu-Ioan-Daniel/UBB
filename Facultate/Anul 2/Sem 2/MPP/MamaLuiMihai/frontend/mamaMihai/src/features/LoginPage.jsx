@@ -21,7 +21,7 @@ export default function LoginPage() {
 
         api.post("/login", { porecla: porecla.trim() })
             .then(() => {
-                localStorage.setItem("porecla", porecla.trim());
+                sessionStorage.setItem("porecla", porecla.trim());
                 setError("");
                 navigate("/game");
             })
@@ -40,45 +40,26 @@ export default function LoginPage() {
     console.log("Se conectează utilizatorul:", porecla);
 
     return (
-        <div style={{display: "flex", flexDirection: "column", minHeight: "100vh", fontFamily: "sans-serif"}}>
+        <div className="flex flex-col min-h-screen font-sans">
             <Header/>
             <Navbar/>
 
-            <main style={{
-                flex: 1,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                paddingTop: "50px"
-            }}>
-                <div style={{border: "1px solid #ccc", padding: "20px", borderRadius: "5px", width: "280px"}}>
-                    <h2 style={{textAlign: "center", marginTop: 0}}>Autentificare</h2>
+            <main className="flex-1 flex flex-col items-center pt-12">
+                <div className="border border-gray-300 p-5 rounded w-70">
+                    <h2 className="text-center mt-0 text-xl font-bold mb-4">Autentificare</h2>
 
-                    <form onSubmit={handleConnect} style={{display: "flex", flexDirection: "column", gap: "12px"}}>
+                    <form onSubmit={handleConnect} className="flex flex-col gap-3">
                         <input
                             type="text"
                             placeholder="Introdu porecla..."
                             value={porecla}
                             onInput={(e) => setPorecla(e.target.value)}
-                            style={{
-                                padding: "8px",
-                                fontSize: "16px",
-                                borderRadius: "4px",
-                                border: "1px solid #ccc"
-                            }}
+                            className="p-2 text-base rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
-                        <button type="submit" style={{
-                            padding: "10px",
-                            background: "#007bff",
-                            color: "white",
-                            border: "none",
-                            borderRadius: "4px",
-                            cursor: "pointer",
-                            fontSize: "16px"
-                        }}>
+                        <button type="submit" className="p-2.5 bg-blue-600 text-white border-none rounded cursor-pointer text-base font-medium hover:bg-blue-700 transition-colors">
                             Conectare
                         </button>
-                        {error && <p style={{color: "red", margin: 0}}>{error}</p>}
+                        {error && <p className="text-red-500 m-0 text-sm">{error}</p>}
                     </form>
                 </div>
             </main>

@@ -29,6 +29,11 @@ public class GameWebSocketHandler extends TextWebSocketHandler implements Observ
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) {
+
+        if(sessions.contains(session)) {
+            System.out.println("Session already exists!");
+            return;
+        }
         sessions.add(session);
 
         String query = session.getUri().getQuery();
