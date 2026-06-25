@@ -1,5 +1,7 @@
 package org.example.config;
 
+import org.example.models.Config;
+import org.example.models.Player;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.springframework.context.annotation.Bean;
@@ -21,7 +23,8 @@ public class HibernateConfig {
         configuration.setProperty("hibernate.show_sql", "true");
         configuration.setProperty("hibernate.format_sql", "true");
 
-        // configuration.addAnnotatedClass(Mutare.class);
+        configuration.addAnnotatedClass(Player.class);
+        configuration.addAnnotatedClass(Config.class);
 
         return configuration.buildSessionFactory();
     }

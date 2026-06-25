@@ -10,36 +10,61 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.socket.*;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 import java.io.IOException;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 @Component
 @RequiredArgsConstructor
 public class GameWebSocketHandler extends TextWebSocketHandler implements Observer {
 
-    private final ConcurrentHashMap<String, WebSocketSession> sessions = new ConcurrentHashMap<>();
-    private final GameState gameState;
+    private final List<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
     private final ObjectMapper objectMapper = new ObjectMapper();
-
+    private final GameState gameState;
 
     @PostConstruct
     public void init() {
         gameState.addObserver(this);
     }
 
+
+    @Override
+    public void afterConnectionEstablished(WebSocketSession session) {
+        sessions.add(session);
+
+        String query = session.getUri().getQuery();
+        String porecla = "Anonim";
+        if (query != null && query.contains("porecla=")) {
+            porecla = query.split("porecla=")[1].split("&")[0];
+        }
+
+        session.getAttributes().put("porecla", porecla);
+
+        try {
+            if (session.isOpen()) {
+                String state = objectMapper.writeValueAsString(gameState);
+                sendTo(session, Message.response(state));
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        System.out.println("Connection established pentru: " + porecla);
+    }
+
     @Override
     public void afterConnectionClosed(WebSocketSession session, CloseStatus status) {
-        return;
+        sessions.remove(session);
+        String porecla = (String) session.getAttributes().get("porecla");
+        gameState.removePlayer(porecla);
     }
 
     public void broadcast(Message msg) {
 
-        sessions.forEach((porecla, session) -> {
+        sessions.forEach((session) -> {
             if (session.isOpen()) {
                 sendTo(session, msg);
             }
         });
     }
-
 
     private void sendTo(WebSocketSession session, Message msg) {
         try {
@@ -49,19 +74,11 @@ public class GameWebSocketHandler extends TextWebSocketHandler implements Observ
         }
     }
 
-
-    private String getFieldBySession(WebSocketSession target) {
-        return sessions.entrySet().stream()
-            .filter(e -> e.getValue().getId().equals(target.getId()))
-            .map(java.util.Map.Entry::getKey)
-            .findFirst()
-            .orElse(null);
-    }
-
     @Override
-    public void update(GameState gameState) {
+    public void update() {
         try{
             String state = objectMapper.writeValueAsString(gameState);
+            System.out.println(state);
             broadcast(Message.response(state));
         } catch (Exception e) {
             throw new RuntimeException(e);

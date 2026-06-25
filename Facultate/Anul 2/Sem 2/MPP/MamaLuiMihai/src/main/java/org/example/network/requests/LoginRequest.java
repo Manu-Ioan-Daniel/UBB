@@ -1,4 +1,4 @@
-package org.example.requests;
+package org.example.network.requests;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;

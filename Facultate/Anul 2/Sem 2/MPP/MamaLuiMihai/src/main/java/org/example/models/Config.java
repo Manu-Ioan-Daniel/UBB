@@ -1,18 +1,19 @@
 package org.example.models;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@jakarta.persistence.Entity
+@Entity
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
-@Table(name = "players")
-public class Player extends Entity{
+@Table(name = "configs")
+public class Config extends org.example.models.Entity {
 
-    private String porecla;
+    private int n;
+    private String numbers;
+
 }

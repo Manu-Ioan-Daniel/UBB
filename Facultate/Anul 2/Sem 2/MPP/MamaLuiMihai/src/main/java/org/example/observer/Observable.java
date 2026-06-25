@@ -1,7 +1,5 @@
 package org.example.observer;
 
-import org.example.services.GameState;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,9 +15,9 @@ public class Observable {
         observers.remove(o);
     }
 
-    public void notifyObservers(GameState gameState){
+    public void notifyObservers(){
         for (Observer o : observers) {
-            o.update(gameState);
+            o.update();
         }
     }
 

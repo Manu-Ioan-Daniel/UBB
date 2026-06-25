@@ -19,7 +19,7 @@ public class Message {
     public static Message response(String payload){
         return new Message(Type.RESPONSE,  "SERVER", payload);
     }
-    public static Message error(String motiv)              { return new Message(Type.ERROR,      "SERVER", motiv);  }
+//    public static Message error(String motiv)              { return new Message(Type.ERROR,      "SERVER", motiv);  }
 
     private static final ObjectMapper MAPPER = new ObjectMapper();
 
