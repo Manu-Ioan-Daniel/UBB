@@ -1,0 +1,1554 @@
+2026-06-25 20:23:09 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 20:23:09 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 20280 (C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67\build\classes\java\main started by Deny in C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67)
+2026-06-25 20:23:09 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 20:23:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 20:23:09 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 20:23:09 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 20:23:09 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 20:23:09 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 20:23:09 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 508 ms
+2026-06-25 20:23:09 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 20:23:09 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 20:23:09 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 20:23:10 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 20:23:10 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 20:23:10 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 20:23:10 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 20:23:10 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 20:23:10 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 20:23:10 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 20:23:10 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 20:23:10 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3df6494f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 20:23:10 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 20:23:10 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1af6974c]]
+2026-06-25 20:23:10 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 20:23:10 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 20:23:10 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 20:23:10 [main] INFO  template.template.Application -
+                Started Application in 1.808 seconds (process running for 2.184)
+2026-06-25 20:24:10 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 20:24:31 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 20:24:31 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 20:24:31 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 20:24:31 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1af6974c]]
+2026-06-25 20:24:31 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 20:24:31 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 20:26:53 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 20:26:53 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 23720 (C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67\build\classes\java\main started by Deny in C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67)
+2026-06-25 20:26:53 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 20:26:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 20:26:53 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 20:26:53 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 20:26:53 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 20:26:53 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 20:26:53 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 495 ms
+2026-06-25 20:26:53 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 20:26:53 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 20:26:53 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 20:26:53 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 20:26:53 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 20:26:53 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 20:26:53 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 20:26:53 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 20:26:53 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 20:26:53 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 20:26:54 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 20:26:54 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@fe156f4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 20:26:54 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 20:26:54 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6d035815]]
+2026-06-25 20:26:54 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 20:26:54 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 20:26:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 20:26:54 [main] INFO  template.template.Application -
+                Started Application in 1.785 seconds (process running for 2.226)
+2026-06-25 20:26:59 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 20:26:59 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 20:26:59 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 1 ms
+2026-06-25 20:27:54 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 3 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(3)-CONNECTED(3)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 24], outboundChannel[pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 5], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 20:38:12 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 20:38:12 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 20:38:12 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 20:38:12 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6d035815]]
+2026-06-25 20:38:12 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 20:38:12 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 20:38:14 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 20:38:14 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 26676 (C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67\build\classes\java\main started by Deny in C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67)
+2026-06-25 20:38:14 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 20:38:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 20:38:14 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 20:38:14 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 20:38:14 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 20:38:14 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 20:38:14 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 524 ms
+2026-06-25 20:38:14 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 20:38:14 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 20:38:14 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 20:38:14 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 20:38:15 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 20:38:15 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 20:38:15 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 20:38:15 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 20:38:15 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 20:38:15 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 20:38:15 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 20:38:15 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@25c8c71e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 20:38:15 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 20:38:15 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@244268a8]]
+2026-06-25 20:38:15 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 20:38:15 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 20:38:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 20:38:15 [main] INFO  template.template.Application -
+                Started Application in 1.816 seconds (process running for 2.181)
+2026-06-25 20:38:17 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 20:38:17 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 20:38:17 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 0 ms
+2026-06-25 20:39:15 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 6], outboundChannel[pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 20:46:25 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 20:46:25 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 20:46:25 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 20:46:25 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@244268a8]]
+2026-06-25 20:46:25 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 20:46:25 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 20:46:27 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 20:46:27 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 14036 (C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67\build\classes\java\main started by Deny in C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67)
+2026-06-25 20:46:27 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 20:46:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 20:46:28 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 20:46:28 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 20:46:28 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 20:46:28 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 20:46:28 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 503 ms
+2026-06-25 20:46:28 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 20:46:28 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 20:46:28 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 20:46:28 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 20:46:28 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 20:46:28 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 20:46:28 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 20:46:28 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 20:46:28 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 20:46:28 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 20:46:28 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 20:46:28 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@25c8c71e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 20:46:29 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 20:46:29 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@548f4f60]]
+2026-06-25 20:46:29 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 20:46:29 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 20:46:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 20:46:29 [main] INFO  template.template.Application -
+                Started Application in 1.785 seconds (process running for 2.145)
+2026-06-25 20:46:31 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 20:46:31 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 20:46:31 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 1 ms
+2026-06-25 20:47:29 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 2 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(2)-CONNECTED(2)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 15, active threads = 0, queued tasks = 0, completed tasks = 15], outboundChannel[pool size = 3, active threads = 0, queued tasks = 0, completed tasks = 3], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 20:52:35 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 20:52:35 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 20:52:35 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 20:52:35 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@548f4f60]]
+2026-06-25 20:52:35 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 20:52:35 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 20:52:36 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 20:52:36 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 11200 (C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67\build\classes\java\main started by Deny in C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67)
+2026-06-25 20:52:36 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 20:52:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 20:52:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 20:52:37 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 20:52:37 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 20:52:37 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 20:52:37 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 572 ms
+2026-06-25 20:52:37 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 20:52:37 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 20:52:37 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 20:52:37 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 20:52:37 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 20:52:37 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 20:52:37 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 20:52:37 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 20:52:37 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 20:52:37 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 20:52:38 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 20:52:38 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1e9d721] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 20:52:38 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 20:52:38 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4a094f90]]
+2026-06-25 20:52:38 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 20:52:38 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 20:52:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 20:52:38 [main] INFO  template.template.Application -
+                Started Application in 1.891 seconds (process running for 2.266)
+2026-06-25 20:52:40 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 20:52:40 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 20:52:40 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 0 ms
+2026-06-25 20:53:38 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 6], outboundChannel[pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 20:55:38 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 20:55:38 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 20:55:38 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 20:55:38 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4a094f90]]
+2026-06-25 20:55:38 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 20:55:38 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 20:55:40 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 20:55:40 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 11540 (C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67\build\classes\java\main started by Deny in C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67)
+2026-06-25 20:55:40 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 20:55:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 20:55:40 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 20:55:40 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 20:55:40 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 20:55:40 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 20:55:40 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 505 ms
+2026-06-25 20:55:40 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 20:55:40 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 20:55:40 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 20:55:40 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 20:55:40 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 20:55:40 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 20:55:40 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 20:55:40 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 20:55:40 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 20:55:40 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 20:55:41 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 20:55:41 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3fc5d397] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 20:55:41 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 20:55:41 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@244268a8]]
+2026-06-25 20:55:41 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 20:55:41 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 20:55:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 20:55:41 [main] INFO  template.template.Application -
+                Started Application in 1.79 seconds (process running for 2.154)
+2026-06-25 20:55:46 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 20:55:46 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 20:55:46 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 1 ms
+2026-06-25 20:56:41 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[3 current WS(3)-HttpStream(0)-HttpPoll(0), 3 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(3)-CONNECTED(3)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 18, active threads = 0, queued tasks = 0, completed tasks = 18], outboundChannel[pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 6], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 20:57:28 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 20:57:28 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 20:57:28 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 20:57:28 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@244268a8]]
+2026-06-25 20:57:28 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 20:57:28 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 20:57:30 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 20:57:30 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 24316 (C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67\build\classes\java\main started by Deny in C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67)
+2026-06-25 20:57:30 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 20:57:30 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 20:57:30 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 20:57:30 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 20:57:30 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 20:57:30 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 20:57:30 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 513 ms
+2026-06-25 20:57:30 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 20:57:30 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 20:57:30 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 20:57:30 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 20:57:30 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 20:57:30 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 20:57:30 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 20:57:30 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 20:57:30 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 20:57:31 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 20:57:31 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 20:57:31 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4203529f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 20:57:31 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 20:57:31 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2484c868]]
+2026-06-25 20:57:31 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 20:57:31 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 20:57:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 20:57:31 [main] INFO  template.template.Application -
+                Started Application in 1.791 seconds (process running for 2.16)
+2026-06-25 20:57:34 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 20:57:34 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 20:57:34 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 1 ms
+2026-06-25 20:58:31 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 2 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(2)-CONNECTED(2)-DISCONNECT(1)], stompBrokerRelay[null], inboundChannel[pool size = 21, active threads = 0, queued tasks = 0, completed tasks = 21], outboundChannel[pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 5], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 21:01:09 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 21:01:09 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 21:01:09 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 21:01:09 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2484c868]]
+2026-06-25 21:01:09 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 21:01:09 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 21:01:11 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 21:01:11 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 13748 (C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67\build\classes\java\main started by Deny in C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67)
+2026-06-25 21:01:11 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 21:01:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 21:01:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 21:01:12 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 21:01:12 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 21:01:12 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 21:01:12 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 493 ms
+2026-06-25 21:01:12 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 21:01:12 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 21:01:12 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 21:01:12 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 21:01:12 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 21:01:12 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 21:01:12 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 21:01:12 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 21:01:12 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 21:01:12 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 21:01:13 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 21:01:13 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4203529f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 21:01:13 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 21:01:13 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7957aa57]]
+2026-06-25 21:01:13 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 21:01:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 21:01:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 21:01:13 [main] INFO  template.template.Application -
+                Started Application in 1.758 seconds (process running for 2.122)
+2026-06-25 21:01:14 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 21:01:14 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 21:01:14 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 0 ms
+2026-06-25 21:02:13 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 6 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(6)-CONNECTED(6)-DISCONNECT(5)], stompBrokerRelay[null], inboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 66], outboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 16], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 21:21:18 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 21:21:18 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 21:21:18 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 21:21:18 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7957aa57]]
+2026-06-25 21:21:18 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 21:21:18 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 21:21:20 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 21:21:20 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 16196 (C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67\build\classes\java\main started by Deny in C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67)
+2026-06-25 21:21:20 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 21:21:21 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 21:21:21 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 21:21:21 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 21:21:21 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 21:21:21 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 21:21:21 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 508 ms
+2026-06-25 21:21:21 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 21:21:21 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 21:21:21 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 21:21:21 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 21:21:21 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 21:21:21 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 21:21:21 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 21:21:21 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 21:21:21 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 21:21:21 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 21:21:22 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 21:21:22 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@40c0437f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 21:21:22 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 21:21:22 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@35efd12c]]
+2026-06-25 21:21:22 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 21:21:22 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 21:21:22 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 21:21:22 [main] INFO  template.template.Application -
+                Started Application in 1.807 seconds (process running for 2.185)
+2026-06-25 21:21:28 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 21:21:28 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 21:21:28 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 1 ms
+2026-06-25 21:22:22 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[2 current WS(2)-HttpStream(0)-HttpPoll(0), 8 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(8)-CONNECTED(8)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 90], outboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 27], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 21:22:55 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 21:22:55 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 21:22:55 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 21:22:55 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@35efd12c]]
+2026-06-25 21:22:55 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 21:22:55 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 21:22:56 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 21:22:56 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 23224 (C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67\build\classes\java\main started by Deny in C:\Users\Deny\Downloads\macra21-WeHaveMonopolyAtHomeSlop-fdb3a67)
+2026-06-25 21:22:56 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 21:22:57 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 21:22:57 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 21:22:57 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 21:22:57 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 21:22:57 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 21:22:57 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 489 ms
+2026-06-25 21:22:57 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 21:22:57 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 21:22:57 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 21:22:57 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 21:22:57 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 21:22:57 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 21:22:57 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 21:22:57 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 21:22:57 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 21:22:57 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 21:22:58 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 21:22:58 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@42ef5216] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 21:22:58 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 21:22:58 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7c857e8f]]
+2026-06-25 21:22:58 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 21:22:58 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 21:22:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 21:22:58 [main] INFO  template.template.Application -
+                Started Application in 1.775 seconds (process running for 2.141)
+2026-06-25 21:23:00 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 21:23:00 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 21:23:00 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 0 ms
+2026-06-25 21:23:58 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 23 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(23)-CONNECTED(23)-DISCONNECT(3)], stompBrokerRelay[null], inboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 285], outboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 52], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 21:49:37 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 21:49:37 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 21:49:37 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 21:49:37 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7c857e8f]]
+2026-06-25 21:49:37 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 21:49:37 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 22:36:01 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 22:36:01 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 408 (C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template\build\classes\java\main started by Deny in C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template)
+2026-06-25 22:36:01 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 22:36:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 22:36:01 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 22:36:01 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 22:36:01 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 22:36:01 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 22:36:01 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 558 ms
+2026-06-25 22:36:02 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 22:36:02 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 22:36:02 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 22:36:02 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 22:36:02 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 22:36:02 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 22:36:02 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 22:36:02 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 22:36:02 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 22:36:02 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 22:36:02 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 22:36:02 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5fa9247b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 22:36:03 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 22:36:03 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@34d3bfca]]
+2026-06-25 22:36:03 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 22:36:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 22:36:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 22:36:03 [main] INFO  template.template.Application -
+                Started Application in 1.967 seconds (process running for 2.409)
+2026-06-25 22:36:18 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 22:36:18 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 22:36:18 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 0 ms
+2026-06-25 22:37:03 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 2 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(2)-CONNECTED(2)-DISCONNECT(1)], stompBrokerRelay[null], inboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 24], outboundChannel[pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 4], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 22:41:09 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 22:41:09 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 22:41:09 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 22:41:09 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@34d3bfca]]
+2026-06-25 22:41:09 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 22:41:09 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 22:43:59 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 22:43:59 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 26924 (C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template\build\classes\java\main started by Deny in C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template)
+2026-06-25 22:43:59 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 22:44:00 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 22:44:00 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 22:44:00 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 22:44:00 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 22:44:00 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 22:44:00 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 513 ms
+2026-06-25 22:44:00 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 22:44:00 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 22:44:00 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 22:44:00 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 22:44:00 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 22:44:00 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 22:44:00 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 22:44:00 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 22:44:00 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 22:44:00 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 22:44:01 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 22:44:01 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a20da9f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 22:44:01 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 22:44:01 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@556843a5]]
+2026-06-25 22:44:01 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 22:44:01 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 22:44:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 22:44:01 [main] INFO  template.template.Application -
+                Started Application in 2.033 seconds (process running for 2.403)
+2026-06-25 22:44:54 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 22:44:54 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 22:44:54 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 0 ms
+2026-06-25 22:45:01 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 22:48:20 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 22:48:20 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 22:48:20 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 22:48:20 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@556843a5]]
+2026-06-25 22:48:20 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 22:48:20 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 22:48:23 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 22:48:23 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 22904 (C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template\build\classes\java\main started by Deny in C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template)
+2026-06-25 22:48:23 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 22:48:23 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 22:48:23 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 22:48:23 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 22:48:23 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 22:48:23 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 22:48:23 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 510 ms
+2026-06-25 22:48:23 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 22:48:23 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 22:48:23 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 22:48:23 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 22:48:23 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 22:48:23 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 22:48:23 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 22:48:23 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 22:48:23 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 22:48:23 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 22:48:24 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 22:48:24 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6b278b17] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 22:48:24 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 22:48:24 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@21046afa]]
+2026-06-25 22:48:24 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 22:48:24 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 22:48:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 22:48:24 [main] INFO  template.template.Application -
+                Started Application in 1.91 seconds (process running for 2.282)
+2026-06-25 22:48:39 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 22:48:39 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 22:48:39 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 0 ms
+2026-06-25 22:49:24 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 22:53:23 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 22:53:23 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 22:53:23 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 22:53:23 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@21046afa]]
+2026-06-25 22:53:23 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 22:53:23 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 22:53:25 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 22:53:25 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 11692 (C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template\build\classes\java\main started by Deny in C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template)
+2026-06-25 22:53:25 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 22:53:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 22:53:26 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 22:53:26 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 22:53:26 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 22:53:26 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 22:53:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 514 ms
+2026-06-25 22:53:26 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 22:53:26 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 22:53:26 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 22:53:26 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 22:53:26 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 22:53:26 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 22:53:26 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 22:53:26 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 22:53:26 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 22:53:26 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 22:53:26 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 22:53:26 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6b278b17] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 22:53:27 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 22:53:27 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@39a9becc]]
+2026-06-25 22:53:27 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 22:53:27 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 22:53:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 22:53:27 [main] INFO  template.template.Application -
+                Started Application in 1.814 seconds (process running for 2.197)
+2026-06-25 22:53:33 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 22:53:33 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 22:53:33 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 1 ms
+2026-06-25 22:54:17 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 22:54:17 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 22:54:17 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 22:54:17 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@39a9becc]]
+2026-06-25 22:54:17 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 22:54:17 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 22:54:19 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 22:54:19 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 18428 (C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template\build\classes\java\main started by Deny in C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template)
+2026-06-25 22:54:19 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 22:54:19 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 22:54:19 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 22:54:19 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 22:54:19 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 22:54:19 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 22:54:19 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 504 ms
+2026-06-25 22:54:19 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 22:54:19 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 22:54:19 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 22:54:19 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 22:54:19 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 22:54:19 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 22:54:19 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 22:54:19 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 22:54:19 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 22:54:20 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 22:54:20 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 22:54:20 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7cd8831c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 22:54:20 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 22:54:20 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@70f76276]]
+2026-06-25 22:54:20 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 22:54:20 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 22:54:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 22:54:20 [main] INFO  template.template.Application -
+                Started Application in 1.807 seconds (process running for 2.175)
+2026-06-25 22:54:25 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 22:54:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 22:54:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 1 ms
+2026-06-25 22:54:45 [clientInboundChannel-4] ERROR o.s.w.s.m.WebSocketAnnotationMethodMessageHandler -
+                Unhandled exception from message handler method
+org.springframework.messaging.handler.annotation.support.MethodArgumentNotValidException: Could not resolve method parameter at index 0 in public void template.template.controller.SampleGameController.join(java.lang.String,org.springframework.messaging.simp.SimpMessageHeaderAccessor): 1 error(s): [Error in object 'username': codes []; arguments []; default message [Payload value must not be empty]] 
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:128)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMatch(AbstractMethodMessageHandler.java:568)
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:530)
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:93)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessageInternal(AbstractMethodMessageHandler.java:522)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessage(AbstractMethodMessageHandler.java:457)
+	at org.springframework.messaging.support.ExecutorSubscribableChannel$SendTask.run(ExecutorSubscribableChannel.java:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-25 22:55:08 [clientInboundChannel-19] ERROR o.s.w.s.m.WebSocketAnnotationMethodMessageHandler -
+                Unhandled exception from message handler method
+org.springframework.messaging.handler.annotation.support.MethodArgumentNotValidException: Could not resolve method parameter at index 0 in public void template.template.controller.SampleGameController.join(java.lang.String,org.springframework.messaging.simp.SimpMessageHeaderAccessor): 1 error(s): [Error in object 'username': codes []; arguments []; default message [Payload value must not be empty]] 
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:128)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMatch(AbstractMethodMessageHandler.java:568)
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:530)
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:93)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessageInternal(AbstractMethodMessageHandler.java:522)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessage(AbstractMethodMessageHandler.java:457)
+	at org.springframework.messaging.support.ExecutorSubscribableChannel$SendTask.run(ExecutorSubscribableChannel.java:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-25 22:55:11 [clientInboundChannel-10] ERROR o.s.w.s.m.WebSocketAnnotationMethodMessageHandler -
+                Unhandled exception from message handler method
+org.springframework.messaging.handler.annotation.support.MethodArgumentNotValidException: Could not resolve method parameter at index 0 in public void template.template.controller.SampleGameController.join(java.lang.String,org.springframework.messaging.simp.SimpMessageHeaderAccessor): 1 error(s): [Error in object 'username': codes []; arguments []; default message [Payload value must not be empty]] 
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:128)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMatch(AbstractMethodMessageHandler.java:568)
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:530)
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:93)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessageInternal(AbstractMethodMessageHandler.java:522)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessage(AbstractMethodMessageHandler.java:457)
+	at org.springframework.messaging.support.ExecutorSubscribableChannel$SendTask.run(ExecutorSubscribableChannel.java:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-25 22:55:20 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 3 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(3)-CONNECTED(3)-DISCONNECT(3)], stompBrokerRelay[null], inboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 45], outboundChannel[pool size = 9, active threads = 0, queued tasks = 0, completed tasks = 9], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 22:55:35 [clientInboundChannel-1] ERROR o.s.w.s.m.WebSocketAnnotationMethodMessageHandler -
+                Unhandled exception from message handler method
+org.springframework.messaging.handler.annotation.support.MethodArgumentNotValidException: Could not resolve method parameter at index 0 in public void template.template.controller.SampleGameController.join(java.lang.String,org.springframework.messaging.simp.SimpMessageHeaderAccessor): 1 error(s): [Error in object 'username': codes []; arguments []; default message [Payload value must not be empty]] 
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:128)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMatch(AbstractMethodMessageHandler.java:568)
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:530)
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:93)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessageInternal(AbstractMethodMessageHandler.java:522)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessage(AbstractMethodMessageHandler.java:457)
+	at org.springframework.messaging.support.ExecutorSubscribableChannel$SendTask.run(ExecutorSubscribableChannel.java:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-25 22:55:43 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 22:55:43 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 22:55:43 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 22:55:43 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@70f76276]]
+2026-06-25 22:55:43 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 22:55:43 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 22:55:45 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 22:55:45 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 27612 (C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template\build\classes\java\main started by Deny in C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template)
+2026-06-25 22:55:45 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 22:55:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 22:55:46 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 22:55:46 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 22:55:46 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 22:55:46 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 22:55:46 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 514 ms
+2026-06-25 22:55:46 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 22:55:46 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 22:55:46 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 22:55:46 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 22:55:46 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 22:55:46 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 22:55:46 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 22:55:46 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 22:55:46 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 22:55:46 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 22:55:47 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 22:55:47 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@217fd3c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 22:55:47 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 22:55:47 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@45a9cf78]]
+2026-06-25 22:55:47 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 22:55:47 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 22:55:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 22:55:47 [main] INFO  template.template.Application -
+                Started Application in 1.926 seconds (process running for 2.295)
+2026-06-25 22:55:50 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 22:55:50 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 22:55:50 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 1 ms
+2026-06-25 22:55:50 [clientInboundChannel-4] ERROR o.s.w.s.m.WebSocketAnnotationMethodMessageHandler -
+                Unhandled exception from message handler method
+org.springframework.messaging.handler.annotation.support.MethodArgumentNotValidException: Could not resolve method parameter at index 0 in public void template.template.controller.SampleGameController.join(java.lang.String,org.springframework.messaging.simp.SimpMessageHeaderAccessor): 1 error(s): [Error in object 'username': codes []; arguments []; default message [Payload value must not be empty]] 
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:128)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMatch(AbstractMethodMessageHandler.java:568)
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:530)
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:93)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessageInternal(AbstractMethodMessageHandler.java:522)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessage(AbstractMethodMessageHandler.java:457)
+	at org.springframework.messaging.support.ExecutorSubscribableChannel$SendTask.run(ExecutorSubscribableChannel.java:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-25 22:56:47 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(1)], stompBrokerRelay[null], inboundChannel[pool size = 15, active threads = 0, queued tasks = 0, completed tasks = 15], outboundChannel[pool size = 3, active threads = 0, queued tasks = 0, completed tasks = 3], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 22:58:16 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 22:58:16 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 22:58:16 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 22:58:16 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@45a9cf78]]
+2026-06-25 22:58:16 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 22:58:16 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 22:58:17 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 22:58:17 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 25896 (C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template\build\classes\java\main started by Deny in C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template)
+2026-06-25 22:58:17 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 22:58:18 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 22:58:18 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 22:58:18 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 22:58:18 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 22:58:18 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 22:58:18 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 590 ms
+2026-06-25 22:58:18 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 22:58:18 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 22:58:18 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 22:58:18 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 22:58:18 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 22:58:18 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 22:58:18 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 22:58:18 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 22:58:18 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 22:58:18 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 22:58:19 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 22:58:19 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3cfab340] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 22:58:19 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 22:58:19 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@244268a8]]
+2026-06-25 22:58:19 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 22:58:19 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 22:58:19 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 22:58:19 [main] INFO  template.template.Application -
+                Started Application in 2.028 seconds (process running for 2.405)
+2026-06-25 22:58:25 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 22:58:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 22:58:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 1 ms
+2026-06-25 22:59:19 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 4 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(4)-CONNECTED(4)-DISCONNECT(2)], stompBrokerRelay[null], inboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 51], outboundChannel[pool size = 10, active threads = 0, queued tasks = 0, completed tasks = 10], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 23:04:21 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 23:04:21 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 23:04:21 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 23:04:21 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@244268a8]]
+2026-06-25 23:04:21 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 23:04:21 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 23:04:23 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 23:04:23 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 27276 (C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template\build\classes\java\main started by Deny in C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template)
+2026-06-25 23:04:23 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 23:04:23 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 23:04:23 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:04:23 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 23:04:23 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 23:04:24 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 23:04:24 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 511 ms
+2026-06-25 23:04:24 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 23:04:24 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 23:04:24 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 23:04:24 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 23:04:24 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 23:04:24 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 23:04:24 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 23:04:24 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 23:04:24 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 23:04:24 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 23:04:24 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 23:04:24 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1b5f960a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 23:04:25 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 23:04:25 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6d035815]]
+2026-06-25 23:04:25 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 23:04:25 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:04:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 23:04:25 [main] INFO  template.template.Application -
+                Started Application in 1.87 seconds (process running for 2.265)
+2026-06-25 23:04:29 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 23:04:29 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 23:04:29 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 1 ms
+2026-06-25 23:05:25 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 9, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannel[pool size = 2, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-25 23:06:11 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 23:06:11 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 23:06:11 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 23:06:11 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6d035815]]
+2026-06-25 23:06:11 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 23:06:11 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 23:06:13 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 23:06:13 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 10716 (C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template\build\classes\java\main started by Deny in C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template)
+2026-06-25 23:06:13 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 23:06:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 23:06:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:06:13 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 23:06:13 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 23:06:13 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 23:06:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 512 ms
+2026-06-25 23:06:13 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 23:06:13 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 23:06:13 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 23:06:13 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 23:06:13 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 23:06:13 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 23:06:13 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 23:06:13 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 23:06:13 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 23:06:14 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 23:06:14 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 23:06:14 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3df6494f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 23:06:14 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 23:06:14 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3bf4644c]]
+2026-06-25 23:06:14 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 23:06:14 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:06:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 23:06:14 [main] INFO  template.template.Application -
+                Started Application in 1.81 seconds (process running for 2.184)
+2026-06-25 23:06:17 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 23:06:17 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 23:06:17 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 1 ms
+2026-06-25 23:06:17 [clientInboundChannel-7] ERROR o.s.w.s.m.WebSocketAnnotationMethodMessageHandler -
+                Unhandled exception from message handler method
+org.springframework.messaging.handler.annotation.support.MethodArgumentNotValidException: Could not resolve method parameter at index 0 in public void template.template.controller.SampleGameController.join(java.lang.String,org.springframework.messaging.simp.SimpMessageHeaderAccessor): 1 error(s): [Error in object 'username': codes []; arguments []; default message [Payload value must not be empty]] 
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:128)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMatch(AbstractMethodMessageHandler.java:568)
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:530)
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:93)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessageInternal(AbstractMethodMessageHandler.java:522)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessage(AbstractMethodMessageHandler.java:457)
+	at org.springframework.messaging.support.ExecutorSubscribableChannel$SendTask.run(ExecutorSubscribableChannel.java:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-25 23:06:59 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 23:06:59 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-25 23:06:59 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-25 23:06:59 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3bf4644c]]
+2026-06-25 23:06:59 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-25 23:06:59 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 23:07:30 [background-preinit] INFO  o.h.validator.internal.util.Version -
+                HV000001: Hibernate Validator 8.0.2.Final
+2026-06-25 23:07:30 [main] INFO  template.template.Application -
+                Starting Application using Java 21.0.10 with PID 12516 (C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template\build\classes\java\main started by Deny in C:\Users\Deny\Documents\GitHub\UBB\Facultate\Anul 2\Sem 2\MPP\Template)
+2026-06-25 23:07:30 [main] INFO  template.template.Application -
+                No active profile set, falling back to 1 default profile: "default"
+2026-06-25 23:07:30 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port 8080 (http)
+2026-06-25 23:07:30 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:07:30 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2026-06-25 23:07:30 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-06-25 23:07:30 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2026-06-25 23:07:30 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -
+                Root WebApplicationContext: initialization completed in 523 ms
+2026-06-25 23:07:30 [main] INFO  org.hibernate.Version -
+                HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-25 23:07:30 [main] INFO  org.hibernate.cfg.Environment -
+                HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=update, hibernate.connection.password=****, hibernate.connection.username=root, hibernate.connection.url=jdbc:mysql://localhost:3306/TemplateExamenMPP, hibernate.show_sql=true}
+2026-06-25 23:07:30 [main] INFO  o.h.c.i.RegionFactoryInitiator -
+                HHH000026: Second-level cache disabled
+2026-06-25 23:07:30 [main] WARN  o.hibernate.orm.connections.pooling -
+                HHH10001002: Using built-in connection pool (not intended for production use)
+2026-06-25 23:07:30 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+2026-06-25 23:07:30 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/TemplateExamenMPP]
+2026-06-25 23:07:30 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001001: Connection properties: {password=****, user=root}
+2026-06-25 23:07:30 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001003: Autocommit mode: false
+2026-06-25 23:07:30 [main] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001115: Connection pool size: 20 (min=1)
+2026-06-25 23:07:31 [main] WARN  org.hibernate.dialect.Dialect -
+                HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 23:07:31 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+                HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 23:07:31 [main] INFO  o.hibernate.orm.connections.access -
+                HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@53ddabc6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-06-25 23:07:31 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Starting...
+2026-06-25 23:07:31 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@43094e0c]]
+2026-06-25 23:07:31 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Started.
+2026-06-25 23:07:31 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-8080"]
+2026-06-25 23:07:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port 8080 (http) with context path '/'
+2026-06-25 23:07:31 [main] INFO  template.template.Application -
+                Started Application in 1.929 seconds (process running for 2.317)
+2026-06-25 23:07:33 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-25 23:07:33 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2026-06-25 23:07:33 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 1 ms
+2026-06-25 23:08:31 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
+                WebSocketSession[2 current WS(2)-HttpStream(0)-HttpPoll(0), 2 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(2)-CONNECTED(2)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 18, active threads = 0, queued tasks = 0, completed tasks = 18], outboundChannel[pool size = 3, active threads = 0, queued tasks = 0, completed tasks = 3], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
