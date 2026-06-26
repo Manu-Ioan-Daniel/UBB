@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Examen/muie.md",
+                "file": "Examen/ce pica la examen.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "muie"
+              "title": "ce pica la examen"
             }
           }
         ]
@@ -185,8 +185,8 @@
   },
   "active": "ddda95eb7576c86d",
   "lastOpenFiles": [
+    "Examen/teorie MPP.md",
     "Examen/ce pica la examen.md",
-    "Examen/muie.md",
     "Examen/Exercitii A.md",
     "Examen/Design Patterns.md",
     "Cursuri/2. Curs 2 - esentiale.md",

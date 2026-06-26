@@ -2170,3 +2170,15 @@ Caused by: java.net.ConnectException: Connection refused: connect
                 Init duration for springdoc-openapi is: 120 ms
 2026-06-26 22:41:32 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats -
                 WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-26 22:42:26 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-26 22:42:26 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -
+                Graceful shutdown complete
+2026-06-26 22:42:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopping...
+2026-06-26 22:42:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@477e5b69]]
+2026-06-26 22:42:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler -
+                Stopped.
+2026-06-26 22:42:26 [SpringApplicationShutdownHook] INFO  o.hibernate.orm.connections.pooling -
+                HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TemplateExamenMPP]
