@@ -1,7 +1,7 @@
 package template.template.repository;
 
 import lombok.RequiredArgsConstructor;
-import template.template.domain.Player;
+import template.template.domain.SampleEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -14,24 +14,24 @@ public class SampleRepository {
 
     private final SessionFactory sessionFactory;
 
-    public void save(Player player) {
+    public void save(SampleEntity entity) {
         try (Session session = sessionFactory.openSession()) {
             Transaction tx = session.beginTransaction();
-            session.persist(player);
+            session.persist(entity);
             tx.commit();
         }
     }
 
-    public Optional<Player> findById(Long id) {
+    public Optional<SampleEntity> findById(Long id) {
         try (Session session = sessionFactory.openSession()) {
-            return Optional.ofNullable(session.find(Player.class, id));
+            return Optional.ofNullable(session.find(SampleEntity.class, id));
         }
     }
 
-    public Optional<Player> findByName(String nume) {
+    public Optional<SampleEntity> findByName(String nume) {
         try (Session session = sessionFactory.openSession()) {
-            Player entity = session.createQuery(
-                            "FROM Player WHERE name = :nume", Player.class)
+            SampleEntity entity = session.createQuery(
+                            "FROM SampleEntity WHERE name = :nume", SampleEntity.class)
                     .setParameter("nume", nume)
                     .uniqueResult();
 
@@ -39,7 +39,7 @@ public class SampleRepository {
         }
     }
 
-    public void update(Player entity) {
+    public void update(SampleEntity entity) {
         try (Session session = sessionFactory.openSession()) {
             Transaction tx = session.beginTransaction();
             session.merge(entity);
@@ -47,7 +47,7 @@ public class SampleRepository {
         }
     }
 
-    public void delete(Player entity) {
+    public void delete(SampleEntity entity) {
         try (Session session = sessionFactory.openSession()) {
             Transaction tx = session.beginTransaction();
             session.remove(session.contains(entity) ? entity : session.merge(entity));
@@ -58,7 +58,7 @@ public class SampleRepository {
     public void deleteById(Long id) {
         try (Session session = sessionFactory.openSession()) {
             Transaction tx = session.beginTransaction();
-            session.createMutationQuery("DELETE FROM Player WHERE id = :id")
+            session.createMutationQuery("DELETE FROM SampleEntity WHERE id = :id")
                     .setParameter("id", id)
                     .executeUpdate();
             tx.commit();

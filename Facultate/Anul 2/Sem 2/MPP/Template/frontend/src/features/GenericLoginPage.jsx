@@ -23,7 +23,7 @@ export default function GenericLoginPage() {
         api.post("/login", {
             username : username
         })
-            .then(() => {
+            .then((res) => {
                 sessionStorage.setItem("username", username);
                 navigate("/game")
             })

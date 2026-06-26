@@ -5,15 +5,14 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
+import template.template.network.requests.CreateSampleEntityRequest;
 import template.template.service.SampleGameState;
+import template.template.service.SampleService;
 import template.template.utils.Observer.Observer;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
-import java.util.Random;
 
 @Controller
 @CrossOrigin
@@ -21,7 +20,7 @@ import java.util.Random;
 @RequestMapping("/api")
 public class SampleGameController implements Observer {
     
-
+    private final SampleService sampleService;
     private final SampleGameState sampleGameState;
     private final SimpMessagingTemplate messagingTemplate;
 
@@ -42,25 +41,22 @@ public class SampleGameController implements Observer {
     }
 
 
+    @PostMapping
+    public ResponseEntity<?> createEntity(@RequestBody CreateSampleEntityRequest request) {
+        sampleService.example(request);
+        return ResponseEntity.ok().build();
+    }
+
     @MessageMapping("/join")
     public void join(@Payload String username, SimpMessageHeaderAccessor headerAccessor) {
+
+        if(headerAccessor.getSessionAttributes().containsValue(username)){
+            return;
+        }
         headerAccessor.getSessionAttributes().put("username", username);
         System.out.println("Sesiunea " + headerAccessor.getSessionId() + " a fost marcată cu " + username);
     }
 
-    @PostMapping("/generate")
-    public ResponseEntity<?> generateNumber(@RequestBody Map<String, String> request) {
 
-        String username = request.get("username");
-        int maxRandom = 2 * sampleGameState.getN();
-        int y = new Random().nextInt(maxRandom) + 1;
-
-        try {
-            sampleGameState.generateNumber(username, y);
-            return ResponseEntity.ok(Map.of("generated", y));
-        } catch (IllegalStateException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
-    }
 
 }
