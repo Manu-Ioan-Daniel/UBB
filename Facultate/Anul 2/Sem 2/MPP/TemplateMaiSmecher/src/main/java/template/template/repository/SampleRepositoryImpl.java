@@ -25,5 +25,4 @@ public class SampleRepositoryImpl extends AbstractHibernateRepository<SampleEnti
         }
     }
 
-
 }
