@@ -5,11 +5,9 @@ import lombok.NoArgsConstructor;
 import template.template.domain.SampleEntity;
 import template.template.utils.Observer.Observable;
 import org.springframework.stereotype.Component;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
 
 @Component
 @Getter
