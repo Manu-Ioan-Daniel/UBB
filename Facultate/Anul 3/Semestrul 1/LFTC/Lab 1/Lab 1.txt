@@ -1,0 +1,58 @@
+#include <iostream>
+
+struct Cerc{
+	double raza;
+};
+
+void main(){
+	Cerc a;
+	cout<<"Introdu raza: "<<endl;
+	cin>>a.raza;
+	double perimetru = 2 * 3.14 * a.raza;
+	double arie = 3.14 * a.raza * a.raza;
+	cout<<"Arie: "<<arie<<"Perimetru: "<<perimetru<<endl;
+}
+
+<program>                  ::= <functie-main> | <lista-declaratii-struct> <functie-main>
+
+<lista-declaratii-struct> ::= <declaratie-struct> | <declaratie-struct> <lista-declaratii-struct>
+
+<declaratie-struct>        ::= struct ID { <lista-campuri> } ;
+
+<lista-campuri>            ::= <decl-variabila> ; <lista-campuri> | <decl-variabila> ;
+
+<decl-variabila>           ::= <tip-date> ID
+
+<tip-date>                 ::= <tip-simplu> | ID
+
+<tip-simplu>               ::= double | int
+
+<functie-main>             ::= <antet-main> <instr-comp>
+
+<antet-main>               ::= void main ()
+
+<instr-comp>               ::= { <lista-instr> }
+
+<lista-instr>              ::= <instr> | <instr> <lista-instr>
+
+<instr>                    ::= <instr-decl> | <instr-atribuire> | <instr-intrare> | <instr-iesire> | <instr-selectie> | <instr-ciclare>
+
+<instr-decl>               ::= <decl-variabila> ; | <decl-variabila> = <expresie> ;
+
+<instr-iesire>             ::= cout <lista-iesire> ;
+
+<lista-iesire>             ::= << <element-iesire> | << <element-iesire> <lista-iesire>
+
+<element-iesire>           ::= <expresie> | endl | <sir-caractere>
+
+<instr-intrare>            ::= cin <lista-intrare> ;
+
+<lista-intrare>            ::= >> <variabila> | >> <variabila> <lista-intrare>
+
+<instr-atribuire>          ::= <variabila> = <expresie> ;
+
+<variabila>                ::= ID | ID . ID
+
+
+
+
