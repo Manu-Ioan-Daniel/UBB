@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Examen 2"
             }
+          },
+          {
+            "id": "c183e197a4827282",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.12.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -185,7 +198,7 @@
       "custom-sort:Toggle custom sorting": false
     }
   },
-  "active": "506b96ffb23c44cf",
+  "active": "c183e197a4827282",
   "lastOpenFiles": [
     "Pregatire Examen/Modele examen/Examen 1 (incomplet).md",
     "Pregatire Examen/Modele examen/Examen 4.md",
