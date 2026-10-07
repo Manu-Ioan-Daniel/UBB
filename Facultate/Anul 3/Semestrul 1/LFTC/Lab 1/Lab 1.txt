@@ -4,7 +4,7 @@ struct Cerc{
 	double raza;
 };
 
-void main(){
+void main(){67
 	Cerc a;
 	cout<<"Introdu raza: "<<endl;
 	cin>>a.raza;
