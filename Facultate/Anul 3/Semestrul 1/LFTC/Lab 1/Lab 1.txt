@@ -1,16 +1,62 @@
 #include <iostream>
 
+----- COD SURSA 1 --------
 struct Cerc{
 	double raza;
 };
 
-void main(){67
+void main(){
 	Cerc a;
 	cout<<"Introdu raza: "<<endl;
 	cin>>a.raza;
 	double perimetru = 2 * 3.14 * a.raza;
 	double arie = 3.14 * a.raza * a.raza;
 	cout<<"Arie: "<<arie<<"Perimetru: "<<perimetru<<endl;
+}
+
+----- COD SURSA 2 --------
+
+#include <iostream>
+
+void main(){
+    int a;
+    int b;
+    cout<<"Introdu a: "<<endl;
+    cin>>a;
+    cout<<"Introdu b: "<<endl;
+    cin>>b;
+    while(a != b){
+        if(a > b){
+            a = a - b;
+        }
+        else{
+            b = b - a;
+        }
+    }
+    cout<<"CMMDC: "<<a<<endl;
+}
+
+
+----- COD SURSA 3 --------
+
+#include <iostream>
+
+void main(){
+    int n;
+    int i;
+    int x;
+    int suma;
+    suma = 0;
+    cout<<"Introdu n: "<<endl;
+    cin>>n;
+    i = 1;
+    while(i <= n){
+        cout<<"Introdu numarul: "<<endl;
+        cin>>x;
+        suma = suma + x;
+        i = i + 1;
+    }
+    cout<<"Suma: "<<suma<<endl;
 }
 
 <program>                  ::= <functie-main> | <lista-declaratii-struct> <functie-main>
@@ -53,6 +99,57 @@ void main(){67
 
 <variabila>                ::= ID | ID . ID
 
+<instr-selectie>          ::= if ( <conditie> ) <instr-comp> else <instr-comp>
+
+<instr-ciclare>           ::= while ( <conditie> ) <instr-comp>
+
+<conditie>                ::= <expresie> <relatie> <expresie>
+
+<relatie>                 ::= == | != | < | <= | > | >=
+
+<expresie>                ::= <termen> | <expresie> + <termen> | <expresie> - <termen>
+
+<termen>                  ::= <factor> | <termen> * <factor> | <termen> / <factor>
+
+<factor>                  ::= <variabila> | CONSTANTA | ( <expresie> )
 
 
+--- COD EROARE 1 ---
 
+#include <iostream>
+
+void main(){
+    int a;
+    int b;
+    a = 5;
+    b = 3;
+    if a > b {
+        a = a - b
+    }
+}
+
+- lipseste ; de la linia a=a-b =>eroare si in c++ si la mine
+- lipsesc parantezele de la a > b din if => eroare si in c++ si la mine
+
+--- COD EROARE 2 ---
+
+
+#include <iostream>
+
+void main(){
+    int a, b, suma;
+    cout << "Introdu a: " << endl;
+    cin >> a;
+    cout << "Introdu b: " << endl;
+    cin >> b;
+    
+    if(a > b)
+        suma = a + b;
+    else
+        suma = a - b;
+        
+    cout << "Rezultat: " << suma << endl;
+}
+
+-if fara acolade, merge in c++ dar nu la mine
+-declarare multipla a variabilelor pe o linie, merge in c++ dar nu la mine
