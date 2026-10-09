@@ -11,7 +11,6 @@ constexpr int TOTAL_THREADS = 50;
 struct Account {
     int balance;
     std::unique_ptr<std::mutex> mtx;
-
     explicit Account(const int b) : balance(b), mtx(std::make_unique<std::mutex>()) {}
 };
 
@@ -65,7 +64,7 @@ int main() {
         threads.emplace_back(transfer, std::ref(accounts[fromIndex]), std::ref(accounts[toIndex]), rand() % 20);
         if (i%10 == 0) {
             if (!checkAudit(accounts)) {
-                std::cout<<("BAI PUTA CE AI FACUT");
+                std::cout<<("Micule bro ai facut o greseala.");
                 break;
             }
         }
