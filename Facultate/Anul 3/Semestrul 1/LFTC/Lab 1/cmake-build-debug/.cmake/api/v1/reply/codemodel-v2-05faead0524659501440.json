@@ -1,0 +1,105 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.30"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Lab_1",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Lab_1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Lab_1-Debug-b3823432248f43205e07.json",
+					"name" : "Lab_1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eroare_1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eroare_1-Debug-ffdc5ba8344a446e23b4.json",
+					"name" : "eroare_1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eroare_2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eroare_2-Debug-cedb3a4017384d28c819.json",
+					"name" : "eroare_2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sursa_1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sursa_1-Debug-e9ab8c8cc5e1413ba5ef.json",
+					"name" : "sursa_1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sursa_2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sursa_2-Debug-b602b0550db80facd9e8.json",
+					"name" : "sursa_2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sursa_3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sursa_3-Debug-f41eb6a833983ed82fa1.json",
+					"name" : "sursa_3",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 3/Semestrul 1/LFTC/Lab 1/cmake-build-debug",
+		"source" : "C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 3/Semestrul 1/LFTC/Lab 1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

@@ -1,30 +1,34 @@
 #include <iostream>
 
 ----- COD SURSA 1 --------
+
+#include <iostream>
+
 struct Cerc{
 	double raza;
 };
 
-void main(){
+int main(){
 	Cerc a;
-	cout<<"Introdu raza: "<<endl;
-	cin>>a.raza;
+	std::cout<<"Introdu raza: "<<std::endl;
+	std::cin>>a.raza;
 	double perimetru = 2 * 3.14 * a.raza;
 	double arie = 3.14 * a.raza * a.raza;
-	cout<<"Arie: "<<arie<<"Perimetru: "<<perimetru<<endl;
+	std::cout<<"Arie: "<<arie<<"Perimetru: "<<perimetru<<std::endl;
+	return 0;
 }
 
 ----- COD SURSA 2 --------
 
 #include <iostream>
 
-void main(){
+int main(){
     int a;
     int b;
-    cout<<"Introdu a: "<<endl;
-    cin>>a;
-    cout<<"Introdu b: "<<endl;
-    cin>>b;
+    std::cout<<"Introdu a: "<<std::endl;
+    std::cin>>a;
+    std::cout<<"Introdu b: "<<std::endl;
+    std::cin>>b;
     while(a != b){
         if(a > b){
             a = a - b;
@@ -33,7 +37,8 @@ void main(){
             b = b - a;
         }
     }
-    cout<<"CMMDC: "<<a<<endl;
+    std::cout<<"CMMDC: "<<a<<std::endl;
+    return 0;
 }
 
 
@@ -41,22 +46,23 @@ void main(){
 
 #include <iostream>
 
-void main(){
+int main(){
     int n;
     int i;
     int x;
     int suma;
     suma = 0;
-    cout<<"Introdu n: "<<endl;
-    cin>>n;
+    std::cout<<"Introdu n: "<<std::endl;
+    std::cin>>n;
     i = 1;
     while(i <= n){
-        cout<<"Introdu numarul: "<<endl;
-        cin>>x;
+        std::cout<<"Introdu numarul: "<<std::endl;
+        std::cin>>x;
         suma = suma + x;
         i = i + 1;
     }
-    cout<<"Suma: "<<suma<<endl;
+    std::cout<<"Suma: "<<suma<<std::endl;
+    return 0;
 }
 
 <program>                  ::= <functie-main> | <lista-declaratii-struct> <functie-main>
@@ -75,9 +81,9 @@ void main(){
 
 <functie-main>             ::= <antet-main> <instr-comp>
 
-<antet-main>               ::= void main ()
+<antet-main>               ::= int main ()
 
-<instr-comp>               ::= { <lista-instr> }
+<instr-comp>               ::= { <lista-instr>;return 0; }
 
 <lista-instr>              ::= <instr> | <instr> <lista-instr>
 
@@ -118,7 +124,7 @@ void main(){
 
 #include <iostream>
 
-void main(){
+int main(){
     int a;
     int b;
     a = 5;
@@ -126,6 +132,7 @@ void main(){
     if a > b {
         a = a - b
     }
+    return 0;
 }
 
 - lipseste ; de la linia a=a-b =>eroare si in c++ si la mine
@@ -136,19 +143,19 @@ void main(){
 
 #include <iostream>
 
-void main(){
+int main(){
     int a, b, suma;
-    cout << "Introdu a: " << endl;
-    cin >> a;
-    cout << "Introdu b: " << endl;
-    cin >> b;
+    std::cout << "Introdu a: " << std::endl;
+    std::cin >> a;
+    std::cout << "Introdu b: " << std::endl;
+    std::cin >> b;
     
     if(a > b)
         suma = a + b;
     else
         suma = a - b;
         
-    cout << "Rezultat: " << suma << endl;
+    std::cout << "Rezultat: " << suma << std::endl;
 }
 
 -if fara acolade, merge in c++ dar nu la mine

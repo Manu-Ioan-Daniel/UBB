@@ -1,0 +1,14 @@
+# ninja log v6
+4	1643	8132275640704211	CMakeFiles/Lab_1.dir/main.cpp.obj	fd550d7a9df626e1
+8	1556	8132279650233460	CMakeFiles/Lab_1.dir/coduri_sursa/sursa_1.cpp.obj	594f3896b7934b22
+15	1545	8132279650313457	CMakeFiles/Lab_1.dir/coduri_sursa/sursa_2.cpp.obj	a399c13d5ba23b99
+23	1566	8132279650393478	CMakeFiles/Lab_1.dir/coduri_sursa/sursa_3.cpp.obj	2e21abccd6063c10
+1557	2439	8132279665723524	CMakeFiles/Lab_1.dir/cod_cu_eroare/eroare_2.cpp.obj	4cb0b48ec4ad3610
+9	1995	8132281361116282	CMakeFiles/sursa_1.dir/coduri_sursa/sursa_1.cpp.obj	5d76ef920b930f1f
+1997	2396	8132281380986276	sursa_1.exe	c8e09040f42d32fc
+5	1613	8132281597557180	CMakeFiles/sursa_2.dir/coduri_sursa/sursa_2.cpp.obj	c529e44aaac5f99c
+1617	1919	8132281613677180	sursa_2.exe	be4bf004acb5db46
+6	1482	8132281745718592	CMakeFiles/sursa_3.dir/coduri_sursa/sursa_3.cpp.obj	e9635b6c21144d03
+1483	1739	8132281760478580	sursa_3.exe	63bf6ed824343308
+12	1977	8132281890418570	CMakeFiles/eroare_2.dir/cod_cu_eroare/eroare_2.cpp.obj	1d7d0616a680535f
+1979	2334	8132281910088570	eroare_2.exe	aa0630d8fb2daa39
