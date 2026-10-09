@@ -3,6 +3,6 @@ project(Lab_2)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(Lab_2 main.cpp
+add_executable(Lab_2
         main.cpp
         MyQueue.h)

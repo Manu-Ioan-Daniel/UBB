@@ -65,7 +65,7 @@ int main(){
     return 0;
 }
 
-<program>                  ::= <functie-main> | <lista-declaratii-struct> <functie-main>
+<program>                  ::= #include <iostream> <functie-main> |#include <iostream> <lista-declaratii-struct> <functie-main>
 
 <lista-declaratii-struct> ::= <declaratie-struct> | <declaratie-struct> <lista-declaratii-struct>
 
@@ -81,9 +81,9 @@ int main(){
 
 <functie-main>             ::= <antet-main> <instr-comp>
 
-<antet-main>               ::= int main ()
+<antet-main>               ::= int main () {<lista-instr> return 0;}
 
-<instr-comp>               ::= { <lista-instr>;return 0; }
+<instr-comp>               ::= { <lista-instr>; }
 
 <lista-instr>              ::= <instr> | <instr> <lista-instr>
 
@@ -91,13 +91,13 @@ int main(){
 
 <instr-decl>               ::= <decl-variabila> ; | <decl-variabila> = <expresie> ;
 
-<instr-iesire>             ::= cout <lista-iesire> ;
+<instr-iesire>             ::= std::cout <lista-iesire> ;
 
 <lista-iesire>             ::= << <element-iesire> | << <element-iesire> <lista-iesire>
 
-<element-iesire>           ::= <expresie> | endl | <sir-caractere>
+<element-iesire>           ::= <expresie> | std::endl | <sir-caractere>
 
-<instr-intrare>            ::= cin <lista-intrare> ;
+<instr-intrare>            ::= std::cin <lista-intrare> ;
 
 <lista-intrare>            ::= >> <variabila> | >> <variabila> <lista-intrare>
 
@@ -160,3 +160,41 @@ int main(){
 
 -if fara acolade, merge in c++ dar nu la mine
 -declarare multipla a variabilelor pe o linie, merge in c++ dar nu la mine
+
+
+---COD SCRIS DE LACHE---
+--cod corect--
+
+#include <iostream>
+
+int main(){
+    int a;
+    int b;
+    int suma;
+    std::cin>>a>>b;
+    while ( a < b){
+        sum = sum + b;
+        a = a + 1;
+    }
+
+    std::cout<<sum;
+}
+
+--cod gresit--
+
+#include <iostream>
+
+int main(){
+    int a;
+    int b;
+    std::cin>>a>>b;
+    if ( a > b)
+        std::cout<<a;
+    else
+        std::cout<<b;
+
+    return 0;
+}
+
+
+
