@@ -74,9 +74,7 @@
             }
         }
         for (auto& t : threads) {
-            if (t.joinable()) {
-                t.join();
-            }
+            t.join();
         }
         return 0;
     }
