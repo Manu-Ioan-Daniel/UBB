@@ -197,4 +197,18 @@ int main(){
 }
 
 
+ID ::= [a-z|A-Z][a-z|A-Z|0-9], 
+CONSTANTA ::= [0-9]+ | [0-9]+.[0-9]+,
+
+Cuvinte cheie
+
+struct, int, double, main, return, if, else, while, std::cout, std::cin, std::endl, #include 
+
+Operatori
+
+=, +, -, *, /, ==, !=, <, <=, >, >=, <<, >>
+
+Separatori
+
+;, ., (, ), {, }
 

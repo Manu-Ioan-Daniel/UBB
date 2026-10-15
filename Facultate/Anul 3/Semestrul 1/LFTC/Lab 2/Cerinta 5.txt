@@ -1,0 +1,24 @@
+5. Implementarea analizorului lexical
+Analizorul lexical accepta la intrare un fisier text reprezentand un
+program sursa si intocmeste ca date de iesire tabelele:
+FIP - forma interna a programului sursa si
+TS - tabelui de simboluri.
+In plus, programul va trebui sa semnaleze erorile lexicale si locul in care
+apar.
+Niste restrictii suplimentare vor fi impuse analizoarelor lexicale.
+Acestea se vor diferentia dupa urmatoarele criterii:
+ 1. tabela de simboluri:
+ a. unica pentru identificatori si constante
+ b. separat pentru identificatori si constante
+ 2. organizarea tabelelor de simboluri:
+ a. tabel ordonat lexicografic
+ b. tabel arbore binar de cautare (ordine lexicografica)
+ c. tabel de dispersie (hash)
+Se cer, de asemenea:
+- implementarea structurilor de date cerute pentru tabela de simboluri;
+- organizarea FIP si TS trebuie aleasa astfel incat accesul la informatiile
+pentru un atom lexical in TS sa se faca in Theta(1) pe baza informatiilor
+din FIP.
+- salvarea FIP si TS in fisiere. Pozitia in TS (din fisierul corespunzator
+FIP) va fi numarul liniei din fisierul TS in care este stocata informatia
+referitoare la acel atom lexical.
