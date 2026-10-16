@@ -6,6 +6,7 @@ struct Cerc{
 
 int main(){
     Cerc a;
+0.0 0. a1
     std::cout<<"Introdu raza: "<<std::endl;
     std::cin>>a.raza;
     double perimetru = 2 * 3.14 * a.raza;
