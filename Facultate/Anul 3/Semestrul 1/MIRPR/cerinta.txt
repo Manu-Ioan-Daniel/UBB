@@ -1,0 +1,53 @@
+-------------- DESCRIERE OVERALL LA PROIECT -------------------------
+Diagram-as-Code AI Assistant
+Scop
+Modern software architecture relies heavily on diagrams to communicate how a system is structured and how it fits into its environment. However, keeping documentation in sync with the code is often difficult and time-consuming. Generated diagrams also tend to stay at the code level (class diagrams, call graphs), which says little about the architecture itself.
+
+Ideea de baza
+Design an AI-driven solution that generates architecture diagrams from natural language descriptions and/or source code, following the C4 model (Context, Containers, Components, Code). The focus should be on the architectural views: the system context, its containers (applications, services, databases, queues) and their components. Low-level views such as UML class diagrams should not be the main focus. The tool should support "diagram as code" approaches, generating structured diagram definitions rather than static images.
+
+Generate C4 views at the appropriate level of abstraction:
+
+System Context: the system, its users and the external systems it interacts with
+Container: deployable or runnable units and the communication between them (protocols, APIs, data stores)
+Component: major building blocks inside a container and their responsibilities
+Supplementary views where useful: dynamic (runtime flows) and deployment diagrams
+Generate diagrams from:
+
+Plain text architecture descriptions
+User stories
+Code repositories, by identifying services, APIs, data stores, messaging and external dependencies, and abstracting them into C4 elements
+Infrastructure-as-code (Terraform, Kubernetes manifests, docker-compose) as a source for container and deployment views
+Output diagrams in formats such as:
+
+Structurizr DSL (preferred, since it is model-based and C4-native)
+C4-PlantUML
+Mermaid C4 diagrams
+Keep the views consistent: generate a single underlying model from which all C4 levels are derived, so the views don't contradict each other.
+
+Advanced exploration (optional):
+
+Integrate the solution into a GitHub merge request workflow to:
+Automatically generate or update the C4 model when code changes
+Comment on merge requests with the impacted views, highlighting new or removed containers, components and relationships
+Implement a Git hook that:
+Validates architectural consistency before allowing a commit, for example by flagging an undeclared dependency between containers or a component bypassing a defined interface
+Regenerates the affected views automatically when specific modules change
+Compare diagram generation from static code analysis with LLM-based semantic interpretation, particularly in how well each one abstracts from code to the right C4 level.
+Detect drift between the intended architecture (a hand-written C4 model) and the implemented architecture (one derived from code).
+
+--------------------- cerinta laborator 1 ----------------
+
+
+
+1.Functionalitati de baza ale aplicatiei - o app simpla care va integra AI-ul; pentru moment "predictia facuta de AI" e hard-codata manual (la final se va inlocui cu cel mai bun model obtinut)
+Descrierea problemei rezolvate cu ajutorul AI (plastica si formala) - ce anume se rezolva, de ce e important, cine sunt utilizatorii, care sunt datele de intrare si iesire (ce tip de date se utilizeaza), cum se masoara performanta rezolvarii prolemei cu AI-ul
+Related work & useful tools and technologies - se vor descrie pe scurt cel putin 2 * 
+n
+ (
+n
+ e nr de membrii ai echipei) lucrari relevante (articole, bloguri, proiecte open-source) care au legatura cu problema rezolvata: se vor urmari detalii precum:
+ce date s-au folosit,
+ce algoritmi de AI s-au folosit
+ce performante s-au obtinut
+ce librarii/tehnologii s-au folosit si daca ofera Git-ul aferent abordarii propuse

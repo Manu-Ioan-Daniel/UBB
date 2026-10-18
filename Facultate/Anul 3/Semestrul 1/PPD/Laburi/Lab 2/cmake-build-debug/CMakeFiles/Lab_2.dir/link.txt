@@ -1,0 +1,3 @@
+"D:\Apps\Coding\Jetbrains\CLion 2026.2.3.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\Lab_2.dir/objects.a
+"D:\Apps\Coding\Jetbrains\CLion 2026.2.3.1\bin\mingw\bin\ar.exe" qc CMakeFiles\Lab_2.dir/objects.a @CMakeFiles\Lab_2.dir\objects1.rsp
+"D:\Apps\Coding\Jetbrains\CLion 2026.2.3.1\bin\mingw\bin\c++.exe" -g -Wl,--whole-archive CMakeFiles\Lab_2.dir/objects.a -Wl,--no-whole-archive -o Lab_2.exe -Wl,--out-implib,libLab_2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Lab_2.dir\linkLibs.rsp
