@@ -1,3 +1,0 @@
-Identificarea atomilor lexicali
-Program ce identifica atomii lexicali. Acestia vor fi afisati pe ecran sau
-scrisi in fisier, etc
