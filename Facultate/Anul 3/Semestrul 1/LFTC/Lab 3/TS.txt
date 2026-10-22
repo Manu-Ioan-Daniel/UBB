@@ -1,0 +1,13 @@
+" Perimetru: "
+"Arie: "
+"Introdu raza: "
+0
+0.0
+2
+3.14
+Cerc
+a
+a1
+arie
+perimetru
+raza
