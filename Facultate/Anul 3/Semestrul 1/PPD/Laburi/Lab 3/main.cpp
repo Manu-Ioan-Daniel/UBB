@@ -28,20 +28,18 @@ void product(const std::vector<std::vector<int>>& a,
         const int i = k/n;
         const int j = k%n;
         result[i][j] = calculateOneElement(a, b, i, j);
-        std::cout<<"Thread with number: "<< threadNo << " is done calculating element[" << i << "][" << j << "]:" << result[i][j] << std::endl;
+        // std::cout<<"Thread with number: "<< threadNo << " is done calculating element[" << i << "][" << j << "]:" << result[i][j] << std::endl;
     }
 }
 
 int main() {
 
-    int testCases[6][2] =
+    int testCases[4][2] =
     {
-        {2,3},
-        {3,4},
-        {3,3},
-        {3,5},
         {4,5},
         {9,4},
+        {100, 4},
+        {300, 4}
     };
     for (const auto& pair: testCases) {
         n = pair[0];

@@ -1,13 +1,9 @@
-" Perimetru: "
-"Arie: "
-"Introdu raza: "
-0
-0.0
-2
-3.14
-Cerc
+"Introdu a: "
+"Introdu b: "
+"Rezultat: "
+0.00
+000
 a
-a1
-arie
-perimetru
-raza
+b
+main
+suma

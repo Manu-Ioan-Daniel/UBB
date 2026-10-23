@@ -1,3 +1,4 @@
+000 0.00 _a 1a
 #include <iostream>
 
 int main(){
@@ -6,6 +7,7 @@ int main(){
     std::cin >> a;
     std::cout << "Introdu b: " << std::endl;
     std::cin >> b;
+    int a = @@int;
     
     if(a > b)
         suma = a + b;
