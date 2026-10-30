@@ -1,0 +1,7 @@
+<fisier> ::= "stari:" <stari> "\n" "alfabet:" <alfabet> "\n" "stare_initiala:" <stare> "\n" "stari_finale:" <stari> "\n" "tranzitii:" "\n" <tranzitii>
+<stari> ::= <stare> | <stare> " " <stari>
+<alfabet> ::= <simbol> | <simbol> " " <alfabet>
+<tranzitii> ::= <tranzitie> | <tranzitie> "\n" <tranzitii>
+<tranzitie> ::= <stare> " " <simbol> " " <stare>
+<stare> ::= <sir>
+<simbol> ::= <caracter>
