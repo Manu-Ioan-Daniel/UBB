@@ -20,14 +20,11 @@ void meniu() {
 
 int main(int argc, char* argv[]) {
     AutomatFinit af;
-    string fisier = argc > 1 ? argv[1] : "constante_intregi.txt";
+    std::string fisier = R"(C:\Users\Lenovo\Documents\GitHub\UBB\Facultate\Anul 3\Semestrul 1\LFTC\Lab 4\fisier_in_class.txt)";
     af.citesteDinFisier(fisier);
-
     int opt;
     while (meniu(), cin >> opt && opt != 0) {
         if (opt == 1) {
-            cout << "fisier: ";
-            cin >> fisier;
             if (af.citesteDinFisier(fisier)) cout << "incarcat cu succes\n";
             else cout << "eroare deschidere fisier\n";
         } else if (opt == 2) {
@@ -50,7 +47,8 @@ int main(int argc, char* argv[]) {
             } else {
                 string w;
                 cout << "secventa: ";
-                cin >> w;
+                cin.ignore(1000, '\n');
+                getline(cin, w);
                 cout << (af.verificaSecventa(w) ? "acceptata\n" : "neacceptata\n");
             }
         } else if (opt == 10) {
@@ -59,7 +57,8 @@ int main(int argc, char* argv[]) {
             } else {
                 string w;
                 cout << "secventa: ";
-                cin >> w;
+                cin.ignore(1000, '\n');
+                getline(cin, w);
                 auto [ok, pref] = af.celMaiLungPrefix(w);
                 if (!ok) cout << "niciun prefix acceptat\n";
                 else cout << "prefix acceptat: " << pref << "\n";

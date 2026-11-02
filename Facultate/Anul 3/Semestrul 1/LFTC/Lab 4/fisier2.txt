@@ -1,0 +1,9 @@
+stari: q0 q1 q2
+alfabet: a b
+stare_initiala: q0
+stari_finale: q2
+tranzitii:
+q0 a q0
+q0 b q0
+q0 a q1
+q1 b q2

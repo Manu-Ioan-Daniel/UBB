@@ -1,0 +1,37 @@
+stari: q0 q_semn q_cifre
+alfabet: + - 0 1 2 3 4 5 6 7 8 9
+stare_initiala: q0
+stari_finale: q_cifre
+tranzitii:
+q0 + q_semn
+q0 - q_semn
+q0 0 q_cifre
+q0 1 q_cifre
+q0 2 q_cifre
+q0 3 q_cifre
+q0 4 q_cifre
+q0 5 q_cifre
+q0 6 q_cifre
+q0 7 q_cifre
+q0 8 q_cifre
+q0 9 q_cifre
+q_semn 0 q_cifre
+q_semn 1 q_cifre
+q_semn 2 q_cifre
+q_semn 3 q_cifre
+q_semn 4 q_cifre
+q_semn 5 q_cifre
+q_semn 6 q_cifre
+q_semn 7 q_cifre
+q_semn 8 q_cifre
+q_semn 9 q_cifre
+q_cifre 0 q_cifre
+q_cifre 1 q_cifre
+q_cifre 2 q_cifre
+q_cifre 3 q_cifre
+q_cifre 4 q_cifre
+q_cifre 5 q_cifre
+q_cifre 6 q_cifre
+q_cifre 7 q_cifre
+q_cifre 8 q_cifre
+q_cifre 9 q_cifre

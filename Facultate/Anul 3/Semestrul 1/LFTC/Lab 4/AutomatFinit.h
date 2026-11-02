@@ -143,8 +143,8 @@ public:
     }
 
     [[nodiscard]] bool esteDeterminist() const {
-        for (size_t i = 0; i < tranzitii.size(); ++i) {
-            for (size_t j = i + 1; j < tranzitii.size(); ++j) {
+        for (int i = 0; i < tranzitii.size(); ++i) {
+            for (int j = i + 1; j < tranzitii.size(); ++j) {
                 if (tranzitii[i].sursa == tranzitii[j].sursa && tranzitii[i].simbol == tranzitii[j].simbol) {
                     return false;
                 }
