@@ -1,0 +1,8 @@
+Până la următoarea întâlnire, pregătiți împreună o pagină cu:
+Utilizatorul: cine ar folosi soluția și într-o ce situație concretă?
+Problema: descrieți un exemplu real sau plauzibil în care apare.
+Soluția propusă: cum l-ar ajuta proiectul pe utilizator, în câțiva pași?
+Trei funcții candidate: ce ar putea face aplicația?
+Prioritizare: care funcție este esențială pentru prima versiune și de ce?
+Presupuneri de verificat: ce încă nu știți despre utilizator sau problemă?
+Nu trebuie să alegeți acum tehnologia și nici să veniți cu un document perfect. Important este să vă puteți explica alegerile și să notați ce trebuie verificat.

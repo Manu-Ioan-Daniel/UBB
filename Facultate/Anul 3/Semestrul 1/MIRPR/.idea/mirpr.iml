@@ -7,11 +7,8 @@
     <orderEntry type="jdk" jdkName="~\Documents\GitHub\UBB\Facultate\Anul 3\Semestrul 1\MIRPR\.venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
-  <component name="PackageRequirementsSettings" />
   <component name="PyDocumentationSettings">
     <option name="format" value="PLAIN" />
     <option name="myDocStringFormat" value="Plain" />
   </component>
-  <component name="ReSTService" />
-  <component name="TestRunnerService" />
 </module>
