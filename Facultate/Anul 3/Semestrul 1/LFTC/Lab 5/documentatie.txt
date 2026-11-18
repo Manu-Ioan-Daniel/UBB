@@ -1,0 +1,25 @@
+Sursa documentatiei:
+https://en.cppreference.com/w/cpp/language/integer_literal
+Standard C++ (ISO/IEC 14882)
+
+Descrierea automatului finit determinist pentru constante intregi (literali C++):
+
+Zecimale (decimal):
+Incep cu o cifra nenula [1-9], urmata de zero sau mai multe cifre [0-9].
+Tranzitii: q0 -> q_dec (pe [1-9]), loop pe q_dec (pe [0-9]).
+
+Zero si Octale (octal):
+Incep cu cifra 0 (starea q_zero, stare finala ce reprezinta valoarea 0).
+Daca 0 este urmat de cifre octale [0-7], se trece in starea q_oct (stare finala), cu loop pe [0-7].
+
+Hexazecimale (hexadecimal):
+Incep cu prefixul 0x sau 0X (trecere din q_zero in q_hex_start pe 'x' sau 'X').
+Urmeaza cel putin o cifra hexazecimala [0-9a-fA-F] catre q_hex (stare finala), cu loop pe [0-9a-fA-F].
+
+Stari:
+- q0: starea initiala
+- q_zero: cifra 0 (finala)
+- q_dec: numar zecimal nenul (finala)
+- q_oct: numar in baza 8 (finala)
+- q_hex_start: prefix hexazecimal '0x' sau '0X' (nefinala)
+- q_hex: numar in baza 16 (finala)

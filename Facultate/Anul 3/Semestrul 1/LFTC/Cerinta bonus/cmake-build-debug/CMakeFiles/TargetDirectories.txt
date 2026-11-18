@@ -1,0 +1,3 @@
+C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 3/Semestrul 1/LFTC/Cerinta bonus/cmake-build-debug/CMakeFiles/Cerinta_bonus.dir
+C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 3/Semestrul 1/LFTC/Cerinta bonus/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Lenovo/Documents/GitHub/UBB/Facultate/Anul 3/Semestrul 1/LFTC/Cerinta bonus/cmake-build-debug/CMakeFiles/rebuild_cache.dir
