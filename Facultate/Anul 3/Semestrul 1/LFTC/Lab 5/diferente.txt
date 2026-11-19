@@ -1,0 +1,23 @@
+Diferente intre Prima Parte (Lab 4) si A Doua Parte (Lab 5):
+
+1. Scopul aplicatiei:
+- In Prima Parte (Lab 4): aplicatia a fost un simulator generic de automate finite (AF), cu meniu interactiv (citire AF din fisier/tastatura, afisare componente, verificare determinism, verificare secventa si determinare cel mai lung prefix acceptat).
+- In A Doua Parte (Lab 5): clasele de automat finit sunt integrate direct in motorul de analiza lexicala (inlocuind complet expresiile regulate / regex din laboratoarele 2 si 3).
+
+2. Automate finite folosite:
+- In Prima Parte: se testa un singur automat incarcat dintr-un fisier la alegere (ex. fisier.txt).
+- In A Doua Parte: se folosesc in paralel cel putin 3 automate finite deterministe (AFD):
+  * af_identificatori.txt: recunoasterea identificatorilor (incep cu litera sau _, urmate de litere/cifre/_).
+  * af_intregi.txt: recunoasterea constantelor intregi conform specificatiei C++ (zecimal nenul, zero, octal, hexazecimal).
+  * af_reale.txt: recunoasterea constantelor reale (numere cu parte fractionara si exponent stiintific).
+
+3. Prelucrarea intrarilor (fara regex si fara separare prin spatii):
+- In laboratoarele anterioare de analiza lexicala se foloseau expresii regulate (std::regex) si uneori separatori bazati pe spatii.
+- In Partea a Doua (Lab 5): regex este complet eliminat conform cerintei. Tokenizarea se face caracter cu caracter: la fiecare pozitie curenta se determina cel mai lung prefix acceptat de fiecare automat (celMaiLungPrefix), aplicand regula potrivirii maximale (longest match).
+
+4. Rezultate generate:
+- Prima Parte genera doar mesaje in consola pentru comenzile din meniu.
+- A Doua Parte genereaza tabelele oficiale ale compilatorului:
+  * TS.txt (Tabela de Simboluri ordonata lexicografic)
+  * FIP.txt (Forma Interna a Programului cu perechi: cod atom si index in TS sau -1)
+  * Raportarea erorilor lexicale la linia si coloana exacta.

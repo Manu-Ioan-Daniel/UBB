@@ -6,7 +6,12 @@ struct Cerc{
 
 int main(){
     Cerc a;
-0.0 0. a1
+    0.0 0. a1
+    7.3
+    50
+    2993.2137
+    5,4
+
     std::cout<<"Introdu raza: "<<std::endl;
     std::cin>>a.raza;
     double perimetru = 2 * 3.14 * a.raza;
@@ -14,3 +19,6 @@ int main(){
     std::cout<<"Arie: "<<arie<<" Perimetru: "<<perimetru<<std::endl;
     return 0;
 }
+0734
+0xAB
+0B0101010

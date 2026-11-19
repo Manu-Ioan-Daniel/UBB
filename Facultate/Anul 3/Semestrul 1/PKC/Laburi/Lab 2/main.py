@@ -52,7 +52,6 @@ def main():
 
     print("Bazele din intervalul [1, n - 1]:")
     print(*baze_pseudoprime_tari(n))
-    print("Orice baza intreaga congruenta modulo n cu acestea este valida.")
 
 
 if __name__ == "__main__":
